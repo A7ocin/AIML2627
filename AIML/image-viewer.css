@@ -1,0 +1,34 @@
+/* Shared, viewport-sized viewer; kept outside Reveal's scaled slide container. */
+[data-image-viewer] { cursor:zoom-in; }
+[data-image-viewer]:focus-visible { outline:3px solid #cf811a; outline-offset:5px; }
+html.image-viewer-open { overflow:hidden !important; }
+#course-image-viewer {
+  box-sizing:border-box; position:fixed; inset:0; margin:auto;
+  width:min(96vw,2200px); height:94vh; height:94dvh;
+  max-width:96vw; max-height:94vh; max-height:94dvh;
+  padding:16px; border:1px solid #536578; border-radius:14px;
+  background:#101826; color:#edf4fa; box-shadow:0 20px 90px #0009;
+  font:16px/1.5 'Segoe UI',Arial,sans-serif;
+}
+#course-image-viewer:not([open]) { display:none; }
+#course-image-viewer[open] { display:flex; flex-direction:column; gap:12px; }
+#course-image-viewer::backdrop { background:rgba(0,0,0,.82); }
+#course-image-viewer .image-viewer-toolbar { display:flex; align-items:center; justify-content:space-between; gap:20px; flex:none; }
+#course-image-viewer .image-viewer-title { margin:0; font:600 18px/1.4 'Segoe UI',Arial,sans-serif; color:#edf4fa; }
+#course-image-viewer .image-viewer-close { padding:8px 16px; border:1px solid #8397ab; border-radius:7px; background:#203044; color:white; font:600 16px/1.4 'Segoe UI',Arial,sans-serif; cursor:pointer; min-height:44px; }
+#course-image-viewer .image-viewer-close:hover { background:#334960; }
+#course-image-viewer .image-viewer-close:focus-visible { outline:3px solid #ffd166; outline-offset:3px; }
+#course-image-viewer .image-viewer-stage { min-height:0; flex:1; display:flex; align-items:center; justify-content:center; }
+#course-image-viewer .image-viewer-image { display:block; width:100%; height:100%; max-width:none; max-height:none; margin:0; padding:0; border:0; border-radius:0; box-shadow:none; object-fit:contain; }
+#course-image-viewer .image-viewer-caption { margin:0; flex:none; max-height:14vh; overflow:auto; color:#c2cede; font:15px/1.5 'Segoe UI',Arial,sans-serif; text-align:center; }
+#course-image-viewer .image-viewer-error { color:#ffd166; text-align:center; }
+#course-image-viewer [hidden] { display:none !important; }
+@media(max-width:600px) {
+  #course-image-viewer { padding:10px; gap:8px; }
+  #course-image-viewer .image-viewer-caption { font-size:13px; }
+}
+@media print {
+  #course-image-viewer { display:none !important; }
+  html.image-viewer-open { overflow:visible !important; }
+  [data-image-viewer] { cursor:auto; }
+}

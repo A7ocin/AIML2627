@@ -1,0 +1,114 @@
+{
+  "slides": 513,
+  "questions": 92,
+  "handouts": 16,
+  "labs": 70,
+  "errors": [],
+  "missing": [],
+  "layout": [],
+  "lectures": [
+    {
+      "pack": "01_History_Part_1",
+      "slides": 35,
+      "questions": 5,
+      "labs": 0
+    },
+    {
+      "pack": "02_History_Part_2",
+      "slides": 37,
+      "questions": 5,
+      "labs": 0
+    },
+    {
+      "pack": "03_Search_Part_1",
+      "slides": 32,
+      "questions": 6,
+      "labs": 5
+    },
+    {
+      "pack": "04_Search_Part_2",
+      "slides": 30,
+      "questions": 6,
+      "labs": 4
+    },
+    {
+      "pack": "05_Constraints_Part_1",
+      "slides": 30,
+      "questions": 6,
+      "labs": 3
+    },
+    {
+      "pack": "06_Constraints_Part_2",
+      "slides": 26,
+      "questions": 5,
+      "labs": 3
+    },
+    {
+      "pack": "07_Intro_ML_Part_1",
+      "slides": 26,
+      "questions": 5,
+      "labs": 3
+    },
+    {
+      "pack": "08_Intro_ML_Part_2",
+      "slides": 27,
+      "questions": 5,
+      "labs": 3
+    },
+    {
+      "pack": "09_Regression_Part_1",
+      "slides": 32,
+      "questions": 6,
+      "labs": 6
+    },
+    {
+      "pack": "10_Regression_Part_2",
+      "slides": 33,
+      "questions": 6,
+      "labs": 5
+    },
+    {
+      "pack": "11_Classification_Part_1",
+      "slides": 32,
+      "questions": 7,
+      "labs": 4
+    },
+    {
+      "pack": "12_Classification_Part_2",
+      "slides": 33,
+      "questions": 5,
+      "labs": 6
+    },
+    {
+      "pack": "13_Classification_Part_3",
+      "slides": 36,
+      "questions": 7,
+      "labs": 10
+    },
+    {
+      "pack": "14_Classification_Part_4",
+      "slides": 30,
+      "questions": 5,
+      "labs": 4
+    },
+    {
+      "pack": "15_Clustering_Part_1",
+      "slides": 40,
+      "questions": 7,
+      "labs": 7
+    },
+    {
+      "pack": "16_Clustering_Part_2",
+      "slides": 34,
+      "questions": 6,
+      "labs": 7
+    }
+  ],
+  "preservation": {
+    "retained_content_sections": 348,
+    "retained_reading_sections": 348,
+    "retained_labs": 70,
+    "links_checked": 523,
+    "broken": []
+  }
+}
