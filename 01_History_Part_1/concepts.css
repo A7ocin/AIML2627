@@ -12,6 +12,7 @@
 .reveal .concept-card { padding:28px; border:1px solid var(--line); border-top:4px solid var(--concept-accent); border-radius:14px; background:var(--bg-elevated); }
 .reveal .concept-card h3 { font-size:30px; color:var(--concept-accent); margin:0 0 16px; text-transform:none; }
 .reveal .concept-card p + p { margin-top:16px; }
+.reveal .concept-slide sup { font-size:.7em; line-height:0; vertical-align:super; }
 .reveal .concept-equation { padding:28px; background:var(--bg-elevated); border:1px solid var(--line); border-radius:14px; font-size:44px; text-align:center; line-height:1.45; }
 .reveal .concept-equation small { display:block; font:27px/1.5 'Segoe UI',Arial,sans-serif; color:var(--text-muted); margin-top:12px; }
 .reveal .concept-fraction { display:inline-flex; flex-direction:column; vertical-align:middle; text-align:center; margin:0 12px; }
