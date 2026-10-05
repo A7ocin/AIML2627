@@ -1,0 +1,118 @@
+{
+  "date": "2026-09-15",
+  "questions": 92,
+  "core": 68,
+  "optional": 24,
+  "types": {
+    "MCQ": 84,
+    "OpenQuestion": 8
+  },
+  "correct_positions": {
+    "1": 21,
+    "4": 21,
+    "3": 21,
+    "2": 21
+  },
+  "workbooks": 32,
+  "schema": [
+    "Type",
+    "Title",
+    "Correct",
+    "Choice",
+    "Choice",
+    "Choice",
+    "Choice",
+    "Choice",
+    "Choice",
+    "Choice"
+  ],
+  "workbook_roundtrip": "passed",
+  "duplicate_stems": 0,
+  "slide_links": "all mapped to existing source slides and handout chapters",
+  "core_teaching_order": "passed",
+  "sources": {
+    "01_History_Part_1": {
+      "slides_sha256": "ed10832feabdaa132b5c91e929d625b991a81907f87fdeea432ea778fcbbb545",
+      "handout_sha256": "d46e27f485627e4a7b1a29968fefbb6686b11f44896f0c5b388c94058123a617",
+      "slides": 30
+    },
+    "02_History_Part_2": {
+      "slides_sha256": "2a1030ec7589a33e5646bdbff7d185179e6a056f6f2357ca4f57ff487c043f44",
+      "handout_sha256": "a6a010248e5290daaecc0bcefdcb96a9e80958a900420598ea4f019a922de342",
+      "slides": 32
+    },
+    "03_Search_Part_1": {
+      "slides_sha256": "9da130cdd6430e6e5d132e07bb7b3e5630b3090380cf6b342e7f74f222a82e77",
+      "handout_sha256": "b8c62b54cda339e5d245fd0220fa378f8dafe5c7dc719d2dccfa4b19e7e417e7",
+      "slides": 26
+    },
+    "04_Search_Part_2": {
+      "slides_sha256": "2dbfbb03ecc09caf76fd69e6cd18b7d0808a7c4c2d2092d93d6a2fea37400c94",
+      "handout_sha256": "849b243ee7a79daec52747e4863bdb554af0f403c8471cab3a6e4614f95c3925",
+      "slides": 24
+    },
+    "05_Constraints_Part_1": {
+      "slides_sha256": "9bd939ff2ccaba37acd55b4c1448738d13f57c7e002a74912249cd4f0c76ca66",
+      "handout_sha256": "eb3478347e6582bbd08184b2cfea595c4f633affe3b4e20aaeb5217bafbbfaa5",
+      "slides": 24
+    },
+    "06_Constraints_Part_2": {
+      "slides_sha256": "0cc94d4a9d6c5439d68fb6fb6bc55e3a0ef4337f62136c2ddd6921ab676843de",
+      "handout_sha256": "22d949101681b16e53ee2b9eed986d2a27d832a6b5cb6487d44a36eccbdf5bdc",
+      "slides": 21
+    },
+    "07_Intro_ML_Part_1": {
+      "slides_sha256": "cf1e73cd5ad5917c852104af234efeccfdb1f1333a7808f92de82b2016603e5e",
+      "handout_sha256": "61f717ebbc3c6fc1a25034902237fbe1bf9dc8399dd253503a948434e2618fe9",
+      "slides": 21
+    },
+    "08_Intro_ML_Part_2": {
+      "slides_sha256": "6b7c3c8d8e8734781b7636cbdace3d1d147412ba98ec0fa8a2dcdaf4042956ba",
+      "handout_sha256": "da7cabf9ebbfadf965904c4fc4321d733332e5e7dac6f3b4c14ac86656e4f1f4",
+      "slides": 22
+    },
+    "09_Regression_Part_1": {
+      "slides_sha256": "5e01abbbb0e1a2a9891741b47e1b2e01dc05c5aaacbab66b1cbe7d2aa12bf03b",
+      "handout_sha256": "a3bf5a32a1f816de4cd0be176796ccb0968c461b404c48b1096004e365930077",
+      "slides": 26
+    },
+    "10_Regression_Part_2": {
+      "slides_sha256": "98911816ce34908a8fb197a4d413e42bc7cf1a50d5bcbc325266e9b85ba06af4",
+      "handout_sha256": "d8790aad7edeaf063f20b5b43174724443a3df70dc9416904ee2470dd351ce62",
+      "slides": 27
+    },
+    "11_Classification_Part_1": {
+      "slides_sha256": "b66e98446d673b8115344d46df046bdd5a98982cb0af5ef421b6150f13c5ee55",
+      "handout_sha256": "c9c34c56e3bfa4e743429d0947464eee39ca488c68c484df1d6743a2294230bf",
+      "slides": 25
+    },
+    "12_Classification_Part_2": {
+      "slides_sha256": "0d2d6f477c31e446037408a8710fb02d13f7d6169cc440709699193262a4e8a8",
+      "handout_sha256": "84ca95eeaf1036ce1613494f40d52fb1beca72a429c8bb0f92e409e36ce14123",
+      "slides": 28
+    },
+    "13_Classification_Part_3": {
+      "slides_sha256": "aecbc1a01c853c05a896768d16991688342cf878b5efff7f418ca8ce56d8ee7b",
+      "handout_sha256": "f064e20341bb99910bc58c8845cfa144d8c0a6d49173f032cc2e75dab94244ef",
+      "slides": 29
+    },
+    "14_Classification_Part_4": {
+      "slides_sha256": "20ca6fd0305dffa703a9e360ad649ca7e3ec76233f2f65fa109112d7264a866d",
+      "handout_sha256": "3c6e2c30fab911f9296064c9f6f899f594595d7eacb8df29a375b3465afc22bb",
+      "slides": 25
+    },
+    "15_Clustering_Part_1": {
+      "slides_sha256": "1045864302d7e2d74343aa4f127619c014dfda21403d080032ca33273f9ef850",
+      "handout_sha256": "7de7cd0825669d96402120447b7cdb82b1be361020a20b268e94b0d2287d4784",
+      "slides": 33
+    },
+    "16_Clustering_Part_2": {
+      "slides_sha256": "286abe23f9e36a0dc10a23aa28226d4357d4032f421fc2af59b4f703492ffd3b",
+      "handout_sha256": "74a3831757a8b97ecae9688e68cf82961e6eb85306db67d5e37070b4ebfd9b2a",
+      "slides": 28
+    }
+  },
+  "live_wooclap_import_tested": true,
+  "audience": "Bachelor course; first introduction to AI and ML",
+  "live_revision_verification": "See live-revision-validation.json"
+}

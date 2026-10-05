@@ -1,0 +1,24 @@
+{
+  "audience": "Bachelor course; first introduction to AI and ML",
+  "reviewed": 92,
+  "core": 68,
+  "optional": 24,
+  "before": 45,
+  "after": 47,
+  "maximum_stem_words": 28,
+  "maximum_choice_words": 15,
+  "principles": [
+    "Everyday reasoning or previously taught concepts before topics",
+    "One main idea per question",
+    "One-step arithmetic with stated or previously taught operations",
+    "Technical terminology checked after explanation",
+    "Optional items reinforce fundamentals",
+    "One-sentence ungraded exit reflections"
+  ],
+  "placement_changes": [
+    "L05-C04 after independence",
+    "L04-O01 after line",
+    "L04-O03 after multiple",
+    "L07-C09 after scaling"
+  ]
+}

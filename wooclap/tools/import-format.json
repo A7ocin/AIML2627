@@ -1,0 +1,23 @@
+{
+  "checked": "2026-09-14",
+  "official_documentation": "https://docs.wooclap.com/en/articles/674845-how-to-import-previously-created-questions",
+  "template_copy": "https://tuto.appli.univ-poitiers.fr/wp-content/uploads/sites/567/2024/06/Format_Import_Questions.xlsx",
+  "template_sha256": "929bc348134fef16cc4a5f57e8a2dc796905a7b4392f5e0773468845246ca144",
+  "columns": [
+    "Type",
+    "Title",
+    "Correct",
+    "Choice",
+    "Choice",
+    "Choice",
+    "Choice",
+    "Choice",
+    "Choice",
+    "Choice"
+  ],
+  "types_used": [
+    "MCQ",
+    "OpenQuestion"
+  ],
+  "live_account_import_tested": false
+}

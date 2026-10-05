@@ -1,0 +1,1011 @@
+{
+  "date": "2026-09-15",
+  "revision": "Introductory undergraduate",
+  "questions": 92,
+  "core": 68,
+  "optional": 24,
+  "method": "Edited existing question forms; reloaded and reopened each saved question",
+  "textChoicesAndKeys": "all matched revised bank",
+  "votingSettings": "unchanged",
+  "questionIds": "All 92 preserved and verified",
+  "questionsVerified": {
+    "L00-C01": {
+      "verified": true,
+      "eventCode": "GMSPICB",
+      "src": "https://app.wooclap.com/events/GMSPICB/questions/6aa8fd64ee75ef7f05b11605",
+      "title": "L00-C01 · Which example shows a computer learning from examples?",
+      "choiceCount": 4,
+      "correct": [
+        1
+      ],
+      "settingsUnchanged": true
+    },
+    "L00-C02": {
+      "verified": true,
+      "eventCode": "GMSPICB",
+      "src": "https://app.wooclap.com/events/GMSPICB/questions/6aa8fd64ee75ef7f05b1160a",
+      "title": "L00-C02 · You think it will stay dry. Then you see dark clouds approaching. What is a reasonable response?",
+      "choiceCount": 4,
+      "correct": [
+        4
+      ],
+      "settingsUnchanged": true
+    },
+    "L00-C03": {
+      "verified": true,
+      "eventCode": "GMSPICB",
+      "src": "https://app.wooclap.com/events/GMSPICB/questions/6aa8fd64ee75ef7f05b1160f",
+      "title": "L00-C03 · What does the Turing imitation game focus on?",
+      "choiceCount": 4,
+      "correct": [
+        3
+      ],
+      "settingsUnchanged": true
+    },
+    "L00-C04": {
+      "verified": true,
+      "eventCode": "GMSPICB",
+      "src": "https://app.wooclap.com/events/GMSPICB/questions/6aa8fd64ee75ef7f05b11614",
+      "title": "L00-C04 · A new technology is promised to solve almost every problem, but its first products often fail. What might happen next?",
+      "choiceCount": 4,
+      "correct": [
+        2
+      ],
+      "settingsUnchanged": true
+    },
+    "L00-C05": {
+      "verified": true,
+      "eventCode": "GMSPICB",
+      "src": "https://app.wooclap.com/events/GMSPICB/questions/6aa8fd64ee75ef7f05b11619",
+      "title": "L00-C05 · What does the term “AI winter” describe?",
+      "choiceCount": 4,
+      "correct": [
+        4
+      ],
+      "settingsUnchanged": true
+    },
+    "L00-C06": {
+      "verified": true,
+      "eventCode": "GMSPICB",
+      "src": "https://app.wooclap.com/events/GMSPICB/questions/6aa8fd64ee75ef7f05b1161e",
+      "title": "L00-C06 · You want a chatbot to answer in a particular format. Why might you include two example answers in your request?",
+      "choiceCount": 4,
+      "correct": [
+        3
+      ],
+      "settingsUnchanged": true
+    },
+    "L00-C07": {
+      "verified": true,
+      "eventCode": "GMSPICB",
+      "src": "https://app.wooclap.com/events/GMSPICB/questions/6aa8fd64ee75ef7f05b11623",
+      "title": "L00-C07 · Name one idea or event from today’s AI history that you would explain to a friend. Explain it in one sentence.",
+      "choiceCount": 0,
+      "correct": [],
+      "settingsUnchanged": true
+    },
+    "L00-O01": {
+      "verified": true,
+      "eventCode": "GMSPICB",
+      "src": "https://app.wooclap.com/events/GMSPICB/questions/6aa90139d2f1e8b522d94334",
+      "title": "L00-O01 · During perceptron training, why do we show the model the correct answer?",
+      "choiceCount": 4,
+      "correct": [
+        4
+      ],
+      "settingsUnchanged": true
+    },
+    "L00-O02": {
+      "verified": true,
+      "eventCode": "GMSPICB",
+      "src": "https://app.wooclap.com/events/GMSPICB/questions/6aa90139d2f1e8b522d94339",
+      "title": "L00-O02 · What was AlphaGo famous for?",
+      "choiceCount": 4,
+      "correct": [
+        3
+      ],
+      "settingsUnchanged": true
+    },
+    "L00-O03": {
+      "verified": true,
+      "eventCode": "GMSPICB",
+      "src": "https://app.wooclap.com/events/GMSPICB/questions/6aa90139d2f1e8b522d9433e",
+      "title": "L00-O03 · Two models use a similar S-shaped curve. Must they describe the same real-world problem?",
+      "choiceCount": 4,
+      "correct": [
+        1
+      ],
+      "settingsUnchanged": true
+    },
+    "L01-C01": {
+      "verified": true,
+      "eventCode": "GLDXPMN",
+      "src": "https://app.wooclap.com/events/GLDXPMN/questions/6aa8fdba099c5058e29a3a94",
+      "title": "L01-C01 · One route takes two roads of 3 minutes each. Another takes three roads of 1 minute each. Which route is faster?",
+      "choiceCount": 4,
+      "correct": [
+        1
+      ],
+      "settingsUnchanged": true
+    },
+    "L01-C02": {
+      "verified": true,
+      "eventCode": "GLDXPMN",
+      "src": "https://app.wooclap.com/events/GLDXPMN/questions/6aa8fdba099c5058e29a3a99",
+      "title": "L01-C02 · A search uses a waiting line: the first item added is the first served. B is waiting before C. Which is served first?",
+      "choiceCount": 4,
+      "correct": [
+        1
+      ],
+      "settingsUnchanged": true
+    },
+    "L01-C03": {
+      "verified": true,
+      "eventCode": "GLDXPMN",
+      "src": "https://app.wooclap.com/events/GLDXPMN/questions/6aa8fdba099c5058e29a3a9e",
+      "title": "L01-C03 · You put book B on a pile, then put book C on top. If you remove the top book first, which comes out first?",
+      "choiceCount": 4,
+      "correct": [
+        4
+      ],
+      "settingsUnchanged": true
+    },
+    "L01-C04": {
+      "verified": true,
+      "eventCode": "GLDXPMN",
+      "src": "https://app.wooclap.com/events/GLDXPMN/questions/6aa8fdba099c5058e29a3aa3",
+      "title": "L01-C04 · How does iterative deepening search work?",
+      "choiceCount": 4,
+      "correct": [
+        3
+      ],
+      "settingsUnchanged": true
+    },
+    "L01-C05": {
+      "verified": true,
+      "eventCode": "GLDXPMN",
+      "src": "https://app.wooclap.com/events/GLDXPMN/questions/6aa8fdba099c5058e29a3aa8",
+      "title": "L01-C05 · You found a route to the destination that costs 10. Another route has cost 2 so far and needs one final step costing 1. Which is cheaper?",
+      "choiceCount": 4,
+      "correct": [
+        3
+      ],
+      "settingsUnchanged": true
+    },
+    "L01-C06": {
+      "verified": true,
+      "eventCode": "GLDXPMN",
+      "src": "https://app.wooclap.com/events/GLDXPMN/questions/6aa8fdba099c5058e29a3aad",
+      "title": "L01-C06 · A journey has cost 4 so far. You estimate that the remaining journey will cost 3. What is your estimate of the total cost?",
+      "choiceCount": 4,
+      "correct": [
+        3
+      ],
+      "settingsUnchanged": true
+    },
+    "L01-C07": {
+      "verified": true,
+      "eventCode": "GLDXPMN",
+      "src": "https://app.wooclap.com/events/GLDXPMN/questions/6aa8fdba099c5058e29a3ab2",
+      "title": "L01-C07 · A search finds a cheaper route to a place it has already reached. What information should it keep?",
+      "choiceCount": 4,
+      "correct": [
+        4
+      ],
+      "settingsUnchanged": true
+    },
+    "L01-C08": {
+      "verified": true,
+      "eventCode": "GLDXPMN",
+      "src": "https://app.wooclap.com/events/GLDXPMN/questions/6aa8fdba099c5058e29a3ab7",
+      "title": "L01-C08 · Your best complete route costs 6. Another route already costs 8, and every extra step adds a nonnegative cost. Can it beat your best route?",
+      "choiceCount": 4,
+      "correct": [
+        3
+      ],
+      "settingsUnchanged": true
+    },
+    "L01-C09": {
+      "verified": true,
+      "eventCode": "GLDXPMN",
+      "src": "https://app.wooclap.com/events/GLDXPMN/questions/6aa8fdba099c5058e29a3abc",
+      "title": "L01-C09 · In one sentence, explain the main difference between breadth-first and depth-first search.",
+      "choiceCount": 0,
+      "correct": [],
+      "settingsUnchanged": true
+    },
+    "L01-O01": {
+      "verified": true,
+      "eventCode": "GLDXPMN",
+      "src": "https://app.wooclap.com/events/GLDXPMN/questions/6aa9014ad2f1e8b522d9694f",
+      "title": "L01-O01 · An estimate must never be greater than the true remaining cost. The true cost is 5. Which estimate breaks this rule?",
+      "choiceCount": 4,
+      "correct": [
+        4
+      ],
+      "settingsUnchanged": true
+    },
+    "L01-O02": {
+      "verified": true,
+      "eventCode": "GLDXPMN",
+      "src": "https://app.wooclap.com/events/GLDXPMN/questions/6aa9014ad2f1e8b522d96954",
+      "title": "L01-O02 · A robot can move A → B → A. If it never checks where it has already been, what problem could occur?",
+      "choiceCount": 4,
+      "correct": [
+        3
+      ],
+      "settingsUnchanged": true
+    },
+    "L01-O03": {
+      "verified": true,
+      "eventCode": "GLDXPMN",
+      "src": "https://app.wooclap.com/events/GLDXPMN/questions/6aa9014ad2f1e8b522d96959",
+      "title": "L01-O03 · Why can an estimate of the remaining distance help a search algorithm?",
+      "choiceCount": 4,
+      "correct": [
+        4
+      ],
+      "settingsUnchanged": true
+    },
+    "L02-C01": {
+      "verified": true,
+      "eventCode": "JCKQKTX",
+      "src": "https://app.wooclap.com/events/JCKQKTX/questions/6aa8fdea099c5058e29a758f",
+      "title": "L02-C01 · Two exams must use different rooms. Each can use room 1 or room 2. Which room assignment is allowed?",
+      "choiceCount": 4,
+      "correct": [
+        3
+      ],
+      "settingsUnchanged": true
+    },
+    "L02-C02": {
+      "verified": true,
+      "eventCode": "JCKQKTX",
+      "src": "https://app.wooclap.com/events/JCKQKTX/questions/6aa8fdea099c5058e29a7594",
+      "title": "L02-C02 · While making a timetable, you put two classes in the same room at the same time. What is a sensible next step?",
+      "choiceCount": 4,
+      "correct": [
+        1
+      ],
+      "settingsUnchanged": true
+    },
+    "L02-C03": {
+      "verified": true,
+      "eventCode": "JCKQKTX",
+      "src": "https://app.wooclap.com/events/JCKQKTX/questions/6aa8fdea099c5058e29a7599",
+      "title": "L02-C03 · A task must finish before 3 pm. Its possible finish times are 1 pm, 2 pm and 3 pm. Which time can you rule out?",
+      "choiceCount": 4,
+      "correct": [
+        2
+      ],
+      "settingsUnchanged": true
+    },
+    "L02-C04": {
+      "verified": true,
+      "eventCode": "JCKQKTX",
+      "src": "https://app.wooclap.com/events/JCKQKTX/questions/6aa8fdea099c5058e29a759e",
+      "title": "L02-C04 · Three exams must all use different rooms, but only two rooms are available. Can you assign a room to every exam?",
+      "choiceCount": 4,
+      "correct": [
+        3
+      ],
+      "settingsUnchanged": true
+    },
+    "L02-C05": {
+      "verified": true,
+      "eventCode": "JCKQKTX",
+      "src": "https://app.wooclap.com/events/JCKQKTX/questions/6aa8fdea099c5058e29a75a3",
+      "title": "L02-C05 · You must try all four choices 1, 2, 3 and 4. Which split covers every choice exactly once?",
+      "choiceCount": 4,
+      "correct": [
+        1
+      ],
+      "settingsUnchanged": true
+    },
+    "L02-C06": {
+      "verified": true,
+      "eventCode": "JCKQKTX",
+      "src": "https://app.wooclap.com/events/JCKQKTX/questions/6aa8fdea099c5058e29a75a8",
+      "title": "L02-C06 · In local search for a timetable, what might the starting timetable look like?",
+      "choiceCount": 4,
+      "correct": [
+        2
+      ],
+      "settingsUnchanged": true
+    },
+    "L02-C07": {
+      "verified": true,
+      "eventCode": "JCKQKTX",
+      "src": "https://app.wooclap.com/events/JCKQKTX/questions/6aa8fdea099c5058e29a75ad",
+      "title": "L02-C07 · You are rearranging a timetable and seem stuck. Why might you briefly accept a change that adds a clash?",
+      "choiceCount": 4,
+      "correct": [
+        4
+      ],
+      "settingsUnchanged": true
+    },
+    "L02-C08": {
+      "verified": true,
+      "eventCode": "JCKQKTX",
+      "src": "https://app.wooclap.com/events/JCKQKTX/questions/6aa8fdea099c5058e29a75b2",
+      "title": "L02-C08 · Your timetable search runs out of time without finding a solution. Does that prove no valid timetable exists? Briefly explain.",
+      "choiceCount": 0,
+      "correct": [],
+      "settingsUnchanged": true
+    },
+    "L02-O01": {
+      "verified": true,
+      "eventCode": "JCKQKTX",
+      "src": "https://app.wooclap.com/events/JCKQKTX/questions/6aa90155d2f1e8b522d97b6a",
+      "title": "L02-O01 · One unassigned exam has 2 possible time slots; another has 5. Which does the “fewest remaining choices first” rule select?",
+      "choiceCount": 4,
+      "correct": [
+        2
+      ],
+      "settingsUnchanged": true
+    },
+    "L02-O02": {
+      "verified": true,
+      "eventCode": "JCKQKTX",
+      "src": "https://app.wooclap.com/events/JCKQKTX/questions/6aa90155d2f1e8b522d97b6f",
+      "title": "L02-O02 · A class loses one of its possible time slots. Should you recheck related room and teacher rules?",
+      "choiceCount": 4,
+      "correct": [
+        3
+      ],
+      "settingsUnchanged": true
+    },
+    "L02-O03": {
+      "verified": true,
+      "eventCode": "JCKQKTX",
+      "src": "https://app.wooclap.com/events/JCKQKTX/questions/6aa90155d2f1e8b522d97b74",
+      "title": "L02-O03 · Why might you restart a local search from a different initial timetable?",
+      "choiceCount": 4,
+      "correct": [
+        2
+      ],
+      "settingsUnchanged": true
+    },
+    "L03-C01": {
+      "verified": true,
+      "eventCode": "JCBAAQM",
+      "src": "https://app.wooclap.com/events/JCBAAQM/questions/6aa8fe064c33f3f9df45d408",
+      "title": "L03-C01 · An app is shown many photos marked “cat” or “dog”. It then labels a new photo. Which part is learning from examples?",
+      "choiceCount": 4,
+      "correct": [
+        4
+      ],
+      "settingsUnchanged": true
+    },
+    "L03-C02": {
+      "verified": true,
+      "eventCode": "JCBAAQM",
+      "src": "https://app.wooclap.com/events/JCBAAQM/questions/6aa8fe064c33f3f9df45d40d",
+      "title": "L03-C02 · You want to teach a computer to tell cats from dogs using examples. Which training collection gives it the most useful feedback?",
+      "choiceCount": 4,
+      "correct": [
+        2
+      ],
+      "settingsUnchanged": true
+    },
+    "L03-C03": {
+      "verified": true,
+      "eventCode": "JCBAAQM",
+      "src": "https://app.wooclap.com/events/JCBAAQM/questions/6aa8fe064c33f3f9df45d412",
+      "title": "L03-C03 · We hide one word from an existing sentence and ask a model to guess it. Where can we find the correct answer?",
+      "choiceCount": 4,
+      "correct": [
+        1
+      ],
+      "settingsUnchanged": true
+    },
+    "L03-C04": {
+      "verified": true,
+      "eventCode": "JCBAAQM",
+      "src": "https://app.wooclap.com/events/JCBAAQM/questions/6aa8fe064c33f3f9df45d417",
+      "title": "L03-C04 · You usually choose a restaurant you like. Why might you try a new one?",
+      "choiceCount": 4,
+      "correct": [
+        2
+      ],
+      "settingsUnchanged": true
+    },
+    "L03-C05": {
+      "verified": true,
+      "eventCode": "JCBAAQM",
+      "src": "https://app.wooclap.com/events/JCBAAQM/questions/6aa8fe064c33f3f9df45d41c",
+      "title": "L03-C05 · A table has one row per house and columns for area, number of rooms and price. Which column is the target when predicting price?",
+      "choiceCount": 4,
+      "correct": [
+        2
+      ],
+      "settingsUnchanged": true
+    },
+    "L03-C06": {
+      "verified": true,
+      "eventCode": "JCBAAQM",
+      "src": "https://app.wooclap.com/events/JCBAAQM/questions/6aa8fe064c33f3f9df45d421",
+      "title": "L03-C06 · You want a fair test of whether a student can solve new exercises. Which set should you use for the test?",
+      "choiceCount": 4,
+      "correct": [
+        4
+      ],
+      "settingsUnchanged": true
+    },
+    "L03-C07": {
+      "verified": true,
+      "eventCode": "JCBAAQM",
+      "src": "https://app.wooclap.com/events/JCBAAQM/questions/6aa8fe064c33f3f9df45d426",
+      "title": "L03-C07 · Why do we test a machine-learning model on examples it did not learn from? Answer in one sentence.",
+      "choiceCount": 0,
+      "correct": [],
+      "settingsUnchanged": true
+    },
+    "L03-O01": {
+      "verified": true,
+      "eventCode": "JCBAAQM",
+      "src": "https://app.wooclap.com/events/JCBAAQM/questions/6aa90164d2f1e8b522d99a9e",
+      "title": "L03-O01 · A training collection has a few labeled photos and many unlabeled photos. Learning from both is called what?",
+      "choiceCount": 4,
+      "correct": [
+        1
+      ],
+      "settingsUnchanged": true
+    },
+    "L03-O02": {
+      "verified": true,
+      "eventCode": "JCBAAQM",
+      "src": "https://app.wooclap.com/events/JCBAAQM/questions/6aa90164d2f1e8b522d99aa3",
+      "title": "L03-O02 · Which is a setting you choose before fitting a polynomial model, rather than a coefficient learned during fitting?",
+      "choiceCount": 4,
+      "correct": [
+        4
+      ],
+      "settingsUnchanged": true
+    },
+    "L03-O03": {
+      "verified": true,
+      "eventCode": "JCBAAQM",
+      "src": "https://app.wooclap.com/events/JCBAAQM/questions/6aa90164d2f1e8b522d99aa8",
+      "title": "L03-O03 · You want to predict next month’s sales. Which test best resembles that use?",
+      "choiceCount": 4,
+      "correct": [
+        2
+      ],
+      "settingsUnchanged": true
+    },
+    "L04-C01": {
+      "verified": true,
+      "eventCode": "RBCJRAP",
+      "src": "https://app.wooclap.com/events/RBCJRAP/questions/6aa8fe5d4c33f3f9df46d96b",
+      "title": "L04-C01 · A house costs 7 units, but a model predicts 5. Using error = actual value minus prediction, what is the error?",
+      "choiceCount": 4,
+      "correct": [
+        3
+      ],
+      "settingsUnchanged": true
+    },
+    "L04-C02": {
+      "verified": true,
+      "eventCode": "RBCJRAP",
+      "src": "https://app.wooclap.com/events/RBCJRAP/questions/6aa8fe5d4c33f3f9df46d970",
+      "title": "L04-C02 · A line predicts every training value exactly. What is its sum of squared prediction errors?",
+      "choiceCount": 4,
+      "correct": [
+        1
+      ],
+      "settingsUnchanged": true
+    },
+    "L04-C03": {
+      "verified": true,
+      "eventCode": "RBCJRAP",
+      "src": "https://app.wooclap.com/events/RBCJRAP/questions/6aa8fe5d4c33f3f9df46d975",
+      "title": "L04-C03 · On the same nonconstant dataset, model A has R²=0.8 and model B has R²=0.3. Which has the smaller sum of squared errors?",
+      "choiceCount": 4,
+      "correct": [
+        1
+      ],
+      "settingsUnchanged": true
+    },
+    "L04-C04": {
+      "verified": true,
+      "eventCode": "RBCJRAP",
+      "src": "https://app.wooclap.com/events/RBCJRAP/questions/6aa8fe5d4c33f3f9df46d97a",
+      "title": "L04-C04 · A scatterplot shows a clear U-shaped pattern. Which model could follow that shape better than a straight line?",
+      "choiceCount": 4,
+      "correct": [
+        3
+      ],
+      "settingsUnchanged": true
+    },
+    "L04-C05": {
+      "verified": true,
+      "eventCode": "RBCJRAP",
+      "src": "https://app.wooclap.com/events/RBCJRAP/questions/6aa8fe5d4c33f3f9df46d97f",
+      "title": "L04-C05 · A student memorizes every practice answer but struggles with new exercises. Which model behavior is this most like?",
+      "choiceCount": 4,
+      "correct": [
+        4
+      ],
+      "settingsUnchanged": true
+    },
+    "L04-C06": {
+      "verified": true,
+      "eventCode": "RBCJRAP",
+      "src": "https://app.wooclap.com/events/RBCJRAP/questions/6aa8fe5d4c33f3f9df46d984",
+      "title": "L04-C06 · You fit a model again using a slightly different training sample, and its curve changes a lot. What does this suggest?",
+      "choiceCount": 4,
+      "correct": [
+        2
+      ],
+      "settingsUnchanged": true
+    },
+    "L04-C07": {
+      "verified": true,
+      "eventCode": "RBCJRAP",
+      "src": "https://app.wooclap.com/events/RBCJRAP/questions/6aa8fe5d4c33f3f9df46d989",
+      "title": "L04-C07 · A regression slope has a small p-value. Does that alone prove that changing the input causes the output to change?",
+      "choiceCount": 4,
+      "correct": [
+        2
+      ],
+      "settingsUnchanged": true
+    },
+    "L04-C08": {
+      "verified": true,
+      "eventCode": "RBCJRAP",
+      "src": "https://app.wooclap.com/events/RBCJRAP/questions/6aa8fe5d4c33f3f9df46d98e",
+      "title": "L04-C08 · Ice-cream sales and swimming incidents both rise in warm weather. What could help explain their association?",
+      "choiceCount": 4,
+      "correct": [
+        1
+      ],
+      "settingsUnchanged": true
+    },
+    "L04-C09": {
+      "verified": true,
+      "eventCode": "RBCJRAP",
+      "src": "https://app.wooclap.com/events/RBCJRAP/questions/6aa8fe5d4c33f3f9df46d993",
+      "title": "L04-C09 · In one sentence, explain what overfitting would look like when comparing training results with results on new data.",
+      "choiceCount": 0,
+      "correct": [],
+      "settingsUnchanged": true
+    },
+    "L04-O01": {
+      "verified": true,
+      "eventCode": "RBCJRAP",
+      "src": "https://app.wooclap.com/events/RBCJRAP/questions/6aa90172f68598b6f2411259",
+      "title": "L04-O01 · In a straight-line model y ≈ intercept + slope × x, what does the slope describe?",
+      "choiceCount": 4,
+      "correct": [
+        4
+      ],
+      "settingsUnchanged": true
+    },
+    "L04-O02": {
+      "verified": true,
+      "eventCode": "RBCJRAP",
+      "src": "https://app.wooclap.com/events/RBCJRAP/questions/6aa90172f68598b6f241125e",
+      "title": "L04-O02 · Two confidence intervals for the same slope are computed using the same confidence level. What does the wider interval communicate?",
+      "choiceCount": 4,
+      "correct": [
+        3
+      ],
+      "settingsUnchanged": true
+    },
+    "L04-O03": {
+      "verified": true,
+      "eventCode": "RBCJRAP",
+      "src": "https://app.wooclap.com/events/RBCJRAP/questions/6aa90172f68598b6f2411263",
+      "title": "L04-O03 · A model uses house area and number of rooms to predict price. How does this differ from using area alone?",
+      "choiceCount": 4,
+      "correct": [
+        1
+      ],
+      "settingsUnchanged": true
+    },
+    "L05-C01": {
+      "verified": true,
+      "eventCode": "LQMJZRC",
+      "src": "https://app.wooclap.com/events/LQMJZRC/questions/6aa8fe9b4c33f3f9df472d89",
+      "title": "L05-C01 · Which task predicts a category rather than a number?",
+      "choiceCount": 4,
+      "correct": [
+        2
+      ],
+      "settingsUnchanged": true
+    },
+    "L05-C02": {
+      "verified": true,
+      "eventCode": "LQMJZRC",
+      "src": "https://app.wooclap.com/events/LQMJZRC/questions/6aa8fe9b4c33f3f9df472d8e",
+      "title": "L05-C02 · A model says an email has a 70% chance of being spam. Can that email still turn out not to be spam?",
+      "choiceCount": 4,
+      "correct": [
+        3
+      ],
+      "settingsUnchanged": true
+    },
+    "L05-C03": {
+      "verified": true,
+      "eventCode": "LQMJZRC",
+      "src": "https://app.wooclap.com/events/LQMJZRC/questions/6aa8fe9b4c33f3f9df472d93",
+      "title": "L05-C03 · An email contains a word that is more common in spam than in ordinary mail. What can this word provide?",
+      "choiceCount": 4,
+      "correct": [
+        1
+      ],
+      "settingsUnchanged": true
+    },
+    "L05-C04": {
+      "verified": true,
+      "eventCode": "LQMJZRC",
+      "src": "https://app.wooclap.com/events/LQMJZRC/questions/6aa8fe9b4c33f3f9df472d98",
+      "title": "L05-C04 · What simplifying assumption does Naive Bayes make about input features once the class is known?",
+      "choiceCount": 4,
+      "correct": [
+        3
+      ],
+      "settingsUnchanged": true
+    },
+    "L05-C05": {
+      "verified": true,
+      "eventCode": "LQMJZRC",
+      "src": "https://app.wooclap.com/events/LQMJZRC/questions/6aa8fe9b4c33f3f9df472d9d",
+      "title": "L05-C05 · A spam filter flags emails when their spam score is at least 0.5. If we lower the cutoff to 0.2 and keep all scores fixed, what can happen?",
+      "choiceCount": 4,
+      "correct": [
+        4
+      ],
+      "settingsUnchanged": true
+    },
+    "L05-C06": {
+      "verified": true,
+      "eventCode": "LQMJZRC",
+      "src": "https://app.wooclap.com/events/LQMJZRC/questions/6aa8fe9b4c33f3f9df472da2",
+      "title": "L05-C06 · The correct label for a training photo is “cat”. Which prediction gives the correct label more probability?",
+      "choiceCount": 4,
+      "correct": [
+        2
+      ],
+      "settingsUnchanged": true
+    },
+    "L05-C07": {
+      "verified": true,
+      "eventCode": "LQMJZRC",
+      "src": "https://app.wooclap.com/events/LQMJZRC/questions/6aa8fe9b4c33f3f9df472da7",
+      "title": "L05-C07 · A new point’s three nearest labeled neighbors are two cats and one dog. What does a simple majority vote predict?",
+      "choiceCount": 4,
+      "correct": [
+        4
+      ],
+      "settingsUnchanged": true
+    },
+    "L05-C08": {
+      "verified": true,
+      "eventCode": "LQMJZRC",
+      "src": "https://app.wooclap.com/events/LQMJZRC/questions/6aa8fe9b4c33f3f9df472dac",
+      "title": "L05-C08 · You are choosing among several classifiers. Which data should you use to compare choices while keeping a final test fair?",
+      "choiceCount": 4,
+      "correct": [
+        3
+      ],
+      "settingsUnchanged": true
+    },
+    "L05-C09": {
+      "verified": true,
+      "eventCode": "LQMJZRC",
+      "src": "https://app.wooclap.com/events/LQMJZRC/questions/6aa8fe9b4c33f3f9df472db1",
+      "title": "L05-C09 · A spam filter wrongly blocks an important email. In one sentence, explain why counting only its correct predictions might miss something important.",
+      "choiceCount": 0,
+      "correct": [],
+      "settingsUnchanged": true
+    },
+    "L05-O01": {
+      "verified": true,
+      "eventCode": "LQMJZRC",
+      "src": "https://app.wooclap.com/events/LQMJZRC/questions/6aa9017cd2f1e8b522d9c1c6",
+      "title": "L05-O01 · In a screening task, missing a real problem is much more costly than a false alarm. What tradeoff might we accept?",
+      "choiceCount": 4,
+      "correct": [
+        4
+      ],
+      "settingsUnchanged": true
+    },
+    "L05-O02": {
+      "verified": true,
+      "eventCode": "LQMJZRC",
+      "src": "https://app.wooclap.com/events/LQMJZRC/questions/6aa9017cd2f1e8b522d9c1cb",
+      "title": "L05-O02 · Why might Naive Bayes use smoothing for a word that never appeared in one class’s training examples?",
+      "choiceCount": 4,
+      "correct": [
+        1
+      ],
+      "settingsUnchanged": true
+    },
+    "L05-O03": {
+      "verified": true,
+      "eventCode": "LQMJZRC",
+      "src": "https://app.wooclap.com/events/LQMJZRC/questions/6aa9017cd2f1e8b522d9c1d0",
+      "title": "L05-O03 · A nearest-neighbor regressor averages two nearby examples with values 2 and 6. What does it predict?",
+      "choiceCount": 4,
+      "correct": [
+        4
+      ],
+      "settingsUnchanged": true
+    },
+    "L06-C01": {
+      "verified": true,
+      "eventCode": "LQCRNNR",
+      "src": "https://app.wooclap.com/events/LQCRNNR/questions/6aa8fec9f68598b6f23c1f90",
+      "title": "L06-C01 · An alarm should activate only when BOTH switches are on. Which input should activate it?",
+      "choiceCount": 4,
+      "correct": [
+        1
+      ],
+      "settingsUnchanged": true
+    },
+    "L06-C02": {
+      "verified": true,
+      "eventCode": "LQCRNNR",
+      "src": "https://app.wooclap.com/events/LQCRNNR/questions/6aa8fec9f68598b6f23c1f95",
+      "title": "L06-C02 · A perceptron predicts the wrong class for a training example. What is the purpose of its weight update?",
+      "choiceCount": 4,
+      "correct": [
+        1
+      ],
+      "settingsUnchanged": true
+    },
+    "L06-C03": {
+      "verified": true,
+      "eventCode": "LQCRNNR",
+      "src": "https://app.wooclap.com/events/LQCRNNR/questions/6aa8fec9f68598b6f23c1f9a",
+      "title": "L06-C03 · A classifier gets one training example right. Is that enough to know it gets every training example right?",
+      "choiceCount": 4,
+      "correct": [
+        2
+      ],
+      "settingsUnchanged": true
+    },
+    "L06-C04": {
+      "verified": true,
+      "eventCode": "LQCRNNR",
+      "src": "https://app.wooclap.com/events/LQCRNNR/questions/6aa8fec9f68598b6f23c1f9f",
+      "title": "L06-C04 · Two classes are arranged so that no straight line can separate them. What kind of change could help?",
+      "choiceCount": 4,
+      "correct": [
+        2
+      ],
+      "settingsUnchanged": true
+    },
+    "L06-C05": {
+      "verified": true,
+      "eventCode": "LQCRNNR",
+      "src": "https://app.wooclap.com/events/LQCRNNR/questions/6aa8fec9f68598b6f23c1fa4",
+      "title": "L06-C05 · A point lies very close to a classifier’s dividing line. What could a small change to that point’s measured features do?",
+      "choiceCount": 4,
+      "correct": [
+        3
+      ],
+      "settingsUnchanged": true
+    },
+    "L06-C06": {
+      "verified": true,
+      "eventCode": "LQCRNNR",
+      "src": "https://app.wooclap.com/events/LQCRNNR/questions/6aa8fec9f68598b6f23c1fa9",
+      "title": "L06-C06 · Why does a soft-margin SVM allow some training points to violate the margin?",
+      "choiceCount": 4,
+      "correct": [
+        2
+      ],
+      "settingsUnchanged": true
+    },
+    "L06-C07": {
+      "verified": true,
+      "eventCode": "LQCRNNR",
+      "src": "https://app.wooclap.com/events/LQCRNNR/questions/6aa8fec9f68598b6f23c1fae",
+      "title": "L06-C07 · Points near the center belong to one class; points in a surrounding ring belong to another. Which extra feature could help describe this pattern?",
+      "choiceCount": 4,
+      "correct": [
+        2
+      ],
+      "settingsUnchanged": true
+    },
+    "L06-C08": {
+      "verified": true,
+      "eventCode": "LQCRNNR",
+      "src": "https://app.wooclap.com/events/LQCRNNR/questions/6aa8fec9f68598b6f23c1fb3",
+      "title": "L06-C08 · What is the main benefit of a kernel in the SVM examples?",
+      "choiceCount": 4,
+      "correct": [
+        3
+      ],
+      "settingsUnchanged": true
+    },
+    "L06-C09": {
+      "verified": true,
+      "eventCode": "LQCRNNR",
+      "src": "https://app.wooclap.com/events/LQCRNNR/questions/6aa8fec9f68598b6f23c1fb8",
+      "title": "L06-C09 · An SVM gets every training example right. What would you check before trusting it on new examples?",
+      "choiceCount": 0,
+      "correct": [],
+      "settingsUnchanged": true
+    },
+    "L06-O01": {
+      "verified": true,
+      "eventCode": "LQCRNNR",
+      "src": "https://app.wooclap.com/events/LQCRNNR/questions/6aa90189f68598b6f241330a",
+      "title": "L06-O01 · For an SVM, can a correctly classified point still lie too close to the boundary to satisfy the desired margin?",
+      "choiceCount": 4,
+      "correct": [
+        1
+      ],
+      "settingsUnchanged": true
+    },
+    "L06-O02": {
+      "verified": true,
+      "eventCode": "LQCRNNR",
+      "src": "https://app.wooclap.com/events/LQCRNNR/questions/6aa90189f68598b6f241330f",
+      "title": "L06-O02 · Why are support vectors important in an SVM?",
+      "choiceCount": 4,
+      "correct": [
+        3
+      ],
+      "settingsUnchanged": true
+    },
+    "L06-O03": {
+      "verified": true,
+      "eventCode": "LQCRNNR",
+      "src": "https://app.wooclap.com/events/LQCRNNR/questions/6aa90189f68598b6f2413314",
+      "title": "L06-O03 · Why should we compare a flexible kernel model with a simpler model on validation data?",
+      "choiceCount": 4,
+      "correct": [
+        1
+      ],
+      "settingsUnchanged": true
+    },
+    "L07-C01": {
+      "verified": true,
+      "eventCode": "IZOXLUG",
+      "src": "https://app.wooclap.com/events/IZOXLUG/questions/6aa8feeaee75ef7f05b43b5d",
+      "title": "L07-C01 · You have a folder of unlabeled photos and want to group similar ones. Which information is missing compared with supervised classification?",
+      "choiceCount": 4,
+      "correct": [
+        3
+      ],
+      "settingsUnchanged": true
+    },
+    "L07-C02": {
+      "verified": true,
+      "eventCode": "IZOXLUG",
+      "src": "https://app.wooclap.com/events/IZOXLUG/questions/6aa8feeaee75ef7f05b43b62",
+      "title": "L07-C02 · Three points lie at positions 0, 2 and 4 on a line. Where is their average position?",
+      "choiceCount": 4,
+      "correct": [
+        1
+      ],
+      "settingsUnchanged": true
+    },
+    "L07-C03": {
+      "verified": true,
+      "eventCode": "IZOXLUG",
+      "src": "https://app.wooclap.com/events/IZOXLUG/questions/6aa8feeaee75ef7f05b43b67",
+      "title": "L07-C03 · You group 20 photos. If you put each photo in its own group, have you necessarily found a useful summary?",
+      "choiceCount": 4,
+      "correct": [
+        2
+      ],
+      "settingsUnchanged": true
+    },
+    "L07-C04": {
+      "verified": true,
+      "eventCode": "IZOXLUG",
+      "src": "https://app.wooclap.com/events/IZOXLUG/questions/6aa8feeaee75ef7f05b43b6c",
+      "title": "L07-C04 · A point is close to others in its own group and far from other groups. Does it appear well placed?",
+      "choiceCount": 4,
+      "correct": [
+        4
+      ],
+      "settingsUnchanged": true
+    },
+    "L07-C05": {
+      "verified": true,
+      "eventCode": "IZOXLUG",
+      "src": "https://app.wooclap.com/events/IZOXLUG/questions/6aa8feeaee75ef7f05b43b71",
+      "title": "L07-C05 · A point sits between two overlapping groups. What could a soft assignment say?",
+      "choiceCount": 4,
+      "correct": [
+        1
+      ],
+      "settingsUnchanged": true
+    },
+    "L07-C06": {
+      "verified": true,
+      "eventCode": "IZOXLUG",
+      "src": "https://app.wooclap.com/events/IZOXLUG/questions/6aa8feeaee75ef7f05b43b76",
+      "title": "L07-C06 · A fitting method stops because its result is no longer changing much. Does this prove it found the best possible result?",
+      "choiceCount": 4,
+      "correct": [
+        2
+      ],
+      "settingsUnchanged": true
+    },
+    "L07-C07": {
+      "verified": true,
+      "eventCode": "IZOXLUG",
+      "src": "https://app.wooclap.com/events/IZOXLUG/questions/6aa8feeaee75ef7f05b43b7b",
+      "title": "L07-C07 · A grouping method starts with each point alone and repeatedly joins the closest groups. What does it build?",
+      "choiceCount": 4,
+      "correct": [
+        2
+      ],
+      "settingsUnchanged": true
+    },
+    "L07-C08": {
+      "verified": true,
+      "eventCode": "IZOXLUG",
+      "src": "https://app.wooclap.com/events/IZOXLUG/questions/6aa8feeaee75ef7f05b43b80",
+      "title": "L07-C08 · A cloud of points is stretched along a diagonal. Which line would usually preserve more of its spread when the points are projected onto it?",
+      "choiceCount": 4,
+      "correct": [
+        1
+      ],
+      "settingsUnchanged": true
+    },
+    "L07-C09": {
+      "verified": true,
+      "eventCode": "IZOXLUG",
+      "src": "https://app.wooclap.com/events/IZOXLUG/questions/6aa8feeaee75ef7f05b43b85",
+      "title": "L07-C09 · Why can feature scaling matter before clustering?",
+      "choiceCount": 4,
+      "correct": [
+        2
+      ],
+      "settingsUnchanged": true
+    },
+    "L07-C10": {
+      "verified": true,
+      "eventCode": "IZOXLUG",
+      "src": "https://app.wooclap.com/events/IZOXLUG/questions/6aa8feeaee75ef7f05b43b8a",
+      "title": "L07-C10 · In one sentence, explain one reason why a clustering result should be interpreted rather than automatically accepted as the truth.",
+      "choiceCount": 0,
+      "correct": [],
+      "settingsUnchanged": true
+    },
+    "L07-O01": {
+      "verified": true,
+      "eventCode": "IZOXLUG",
+      "src": "https://app.wooclap.com/events/IZOXLUG/questions/6aa90192a9ab4759acaaa117",
+      "title": "L07-O01 · What does a K-means centroid represent?",
+      "choiceCount": 4,
+      "correct": [
+        4
+      ],
+      "settingsUnchanged": true
+    },
+    "L07-O02": {
+      "verified": true,
+      "eventCode": "IZOXLUG",
+      "src": "https://app.wooclap.com/events/IZOXLUG/questions/6aa90192a9ab4759acaaa11c",
+      "title": "L07-O02 · PCA keeps only a few directions from a dataset with many features. What is a possible tradeoff?",
+      "choiceCount": 4,
+      "correct": [
+        4
+      ],
+      "settingsUnchanged": true
+    },
+    "L07-O03": {
+      "verified": true,
+      "eventCode": "IZOXLUG",
+      "src": "https://app.wooclap.com/events/IZOXLUG/questions/6aa90192a9ab4759acaaa121",
+      "title": "L07-O03 · In a clustering tree, two observations join together early, at a small merge distance. What does that suggest under the chosen method?",
+      "choiceCount": 4,
+      "correct": [
+        4
+      ],
+      "settingsUnchanged": true
+    }
+  },
+  "embedMapping": "all 92 exact embed URLs unchanged",
+  "embedVerificationMethod": "Matched existing event codes and question IDs against event data loaded by normal browser navigation; all titles matched revised bank"
+}

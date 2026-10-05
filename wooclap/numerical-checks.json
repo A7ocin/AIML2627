@@ -1,0 +1,153 @@
+{
+  "revision": "introductory undergraduate",
+  "checks": [
+    {
+      "id": "L01-C01",
+      "calculation": "Compare route times sum([3,3]) and sum([1,1,1])",
+      "result": "(6, 3)",
+      "key": "The second route: 3 minutes in total.",
+      "passed": true
+    },
+    {
+      "id": "L01-C02",
+      "calculation": "First in, first out",
+      "result": "B.",
+      "key": "B.",
+      "passed": true
+    },
+    {
+      "id": "L01-C03",
+      "calculation": "Last in, first out",
+      "result": "C.",
+      "key": "C.",
+      "passed": true
+    },
+    {
+      "id": "L01-C05",
+      "calculation": "Add remaining step to second route; compare",
+      "result": "(3, True)",
+      "key": "The second route, with total cost 3.",
+      "passed": true
+    },
+    {
+      "id": "L01-C06",
+      "calculation": "4 plus 3",
+      "result": "7.",
+      "key": "7.",
+      "passed": true
+    },
+    {
+      "id": "L01-C08",
+      "calculation": "Current cost 8 already exceeds best complete cost 6",
+      "result": "True",
+      "key": "No. Continuing cannot bring its total below 6.",
+      "passed": true
+    },
+    {
+      "id": "L01-O01",
+      "calculation": "Only overestimate among 0,3,5,7",
+      "result": "[7]",
+      "key": "7.",
+      "passed": true
+    },
+    {
+      "id": "L02-C01",
+      "calculation": "Both rooms are available and distinct",
+      "result": "True",
+      "key": "Exam A in room 1; exam B in room 2.",
+      "passed": true
+    },
+    {
+      "id": "L02-C03",
+      "calculation": "Finish strictly before 3",
+      "result": "[3]",
+      "key": "3 pm.",
+      "passed": true
+    },
+    {
+      "id": "L02-C04",
+      "calculation": "Count assignments of three distinct rooms from two options",
+      "result": "0",
+      "key": "No. Three different rooms would be needed.",
+      "passed": true
+    },
+    {
+      "id": "L02-C05",
+      "calculation": "Disjoint exhaustive split",
+      "result": "(set(), {1, 2, 3, 4})",
+      "key": "Try {1,2} in one branch and {3,4} in the other.",
+      "passed": true
+    },
+    {
+      "id": "L02-O01",
+      "calculation": "Fewest remaining options",
+      "result": "2",
+      "key": "The exam with 2 possible time slots.",
+      "passed": true
+    },
+    {
+      "id": "L04-C01",
+      "calculation": "7 minus 5",
+      "result": "+2.",
+      "key": "+2.",
+      "passed": true
+    },
+    {
+      "id": "L04-C02",
+      "calculation": "Sum of zero squared errors",
+      "result": "0",
+      "key": "0.",
+      "passed": true
+    },
+    {
+      "id": "L04-C03",
+      "calculation": "Compare RSS=(1-R2)*TSS with same positive TSS",
+      "result": "True",
+      "key": "Model A.",
+      "passed": true
+    },
+    {
+      "id": "L05-C05",
+      "calculation": "A lower threshold can only add fixed-score flags",
+      "result": "True",
+      "key": "More emails may be flagged as spam.",
+      "passed": true
+    },
+    {
+      "id": "L05-C06",
+      "calculation": "Largest probability for the true cat class",
+      "result": "0.9",
+      "key": "Cat: 90%; dog: 10%.",
+      "passed": true
+    },
+    {
+      "id": "L05-C07",
+      "calculation": "Three-neighbor majority",
+      "result": "Cat.",
+      "key": "Cat.",
+      "passed": true
+    },
+    {
+      "id": "L05-O03",
+      "calculation": "Average of 2 and 6",
+      "result": "4.",
+      "key": "4.",
+      "passed": true
+    },
+    {
+      "id": "L06-C01",
+      "calculation": "Only both switches on satisfy AND",
+      "result": "[(True, True)]",
+      "key": "Switch 1 on and switch 2 on.",
+      "passed": true
+    },
+    {
+      "id": "L07-C02",
+      "calculation": "Average positions 0,2,4",
+      "result": "2.",
+      "key": "2.",
+      "passed": true
+    }
+  ],
+  "passed": 21
+}

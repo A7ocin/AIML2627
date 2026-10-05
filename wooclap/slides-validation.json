@@ -1,0 +1,65 @@
+{
+  "questions": 92,
+  "lectures": [
+    {
+      "pack": "00_History",
+      "questions": 10,
+      "total": 65,
+      "iframes": 0
+    },
+    {
+      "pack": "01_Search",
+      "questions": 12,
+      "total": 56,
+      "iframes": 0
+    },
+    {
+      "pack": "02_Constraints",
+      "questions": 11,
+      "total": 50,
+      "iframes": 0
+    },
+    {
+      "pack": "03_Intro_ML",
+      "questions": 10,
+      "total": 47,
+      "iframes": 0
+    },
+    {
+      "pack": "04_Regression",
+      "questions": 12,
+      "total": 59,
+      "iframes": 0
+    },
+    {
+      "pack": "05_Classification",
+      "questions": 12,
+      "total": 59,
+      "iframes": 0
+    },
+    {
+      "pack": "06_Classification_2",
+      "questions": 12,
+      "total": 60,
+      "iframes": 0
+    },
+    {
+      "pack": "07_Clustering",
+      "questions": 13,
+      "total": 68,
+      "iframes": 0
+    }
+  ],
+  "errors": [],
+  "layout": [],
+  "screenshots": [
+    "00_History-question.png",
+    "01_Search-question.png",
+    "02_Constraints-question.png",
+    "03_Intro_ML-question.png",
+    "04_Regression-question.png",
+    "05_Classification-question.png",
+    "06_Classification_2-question.png",
+    "07_Clustering-question.png"
+  ]
+}
