@@ -1,0 +1,307 @@
+{
+  "target": "C:\\Users\\Nicola\\Documents\\AIML_slides\\AIML\\03_Intro_ML",
+  "filesVerified": 75,
+  "previousPacksUnchanged": true,
+  "sourceHashes": [
+    {
+      "path": "_review\\01-title.png",
+      "sha256": "caeda34992f0250619496df42f4f241af494a1c769e662c7626f1b443e5b82f0"
+    },
+    {
+      "path": "_review\\02-roadmap.png",
+      "sha256": "c01969cd2749ef56f8b84d613a556b9b76d9e5cdb8dd6d431b779548e8652adf"
+    },
+    {
+      "path": "_review\\03-components.png",
+      "sha256": "1065f5a7f543b109491e04a526d1a48acf753a496830ed7fa828212fdc7d9c0e"
+    },
+    {
+      "path": "_review\\04-training-inference.png",
+      "sha256": "a4147485ce3904cdaecffacbef0b2e13072353c822858b28aefd3012cf06a465"
+    },
+    {
+      "path": "_review\\05-signals.png",
+      "sha256": "eb52282ca4d8d58530dbe4c2b837469172d04f288d5896d91c06b94a6ed0bd42"
+    },
+    {
+      "path": "_review\\06-supervised.png",
+      "sha256": "d03a3e50ea644c12b86731ca593964924dda858228f90f4c09701bfae053eb38"
+    },
+    {
+      "path": "_review\\07-regression-classification.png",
+      "sha256": "0e12a5a7b96aa01d6133cb0f4d32d7454c02d71a85e364577de3c1853b21a1b4"
+    },
+    {
+      "path": "_review\\08-unsupervised.png",
+      "sha256": "f622beefc406c346fbc9379d592ab7e05b4dcd89e8b7b963852493fb55cb2e77"
+    },
+    {
+      "path": "_review\\09-signal-lab.png",
+      "sha256": "348cff8cc25714fc010737f80d3c5bccbbfe889dd65d3a2bcdbed9354e19cdb6"
+    },
+    {
+      "path": "_review\\10-self-supervised.png",
+      "sha256": "c537c420a90975c85048ca2982a7dcb0953754e4bedd2e055cad2be67489a591"
+    },
+    {
+      "path": "_review\\11-mask-lab.png",
+      "sha256": "fb23dbc53c21bd9245e251049e5a55b8e092ce7a7ce570df65b0c5bcd6b49270"
+    },
+    {
+      "path": "_review\\12-semi-supervised.png",
+      "sha256": "c5854381f9b0a8954eaa01d1b27dea99e9b05570565d1bc7b949647428cf8f99"
+    },
+    {
+      "path": "_review\\13-weak-shift.png",
+      "sha256": "e1d61c9583dcd3801d95101d566c8b365d7efc17379413730815b0a1310b1414"
+    },
+    {
+      "path": "_review\\14-reinforcement.png",
+      "sha256": "cc0a5d192b58c035ff2251218f5ee4de0ae6d4e80eac30ff56e606ffdb6ed7dc"
+    },
+    {
+      "path": "_review\\15-bandit-lab.png",
+      "sha256": "d6c46a44f29a8a3e812a12f0397a9869111eaf0d0183c2853b64b3309045a928"
+    },
+    {
+      "path": "_review\\16-domains.png",
+      "sha256": "ab6dd9c49a9ec92382fa8182fd5398a3c4466b43d12cd8eafa63027d8ae8f32e"
+    },
+    {
+      "path": "_review\\17-vision.png",
+      "sha256": "da5c37c3cb2cb460b0fd28770937e0b5d02eec86a073ca6b21c39185a3a08d04"
+    },
+    {
+      "path": "_review\\18-language.png",
+      "sha256": "f588da1a2a4e4d8bc77d414c45fef5e6fa0fadd26c172df30bd1ea0bd8d10e49"
+    },
+    {
+      "path": "_review\\19-fertilizer.png",
+      "sha256": "456412a783724b4947429464d042aecb751b7c90acd314538ec850b53eca61d8"
+    },
+    {
+      "path": "_review\\20-variable-types.png",
+      "sha256": "f1b65132f0e8d85b7a7c263775746d49230dacf953e18cb04e891b7b6c610d2e"
+    },
+    {
+      "path": "_review\\21-roles.png",
+      "sha256": "f594c49002fc41880d029bfb9b6b420f680fc9a125b6337fb152a6f466c2a69b"
+    },
+    {
+      "path": "_review\\22-dataset.png",
+      "sha256": "3ddffbbf8871412d8fd2db3b0b3ff81bbfff84fc09f715cfcb3c857d14c5151c"
+    },
+    {
+      "path": "_review\\23-matrix.png",
+      "sha256": "3c15633cfb7d1edfba04e7bb5ddc3fbdb2043ed3badd35a26d0384b577fb12ef"
+    },
+    {
+      "path": "_review\\24-observations-lab.png",
+      "sha256": "35b6e998219c74edfd8b627ff8b9822c94a335fe4f51b4dce3ae61f562f8203b"
+    },
+    {
+      "path": "_review\\25-hypotheses.png",
+      "sha256": "c0ed117b3a03b4e22df86af16d96d12d427d1355064175859599e0c1e5e1c077"
+    },
+    {
+      "path": "_review\\26-hypothesis-lab.png",
+      "sha256": "dfa22ec3bc99dd7f274a95323cbe90c5280dd273dcef25ebed01347e00e0113a"
+    },
+    {
+      "path": "_review\\27-residuals.png",
+      "sha256": "ce0366cd0b29bed52f09902a171e6432047892d2a04d1c1d11ecbccb075eb5b4"
+    },
+    {
+      "path": "_review\\28-noise.png",
+      "sha256": "54de967d59c18e2dc3f9b278818a02a08d38b6fb591427c68bf498f9087d074d"
+    },
+    {
+      "path": "_review\\29-generalization.png",
+      "sha256": "4a92f9ae68bd661e4c62ec6e846ac88c260f5585cc84a034b4ab0617c10d157b"
+    },
+    {
+      "path": "_review\\30-splits.png",
+      "sha256": "0ae76ebf9685bd7a52e12efc3e47b1335edb79ca4ae66bc250f6fb4e2f58b5f1"
+    },
+    {
+      "path": "_review\\31-generalization-lab.png",
+      "sha256": "651a0be525b60d71aeb27e03933f46bc1a7298625521633628f191147fa9809a"
+    },
+    {
+      "path": "_review\\32-leakage.png",
+      "sha256": "6ee05b3f25badf856b1adf3b3d9221b1d8c87092fc5e09b438517d17e3bc2eaa"
+    },
+    {
+      "path": "_review\\33-practice.png",
+      "sha256": "3d429ca81a4348054da2b1fdd2b50fce207a4c915e92a01df0839cdac94ebec6"
+    },
+    {
+      "path": "_review\\34-answers.png",
+      "sha256": "78fd011c5f60d4d4ba2ea6618b6bb3d1ee06ec3ad284921db2194c95981ae664"
+    },
+    {
+      "path": "_review\\35-summary.png",
+      "sha256": "f367de99069887c30d1cc30f34ed96b19cf34197ee212f5a8e18b7ba694efdda"
+    },
+    {
+      "path": "_review\\36-references.png",
+      "sha256": "a16c81035467379d9ccc7c155df95424f459144455197206488270e4601b7fd0"
+    },
+    {
+      "path": "_review\\AIML-Intro-ML-reviewed.pdf",
+      "sha256": "6d4112cc832329790b76c094d7215052c0b3eec2cb527538bb1f77bef2393856"
+    },
+    {
+      "path": "_review\\audit.json",
+      "sha256": "777c1de31b964a79ca6c0009c0533ac92ccc6e7ce237df6da4519b5738a01386"
+    },
+    {
+      "path": "_review\\contact-01.jpg",
+      "sha256": "0177f47773fbba970cf6a81a2e43f7539d8525ef7a440c520536a4810e940786"
+    },
+    {
+      "path": "_review\\contact-02.jpg",
+      "sha256": "2f70e0be4eee227687ae66a37f3781434ed99324b69179e224ac86798fed5a3c"
+    },
+    {
+      "path": "_review\\contact-03.jpg",
+      "sha256": "dc1025a045b561cfffa6a9af324935022a0ee893f8ae6310fcbc1f6902705548"
+    },
+    {
+      "path": "_review\\contact-04.jpg",
+      "sha256": "fa615d1b3f932892e6d1ca03f18636a28ba248fb071550872fdbade836f312ee"
+    },
+    {
+      "path": "_review\\contact-05.jpg",
+      "sha256": "c652007032b4e6f6c2645d3e5aee63099493c3dfce3919596c80c36086a49a76"
+    },
+    {
+      "path": "_review\\contact-06.jpg",
+      "sha256": "d4bb45cc0c510fc9b6a469fc905e73d6beb08185409064a879251e95bea24b82"
+    },
+    {
+      "path": "_review\\contact-07.jpg",
+      "sha256": "a2640ab95f75e8c7f9077c583bcade3c324e94ace62e8f11024598ab9dab27a4"
+    },
+    {
+      "path": "_review\\contact-08.jpg",
+      "sha256": "fbcbca55ed1b618ad1e55705b6b6a94e7a33b15acfb96bfe31afe3d01b2b2790"
+    },
+    {
+      "path": "_review\\contact-09.jpg",
+      "sha256": "28970da340b29072b40e7e6ffe05c9e1dc5053374ff9414fda0d347bfc0b2d4f"
+    },
+    {
+      "path": "_review\\index.html",
+      "sha256": "c3ad3939eff72582e7d52f03d21e839a73ee11b421c81451eb835e8372252a3a"
+    },
+    {
+      "path": "_review\\initial-audit.json",
+      "sha256": "36f36184da46a8f68a38d80e324dd64d82c6044bf6783f82600df6b986ae5a39"
+    },
+    {
+      "path": "_review\\review-notes.md",
+      "sha256": "34089d8dfab309b52488356b5108284885c0d234969092eeaf473eb9c6635f5f"
+    },
+    {
+      "path": "css\\ml.css",
+      "sha256": "26dfd5fcaa74a80f921b417db97f8f898b3bcf7c08f91af9ab32801c0f868a41"
+    },
+    {
+      "path": "css\\search.css",
+      "sha256": "de03dc2f92d3bd7cd823e9cc30a5aef021749f1fff6a7a8f0e5f3c4f79307cba"
+    },
+    {
+      "path": "css\\theme-base.css",
+      "sha256": "0821905ded4bcfcc223acfca8cd7a743612839d9f3770a5e4981e7d66b04bdeb"
+    },
+    {
+      "path": "data\\nonlinear.json",
+      "sha256": "cc567332c98deec7ab25d890856a8df0964515849e3c4a4d0ec0bcb43a962eb7"
+    },
+    {
+      "path": "data\\nonlinear_mod.json",
+      "sha256": "03ea280c43032a5cff9ca19087e68d8843ac8aaca39042b9942ddbfafecde7d1"
+    },
+    {
+      "path": "index.html",
+      "sha256": "d1b50ca2b49027dc7c45d0eb100099b60e317865f4fe83f844059d898eaca7b2"
+    },
+    {
+      "path": "js\\course-data.js",
+      "sha256": "f3d1a295cb81d0b74430628ecc76f853cb6da824f0766f06d0d5fc584a5c4657"
+    },
+    {
+      "path": "js\\deck.js",
+      "sha256": "b07a6183c78bb611c1137cd99fbc2044bfb1328944917d173730180fd2bdc796"
+    },
+    {
+      "path": "js\\ml-engine.js",
+      "sha256": "054f17807160e529033c21148d75f5ecdbb4027e76dd24454b85886135496dcd"
+    },
+    {
+      "path": "js\\visuals.js",
+      "sha256": "ec1c54960cbc5d90ec44fccc20644965665102b8ea5e19246c0b25fad623c2fe"
+    },
+    {
+      "path": "js\\widgets.js",
+      "sha256": "e5c8b91e911f0ac3ba1e95953d4264456a1853d87a4244406253f70f9387142c"
+    },
+    {
+      "path": "lib\\plotly.min.js",
+      "sha256": "899daefe8536c1ffef0db97f0a1717f775a06c145206f50ee8de35de10f3ef13"
+    },
+    {
+      "path": "lib\\reveal\\reset.min.css",
+      "sha256": "5bdbe39e006b125a90f7d0b7ef148281f0641fb2291c235add95b186e0bff274"
+    },
+    {
+      "path": "lib\\reveal\\reveal.min.css",
+      "sha256": "50c92ac663c9b6ed944155350650120c993e9a82d6e85117790157bd5aa8e3cd"
+    },
+    {
+      "path": "lib\\reveal\\reveal.min.js",
+      "sha256": "ff9c77379675d2c09ee964050e09f1a3d6a562fdfc4f54428523d2e7eea23b46"
+    },
+    {
+      "path": "notes\\slide-manifest.json",
+      "sha256": "0fbf1d4304a98eb950b68662c95cf8f425b82db13ffa63c8423f1b55f97e34d3"
+    },
+    {
+      "path": "notes\\slide-notes.md",
+      "sha256": "2acb057d2b20e17eba76c29ee599f2de0cddc9b54cd91ceeb848fcfddcb63b89"
+    },
+    {
+      "path": "notes\\source-map.md",
+      "sha256": "cc0bd61801d2332ab2e3ab1e67b1212e8eb32a999513b66c7b98403603a92bcc"
+    },
+    {
+      "path": "README.md",
+      "sha256": "4f963bcd92c8eefa0f8f7abf03a350cd93149ea85c6338e84bf09867b2041723"
+    },
+    {
+      "path": "tests\\audit-function.js",
+      "sha256": "fc9c7c6040ed5ce47b391d31566827400537420fd6dd4cb29a2b65e6eeab201b"
+    },
+    {
+      "path": "tests\\engine.test.js",
+      "sha256": "d89c68744fa244e7904d6ada7e410ed466e3c1b65d212b77a01739cb9ec20bd1"
+    },
+    {
+      "path": "tests\\fit-reference.json",
+      "sha256": "dd64e1b12d2f4b73ee862d309f31dfbe87e46d9e998e53ef10f5a83a8b92da25"
+    },
+    {
+      "path": "tests\\render-review.js",
+      "sha256": "bf87b045084fcf3015049ef18586a0fbe73fe3f83ac1eacad7912caa1a457d74"
+    },
+    {
+      "path": "tools\\build-deck.py",
+      "sha256": "fc89b3cde4c056497600c6327f789ca85baa69389ff24a231d5e7cc68d7c2600"
+    },
+    {
+      "path": "tools\\contact-sheets.py",
+      "sha256": "11d758040773e46092a1ad7ae3c514ed9d81b8e71a702237743fc842605158e9"
+    }
+  ]
+}

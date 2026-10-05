@@ -1,0 +1,387 @@
+{
+  "target": "C:\\Users\\Nicola\\Documents\\AIML_slides\\AIML\\04_Regression",
+  "filesVerified": 95,
+  "previousPacksUnchanged": true,
+  "sourceHashes": [
+    {
+      "path": "_review\\01-title.png",
+      "sha256": "fb72c751d230b5b484d0602a3fb283c8ba49b75198f65c066d322721cf7ad8ef"
+    },
+    {
+      "path": "_review\\02-map.png",
+      "sha256": "4ddec73a6b89eb4f1e80a128c1bb64dd8df133da492dfcf1eb5094b1b196e455"
+    },
+    {
+      "path": "_review\\03-scatter-lab.png",
+      "sha256": "e09757b66931d6a91a7462475e2b8afae7b309ae968349aea1d8a3ed165a0f1b"
+    },
+    {
+      "path": "_review\\04-line.png",
+      "sha256": "b62dee8f148086c678f99fe1c861e9d52aff1f0a94e107e8fe3632f3d8ec240f"
+    },
+    {
+      "path": "_review\\05-residual-lab.png",
+      "sha256": "a9a17777799cc93f4f4dc4a1c1369dc818aaea259c7d612f088ad7c9bcf4582c"
+    },
+    {
+      "path": "_review\\06-rss.png",
+      "sha256": "8c2158308373b4718a3e009a1a81ef21d5c264a41afa823685de9489ccea4a7b"
+    },
+    {
+      "path": "_review\\07-ols.png",
+      "sha256": "efa79c68616e336433dab3dbd2294347b2c7413545601b47efd0da4795067e90"
+    },
+    {
+      "path": "_review\\08-uniqueness.png",
+      "sha256": "77aa1e30bb97b47df69860ad08ede12b6365cb1649f237c5d9760c24d7cbac94"
+    },
+    {
+      "path": "_review\\09-fit-lab.png",
+      "sha256": "fee4692a071822ea62ecd2817ded1c3988ae687b6c7f86ae20b0e234727073b9"
+    },
+    {
+      "path": "_review\\10-metrics.png",
+      "sha256": "f3dd50a041c696dc851a9bf1343c02eaaa7fd9100804c516f6b9b42d230a22f1"
+    },
+    {
+      "path": "_review\\11-rse.png",
+      "sha256": "7395c569998d159226b3109e8d76808d6439662d63b617902f8663a213e5abb0"
+    },
+    {
+      "path": "_review\\12-r2.png",
+      "sha256": "acdb38553f59e009a2ed94faf167fd91a5359d451c1160218138953117f65109"
+    },
+    {
+      "path": "_review\\13-evaluation.png",
+      "sha256": "4ee2b51f8737e8d404bdccc3fa4398e4ee47a8bd404bad0f1953dba99389b677"
+    },
+    {
+      "path": "_review\\14-test-lab.png",
+      "sha256": "e46bfea339a9ed12715f5f7a11af52feab4e0cff62db1b3014874bf5aff8a9f5"
+    },
+    {
+      "path": "_review\\15-polynomial.png",
+      "sha256": "8650204fc61d70b544ddf66a7c8a279d045fde0f9a8ca12eb8ced3c9fe9a63cb"
+    },
+    {
+      "path": "_review\\16-design.png",
+      "sha256": "00a4788b11822ca16152c322f96cd772e25c56a04284cef4513e11b6e785e443"
+    },
+    {
+      "path": "_review\\17-normal-equations.png",
+      "sha256": "0e851d4123ea42308dff5ebd39aed92c606a950cc492c72537177b05ccb0c3f4"
+    },
+    {
+      "path": "_review\\18-rank.png",
+      "sha256": "a08baafe6210f253a1961053b210b77e797dfd6e005bc20bb89073e2e090d6d6"
+    },
+    {
+      "path": "_review\\19-hyperparameter.png",
+      "sha256": "61fe3857d41c884816b0a384b8d899a8ecd13492327d420f86081e512e99e43e"
+    },
+    {
+      "path": "_review\\20-overfit-lab.png",
+      "sha256": "b691a5bff31c06399c6f8d46bdc464c1c166dce9c9bbb914251c5b561b6c21d8"
+    },
+    {
+      "path": "_review\\21-overfit-metrics.png",
+      "sha256": "aed9fcf69202c5e3d93bb7b96423efdc1986bc1b60a78ad29b48ec88e5db0631"
+    },
+    {
+      "path": "_review\\22-underfit-lab.png",
+      "sha256": "fa50539b29ddb46a3927ab49c144d873ba5bbdad6989d5b093076f850786a492"
+    },
+    {
+      "path": "_review\\23-diagnose-fit.png",
+      "sha256": "ce7f7ee4c51d41fcde1f283ad09dd687f08284fae1c8169a6e786985ef4db8be"
+    },
+    {
+      "path": "_review\\24-bias-variance.png",
+      "sha256": "8a0fd01b680e15a07461cceed005bebaf7f53a95be0193fccb77fac94f79c322"
+    },
+    {
+      "path": "_review\\25-bias-lab.png",
+      "sha256": "5962a27cdd992bcac964c4795b604b44d1c66a94f687636eb4d1f930f2243f71"
+    },
+    {
+      "path": "_review\\26-decomposition.png",
+      "sha256": "da21a24bdb3057b730d1276d47be12aa6226a7bbfb1f3c5eb6343e924ef81662"
+    },
+    {
+      "path": "_review\\27-selection.png",
+      "sha256": "1093cd5f7c642efaf7229ea5a3dfebc158a0ee65eef38918d1b2f1a6fa84c02c"
+    },
+    {
+      "path": "_review\\28-uncertainty-lab.png",
+      "sha256": "2c5cd5226aca4e4b30a0566338c8fcd7ef453dadceb1af63e373b025070de263"
+    },
+    {
+      "path": "_review\\29-hypothesis-test.png",
+      "sha256": "d40a097aa9006af2c3f4a03de26ad9f9b11910c20c6e176697a9eea89713d1a5"
+    },
+    {
+      "path": "_review\\30-standard-error.png",
+      "sha256": "b7d4673b65f5815016661380c97b8e53a631d4f9cfba6dc9570b39d718b7b3ce"
+    },
+    {
+      "path": "_review\\31-tails-lab.png",
+      "sha256": "073958c0a1131aa716100ef47a52b679d69c8c0d02caaf25852e96773f848efb"
+    },
+    {
+      "path": "_review\\32-pvalues.png",
+      "sha256": "3fa4815f30432d41aa42119e477cfc903bc1a735a31de979f3f9ef94eddaa68a"
+    },
+    {
+      "path": "_review\\33-interval.png",
+      "sha256": "adbb6858dd86773c0a3dc57672e26f08f1653ac7972bbc798ffa4f74a8ddf418"
+    },
+    {
+      "path": "_review\\34-multiple.png",
+      "sha256": "b50b908d1c86b2df8c1394898bb60e8db012621a37431db5d1a86d1972c96b90"
+    },
+    {
+      "path": "_review\\35-conditional.png",
+      "sha256": "8cc8c7a16aea161640226cdb9164f8b356d04108a118a0e75c2d3f86a65d9d2a"
+    },
+    {
+      "path": "_review\\36-association-lab.png",
+      "sha256": "7105312dab400f6bb9c7deba05decd0acf70dec6853cb4b21b2baacf277b6c11"
+    },
+    {
+      "path": "_review\\37-confounding.png",
+      "sha256": "2f805d2f4b3517ac911e77c515d5c87c37bb4c4915672d65254dc87637979c9e"
+    },
+    {
+      "path": "_review\\38-adjustment.png",
+      "sha256": "d71f09b50c8ed114bf5064e5615367070a53cf14f5285150166cf62c710f1042"
+    },
+    {
+      "path": "_review\\39-assumptions.png",
+      "sha256": "365a3df93b30df77a78b1b71bd4e2d8c0a064aec36067ee5aa36fd60fbfcc94d"
+    },
+    {
+      "path": "_review\\40-diagnostics-lab.png",
+      "sha256": "8f3b6c2b4ba7487a63511f699eced1924f5ea3111502d21bdd914df6d5b05fe7"
+    },
+    {
+      "path": "_review\\41-residual-reading.png",
+      "sha256": "a86e0048f7e6d22ae1960f278b5da815a9bdbde87d423e737b079cc9c4ce1e8d"
+    },
+    {
+      "path": "_review\\42-workflow.png",
+      "sha256": "6558186807734a6e86906d7e66bdf527fd77e480dbc0741d6bb2fed644f8ffcf"
+    },
+    {
+      "path": "_review\\43-practice.png",
+      "sha256": "2cd7070e11b63d2b0c6b74436d14cf1718f6125b1510534ace4ba8deef0968df"
+    },
+    {
+      "path": "_review\\44-answers.png",
+      "sha256": "3a88b2918d9616b8332efc7d104aa44b4ae7c1fb41cea5f14418e20a0c90a0fe"
+    },
+    {
+      "path": "_review\\45-summary.png",
+      "sha256": "779289e4b8ce506e4db8f810728408834422357c40c135f8fc2c925866a4bb99"
+    },
+    {
+      "path": "_review\\46-references.png",
+      "sha256": "0408d2969ca080bec70c1d8aa0ab250205e02a3654e09c844de286a80e6d2503"
+    },
+    {
+      "path": "_review\\AIML-Regression-reviewed.pdf",
+      "sha256": "082c34d6b58c69010c13893f8feb457e6e965345fa9a28caba0c145c3e689d70"
+    },
+    {
+      "path": "_review\\audit.json",
+      "sha256": "abbda17d0d281b0c1a6cd20604a7a675b11f6a60d3ee1bef383f8acabd8a3497"
+    },
+    {
+      "path": "_review\\contact-01.jpg",
+      "sha256": "56d6a25efe0b81aeefc6fc55b6930ba15896e24175d151142b5402cf0609baec"
+    },
+    {
+      "path": "_review\\contact-02.jpg",
+      "sha256": "c1b442e01fe3e64cf097e09101da4acec4cf822d77d24d15ac440cd2cefd24aa"
+    },
+    {
+      "path": "_review\\contact-03.jpg",
+      "sha256": "fa023a8d144b09d7946f310a7545c06f29520264ffd9be525b98b6a2fd71e8cb"
+    },
+    {
+      "path": "_review\\contact-04.jpg",
+      "sha256": "2b43e613476b5f09367b76fd6b321c35bb6f5f803e86090f5ea1e18c348988d2"
+    },
+    {
+      "path": "_review\\contact-05.jpg",
+      "sha256": "9e0f32b691defdec8a3a878c6fbf5f0d1cba6666f464087955f385b184ebe76c"
+    },
+    {
+      "path": "_review\\contact-06.jpg",
+      "sha256": "e6aa3153221b4728e546c873fb323c4c4da744dd474f3b78c5f690848c9d4c79"
+    },
+    {
+      "path": "_review\\contact-07.jpg",
+      "sha256": "2793f0676b75d8b9916a2b25158cbefa627d88c66cf0aca37485225d92029377"
+    },
+    {
+      "path": "_review\\contact-08.jpg",
+      "sha256": "79430c6daad150c82d0e4b8475b1eec68bd5db82186c4c075b75647249dce374"
+    },
+    {
+      "path": "_review\\contact-09.jpg",
+      "sha256": "e51d8bed163ca68b1699374d5acdc855057d1ea587b119fa0cfdac52fc21eeb5"
+    },
+    {
+      "path": "_review\\contact-10.jpg",
+      "sha256": "cb812bf301981c236dac1581e888ee6a700dc75f761cc3b55aec0afdfe3a0e33"
+    },
+    {
+      "path": "_review\\contact-11.jpg",
+      "sha256": "bdbdd518048ddb6383afe5b288480e9821d3979af370e3b966043ed289c29238"
+    },
+    {
+      "path": "_review\\contact-12.jpg",
+      "sha256": "fae32e7f3607829edc87c5e3c0a1b5fcca1dde8a9daa8a815bad5a71371d7725"
+    },
+    {
+      "path": "_review\\index.html",
+      "sha256": "13498c119d2977c375bcc36fd8602cf528768c4f6d358bf0feba55c7df33c916"
+    },
+    {
+      "path": "_review\\initial-audit.json",
+      "sha256": "3c7bc75e445414a262f98ef20d79af8232102e3b8d6d5a939472d8c209768ec1"
+    },
+    {
+      "path": "_review\\review-notes.md",
+      "sha256": "1c4290db9bbd5f1f9a32280c444cc0e73678bd60a69d01f8750c95ac66b44c6f"
+    },
+    {
+      "path": "css\\regression.css",
+      "sha256": "e824ec24c14eba9e38b7664d5e665d35a4bf4cff8a7b1fab25f07884651c0a4a"
+    },
+    {
+      "path": "css\\search.css",
+      "sha256": "de03dc2f92d3bd7cd823e9cc30a5aef021749f1fff6a7a8f0e5f3c4f79307cba"
+    },
+    {
+      "path": "css\\theme-base.css",
+      "sha256": "0821905ded4bcfcc223acfca8cd7a743612839d9f3770a5e4981e7d66b04bdeb"
+    },
+    {
+      "path": "data\\lr_corcau.json",
+      "sha256": "1c77e56690ca6e2145cb23bc9b9a46afa82eeb60f8ca329da2d88cc9036d5089"
+    },
+    {
+      "path": "data\\lr_maybe.json",
+      "sha256": "101c55d84c6350f5f1f306f1ebb434e7206617977f9ef31a97cb1c6478b3301d"
+    },
+    {
+      "path": "data\\lr_scatter.json",
+      "sha256": "e08315e94eb5956f088642a354088c5ba606a1760fa95c6253c3a729e59ebf5e"
+    },
+    {
+      "path": "data\\lr_scatter_mod.json",
+      "sha256": "0e5b9d69d79d1aae3f75842cdf22cbbb620cee6fae73710af1b7ebe588e9b242"
+    },
+    {
+      "path": "data\\lr_scatter_mod_with_test.json",
+      "sha256": "1562a5acf5302afadae0b1b97d9ba394858f6217a246ef8e1e59524029552c18"
+    },
+    {
+      "path": "data\\lr_scatter_polymods_with_test.json",
+      "sha256": "1f15b162495a9055ee9c032a5c215b0e828c5e7f8825805523ea51d481805b54"
+    },
+    {
+      "path": "data\\lr_underfitting.json",
+      "sha256": "2c3c96584d1214e58b64ed24185410abfc82312a55a92bfd536f7621c7dd5a5e"
+    },
+    {
+      "path": "index.html",
+      "sha256": "f54ba7abb779b271b358788d0c4d26f884997770b7b7ef223da8640682a7ac26"
+    },
+    {
+      "path": "js\\course-data.js",
+      "sha256": "6507502141386442aef3ffc7e726a8f0ebae4f6ef9b36c631f63a71d55bcba66"
+    },
+    {
+      "path": "js\\deck.js",
+      "sha256": "86582a6a3b15c2789ee1287cd3dcf13c1e312180f4a7bc7afe44129022d8faee"
+    },
+    {
+      "path": "js\\engine.js",
+      "sha256": "9327d5c9519e9df24e0b389aed543d2a2bcd33d5f27a924b8dff4ca3276e84a9"
+    },
+    {
+      "path": "js\\visuals.js",
+      "sha256": "94b73846117999fdfbee9482b60c3de85c423d1d03d06dabc8f27f3c8577792d"
+    },
+    {
+      "path": "js\\widgets.js",
+      "sha256": "3d98bfed1f5ca1c3044963b68e91fcc8e0fa009334a825cbfe57013691287810"
+    },
+    {
+      "path": "lib\\plotly.min.js",
+      "sha256": "899daefe8536c1ffef0db97f0a1717f775a06c145206f50ee8de35de10f3ef13"
+    },
+    {
+      "path": "lib\\reveal\\reset.min.css",
+      "sha256": "5bdbe39e006b125a90f7d0b7ef148281f0641fb2291c235add95b186e0bff274"
+    },
+    {
+      "path": "lib\\reveal\\reveal.min.css",
+      "sha256": "50c92ac663c9b6ed944155350650120c993e9a82d6e85117790157bd5aa8e3cd"
+    },
+    {
+      "path": "lib\\reveal\\reveal.min.js",
+      "sha256": "ff9c77379675d2c09ee964050e09f1a3d6a562fdfc4f54428523d2e7eea23b46"
+    },
+    {
+      "path": "notes\\numerical-review.json",
+      "sha256": "a85f107997e6951b6abe96136ee2f49663139a8c3e75db8ea05b013231d2c9aa"
+    },
+    {
+      "path": "notes\\slide-manifest.json",
+      "sha256": "b9d44fa05f70178e60f773c94e727eb2d78c1c79d24d5d78c3ffd28408a85f00"
+    },
+    {
+      "path": "notes\\slide-notes.md",
+      "sha256": "0e8723a3f86c9debb99a5b3fb1950812584d9c23b08e134dda60c85003653990"
+    },
+    {
+      "path": "notes\\source-map.md",
+      "sha256": "8f3630f6749558e2475038390f2bfd7dacf602e7653028c92525709bdea701af"
+    },
+    {
+      "path": "README.md",
+      "sha256": "d5a75dbbbd652d2cdc2fddcab63ee4dbe2e1c9a220c6fdb90d23056854640b9d"
+    },
+    {
+      "path": "tests\\audit-function.js",
+      "sha256": "b11d3e9f834bb25d46a8a53a827cd4d4da5d783fde74bb704666073546108d6d"
+    },
+    {
+      "path": "tests\\engine.test.js",
+      "sha256": "90977ad30661ba275e6f454e975e2aace9e53e997a0d3f0fb648df8b2fe62206"
+    },
+    {
+      "path": "tests\\reference.json",
+      "sha256": "ec819d7bc865b27270e8caacb6a0060060f2e286f7e49d397e672cd0fc57964b"
+    },
+    {
+      "path": "tests\\render-review.js",
+      "sha256": "8f5a55d91fb5b35f40aee99f879af950a1d2bb5b45af8035dfcb952aed5f03ce"
+    },
+    {
+      "path": "tools\\build-deck.py",
+      "sha256": "da0d3894a6df3d0594e9c99aed6ab3b28b300f263d3edaafe3e32680794676a4"
+    },
+    {
+      "path": "tools\\contact-sheets.py",
+      "sha256": "11d758040773e46092a1ad7ae3c514ed9d81b8e71a702237743fc842605158e9"
+    },
+    {
+      "path": "tools\\verify-source.py",
+      "sha256": "7cf048d9cee9c4b5f35f47a81107d6e81081c222bcbfb6fb002de89e701b0c16"
+    }
+  ]
+}

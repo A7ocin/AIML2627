@@ -1,0 +1,191 @@
+{
+  "count": 46,
+  "errors": [],
+  "network": [],
+  "slides": [
+    {
+      "slide": "title",
+      "issues": []
+    },
+    {
+      "slide": "map",
+      "issues": []
+    },
+    {
+      "slide": "scatter-lab",
+      "issues": []
+    },
+    {
+      "slide": "line",
+      "issues": []
+    },
+    {
+      "slide": "residual-lab",
+      "issues": []
+    },
+    {
+      "slide": "rss",
+      "issues": []
+    },
+    {
+      "slide": "ols",
+      "issues": []
+    },
+    {
+      "slide": "uniqueness",
+      "issues": []
+    },
+    {
+      "slide": "fit-lab",
+      "issues": []
+    },
+    {
+      "slide": "metrics",
+      "issues": []
+    },
+    {
+      "slide": "rse",
+      "issues": []
+    },
+    {
+      "slide": "r2",
+      "issues": []
+    },
+    {
+      "slide": "evaluation",
+      "issues": []
+    },
+    {
+      "slide": "test-lab",
+      "issues": []
+    },
+    {
+      "slide": "polynomial",
+      "issues": []
+    },
+    {
+      "slide": "design",
+      "issues": []
+    },
+    {
+      "slide": "normal-equations",
+      "issues": []
+    },
+    {
+      "slide": "rank",
+      "issues": []
+    },
+    {
+      "slide": "hyperparameter",
+      "issues": []
+    },
+    {
+      "slide": "overfit-lab",
+      "issues": []
+    },
+    {
+      "slide": "overfit-metrics",
+      "issues": []
+    },
+    {
+      "slide": "underfit-lab",
+      "issues": []
+    },
+    {
+      "slide": "diagnose-fit",
+      "issues": []
+    },
+    {
+      "slide": "bias-variance",
+      "issues": []
+    },
+    {
+      "slide": "bias-lab",
+      "issues": []
+    },
+    {
+      "slide": "decomposition",
+      "issues": []
+    },
+    {
+      "slide": "selection",
+      "issues": []
+    },
+    {
+      "slide": "uncertainty-lab",
+      "issues": []
+    },
+    {
+      "slide": "hypothesis-test",
+      "issues": []
+    },
+    {
+      "slide": "standard-error",
+      "issues": []
+    },
+    {
+      "slide": "tails-lab",
+      "issues": []
+    },
+    {
+      "slide": "pvalues",
+      "issues": []
+    },
+    {
+      "slide": "interval",
+      "issues": []
+    },
+    {
+      "slide": "multiple",
+      "issues": []
+    },
+    {
+      "slide": "conditional",
+      "issues": []
+    },
+    {
+      "slide": "association-lab",
+      "issues": []
+    },
+    {
+      "slide": "confounding",
+      "issues": []
+    },
+    {
+      "slide": "adjustment",
+      "issues": []
+    },
+    {
+      "slide": "assumptions",
+      "issues": []
+    },
+    {
+      "slide": "diagnostics-lab",
+      "issues": []
+    },
+    {
+      "slide": "residual-reading",
+      "issues": []
+    },
+    {
+      "slide": "workflow",
+      "issues": []
+    },
+    {
+      "slide": "practice",
+      "issues": []
+    },
+    {
+      "slide": "answers",
+      "issues": []
+    },
+    {
+      "slide": "summary",
+      "issues": []
+    },
+    {
+      "slide": "references",
+      "issues": []
+    }
+  ]
+}

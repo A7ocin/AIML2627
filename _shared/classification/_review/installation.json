@@ -1,0 +1,379 @@
+{
+  "target": "C:\\Users\\Nicola\\Documents\\AIML_slides\\AIML\\05_Classification",
+  "filesVerified": 93,
+  "previousPacksUnchanged": true,
+  "sourceHashes": [
+    {
+      "path": "_review\\01-title.png",
+      "sha256": "c2de4fbc595b59644b0697d160141537f12365568a7c770f416d29c0ae1bf155"
+    },
+    {
+      "path": "_review\\02-map.png",
+      "sha256": "0edfe3f47000b98c068bcb8cc92b4130bc6c3d811c33212b1e938771d6ec050c"
+    },
+    {
+      "path": "_review\\03-data-lab.png",
+      "sha256": "52c27d7ee9a83aa06fd5567e0236fb3aac3242040b543753faa7248fc9875298"
+    },
+    {
+      "path": "_review\\04-classification.png",
+      "sha256": "7f7d3f14a067d515fc9343223141c301a46eb492832062175679bcbc4ca8f574"
+    },
+    {
+      "path": "_review\\05-uncertainty.png",
+      "sha256": "f677f3889de2d1f45ac8c6cfacecd7e13d474ce93b5c576b9cc592add08e353e"
+    },
+    {
+      "path": "_review\\06-posterior.png",
+      "sha256": "3f3cb9123206eeb37fce605295ffb2364f0e9984c923d6968960cad3d2824b40"
+    },
+    {
+      "path": "_review\\07-bayes-rule.png",
+      "sha256": "a832a06d6c69dbea8733ff17c6923f4d101bd41121bfd5010fb8e0b098bf8900"
+    },
+    {
+      "path": "_review\\08-bayes-proof.png",
+      "sha256": "ea889a9eb537a37ae73252755acc58b29006b603d28434988b3cb1fa0e1f8bb3"
+    },
+    {
+      "path": "_review\\09-bayes-error.png",
+      "sha256": "5702bd104758753b88f0abacfa326c7588ad8440ef658bea0dc45affd936b104"
+    },
+    {
+      "path": "_review\\10-decision-lab.png",
+      "sha256": "b9765891ff44535b32f792f237fe15486405e4414df2909d668579b71a3ce0eb"
+    },
+    {
+      "path": "_review\\11-accuracy.png",
+      "sha256": "0c96bfd7a449e1658c73ace06ebf0071b4e3ca88a149ac81f83c89540c6fc512"
+    },
+    {
+      "path": "_review\\12-confusion.png",
+      "sha256": "5d5de7b4e51b9698559c201068c6751b4dbe39fe679b06d509a9a78b435fec8c"
+    },
+    {
+      "path": "_review\\13-bayes-theorem.png",
+      "sha256": "529c2899502850e9fca54e610c0020438755bb4375b1a20787059d43aaad6616"
+    },
+    {
+      "path": "_review\\14-independence.png",
+      "sha256": "e029aefd8f8565cb2ce507c26b32689aae48df502c361ac1ca0e1902044625a5"
+    },
+    {
+      "path": "_review\\15-nb-score.png",
+      "sha256": "d0686fa0d03963356e25afacd20c11ef1888f92c588eaa659793602a334d0fae"
+    },
+    {
+      "path": "_review\\16-estimate.png",
+      "sha256": "dafca62563e46ad7ca41f535028b40eb56d3b854611bf5d0144509eaf9e68659"
+    },
+    {
+      "path": "_review\\17-smoothing.png",
+      "sha256": "8874e8ea10bbe18e337691adda10863ac127967bed33e8b4c82e22fafc9a14d5"
+    },
+    {
+      "path": "_review\\18-naive-lab.png",
+      "sha256": "8298f145dce41357c158e2c7a177301e07383d676d2b344b84a43c49c787509f"
+    },
+    {
+      "path": "_review\\19-nb-limits.png",
+      "sha256": "8c3f17d8fe7df4868ee746ef9b3a7ba38ccb87c4f7c1275cef216481c6e11e5a"
+    },
+    {
+      "path": "_review\\20-logistic.png",
+      "sha256": "3c395864f3c38f0e0d8cb335711c1ddbdfd596a100c72e01a9950d3672eb43a8"
+    },
+    {
+      "path": "_review\\21-log-odds.png",
+      "sha256": "8e286726bb9c6dd770c7126f1acd9b4a5cba3bc170c2809b6ec6799b3cb0a0cd"
+    },
+    {
+      "path": "_review\\22-logistic-lab.png",
+      "sha256": "657cc9d2c044d7b9e8ffc67f95fb1d52147bb55a5f075c3afd026e5a3ff5742a"
+    },
+    {
+      "path": "_review\\23-likelihood.png",
+      "sha256": "acf8e4d0720b1cbbe9a953642e79a466735d99be01ac7a45d9b151530fdf22cf"
+    },
+    {
+      "path": "_review\\24-log-loss.png",
+      "sha256": "3cf384dae0993e4e5168ffedfeade5e53c46f13a88549a50940fb9aa8459957e"
+    },
+    {
+      "path": "_review\\25-fit-lab.png",
+      "sha256": "0138c77a2981167977dd30a755d6889835c91b0c8dc7aa83dda56bd8294942e1"
+    },
+    {
+      "path": "_review\\26-thresholds.png",
+      "sha256": "a9529a23479878c64e67a037e3aeb3314109cb23b236579a224bc07cbd84f0cc"
+    },
+    {
+      "path": "_review\\27-plane-lab.png",
+      "sha256": "135ef8a6569de63d68608d65a1026c536cb27796d251103a44609b3ef8eaf679"
+    },
+    {
+      "path": "_review\\28-knn-rule.png",
+      "sha256": "4eb5487302ca75fa6ce29352e34e219c7291556d28f1d0d4c6d6c7228731681f"
+    },
+    {
+      "path": "_review\\29-boundary-lab.png",
+      "sha256": "8d51769d31de43bc871d55b25a91732aa489d6c1e797362dd7a341b0632786c2"
+    },
+    {
+      "path": "_review\\30-neighbors-lab.png",
+      "sha256": "3517a4ae264c5332e999e6bd0eb0295293e34f55706ef237a9f20f7052a9bc6a"
+    },
+    {
+      "path": "_review\\31-metric.png",
+      "sha256": "cb9b92c80fdf225afe1aea28fac429651205458dc18cd785ae485421642822c7"
+    },
+    {
+      "path": "_review\\32-ties.png",
+      "sha256": "1be9df874cec4e2d09337f5ace45bf17859dc2a03b0ad0e635cc4c6c0b115e78"
+    },
+    {
+      "path": "_review\\33-knn-density.png",
+      "sha256": "9b0ed2b2737203c82774e43df823803b839ea7bc01a715a5b79835db606c8071"
+    },
+    {
+      "path": "_review\\34-knn-regression.png",
+      "sha256": "424fb655ad27f747dcb577214b9f0dc58e1e2559eb82e3c17471eb2911417eef"
+    },
+    {
+      "path": "_review\\35-regression-lab.png",
+      "sha256": "1430f2ed3d2d576abdf4f53f41bd26b7d55b593a2a103777138047ddb10c165d"
+    },
+    {
+      "path": "_review\\36-complexity.png",
+      "sha256": "6769a597f6b87e206fa45a6176d9f041f5d761aee09ac863817e3964b43953f7"
+    },
+    {
+      "path": "_review\\37-splits.png",
+      "sha256": "642fec4cce7473f77bb99699d710542cbdedd0f463d419fc69ce2c3f72a5af37"
+    },
+    {
+      "path": "_review\\38-validation-lab.png",
+      "sha256": "b591a0509dfab0187127cbddc114e6c8ae3371bc20c70f45489f722589b77d04"
+    },
+    {
+      "path": "_review\\39-validation-notes.png",
+      "sha256": "3495116e52607fee4068c200899d15bff83f8bfafca679e5dc99bd4316065a82"
+    },
+    {
+      "path": "_review\\40-tradeoffs.png",
+      "sha256": "f99556d9129494d8c1d154a102c03c2cf5d0f8233ad7645d14e81b1a984e39a3"
+    },
+    {
+      "path": "_review\\41-cost.png",
+      "sha256": "cc64869fa54fbf5f635fd7c681afe0dadcc42910de2dfb73d94809edef007623"
+    },
+    {
+      "path": "_review\\42-workflow.png",
+      "sha256": "86ebeed1a07e71f806cf71ecdcd8960e69a23dff47a0b34b6d556856385d911a"
+    },
+    {
+      "path": "_review\\43-practice.png",
+      "sha256": "7c44c5fc9b7d5badea9e3a813c41522f4bf00b94ad0da6680aaf112f0f68b118"
+    },
+    {
+      "path": "_review\\44-answers.png",
+      "sha256": "2507fc73805ff1fe5157bd8aa50103901429b05766ec6cb5a6e0cbe0a5a5ad90"
+    },
+    {
+      "path": "_review\\45-summary.png",
+      "sha256": "a645b751a92dc3d100cef0fd9b721b565d97287afdb7661c37b9d314682422c1"
+    },
+    {
+      "path": "_review\\46-references.png",
+      "sha256": "442dda76e5be8d48638553aefe54ab714fe74e1ad125ba0dffee64d5b8a46628"
+    },
+    {
+      "path": "_review\\AIML-Classification-1-reviewed.pdf",
+      "sha256": "93bcd80464ef47ecb231567477d2ca5c157ae2a22126db57d60dc278679ff0bc"
+    },
+    {
+      "path": "_review\\audit.json",
+      "sha256": "4ec45ffde900b66ed779791b535b19334a89d1016aaf9d2d1e75a864894126bc"
+    },
+    {
+      "path": "_review\\contact-01.jpg",
+      "sha256": "3e7a531f37befe1bf271faa9da9aeea1d26e1b38450d3aa956c7fb052fad5c14"
+    },
+    {
+      "path": "_review\\contact-02.jpg",
+      "sha256": "6b54fa1cd59a1a11f631e45fc2cc44475f50692299f6292cbca9e862305fb0b1"
+    },
+    {
+      "path": "_review\\contact-03.jpg",
+      "sha256": "5e8b4c43c7cd7412d7246a3863eced9fad6d267c445912a43f3d47ddcf2c749e"
+    },
+    {
+      "path": "_review\\contact-04.jpg",
+      "sha256": "ff6fef74793a27667fc94a21f36aab00018a6ce16ffc4a02dafe5ff5f8accac5"
+    },
+    {
+      "path": "_review\\contact-05.jpg",
+      "sha256": "468a616453b89a8bddab2bc3d5ff98f88b61f27d03b298dd7170add2966b5501"
+    },
+    {
+      "path": "_review\\contact-06.jpg",
+      "sha256": "2d2f2170a1d0c59ee4034f121edd5c9a865970ba693377bff4250beef6a245b8"
+    },
+    {
+      "path": "_review\\contact-07.jpg",
+      "sha256": "90b768a3e13fc87aecf90cf82cb140de15c0461d227a0a73025dbac6a9ddc10e"
+    },
+    {
+      "path": "_review\\contact-08.jpg",
+      "sha256": "659d51f5da835b8c71b20fede77025e3ea2a84f0fc048eeed0f0e74866a05369"
+    },
+    {
+      "path": "_review\\contact-09.jpg",
+      "sha256": "72b08e654e48f8970ba20dbf881fcb54969a81cda02d5f1917ea70d13e5b0a9e"
+    },
+    {
+      "path": "_review\\contact-10.jpg",
+      "sha256": "d804e9372c471d12b768704d34ae16c746a4841a84e219a8dbdb7b762093ca52"
+    },
+    {
+      "path": "_review\\contact-11.jpg",
+      "sha256": "ec8416317c78894b6adb790a57d967675c9633b223b89de20b8f3b7e5c814b44"
+    },
+    {
+      "path": "_review\\contact-12.jpg",
+      "sha256": "e1a4aad6f8c4a374eb800ffdc76088dc98cecca48c45a87bc7d1963821111add"
+    },
+    {
+      "path": "_review\\index.html",
+      "sha256": "5f9440b80a3321ea9db57cddaaf7a61fcdb8e51018dc8ab237a80e72c8a04434"
+    },
+    {
+      "path": "_review\\initial-audit.json",
+      "sha256": "6f1f81850264c287acf283ff4725def51bdf20cb1652403311dc009df1b9e87d"
+    },
+    {
+      "path": "_review\\review-notes.md",
+      "sha256": "2b7af28f68d03b33357b9ca5aa2934c7e5776813d6576eeac9da9ef2fd40a159"
+    },
+    {
+      "path": "css\\classification.css",
+      "sha256": "d5229ccecf58694389ce755f1ad3362053e215d14135062d7e49bfc9fd34f3f2"
+    },
+    {
+      "path": "css\\regression.css",
+      "sha256": "e824ec24c14eba9e38b7664d5e665d35a4bf4cff8a7b1fab25f07884651c0a4a"
+    },
+    {
+      "path": "css\\search.css",
+      "sha256": "de03dc2f92d3bd7cd823e9cc30a5aef021749f1fff6a7a8f0e5f3c4f79307cba"
+    },
+    {
+      "path": "css\\theme-base.css",
+      "sha256": "0821905ded4bcfcc223acfca8cd7a743612839d9f3770a5e4981e7d66b04bdeb"
+    },
+    {
+      "path": "data\\cls_two_class.json",
+      "sha256": "75c0355927799982940dae94bea0c02f0f0322a83409e5b0fdfd8ead61622f85"
+    },
+    {
+      "path": "data\\cls_two_class_mod.json",
+      "sha256": "5ea2c0b62d3ef8a4ca704113c4a897a01170ed72eea408850ef801c0d2142e13"
+    },
+    {
+      "path": "data\\lr_logreg.json",
+      "sha256": "18b1da483d0d769f7a1310741b8f14d409c8085baf1d724f10a5d4aab2a1db7b"
+    },
+    {
+      "path": "data\\lr_logreg_mod.json",
+      "sha256": "01a18b6ac51a3dc24dfab2e29b7ec56cbd9414f4221deb2cb73fbe15b049bd01"
+    },
+    {
+      "path": "index.html",
+      "sha256": "b4a3eed7a81eebd7bbb45b1e306d9cba79d3be2ceee09e8ed336a3d7f11c4838"
+    },
+    {
+      "path": "js\\course-data.js",
+      "sha256": "6f7f1e417094335d0c7a8e2203516a0f4e0b3a2508bdb526bc849110b80991a0"
+    },
+    {
+      "path": "js\\deck.js",
+      "sha256": "f2db27ee84b3291940ac57bd03ad132c0c03520f598e33a4bcb8d4db4e81e02e"
+    },
+    {
+      "path": "js\\engine.js",
+      "sha256": "2af0e52d04e5c4b751eb54a79fb0ce98c499c3ef2b9d5900cafdbf76abb5988d"
+    },
+    {
+      "path": "js\\visuals.js",
+      "sha256": "f6b3be5eaee198966ceafd2b42e4212c699ef164b1a0047b9e9e177602bbb1b9"
+    },
+    {
+      "path": "js\\widgets.js",
+      "sha256": "66e55d6f6a2ac24ff33b5854ec37e9963f138de41d366c4d70c2a4d704cadea7"
+    },
+    {
+      "path": "lib\\plotly.min.js",
+      "sha256": "899daefe8536c1ffef0db97f0a1717f775a06c145206f50ee8de35de10f3ef13"
+    },
+    {
+      "path": "lib\\reveal\\reset.min.css",
+      "sha256": "5bdbe39e006b125a90f7d0b7ef148281f0641fb2291c235add95b186e0bff274"
+    },
+    {
+      "path": "lib\\reveal\\reveal.min.css",
+      "sha256": "50c92ac663c9b6ed944155350650120c993e9a82d6e85117790157bd5aa8e3cd"
+    },
+    {
+      "path": "lib\\reveal\\reveal.min.js",
+      "sha256": "ff9c77379675d2c09ee964050e09f1a3d6a562fdfc4f54428523d2e7eea23b46"
+    },
+    {
+      "path": "notes\\numerical-review.json",
+      "sha256": "3d37ededde810d9dca60d980047f2b2e61ecbda76eb5d81de2c5efbef4b1ae82"
+    },
+    {
+      "path": "notes\\slide-manifest.json",
+      "sha256": "51ff89205ee2e56b28c1f66318ba53a1eedba44b81063395d832f20f3bd67b86"
+    },
+    {
+      "path": "notes\\slide-notes.md",
+      "sha256": "7df30172f984ae37ffe900c88dd0351d05ac095dfd3a01abc2200bb18882729d"
+    },
+    {
+      "path": "notes\\source-map.md",
+      "sha256": "57ec29cfe3077977b7dcf63a9f4183950eaea93a11c5b7ffbb65c2978c1925b4"
+    },
+    {
+      "path": "README.md",
+      "sha256": "6d1fa425d8a48eda8536af5392aee2d53be3811bbb3ba17aa3ff1b48bdd58dec"
+    },
+    {
+      "path": "tests\\audit-function.js",
+      "sha256": "b11d3e9f834bb25d46a8a53a827cd4d4da5d783fde74bb704666073546108d6d"
+    },
+    {
+      "path": "tests\\engine.test.js",
+      "sha256": "379063a78f7c5d0221da7d23658b63054f9acc61b542e08c6cd8fa0680b5aad4"
+    },
+    {
+      "path": "tests\\reference.json",
+      "sha256": "2db728ce2558d4589907b5ceccbaa5b1111ba8ec7b7e05059bdde0a6d86cc394"
+    },
+    {
+      "path": "tests\\render-review.js",
+      "sha256": "5204889b3b3e00a6490a65cd07884ce560ad289055b8cce1917d5a9674f4d866"
+    },
+    {
+      "path": "tools\\build-deck.py",
+      "sha256": "e8cf3e326d68f894dddcae4461763d44a85560546b94923f1524e75dbbd99ed9"
+    },
+    {
+      "path": "tools\\contact-sheets.py",
+      "sha256": "11d758040773e46092a1ad7ae3c514ed9d81b8e71a702237743fc842605158e9"
+    },
+    {
+      "path": "tools\\verify-source.py",
+      "sha256": "16fec001097daa6754fd96d72b18fea10242eb7ff7b4aadcf6f959417e249d9f"
+    }
+  ]
+}

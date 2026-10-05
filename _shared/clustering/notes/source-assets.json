@@ -1,0 +1,42 @@
+[
+  {
+    "file": "elbow.json",
+    "url": "https://www.aretor.it/json/aiml2526/clustering/elbow.json",
+    "sha256": "9321be6c9ade8e6026c22e6b7ca546e935b82890d674b5df36ef079cb3eda243"
+  },
+  {
+    "file": "gaussian_points.json",
+    "url": "https://www.aretor.it/json/aiml2526/clustering/gaussian_points.json",
+    "sha256": "4929634c4ab37aeb4d7728bd3d3dabeac2788665a3a61a4bc6eef8042be5a1e2"
+  },
+  {
+    "file": "gaussian_points_rot30.json",
+    "url": "https://www.aretor.it/json/aiml2526/clustering/gaussian_points_rot30.json",
+    "sha256": "f767ecede2f7f2ba53fe66c50c5c1f48a2e91f6bd0cc09404f3cba6181daa929"
+  },
+  {
+    "file": "hc_dendogram.json",
+    "url": "https://www.aretor.it/json/aiml2526/clustering/hc_dendogram.json",
+    "sha256": "4f5865c48995d2fe4944b305ccf29467a0951630f1a20533959f3649cf2b4e77"
+  },
+  {
+    "file": "kmeans_data.json",
+    "url": "https://www.aretor.it/json/aiml2526/clustering/kmeans_data.json",
+    "sha256": "5e0d1406a1f5dcffae2e4943d94eeaa91bd3741e1f3c092dc5bfa0a3d116e5e7"
+  },
+  {
+    "file": "kmeans_steps.json",
+    "url": "https://www.aretor.it/json/aiml2526/clustering/kmeans_steps.json",
+    "sha256": "926e8251772848a4bc99ac2e43736c1dc49288c0d9ebcb4fce5841a478b17093"
+  },
+  {
+    "file": "two_gaussian_blobs.json",
+    "url": "https://www.aretor.it/json/aiml2526/clustering/two_gaussian_blobs.json",
+    "sha256": "f583f62e3204292c27f5466aa9f787fbac3725ededa4122733150e04df0a568c"
+  },
+  {
+    "file": "two_gaussian_blobs_panel.json",
+    "url": "https://www.aretor.it/json/aiml2526/clustering/two_gaussian_blobs_panel.json",
+    "sha256": "a54e999334d71d598435595d5bbab3ff4e96400cdbda8ec9bfaf8e2cae4539fe"
+  }
+]

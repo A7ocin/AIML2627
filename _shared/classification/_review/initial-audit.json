@@ -1,0 +1,191 @@
+{
+  "count": 46,
+  "errors": [],
+  "network": [],
+  "slides": [
+    {
+      "slide": "title",
+      "issues": []
+    },
+    {
+      "slide": "map",
+      "issues": []
+    },
+    {
+      "slide": "data-lab",
+      "issues": []
+    },
+    {
+      "slide": "classification",
+      "issues": []
+    },
+    {
+      "slide": "uncertainty",
+      "issues": []
+    },
+    {
+      "slide": "posterior",
+      "issues": []
+    },
+    {
+      "slide": "bayes-rule",
+      "issues": []
+    },
+    {
+      "slide": "bayes-proof",
+      "issues": []
+    },
+    {
+      "slide": "bayes-error",
+      "issues": []
+    },
+    {
+      "slide": "decision-lab",
+      "issues": []
+    },
+    {
+      "slide": "accuracy",
+      "issues": []
+    },
+    {
+      "slide": "confusion",
+      "issues": []
+    },
+    {
+      "slide": "bayes-theorem",
+      "issues": []
+    },
+    {
+      "slide": "independence",
+      "issues": []
+    },
+    {
+      "slide": "nb-score",
+      "issues": []
+    },
+    {
+      "slide": "estimate",
+      "issues": []
+    },
+    {
+      "slide": "smoothing",
+      "issues": []
+    },
+    {
+      "slide": "naive-lab",
+      "issues": []
+    },
+    {
+      "slide": "nb-limits",
+      "issues": []
+    },
+    {
+      "slide": "logistic",
+      "issues": []
+    },
+    {
+      "slide": "log-odds",
+      "issues": []
+    },
+    {
+      "slide": "logistic-lab",
+      "issues": []
+    },
+    {
+      "slide": "likelihood",
+      "issues": []
+    },
+    {
+      "slide": "log-loss",
+      "issues": []
+    },
+    {
+      "slide": "fit-lab",
+      "issues": []
+    },
+    {
+      "slide": "thresholds",
+      "issues": []
+    },
+    {
+      "slide": "plane-lab",
+      "issues": []
+    },
+    {
+      "slide": "knn-rule",
+      "issues": []
+    },
+    {
+      "slide": "boundary-lab",
+      "issues": []
+    },
+    {
+      "slide": "neighbors-lab",
+      "issues": []
+    },
+    {
+      "slide": "metric",
+      "issues": []
+    },
+    {
+      "slide": "ties",
+      "issues": []
+    },
+    {
+      "slide": "knn-density",
+      "issues": []
+    },
+    {
+      "slide": "knn-regression",
+      "issues": []
+    },
+    {
+      "slide": "regression-lab",
+      "issues": []
+    },
+    {
+      "slide": "complexity",
+      "issues": []
+    },
+    {
+      "slide": "splits",
+      "issues": []
+    },
+    {
+      "slide": "validation-lab",
+      "issues": []
+    },
+    {
+      "slide": "validation-notes",
+      "issues": []
+    },
+    {
+      "slide": "tradeoffs",
+      "issues": []
+    },
+    {
+      "slide": "cost",
+      "issues": []
+    },
+    {
+      "slide": "workflow",
+      "issues": []
+    },
+    {
+      "slide": "practice",
+      "issues": []
+    },
+    {
+      "slide": "answers",
+      "issues": []
+    },
+    {
+      "slide": "summary",
+      "issues": []
+    },
+    {
+      "slide": "references",
+      "issues": []
+    }
+  ]
+}

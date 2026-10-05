@@ -1,0 +1,229 @@
+{
+  "count": 47,
+  "errors": [],
+  "offlineRequests": [],
+  "slides": [
+    {
+      "slide": "title",
+      "issues": []
+    },
+    {
+      "slide": "map",
+      "issues": []
+    },
+    {
+      "slide": "and-lab",
+      "issues": []
+    },
+    {
+      "slide": "threshold",
+      "issues": []
+    },
+    {
+      "slide": "threshold-lab",
+      "issues": []
+    },
+    {
+      "slide": "and-fit-lab",
+      "issues": []
+    },
+    {
+      "slide": "perceptron",
+      "issues": []
+    },
+    {
+      "slide": "noisy-lab",
+      "issues": []
+    },
+    {
+      "slide": "update",
+      "issues": []
+    },
+    {
+      "slide": "update-intuition",
+      "issues": []
+    },
+    {
+      "slide": "training-lab",
+      "issues": []
+    },
+    {
+      "slide": "perceptron-fit-lab",
+      "issues": []
+    },
+    {
+      "slide": "convergence",
+      "issues": []
+    },
+    {
+      "slide": "learning-rate",
+      "issues": []
+    },
+    {
+      "slide": "xor-lab",
+      "issues": []
+    },
+    {
+      "slide": "xor-proof",
+      "issues": []
+    },
+    {
+      "slide": "separators-lab",
+      "issues": []
+    },
+    {
+      "slide": "hyperplane",
+      "issues": []
+    },
+    {
+      "slide": "margin-source-lab",
+      "issues": []
+    },
+    {
+      "slide": "distance",
+      "issues": []
+    },
+    {
+      "slide": "margin-width",
+      "issues": []
+    },
+    {
+      "slide": "margin-lab",
+      "issues": []
+    },
+    {
+      "slide": "primal",
+      "issues": []
+    },
+    {
+      "slide": "support-vectors",
+      "issues": []
+    },
+    {
+      "slide": "soft-margin",
+      "issues": []
+    },
+    {
+      "slide": "hinge",
+      "issues": []
+    },
+    {
+      "slide": "circle-lab",
+      "issues": []
+    },
+    {
+      "slide": "feature-map",
+      "issues": []
+    },
+    {
+      "slide": "lift-lab",
+      "issues": []
+    },
+    {
+      "slide": "mapping-limits",
+      "issues": []
+    },
+    {
+      "slide": "mapped-primal",
+      "issues": []
+    },
+    {
+      "slide": "feature-explosion",
+      "issues": []
+    },
+    {
+      "slide": "lagrangian",
+      "issues": []
+    },
+    {
+      "slide": "stationarity",
+      "issues": []
+    },
+    {
+      "slide": "dual",
+      "issues": []
+    },
+    {
+      "slide": "kernel-identity",
+      "issues": []
+    },
+    {
+      "slide": "kernel-lab",
+      "issues": []
+    },
+    {
+      "slide": "kernel-prediction",
+      "issues": []
+    },
+    {
+      "slide": "kernel-families",
+      "issues": []
+    },
+    {
+      "slide": "svm-lab",
+      "issues": []
+    },
+    {
+      "slide": "valid-kernel",
+      "issues": []
+    },
+    {
+      "slide": "kernel-cost",
+      "issues": []
+    },
+    {
+      "slide": "workflow",
+      "issues": []
+    },
+    {
+      "slide": "practice",
+      "issues": []
+    },
+    {
+      "slide": "answers",
+      "issues": []
+    },
+    {
+      "slide": "summary",
+      "issues": []
+    },
+    {
+      "slide": "references",
+      "issues": []
+    }
+  ],
+  "responsive": [],
+  "stateIssues": [],
+  "stateCount": 455,
+  "interactions": [
+    "Exact maximum-margin restore",
+    "Perceptron step, epoch and reset",
+    "Perceptron play and pause",
+    "Perceptron pauses on slide exit",
+    "threshold-lab: keyboard slider",
+    "margin-lab: keyboard slider",
+    "kernel-lab: keyboard slider",
+    "and-lab: pan, drag zoom, reset",
+    "threshold-lab: pan, drag zoom, reset",
+    "and-fit-lab: pan, drag zoom, reset",
+    "noisy-lab: pan, drag zoom, reset",
+    "training-lab: pan, drag zoom, reset",
+    "perceptron-fit-lab: pan, drag zoom, reset",
+    "xor-lab: pan, drag zoom, reset",
+    "separators-lab: pan, drag zoom, reset",
+    "margin-source-lab: pan, drag zoom, reset",
+    "margin-lab: pan, drag zoom, reset",
+    "circle-lab: pan, drag zoom, reset",
+    "kernel-lab: pan, drag zoom, reset",
+    "svm-lab: pan, drag zoom, reset",
+    "Original 3D chart: pointer orbit",
+    "Original 3D chart: pointer pan",
+    "Original 3D chart: wheel zoom",
+    "Original 3D chart: camera reset",
+    "3D separating plane toggle",
+    "Original chart legend toggle",
+    "Original chart point hover"
+  ],
+  "keyboardNavigation": true,
+  "directEntry": true
+}

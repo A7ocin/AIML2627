@@ -1,0 +1,499 @@
+{
+  "target": "C:\\Users\\Nicola\\Documents\\AIML_slides\\AIML\\07_Clustering",
+  "filesVerified": 123,
+  "previousPacksUnchanged": true,
+  "sourceHashes": [
+    {
+      "path": "_review\\01-title.png",
+      "sha256": "9855211f2028cd9c0eac99b3f556252b8d0cf2977c4e241690c9a8ba9315a3ce"
+    },
+    {
+      "path": "_review\\02-map.png",
+      "sha256": "4f5b26ba3191a305cb8f1d2a22e2217f17b6bdb0c283125ac9e84087d93ac209"
+    },
+    {
+      "path": "_review\\03-unlabeled.png",
+      "sha256": "598cacad519fa64518bbc6c087e1fcf1c2db7029235c64470434f84041599e6a"
+    },
+    {
+      "path": "_review\\04-data-lab.png",
+      "sha256": "0f97e66db038878ebe62113d8d60033d57690a37a53c6ebbb261ce5d21e2e384"
+    },
+    {
+      "path": "_review\\05-meaning.png",
+      "sha256": "f5a3f03b09f36f05130d4c43ce5ba107ac1952ee039fa45b31f430975969645d"
+    },
+    {
+      "path": "_review\\06-centroids.png",
+      "sha256": "49f8188131b22e16621499b11151fd420bb7dc3360a4895778977cece45b9fb2"
+    },
+    {
+      "path": "_review\\07-objective.png",
+      "sha256": "244e907a90bb2b353b154e0da6d15eb12b76805691cc4e309ccfe4e29152089d"
+    },
+    {
+      "path": "_review\\08-assign.png",
+      "sha256": "707cc87350d9c1a2bea0ba710135d1613b2c45e86793d5a6bf8213c94c39ea8f"
+    },
+    {
+      "path": "_review\\09-update.png",
+      "sha256": "87b41b99940522c635e6a8a096f8c8be7ec5e5f1052bae54b70799b11b69c789"
+    },
+    {
+      "path": "_review\\10-source-animation.png",
+      "sha256": "84f469e99270b14b400f1ea49c469eb34ec0242c34094b67f5aaac319c273e70"
+    },
+    {
+      "path": "_review\\11-kmeans-lab.png",
+      "sha256": "5aca2a83785ac2d40132ab6e49002d8a9e90d8e5efcfe1e843b27d3417724f1a"
+    },
+    {
+      "path": "_review\\12-initialization.png",
+      "sha256": "7fc07aa3c45dafea6b1d01c2a4de54ce3226d0ebe07f5468dc99679ce3e1e90e"
+    },
+    {
+      "path": "_review\\13-limits.png",
+      "sha256": "4e15ea6825904cd8c2c5f2899ec97e423305aca469d4d683358a5adb3cf1245f"
+    },
+    {
+      "path": "_review\\14-choose-k.png",
+      "sha256": "0eecc42affdc18849cd06dc3d236cfdc4608e75f369dfdc7a2c69a82c762373b"
+    },
+    {
+      "path": "_review\\15-elbow-source.png",
+      "sha256": "8bd49b8ef85826adbac0d6b667ba238b8e2aa677d1e35d65f28baa220a0d1e8f"
+    },
+    {
+      "path": "_review\\16-elbow.png",
+      "sha256": "98cc526bd6b837677db247c53d29be0abe5af238feddc817d211611f6a9073da"
+    },
+    {
+      "path": "_review\\17-silhouette.png",
+      "sha256": "9223fd07c938073cc4839bd3bf6c0a3ed0a51d0b9e498eec7c3499c72ecd4540"
+    },
+    {
+      "path": "_review\\18-silhouette-reading.png",
+      "sha256": "8a8246a5df993074b770470bda91c439e101598c763709307a006f4d513b10fc"
+    },
+    {
+      "path": "_review\\19-selection-lab.png",
+      "sha256": "19108b07c00278ae22f7b3296d22dc8b234f58e84c40019f46ebce8b80ee01e2"
+    },
+    {
+      "path": "_review\\20-silhouette-lab.png",
+      "sha256": "cd9e5b5ca076a21770780c85b265481995ef3f23aecf6497b01d61bc05007a0d"
+    },
+    {
+      "path": "_review\\21-soft.png",
+      "sha256": "598a90b8aaecb1bf4d23bb33436e20857072e1a0a6a6d7b5c9066f12cb9c8225"
+    },
+    {
+      "path": "_review\\22-gaussian.png",
+      "sha256": "413638565de48853e4df60b687fa7a46ebca5e2b5790dbb235bd456eede57639"
+    },
+    {
+      "path": "_review\\23-mixture.png",
+      "sha256": "e680a66ee1de5b3ccb45641bc2b7c78c400bfbc361f74cf8b4c880a4f2a9a873"
+    },
+    {
+      "path": "_review\\24-posterior.png",
+      "sha256": "2441efa93b22ac925d580b392fbef2c5f55ac63a180f7f6de16c81ed1ab910b9"
+    },
+    {
+      "path": "_review\\25-likelihood.png",
+      "sha256": "43f3e60a126f9330a594d3cedb5acfb87fcd1ebeb565a71e5927ff58ae5024fe"
+    },
+    {
+      "path": "_review\\26-em.png",
+      "sha256": "d6b878741da26c4695ee7defa273a446f8564bb25968ded0488b5893b7896ca9"
+    },
+    {
+      "path": "_review\\27-mstep.png",
+      "sha256": "491a9782b94967be8217c63f75c4ce70af19378710964708c4e77a010cdbe29b"
+    },
+    {
+      "path": "_review\\28-gmm-lab.png",
+      "sha256": "7fe0bff6f019bfd39466914550960850325600398674a54d63eb7c5f68383727"
+    },
+    {
+      "path": "_review\\29-em-limits.png",
+      "sha256": "b2156bd2d3e3065b7ebcb7bcaacafe1c6d61b8625ee65ce042e28a084e342b4f"
+    },
+    {
+      "path": "_review\\30-em-kmeans.png",
+      "sha256": "8c0b981a64f503d9f58f9fb4c32bee45432094c61162e719147354cae35345a8"
+    },
+    {
+      "path": "_review\\31-hierarchical.png",
+      "sha256": "e904b23f8f9a92d0da08586941f5255ec0728f79083ec5c03f4cb8ec40a013e3"
+    },
+    {
+      "path": "_review\\32-dendrogram-source.png",
+      "sha256": "ba1d420872d8e8155b910c8758a9b3008aba4774b9af82b215b6a8c680d615e8"
+    },
+    {
+      "path": "_review\\33-cut.png",
+      "sha256": "a8b9bf4831d73dca0b46755061b7616f03fa117df5d5eb5fc33fc5e71ca9ce2e"
+    },
+    {
+      "path": "_review\\34-linkage.png",
+      "sha256": "5dc80965dcd16901a98e7c38130a8e7bd33fd2a7bc24ccabda5b7ab6a645ea8c"
+    },
+    {
+      "path": "_review\\35-hierarchy-lab.png",
+      "sha256": "373d694706bf3cfde03d57bbfdd336bee7761f02d3c74edff48e0fdd8fb2caf2"
+    },
+    {
+      "path": "_review\\36-hierarchy-limits.png",
+      "sha256": "063dd7ac44b4f6be99ab0ecba638a26b80532ff0f73550843103b8f1bf71ebff"
+    },
+    {
+      "path": "_review\\37-pca-intro.png",
+      "sha256": "6c82bbbe1b0d2874a29271ffdb21d5844c7f279ab1d830c63600013265d260e2"
+    },
+    {
+      "path": "_review\\38-aligned-lab.png",
+      "sha256": "07d5acca5299744fc55b402148424870c69f25b3da04a457047c5035fdb84502"
+    },
+    {
+      "path": "_review\\39-rotated-lab.png",
+      "sha256": "7ef601e1742859100572a359c54e8c14c0973852dafe8af99d77b110ead64836"
+    },
+    {
+      "path": "_review\\40-center.png",
+      "sha256": "0b58bb458473a70617ed4f6e1de059a07f1b5629054295a59480aadb3cd34117"
+    },
+    {
+      "path": "_review\\41-variance.png",
+      "sha256": "8ed1ef134d85f975924975391f8962cfe10b8ae8262bb26a27bd151d6bddff78"
+    },
+    {
+      "path": "_review\\42-eigen.png",
+      "sha256": "5758c179177417f0730f1e88e2df47e92e368a591057319e00aafd9be9f69648"
+    },
+    {
+      "path": "_review\\43-pca-lab.png",
+      "sha256": "06e08a5241446f6f69919ef7ca503506924b33a27e1e88c011ce77ddd6c3bdad"
+    },
+    {
+      "path": "_review\\44-reconstruct.png",
+      "sha256": "f07a50604592d25459bf8d3c02ed3c871cf89bf7dd9b1832ed5c27cdd73aa6d7"
+    },
+    {
+      "path": "_review\\45-applications.png",
+      "sha256": "9d56114b8d497dce9b6b40d775038a43e3c8c2d5e55fab393c890fb36202cfe0"
+    },
+    {
+      "path": "_review\\46-scale-source.png",
+      "sha256": "548cd0ebeff2b7412a6758ea189177e094663e070031be4ca98aef4282c6c2c8"
+    },
+    {
+      "path": "_review\\47-scaling.png",
+      "sha256": "f1a0b5b9b3b653f0e248cbddd9087dd9f8fe57363e66a637ec0916b7180f74b2"
+    },
+    {
+      "path": "_review\\48-preprocessing-lab.png",
+      "sha256": "8388fcb85c5a19969a186e3c22d2ab44dc659dd055ac2b1f52ee424ca766fb94"
+    },
+    {
+      "path": "_review\\49-whitening.png",
+      "sha256": "c599bf2afc63848d43e9576f52c6c94f75b4b45f9f7a93e5ee0896418264f8ca"
+    },
+    {
+      "path": "_review\\50-workflow.png",
+      "sha256": "b51a7cdc014b5038ace012edfe3c0573727aa2b50974846d880a6fe9e6fd370b"
+    },
+    {
+      "path": "_review\\51-practice.png",
+      "sha256": "90f7a9c61fdca942fbce46f873a4c2d0f0acc72940f6e2a9422bfa8f04e48138"
+    },
+    {
+      "path": "_review\\52-answers.png",
+      "sha256": "affab7e68b52af3f22454f14181a6c2d48d693b1c0e2a89024853ffa2b43ffd5"
+    },
+    {
+      "path": "_review\\53-summary.png",
+      "sha256": "c25a8a2a2162a2aa4277b90ea6ec1a41be3009f818fd3afbe58dbe4960337dd8"
+    },
+    {
+      "path": "_review\\54-references.png",
+      "sha256": "7a186ccba7fc798ad7cadbde0e8d671d332b59d21f78968dc190c23042bf906c"
+    },
+    {
+      "path": "_review\\AIML-Clustering-reviewed.pdf",
+      "sha256": "4b2b3fa79b55476142d5f0cfaaa78e58d942a50b05f3e3aa9aae614dd11f26b4"
+    },
+    {
+      "path": "_review\\audit.json",
+      "sha256": "528eb0f035fa7e72544c7d5c37dbd128d40a852439b8425b811f00c84dc42676"
+    },
+    {
+      "path": "_review\\contact-01.jpg",
+      "sha256": "e71bcf71780c542b1368c0f9765deebcdbcde7dc624007ad9b9469f220f0a968"
+    },
+    {
+      "path": "_review\\contact-02.jpg",
+      "sha256": "809d88ea7c626591c8bb788d837858d41a36c43f61cd11b493e273994b837f6c"
+    },
+    {
+      "path": "_review\\contact-03.jpg",
+      "sha256": "62ed7624f8e423c2e2998264b3f87d4f2d2d4580df74e147643bc33247804a4f"
+    },
+    {
+      "path": "_review\\contact-04.jpg",
+      "sha256": "f5eb12655fa4eef1ed63c50a3109e14c6de81112b492e9870af9fd039132a8d2"
+    },
+    {
+      "path": "_review\\contact-05.jpg",
+      "sha256": "c11b5df358544ea896176074b976c666f31363d7b0bf57abfcc4af7d1a40c755"
+    },
+    {
+      "path": "_review\\contact-06.jpg",
+      "sha256": "8f469bfdce1f708bc0b0b4f6ef079d2069acce1bda667206c2faeba750aa966f"
+    },
+    {
+      "path": "_review\\contact-07.jpg",
+      "sha256": "1c6373a0d9f2605180d46630b12d580a246fa91c12dfd2843289f197c13cfe66"
+    },
+    {
+      "path": "_review\\contact-08.jpg",
+      "sha256": "c371bf6d2e453e5e401f1387dc1620a1e778276dc74de8eedf72e3c94996d584"
+    },
+    {
+      "path": "_review\\contact-09.jpg",
+      "sha256": "89506671ef79eab16358b79ad1171cc17dd4fbf3179bc068f5c7757350346798"
+    },
+    {
+      "path": "_review\\contact-10.jpg",
+      "sha256": "70440b495a1cf447baf5ddfbef8f26d943b6dcd2a0e380ff294f815f53ec6c2d"
+    },
+    {
+      "path": "_review\\contact-11.jpg",
+      "sha256": "e70b16c269aa3f6c8a88c6d65010d5ea4efa370c3086cc0bba1388649e259677"
+    },
+    {
+      "path": "_review\\contact-12.jpg",
+      "sha256": "248ad38e3f110e6c7f4f092a85136ace275f8d25bd2e735f86194be73eb42662"
+    },
+    {
+      "path": "_review\\contact-13.jpg",
+      "sha256": "6411098df0de3c36f5b94d6d05cde116490ac5baf63f8f3aff14afe91f803724"
+    },
+    {
+      "path": "_review\\contact-14.jpg",
+      "sha256": "cdc86a3934d731a665ed39ad8640e5c70c089a704d11447d7808c4a7433ffd4d"
+    },
+    {
+      "path": "_review\\engine-audit.json",
+      "sha256": "716dcc19420bca55486bd29d95f44e8a71ebc709d92e3654cf1151cf53c801b9"
+    },
+    {
+      "path": "_review\\final-visual-audit.json",
+      "sha256": "de46d6057724555d16a7e53d646c7d7d5ca922fe7ed7679246f3ce88597bfe94"
+    },
+    {
+      "path": "_review\\index.html",
+      "sha256": "ae3221f05e103a52e04b8dddfd5ec920aee98368768e7cc7a4e85f43e8431c0d"
+    },
+    {
+      "path": "_review\\initial-audit.json",
+      "sha256": "a1dc005cd1cefc03a05c3344dd1c10ccd035dddd64afc8b678460134e5a681dc"
+    },
+    {
+      "path": "_review\\review-notes.md",
+      "sha256": "8c360db6d62d07199ea3ccce6a3aeaf5b64ee86e6dfaf7c883e7a55b2195ea22"
+    },
+    {
+      "path": "_review\\states\\gmm-lab.png",
+      "sha256": "effe67e5f558c38a2ebf34bc5438e09cfee68f1ac294d48f6ca032f64252e8c2"
+    },
+    {
+      "path": "_review\\states\\hierarchy-lab.png",
+      "sha256": "830662d4878088350465f82882fc4bd557cfb049b8983273341064813b5592c4"
+    },
+    {
+      "path": "_review\\states\\kmeans-lab.png",
+      "sha256": "e4e5287117479e05dd3aa93da252824d82391a4a8b7cd5ae63614d5d47c13fd9"
+    },
+    {
+      "path": "_review\\states\\pca-lab.png",
+      "sha256": "3252b158c6a54f7204ca90bf52afedede781f7449674f774e108e169a89b745e"
+    },
+    {
+      "path": "_review\\states\\preprocessing-lab.png",
+      "sha256": "a02a3e5c448f760cd6319a6b246ad939f3554068a217371130a22d79fe22242d"
+    },
+    {
+      "path": "_review\\states\\selection-lab.png",
+      "sha256": "14dcfd129d78a8f4c5d1049b18b0c87e5ec087d95c2a0351a704fb6249b1c965"
+    },
+    {
+      "path": "_review\\states\\source-animation.png",
+      "sha256": "52e01d6f134a47e6939d0c2238bda1da95e56342794afbe1a3100cc93d0eadd7"
+    },
+    {
+      "path": "css\\classification.css",
+      "sha256": "d5229ccecf58694389ce755f1ad3362053e215d14135062d7e49bfc9fd34f3f2"
+    },
+    {
+      "path": "css\\classification2.css",
+      "sha256": "26958e6fdd5718085ec0364cb601a1d526f248d2fda2d1e6ad8ad6bbf7394af1"
+    },
+    {
+      "path": "css\\clustering.css",
+      "sha256": "a693284e3b43ff3db0cc204b2eba4a470545bfd882600390ef9ebbcae0b2a0d3"
+    },
+    {
+      "path": "css\\regression.css",
+      "sha256": "e824ec24c14eba9e38b7664d5e665d35a4bf4cff8a7b1fab25f07884651c0a4a"
+    },
+    {
+      "path": "css\\search.css",
+      "sha256": "de03dc2f92d3bd7cd823e9cc30a5aef021749f1fff6a7a8f0e5f3c4f79307cba"
+    },
+    {
+      "path": "css\\theme-base.css",
+      "sha256": "0821905ded4bcfcc223acfca8cd7a743612839d9f3770a5e4981e7d66b04bdeb"
+    },
+    {
+      "path": "data\\elbow.json",
+      "sha256": "9321be6c9ade8e6026c22e6b7ca546e935b82890d674b5df36ef079cb3eda243"
+    },
+    {
+      "path": "data\\gaussian_points.json",
+      "sha256": "4929634c4ab37aeb4d7728bd3d3dabeac2788665a3a61a4bc6eef8042be5a1e2"
+    },
+    {
+      "path": "data\\gaussian_points_rot30.json",
+      "sha256": "f767ecede2f7f2ba53fe66c50c5c1f48a2e91f6bd0cc09404f3cba6181daa929"
+    },
+    {
+      "path": "data\\hc_dendogram.json",
+      "sha256": "4f5865c48995d2fe4944b305ccf29467a0951630f1a20533959f3649cf2b4e77"
+    },
+    {
+      "path": "data\\kmeans_data.json",
+      "sha256": "5e0d1406a1f5dcffae2e4943d94eeaa91bd3741e1f3c092dc5bfa0a3d116e5e7"
+    },
+    {
+      "path": "data\\kmeans_steps.json",
+      "sha256": "926e8251772848a4bc99ac2e43736c1dc49288c0d9ebcb4fce5841a478b17093"
+    },
+    {
+      "path": "data\\teaching-models.json",
+      "sha256": "33463ee3f6326608001aa875a650a103ba8192aef81d925d14810f59cd61fc81"
+    },
+    {
+      "path": "data\\two_gaussian_blobs.json",
+      "sha256": "f583f62e3204292c27f5466aa9f787fbac3725ededa4122733150e04df0a568c"
+    },
+    {
+      "path": "data\\two_gaussian_blobs_panel.json",
+      "sha256": "a54e999334d71d598435595d5bbab3ff4e96400cdbda8ec9bfaf8e2cae4539fe"
+    },
+    {
+      "path": "index.html",
+      "sha256": "7f8daed119297ac820b07dd9dc74e5fed47ae7b744a64f12a111a27f3426fe93"
+    },
+    {
+      "path": "js\\course-data.js",
+      "sha256": "1ee840988cdd9e063878e73f86c84cc159c55d76fa5162a32ecb477d747c1aca"
+    },
+    {
+      "path": "js\\deck.js",
+      "sha256": "6fcd6edcc953dff54a44db9065ad40ad61c10a911ef5bfe5eee2f8e8cf055793"
+    },
+    {
+      "path": "js\\engine.js",
+      "sha256": "076e97fd647017b1ce71cdd6e0def9b730888c6174cc2f1cc8981ff01125a247"
+    },
+    {
+      "path": "js\\models.js",
+      "sha256": "75612990bea5fb1b20e93a8d40482448c21d0e6cf733d08e24665f3bd13b0db9"
+    },
+    {
+      "path": "js\\visuals.js",
+      "sha256": "3a80eda53b8cf8c3e99a41e4742376c441df29ee80f899e65f443297338af7bc"
+    },
+    {
+      "path": "js\\widgets.js",
+      "sha256": "0799e86c712c90f7efbc0d20921346ec72ad1f638c2b47570949cd3f7c4c73c9"
+    },
+    {
+      "path": "lib\\plotly.min.js",
+      "sha256": "899daefe8536c1ffef0db97f0a1717f775a06c145206f50ee8de35de10f3ef13"
+    },
+    {
+      "path": "lib\\reveal\\reset.min.css",
+      "sha256": "5bdbe39e006b125a90f7d0b7ef148281f0641fb2291c235add95b186e0bff274"
+    },
+    {
+      "path": "lib\\reveal\\reveal.min.css",
+      "sha256": "50c92ac663c9b6ed944155350650120c993e9a82d6e85117790157bd5aa8e3cd"
+    },
+    {
+      "path": "lib\\reveal\\reveal.min.js",
+      "sha256": "ff9c77379675d2c09ee964050e09f1a3d6a562fdfc4f54428523d2e7eea23b46"
+    },
+    {
+      "path": "notes\\numerical-review.json",
+      "sha256": "81da5726955feca38818edf2f9ef514f7bb1c93385f6c26f3468973706af56e6"
+    },
+    {
+      "path": "notes\\slide-manifest.json",
+      "sha256": "a17afcbdba5643ae6021ca24ef8fb01917eaf580044deb2cda63c7bf2c7b0f7d"
+    },
+    {
+      "path": "notes\\slide-notes.md",
+      "sha256": "7fcaa7f31d3ad518908ee79c26ad596dcc54ac09ee1bc48204b78141b0f7c701"
+    },
+    {
+      "path": "notes\\source-assets.json",
+      "sha256": "40b2ef36aa58d72e95c2971f5358ca807a2f9cc0ae34da41335f6fc6c7ec2529"
+    },
+    {
+      "path": "notes\\source-map.md",
+      "sha256": "4b7f4bbc9e056a375db9d5191c9868ad57529c192b2bf97078f72573d18ef864"
+    },
+    {
+      "path": "README.md",
+      "sha256": "4dcb97ef15e382ef344f95283d159bdbda9b08fa68922e7282e90618d0b47a0b"
+    },
+    {
+      "path": "tests\\audit-function.js",
+      "sha256": "b11d3e9f834bb25d46a8a53a827cd4d4da5d783fde74bb704666073546108d6d"
+    },
+    {
+      "path": "tests\\engine.test.js",
+      "sha256": "9ac09727c31c41020dcdff458ef86deb6bed7d9910f85048b72c05999e6be280"
+    },
+    {
+      "path": "tests\\final-visual-review.js",
+      "sha256": "f3f14f1912bba723f9a2387944c5face6b50f1bb58d05e6f0c830a42ea1a5a40"
+    },
+    {
+      "path": "tests\\interaction-review.js",
+      "sha256": "9c53b6e7941c3c8ed3a8ff00f3a0240b3e7fdba104516b6046f3d985870f400b"
+    },
+    {
+      "path": "tests\\render-review.js",
+      "sha256": "664fde4091816a0519e319579acd1892ddb56519b784a4da01f5745df75ace1c"
+    },
+    {
+      "path": "tools\\build-deck.py",
+      "sha256": "701399cd2dc7747df6af35682848b0f794687bc425bce3da93334a3cb5146071"
+    },
+    {
+      "path": "tools\\contact-sheets.py",
+      "sha256": "11d758040773e46092a1ad7ae3c514ed9d81b8e71a702237743fc842605158e9"
+    },
+    {
+      "path": "tools\\content.py",
+      "sha256": "dcaddb9b76ef441d7b1418241198a7c96d6ed25e9a2561f816d3cf3945023a2c"
+    },
+    {
+      "path": "tools\\prepare-models.py",
+      "sha256": "a6c04e7bdcc2d6d5f25215f7127b914b0bc4a02101704ee259b89a16ad047aee"
+    }
+  ]
+}

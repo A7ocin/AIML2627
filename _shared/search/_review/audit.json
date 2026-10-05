@@ -1,0 +1,329 @@
+{
+  "count": 43,
+  "offlineRequests": [],
+  "errors": [],
+  "slides": [
+    {
+      "slide": "title",
+      "issues": []
+    },
+    {
+      "slide": "map",
+      "issues": []
+    },
+    {
+      "slide": "state-space",
+      "issues": []
+    },
+    {
+      "slide": "directed-graphs",
+      "issues": []
+    },
+    {
+      "slide": "paths-costs",
+      "issues": []
+    },
+    {
+      "slide": "trees",
+      "issues": []
+    },
+    {
+      "slide": "graph-versus-tree",
+      "issues": []
+    },
+    {
+      "slide": "generic-search",
+      "issues": []
+    },
+    {
+      "slide": "frontier",
+      "issues": []
+    },
+    {
+      "slide": "criteria",
+      "issues": []
+    },
+    {
+      "slide": "uninformed",
+      "issues": []
+    },
+    {
+      "slide": "bfs",
+      "issues": []
+    },
+    {
+      "slide": "bfs-lab",
+      "issues": []
+    },
+    {
+      "slide": "dfs",
+      "issues": []
+    },
+    {
+      "slide": "dfs-lab",
+      "issues": []
+    },
+    {
+      "slide": "breadth-depth",
+      "issues": []
+    },
+    {
+      "slide": "ids",
+      "issues": []
+    },
+    {
+      "slide": "ids-lab",
+      "issues": []
+    },
+    {
+      "slide": "ids-overhead",
+      "issues": []
+    },
+    {
+      "slide": "ucs",
+      "issues": []
+    },
+    {
+      "slide": "ucs-lab",
+      "issues": []
+    },
+    {
+      "slide": "weighted-lab",
+      "issues": []
+    },
+    {
+      "slide": "uninformed-summary",
+      "issues": []
+    },
+    {
+      "slide": "informed",
+      "issues": []
+    },
+    {
+      "slide": "heuristic",
+      "issues": []
+    },
+    {
+      "slide": "greedy",
+      "issues": []
+    },
+    {
+      "slide": "greedy-lab",
+      "issues": []
+    },
+    {
+      "slide": "heuristic-dfs",
+      "issues": []
+    },
+    {
+      "slide": "heuristic-dfs-lab",
+      "issues": []
+    },
+    {
+      "slide": "astar",
+      "issues": []
+    },
+    {
+      "slide": "astar-scores",
+      "issues": []
+    },
+    {
+      "slide": "astar-lab",
+      "issues": []
+    },
+    {
+      "slide": "admissibility",
+      "issues": []
+    },
+    {
+      "slide": "consistency",
+      "issues": []
+    },
+    {
+      "slide": "graph-cautions",
+      "issues": []
+    },
+    {
+      "slide": "branch-bound",
+      "issues": []
+    },
+    {
+      "slide": "branch-bound-lab",
+      "issues": []
+    },
+    {
+      "slide": "selection-matrix",
+      "issues": []
+    },
+    {
+      "slide": "choose",
+      "issues": []
+    },
+    {
+      "slide": "practice",
+      "issues": []
+    },
+    {
+      "slide": "answers",
+      "issues": []
+    },
+    {
+      "slide": "summary",
+      "issues": []
+    },
+    {
+      "slide": "references",
+      "issues": []
+    }
+  ],
+  "responsive": [],
+  "stateIssues": [],
+  "stateCount": 380,
+  "variants": [
+    {
+      "slide": "bfs-lab",
+      "setting": "goal",
+      "value": "B",
+      "states": 3
+    },
+    {
+      "slide": "bfs-lab",
+      "setting": "goal",
+      "value": "R",
+      "states": 19
+    },
+    {
+      "slide": "bfs-lab",
+      "setting": "goal",
+      "value": "Z",
+      "states": 21
+    },
+    {
+      "slide": "dfs-lab",
+      "setting": "goal",
+      "value": "B",
+      "states": 10
+    },
+    {
+      "slide": "dfs-lab",
+      "setting": "goal",
+      "value": "R",
+      "states": 8
+    },
+    {
+      "slide": "dfs-lab",
+      "setting": "goal",
+      "value": "Z",
+      "states": 21
+    },
+    {
+      "slide": "ids-lab",
+      "setting": "goal",
+      "value": "B",
+      "states": 7
+    },
+    {
+      "slide": "ids-lab",
+      "setting": "goal",
+      "value": "R",
+      "states": 26
+    },
+    {
+      "slide": "ids-lab",
+      "setting": "goal",
+      "value": "Z",
+      "states": 58
+    },
+    {
+      "slide": "weighted-lab",
+      "setting": "algorithm",
+      "value": "BFS",
+      "states": 6
+    },
+    {
+      "slide": "weighted-lab",
+      "setting": "algorithm",
+      "value": "GBFS",
+      "states": 4
+    },
+    {
+      "slide": "weighted-lab",
+      "setting": "algorithm",
+      "value": "ASTAR",
+      "states": 6
+    },
+    {
+      "slide": "astar-lab",
+      "setting": "zero",
+      "value": "on",
+      "states": 20
+    },
+    {
+      "slide": "branch-bound-lab",
+      "setting": "bound",
+      "value": "12",
+      "states": 9
+    },
+    {
+      "slide": "branch-bound-lab",
+      "setting": "bound",
+      "value": "6",
+      "states": 7
+    }
+  ],
+  "interactions": [
+    {
+      "slide": "bfs-lab",
+      "buttons": true,
+      "pauseOnLeave": true
+    },
+    {
+      "slide": "dfs-lab",
+      "buttons": true,
+      "pauseOnLeave": true
+    },
+    {
+      "slide": "ids-lab",
+      "buttons": true,
+      "pauseOnLeave": true
+    },
+    {
+      "slide": "ucs-lab",
+      "buttons": true,
+      "pauseOnLeave": true
+    },
+    {
+      "slide": "weighted-lab",
+      "buttons": true,
+      "pauseOnLeave": true
+    },
+    {
+      "slide": "greedy-lab",
+      "buttons": true,
+      "pauseOnLeave": true
+    },
+    {
+      "slide": "heuristic-dfs-lab",
+      "buttons": true,
+      "pauseOnLeave": true
+    },
+    {
+      "slide": "astar-lab",
+      "buttons": true,
+      "pauseOnLeave": true
+    },
+    {
+      "slide": "branch-bound-lab",
+      "buttons": true,
+      "pauseOnLeave": true
+    }
+  ],
+  "keyboardNavigation": true,
+  "directHashEntry": [
+    "bfs-lab",
+    "ids-lab",
+    "astar-lab",
+    "branch-bound-lab",
+    "references"
+  ]
+}

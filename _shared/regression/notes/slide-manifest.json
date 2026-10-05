@@ -1,0 +1,324 @@
+[
+  {
+    "id": "title",
+    "kicker": "AI &amp; Machine Learning \u00b7 Lesson 4",
+    "title": "Regression",
+    "notes": "Follows course 04_regression. All seven source Plotly charts are retained locally, with additional interactive labs for residuals, repeated-sample bias/variance, t tails and residual diagnostics.",
+    "cls": "cover-slide"
+  },
+  {
+    "id": "map",
+    "kicker": "The road ahead",
+    "title": "Three decisions behind a regression model",
+    "notes": "",
+    "cls": ""
+  },
+  {
+    "id": "scatter-lab",
+    "kicker": "Interactive lab \u00b7 Regression",
+    "title": "Inspect the original linear-looking data",
+    "notes": "Original lr_scatter.json: all 25 observation coordinates preserved. The source fertilizer and yield scales are illustrative and lack documented physical units.",
+    "cls": "lab-slide"
+  },
+  {
+    "id": "line",
+    "kicker": "01 \u00b7 Fit a model",
+    "title": "Simple linear regression has two parameters",
+    "notes": "An intercept is also sometimes called a bias parameter; that usage differs from estimator bias. A zero-mean conditional error assumption connects the function to E[Y|X=x].",
+    "cls": ""
+  },
+  {
+    "id": "residual-lab",
+    "kicker": "Interactive lab \u00b7 Regression",
+    "title": "Move the line and watch the residuals change",
+    "notes": "Added live parameter explorer using the original lr_scatter data. Vertical segments show y minus prediction; RSS and R-squared update. The Fit OLS action uses the analytic slope and intercept, not a precomputed source line.",
+    "cls": "lab-slide"
+  },
+  {
+    "id": "rss",
+    "kicker": "01 \u00b7 Fit a model",
+    "title": "Least squares penalizes large residuals",
+    "notes": "RSS is a sum of squared deviations, not itself a variance. OLS fits a conditional-mean model; it does not make the data noiseless.",
+    "cls": ""
+  },
+  {
+    "id": "ols",
+    "kicker": "01 \u00b7 Fit a model",
+    "title": "The best line has a closed-form solution",
+    "notes": "The sums are over all n training observations. The analytic solution agrees with a full-rank QR least-squares solution.",
+    "cls": ""
+  },
+  {
+    "id": "uniqueness",
+    "kicker": "01 \u00b7 Fit a model",
+    "title": "Convexity does not by itself imply uniqueness",
+    "notes": "Corrects the source claim that convexity alone implies one global minimizer. With an intercept and one predictor, full rank is equivalent to nonconstant predictor values.",
+    "cls": ""
+  },
+  {
+    "id": "fit-lab",
+    "kicker": "Interactive lab \u00b7 Regression",
+    "title": "Compare the supplied line with a fresh OLS fit",
+    "notes": "Original lr_scatter_mod.json preserved exactly. The supplied line is close to, but not identical to, OLS on its plotted training points. Recomputed OLS intercept 2.13386187 and slope 2.82610678; the source line slope is 2.85208755. The overlay is explicitly distinguished.",
+    "cls": "lab-slide"
+  },
+  {
+    "id": "metrics",
+    "kicker": "01 \u00b7 Evaluate the fit",
+    "title": "Different metrics answer different questions",
+    "notes": "RSE formula here assumes a full-column-rank OLS fit and n>q. The general denominator is n minus design rank. RMSE can be computed on any set; it is not defined exclusively for testing.",
+    "cls": ""
+  },
+  {
+    "id": "rse",
+    "kicker": "01 \u00b7 Evaluate the fit",
+    "title": "Residual standard error estimates a noise scale",
+    "notes": "For polynomial degree p the full-rank parameter count is p+1, so use n\u2212p\u22121. Under homoscedastic zero-mean errors, RSS divided by residual degrees of freedom is unbiased for the error variance; taking the square root does not preserve exact unbiasedness.",
+    "cls": ""
+  },
+  {
+    "id": "r2",
+    "kicker": "01 \u00b7 Evaluate the fit",
+    "title": "R\u00b2 compares squared error to a baseline",
+    "notes": "If all outcomes are constant, TSS=0 and this ratio is undefined. A zero score is not a universal judgment that a task is unlearnable. R-squared has no universal acceptable threshold.",
+    "cls": ""
+  },
+  {
+    "id": "evaluation",
+    "kicker": "01 \u00b7 Evaluate new cases",
+    "title": "Fit, compare and assess on different data",
+    "notes": "Extends the source train/test distinction to preserve the validation role already introduced in the previous deck. Choosing the minimum final-test error repeatedly makes the test set part of development.",
+    "cls": ""
+  },
+  {
+    "id": "test-lab",
+    "kicker": "Interactive lab \u00b7 Regression",
+    "title": "Evaluate the original line on held-out points",
+    "notes": "Original lr_scatter_mod_with_test.json, retaining 25 training points, 10 test points and the supplied line. Metrics are computed for that line using its endpoint slope/intercept. The line is not fitted using test targets.",
+    "cls": "lab-slide"
+  },
+  {
+    "id": "polynomial",
+    "kicker": "02 \u00b7 Choose model complexity",
+    "title": "Curved in x can still be linear in the parameters",
+    "notes": "",
+    "cls": ""
+  },
+  {
+    "id": "design",
+    "kicker": "02 \u00b7 Choose model complexity",
+    "title": "Feature expansion creates the design matrix",
+    "notes": "Corrects the source parameter space R^p to R^(p+1). Matrix X here denotes the expanded design, not only the raw predictor column.",
+    "cls": ""
+  },
+  {
+    "id": "normal-equations",
+    "kicker": "02 \u00b7 Least squares in matrix form",
+    "title": "The gradient yields the normal equations",
+    "notes": "This condenses the source expandable derivation into an explicit slide. Expanding gives y\u1d40y\u22122\u03b2\u1d40X\u1d40y+\u03b2\u1d40X\u1d40X\u03b2. Use argmin for the minimizing coefficients; min denotes the objective value.",
+    "cls": ""
+  },
+  {
+    "id": "rank",
+    "kicker": "02 \u00b7 Least squares in matrix form",
+    "title": "Use the inverse formula only when it exists",
+    "notes": "The pseudoinverse exists for every matrix. The expression (X\u1d40X)^\u22121X\u1d40 is one full-column-rank special case, not the only setting in which least squares has a solution. High powers of raw x may be severely ill-conditioned.",
+    "cls": ""
+  },
+  {
+    "id": "hyperparameter",
+    "kicker": "02 \u00b7 Choose model complexity",
+    "title": "A degree is selected; coefficients are fitted",
+    "notes": "",
+    "cls": ""
+  },
+  {
+    "id": "overfit-lab",
+    "kicker": "Interactive lab \u00b7 Regression",
+    "title": "Explore the original high-degree curves",
+    "notes": "Original lr_scatter_polymods_with_test.json, including degree 1,5,15,23 curves and train/test points. All sampled curve coordinates are retained. Metrics displayed here are explicitly source-reported; the degree-23 curve does not match a unique stable full-rank degree-23 OLS fit, whose behavior is substantially more extreme. No undocumented fitting implementation is asserted.",
+    "cls": "lab-slide"
+  },
+  {
+    "id": "overfit-metrics",
+    "kicker": "02 \u00b7 Recognize overfitting",
+    "title": "A better training score can accompany worse prediction",
+    "notes": "The first three rows agree with independent polynomial fits to the provided data. For degree 23, stable full-rank Legendre-basis OLS gives training R\u00b2\u22480.99947 and held-out RMSE\u224851.19; the supplied curve and reported row likely reflect a different numerical treatment, but the exact method is unavailable. Preserve the demonstration without presenting its row as universal degree-23 behavior.",
+    "cls": ""
+  },
+  {
+    "id": "underfit-lab",
+    "kicker": "Interactive lab \u00b7 Regression",
+    "title": "Compare constant, linear and quadratic models",
+    "notes": "Original lr_underfitting.json retained. Its original fixed y-range 0\u20136 clipped observations near 8; the deck defaults to autorange. Reported R\u00b2 and RMSE agree with independent fits. RSE is recomputed using n\u2212(p+1), correcting a fixed n\u22122 denominator for other degrees.",
+    "cls": "lab-slide"
+  },
+  {
+    "id": "diagnose-fit",
+    "kicker": "02 \u00b7 Recognize fit problems",
+    "title": "Training and held-out error need interpretation",
+    "notes": "Corrects the source implications that poor training performance necessarily means underfitting and poor test performance necessarily means overfitting.",
+    "cls": ""
+  },
+  {
+    "id": "bias-variance",
+    "kicker": "02 \u00b7 Repeated samples",
+    "title": "Bias and variance describe different kinds of error",
+    "notes": "A low-complexity family often trades higher approximation bias for lower variance; this is a tendency, not a universal monotonic law for every modern model. Bias here is unrelated to the intercept parameter.",
+    "cls": ""
+  },
+  {
+    "id": "bias-lab",
+    "kicker": "Interactive lab \u00b7 Regression",
+    "title": "Repeat the experiment: how much do fits move?",
+    "notes": "Added repeated-sample experiment: fixed evenly spaced x in [\u22121,1], truth 2+1.2x\u22120.9x\u00b2, independent Gaussian errors with \u03c3=0.3. Fit 60 samples using Householder QR, display the first 15 curves plus their 60-fit mean. The variance uses divisor 60 to give the exact finite-ensemble decomposition around the empirical mean; this approximates the population decomposition.",
+    "cls": "lab-slide"
+  },
+  {
+    "id": "decomposition",
+    "kicker": "02 \u00b7 Repeated samples",
+    "title": "Squared prediction error has three components",
+    "notes": "The identity is pointwise in x and uses squared loss. The lab computes the finite-ensemble bias and variance and adds the known fresh-noise variance 0.09. It does not claim to estimate these quantities from an unknown real-world data-generating function.",
+    "cls": ""
+  },
+  {
+    "id": "selection",
+    "kicker": "02 \u00b7 Choose model complexity",
+    "title": "Use validation to select; reserve testing for assessment",
+    "notes": "Corrects the source recommendation to select the model minimizing test MSE. The original chart labels \u201cTest points\u201d are preserved for provenance; the deck does not recommend repeatedly optimizing their score.",
+    "cls": ""
+  },
+  {
+    "id": "uncertainty-lab",
+    "kicker": "Interactive lab \u00b7 Regression",
+    "title": "Recompute the slope evidence from the source points",
+    "notes": "Original lr_maybe.json. The source text reports t\u22482.16 and p\u22480.03, but the plotted data yield slope\u22480.10754, SE\u22480.01795, t\u22485.99193 on 88 df, two-sided p\u22484.4453e\u22128. The slide uses statistics recomputed from the actual data. Exact t inference assumes the classical normal, independent, equal-variance error model.",
+    "cls": "lab-slide"
+  },
+  {
+    "id": "hypothesis-test",
+    "kicker": "03 \u00b7 Quantify uncertainty",
+    "title": "A slope test asks about linear association",
+    "notes": "A nonlinear relationship may have a zero simple-regression slope. Replace causal \u201cinfluences\u201d wording with association under a specified model.",
+    "cls": ""
+  },
+  {
+    "id": "standard-error",
+    "kicker": "03 \u00b7 Quantify uncertainty",
+    "title": "A coefficient estimate has a sampling standard error",
+    "notes": "The estimated slope is normally distributed under normal errors with conditional variance \u03c3\u00b2/Sxx. Replacing unknown \u03c3 by the residual estimate produces the exact t pivot. A centered t distribution has mean zero only when its degrees of freedom exceed one.",
+    "cls": ""
+  },
+  {
+    "id": "tails-lab",
+    "kicker": "Interactive lab \u00b7 Regression",
+    "title": "A two-sided p-value is the area in both tails",
+    "notes": "Added interactive Student t density with both tails shaded, exact p-value calculated through the regularized incomplete beta function. This probability is conditional on the null model, not the probability that the null is true. A button loads the statistic and df recomputed from the original lr_maybe points.",
+    "cls": "lab-slide"
+  },
+  {
+    "id": "pvalues",
+    "kicker": "03 \u00b7 Quantify uncertainty",
+    "title": "A p-value is conditional on the null model",
+    "notes": "The p-value is not P(H0|data), not the probability that the result is due to chance, and not a posterior probability of an effect. Prespecify tests and account for multiplicity when applicable.",
+    "cls": ""
+  },
+  {
+    "id": "interval",
+    "kicker": "03 \u00b7 Quantify uncertainty",
+    "title": "A confidence interval expresses coefficient precision",
+    "notes": "Added interval interpretation to accompany the corrected source test. This is not a claim of a 95% posterior probability for a fixed parameter. It is a slope interval, not a prediction interval for an individual future crop.",
+    "cls": ""
+  },
+  {
+    "id": "multiple",
+    "kicker": "03 \u00b7 Multiple predictors",
+    "title": "Multiple regression adds one coefficient per feature",
+    "notes": "Corrects the source omission of the error term in the multiple-regression observation model. \u201cMultivariate\u201d often specifically refers to several response variables. With two predictors a fitted plane can be visualized; beyond that, partial plots and summaries are useful.",
+    "cls": ""
+  },
+  {
+    "id": "conditional",
+    "kicker": "03 \u00b7 Multiple predictors",
+    "title": "A coefficient is conditional on the included features",
+    "notes": "No causal interpretation follows from a coefficient alone. Include predictors based on task timing and study design; indiscriminate adjustment can also introduce bias.",
+    "cls": ""
+  },
+  {
+    "id": "association-lab",
+    "kicker": "Interactive lab \u00b7 Regression",
+    "title": "Inspect the original ice-cream and shark example",
+    "notes": "Original lr_corcau.json: line, 80 training and 20 test points. Recomputed training R\u00b2\u22480.5300, slope t\u22489.3792 on 78 df; the source text t\u22484.7057 does not match these plotted observations. No temperature observations are supplied, so adjusted regression values cannot be independently reconstructed.",
+    "cls": "lab-slide"
+  },
+  {
+    "id": "confounding",
+    "kicker": "03 \u00b7 Association and causation",
+    "title": "A common cause can create an association",
+    "notes": "Retains the illustrative causal explanation from the source. The directed graph is a proposed mechanism, not an empirical result established by the supplied scatter plot.",
+    "cls": ""
+  },
+  {
+    "id": "adjustment",
+    "kicker": "03 \u00b7 Association and causation",
+    "title": "Adjustment can change the apparent relationship",
+    "notes": "The source reports adjusted t\u22480.9300, p\u22480.3553 for ice cream and t\u22484.8203, p<0.01 for temperature. These are discussed qualitatively rather than asserted as independently validated statistics. Lack of significance is not proof of no causal effect.",
+    "cls": ""
+  },
+  {
+    "id": "assumptions",
+    "kicker": "03 \u00b7 Check the model",
+    "title": "LINE describes classical regression assumptions",
+    "notes": "OLS can be computed without normal errors; normality is not a prerequisite to minimize RSS. Full-rank design, zero conditional error mean and variance assumptions play different roles in estimation, inference and prediction.",
+    "cls": ""
+  },
+  {
+    "id": "diagnostics-lab",
+    "kicker": "Interactive lab \u00b7 Regression",
+    "title": "Read residual patterns, not just one score",
+    "notes": "Added deterministic diagnostic examples: well-behaved errors, omitted curvature, heteroscedasticity and serial structure. Each sample receives an OLS line; plotted values are actual residuals. These are visual teaching examples, not formal tests or automatic assumption certification.",
+    "cls": "lab-slide"
+  },
+  {
+    "id": "residual-reading",
+    "kicker": "03 \u00b7 Check the model",
+    "title": "Residual plots suggest the next question",
+    "notes": "Residuals from an OLS fit are not mutually independent even if the underlying errors are. The diagnostic goal is evidence about the underlying error process and conditional mean, not a requirement that observed residuals be independent.",
+    "cls": ""
+  },
+  {
+    "id": "workflow",
+    "kicker": "Putting it together",
+    "title": "A defensible regression workflow",
+    "notes": "",
+    "cls": ""
+  },
+  {
+    "id": "practice",
+    "kicker": "Check your understanding",
+    "title": "Reason before calculating",
+    "notes": "",
+    "cls": ""
+  },
+  {
+    "id": "answers",
+    "kicker": "Check your understanding",
+    "title": "Explain the distinctions",
+    "notes": "",
+    "cls": ""
+  },
+  {
+    "id": "summary",
+    "kicker": "Lesson 4 \u00b7 Takeaways",
+    "title": "Fit carefully. Evaluate separately. Interpret precisely.",
+    "notes": "",
+    "cls": ""
+  },
+  {
+    "id": "references",
+    "kicker": "Sources & further reading",
+    "title": "Continue exploring",
+    "notes": "",
+    "cls": ""
+  }
+]

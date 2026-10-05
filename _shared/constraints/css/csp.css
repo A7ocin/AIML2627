@@ -1,0 +1,30 @@
+.reveal .slide-body>h2 { font-size:51px; }
+.reveal .card p { font-size:29px; }.reveal .card .formula { font-size:32px; }
+.reveal .card-grid .formula { padding:14px 20px; margin-bottom:12px; }
+.reveal .steps { font-size:32px; }.reveal .pseudocode { font-size:25px; line-height:1.65; }
+.reveal .search-title { font-size:96px; }.cover-layout { grid-template-columns:1.2fr 1fr; }
+.cp-svg { display:block; width:100%; height:100%; }.cp-svg text { font-family:'Segoe UI',sans-serif; }
+.cp-svg [data-tree-node] { cursor:pointer; }.cp-svg [data-tree-node]:focus { outline:none; }.cp-svg [data-tree-node]:focus ellipse,.cp-svg [data-tree-node]:focus rect { stroke:var(--c-cyber); stroke-width:4; }
+.cp-widget { background:rgba(20,26,38,.88); border:1px solid var(--line); border-radius:18px; padding:20px 24px; }
+.cp-toolbar { display:flex; align-items:center; gap:12px; height:54px; }
+.cp-toolbar button,.cp-toolbar select { border:1px solid #44516c; border-radius:9px; background:var(--bg-soft); color:var(--text); font:600 21px 'Segoe UI',sans-serif; padding:9px 15px; cursor:pointer; min-height:46px; }
+.cp-toolbar button[data-action="play"] { background:var(--c-stat); color:var(--bg); min-width:100px; }
+.cp-toolbar button:disabled { opacity:.35;cursor:default; }.cp-toolbar label { display:flex; align-items:center; gap:9px; font-size:21px; color:var(--text-muted); }
+.cp-toolbar .speed { margin-left:auto; }.cp-toolbar input[type="range"] { width:220px; accent-color:var(--c-stat); }
+.cp-main { display:grid; grid-template-columns:minmax(0,1.9fr) minmax(0,1fr); gap:24px; margin-top:18px; }
+.cp-graphic { height:548px; border:1px solid var(--line); border-radius:12px; background:rgba(11,15,23,.5); min-width:0; }
+.cp-side { min-width:0; display:flex; flex-direction:column; gap:14px; }
+.cp-status { min-height:68px; font-size:25px; line-height:1.35; }
+.cp-heading { font-size:19px; text-transform:uppercase; letter-spacing:.06em; color:var(--text-muted); margin-bottom:10px; }
+.cp-context { font-size:27px; color:var(--c-neural); line-height:1.5; min-height:42px; }
+.cp-rules { display:flex; flex-direction:column; gap:9px; }
+.cp-rule { display:flex; justify-content:space-between; align-items:center; gap:12px; padding:12px 16px; border:1px solid var(--line); border-radius:8px; font-size:25px; background:var(--bg); }
+.cp-rule b { font-size:19px; font-weight:500; }.cp-rule.true { border-left:4px solid var(--c-stat); }.cp-rule.false { border-left:4px solid var(--c-aiwinter); }.cp-rule.true b { color:var(--c-stat); }.cp-rule.false b { color:var(--c-aiwinter); }.cp-rule.pending b { color:var(--text-muted); }
+.cp-found { border-top:1px solid var(--line); padding-top:12px; font-size:23px; color:var(--c-stat); line-height:1.6; }
+.cp-found .cp-heading { color:var(--text-muted); }.cp-queue { display:grid; grid-template-columns:1fr 1fr; gap:7px; }.cp-queue span { padding:8px 10px; border:1px solid var(--line); border-radius:7px; background:var(--bg); font-size:20px; }.cp-queue span:first-child { border-color:var(--c-deep); }
+.cp-support { font-size:22px; color:var(--text-muted); line-height:1.55; }.cp-domain { display:flex;justify-content:space-between;padding:9px 16px;border-bottom:1px solid var(--line);font-size:27px; }
+.cp-metrics { display:flex; gap:12px; }.cp-metrics span { flex:1;border:1px solid var(--line);border-radius:8px;padding:10px 12px;font-size:22px; }.cp-metrics b { color:var(--c-stat); }
+.cp-bottom { display:flex;justify-content:space-between;align-items:center;margin-top:16px;font-size:19px;color:var(--text-muted);line-height:1.3; }.cp-step { color:var(--c-comp);white-space:nowrap; }.cp-legend { display:flex;gap:20px; }.cp-legend span { white-space:nowrap; }.cp-legend .failed { color:var(--c-aiwinter); }.cp-legend .solved { color:var(--c-stat); }
+.assignment-cards { height:100%; display:flex;align-items:center;justify-content:center;gap:28px; }.assignment-cards>div { width:230px;border:1px solid var(--line);border-radius:16px;background:var(--bg-elevated);padding:28px 10px;text-align:center;font-size:40px; }.assignment-cards strong { display:block;font-size:72px;margin-top:18px;color:var(--c-stat); }
+.probability-value { font-size:64px;color:var(--c-stat);font-weight:650; }.cp-decision { padding:18px;border:1px solid var(--line);border-radius:10px;font-size:29px; }.cp-side .formula { font-size:30px;padding:18px 22px; }
+[data-kind="local"] .cp-toolbar select { font-size:19px;padding:9px 10px; }[data-kind="local"] .cp-side { gap:10px; }[data-kind="local"] .cp-rule { padding:8px 14px;font-size:23px; }

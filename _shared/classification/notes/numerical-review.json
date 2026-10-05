@@ -1,0 +1,22 @@
+{
+  "originalChartCount": 4,
+  "binaryObservations": 100,
+  "binaryClassCounts": [
+    51,
+    49
+  ],
+  "sourceTestObservations": 0,
+  "twoClassObservations": 50,
+  "sourceBoundaryGrid": [
+    200,
+    200
+  ],
+  "sourceBoundaryMismatches": 0,
+  "suppliedLogisticCoefficientsFromCurve": [
+    -7.548284561295721,
+    15.53853647476689
+  ],
+  "maximumCurveReconstructionError": 8.881784197001252e-16,
+  "suppliedCurveTrainingAccuracy": 1.0,
+  "suppliedCurveTrainingLogLoss": 0.10149466251353
+}

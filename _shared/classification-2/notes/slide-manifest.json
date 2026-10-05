@@ -1,0 +1,331 @@
+[
+  {
+    "id": "title",
+    "kicker": "AI &amp; Machine Learning · Lesson 6",
+    "title": "Classification 2",
+    "notes": "Adapted from course 06_classification2. All nine original Plotly charts are retained locally, including the rotatable 3D feature map. Five added labs explain thresholds, perceptron updates, margins, a kernel identity and fitted SVM decision regions.",
+    "cls": "cover-slide"
+  },
+  {
+    "id": "map",
+    "kicker": "The road ahead",
+    "title": "Three questions about a decision boundary",
+    "notes": "",
+    "cls": ""
+  },
+  {
+    "id": "and-lab",
+    "kicker": "Interactive lab · Classification 2",
+    "title": "Start with the four cases of logical AND",
+    "notes": "Original cls_and.json: all four observations, labels and coordinates preserved.",
+    "cls": "lab-slide"
+  },
+  {
+    "id": "threshold",
+    "kicker": "01 · A threshold neuron",
+    "title": "Aggregate the inputs, then apply a step",
+    "notes": "Uses theta for the source’s threshold b to distinguish it from an additive bias. The original historical neuron model has more structure; this is the simplified teaching version in the resource.",
+    "cls": ""
+  },
+  {
+    "id": "threshold-lab",
+    "kicker": "Interactive lab · Classification 2",
+    "title": "Move the threshold and change the logic",
+    "notes": "Added exact truth-table explorer with fixed weights (1,1), threshold −0.5 to 2.5 and AND/OR targets. A filled region shows x₁+x₂≥θ; all four predictions and their accuracy update.",
+    "cls": "lab-slide"
+  },
+  {
+    "id": "and-fit-lab",
+    "kicker": "Interactive lab · Classification 2",
+    "title": "Inspect the source’s AND separator",
+    "notes": "Original cls_and_mod.json, including the exact supplied separator endpoints. The line equation is x₁+x₂=1.9.",
+    "cls": "lab-slide"
+  },
+  {
+    "id": "perceptron",
+    "kicker": "01 · A neuron that learns",
+    "title": "Let the weights and bias adapt",
+    "notes": "Following the source’s 0/1 perceptron convention. In two dimensions s(x)=0 is a line. The score is not passed through a sigmoid and is not a class probability.",
+    "cls": ""
+  },
+  {
+    "id": "noisy-lab",
+    "kicker": "Interactive lab · Classification 2",
+    "title": "Replace ideal corners with noisy observations",
+    "notes": "Original cls_and_noisy.json: 270 class-0 and 90 class-1 observations. All 360 original points retained.",
+    "cls": "lab-slide"
+  },
+  {
+    "id": "update",
+    "kicker": "01 · The perceptron update",
+    "title": "Correct mistakes in the direction of the example",
+    "notes": "The source describes inspiration from Hebbian learning; the implemented rule is a supervised error-correction update using the observed label.",
+    "cls": ""
+  },
+  {
+    "id": "update-intuition",
+    "kicker": "01 · Why an update helps locally",
+    "title": "The score moves by a squared input length",
+    "notes": "Makes the source intuition precise without implying a single update always fixes an error or improves total accuracy.",
+    "cls": ""
+  },
+  {
+    "id": "training-lab",
+    "kicker": "Interactive lab · Classification 2",
+    "title": "Step through the perceptron’s learning process",
+    "notes": "Added exact 0/1 perceptron implementation using original AND, noisy AND or XOR points. Zero initialization; η=0.25,1,4; source or reversed order. A complete epoch without updates certifies convergence. Runs stop at 25 epochs if that has not occurred. Animation pauses when leaving the slide.",
+    "cls": "lab-slide"
+  },
+  {
+    "id": "perceptron-fit-lab",
+    "kicker": "Interactive lab · Classification 2",
+    "title": "Compare with the supplied trained perceptron",
+    "notes": "Original cls_and_noisy_mod.json. The finite endpoints and observations are unchanged. This supplied line is distinguished from the learning trace in the preceding lab; source training settings are not provided.",
+    "cls": "lab-slide"
+  },
+  {
+    "id": "convergence",
+    "kicker": "01 · What convergence means",
+    "title": "A complete quiet epoch is the stopping signal",
+    "notes": "A finite dataset, a positive separating margin and cycling through all examples support the classical convergence guarantee. The source’s approximate single-weight-change stopping description is replaced by a no-update full pass.",
+    "cls": ""
+  },
+  {
+    "id": "learning-rate",
+    "kicker": "01 · Learning rate",
+    "title": "A larger η does not always mean faster learning",
+    "notes": "Corrects the source’s universal claim that smaller η requires more updates and larger η speeds convergence. In the zero-initialized, unregularized standard perceptron, a constant positive factor rescales every iterate. The lab uses powers of two to avoid introducing rounding-driven differences between its η choices.",
+    "cls": ""
+  },
+  {
+    "id": "xor-lab",
+    "kicker": "Interactive lab · Classification 2",
+    "title": "XOR exposes the limit of one linear separator",
+    "notes": "Original cls_xor.json: four original XOR points. The training lab can also be switched to these exact observations.",
+    "cls": "lab-slide"
+  },
+  {
+    "id": "xor-proof",
+    "kicker": "01 · Why XOR is not linearly separable",
+    "title": "The required inequalities contradict one another",
+    "notes": "This proof uses the deck’s predict-1-at-zero convention. Nonlinear features or multiple units can represent XOR. A multilayer perceptron is deferred to the later part of the course.",
+    "cls": ""
+  },
+  {
+    "id": "separators-lab",
+    "kicker": "Interactive lab · Classification 2",
+    "title": "Equal training accuracy can hide different geometry",
+    "notes": "Original cls_svm_both_mod.json: 180 observations per class and both source separators. The source calls the second line more vulnerable; the deck treats margin as a geometric criterion, not a guaranteed ordering of future test errors.",
+    "cls": "lab-slide"
+  },
+  {
+    "id": "hyperplane",
+    "kicker": "02 · Support vector machines",
+    "title": "The weight vector is normal to the boundary",
+    "notes": "Clarifies the source’s notation switch: augmented weights are useful for the perceptron update, but the SVM regularizer and geometric norm exclude the bias.",
+    "cls": ""
+  },
+  {
+    "id": "margin-source-lab",
+    "kicker": "Interactive lab · Classification 2",
+    "title": "Inspect the source’s margin construction",
+    "notes": "Original cls_svm_margin.json: ten observations, polygon, separator, both margin lines and weights-vector endpoints preserved. The source fixed viewport is retained to show the intended geometry rather than remote polygon vertices.",
+    "cls": "lab-slide"
+  },
+  {
+    "id": "distance",
+    "kicker": "02 · Measure a geometric margin",
+    "title": "Normalize the score by the length of w",
+    "notes": "",
+    "cls": ""
+  },
+  {
+    "id": "margin-width",
+    "kicker": "02 · Measure a geometric margin",
+    "title": "The two support planes are 2 / ‖w‖ apart",
+    "notes": "",
+    "cls": ""
+  },
+  {
+    "id": "margin-lab",
+    "kicker": "Interactive lab · Classification 2",
+    "title": "Rotate a separator and measure its clearance",
+    "notes": "Added geometric explorer using all ten source margin observations. The unit normal is (cos θ,sin θ); h=uᵀx+d. Signed clearance is min_i t_i h(x_i). Positive clearance yields full symmetric empty-strip width 2×clearance. Nonpositive clearance is explicitly not a separating margin. The optimum is solved and checked independently in Python.",
+    "cls": "lab-slide"
+  },
+  {
+    "id": "primal",
+    "kicker": "02 · The hard-margin optimization",
+    "title": "Minimize weight length subject to separation",
+    "notes": "",
+    "cls": ""
+  },
+  {
+    "id": "support-vectors",
+    "kicker": "02 · Which points determine the solution?",
+    "title": "Support vectors carry the boundary information",
+    "notes": "Defines support vectors through nonzero dual multipliers and avoids asserting that every margin-touching observation must have a strictly positive alpha.",
+    "cls": ""
+  },
+  {
+    "id": "soft-margin",
+    "kicker": "02 · Allow imperfect separation",
+    "title": "Slack variables make room for violations",
+    "notes": "Added bridge from the source’s hard-margin derivation to the practical SVM examples. C does not directly prescribe an exact number of classification errors.",
+    "cls": ""
+  },
+  {
+    "id": "hinge",
+    "kicker": "02 · Allow imperfect separation",
+    "title": "A margin violation need not be a wrong label",
+    "notes": "For soft-margin SVM the dual box constraints are 0≤alpha_i≤C. Those with 0<alpha_i<C are on a support plane; points at alpha_i=C may lie within the margin or be misclassified.",
+    "cls": ""
+  },
+  {
+    "id": "circle-lab",
+    "kicker": "Interactive lab · Classification 2",
+    "title": "Some class arrangements need a curved boundary",
+    "notes": "Original cls_circle_clusters.json. The squared-radius ranges of the two classes are disjoint, which allows the particular horizontal separating plane used later.",
+    "cls": "lab-slide"
+  },
+  {
+    "id": "feature-map",
+    "kicker": "03 · Change the representation",
+    "title": "Lift a circle into a third coordinate",
+    "notes": "The source data are centered around the origin. A different center would require using centered coordinates or an appropriate feature map. The illustrative horizontal plane is not claimed to be the unique maximum-margin plane in the full three-dimensional space.",
+    "cls": ""
+  },
+  {
+    "id": "lift-lab",
+    "kicker": "Interactive lab · Classification 2",
+    "title": "Rotate the original data in the lifted space",
+    "notes": "Original cls_circle_clusters_3d.json: all x,y,z arrays preserved and independently checked against z=x²+y². An optional added plane is placed midway between the maximum inner squared radius and minimum outer squared radius. The plane is a valid separator, not a claim to reproduce an unknown SVM fit.",
+    "cls": "lab-slide"
+  },
+  {
+    "id": "mapping-limits",
+    "kicker": "03 · Change the representation",
+    "title": "A feature map offers a possibility, not a guarantee",
+    "notes": "",
+    "cls": ""
+  },
+  {
+    "id": "mapped-primal",
+    "kicker": "03 · SVM in a feature space",
+    "title": "Replace x with ψ(x) in the constraints",
+    "notes": "",
+    "cls": ""
+  },
+  {
+    "id": "feature-explosion",
+    "kicker": "03 · Why use a kernel?",
+    "title": "Explicit polynomial features grow quickly",
+    "notes": "The count is binomial(110,10)=46,897,636,623,981 including the constant, or one less if the constant is handled as a separate intercept. Kernel computation does not remove dependence on sample size.",
+    "cls": ""
+  },
+  {
+    "id": "lagrangian",
+    "kicker": "03 · Derive a dual formulation",
+    "title": "Attach one multiplier to each margin constraint",
+    "notes": "Corrects the source’s unconstrained-problem description. Feasibility and convexity support strong duality here; zero gradients of the Lagrangian alone do not constitute all KKT conditions.",
+    "cls": ""
+  },
+  {
+    "id": "stationarity",
+    "kicker": "03 · Derive a dual formulation",
+    "title": "Eliminate the feature-space weights",
+    "notes": "The bias stationarity equation is an equality constraint on alpha, not an expression that sets b=0. Bias is recovered separately from KKT conditions.",
+    "cls": ""
+  },
+  {
+    "id": "dual",
+    "kicker": "03 · Derive a dual formulation",
+    "title": "Only pairwise inner products remain",
+    "notes": "The input dimension is hidden in pairwise mapped inner products, but the dual has one coefficient per training observation. The bias is not included in the feature inner product unless a different model is explicitly defined.",
+    "cls": ""
+  },
+  {
+    "id": "kernel-identity",
+    "kicker": "03 · The kernel trick",
+    "title": "Compute the inner product without the feature vector",
+    "notes": "This homogeneous quadratic map differs from the earlier paraboloid lift (x₁,x₂,x₁²+x₂²). Its associated kernel is the squared dot product. The paraboloid lift instead induces xᵀz+‖x‖²‖z‖².",
+    "cls": ""
+  },
+  {
+    "id": "kernel-lab",
+    "kicker": "Interactive lab · Classification 2",
+    "title": "Check the quadratic kernel identity numerically",
+    "notes": "Added live exact-formula explorer for ψ(x)=(x₁²,√2x₁x₂,x₂²). The chart shows contributions from its three coordinates; both calculations use the displayed vectors and agree to floating-point tolerance.",
+    "cls": "lab-slide"
+  },
+  {
+    "id": "kernel-prediction",
+    "kicker": "03 · Predict with support vectors",
+    "title": "Evaluate the boundary in terms of training cases",
+    "notes": "For a hard-margin support vector with positive alpha, t_k s(x_k)=1. For soft margin use a free support vector 0<alpha_k<C; if none exists, a bias can be chosen from the KKT-compatible interval.",
+    "cls": ""
+  },
+  {
+    "id": "kernel-families",
+    "kicker": "03 · Choose a kernel",
+    "title": "Different kernels encode different geometry",
+    "notes": "",
+    "cls": ""
+  },
+  {
+    "id": "svm-lab",
+    "kicker": "Interactive lab · Classification 2",
+    "title": "Compare fitted boundaries on the same circular data",
+    "notes": "Added offline explorer of 15 independently fitted scikit-learn SVC models on all 300 source circular observations. Linear and homogeneous degree-2 polynomial kernels each use C=0.1,1,100; RBF uses all nine C×gamma combinations, gamma=0.1,1,10. Raw coordinates, no hidden standardization. Support vectors and dual coefficients are stored; browser decision scores are evaluated from them and checked against Python references. Scores displayed are training scores, not validation estimates.",
+    "cls": "lab-slide"
+  },
+  {
+    "id": "valid-kernel",
+    "kicker": "03 · What makes a valid kernel?",
+    "title": "The Gram matrix must be positive semidefinite",
+    "notes": "",
+    "cls": ""
+  },
+  {
+    "id": "kernel-cost",
+    "kicker": "03 · What the trick saves—and what remains",
+    "title": "Avoid huge feature vectors, keep an eye on n",
+    "notes": "Corrects the source’s exact 2m operation count and its conflation of feature count with operation count. Big-O expresses the relevant difference. Efficient solvers and approximate feature maps can reduce practical costs.",
+    "cls": ""
+  },
+  {
+    "id": "workflow",
+    "kicker": "Put the pieces together",
+    "title": "Validate the representation and the classifier",
+    "notes": "Neither a visually clean boundary nor perfect training accuracy establishes generalization. Kernel and C settings in this deck are demonstrations, not selected recommendations.",
+    "cls": ""
+  },
+  {
+    "id": "practice",
+    "kicker": "Check your understanding",
+    "title": "Four questions about separators",
+    "notes": "",
+    "cls": ""
+  },
+  {
+    "id": "answers",
+    "kicker": "Check your understanding",
+    "title": "What the answers should make clear",
+    "notes": "",
+    "cls": ""
+  },
+  {
+    "id": "summary",
+    "kicker": "The ideas to keep",
+    "title": "Learn the line. Choose the margin. Change the space.",
+    "notes": "",
+    "cls": ""
+  },
+  {
+    "id": "references",
+    "kicker": "Sources and further reading",
+    "title": "Return to the original charts and derivations",
+    "notes": "",
+    "cls": ""
+  }
+]

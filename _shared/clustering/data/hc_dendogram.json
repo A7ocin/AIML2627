@@ -1,0 +1,96 @@
+{
+  "data": [
+    {
+      "type": "scatter",
+      "mode": "markers+text",
+      "x": [0.1, 0.0, 0.3, 1.0, 1.2, 0.9],
+      "y": [0.2, 0.0, 0.1, 1.1, 1.0, 0.8],
+      "text": ["P0", "P1", "P2", "P3", "P4", "P5"],
+      "textposition": "top center",
+      "marker": { "size": 8, "color": "royalblue" },
+      "hoverinfo": "text",
+      "name": "observations",
+      "xaxis": "x",
+      "yaxis": "y"
+    },
+    {
+      "type": "scatter",
+      "mode": "lines",
+      "x": [5, 5, 15, 15],
+      "y": [0, 0.22360679774997896, 0.22360679774997896, 0],
+      "line": { "color": "rgb(50,50,50)", "width": 2 },
+      "hoverinfo": "none",
+      "showlegend": false,
+      "xaxis": "x2",
+      "yaxis": "y2"
+    },
+    {
+      "type": "scatter",
+      "mode": "lines",
+      "x": [10, 10, 25, 25],
+      "y": [0.22360679774997896, 0.26991728188340845, 0.26991728188340845, 0],
+      "line": { "color": "rgb(50,50,50)", "width": 2 },
+      "hoverinfo": "none",
+      "showlegend": false,
+      "xaxis": "x2",
+      "yaxis": "y2"
+    },
+    {
+      "type": "scatter",
+      "mode": "lines",
+      "x": [35, 35, 45, 45],
+      "y": [0, 0.22360679774997896, 0.22360679774997896, 0],
+      "line": { "color": "rgb(50,50,50)", "width": 2 },
+      "hoverinfo": "none",
+      "showlegend": false,
+      "xaxis": "x2",
+      "yaxis": "y2"
+    },
+    {
+      "type": "scatter",
+      "mode": "lines",
+      "x": [40, 40, 55, 55],
+      "y": [0.22360679774997896, 0.33839144678161845, 0.33839144678161845, 0],
+      "line": { "color": "rgb(50,50,50)", "width": 2 },
+      "hoverinfo": "none",
+      "showlegend": false,
+      "xaxis": "x2",
+      "yaxis": "y2"
+    },
+    {
+      "type": "scatter",
+      "mode": "lines",
+      "x": [17.5, 17.5, 47.5, 47.5],
+      "y": [0.26991728188340845, 1.2556841931377987, 1.2556841931377987, 0.33839144678161845],
+      "line": { "color": "rgb(50,50,50)", "width": 2 },
+      "hoverinfo": "none",
+      "showlegend": false,
+      "xaxis": "x2",
+      "yaxis": "y2"
+    },
+    {
+      "type": "scatter",
+      "mode": "markers+text",
+      "x": [5, 15, 25, 35, 45, 55],
+      "y": [0, 0, 0, 0, 0, 0],
+      "text": ["P0", "P1", "P2", "P3", "P4", "P5"],
+      "textposition": "top left",
+      "textfont": { "size": 11, "color": "black" },
+      "marker": { "size": 6, "color": "black" },
+      "hoverinfo": "text",
+      "showlegend": false,
+      "xaxis": "x2",
+      "yaxis": "y2"
+    }
+  ],
+  "layout": {
+    "title": "Empty two-panel Plotly figure",
+    "height": 400,
+    "autosize": true,
+    "margin": { "l": 40, "r": 20, "t": 60, "b": 40 },
+    "xaxis": { "domain": [0, 0.48], "title": "Left X" },
+    "yaxis": { "domain": [0, 1], "title": "Left Y" },
+    "xaxis2": { "domain": [0.52, 1], "anchor": "y2", "showticklabels": false, "title": "Leaves", "range": [0, 60] },
+    "yaxis2": { "domain": [0, 1], "anchor": "x2", "title": "Distance", "range": [0, 1.4] }
+  }
+}

@@ -1,0 +1,303 @@
+[
+  {
+    "id": "title",
+    "kicker": "AI &amp; Machine Learning \u00b7 Lesson 1",
+    "title": "Search algorithms",
+    "notes": "This deck follows the course lesson 01_search. The six original interactive examples are adapted into local, presentation-sized widgets. Lowest-cost-first and branch-and-bound also receive interactive examples. All diagrams, controls and Reveal.js assets are local; no login or network is needed to present.",
+    "cls": "cover-slide"
+  },
+  {
+    "id": "map",
+    "kicker": "The road ahead",
+    "title": "One engine, different selection rules",
+    "notes": "",
+    "cls": ""
+  },
+  {
+    "id": "state-space",
+    "kicker": "01 \u00b7 Model the problem",
+    "title": "A state must contain what matters",
+    "notes": "The source introduces games, navigation, delivery and the traveling salesperson problem. The location alone may not determine the legal next actions or whether the goal is reached. For a standard traveling salesperson tour, the final state also requires return to the origin. A search node can record the full path and cost even when its state is much smaller.",
+    "cls": ""
+  },
+  {
+    "id": "directed-graphs",
+    "kicker": "01 \u00b7 Model the problem",
+    "title": "Directed edges encode legal moves",
+    "notes": "The source example uses edges A\u2192B, A\u2192C, B\u2192D, C\u2192D and D\u2192A. This graph is cyclic. Ordered pairs matter: directed reachability is not symmetric. A directed path follows each edge in its permitted direction.",
+    "cls": ""
+  },
+  {
+    "id": "paths-costs",
+    "kicker": "01 \u00b7 Model the problem",
+    "title": "A path is a solution; its cost measures quality",
+    "notes": "We use g(p) for accumulated cost, h(n) for estimated remaining cost and f(p)=g(p)+h(end(p)). The source calls accumulated cost c(p) and the combined A* score g(p). The deck changes only the symbols to match common usage, not the selection rule. Unless explicitly stated, weighted-search guarantees assume non-negative edge costs.",
+    "cls": ""
+  },
+  {
+    "id": "trees",
+    "kicker": "01 \u00b7 Model the problem",
+    "title": "A rooted tree makes the choices visible",
+    "notes": "The course web widgets contain a 19-node tree. S is a child of P in the executable widget data; the earlier static Mermaid diagram places S under O instead. This deck consistently follows the executable widget: A\u2013B\u2013F\u2013P\u2013S. Children and all original edge costs and heuristic values are retained.",
+    "cls": ""
+  },
+  {
+    "id": "graph-versus-tree",
+    "kicker": "01 \u00b7 Model the problem",
+    "title": "A search tree can repeat a graph state",
+    "notes": "A finite cyclic graph can induce an infinite search tree. Path-cycle pruning and global duplicate detection are distinct. Later slides explain why cost-sensitive global pruning must allow improved paths. The teaching engine uses path-cycle pruning; its supplied examples are finite trees.",
+    "cls": ""
+  },
+  {
+    "id": "generic-search",
+    "kicker": "01 \u00b7 Model the problem",
+    "title": "The generic search loop",
+    "notes": "This is a tree-search skeleton. Add appropriate cycle or duplicate handling for graph search. The goal is tested after selecting a path from the frontier. For UCS and A*, stopping when a goal is merely generated can return a more expensive path. Empty frontier represents failure, not a path.",
+    "cls": ""
+  },
+  {
+    "id": "frontier",
+    "kicker": "01 \u00b7 Model the problem",
+    "title": "The frontier holds paths waiting to be selected",
+    "notes": "The source widgets have separate queue and frontier displays. Here they are unified into a frontier of complete paths, with the next selection first and numerical priorities where relevant. The selected and expanded counters are distinct. A goal is selected but not expanded.",
+    "cls": ""
+  },
+  {
+    "id": "criteria",
+    "kicker": "01 \u00b7 Model the problem",
+    "title": "Four questions to ask of any search strategy",
+    "notes": "For implicit search trees, b denotes a finite branching bound, d the shallowest goal depth and m the maximum depth. DFS is complete on finite search spaces with suitable cycle handling, but not generally on infinite branches. We state the setting explicitly rather than assigning unconditional yes/no guarantees.",
+    "cls": ""
+  },
+  {
+    "id": "uninformed",
+    "kicker": "02 \u00b7 Uninformed search",
+    "title": "Search without an estimate of the goal",
+    "notes": "",
+    "cls": "chapter-slide"
+  },
+  {
+    "id": "bfs",
+    "kicker": "02 \u00b7 Uninformed search",
+    "title": "Breadth-first: finish the shallow layers first",
+    "notes": "For the generic goal-on-selection version, time and frontier memory can be O(b^(d+1)): nodes selected at depth d before the goal can generate depth d+1. With goal testing on generation, the familiar O(b^d) bound applies. Both express exponential growth in solution depth. Do not interpret fewest edges as minimum weighted cost.",
+    "cls": ""
+  },
+  {
+    "id": "bfs-lab",
+    "kicker": "Interactive lab \u00b7 Uninformed",
+    "title": "BFS \u00b7 watch the queue expand",
+    "notes": "Use Next to select one path and update the frontier. Back restores the entire prior state. Play can be paused; leaving the slide pauses automatically. The frontier is displayed in selection order, next path first. Course-tree children are inserted left to right; stack-based DFS and IDS therefore visit rightmost siblings first. Priority ties use insertion order. Heuristic DFS orders only newly generated siblings. Green marks processed nodes, yellow marks frontier endpoints, an orange ring marks the currently selected node, and teal marks the solution. The goal test is applied on selection, not generation.",
+    "cls": "lab-slide"
+  },
+  {
+    "id": "dfs",
+    "kicker": "02 \u00b7 Uninformed search",
+    "title": "Depth-first: commit to one branch",
+    "notes": "Depth-first search does not inherently prefer the leftmost or rightmost child. That choice follows from insertion order. The labs preserve the website\u2019s left-to-right insertion and rightmost-first removal. O(bm) space assumes parent-linked path records; copying full paths incurs additional storage. Worst-case time is O(b^m) on a finite tree.",
+    "cls": ""
+  },
+  {
+    "id": "dfs-lab",
+    "kicker": "Interactive lab \u00b7 Uninformed",
+    "title": "DFS \u00b7 follow the stack",
+    "notes": "Use Next to select one path and update the frontier. Back restores the entire prior state. Play can be paused; leaving the slide pauses automatically. The frontier is displayed in selection order, next path first. Course-tree children are inserted left to right; stack-based DFS and IDS therefore visit rightmost siblings first. Priority ties use insertion order. Heuristic DFS orders only newly generated siblings. Green marks processed nodes, yellow marks frontier endpoints, an orange ring marks the currently selected node, and teal marks the solution. The goal test is applied on selection, not generation.",
+    "cls": "lab-slide"
+  },
+  {
+    "id": "breadth-depth",
+    "kicker": "02 \u00b7 Uninformed search",
+    "title": "Same tree, different exploration order",
+    "notes": "The small tree is illustrative. Numbers show selection order with left-to-right child insertion. The left image uses a queue. The right image uses a stack and therefore explores the right branch first. Neither picture is a universal claim about left-to-right preference.",
+    "cls": ""
+  },
+  {
+    "id": "ids",
+    "kicker": "02 \u00b7 Uninformed search",
+    "title": "Iterative deepening: increase a depth limit",
+    "notes": "Depth-limited search must distinguish cutoff from exhausted failure. A cutoff means unsearched deeper successors exist; exhausted failure means none remain. The widget has no arbitrary depth-10 cap and stops if the finite tree is exhausted. Its goal check happens before the depth cutoff. Like DFS, memory bounds assume shared parent records, not a full stored animation history.",
+    "cls": ""
+  },
+  {
+    "id": "ids-lab",
+    "kicker": "Interactive lab \u00b7 Uninformed",
+    "title": "IDS \u00b7 replay the search at each depth",
+    "notes": "Use Next to select one path and update the frontier. Back restores the entire prior state. Play can be paused; leaving the slide pauses automatically. The frontier is displayed in selection order, next path first. Course-tree children are inserted left to right; stack-based DFS and IDS therefore visit rightmost siblings first. Priority ties use insertion order. Heuristic DFS orders only newly generated siblings. Green marks processed nodes, yellow marks frontier endpoints, an orange ring marks the currently selected node, and teal marks the solution. The goal test is applied on selection, not generation.",
+    "cls": "lab-slide"
+  },
+  {
+    "id": "ids-overhead",
+    "kicker": "02 \u00b7 Uninformed search",
+    "title": "Repeated work can be a reasonable price",
+    "notes": "These totals illustrate complete traversal of each depth limit, not the exact counts of the irregular course tree or early termination at a goal. For a full b-ary tree, iterative deepening visits sum((d+1-i)b^i) nodes; one full traversal visits sum(b^i). Their ratio tends to b/(b\u22121) for b>1. For b=1, IDS repeats increasingly long prefixes and has quadratic work in depth.",
+    "cls": ""
+  },
+  {
+    "id": "ucs",
+    "kicker": "02 \u00b7 Uninformed search",
+    "title": "Lowest-cost-first: spend the smallest total so far",
+    "notes": "The course calls this LCFS. The queue must be ordered by accumulated path cost, not the individual edge weight. On finite graphs, standard UCS with best-cost duplicate handling is optimal for non-negative edges. A sufficient condition for completeness on infinite, finitely branching spaces is every edge costing at least \u03b5>0. Negative edges invalidate the ordinary first-goal guarantee.",
+    "cls": ""
+  },
+  {
+    "id": "ucs-lab",
+    "kicker": "Interactive lab \u00b7 Uninformed",
+    "title": "Lowest-cost-first \u00b7 compare cumulative costs",
+    "notes": "Use Next to select one path and update the frontier. Back restores the entire prior state. Play can be paused; leaving the slide pauses automatically. The frontier is displayed in selection order, next path first. Course-tree children are inserted left to right; stack-based DFS and IDS therefore visit rightmost siblings first. Priority ties use insertion order. Heuristic DFS orders only newly generated siblings. Green marks processed nodes, yellow marks frontier endpoints, an orange ring marks the currently selected node, and teal marks the solution. The goal test is applied on selection, not generation.",
+    "cls": "lab-slide"
+  },
+  {
+    "id": "weighted-lab",
+    "kicker": "Interactive lab \u00b7 Uninformed",
+    "title": "One problem \u00b7 compare four selection rules",
+    "notes": "Use Next to select one path and update the frontier. Back restores the entire prior state. Play can be paused; leaving the slide pauses automatically. The frontier is displayed in selection order, next path first. Course-tree children are inserted left to right; stack-based DFS and IDS therefore visit rightmost siblings first. Priority ties use insertion order. Heuristic DFS orders only newly generated siblings. Green marks processed nodes, yellow marks frontier endpoints, an orange ring marks the currently selected node, and teal marks the solution. The goal test is applied on selection, not generation.",
+    "cls": "lab-slide"
+  },
+  {
+    "id": "uninformed-summary",
+    "kicker": "02 \u00b7 Uninformed search",
+    "title": "The uninformed toolkit",
+    "notes": "The table describes frontier/search-record storage, not the extra snapshots a visualization records for rewind. BFS and IDS minimize total cost only with equal positive edge costs. The difference between search complexity and UI history storage is stated in implementation notes. All finite teaching examples terminate.",
+    "cls": ""
+  },
+  {
+    "id": "informed",
+    "kicker": "03 \u00b7 Informed search",
+    "title": "Give the search a useful estimate",
+    "notes": "",
+    "cls": "chapter-slide"
+  },
+  {
+    "id": "heuristic",
+    "kicker": "03 \u00b7 Informed search",
+    "title": "A heuristic estimates the work still ahead",
+    "notes": "Straight-line distance is appropriate when route costs measure geometric distance and legal routes cannot be shorter than the straight line. For travel time, distance alone has the wrong units; divide by a valid upper bound on speed to obtain a time lower bound. It does not automatically give a bound for arbitrary energy or monetary costs.",
+    "cls": ""
+  },
+  {
+    "id": "greedy",
+    "kicker": "03 \u00b7 Informed search",
+    "title": "Greedy best-first: follow the smallest estimate",
+    "notes": "Greedy best-first can also fail to terminate in infinite spaces or without cycle handling. It is complete on a finite graph with adequate duplicate/cycle handling, but the heuristic alone guarantees neither completeness in general nor minimum cost.",
+    "cls": ""
+  },
+  {
+    "id": "greedy-lab",
+    "kicker": "Interactive lab \u00b7 Informed search",
+    "title": "Greedy best-first \u00b7 use h alone",
+    "notes": "Use Next to select one path and update the frontier. Back restores the entire prior state. Play can be paused; leaving the slide pauses automatically. The frontier is displayed in selection order, next path first. Course-tree children are inserted left to right; stack-based DFS and IDS therefore visit rightmost siblings first. Priority ties use insertion order. Heuristic DFS orders only newly generated siblings. Green marks processed nodes, yellow marks frontier endpoints, an orange ring marks the currently selected node, and teal marks the solution. The goal test is applied on selection, not generation.",
+    "cls": "lab-slide"
+  },
+  {
+    "id": "heuristic-dfs",
+    "kicker": "03 \u00b7 Informed search",
+    "title": "Heuristic DFS: order siblings, then go deep",
+    "notes": "The implementation pushes siblings in descending h so that the smallest h is popped next. Equal heuristic siblings use source insertion order as the next-visit tie-break. This local ordering is not equivalent to sorting the complete frontier by h.",
+    "cls": ""
+  },
+  {
+    "id": "heuristic-dfs-lab",
+    "kicker": "Interactive lab \u00b7 Informed search",
+    "title": "Heuristic DFS \u00b7 local priority, deep commitment",
+    "notes": "Use Next to select one path and update the frontier. Back restores the entire prior state. Play can be paused; leaving the slide pauses automatically. The frontier is displayed in selection order, next path first. Course-tree children are inserted left to right; stack-based DFS and IDS therefore visit rightmost siblings first. Priority ties use insertion order. Heuristic DFS orders only newly generated siblings. Green marks processed nodes, yellow marks frontier endpoints, an orange ring marks the currently selected node, and teal marks the solution. The goal test is applied on selection, not generation.",
+    "cls": "lab-slide"
+  },
+  {
+    "id": "astar",
+    "kicker": "03 \u00b7 Informed search",
+    "title": "A*: combine the cost paid and the cost ahead",
+    "notes": "The slides use conventional f=g+h notation. The source webpage instead names the sum g and the paid cost c. A* does not simply average BFS and greedy search; it orders by the sum of actual and estimated costs.",
+    "cls": ""
+  },
+  {
+    "id": "astar-scores",
+    "kicker": "03 \u00b7 Informed search",
+    "title": "The first A* decision",
+    "notes": "The edge costs and h values match the webpage widget exactly. After B is expanded, C and D remain on the frontier and must still participate in the comparison. The lab shows the full frontier in sorted order rather than just B\u2019s new children.",
+    "cls": ""
+  },
+  {
+    "id": "astar-lab",
+    "kicker": "Interactive lab \u00b7 Informed search",
+    "title": "A* \u00b7 inspect g, h and f together",
+    "notes": "Use Next to select one path and update the frontier. Back restores the entire prior state. Play can be paused; leaving the slide pauses automatically. The frontier is displayed in selection order, next path first. Course-tree children are inserted left to right; stack-based DFS and IDS therefore visit rightmost siblings first. Priority ties use insertion order. Heuristic DFS orders only newly generated siblings. Green marks processed nodes, yellow marks frontier endpoints, an orange ring marks the currently selected node, and teal marks the solution. The goal test is applied on selection, not generation.",
+    "cls": "lab-slide"
+  },
+  {
+    "id": "admissibility",
+    "kicker": "03 \u00b7 Informed search",
+    "title": "Admissible means \u201cnever overestimate\u201d",
+    "notes": "These are sufficient conditions for optimal and complete A* tree search when a solution exists. Finite graphs can use weaker termination assumptions, such as non-negative costs with suitable best-cost duplicate handling. If no route to any goal exists from n, the true remaining cost is infinite. h=0 is admissible for non-negative costs, though it gives no directional guidance.",
+    "cls": ""
+  },
+  {
+    "id": "consistency",
+    "kicker": "03 \u00b7 Informed search",
+    "title": "Consistency checks each edge",
+    "notes": "For goal S, the only goal path has remaining costs A=12, B=11, F=5, P=3, S=0. The source heuristic gives 5,2,2,2,0 on those nodes, all lower bounds. All other nodes are dead ends relative to S and have infinite true remaining cost. Thus this particular h is admissible for the course tree but inconsistent on A\u2192B and C\u2192H. A graph-search implementation that permanently discards later better paths needs consistency or must reopen states.",
+    "cls": ""
+  },
+  {
+    "id": "graph-cautions",
+    "kicker": "03 \u00b7 Informed search",
+    "title": "Graph search must keep better routes alive",
+    "notes": "This corrects the webpage suggestion that handling negative-cost cycles is enough to support ordinary A*. Even without a negative cycle, a negative edge can break the usual first-goal stopping rule. For non-negative graph search, remember best costs and handle stale queue entries or priority updates. The lab is intentionally a tree, so a global closed set is unnecessary.",
+    "cls": ""
+  },
+  {
+    "id": "branch-bound",
+    "kicker": "03 \u00b7 Informed search",
+    "title": "Branch-and-bound: improve, then prune",
+    "notes": "The source calls this DFBBS. We use depth-first branch-and-bound (DFBnB) in prose and BNB in code. For finite examples with non-negative costs and admissible h, exhausting all candidates proves optimality. With a strict f<B test, a supplied finite bound must be greater than the optimum to guarantee finding a solution; setting it exactly to the optimal cost without an incumbent can return no solution below the bound. Infinite spaces still require termination assumptions.",
+    "cls": ""
+  },
+  {
+    "id": "branch-bound-lab",
+    "kicker": "Interactive lab \u00b7 Informed search",
+    "title": "Branch-and-bound \u00b7 watch the incumbent improve",
+    "notes": "Use Next to select one path and update the frontier. Back restores the entire prior state. Play can be paused; leaving the slide pauses automatically. The frontier is displayed in selection order, next path first. Course-tree children are inserted left to right; stack-based DFS and IDS therefore visit rightmost siblings first. Priority ties use insertion order. Heuristic DFS orders only newly generated siblings. Green marks processed nodes, yellow marks frontier endpoints, an orange ring marks the currently selected node, and teal marks the solution. The goal test is applied on selection, not generation.",
+    "cls": "lab-slide"
+  },
+  {
+    "id": "selection-matrix",
+    "kicker": "03 \u00b7 Informed search",
+    "title": "The frontier rule explains the algorithm",
+    "notes": "",
+    "cls": ""
+  },
+  {
+    "id": "choose",
+    "kicker": "Putting it together",
+    "title": "Choose from the problem\u2019s requirements",
+    "notes": "These are starting points, not universal recommendations. A finite tree with plentiful goals may also be well served by DFS or heuristic DFS if any solution is acceptable. Good heuristic computation has a cost, and the best practical choice depends on the actual state space.",
+    "cls": ""
+  },
+  {
+    "id": "practice",
+    "kicker": "Check your understanding",
+    "title": "Predict first, then use the labs",
+    "notes": "",
+    "cls": ""
+  },
+  {
+    "id": "answers",
+    "kicker": "Check your understanding",
+    "title": "Explain the behavior using the frontier",
+    "notes": "",
+    "cls": ""
+  },
+  {
+    "id": "summary",
+    "kicker": "Lesson 1 \u00b7 Takeaways",
+    "title": "Search is controlled exploration",
+    "notes": "",
+    "cls": ""
+  },
+  {
+    "id": "references",
+    "kicker": "Sources & further reading",
+    "title": "Continue exploring",
+    "notes": "No website password or authenticated request headers are included in the presentation. The six original widgets are reimplemented with their course data and intended traversal rules, retaining play, reset, back, next, frontier and solution displays. New local controls add pause, speed, selected-goal options for uninformed examples, and A* with h=0. New examples are identified in notes. Original diagrams use native SVG, preserving the history deck\u2019s palette and typography.",
+    "cls": ""
+  }
+]

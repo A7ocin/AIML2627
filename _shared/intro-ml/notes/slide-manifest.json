@@ -1,0 +1,254 @@
+[
+  {
+    "id": "title",
+    "kicker": "AI &amp; Machine Learning \u00b7 Lesson 3",
+    "title": "Introduction to Machine Learning",
+    "notes": "Follows the next course resource, 03_intro. Both original interactive plots retain all source coordinates. Four additional labs explore learning signals, self-supervised targets, exploration/exploitation and generalization.",
+    "cls": "cover-slide"
+  },
+  {
+    "id": "roadmap",
+    "kicker": "The road ahead",
+    "title": "Three questions organize the lecture",
+    "notes": "",
+    "cls": ""
+  },
+  {
+    "id": "components",
+    "kicker": "01 \u00b7 How learning works",
+    "title": "Learning needs more than a model",
+    "notes": "The student/teacher analogy is helpful, but the model is not the entire learning system. The training procedure defines how evidence changes parameters; evaluation measures an explicitly chosen task.",
+    "cls": ""
+  },
+  {
+    "id": "training-inference",
+    "kicker": "01 \u00b7 How learning works",
+    "title": "Training changes the model; inference uses it",
+    "notes": "",
+    "cls": ""
+  },
+  {
+    "id": "signals",
+    "kicker": "01 \u00b7 Learning signals",
+    "title": "Ask where the learning signal comes from",
+    "notes": "Self-supervision is often grouped under unsupervised learning because labels are not manually provided. Generative modeling can use supervised conditioning or self-supervised objectives. This taxonomy is a guide rather than a disjoint partition.",
+    "cls": ""
+  },
+  {
+    "id": "supervised",
+    "kicker": "01 \u00b7 Learning signals",
+    "title": "Supervised learning compares a prediction to a target",
+    "notes": "Labels may come from instruments, logs, expert annotation or other processes. They are not necessarily perfect or manually produced.",
+    "cls": ""
+  },
+  {
+    "id": "regression-classification",
+    "kicker": "01 \u00b7 Learning signals",
+    "title": "The output determines the prediction task",
+    "notes": "The course focuses on continuous-response regression. Count prediction is also possible with appropriate regression models; numerical storage alone does not identify a task.",
+    "cls": ""
+  },
+  {
+    "id": "unsupervised",
+    "kicker": "01 \u00b7 Learning signals",
+    "title": "Without task labels, look for structure",
+    "notes": "Clustering depends on representation, distance and modeling choices. Generative training is not universally reconstruction. Avoid claiming that unlabeled data always makes training cheaper or inherently harder.",
+    "cls": ""
+  },
+  {
+    "id": "signal-lab",
+    "kicker": "Interactive lab \u00b7 Introduction to ML",
+    "title": "Identify the signal, then reveal the reasoning",
+    "notes": "Added six-scenario concept check, including classification, regression, clustering, masking, semi-supervised data and reward-based action selection. Answers are fixed explanations, not model-generated judgments.",
+    "cls": "lab-slide"
+  },
+  {
+    "id": "self-supervised",
+    "kicker": "01 \u00b7 Learning signals",
+    "title": "Create a target from the observation itself",
+    "notes": "Self-supervised objectives include generative and contrastive approaches. Masked reconstruction and next-token prediction are examples, not the whole category. Pretraining may be followed by supervised adaptation.",
+    "cls": ""
+  },
+  {
+    "id": "mask-lab",
+    "kicker": "Interactive lab \u00b7 Introduction to ML",
+    "title": "Build a self-supervised training pair",
+    "notes": "Added target-construction demonstration. This does not train or run a language model: it separates the observed input from the known training target. The correct target is what occurred in the source sentence, not the only plausible completion.",
+    "cls": "lab-slide"
+  },
+  {
+    "id": "semi-supervised",
+    "kicker": "01 \u00b7 Learning signals",
+    "title": "Use the labeled and unlabeled parts together",
+    "notes": "Semi-supervised learning uses both labeled and unlabeled data. Transduction and induction describe prediction goals; they are not restricted to this learning setting.",
+    "cls": ""
+  },
+  {
+    "id": "weak-shift",
+    "kicker": "01 \u00b7 Learning signals",
+    "title": "Weak labels and domain shift are different issues",
+    "notes": "Corrects the course subsection that describes weak supervision primarily as distribution alignment. Zhou distinguishes incomplete, inexact and inaccurate supervision. The website A/B example describes domain shift; adaptation addresses this change. A changed distribution does not automatically imply failure.",
+    "cls": ""
+  },
+  {
+    "id": "reinforcement",
+    "kicker": "01 \u00b7 Learning signals",
+    "title": "Reinforcement learning learns which actions to take",
+    "notes": "The course motivates reinforcement learning through chess. This presentation avoids the unsupported comparison of chess states with atoms in the universe. Offline reinforcement learning also exists; interaction is not required during every training procedure.",
+    "cls": ""
+  },
+  {
+    "id": "bandit-lab",
+    "kicker": "Interactive lab \u00b7 Introduction to ML",
+    "title": "Explore or exploit? Try three uncertain actions",
+    "notes": "Added stationary three-armed Bernoulli bandit with reward probabilities 0.25, 0.50 and 0.75. It is a simple reinforcement-learning setting without state transitions or delayed rewards. Each arm is tried once before automated epsilon-greedy selection. Ties use seeded randomness. The finite run need not identify the best arm.",
+    "cls": "lab-slide"
+  },
+  {
+    "id": "domains",
+    "kicker": "02 \u00b7 Describe the data",
+    "title": "Learning setting and data domain are separate axes",
+    "notes": "",
+    "cls": ""
+  },
+  {
+    "id": "vision",
+    "kicker": "02 \u00b7 Data domains",
+    "title": "One scene, three kinds of visual output",
+    "notes": "The vector scene is a conceptual illustration. Its boxes and regions are hand-authored teaching annotations, not outputs of a trained vision model. Semantic segmentation assigns class labels; instance segmentation additionally separates individual objects.",
+    "cls": ""
+  },
+  {
+    "id": "language",
+    "kicker": "02 \u00b7 Data domains",
+    "title": "Language tasks depend on context",
+    "notes": "The source uses genre and topic interchangeably; these are distinct label schemes. The slide explicitly uses topic classification.",
+    "cls": ""
+  },
+  {
+    "id": "fertilizer",
+    "kicker": "02 \u00b7 A running regression problem",
+    "title": "Predict yield before the crop grows",
+    "notes": "Retains the agronomy example. Source numerical axes do not document physical units or data provenance. The deck treats the 25 points as course illustration data and does not claim measured field results or convert the original 0\u20131 fertilizer coordinates to physical doses.",
+    "cls": ""
+  },
+  {
+    "id": "variable-types",
+    "kicker": "02 \u00b7 Variables and datasets",
+    "title": "Variable type describes what values mean",
+    "notes": "Age may be measured continuously or recorded in completed years; it is not intrinsically discrete. Binary variables may be nominal or ordinal depending on interpretation. Avoid using yes/no degree status as a general ordinal example.",
+    "cls": ""
+  },
+  {
+    "id": "roles",
+    "kicker": "02 \u00b7 Variables and datasets",
+    "title": "Predictors are inputs; the outcome is the target",
+    "notes": "Predictor does not imply statistical independence, and explanatory-variable terminology does not imply causation. Rainfall observed after prediction time cannot be used as if it were already known; forecasts and past measurements must be distinguished.",
+    "cls": ""
+  },
+  {
+    "id": "dataset",
+    "kicker": "02 \u00b7 Variables and datasets",
+    "title": "A dataset pairs each observation with its target",
+    "notes": "The first three rows reproduce the source values to four decimal places. Targets are available for supervised training; they are unknown for a new inference case.",
+    "cls": ""
+  },
+  {
+    "id": "matrix",
+    "kicker": "02 \u00b7 Variables and datasets",
+    "title": "Rows are observations; columns are features",
+    "notes": "Corrects the source display that stacks column observations without explicit transposes. Numerical matrix form requires a suitable representation for categorical, image or text data; raw categories do not automatically have a meaningful real-valued encoding.",
+    "cls": ""
+  },
+  {
+    "id": "observations-lab",
+    "kicker": "Interactive lab \u00b7 Introduction to ML",
+    "title": "Inspect the original fertilizer observations",
+    "notes": "Original nonlinear.json scatter plot, all 25 x/y coordinates preserved. Plotly remains fully interactive offline. The slide adds explicit zoom/pan/reset controls and a keyboard-accessible point inspector. The original horizontal axis title is retained; its physical interpretation is unspecified.",
+    "cls": "lab-slide"
+  },
+  {
+    "id": "hypotheses",
+    "kicker": "03 \u00b7 Models and generalization",
+    "title": "A model family contains many possible functions",
+    "notes": "The course calls a parameter setting a hypothesis. More commonly, the corresponding function is the hypothesis; both conventions are clarified here. The course curve is illustrative and is not asserted to be an optimal fit or quadratic.",
+    "cls": ""
+  },
+  {
+    "id": "hypothesis-lab",
+    "kicker": "Interactive lab \u00b7 Introduction to ML",
+    "title": "Compare the original observations and hypothesis",
+    "notes": "Original nonlinear_mod.json: both 25-point traces retained exactly, including the illustrative hypothesis curve. Interactive hover, trace toggles, pan and zoom are preserved. The sidebar computes residuals and mean squared error against the provided curve, without claiming the source used a particular fitting algorithm.",
+    "cls": "lab-slide"
+  },
+  {
+    "id": "residuals",
+    "kicker": "03 \u00b7 Models and generalization",
+    "title": "Residuals measure disagreement on the observed data",
+    "notes": "MSE is a supplemental concrete score that prepares for the next Regression lecture. It has squared target units and is not appropriate for every task.",
+    "cls": ""
+  },
+  {
+    "id": "noise",
+    "kicker": "03 \u00b7 Models and generalization",
+    "title": "The same input can have different outcomes",
+    "notes": "The source emphasizes measurement error. This slide broadens the explanation to omitted predictors, irreducible variation and misspecification. No claim of zero-mean or independent noise is made without an assumption.",
+    "cls": ""
+  },
+  {
+    "id": "generalization",
+    "kicker": "03 \u00b7 Models and generalization",
+    "title": "Generalization is performance on new cases",
+    "notes": "Corrects the source domain-wide approximation statement. In noisy problems the same input can have several possible targets. Generalization concerns expected or otherwise specified performance under a relevant distribution, not uniform exactness throughout the Cartesian product.",
+    "cls": ""
+  },
+  {
+    "id": "splits",
+    "kicker": "03 \u00b7 Models and generalization",
+    "title": "Give training, validation and testing different jobs",
+    "notes": "Supplemental practical evaluation guidance. Repeated use of test results for model choice compromises a final independent assessment. Use the validation set in the following interactive lab; it is intentionally not called a test set.",
+    "cls": ""
+  },
+  {
+    "id": "generalization-lab",
+    "kicker": "Interactive lab \u00b7 Introduction to ML",
+    "title": "Fit the training points; compare unseen validation points",
+    "notes": "Added synthetic regression experiment. Training and validation are disjoint samples from y=2+1.2x\u22120.9x\u00b2 plus independent seeded noise, on x in [\u22121,1]. Degrees 0,1,2,5,9 are fitted by least squares using Householder QR. Validation outcomes never enter fitting. Displaying and comparing validation results makes this model development, not a final test evaluation.",
+    "cls": "lab-slide"
+  },
+  {
+    "id": "leakage",
+    "kicker": "03 \u00b7 Models and generalization",
+    "title": "Evaluation must match the intended use",
+    "notes": "Data leakage and domain shift are distinct failure modes. This summary follows scikit-learn common-pitfalls guidance for split-before-fit preprocessing and the course website A/B example for domain shift.",
+    "cls": ""
+  },
+  {
+    "id": "practice",
+    "kicker": "Check your understanding",
+    "title": "Name the signal, shape and evaluation target",
+    "notes": "",
+    "cls": ""
+  },
+  {
+    "id": "answers",
+    "kicker": "Check your understanding",
+    "title": "Explain the choices",
+    "notes": "",
+    "cls": ""
+  },
+  {
+    "id": "summary",
+    "kicker": "Lesson 3 \u00b7 Takeaways",
+    "title": "Define the task before choosing the algorithm",
+    "notes": "",
+    "cls": ""
+  },
+  {
+    "id": "references",
+    "kicker": "Sources & further reading",
+    "title": "Continue exploring",
+    "notes": "",
+    "cls": ""
+  }
+]

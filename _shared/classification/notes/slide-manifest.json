@@ -1,0 +1,324 @@
+[
+  {
+    "id": "title",
+    "kicker": "AI &amp; Machine Learning · Lesson 5",
+    "title": "Classification 1",
+    "notes": "Based on course lesson 05_classification. The four original Plotly resources are preserved locally. Added labs use explicit illustrative assumptions; they are not medical decision tools.",
+    "cls": "cover-slide"
+  },
+  {
+    "id": "map",
+    "kicker": "The road ahead",
+    "title": "Three routes to a class prediction",
+    "notes": "",
+    "cls": ""
+  },
+  {
+    "id": "data-lab",
+    "kicker": "Interactive lab · Classification",
+    "title": "A numeric predictor, a categorical outcome",
+    "notes": "Source lr_logreg.json: 100 training observations; its test trace is empty. Labels and coordinates preserved. The course describes a cholesterol/disease illustration but provides no validated provenance or physical measurement definition. The displayed x scale is identified as illustrative.",
+    "cls": "lab-slide"
+  },
+  {
+    "id": "classification",
+    "kicker": "01 · The classification problem",
+    "title": "A class label is not a continuous quantity",
+    "notes": "A linear probability model is possible, but its predictions can fall outside [0,1] and its error variance depends on the mean. Category numbers need not have quantitative spacing.",
+    "cls": ""
+  },
+  {
+    "id": "uncertainty",
+    "kicker": "01 · A probabilistic perspective",
+    "title": "The same observed x may have different labels",
+    "notes": "Refines the source definitions. Improving measurements or observing new features can change the conditional task and its residual uncertainty. Finite-sample model uncertainty differs from inherent outcome variability under a fixed model.",
+    "cls": ""
+  },
+  {
+    "id": "posterior",
+    "kicker": "01 · From data to probabilities",
+    "title": "Estimate the class distribution at x",
+    "notes": "This deck uses p for a true distribution and p̂ for an estimate. Probability at a continuous X is described by a conditional distribution, not by dividing two positive point probabilities.",
+    "cls": ""
+  },
+  {
+    "id": "bayes-rule",
+    "kicker": "01 · The optimal Bayes classifier",
+    "title": "Under equal error costs, choose the largest probability",
+    "notes": "",
+    "cls": ""
+  },
+  {
+    "id": "bayes-proof",
+    "kicker": "01 · Why the rule is optimal",
+    "title": "Minimize error separately at each x",
+    "notes": "Recasts the source expandable derivation using the law of total expectation. For C classes the conditional minimum error is 1−max_c p_c(x).",
+    "cls": ""
+  },
+  {
+    "id": "bayes-error",
+    "kicker": "01 · Limits of prediction",
+    "title": "Even the ideal classifier can make mistakes",
+    "notes": "Bayes risk is E[1−max_c p_c(X)]. It is not necessarily zero; overlapping class distributions create irreducible error for the given features.",
+    "cls": ""
+  },
+  {
+    "id": "decision-lab",
+    "kicker": "Interactive lab · Classification",
+    "title": "Change the costs and the best decision changes",
+    "notes": "Added binary decision-theory lab. False-positive cost is fixed at 1; false-negative cost ranges 1–10, correct decisions have zero cost. These are hypothetical costs, not medical recommendations. The Bayes cost threshold is C_FP/(C_FP+C_FN).",
+    "cls": "lab-slide"
+  },
+  {
+    "id": "accuracy",
+    "kicker": "01 · Evaluate a classifier",
+    "title": "Accuracy counts correct labels",
+    "notes": "Accuracy is an empirical estimate of performance for a representative evaluation distribution, not a guarantee about deployment.",
+    "cls": ""
+  },
+  {
+    "id": "confusion",
+    "kicker": "01 · See the kinds of mistakes",
+    "title": "A confusion matrix adds the missing detail",
+    "notes": "A brief addition to support threshold interpretation. Recall is sensitivity for the positive class; precision depends on the class prevalence in the evaluated population.",
+    "cls": ""
+  },
+  {
+    "id": "bayes-theorem",
+    "kicker": "02 · Naive Bayes",
+    "title": "Reverse the direction with Bayes’ theorem",
+    "notes": "",
+    "cls": ""
+  },
+  {
+    "id": "independence",
+    "kicker": "02 · Naive Bayes",
+    "title": "“Naive” means independent given the class",
+    "notes": "Naive Bayes uses mutual conditional independence of the features given the class. Pairwise independence alone is not sufficient for the full factorization.",
+    "cls": ""
+  },
+  {
+    "id": "nb-score",
+    "kicker": "02 · Naive Bayes",
+    "title": "Compare log scores to avoid tiny products",
+    "notes": "",
+    "cls": ""
+  },
+  {
+    "id": "estimate",
+    "kicker": "02 · Estimate the distributions",
+    "title": "Choose a likelihood suited to each feature",
+    "notes": "The source includes parametric Gaussian, nonparametric density and categorical options. Gaussian parameters depend on both feature and class; source notation omitted the class subscript.",
+    "cls": ""
+  },
+  {
+    "id": "smoothing",
+    "kicker": "02 · Estimate the distributions",
+    "title": "One unseen category should not erase a class",
+    "notes": "Added numerical stability and zero-frequency clarification. Gaussian Naive Bayes instead requires positive variances; implementations commonly apply variance smoothing.",
+    "cls": ""
+  },
+  {
+    "id": "naive-lab",
+    "kicker": "Interactive lab · Classification",
+    "title": "Watch two features update a class probability",
+    "notes": "Added Gaussian Naive Bayes lab with explicitly specified independent conditional normals: class 0 means (−1,−1), class 1 means (1,1), all standard deviations 1. It illustrates assumed distributions, not a fit to course observations. The posterior log odds is logit(prior)+2x₁+2x₂.",
+    "cls": "lab-slide"
+  },
+  {
+    "id": "nb-limits",
+    "kicker": "02 · Read Naive Bayes responsibly",
+    "title": "Simple assumptions can work—and still mislead",
+    "notes": "",
+    "cls": ""
+  },
+  {
+    "id": "logistic",
+    "kicker": "03 · Logistic regression",
+    "title": "A linear score becomes a probability",
+    "notes": "",
+    "cls": ""
+  },
+  {
+    "id": "log-odds",
+    "kicker": "03 · Logistic regression",
+    "title": "The log odds are linear in the features",
+    "notes": "Logistic regression is a generalized linear model. The probabilities are nonlinear in beta, but the log odds are linear. Intercept column x_i0=1 is explicit in the formula.",
+    "cls": ""
+  },
+  {
+    "id": "logistic-lab",
+    "kicker": "Interactive lab · Classification",
+    "title": "Explore a sigmoid and its decision threshold",
+    "notes": "Added explorer using the original 100 binary observations. Parameterization z=slope×(x−midpoint); β₀=−slope×midpoint and β₁=slope. Slider settings are illustrative and are not claimed to be an optimized fit. Training log loss and confusion counts are computed live.",
+    "cls": "lab-slide"
+  },
+  {
+    "id": "likelihood",
+    "kicker": "03 · Maximum likelihood estimation",
+    "title": "Reward the probability assigned to each observed label",
+    "notes": "Corrects max to argmax in the source estimator definition. Max is the objective value; argmax is a parameter vector attaining it.",
+    "cls": ""
+  },
+  {
+    "id": "log-loss",
+    "kicker": "03 · Maximum likelihood estimation",
+    "title": "Minimize negative log likelihood",
+    "notes": "For a linear score the negative log likelihood is convex, but uniqueness and existence need conditions. Use stable softplus(z)−y*z in code. Multiclass extensions are deferred to later material.",
+    "cls": ""
+  },
+  {
+    "id": "fit-lab",
+    "kicker": "Interactive lab · Classification",
+    "title": "Inspect the source’s supplied logistic curve",
+    "notes": "Source lr_logreg_mod.json: original 100-point curve and 100 training observations retained. Test trace is empty. The source does not provide its fitting code, penalty or exact parameter settings, so the curve is labeled supplied rather than claimed to be a freshly computed unregularized MLE.",
+    "cls": "lab-slide"
+  },
+  {
+    "id": "thresholds",
+    "kicker": "03 · From probability to decision",
+    "title": "Fitting and threshold selection are different steps",
+    "notes": "",
+    "cls": ""
+  },
+  {
+    "id": "plane-lab",
+    "kicker": "Interactive lab · Classification",
+    "title": "Two features create a geometric problem",
+    "notes": "Source cls_two_class.json: 25 observations in each of two classes. All coordinates and labels preserved. Axis notation translated from source X_0,X_1 into slide-wide feature 1,feature 2 labels.",
+    "cls": "lab-slide"
+  },
+  {
+    "id": "knn-rule",
+    "kicker": "04 · K-nearest neighbors",
+    "title": "Let nearby training cases vote",
+    "notes": "",
+    "cls": ""
+  },
+  {
+    "id": "boundary-lab",
+    "kicker": "Interactive lab · Classification",
+    "title": "The original 1-neighbor decision regions",
+    "notes": "Source cls_two_class_mod.json: all original coordinates and the full 200×200 contour grid preserved. This is the source K=1 boundary, not a refit on a subsample.",
+    "cls": "lab-slide"
+  },
+  {
+    "id": "neighbors-lab",
+    "kicker": "Interactive lab · Classification",
+    "title": "Move a query and inspect the neighbors that vote",
+    "notes": "Added exact nearest-neighbor lab using all 50 source observations. Uniform and inverse-distance voting are available. Distance ties are broken by stable source order; vote ties choose class 0. Exact coordinate matches receive all weight under inverse-distance voting. Feature 2 scaling changes the metric and the colored decision regions.",
+    "cls": "lab-slide"
+  },
+  {
+    "id": "metric",
+    "kicker": "04 · Geometry is part of the model",
+    "title": "Distance depends on units and relevance",
+    "notes": "",
+    "cls": ""
+  },
+  {
+    "id": "ties",
+    "kicker": "04 · Define edge cases",
+    "title": "Odd K does not solve every tie",
+    "notes": "Corrects the blanket source tie advice. This deck uses source order for distance ties, the lowest label for tied votes, and only zero-distance neighbors when any are present under inverse-distance weighting.",
+    "cls": ""
+  },
+  {
+    "id": "knn-density",
+    "kicker": "04 · A probabilistic interpretation",
+    "title": "A local density argument explains the vote",
+    "notes": "The source treats the estimated fraction as the true posterior; this is an estimate. For a fixed region, the point count is binomial. In adaptive KNN the radius is random and K is fixed, so that fixed-region argument is heuristic rather than an exact finite-sample proof.",
+    "cls": ""
+  },
+  {
+    "id": "knn-regression",
+    "kicker": "04 · The same neighbors, a numeric target",
+    "title": "For regression, average their outcomes",
+    "notes": "",
+    "cls": ""
+  },
+  {
+    "id": "regression-lab",
+    "kicker": "Interactive lab · Classification",
+    "title": "See a neighbor average become smoother",
+    "notes": "Added deterministic synthetic one-dimensional regression illustration with 25 points, y=sin(1.5x)+0.18cos(8x). No real-world units or empirical noise distribution are claimed. The curve is the actual uniform KNN prediction on a dense grid.",
+    "cls": "lab-slide"
+  },
+  {
+    "id": "complexity",
+    "kicker": "05 · Choose K with validation",
+    "title": "Small and large neighborhoods make different compromises",
+    "notes": "The endpoint claims are for uniform weights. Duplicate coordinates with conflicting labels can prevent perfect K=1 training classification. Bias is task-dependent; larger K does not mathematically guarantee a monotone bias increase on every dataset.",
+    "cls": ""
+  },
+  {
+    "id": "splits",
+    "kicker": "05 · Choose K with validation",
+    "title": "Keep the final test set out of model selection",
+    "notes": "",
+    "cls": ""
+  },
+  {
+    "id": "validation-lab",
+    "kicker": "Interactive lab · Classification",
+    "title": "Select K before revealing the test score",
+    "notes": "Added reproducible class-stratified 30/10/10 split of the 50 source points. Candidates K=1,3,5,7,9,15,29. Uniform Euclidean voting. Ties in validation accuracy prefer smaller K. The selected classifier remains trained on the same 30 cases. Test labels never affect selection. Locking disables candidate changes; resetting is explicitly a fresh classroom demonstration, not a new independent test.",
+    "cls": "lab-slide"
+  },
+  {
+    "id": "validation-notes",
+    "kicker": "05 · Choose K with validation",
+    "title": "A small validation win may be unstable",
+    "notes": "",
+    "cls": ""
+  },
+  {
+    "id": "tradeoffs",
+    "kicker": "05 · Practical characteristics",
+    "title": "Compare what each method must store and assume",
+    "notes": "",
+    "cls": ""
+  },
+  {
+    "id": "cost",
+    "kicker": "05 · Practical characteristics",
+    "title": "Neighbor search can become expensive",
+    "notes": "Full sorting adds O(n log n); partial selection or a heap can reduce that part. A precomputed all-pairs distance matrix requires quadratic storage and does not remove the need to compute distances for arbitrary new queries.",
+    "cls": ""
+  },
+  {
+    "id": "workflow",
+    "kicker": "05 · A reliable classification workflow",
+    "title": "Make the entire prediction procedure reviewable",
+    "notes": "Predictive performance, probability calibration and causal explanation are different goals. A classifier trained on observational data is not by itself evidence of a causal mechanism.",
+    "cls": ""
+  },
+  {
+    "id": "practice",
+    "kicker": "Check your understanding",
+    "title": "Four questions before you leave",
+    "notes": "",
+    "cls": ""
+  },
+  {
+    "id": "answers",
+    "kicker": "Check your understanding",
+    "title": "What a strong answer includes",
+    "notes": "",
+    "cls": ""
+  },
+  {
+    "id": "summary",
+    "kicker": "The ideas to keep",
+    "title": "Estimate uncertainty. Make a decision. Check it.",
+    "notes": "",
+    "cls": ""
+  },
+  {
+    "id": "references",
+    "kicker": "Sources and further reading",
+    "title": "Follow the derivations and the original examples",
+    "notes": "Adapted for the user’s existing course presentation. Attribution and the source site license notice are recorded in notes/source-map.md. No third-party decorative photographs are used.",
+    "cls": ""
+  }
+]

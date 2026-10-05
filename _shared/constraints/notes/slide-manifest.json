@@ -1,0 +1,268 @@
+[
+  {
+    "id": "title",
+    "kicker": "AI &amp; Machine Learning \u00b7 Lesson 2",
+    "title": "Constraint satisfaction problems",
+    "notes": "Follows course lesson 02_constraint. The original DFS and GAC interactions are retained in locally implemented widgets. Additional labs explore assignments, domain splitting, local search and simulated annealing. All presentation assets are local.",
+    "cls": "cover-slide"
+  },
+  {
+    "id": "map",
+    "kicker": "The road ahead",
+    "title": "Three ways to reason about possibilities",
+    "notes": "",
+    "cls": ""
+  },
+  {
+    "id": "applications",
+    "kicker": "01 \u00b7 Model the problem",
+    "title": "Constraints turn a task into a model",
+    "notes": "The source introduces scheduling, robot planning and scene understanding. Rules such as \u201csky above ground\u201d can have exceptions; distinguish useful preferences from inviolable constraints. This lesson focuses on finite-domain hard CSPs, with local-search conflict scores used to seek feasibility.",
+    "cls": ""
+  },
+  {
+    "id": "variables",
+    "kicker": "01 \u00b7 Model the problem",
+    "title": "A variable chooses one value from its domain",
+    "notes": "Use dom(X)={...}, not dom(X)\u2208{...}. Variables describe potential assignments; a chosen total assignment represents one state at a time. Unequal domain sizes produce the product of their cardinalities.",
+    "cls": ""
+  },
+  {
+    "id": "assignments",
+    "kicker": "01 \u00b7 Model the problem",
+    "title": "Partial and total assignments",
+    "notes": "A single assignment and a total assignment are also partial assignments in the inclusive mathematical sense. Restricting a total assignment to a constraint\u2019s scope supplies the values needed to evaluate that constraint.",
+    "cls": ""
+  },
+  {
+    "id": "constraints",
+    "kicker": "01 \u00b7 Model the problem",
+    "title": "A constraint has a scope and a truth value",
+    "notes": "The basic DFS solver evaluates a constraint when all variables in its scope are assigned. Pending is not false. Propagation can nevertheless reason about domains before a complete scope is assigned, by looking for support.",
+    "cls": ""
+  },
+  {
+    "id": "definition",
+    "kicker": "01 \u00b7 Model the problem",
+    "title": "A CSP is variables, domains and constraints",
+    "notes": "The solutions are (X1,X2,X3)=(1,1,0) and (1,2,0). We retain this example throughout the original DFS and GAC demonstrations. Finding one solution, finding all solutions and proving unsatisfiability are distinct stopping requirements.",
+    "cls": ""
+  },
+  {
+    "id": "assignment-lab",
+    "kicker": "Interactive lab \u00b7 Constraint satisfaction",
+    "title": "Try an assignment \u00b7 which rules can be checked?",
+    "notes": "Added interactive assignment evaluator for the original three-variable CSP. The selectors include an unassigned value. Every constraint reports true, false or pending, and the summary distinguishes total solutions from consistent partial contexts.",
+    "cls": "lab-slide"
+  },
+  {
+    "id": "generate-test",
+    "kicker": "02 \u00b7 Systematic solving",
+    "title": "Generate-and-test checks complete candidates",
+    "notes": "Generate-and-test is complete for finite domains when all assignments are enumerated. Worst-case candidate count is the product of domain sizes; evaluating constraints adds per-candidate cost. Backtracking gains efficiency by evaluating failures earlier.",
+    "cls": ""
+  },
+  {
+    "id": "backtracking",
+    "kicker": "02 \u00b7 Systematic solving",
+    "title": "Backtracking rejects bad branches early",
+    "notes": "",
+    "cls": ""
+  },
+  {
+    "id": "dfs-code",
+    "kicker": "02 \u00b7 Systematic solving",
+    "title": "A recursive solver for all solutions",
+    "notes": "All branch contexts are copied or correctly restored, so sibling branches do not inherit assignments. In the basic algorithm, satisfied fully assigned constraints need not be re-evaluated below that context. The implementation keeps predicate functions rather than evaluating source strings.",
+    "cls": ""
+  },
+  {
+    "id": "dfs-lab",
+    "kicker": "Interactive lab \u00b7 Constraint satisfaction",
+    "title": "DFS solver \u00b7 inspect the assignment tree",
+    "notes": "Preserves the original 22-node pruned assignment tree, ascending value order, constraint inspection, current context and accumulated solution list. Failed branches have no descendants. Back restores the historical solution list. Reverse value order is an added comparison setting; default reproduces the source tree.",
+    "cls": "lab-slide"
+  },
+  {
+    "id": "ordering",
+    "kicker": "02 \u00b7 Systematic solving",
+    "title": "Good ordering exposes contradictions sooner",
+    "notes": "MRV, degree and least-constraining value are supplemental heuristics. They are not implemented in the small DFS demo; its toggle only reverses value order. Correct exhaustive backtracking with finite domains remains complete regardless of ordering.",
+    "cls": ""
+  },
+  {
+    "id": "propagation",
+    "kicker": "02 \u00b7 Reduce the domains",
+    "title": "Remove impossible values before branching",
+    "notes": "Do not say A=4 is intrinsically false. It is unsupported relative to the current domain of B and constraint A<B. Domain pruning preserves solutions and can trigger deductions elsewhere.",
+    "cls": ""
+  },
+  {
+    "id": "network",
+    "kicker": "02 \u00b7 Reduce the domains",
+    "title": "A constraint network is bipartite",
+    "notes": "The source shows A<B and B<C as a bipartite factor-style network. These arcs indicate participation in a constraint, not legal actions or a path-search direction. The GAC lab uses the original three-variable network with four variable\u2013constraint arcs.",
+    "cls": ""
+  },
+  {
+    "id": "support",
+    "kicker": "02 \u00b7 Reduce the domains",
+    "title": "Every remaining value needs some support",
+    "notes": "Generalized arc consistency applies to arbitrary constraint arity. Unary support is just satisfaction of that unary rule. For k-ary constraints the support search considers the other k\u22121 domains; the teaching engine uses exhaustive support enumeration because its examples are small.",
+    "cls": ""
+  },
+  {
+    "id": "gac",
+    "kicker": "02 \u00b7 Reduce the domains",
+    "title": "GAC revises arcs until no more pruning occurs",
+    "notes": "The page\u2019s algorithm output heading suggests assignments, but GAC returns domains. We implement the re-enqueue rule for changed domains, rather than a hard-coded four-step demonstration. Stop early on an empty domain, or reach a fixed point when the worklist is empty.",
+    "cls": ""
+  },
+  {
+    "id": "gac-lab",
+    "kicker": "Interactive lab \u00b7 Constraint satisfaction",
+    "title": "GAC \u00b7 prune values and update the worklist",
+    "notes": "Retains the original GAC example, four arcs, worklist, domain display and highlighted selected arc. The full algorithm also supports the source chain example and the source arc-consistent contradiction. The sidebar shows actual support witnesses for the selected arc. Back restores domains and queue exactly.",
+    "cls": "lab-slide"
+  },
+  {
+    "id": "requeue",
+    "kicker": "02 \u00b7 Reduce the domains",
+    "title": "A changed domain can invalidate old support",
+    "notes": "From domains {1,2,3,4}, chain propagation reaches A={1,2}, B={2,3}, C={3,4}. The exact worklist order is not unique. The widget processes FIFO and suppresses duplicate queued arcs. After a split, this implementation safely starts with all arcs; an optimized implementation can seed only affected arcs and still propagate onward.",
+    "cls": ""
+  },
+  {
+    "id": "gac-outcomes",
+    "kicker": "02 \u00b7 Reduce the domains",
+    "title": "Three outcomes at the fixed point",
+    "notes": "The third case does not require any singleton domain; all domains may have multiple values. All-singleton domains imply a solution only after consistency is established. Empty domains immediately certify failure in the current branch.",
+    "cls": ""
+  },
+  {
+    "id": "consistent-unsat",
+    "kicker": "02 \u00b7 Reduce the domains",
+    "title": "Local support does not imply global agreement",
+    "notes": "This is the original counterexample. Support witnesses for different constraints need not agree on a single shared total assignment. Try it in both the GAC and domain-splitting labs: GAC leaves the domains unchanged; complete splitting proves failure.",
+    "cls": ""
+  },
+  {
+    "id": "splitting",
+    "kicker": "02 \u00b7 Search after propagation",
+    "title": "Split one domain and propagate each branch",
+    "notes": "The two sets must cover the original domain. Finite domains plus exhaustive recursion make the solver complete. It finds all solutions and can prove unsatisfiability. The implementation partitions the first non-singleton domain in half and reruns full GAC per branch.",
+    "cls": ""
+  },
+  {
+    "id": "split-lab",
+    "kicker": "Interactive lab \u00b7 Constraint satisfaction",
+    "title": "Domain splitting \u00b7 turn pruning into a solver",
+    "notes": "Added live solver using genuine GAC at every branch. Each tree node shows the split that produced it, and the sidebar shows its propagated domains. Both solutions of the course example are found; the source contradiction has zero solutions. Branch domains are independent copies.",
+    "cls": "lab-slide"
+  },
+  {
+    "id": "local-intro",
+    "kicker": "03 \u00b7 Local search",
+    "title": "Start complete. Repair what is wrong.",
+    "notes": "Local search uses total assignments, even when they violate constraints. Neighborhoods commonly change one variable at a time. The score E is an objective used to seek feasibility; a satisfying assignment has score zero.",
+    "cls": "chapter-slide"
+  },
+  {
+    "id": "conflicts",
+    "kicker": "03 \u00b7 Local search",
+    "title": "Use conflicts as a score",
+    "notes": "Added graph: edges AB, BC, CD, DA and AC. There is no BD edge. Vertex labels include color initials so color is not the only cue. The graph is 3-colorable; the plateau initialization is A=red, B=green, C=red, D=blue, with one conflict on AC.",
+    "cls": ""
+  },
+  {
+    "id": "local-loop",
+    "kicker": "03 \u00b7 Local search",
+    "title": "A local search loop needs stopping rules",
+    "notes": "The demos use a 40-step budget and seeded randomness for reproducible traces. A best-improvement run may stop sooner at a plateau. Reset replays the same selected seed; choosing another seed gives a new run. No finite-budget success guarantee is implied.",
+    "cls": ""
+  },
+  {
+    "id": "random",
+    "kicker": "03 \u00b7 Local search",
+    "title": "Random sampling and random walk",
+    "notes": "For a finite satisfiable space with full-support independent sampling, success probability tends to one as samples tend to infinity. This is not a guarantee within a finite number of draws. Random-walk reachability depends on the move graph. Each demo walk chooses a uniformly random variable and a different color; equal domain sizes make this equivalent to a uniform variable\u2013value move.",
+    "cls": ""
+  },
+  {
+    "id": "improvement",
+    "kicker": "03 \u00b7 Local search",
+    "title": "Best improvement can stop before a solution",
+    "notes": "The course presents strict improvement, whereas the textbook also discusses best-neighbor versions that allow sideways/worse moves. Our Best improvement setting follows the course\u2019s strict interpretation and stops on its demonstrated plateau. Tabu and annealing are separate policies and can accept non-improving changes.",
+    "cls": ""
+  },
+  {
+    "id": "local-lab",
+    "kicker": "Interactive lab \u00b7 Constraint satisfaction",
+    "title": "Local search \u00b7 compare movement policies",
+    "notes": "Added interactive coloring simulation with random sampling, random walk, strict best improvement, tabu tenure 2 with aspiration for a new best score, and simulated annealing. The default plateau stalls strict improvement at one conflict. All states retain exact scores and conflicts; Back replays the same seeded trajectory.",
+    "cls": "lab-slide"
+  },
+  {
+    "id": "escaping",
+    "kicker": "03 \u00b7 Local search",
+    "title": "Ways to leave a local minimum",
+    "notes": "The local lab implements tabu tenure two. It chooses a best admissible one-variable neighbor; ties use seeded randomness. Tabu may accept equal or worse scores and is not restricted to strict descent. Random restart is explained here; choose a different initialization or seed in the lab to compare starting trajectories.",
+    "cls": ""
+  },
+  {
+    "id": "annealing",
+    "kicker": "03 \u00b7 Local search",
+    "title": "Simulated annealing sometimes accepts worse moves",
+    "notes": "This specifies an acceptance probability, rather than merely a proportional Gibbs weight. It is the standard rule for the symmetric proposal used here. Equal-score moves have probability one at positive temperature. The local lab uses uniform one-variable color proposals and geometric cooling.",
+    "cls": ""
+  },
+  {
+    "id": "anneal-lab",
+    "kicker": "Interactive lab \u00b7 Constraint satisfaction",
+    "title": "Annealing \u00b7 temperature changes the decision",
+    "notes": "Added interactive probability explorer. The draw is a user-controlled test value, not a newly sampled random number. The graph shows acceptance versus \u0394E at the current temperature; inputs update the curve, point, probability and accept/reject decision. The live local-search lab performs actual seeded proposals and draws.",
+    "cls": "lab-slide"
+  },
+  {
+    "id": "cooling",
+    "kicker": "03 \u00b7 Local search",
+    "title": "Cooling shifts the balance toward improvement",
+    "notes": "The sketch illustrates geometric cooling, not a theorem about convergence. The acceptance explorer shows exact probabilities for individual moves. Guaranteed asymptotic convergence requires restrictive conditions and very slow cooling; we do not imply that the teaching schedule provides it.",
+    "cls": ""
+  },
+  {
+    "id": "comparison",
+    "kicker": "Putting it together",
+    "title": "Match the solver to the required answer",
+    "notes": "",
+    "cls": ""
+  },
+  {
+    "id": "practice",
+    "kicker": "Check your understanding",
+    "title": "Predict, then verify in a lab",
+    "notes": "",
+    "cls": ""
+  },
+  {
+    "id": "answers",
+    "kicker": "Check your understanding",
+    "title": "Explain the deductions",
+    "notes": "",
+    "cls": ""
+  },
+  {
+    "id": "summary",
+    "kicker": "Lesson 2 \u00b7 Takeaways",
+    "title": "Represent, prune, branch \u2014 or repair",
+    "notes": "",
+    "cls": ""
+  },
+  {
+    "id": "references",
+    "kicker": "Sources & further reading",
+    "title": "Continue exploring",
+    "notes": "",
+    "cls": ""
+  }
+]

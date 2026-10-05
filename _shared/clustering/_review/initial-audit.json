@@ -1,0 +1,223 @@
+{
+  "count": 54,
+  "errors": [],
+  "network": [],
+  "slides": [
+    {
+      "slide": "title",
+      "issues": []
+    },
+    {
+      "slide": "map",
+      "issues": []
+    },
+    {
+      "slide": "unlabeled",
+      "issues": []
+    },
+    {
+      "slide": "data-lab",
+      "issues": []
+    },
+    {
+      "slide": "meaning",
+      "issues": []
+    },
+    {
+      "slide": "centroids",
+      "issues": []
+    },
+    {
+      "slide": "objective",
+      "issues": []
+    },
+    {
+      "slide": "assign",
+      "issues": []
+    },
+    {
+      "slide": "update",
+      "issues": []
+    },
+    {
+      "slide": "source-animation",
+      "issues": []
+    },
+    {
+      "slide": "kmeans-lab",
+      "issues": []
+    },
+    {
+      "slide": "initialization",
+      "issues": []
+    },
+    {
+      "slide": "limits",
+      "issues": []
+    },
+    {
+      "slide": "choose-k",
+      "issues": []
+    },
+    {
+      "slide": "elbow-source",
+      "issues": []
+    },
+    {
+      "slide": "elbow",
+      "issues": []
+    },
+    {
+      "slide": "silhouette",
+      "issues": []
+    },
+    {
+      "slide": "silhouette-reading",
+      "issues": []
+    },
+    {
+      "slide": "selection-lab",
+      "issues": []
+    },
+    {
+      "slide": "silhouette-lab",
+      "issues": []
+    },
+    {
+      "slide": "soft",
+      "issues": []
+    },
+    {
+      "slide": "gaussian",
+      "issues": []
+    },
+    {
+      "slide": "mixture",
+      "issues": []
+    },
+    {
+      "slide": "posterior",
+      "issues": []
+    },
+    {
+      "slide": "likelihood",
+      "issues": []
+    },
+    {
+      "slide": "em",
+      "issues": []
+    },
+    {
+      "slide": "mstep",
+      "issues": []
+    },
+    {
+      "slide": "gmm-lab",
+      "issues": []
+    },
+    {
+      "slide": "em-limits",
+      "issues": []
+    },
+    {
+      "slide": "em-kmeans",
+      "issues": []
+    },
+    {
+      "slide": "hierarchical",
+      "issues": []
+    },
+    {
+      "slide": "dendrogram-source",
+      "issues": []
+    },
+    {
+      "slide": "cut",
+      "issues": []
+    },
+    {
+      "slide": "linkage",
+      "issues": []
+    },
+    {
+      "slide": "hierarchy-lab",
+      "issues": []
+    },
+    {
+      "slide": "hierarchy-limits",
+      "issues": []
+    },
+    {
+      "slide": "pca-intro",
+      "issues": []
+    },
+    {
+      "slide": "aligned-lab",
+      "issues": []
+    },
+    {
+      "slide": "rotated-lab",
+      "issues": []
+    },
+    {
+      "slide": "center",
+      "issues": []
+    },
+    {
+      "slide": "variance",
+      "issues": []
+    },
+    {
+      "slide": "eigen",
+      "issues": []
+    },
+    {
+      "slide": "pca-lab",
+      "issues": []
+    },
+    {
+      "slide": "reconstruct",
+      "issues": []
+    },
+    {
+      "slide": "applications",
+      "issues": []
+    },
+    {
+      "slide": "scale-source",
+      "issues": []
+    },
+    {
+      "slide": "scaling",
+      "issues": []
+    },
+    {
+      "slide": "preprocessing-lab",
+      "issues": []
+    },
+    {
+      "slide": "whitening",
+      "issues": []
+    },
+    {
+      "slide": "workflow",
+      "issues": []
+    },
+    {
+      "slide": "practice",
+      "issues": []
+    },
+    {
+      "slide": "answers",
+      "issues": []
+    },
+    {
+      "slide": "summary",
+      "issues": []
+    },
+    {
+      "slide": "references",
+      "issues": []
+    }
+  ]
+}

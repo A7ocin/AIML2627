@@ -1,0 +1,252 @@
+{
+  "count": 54,
+  "errors": [],
+  "offlineRequests": [],
+  "slides": [
+    {
+      "slide": "title",
+      "issues": []
+    },
+    {
+      "slide": "map",
+      "issues": []
+    },
+    {
+      "slide": "unlabeled",
+      "issues": []
+    },
+    {
+      "slide": "data-lab",
+      "issues": []
+    },
+    {
+      "slide": "meaning",
+      "issues": []
+    },
+    {
+      "slide": "centroids",
+      "issues": []
+    },
+    {
+      "slide": "objective",
+      "issues": []
+    },
+    {
+      "slide": "assign",
+      "issues": []
+    },
+    {
+      "slide": "update",
+      "issues": []
+    },
+    {
+      "slide": "source-animation",
+      "issues": []
+    },
+    {
+      "slide": "kmeans-lab",
+      "issues": []
+    },
+    {
+      "slide": "initialization",
+      "issues": []
+    },
+    {
+      "slide": "limits",
+      "issues": []
+    },
+    {
+      "slide": "choose-k",
+      "issues": []
+    },
+    {
+      "slide": "elbow-source",
+      "issues": []
+    },
+    {
+      "slide": "elbow",
+      "issues": []
+    },
+    {
+      "slide": "silhouette",
+      "issues": []
+    },
+    {
+      "slide": "silhouette-reading",
+      "issues": []
+    },
+    {
+      "slide": "selection-lab",
+      "issues": []
+    },
+    {
+      "slide": "silhouette-lab",
+      "issues": []
+    },
+    {
+      "slide": "soft",
+      "issues": []
+    },
+    {
+      "slide": "gaussian",
+      "issues": []
+    },
+    {
+      "slide": "mixture",
+      "issues": []
+    },
+    {
+      "slide": "posterior",
+      "issues": []
+    },
+    {
+      "slide": "likelihood",
+      "issues": []
+    },
+    {
+      "slide": "em",
+      "issues": []
+    },
+    {
+      "slide": "mstep",
+      "issues": []
+    },
+    {
+      "slide": "gmm-lab",
+      "issues": []
+    },
+    {
+      "slide": "em-limits",
+      "issues": []
+    },
+    {
+      "slide": "em-kmeans",
+      "issues": []
+    },
+    {
+      "slide": "hierarchical",
+      "issues": []
+    },
+    {
+      "slide": "dendrogram-source",
+      "issues": []
+    },
+    {
+      "slide": "cut",
+      "issues": []
+    },
+    {
+      "slide": "linkage",
+      "issues": []
+    },
+    {
+      "slide": "hierarchy-lab",
+      "issues": []
+    },
+    {
+      "slide": "hierarchy-limits",
+      "issues": []
+    },
+    {
+      "slide": "pca-intro",
+      "issues": []
+    },
+    {
+      "slide": "aligned-lab",
+      "issues": []
+    },
+    {
+      "slide": "rotated-lab",
+      "issues": []
+    },
+    {
+      "slide": "center",
+      "issues": []
+    },
+    {
+      "slide": "variance",
+      "issues": []
+    },
+    {
+      "slide": "eigen",
+      "issues": []
+    },
+    {
+      "slide": "pca-lab",
+      "issues": []
+    },
+    {
+      "slide": "reconstruct",
+      "issues": []
+    },
+    {
+      "slide": "applications",
+      "issues": []
+    },
+    {
+      "slide": "scale-source",
+      "issues": []
+    },
+    {
+      "slide": "scaling",
+      "issues": []
+    },
+    {
+      "slide": "preprocessing-lab",
+      "issues": []
+    },
+    {
+      "slide": "whitening",
+      "issues": []
+    },
+    {
+      "slide": "workflow",
+      "issues": []
+    },
+    {
+      "slide": "practice",
+      "issues": []
+    },
+    {
+      "slide": "answers",
+      "issues": []
+    },
+    {
+      "slide": "summary",
+      "issues": []
+    },
+    {
+      "slide": "references",
+      "issues": []
+    }
+  ],
+  "responsive": [],
+  "stateIssues": [],
+  "stateCount": 395,
+  "interactions": [
+    "source-animation: step, reset, playback, pause and pause on exit",
+    "kmeans-lab: step, reset, playback, pause and pause on exit",
+    "gmm-lab: step, reset, playback, pause and pause on exit",
+    "gmm-lab: keyboard slider",
+    "hierarchy-lab: keyboard slider",
+    "pca-lab: keyboard slider",
+    "data-lab: pan, real pointer zoom, reset",
+    "source-animation: pan, real pointer zoom, reset",
+    "kmeans-lab: pan, real pointer zoom, reset",
+    "elbow-source: pan, real pointer zoom, reset",
+    "selection-lab: pan, real pointer zoom, reset",
+    "silhouette-lab: pan, real pointer zoom, reset",
+    "gmm-lab: pan, real pointer zoom, reset",
+    "dendrogram-source: pan, real pointer zoom, reset",
+    "hierarchy-lab: pan, real pointer zoom, reset",
+    "aligned-lab: pan, real pointer zoom, reset",
+    "rotated-lab: pan, real pointer zoom, reset",
+    "pca-lab: pan, real pointer zoom, reset",
+    "scale-source: pan, real pointer zoom, reset",
+    "preprocessing-lab: pan, real pointer zoom, reset",
+    "Original trace legend toggle",
+    "Original observation tooltip"
+  ],
+  "keyboardNavigation": true,
+  "directEntry": true
+}

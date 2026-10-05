@@ -1,0 +1,151 @@
+{
+  "count": 36,
+  "errors": [],
+  "network": [],
+  "slides": [
+    {
+      "slide": "title",
+      "issues": []
+    },
+    {
+      "slide": "roadmap",
+      "issues": []
+    },
+    {
+      "slide": "components",
+      "issues": []
+    },
+    {
+      "slide": "training-inference",
+      "issues": []
+    },
+    {
+      "slide": "signals",
+      "issues": []
+    },
+    {
+      "slide": "supervised",
+      "issues": []
+    },
+    {
+      "slide": "regression-classification",
+      "issues": []
+    },
+    {
+      "slide": "unsupervised",
+      "issues": []
+    },
+    {
+      "slide": "signal-lab",
+      "issues": []
+    },
+    {
+      "slide": "self-supervised",
+      "issues": []
+    },
+    {
+      "slide": "mask-lab",
+      "issues": []
+    },
+    {
+      "slide": "semi-supervised",
+      "issues": []
+    },
+    {
+      "slide": "weak-shift",
+      "issues": []
+    },
+    {
+      "slide": "reinforcement",
+      "issues": []
+    },
+    {
+      "slide": "bandit-lab",
+      "issues": []
+    },
+    {
+      "slide": "domains",
+      "issues": []
+    },
+    {
+      "slide": "vision",
+      "issues": []
+    },
+    {
+      "slide": "language",
+      "issues": []
+    },
+    {
+      "slide": "fertilizer",
+      "issues": []
+    },
+    {
+      "slide": "variable-types",
+      "issues": []
+    },
+    {
+      "slide": "roles",
+      "issues": []
+    },
+    {
+      "slide": "dataset",
+      "issues": []
+    },
+    {
+      "slide": "matrix",
+      "issues": []
+    },
+    {
+      "slide": "observations-lab",
+      "issues": []
+    },
+    {
+      "slide": "hypotheses",
+      "issues": []
+    },
+    {
+      "slide": "hypothesis-lab",
+      "issues": []
+    },
+    {
+      "slide": "residuals",
+      "issues": []
+    },
+    {
+      "slide": "noise",
+      "issues": []
+    },
+    {
+      "slide": "generalization",
+      "issues": []
+    },
+    {
+      "slide": "splits",
+      "issues": []
+    },
+    {
+      "slide": "generalization-lab",
+      "issues": []
+    },
+    {
+      "slide": "leakage",
+      "issues": []
+    },
+    {
+      "slide": "practice",
+      "issues": []
+    },
+    {
+      "slide": "answers",
+      "issues": []
+    },
+    {
+      "slide": "summary",
+      "issues": []
+    },
+    {
+      "slide": "references",
+      "issues": []
+    }
+  ]
+}

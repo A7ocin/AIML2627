@@ -1,0 +1,89 @@
+{
+  "passed": true,
+  "errors": [],
+  "network": [],
+  "states": [
+    {
+      "id": "preprocessing-lab",
+      "obj": {
+        "panel": "Original"
+      }
+    },
+    {
+      "id": "preprocessing-lab",
+      "obj": {
+        "panel": "Min–max"
+      }
+    },
+    {
+      "id": "preprocessing-lab",
+      "obj": {
+        "panel": "Standardized"
+      }
+    },
+    {
+      "id": "preprocessing-lab",
+      "obj": {
+        "panel": "Whitened"
+      }
+    },
+    {
+      "id": "preprocessing-lab",
+      "obj": {
+        "panel": "Original"
+      }
+    },
+    {
+      "id": "source-animation",
+      "obj": {
+        "frame": 4
+      }
+    },
+    {
+      "id": "kmeans-lab",
+      "obj": {
+        "k": 4,
+        "seed": 0
+      }
+    },
+    {
+      "id": "selection-lab",
+      "obj": {
+        "k": 3,
+        "view": "Silhouette"
+      }
+    },
+    {
+      "id": "gmm-lab",
+      "obj": {
+        "iteration": 40,
+        "point": 120
+      }
+    },
+    {
+      "id": "hierarchy-lab",
+      "obj": {
+        "linkage": "complete",
+        "merges": 4
+      }
+    },
+    {
+      "id": "pca-lab",
+      "obj": {
+        "data": "Rotated",
+        "angle": 30
+      }
+    },
+    {
+      "id": "preprocessing-lab",
+      "obj": {
+        "panel": "Whitened"
+      }
+    },
+    {
+      "id": "scale-source",
+      "obj": {}
+    }
+  ],
+  "chartTipsDisabled": true
+}

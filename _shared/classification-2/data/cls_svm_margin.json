@@ -1,0 +1,189 @@
+{
+  "data": [
+    {
+      "x": [
+        -1.9,
+        2.5,
+        2.5,
+        -1.9
+      ],
+      "y": [
+        5.597161463731,
+        -9.061699190257334,
+        -4.7306723228962575,
+        9.928188331092075
+      ],
+      "mode": "none",
+      "fill": "toself",
+      "fillcolor": "rgba(255, 255, 150, 0.45)",
+      "type": "scatter",
+      "name": "Margin",
+      "hoverinfo": "skip"
+    },
+    {
+      "x": [
+        -1.4,
+        -1.0,
+        -0.8,
+        -0.4,
+        -0.1
+      ],
+      "y": [
+        -1.0,
+        0.2,
+        -0.6,
+        0.6,
+        -0.4
+      ],
+      "mode": "markers",
+      "type": "scatter",
+      "name": "Class 0",
+      "marker": {
+        "color": "#1f77b4",
+        "size": 10,
+        "symbol": "circle"
+      }
+    },
+    {
+      "x": [
+        0.9,
+        1.0,
+        1.6,
+        1.2,
+        2.0
+      ],
+      "y": [
+        0.6,
+        1.0,
+        0.4,
+        -0.2,
+        0.0
+      ],
+      "mode": "markers",
+      "type": "scatter",
+      "name": "Class 1",
+      "marker": {
+        "color": "#ff7f0e",
+        "size": 10,
+        "symbol": "x"
+      }
+    },
+    {
+      "x": [
+        -1.9,
+        2.5
+      ],
+      "y": [
+        7.762674897411538,
+        -6.896185756576795
+      ],
+      "mode": "lines",
+      "type": "scatter",
+      "name": "SVM",
+      "line": {
+        "color": "#000000",
+        "width": 2
+      }
+    },
+    {
+      "x": [
+        0.30000000000000004,
+        0.6076923179257714
+      ],
+      "y": [
+        0.4332445704173713,
+        0.5256014207094876
+      ],
+      "mode": "lines+markers",
+      "marker": {
+        "size": 10,
+        "color": "#000000",
+        "symbol": "arrow-bar-up",
+        "angleref": "previous"
+      },
+      "showlegend": false,
+      "name": "Weights vector"
+    },
+    {
+      "x": [
+        -1.9,
+        2.5
+      ],
+      "y": [
+        5.597161463731,
+        -9.061699190257334
+      ],
+      "mode": "lines",
+      "type": "scatter",
+      "name": "Margin +1",
+      "showlegend": false,
+      "line": {
+        "color": "#000000",
+        "dash": "dot",
+        "width": 1
+      }
+    },
+    {
+      "x": [
+        -1.9,
+        2.5
+      ],
+      "y": [
+        9.928188331092075,
+        -4.7306723228962575
+      ],
+      "mode": "lines",
+      "type": "scatter",
+      "name": "Margin -1",
+      "showlegend": false,
+      "line": {
+        "color": "#000000",
+        "dash": "dot",
+        "width": 1
+      }
+    }
+  ],
+  "layout": {
+    "title": "Linear SVM with margin",
+    "xaxis": {
+      "title": {
+        "text": "$X_1$"
+      },
+      "range": [
+        -1.6800000000000002,
+        2.2800000000000002
+      ]
+    },
+    "yaxis": {
+      "title": {
+        "text": "$X_2$"
+      },
+      "scaleanchor": "x",
+      "scaleratio": 1,
+      "range": [
+        -1.35,
+        1.35
+      ]
+    },
+    "legend": {
+      "orientation": "h",
+      "y": -0.15
+    },
+    "plot_bgcolor": "white",
+    "paper_bgcolor": "white",
+    "annotations": [
+      {
+        "x": 0.4538461589628857,
+        "y": 0.47942299556342943,
+        "text": "w",
+        "showarrow": false,
+        "xshift": 0,
+        "yshift": 15,
+        "font": {
+          "size": 12,
+          "color": "#000000"
+        }
+      }
+    ]
+  }
+}

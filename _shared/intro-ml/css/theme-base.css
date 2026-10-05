@@ -1,0 +1,321 @@
+/* ============================================================
+   AIML course theme — Lesson 0: History of AI
+   Dark, cutting-edge look adapted from the SIGGRAPH deck.
+   ============================================================ */
+
+:root {
+  /* base */
+  --bg: #0b0f17;
+  --bg-elevated: #141a26;
+  --bg-soft: #1b2332;
+  --text: #e8ecf4;
+  --text-muted: #93a0b6;
+  --line: #263148;
+
+  /* domain / era colors */
+  --c-stat:   #45d6c0;   /* statistics — teal       */
+  --c-cyber:  #ff9d4d;   /* cybernetics — orange    */
+  --c-comp:   #c792ea;   /* computation theory      */
+  --c-neural: #4db8ff;   /* neural / connectionist  */
+  --c-ml:     #7ee08a;   /* machine learning        */
+  --c-aiwinter:#ff5c77;  /* AI winters — red         */
+  --c-deep:   #ffd166;   /* deep learning           */
+
+  --r-background-color: var(--bg);
+  --r-main-color: var(--text);
+  --r-heading-color: var(--text);
+  --r-link-color: var(--c-neural);
+
+  --accent-grad: linear-gradient(90deg, #45d6c0, #4db8ff, #c792ea);
+}
+
+.reveal-viewport { background:
+   radial-gradient(1200px 700px at 78% -10%, rgba(77,184,255,.08), transparent),
+   radial-gradient(1000px 600px at 15% 110%, rgba(199,146,234,.07), transparent),
+   var(--bg);
+}
+
+.reveal {
+  font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  font-size: 38px;
+  color: var(--text);
+}
+.reveal strong { color: #fff; }
+.reveal em { color: var(--c-neural); }
+
+/* ---------- kicker (slide label) — pinned top-left by deck.js ---------- */
+.kicker {
+  position: absolute; top: 12px; left: 8px; z-index: 20;
+  font-size: 0.62em; font-weight: 700; letter-spacing: 0.1em;
+  text-transform: uppercase; color: var(--text-muted);
+}
+.kicker b { background: var(--accent-grad); -webkit-background-clip:text; background-clip:text; color:transparent; }
+.kicker .era {
+  margin-left: 10px; padding: 2px 12px; border-radius: 999px;
+  font-size: .82em; letter-spacing:.05em; text-transform:none;
+}
+.era.stat { background: rgba(69,214,192,.14); color: var(--c-stat); }
+.era.cyber { background: rgba(255,157,77,.14); color: var(--c-cyber); }
+.era.comp { background: rgba(199,146,234,.16); color: var(--c-comp); }
+.era.neural { background: rgba(77,184,255,.15); color: var(--c-neural); }
+.era.ml { background: rgba(126,224,138,.14); color: var(--c-ml); }
+.era.winter { background: rgba(155,44,66,.25); color: #ff8ba0; }
+.era.deep { background: rgba(255,209,102,.15); color: var(--c-deep); }
+
+/* ---------- section titles (used on chapter dividers) ---------- */
+.reveal h1,h2,h3 { font-weight: 800; letter-spacing:-.01em; }
+.big-title {
+  text-align:left; margin-left:.6em;
+}
+.big-title .grad {
+  background: var(--accent-grad); -webkit-background-clip:text; background-clip:text; color:transparent;
+  font-size:1.5em; line-height:1.05;
+}
+
+/* ---------- two-column content layout ---------- */
+.cols { display:flex; gap:70px; align-items:stretch; justify-content:center; }
+.col  { flex:1; min-width:0; text-align:left; }
+
+/* definition cards */
+.card {
+  background: var(--bg-elevated); border:1px solid var(--line);
+  border-radius:14px; padding:28px 34px;
+}
+.card .label {
+  font-size:.58em; letter-spacing:.09em; text-transform:uppercase;
+  color:var(--text-muted); margin-bottom:10px; display:block;
+}
+
+/* ---------- bullet points, clean ---------- */
+.reveal ul.tight { list-style:none; margin:0; padding:0; }
+.reveal ul.tight li {
+  position:relative; padding-left:1.4em; margin:.45em 0;
+  font-size:.92em; line-height:1.35;
+}
+.reveal ul.tight li::before {
+  content:"▸"; color:var(--c-neural); position:absolute; left:0;
+}
+
+/* keyword chips */
+.chiprow { display:flex; flex-wrap:wrap; gap:10px; justify-content:center; }
+.chip {
+  padding:6px 18px; border-radius:999px; font-size:.62em; white-space:nowrap;
+  background:var(--bg-elevated); border:1.5px solid var(--line);
+}
+
+/* ---------- the horizontal timeline strip (chapter overview) ---------- */
+.timeline-strip {
+  display:flex; align-items:center; gap:0;
+  margin-top:20px; padding:6px 8px;
+}
+.tl-node { text-align:center; flex:1; position:relative; }
+.tl-dot {
+  width:14px; height:14px; border-radius:50%; margin:0 auto;
+  background:var(--line); transition:.3s;
+}
+.tl-year { font-size:.5em; color:var(--text-muted); margin-top:6px; }
+.tl-label { font-size:.52em; color:var(--text-muted); margin-top:2px; line-height:1.15;}
+.tl-node::after {
+  content:""; position:absolute; top:7px; left:50%; width:100%;
+  height:2px; background:var(--line);
+}
+.tl-node:last-child::after { display:none; }
+.reveal .timeline-strip .tl-node.active .tl-dot { background:var(--c-neural); box-shadow:0 0 14px var(--c-neural); }
+
+/* ---------- timeline cards (the core visual) ---------- */
+.tl-cards {
+  display:flex; flex-direction:column; gap:14px;
+  max-width:1350px; max-height:68vh; overflow:hidden; text-align:left;
+}
+.tl-row { position:relative; }
+.tl-card {
+  background:var(--bg-elevated); border:1px solid var(--line);
+  border-left:4px solid var(--c-neural);
+  border-radius:10px; padding:16px 24px;
+  display:flex; gap:22px; align-items:center;
+}
+.tl-card .yr {
+  font-size:.62em; color:var(--text-muted); white-space:nowrap;
+  min-width:74px; text-align:right;
+}
+.tl-card h4 { margin:0 0 2px; font-size:.92em; }
+.tl-card p { margin:0; font-size:.68em; line-height:1.3; color:var(--text-muted); }
+
+/* era-colored left border helpers */
+.card-stat   { border-left-color: var(--c-stat) !important; }
+.card-cyber  { border-left-color: var(--c-cyber) !important; }
+.card-comp   { border-left-color: var(--c-comp) !important; }
+.card-neural { border-left-color: var(--c-neural) !important; }
+.card-ml     { border-left-color: var(--c-ml) !important; }
+.card-winter { border-left-color: #ff5c77 !important; }
+.card-deep   { border-left-color: var(--c-deep) !important; }
+
+/* ---------- figures & images ---------- */
+figure { margin:.4em 0; text-align:center; }
+.reveal img.photo {
+  border-radius:10px; box-shadow:0 18px 50px rgba(0,0,0,.55);
+  max-height:58vh;
+}
+figcaption { font-size:.5em; color:var(--text-muted); margin-top:8px; }
+
+/* portrait figure w/ caption chip */
+.person {
+  text-align:center; width:260px;
+}
+.reveal img.portrait {
+  width:230px; height:280px; object-fit:cover;
+  border-radius:12px; box-shadow:0 18px 50px rgba(0,0,0,.55);
+}
+
+/* ---------- equation / math block ---------- */
+.mathbox {
+  background:var(--bg-elevated); border:1px solid var(--line);
+  padding:22px 30px; border-radius:12px;
+  font-family:"STIX Two Math","Cambria Math",serif; font-size:.9em;
+}
+
+/* quote card */
+.quote {
+  border-left:4px solid var(--c-deep); background:var(--bg-elevated);
+  padding:20px 28px; border-radius:10px; text-align:left;
+}
+.quote .q { font-style:italic; color:#fff; }
+.quote .attrib { margin-top:8px; font-size:.62em; color:var(--text-muted); }
+
+/* rule-chain svg animation state (hidden until 'vis' added) */
+#rule-chain .frag{opacity:0; transition:opacity .45s ease;}
+#rule-chain .frag.vis{opacity:1;}
+
+/* progress bar */
+.reveal .progress { height:4px; background:rgba(255,255,255,.05); }
+.reveal .progress span { background: var(--accent-grad); }
+
+/* Consistent 16:9 stage and the reference deck's type rhythm. */
+.reveal { font-size:38px; line-height:1.4; }
+.reveal .slides > section { height:100%; box-sizing:border-box; padding:120px 72px 85px; }
+.slide-body { height:100%; display:flex; flex-direction:column; justify-content:center; }
+.slide-body > * { flex-shrink:0; }
+.kicker { top:22px; left:72px; font-size:22px; font-weight:650; }
+.reveal h1, .reveal h2, .reveal h3, .reveal h4 { line-height:1.2; font-weight:650; }
+.reveal h2 { margin-bottom:26px !important; }
+.reveal h3 { margin-bottom:18px; }
+.reveal p { line-height:1.4; }
+.reveal .cols { gap:56px !important; }
+.reveal ul.tight li { font-size:.88em; margin:.5em 0; line-height:1.4; }
+.card { box-sizing:border-box; padding:30px 34px; border-left-width:4px; border-radius:16px; }
+.card .label { font-size:24px; font-weight:600; line-height:1.4; margin-bottom:16px; }
+.quote { line-height:1.4; }
+.quote .attrib { line-height:1.4; margin-top:14px; }
+.chip { display:inline-block; line-height:1.35; vertical-align:middle; }
+figcaption { font-size:21px; line-height:1.4; margin-top:18px; }
+.reveal img { object-fit:contain; }
+.reveal .slide-number { background:none; color:var(--text-muted); font-size:20px; right:22px; bottom:14px; }
+.lesson-tag { position:fixed; left:24px; bottom:16px; z-index:60; font:16px "Segoe UI",sans-serif; color:var(--text-muted); letter-spacing:.06em; pointer-events:none; }
+.diagram { display:block; width:100%; min-width:0; border:1px solid var(--line); border-radius:18px; background:rgba(20,26,38,.7); }
+.diagram text { font-family:"Segoe UI",sans-serif; }
+.diagram-note { font-size:20px; color:var(--text-muted); }
+
+/* Cover: a readable title, a purposeful illustration, and a dated timeline. */
+[data-slide="title"] .slide-body { position:relative; align-items:flex-start; }
+[data-slide="title"] h2 { font-size:28px !important; color:var(--text-muted); letter-spacing:.04em; }
+.big-title { margin:0; width:1220px; }
+.big-title .grad { font-size:94px; font-weight:700; line-height:1.2; letter-spacing:-.035em; padding-bottom:.18em; }
+.cover-graphic { position:absolute; right:0; top:60px; width:480px; height:420px; opacity:.85; }
+.timeline-strip { width:100%; box-sizing:border-box; margin-top:64px; padding:0; align-items:flex-start; }
+.tl-node { padding:0; min-width:0; }
+.tl-node::after { display:none; }
+.tl-track { position:relative; height:44px; }
+.tl-track::after { content:""; position:absolute; left:50%; top:50%; transform:translateY(-50%); width:100%; height:2px; background:var(--line); }
+.tl-node:last-child .tl-track::after { display:none; }
+.tl-dot { position:absolute; left:50%; top:50%; transform:translate(-50%,-50%); z-index:1; width:12px; height:12px; margin:0; background:var(--era-color); box-shadow:0 0 15px color-mix(in srgb,var(--era-color) 25%,transparent); }
+.tl-year { font-size:24px; line-height:34px; color:var(--era-color); font-weight:650; margin:0; }
+.tl-label { font-size:22px; color:var(--text); line-height:1.3; margin:0; }
+
+/* Ten-era chapter list (overview slide). */
+#era-list > div { justify-content:stretch; }
+
+/* Timeline and image columns occupy separate grid tracks. */
+#era-map > div { gap:18px 28px !important; }
+#era-map > div > div { padding:18px 26px !important; }
+#era-map span { display:block; font-size:29px; line-height:1.25; margin-bottom:10px; }
+#era-map span + div { font-size:23px !important; color:var(--text-muted) !important; }
+[data-slide="era-stat"] .slide-body { display:flex; flex-direction:column; justify-content:center; }
+[data-slide="era-stat"] h2 { margin-bottom:.6em !important; }
+#tl-stat, [id^="tl-era"] { max-width:none !important; margin-top:0 !important; max-height:none; overflow:visible; gap:16px; width:100%; }
+[data-slide$="-stat"][style*="text-align:left"] .slide-body { display:flex; flex-direction:column; justify-content:center; }
+[data-slide="era2-stat"] .slide-body { display:flex; flex-direction:column; justify-content:center; }
+[data-slide="era2-stat"] h2 { margin-bottom:.6em !important; }
+.tl-card { padding:18px 22px; gap:22px; align-items:flex-start; }
+.tl-card .yr { min-width:136px; font-size:23px; line-height:1.4; padding-top:3px; }
+.tl-card h4 { font-size:31px; margin-bottom:9px; }
+.tl-card p { font-size:24px; line-height:1.35; }
+[data-slide="turing"] .portrait { width:280px; height:350px; }
+[data-slide="neuron"] .cols { align-items:flex-start; }
+[data-slide="neuron"] ul.tight li { font-size:30px; }
+[data-slide="neuron"] .quote { font-size:31px; }
+#neuron-canvas { width:100%; height:250px; margin-top:30px; }
+[data-slide="birth-ai"] .photo { height:390px !important; max-height:none; width:590px; object-fit:cover; }
+[data-slide="birth-ai"] figure { flex:0 0 590px; }
+[data-slide="birth-ai"] .card p { font-size:26px !important; }
+#xor-canvas { width:660px; height:480px; }
+[data-slide="experts"] .slide-body > .card { width:100% !important; }
+#rule-chain { width:100%; height:270px; margin-bottom:12px; }
+[data-slide="experts"] ul.tight { width:100% !important; font-size:33px; }
+[data-slide="connectionism"] figure, [data-slide="deep-rise"] figure { width:590px; flex:0 0 590px; }
+[data-slide="connectionism"] figure img { width:560px; height:360px !important; border-radius:12px; }
+#vanishing-canvas { width:1120px; height:330px; align-self:center; margin:20px 0; }
+[data-slide="modern"] figure { flex:0 0 680px !important; }
+[data-slide="modern"] .diagram { height:440px; }
+#bitter-canvas { width:1120px; height:380px; align-self:center; }
+[data-slide="bitter"] .quote { max-width:1400px !important; margin-top:0 !important; }
+[data-slide="chatgpt"] .card { flex:0 0 720px !important; padding:34px !important; }
+[data-slide="chatgpt"] .card > div { font-size:30px !important; }
+[data-slide="summary"] .cols { align-items:center; }
+[data-slide="summary"] ul.tight { margin-top:0 !important; text-align:left; flex:1; }
+#wave-canvas { width:800px; height:460px; }
+/* ---------- chapter dividers before each era ---------- */
+.chapter { text-align:center; }
+.chapter h1.ct-title {
+  display:block;
+  border-top:3px solid var(--line); padding-top:.6em;
+  color:#fff; font-size:2.7em; line-height:1.25; margin:0 auto .35em;
+}
+.chapter h1.ct-title span { letter-spacing:-.01em; }
+.chapter h1.ct-title em { font-style:normal; }
+.chapter .ct-year {
+  font-size:.95em; letter-spacing:.38em; text-transform:uppercase;
+  color:var(--text-muted); margin-top:.5em;
+}
+
+@media (prefers-reduced-motion:reduce) { .reveal .fragment, .reveal .slides section { transition:none !important; } }
+
+/* Media stays inside its allocated column, whatever the source aspect ratio. */
+.reveal figure { min-width:0; text-align:center; }
+.reveal figure img { display:block; max-width:100%; margin:0 auto; object-fit:contain; box-sizing:border-box; }
+.reveal figure img.photo { max-height:480px; }
+.reveal figure img.portrait { width:300px; height:380px; }
+.reveal figure img.document-image { background:#f7f7f5; padding:16px; border-radius:12px; width:100%; }
+.reveal figure img.media-archive { width:100%; height:430px; }
+.reveal a { color:var(--c-neural); text-decoration:none; }
+.reveal a:hover { text-decoration:underline; }
+.reveal a:focus-visible, .reveal button:focus-visible { outline:3px solid var(--c-neural); outline-offset:6px; }
+.reveal figcaption { text-align:center; }
+.media-credit { display:block; margin-top:8px; font-size:17px; color:var(--text-muted); }
+.media-credit a { color:inherit; text-decoration:underline; text-underline-offset:3px; }
+.reveal .wide-media figure { flex:0 0 760px !important; }
+[data-slide="mp-neuron"] figure { flex:0 0 480px !important; }
+[data-slide="mp-neuron"] figure img { height:240px !important; }
+[data-slide="hebb"] figure, [data-slide="cybernetics"] figure { flex:0 0 430px !important; }
+[data-slide="logic-theorist"] figure, [data-slide="lisp-ml"] figure { flex:0 0 510px !important; }
+[data-slide="gpt3"] figure { flex:0 0 680px !important; }
+[data-slide="gpt3"] figure svg { height:440px; }
+[data-slide="imagenet"] figure img { height:420px !important; }
+[data-slide="neocognitron"] figure, [data-slide="hopfield"] figure { flex:0 0 680px !important; }
+.video-card { position:relative; width:100%; aspect-ratio:16 / 9; background:#101622; border:1px solid var(--line); border-radius:14px; overflow:hidden; }
+.reveal .video-card .video-poster { width:100%; height:100%; max-width:none; object-fit:cover; }
+.video-card button { position:absolute; inset:0; display:flex; align-items:flex-end; justify-content:center; padding:26px; border:0; background:linear-gradient(transparent 40%,rgba(0,0,0,.8)); color:#fff; font:600 26px "Segoe UI",sans-serif; cursor:pointer; }
+.video-card button span { padding:10px 20px; border:1px solid rgba(255,255,255,.5); background:rgba(11,15,23,.85); border-radius:999px; }
+.video-card iframe { display:block; width:100%; height:100%; border:0; }
+.video-links { margin-top:12px; font-size:19px; text-align:center; }
+[data-slide="churchturing"] figure, [data-slide="backprop"] figure, [data-slide="alphago-transformers"] figure { flex:0 0 760px !important; }
+.reveal .slides section .media-figure { margin:0; }

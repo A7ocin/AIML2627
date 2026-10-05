@@ -1,0 +1,79 @@
+{
+  "data": [
+    {
+      "x": [
+        0,
+        0,
+        1
+      ],
+      "y": [
+        0,
+        1,
+        0
+      ],
+      "mode": "markers",
+      "type": "scatter",
+      "name": "Class 0",
+      "marker": {
+        "color": "#1f77b4",
+        "size": 10,
+        "symbol": "circle"
+      }
+    },
+    {
+      "x": [
+        1
+      ],
+      "y": [
+        1
+      ],
+      "mode": "markers",
+      "type": "scatter",
+      "name": "Class 1",
+      "marker": {
+        "color": "#ff7f0e",
+        "size": 10,
+        "symbol": "x"
+      }
+    },
+    {
+      "x": [
+        0.8,
+        1.95
+      ],
+      "y": [
+        1.0999999999999999,
+        -0.050000000000000044
+      ],
+      "mode": "lines",
+      "type": "scatter",
+      "name": "MPN",
+      "line": {
+        "color": "#000000",
+        "dash": "dash"
+      },
+      "showlegend": true
+    }
+  ],
+  "layout": {
+    "title": "AND Problem",
+    "xaxis": {
+      "title": {
+        "text": "$X_1$"
+      }
+    },
+    "yaxis": {
+      "title": {
+        "text": "$X_2$"
+      },
+      "scaleanchor": "x",
+      "scaleratio": 1
+    },
+    "legend": {
+      "orientation": "h",
+      "y": -0.05
+    },
+    "plot_bgcolor": "white",
+    "paper_bgcolor": "white"
+  }
+}

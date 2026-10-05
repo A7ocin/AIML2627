@@ -1,0 +1,395 @@
+{
+  "count": 38,
+  "errors": [],
+  "offlineRequests": [],
+  "slides": [
+    {
+      "slide": "title",
+      "issues": []
+    },
+    {
+      "slide": "map",
+      "issues": []
+    },
+    {
+      "slide": "applications",
+      "issues": []
+    },
+    {
+      "slide": "variables",
+      "issues": []
+    },
+    {
+      "slide": "assignments",
+      "issues": []
+    },
+    {
+      "slide": "constraints",
+      "issues": []
+    },
+    {
+      "slide": "definition",
+      "issues": []
+    },
+    {
+      "slide": "assignment-lab",
+      "issues": []
+    },
+    {
+      "slide": "generate-test",
+      "issues": []
+    },
+    {
+      "slide": "backtracking",
+      "issues": []
+    },
+    {
+      "slide": "dfs-code",
+      "issues": []
+    },
+    {
+      "slide": "dfs-lab",
+      "issues": []
+    },
+    {
+      "slide": "ordering",
+      "issues": []
+    },
+    {
+      "slide": "propagation",
+      "issues": []
+    },
+    {
+      "slide": "network",
+      "issues": []
+    },
+    {
+      "slide": "support",
+      "issues": []
+    },
+    {
+      "slide": "gac",
+      "issues": []
+    },
+    {
+      "slide": "gac-lab",
+      "issues": []
+    },
+    {
+      "slide": "requeue",
+      "issues": []
+    },
+    {
+      "slide": "gac-outcomes",
+      "issues": []
+    },
+    {
+      "slide": "consistent-unsat",
+      "issues": []
+    },
+    {
+      "slide": "splitting",
+      "issues": []
+    },
+    {
+      "slide": "split-lab",
+      "issues": []
+    },
+    {
+      "slide": "local-intro",
+      "issues": []
+    },
+    {
+      "slide": "conflicts",
+      "issues": []
+    },
+    {
+      "slide": "local-loop",
+      "issues": []
+    },
+    {
+      "slide": "random",
+      "issues": []
+    },
+    {
+      "slide": "improvement",
+      "issues": []
+    },
+    {
+      "slide": "local-lab",
+      "issues": []
+    },
+    {
+      "slide": "escaping",
+      "issues": []
+    },
+    {
+      "slide": "annealing",
+      "issues": []
+    },
+    {
+      "slide": "anneal-lab",
+      "issues": []
+    },
+    {
+      "slide": "cooling",
+      "issues": []
+    },
+    {
+      "slide": "comparison",
+      "issues": []
+    },
+    {
+      "slide": "practice",
+      "issues": []
+    },
+    {
+      "slide": "answers",
+      "issues": []
+    },
+    {
+      "slide": "summary",
+      "issues": []
+    },
+    {
+      "slide": "references",
+      "issues": []
+    }
+  ],
+  "responsive": [],
+  "stateIssues": [],
+  "stateCount": 450,
+  "variants": [
+    {
+      "kind": "dfs",
+      "variant": "default",
+      "states": 23
+    },
+    {
+      "kind": "gac",
+      "variant": "default",
+      "states": 6
+    },
+    {
+      "kind": "split",
+      "variant": "default",
+      "states": 4
+    },
+    {
+      "kind": "local",
+      "variant": "default",
+      "states": 2
+    },
+    {
+      "kind": "dfs",
+      "variant": "reverse",
+      "states": 23
+    },
+    {
+      "kind": "gac",
+      "variant": "chain",
+      "states": 7
+    },
+    {
+      "kind": "gac",
+      "variant": "contradiction",
+      "states": 8
+    },
+    {
+      "kind": "split",
+      "variant": "chain",
+      "states": 8
+    },
+    {
+      "kind": "split",
+      "variant": "contradiction",
+      "states": 8
+    },
+    {
+      "kind": "local",
+      "variant": "best/1/plateau",
+      "states": 2
+    },
+    {
+      "kind": "local",
+      "variant": "best/1/red",
+      "states": 3
+    },
+    {
+      "kind": "local",
+      "variant": "best/7/plateau",
+      "states": 2
+    },
+    {
+      "kind": "local",
+      "variant": "best/7/red",
+      "states": 3
+    },
+    {
+      "kind": "local",
+      "variant": "best/23/plateau",
+      "states": 2
+    },
+    {
+      "kind": "local",
+      "variant": "best/23/red",
+      "states": 3
+    },
+    {
+      "kind": "local",
+      "variant": "sampling/1/plateau",
+      "states": 3
+    },
+    {
+      "kind": "local",
+      "variant": "sampling/1/red",
+      "states": 3
+    },
+    {
+      "kind": "local",
+      "variant": "sampling/7/plateau",
+      "states": 2
+    },
+    {
+      "kind": "local",
+      "variant": "sampling/7/red",
+      "states": 2
+    },
+    {
+      "kind": "local",
+      "variant": "sampling/23/plateau",
+      "states": 21
+    },
+    {
+      "kind": "local",
+      "variant": "sampling/23/red",
+      "states": 21
+    },
+    {
+      "kind": "local",
+      "variant": "walk/1/plateau",
+      "states": 12
+    },
+    {
+      "kind": "local",
+      "variant": "walk/1/red",
+      "states": 41
+    },
+    {
+      "kind": "local",
+      "variant": "walk/7/plateau",
+      "states": 3
+    },
+    {
+      "kind": "local",
+      "variant": "walk/7/red",
+      "states": 41
+    },
+    {
+      "kind": "local",
+      "variant": "walk/23/plateau",
+      "states": 14
+    },
+    {
+      "kind": "local",
+      "variant": "walk/23/red",
+      "states": 14
+    },
+    {
+      "kind": "local",
+      "variant": "tabu/1/plateau",
+      "states": 3
+    },
+    {
+      "kind": "local",
+      "variant": "tabu/1/red",
+      "states": 3
+    },
+    {
+      "kind": "local",
+      "variant": "tabu/7/plateau",
+      "states": 3
+    },
+    {
+      "kind": "local",
+      "variant": "tabu/7/red",
+      "states": 3
+    },
+    {
+      "kind": "local",
+      "variant": "tabu/23/plateau",
+      "states": 3
+    },
+    {
+      "kind": "local",
+      "variant": "tabu/23/red",
+      "states": 3
+    },
+    {
+      "kind": "local",
+      "variant": "anneal/1/plateau",
+      "states": 10
+    },
+    {
+      "kind": "local",
+      "variant": "anneal/1/red",
+      "states": 3
+    },
+    {
+      "kind": "local",
+      "variant": "anneal/7/plateau",
+      "states": 8
+    },
+    {
+      "kind": "local",
+      "variant": "anneal/7/red",
+      "states": 3
+    },
+    {
+      "kind": "local",
+      "variant": "anneal/23/plateau",
+      "states": 12
+    },
+    {
+      "kind": "local",
+      "variant": "anneal/23/red",
+      "states": 3
+    }
+  ],
+  "interactions": [
+    {
+      "kind": "dfs",
+      "controls": true,
+      "pauseOnLeave": true
+    },
+    {
+      "kind": "gac",
+      "controls": true,
+      "pauseOnLeave": true
+    },
+    {
+      "kind": "split",
+      "controls": true,
+      "pauseOnLeave": true
+    },
+    {
+      "kind": "local",
+      "controls": true,
+      "pauseOnLeave": true
+    },
+    {
+      "kind": "dfs",
+      "hoverAndKeyboardInspection": true
+    },
+    {
+      "kind": "assignment",
+      "nativeControls": true
+    },
+    {
+      "kind": "anneal",
+      "nativeControls": true
+    }
+  ],
+  "keyboardNavigation": true,
+  "directEntry": true
+}

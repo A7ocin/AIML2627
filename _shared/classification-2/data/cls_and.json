@@ -1,0 +1,61 @@
+{
+  "data": [
+    {
+      "x": [
+        0,
+        0,
+        1
+      ],
+      "y": [
+        0,
+        1,
+        0
+      ],
+      "mode": "markers",
+      "type": "scatter",
+      "name": "Class 0",
+      "marker": {
+        "color": "#1f77b4",
+        "size": 10,
+        "symbol": "circle"
+      }
+    },
+    {
+      "x": [
+        1
+      ],
+      "y": [
+        1
+      ],
+      "mode": "markers",
+      "type": "scatter",
+      "name": "Class 1",
+      "marker": {
+        "color": "#ff7f0e",
+        "size": 10,
+        "symbol": "x"
+      }
+    }
+  ],
+  "layout": {
+    "title": "AND Problem",
+    "xaxis": {
+      "title": {
+        "text": "$X_1$"
+      }
+    },
+    "yaxis": {
+      "title": {
+        "text": "$X_2$"
+      },
+      "scaleanchor": "x",
+      "scaleratio": 1
+    },
+    "legend": {
+      "orientation": "h",
+      "y": -0.05
+    },
+    "plot_bgcolor": "white",
+    "paper_bgcolor": "white"
+  }
+}

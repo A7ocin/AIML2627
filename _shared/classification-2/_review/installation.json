@@ -1,0 +1,439 @@
+{
+  "target": "C:\\Users\\Nicola\\Documents\\AIML_slides\\AIML\\06_Classification_2",
+  "filesVerified": 108,
+  "previousPacksUnchanged": true,
+  "sourceHashes": [
+    {
+      "path": "_review\\01-title.png",
+      "sha256": "04569a243e78fa56826cde21e1d28c4f16b011b62babdc573809bc8380ac96b8"
+    },
+    {
+      "path": "_review\\02-map.png",
+      "sha256": "5b094af79a273b6178c28827a9fa207b5fe6741c1002d32264956ab358ec0ee0"
+    },
+    {
+      "path": "_review\\03-and-lab.png",
+      "sha256": "895dde914adf86346c7f6f55d19119f19c0215c636016eb31f9b1c81572f43a1"
+    },
+    {
+      "path": "_review\\04-threshold.png",
+      "sha256": "9a4c8fb0a60157b5b89eae7794a5718fdc00fb1fdc149a16ae4cb4a75aa05c85"
+    },
+    {
+      "path": "_review\\05-threshold-lab.png",
+      "sha256": "353987020ee10d5e7e563bb35802ae386bdb636956c5de3f522aca73069008a5"
+    },
+    {
+      "path": "_review\\06-and-fit-lab.png",
+      "sha256": "7a11fb7eefc74a7c1528cb8ba31eb4f21849410ed94c96b4ca96693612e59dfb"
+    },
+    {
+      "path": "_review\\07-perceptron.png",
+      "sha256": "2e618b4e3a77b346f07d78080e50c56e6071c6c601a23ac8d818f344559ec6b9"
+    },
+    {
+      "path": "_review\\08-noisy-lab.png",
+      "sha256": "b39e736c45e686b16cb8a8f5aeb11caabf9fcd5278f1e23921ee3cbf3a2dd8ba"
+    },
+    {
+      "path": "_review\\09-update.png",
+      "sha256": "22aeff9ddad2f006ddff206729bb5ae3c13768ae25e763313b31eeba735a2291"
+    },
+    {
+      "path": "_review\\10-update-intuition.png",
+      "sha256": "b0f928c1ab93ce7547686a3195577c9b6ffe9036982e57f6a738db16829369b3"
+    },
+    {
+      "path": "_review\\11-training-lab.png",
+      "sha256": "5e20777476291121ac195791c0b44881015a9b4e5579f814ad266ef7493f5fc0"
+    },
+    {
+      "path": "_review\\12-perceptron-fit-lab.png",
+      "sha256": "4fa3145ef15b5da8dcf5163e56c85af6760b1a40ac8e26391922de2702603de7"
+    },
+    {
+      "path": "_review\\13-convergence.png",
+      "sha256": "eeb793e03dadec6bbf6ac4449d53d0ad55655304889d14ad9735877ea5b24463"
+    },
+    {
+      "path": "_review\\14-learning-rate.png",
+      "sha256": "164eebcdb9dd59d829a3bc7f93e8c79b7a7cf12adfdaba647ca3353846610b87"
+    },
+    {
+      "path": "_review\\15-xor-lab.png",
+      "sha256": "5752ddaf785c3c5e90bf20c2b5cfaf2b33a82165918ef1fd75ff604f1cca86fd"
+    },
+    {
+      "path": "_review\\16-xor-proof.png",
+      "sha256": "8f5ee40fce81efcfcda71bcfe58105b5e17fce334486076b6b25fda8494eae79"
+    },
+    {
+      "path": "_review\\17-separators-lab.png",
+      "sha256": "de511afd0c6e2034a6c0232b6355cd6ff935967310273a3aa801d215dce78567"
+    },
+    {
+      "path": "_review\\18-hyperplane.png",
+      "sha256": "cc7e849c37e31c9f7e62af83daa7ad1985bf751a746a0f4f18d0c1a591a9fb12"
+    },
+    {
+      "path": "_review\\19-margin-source-lab.png",
+      "sha256": "9fd9a24558dbbbdb15cd741f9b511c74f8970816006665a704e86005275649dd"
+    },
+    {
+      "path": "_review\\20-distance.png",
+      "sha256": "2a0cd057487868b06613ca9c06b4f8b78484be9237e6280b134e6de30063a244"
+    },
+    {
+      "path": "_review\\21-margin-width.png",
+      "sha256": "29be229ade10be46350358512348d5f12d7438935b3016e56468099d8e3cbbb7"
+    },
+    {
+      "path": "_review\\22-margin-lab.png",
+      "sha256": "5c0909a0b2bf738df5814d0008997f2f1c9d5a5a9cb0391a68d2296f8520865d"
+    },
+    {
+      "path": "_review\\23-primal.png",
+      "sha256": "b91b08bbfde56cadb3e99fbeb69963900f8ab46a592d0871c855dbeac23d3406"
+    },
+    {
+      "path": "_review\\24-support-vectors.png",
+      "sha256": "a52edd27628cc8282cb9b118908a55e48da384d6a2ff32b71f49e4c1c2db444c"
+    },
+    {
+      "path": "_review\\25-soft-margin.png",
+      "sha256": "8ba71640d666e1a37789fb716d5402dddd7f8a6937f247da358a2cfba18646c1"
+    },
+    {
+      "path": "_review\\26-hinge.png",
+      "sha256": "b7f44809ef86c3e37a85522957443dc770c328aef987c8b99618bc67f192186d"
+    },
+    {
+      "path": "_review\\27-circle-lab.png",
+      "sha256": "9b6785f44486cfb8120bff29b5b5c79b977b69d4c8434c686965ce308251330c"
+    },
+    {
+      "path": "_review\\28-feature-map.png",
+      "sha256": "2b34641f34ee170cc682408391de65047ce40c481b51608151ae0b6839a2a452"
+    },
+    {
+      "path": "_review\\29-lift-lab.png",
+      "sha256": "7dfce685cd02b193472347d24ca9d95800d60e1e7ca5a496ea7ad2398c9138cc"
+    },
+    {
+      "path": "_review\\30-mapping-limits.png",
+      "sha256": "b8fcca324105999fe46ca4074fd2fdcf00ead1342acfa7afb72e318b8bc661e7"
+    },
+    {
+      "path": "_review\\31-mapped-primal.png",
+      "sha256": "14d06b51bb7b326383634050ad5a8802caa38b444616b6d4edb4b72ced4a65f6"
+    },
+    {
+      "path": "_review\\32-feature-explosion.png",
+      "sha256": "25ca91b457bbaf90d531e21a74c3a2f1b6055d1dd331b7a15d3d114fc90eb93b"
+    },
+    {
+      "path": "_review\\33-lagrangian.png",
+      "sha256": "3a717c9f0f90e40ad4b2cf8f6e3f3c85e8a2a15873998f0c6cfe994c14d93de6"
+    },
+    {
+      "path": "_review\\34-stationarity.png",
+      "sha256": "d18d5e7c469f957e90f500d159a7660162661f2aafbf06f18b351a35704a11c0"
+    },
+    {
+      "path": "_review\\35-dual.png",
+      "sha256": "7bc3a2f5b5708e55b699301daff42bb8ad9e65a57ba70bdc2cdfda52aeb469c0"
+    },
+    {
+      "path": "_review\\36-kernel-identity.png",
+      "sha256": "5282a2ecc56fc08138d1ff63209d38f357130f6a3ddf20658ee58693a721c72d"
+    },
+    {
+      "path": "_review\\37-kernel-lab.png",
+      "sha256": "d4744cc5a9025ac4a5e886219042fbcbbfc2699e01086beaa1598497171c8a40"
+    },
+    {
+      "path": "_review\\38-kernel-prediction.png",
+      "sha256": "4ab99f485f37b15cf70aaa65d5342119e551b9088aaacc206a2d8130b16e7346"
+    },
+    {
+      "path": "_review\\39-kernel-families.png",
+      "sha256": "929ace01502541889fe89a8fde5d7e5e71d22c71eae31605d44f84d619aafd0f"
+    },
+    {
+      "path": "_review\\3d-interaction-review.png",
+      "sha256": "9b41a43faee21dc4a5c899ee46011df151fc1150d52cc46143d2375b11ef5f80"
+    },
+    {
+      "path": "_review\\40-svm-lab.png",
+      "sha256": "10acc2e30c9e57bc3eaac23d1ff80e70bb07b5fee5bc0b561f43e9f7f5bf46d3"
+    },
+    {
+      "path": "_review\\41-valid-kernel.png",
+      "sha256": "a9f02d035888b3970f7292d2bc6db27d985d8fc6ae992558451d0cdd3f3ee2dc"
+    },
+    {
+      "path": "_review\\42-kernel-cost.png",
+      "sha256": "8864b57efefaf577a974f343c291fb34a237132bc758b458899a669d0adce3f9"
+    },
+    {
+      "path": "_review\\43-workflow.png",
+      "sha256": "1effc9ec94b79bf32af10ec1b9d3902c36d72855c5f9fe3aad35fae854b7e5ee"
+    },
+    {
+      "path": "_review\\44-practice.png",
+      "sha256": "351a299ffffc3072ad6f866901387cc553e4caede8e93627b514b2e5d12fe517"
+    },
+    {
+      "path": "_review\\45-answers.png",
+      "sha256": "c8f5ee151b6b26db66f760936067771e2250baa56a17baa45c6de7c0af53c0df"
+    },
+    {
+      "path": "_review\\46-summary.png",
+      "sha256": "92e2847c3a69983944a841e80ce41ba96c0a24a6f531dc232f806a0c8f06cd0a"
+    },
+    {
+      "path": "_review\\47-references.png",
+      "sha256": "ab6d235c66f535b9f2f53892524e6d88a4fe1be1cc1922cf4c7fa063a53deafd"
+    },
+    {
+      "path": "_review\\AIML-Classification-2-reviewed.pdf",
+      "sha256": "65726804c71f3a426bcd37f0fe1d92fcf0db31ae742696bf980e82e33843184d"
+    },
+    {
+      "path": "_review\\audit.json",
+      "sha256": "a2028221b37bb71849fb82b6f785a1b961b64518301925d24d2f9ffa3c2cc7c7"
+    },
+    {
+      "path": "_review\\contact-01.jpg",
+      "sha256": "d3fa68d8ac2dc224e38c2a4301eddf55e314d0ceaa14fc79a7041c37aa667865"
+    },
+    {
+      "path": "_review\\contact-02.jpg",
+      "sha256": "432b6b550ab1901788540732e0485f702e5da519d1e3ddff08786f817afd2c5e"
+    },
+    {
+      "path": "_review\\contact-03.jpg",
+      "sha256": "0eebb219dd0421c752de5a6847d5686958a9ec7be0172104a364227e83408809"
+    },
+    {
+      "path": "_review\\contact-04.jpg",
+      "sha256": "104742e12d9b6fdb34e7c83de7ac7d376192cfabcb1fe53062c6dfc3fdd1f08c"
+    },
+    {
+      "path": "_review\\contact-05.jpg",
+      "sha256": "484a02574ab4e8257906d21f4d78a16f3df335a471a8591d53ae6b938ca97f3e"
+    },
+    {
+      "path": "_review\\contact-06.jpg",
+      "sha256": "e849e866d7f5aaa3edeff40e7032c3259e236f9d93dc2b98bf2c08f830670766"
+    },
+    {
+      "path": "_review\\contact-07.jpg",
+      "sha256": "5f59f843763a63cfb85295463545686ae26c99f4ed3917b2d5375ed4de4aa789"
+    },
+    {
+      "path": "_review\\contact-08.jpg",
+      "sha256": "0ca3830211202ea11fb0770f9667303bd11b9ec3cd3809f6f385cfd263b57e24"
+    },
+    {
+      "path": "_review\\contact-09.jpg",
+      "sha256": "73edc67e1fb5a76df9d05a7f4ad57f0f6d57b7474cc2acf59ba0871b9957edcf"
+    },
+    {
+      "path": "_review\\contact-10.jpg",
+      "sha256": "20f9709bea1ccdc4027582047821c2154b9a67da0c8c5c1fb43ce76ac416544c"
+    },
+    {
+      "path": "_review\\contact-11.jpg",
+      "sha256": "36165978e005e77579395e9e442be13da0fde9f2f9ab8a1c897bba01c6494ba1"
+    },
+    {
+      "path": "_review\\contact-12.jpg",
+      "sha256": "83689224d18fde02b4c2c0c02690df39881fe0c93f78dcf373e58ea209c204e8"
+    },
+    {
+      "path": "_review\\engine-audit.json",
+      "sha256": "2338e327030bc5f2ed9f3615c7f3aa556671892779b6f495be82e94ef3c2909a"
+    },
+    {
+      "path": "_review\\index.html",
+      "sha256": "5363866b54806f20da21088a13a00e7ffe563a4500fc750f0e049508680bcb65"
+    },
+    {
+      "path": "_review\\initial-audit.json",
+      "sha256": "2d4aa9772ccafc42b903cf96488b7e4ad0b7342922a1049194c3fc98cf8bb241"
+    },
+    {
+      "path": "_review\\review-notes.md",
+      "sha256": "6592a0bac50e49c0034e5294b99cf99b4bf5cf75274a2cd1579967d12310c6d9"
+    },
+    {
+      "path": "css\\classification.css",
+      "sha256": "d5229ccecf58694389ce755f1ad3362053e215d14135062d7e49bfc9fd34f3f2"
+    },
+    {
+      "path": "css\\classification2.css",
+      "sha256": "26958e6fdd5718085ec0364cb601a1d526f248d2fda2d1e6ad8ad6bbf7394af1"
+    },
+    {
+      "path": "css\\regression.css",
+      "sha256": "e824ec24c14eba9e38b7664d5e665d35a4bf4cff8a7b1fab25f07884651c0a4a"
+    },
+    {
+      "path": "css\\search.css",
+      "sha256": "de03dc2f92d3bd7cd823e9cc30a5aef021749f1fff6a7a8f0e5f3c4f79307cba"
+    },
+    {
+      "path": "css\\theme-base.css",
+      "sha256": "0821905ded4bcfcc223acfca8cd7a743612839d9f3770a5e4981e7d66b04bdeb"
+    },
+    {
+      "path": "data\\cls_and.json",
+      "sha256": "a381a504d773ae24d81b8f7efb21890db3b5bf6020e21afd6d50f173b7428355"
+    },
+    {
+      "path": "data\\cls_and_mod.json",
+      "sha256": "de4040b6b4fa09606cdbfc93c43f83c8561bd8f3f39c5e04a168b46c1d8c4cf1"
+    },
+    {
+      "path": "data\\cls_and_noisy.json",
+      "sha256": "2e1f8134b4396b1b6aa54afe261f458e69f86e2c2776cefe2af55fcfa98ea59e"
+    },
+    {
+      "path": "data\\cls_and_noisy_mod.json",
+      "sha256": "b7eb98f8b05b4c5c0d9f4f941fbe0fbec8cc2d4d7e106eeb6d25be3871691cb0"
+    },
+    {
+      "path": "data\\cls_circle_clusters.json",
+      "sha256": "457b522ff51a986cafa997771e407909730e544f401e246c42d559d322ba657a"
+    },
+    {
+      "path": "data\\cls_circle_clusters_3d.json",
+      "sha256": "36d087d1621c01d4448b816547d95ba31c893dab5dee6842aa8d4828ce25844c"
+    },
+    {
+      "path": "data\\cls_svm_both_mod.json",
+      "sha256": "d0e7d5f9fcac13cfcd6387f944646e4a5e2e18f804da78d95b850cecae5b7fa2"
+    },
+    {
+      "path": "data\\cls_svm_margin.json",
+      "sha256": "3b388fadaf14c7004d907db5a3376bc70d7675290563c7830507837d1c97f719"
+    },
+    {
+      "path": "data\\cls_xor.json",
+      "sha256": "f6950cb73bb8b6bed047828459c6bc2960b6a64d0818c31e355b18973b6f008e"
+    },
+    {
+      "path": "data\\fitted-models.json",
+      "sha256": "61ce53083fd115f9bf64cff5e2e29abee2427c0d756201bc46b052f06c040f69"
+    },
+    {
+      "path": "index.html",
+      "sha256": "51b6cab3a3a888c82c42addb3d73fcc4773f25aa9c729fbd865df66bcbf35cea"
+    },
+    {
+      "path": "js\\course-data.js",
+      "sha256": "c326d3191c57b30a91241a7cda8df90980c4a54741ff48fec6427bf2550e421d"
+    },
+    {
+      "path": "js\\deck.js",
+      "sha256": "6fcd6edcc953dff54a44db9065ad40ad61c10a911ef5bfe5eee2f8e8cf055793"
+    },
+    {
+      "path": "js\\engine.js",
+      "sha256": "203e960a1636b8e3a1d8d9488a8b7e8eb789b36690de46fad58c28e15eb03f02"
+    },
+    {
+      "path": "js\\models.js",
+      "sha256": "db29cf3541e0b0d5ba113f036d5882cbc37ba97dd1eaa95feb746e3151cb74c1"
+    },
+    {
+      "path": "js\\visuals.js",
+      "sha256": "7ab617d35bd510627e67cc9f7fc667f8aa06e2956c72dd398af1e7e7c3fbf86b"
+    },
+    {
+      "path": "js\\widgets.js",
+      "sha256": "0913752e8551edb558386a33c66da1ba6075ed4c860736928544c7647c2fea37"
+    },
+    {
+      "path": "lib\\plotly.min.js",
+      "sha256": "899daefe8536c1ffef0db97f0a1717f775a06c145206f50ee8de35de10f3ef13"
+    },
+    {
+      "path": "lib\\reveal\\reset.min.css",
+      "sha256": "5bdbe39e006b125a90f7d0b7ef148281f0641fb2291c235add95b186e0bff274"
+    },
+    {
+      "path": "lib\\reveal\\reveal.min.css",
+      "sha256": "50c92ac663c9b6ed944155350650120c993e9a82d6e85117790157bd5aa8e3cd"
+    },
+    {
+      "path": "lib\\reveal\\reveal.min.js",
+      "sha256": "ff9c77379675d2c09ee964050e09f1a3d6a562fdfc4f54428523d2e7eea23b46"
+    },
+    {
+      "path": "notes\\numerical-review.json",
+      "sha256": "81d854dacf1817d0c4697f42fcf9f69feb324ce22a569dd9b7983873e4982cfb"
+    },
+    {
+      "path": "notes\\slide-manifest.json",
+      "sha256": "814996fe50bd3ebe272c15d8955f147937fdcf09d4af3c68662e4a96382fed71"
+    },
+    {
+      "path": "notes\\slide-notes.md",
+      "sha256": "bdaa296bf52128fedd59ea25af1add65cce12249f859d4da65e8e1165b502b0b"
+    },
+    {
+      "path": "notes\\source-map.md",
+      "sha256": "a47de23b3bcb31ca5a225000c58d7289db49d0fe5fb322d550370c179afbc766"
+    },
+    {
+      "path": "README.md",
+      "sha256": "7873b93cdde81159c384dcbaa9f6783594e67702eb40724eb7b62e3fa4fdb53c"
+    },
+    {
+      "path": "tests\\audit-function.js",
+      "sha256": "b11d3e9f834bb25d46a8a53a827cd4d4da5d783fde74bb704666073546108d6d"
+    },
+    {
+      "path": "tests\\engine.test.js",
+      "sha256": "ba4e83fec07aad937a5a6027fdb6817a301782a10dcac4929594d226a5679af5"
+    },
+    {
+      "path": "tests\\interaction-review.js",
+      "sha256": "e00d4de22d10a4b3fb80708d4081162e6998fb47b85a3ee904d1de3d1e1e99e8"
+    },
+    {
+      "path": "tests\\model-reference.json",
+      "sha256": "a85d36d881b17e6a9ee7f4bab035a274f1274c22d12f5b511be3297c9c643534"
+    },
+    {
+      "path": "tests\\perceptron-reference.json",
+      "sha256": "ef9eb4b98fd7f0a6768ab74910d1abd2d94e3f7c606fcf8c98f892b66fbaed6b"
+    },
+    {
+      "path": "tests\\quick-render.js",
+      "sha256": "407337557c1b7daeac5d510708d6a173283a84eb1cc509358bbcaed61632e7d0"
+    },
+    {
+      "path": "tests\\render-review.js",
+      "sha256": "664fde4091816a0519e319579acd1892ddb56519b784a4da01f5745df75ace1c"
+    },
+    {
+      "path": "tools\\build-deck.py",
+      "sha256": "8aed52d11989a71e7fcb47b8782ad54350db4d4286df72d3a53de95661cbcefe"
+    },
+    {
+      "path": "tools\\contact-sheets.py",
+      "sha256": "11d758040773e46092a1ad7ae3c514ed9d81b8e71a702237743fc842605158e9"
+    },
+    {
+      "path": "tools\\fit-models.py",
+      "sha256": "30aa3fbc34bba97a87cc538ae0cc43bb819b340d19429980e3714487dbf5b7d0"
+    },
+    {
+      "path": "tools\\verify-perceptron.py",
+      "sha256": "6b25ed91229791c29b39997853c0dc4f73f771de9f39f1d25b05d46c5adf3a2f"
+    }
+  ]
+}

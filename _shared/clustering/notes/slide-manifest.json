@@ -1,0 +1,380 @@
+[
+  {
+    "id": "title",
+    "kicker": "AI &amp; Machine Learning · Lesson 7",
+    "title": "Clustering",
+    "notes": "Final course lecture. All eight original Plotly resources are retained locally, including all five original K-means animation frames. Added labs use the original observations.",
+    "cls": "cover-slide"
+  },
+  {
+    "id": "map",
+    "kicker": "The road ahead",
+    "title": "Four views of the same question",
+    "notes": "",
+    "cls": ""
+  },
+  {
+    "id": "unlabeled",
+    "kicker": "01 · What changes?",
+    "title": "The labels are no longer supplied",
+    "notes": "",
+    "cls": ""
+  },
+  {
+    "id": "data-lab",
+    "kicker": "Interactive lab · Clustering",
+    "title": "Look for structure in the original observations",
+    "notes": "Original kmeans_data.json, all coordinates retained.",
+    "cls": "lab-slide"
+  },
+  {
+    "id": "meaning",
+    "kicker": "01 · Define similarity",
+    "title": "A cluster is a useful modeling choice",
+    "notes": "Internal scores, stability and domain knowledge can evaluate unlabeled results. External labels, when available for evaluation, provide another perspective.",
+    "cls": ""
+  },
+  {
+    "id": "centroids",
+    "kicker": "02 · K-means",
+    "title": "Represent K groups with K centroids",
+    "notes": "",
+    "cls": ""
+  },
+  {
+    "id": "objective",
+    "kicker": "02 · The distortion objective",
+    "title": "Minimize squared distances within clusters",
+    "notes": "",
+    "cls": ""
+  },
+  {
+    "id": "assign",
+    "kicker": "02 · Assignment step",
+    "title": "Choose the nearest centroid",
+    "notes": "",
+    "cls": ""
+  },
+  {
+    "id": "update",
+    "kicker": "02 · Mean update",
+    "title": "The derivative explains why the mean appears",
+    "notes": "Corrects the sign of the source derivative. The stationary mean remains the same. The added trace retains an empty center; none of its displayed runs needs this fallback.",
+    "cls": ""
+  },
+  {
+    "id": "source-animation",
+    "kicker": "Interactive lab · Clustering",
+    "title": "Replay the course’s K-means animation",
+    "notes": "Original kmeans_steps.json data and all five frames. Frame numbers are source snapshot indices, not our new half-step trace.",
+    "cls": "lab-slide"
+  },
+  {
+    "id": "kmeans-lab",
+    "kicker": "Interactive lab · Clustering",
+    "title": "Separate assignment from centroid movement",
+    "notes": "Added Lloyd trace on the original 240 points: K=2,3,4; seeds 0,7,19; 79 states in total. Each update and assignment is separate. Final objectives independently checked with sklearn KMeans.",
+    "cls": "lab-slide"
+  },
+  {
+    "id": "initialization",
+    "kicker": "02 · Initialization and stopping",
+    "title": "The same data can lead to different endpoints",
+    "notes": "",
+    "cls": ""
+  },
+  {
+    "id": "limits",
+    "kicker": "02 · Know the geometry",
+    "title": "K-means favors compact Euclidean groups",
+    "notes": "",
+    "cls": ""
+  },
+  {
+    "id": "choose-k",
+    "kicker": "03 · How many groups?",
+    "title": "The objective alone cannot choose K",
+    "notes": "Splitting a cluster cannot increase the globally optimal squared-error objective. If every observation has its own center, distortion is zero. That does not make n clusters useful.",
+    "cls": ""
+  },
+  {
+    "id": "elbow-source",
+    "kicker": "Interactive lab · Clustering",
+    "title": "Inspect the original elbow curve",
+    "notes": "Original elbow.json, including its highlighted point and all ten supplied distortion values. Source fitting settings are not supplied.",
+    "cls": "lab-slide"
+  },
+  {
+    "id": "elbow",
+    "kicker": "03 · A heuristic, not a verdict",
+    "title": "An elbow suggests a tradeoff",
+    "notes": "",
+    "cls": ""
+  },
+  {
+    "id": "silhouette",
+    "kicker": "03 · Silhouette",
+    "title": "Compare cohesion with the nearest other group",
+    "notes": "This deck uses ordinary Euclidean distances, the standard default. The source writes squared distances; that is a different dissimilarity choice and produces different numerical scores. When both a and b are zero, use zero.",
+    "cls": ""
+  },
+  {
+    "id": "silhouette-reading",
+    "kicker": "03 · Read the score",
+    "title": "Silhouette is a geometric diagnostic",
+    "notes": "",
+    "cls": ""
+  },
+  {
+    "id": "selection-lab",
+    "kicker": "Interactive lab · Clustering",
+    "title": "Compare K using the same fitted partitions",
+    "notes": "Added sklearn KMeans fits K=1…10, 30 starts each, random_state=42, raw source points. The new curve is distinguished from the original elbow resource.",
+    "cls": "lab-slide"
+  },
+  {
+    "id": "silhouette-lab",
+    "kicker": "Interactive lab · Clustering",
+    "title": "Inspect silhouette one observation at a time",
+    "notes": "Added exact Euclidean silhouette explorer using the preceding fitted partitions. Browser values checked against sklearn silhouette_samples for all observations and K=2…10.",
+    "cls": "lab-slide"
+  },
+  {
+    "id": "soft",
+    "kicker": "04 · Gaussian mixtures",
+    "title": "Replace one-hot assignments with responsibilities",
+    "notes": "",
+    "cls": ""
+  },
+  {
+    "id": "gaussian",
+    "kicker": "04 · Component geometry",
+    "title": "A Gaussian needs a mean and a covariance",
+    "notes": "A covariance is generally positive semidefinite; an invertible covariance is required by the standard nonsingular Gaussian density. Regularization prevents singular fitted components.",
+    "cls": ""
+  },
+  {
+    "id": "mixture",
+    "kicker": "04 · Combine the components",
+    "title": "Mix densities with nonnegative weights",
+    "notes": "",
+    "cls": ""
+  },
+  {
+    "id": "posterior",
+    "kicker": "04 · Bayes’ rule for memberships",
+    "title": "Normalize each component’s weighted density",
+    "notes": "",
+    "cls": ""
+  },
+  {
+    "id": "likelihood",
+    "kicker": "04 · Fit the model",
+    "title": "Maximize the observed-data log likelihood",
+    "notes": "",
+    "cls": ""
+  },
+  {
+    "id": "em",
+    "kicker": "05 · Expectation–maximization",
+    "title": "Use the current model to improve the next one",
+    "notes": "Corrects wording that suggests taking an expectation of likelihood rather than log likelihood. Exact EM has a nondecreasing observed likelihood, but not a global-optimum guarantee.",
+    "cls": ""
+  },
+  {
+    "id": "mstep",
+    "kicker": "05 · Weighted sufficient statistics",
+    "title": "The M-step is a soft version of averaging",
+    "notes": "",
+    "cls": ""
+  },
+  {
+    "id": "gmm-lab",
+    "kicker": "Interactive lab · Clustering",
+    "title": "Watch EM reshape three Gaussian components",
+    "notes": "Added full-covariance, three-component EM on all original 240 points. Forty updates; diagonal covariance regularization 10⁻⁶. Ellipses are one Mahalanobis-radius contours, not 68% regions in 2D. Soft probabilities update for the chosen point.",
+    "cls": "lab-slide"
+  },
+  {
+    "id": "em-limits",
+    "kicker": "05 · What convergence does not promise",
+    "title": "A rising likelihood still needs interpretation",
+    "notes": "",
+    "cls": ""
+  },
+  {
+    "id": "em-kmeans",
+    "kicker": "05 · Connect the algorithms",
+    "title": "K-means is related to a limiting mixture model",
+    "notes": "Ordinary Lloyd K-means is not literally unrestricted Gaussian-mixture EM. Describe it as a hard-assignment or small-variance connection rather than conflating the two algorithms.",
+    "cls": ""
+  },
+  {
+    "id": "hierarchical",
+    "kicker": "06 · Hierarchical clustering",
+    "title": "Build a family of nested groups",
+    "notes": "",
+    "cls": ""
+  },
+  {
+    "id": "dendrogram-source",
+    "kicker": "Interactive lab · Clustering",
+    "title": "Read the course’s original dendrogram",
+    "notes": "Original hc_dendogram.json: all points, labels, branch coordinates and heights retained. Layout and contrast corrected. The supplied tree matches average linkage on these observations.",
+    "cls": "lab-slide"
+  },
+  {
+    "id": "cut",
+    "kicker": "06 · From a tree to a partition",
+    "title": "Choose a height, then cut across the tree",
+    "notes": "",
+    "cls": ""
+  },
+  {
+    "id": "linkage",
+    "kicker": "06 · Define distance between groups",
+    "title": "The linkage rule changes the tree",
+    "notes": "Average linkage weights each observation pair equally. It is not the same as equally averaging distances between merged clusters regardless of their sizes.",
+    "cls": ""
+  },
+  {
+    "id": "hierarchy-lab",
+    "kicker": "Interactive lab · Clustering",
+    "title": "Change the linkage and the merge budget",
+    "notes": "Added exact SciPy linkages on the six source points. Merge-count selection is valid even for centroid inversions. Shows the resulting cluster count and most recent merge height.",
+    "cls": "lab-slide"
+  },
+  {
+    "id": "hierarchy-limits",
+    "kicker": "06 · Tradeoffs",
+    "title": "A tree makes structure inspectable",
+    "notes": "",
+    "cls": ""
+  },
+  {
+    "id": "pca-intro",
+    "kicker": "07 · Principal component analysis",
+    "title": "Change the coordinate system",
+    "notes": "",
+    "cls": ""
+  },
+  {
+    "id": "aligned-lab",
+    "kicker": "Interactive lab · Clustering",
+    "title": "Start with variation aligned to an axis",
+    "notes": "Original gaussian_points.json, all 300 observations retained. Equal axis units preserve geometry.",
+    "cls": "lab-slide"
+  },
+  {
+    "id": "rotated-lab",
+    "kicker": "Interactive lab · Clustering",
+    "title": "The largest variation can lie between the axes",
+    "notes": "Original gaussian_points_rot30.json, all 300 observations retained.",
+    "cls": "lab-slide"
+  },
+  {
+    "id": "center",
+    "kicker": "07 · Center before projecting",
+    "title": "Subtract the mean and measure covariance",
+    "notes": "Corrects the source mean denominator n−1. This deck consistently uses sample covariance (ddof=1), including its added PCA variance calculations.",
+    "cls": ""
+  },
+  {
+    "id": "variance",
+    "kicker": "07 · Choose a direction",
+    "title": "Maximize variance with a unit vector",
+    "notes": "",
+    "cls": ""
+  },
+  {
+    "id": "eigen",
+    "kicker": "07 · Solve the constrained problem",
+    "title": "The answer is an eigenvector",
+    "notes": "",
+    "cls": ""
+  },
+  {
+    "id": "pca-lab",
+    "kicker": "Interactive lab · Clustering",
+    "title": "Rotate a projection and find the first component",
+    "notes": "Added live centered 2D PCA projection on either original 300-point Gaussian dataset. Sample variance and squared reconstruction error computed directly. Best PC comes from independent NumPy eigh.",
+    "cls": "lab-slide"
+  },
+  {
+    "id": "reconstruct",
+    "kicker": "07 · Compress and reconstruct",
+    "title": "Keep d directions, then map back approximately",
+    "notes": "Ud has orthonormal columns. Explained variance is not predictive accuracy or evidence that discarded directions are irrelevant to a downstream task.",
+    "cls": ""
+  },
+  {
+    "id": "applications",
+    "kicker": "07 · Applications and limits",
+    "title": "A compact representation can serve several tasks",
+    "notes": "",
+    "cls": ""
+  },
+  {
+    "id": "scale-source",
+    "kicker": "Interactive lab · Clustering",
+    "title": "Feature units can dominate a distance",
+    "notes": "Original two_gaussian_blobs.json: both 300-point groups retained. Source colors identify generating groups only for illustration, not labels supplied to a clustering fit.",
+    "cls": "lab-slide"
+  },
+  {
+    "id": "scaling",
+    "kicker": "08 · Preprocessing",
+    "title": "Rescaling does not make a feature Gaussian",
+    "notes": "Standardization does not turn an arbitrary distribution into a normal distribution. New observations can lie outside a fitted min–max range. Sample vs population variance conventions must be stated.",
+    "cls": ""
+  },
+  {
+    "id": "preprocessing-lab",
+    "kicker": "Interactive lab · Clustering",
+    "title": "Compare every original preprocessing panel",
+    "notes": "Original two_gaussian_blobs_panel.json: every coordinate in all eight traces retained. Four panels are presented one at a time to keep labels and geometry legible; axes use equal units. Source transformations are shown as supplied.",
+    "cls": "lab-slide"
+  },
+  {
+    "id": "whitening",
+    "kicker": "08 · Understand whitening",
+    "title": "Identity covariance comes at a price",
+    "notes": "The identity assumes positive retained eigenvalues and a consistent covariance convention. A truncated transform whitens only the retained subspace.",
+    "cls": ""
+  },
+  {
+    "id": "workflow",
+    "kicker": "Bring the methods together",
+    "title": "Make the representation and the grouping explicit",
+    "notes": "",
+    "cls": ""
+  },
+  {
+    "id": "practice",
+    "kicker": "Check your understanding",
+    "title": "Five questions to connect the ideas",
+    "notes": "",
+    "cls": ""
+  },
+  {
+    "id": "answers",
+    "kicker": "Check your understanding",
+    "title": "The distinctions that matter",
+    "notes": "",
+    "cls": ""
+  },
+  {
+    "id": "summary",
+    "kicker": "The ideas to keep",
+    "title": "Structure depends on the question you ask",
+    "notes": "",
+    "cls": ""
+  },
+  {
+    "id": "references",
+    "kicker": "Sources and further reading",
+    "title": "Course resources and technical references",
+    "notes": "",
+    "cls": ""
+  }
+]

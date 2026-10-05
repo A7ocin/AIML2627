@@ -1,0 +1,70 @@
+{
+  "data": [
+    {
+      "x": [
+        3
+      ],
+      "y": [
+        157.39313423984262
+      ],
+      "mode": "markers",
+      "type": "scatter",
+      "marker": {
+        "size": 28,
+        "color": "rgba(100,150,255,0.18)",
+        "line": {
+          "width": 0
+        }
+      },
+      "hoverinfo": "skip",
+      "showlegend": false
+    },
+    {
+      "x": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "y": [
+        1241.5229877982204,
+        489.71852998603094,
+        157.39313423984262,
+        130.1553147955723,
+        110.49257499061636,
+        98.03629117542336,
+        82.91655832035474,
+        75.39285544698045,
+        71.4117127333129,
+        59.980561517222284
+      ],
+      "mode": "lines+markers",
+      "type": "scatter",
+      "name": "distortion",
+      "marker": {
+        "size": 8
+      }
+    }
+  ],
+  "layout": {
+    "title": "Elbow plot: distortion vs K",
+    "xaxis": {
+      "title": "# clusters",
+      "dtick": 1,
+      "tick0": 1
+    },
+    "yaxis": {
+      "title": "Distortion"
+    },
+    "margin": {
+      "t": 60,
+      "b": 40
+    }
+  }
+}

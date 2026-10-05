@@ -1,0 +1,195 @@
+{
+  "count": 47,
+  "errors": [],
+  "network": [],
+  "slides": [
+    {
+      "slide": "title",
+      "issues": []
+    },
+    {
+      "slide": "map",
+      "issues": []
+    },
+    {
+      "slide": "and-lab",
+      "issues": []
+    },
+    {
+      "slide": "threshold",
+      "issues": []
+    },
+    {
+      "slide": "threshold-lab",
+      "issues": []
+    },
+    {
+      "slide": "and-fit-lab",
+      "issues": []
+    },
+    {
+      "slide": "perceptron",
+      "issues": []
+    },
+    {
+      "slide": "noisy-lab",
+      "issues": []
+    },
+    {
+      "slide": "update",
+      "issues": []
+    },
+    {
+      "slide": "update-intuition",
+      "issues": []
+    },
+    {
+      "slide": "training-lab",
+      "issues": []
+    },
+    {
+      "slide": "perceptron-fit-lab",
+      "issues": []
+    },
+    {
+      "slide": "convergence",
+      "issues": []
+    },
+    {
+      "slide": "learning-rate",
+      "issues": []
+    },
+    {
+      "slide": "xor-lab",
+      "issues": []
+    },
+    {
+      "slide": "xor-proof",
+      "issues": []
+    },
+    {
+      "slide": "separators-lab",
+      "issues": []
+    },
+    {
+      "slide": "hyperplane",
+      "issues": []
+    },
+    {
+      "slide": "margin-source-lab",
+      "issues": []
+    },
+    {
+      "slide": "distance",
+      "issues": []
+    },
+    {
+      "slide": "margin-width",
+      "issues": []
+    },
+    {
+      "slide": "margin-lab",
+      "issues": []
+    },
+    {
+      "slide": "primal",
+      "issues": []
+    },
+    {
+      "slide": "support-vectors",
+      "issues": []
+    },
+    {
+      "slide": "soft-margin",
+      "issues": []
+    },
+    {
+      "slide": "hinge",
+      "issues": []
+    },
+    {
+      "slide": "circle-lab",
+      "issues": []
+    },
+    {
+      "slide": "feature-map",
+      "issues": []
+    },
+    {
+      "slide": "lift-lab",
+      "issues": []
+    },
+    {
+      "slide": "mapping-limits",
+      "issues": []
+    },
+    {
+      "slide": "mapped-primal",
+      "issues": []
+    },
+    {
+      "slide": "feature-explosion",
+      "issues": []
+    },
+    {
+      "slide": "lagrangian",
+      "issues": []
+    },
+    {
+      "slide": "stationarity",
+      "issues": []
+    },
+    {
+      "slide": "dual",
+      "issues": []
+    },
+    {
+      "slide": "kernel-identity",
+      "issues": []
+    },
+    {
+      "slide": "kernel-lab",
+      "issues": []
+    },
+    {
+      "slide": "kernel-prediction",
+      "issues": []
+    },
+    {
+      "slide": "kernel-families",
+      "issues": []
+    },
+    {
+      "slide": "svm-lab",
+      "issues": []
+    },
+    {
+      "slide": "valid-kernel",
+      "issues": []
+    },
+    {
+      "slide": "kernel-cost",
+      "issues": []
+    },
+    {
+      "slide": "workflow",
+      "issues": []
+    },
+    {
+      "slide": "practice",
+      "issues": []
+    },
+    {
+      "slide": "answers",
+      "issues": []
+    },
+    {
+      "slide": "summary",
+      "issues": []
+    },
+    {
+      "slide": "references",
+      "issues": []
+    }
+  ]
+}

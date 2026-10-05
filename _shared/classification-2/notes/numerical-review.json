@@ -1,0 +1,151 @@
+{
+  "originalCharts": 9,
+  "circlePoints": 300,
+  "noisyANDPoints": 360,
+  "marginOptimum": {
+    "w": [
+      1.5384615384615383,
+      0.4615384615384602
+    ],
+    "bias": -0.661538461538462,
+    "normal": [
+      0.9578262852211515,
+      0.28734788556634466
+    ],
+    "offset": -0.41186530264509547,
+    "clearance": 0.6225870853937486,
+    "width": 1.2451741707874973,
+    "support": [
+      3,
+      4,
+      5
+    ]
+  },
+  "lift": {
+    "innerMax": 0.34657549743909616,
+    "outerMin": 0.36126511862496014,
+    "threshold": 0.3539203080320281
+  },
+  "fittedModels": [
+    {
+      "kernel": "linear",
+      "C": 0.1,
+      "gamma": 1,
+      "accuracy": 0.66,
+      "supportVectors": 300
+    },
+    {
+      "kernel": "linear",
+      "C": 1,
+      "gamma": 1,
+      "accuracy": 0.65,
+      "supportVectors": 292
+    },
+    {
+      "kernel": "linear",
+      "C": 100,
+      "gamma": 1,
+      "accuracy": 0.6533333333333333,
+      "supportVectors": 291
+    },
+    {
+      "kernel": "poly",
+      "C": 0.1,
+      "gamma": 1,
+      "accuracy": 0.9166666666666666,
+      "supportVectors": 234
+    },
+    {
+      "kernel": "poly",
+      "C": 1,
+      "gamma": 1,
+      "accuracy": 0.9933333333333333,
+      "supportVectors": 86
+    },
+    {
+      "kernel": "poly",
+      "C": 100,
+      "gamma": 1,
+      "accuracy": 0.9966666666666667,
+      "supportVectors": 8
+    },
+    {
+      "kernel": "rbf",
+      "C": 0.1,
+      "gamma": 0.1,
+      "accuracy": 0.5633333333333334,
+      "supportVectors": 300
+    },
+    {
+      "kernel": "rbf",
+      "C": 0.1,
+      "gamma": 1,
+      "accuracy": 0.9933333333333333,
+      "supportVectors": 197
+    },
+    {
+      "kernel": "rbf",
+      "C": 0.1,
+      "gamma": 10,
+      "accuracy": 0.9833333333333333,
+      "supportVectors": 132
+    },
+    {
+      "kernel": "rbf",
+      "C": 1,
+      "gamma": 0.1,
+      "accuracy": 0.6766666666666666,
+      "supportVectors": 290
+    },
+    {
+      "kernel": "rbf",
+      "C": 1,
+      "gamma": 1,
+      "accuracy": 0.9933333333333333,
+      "supportVectors": 64
+    },
+    {
+      "kernel": "rbf",
+      "C": 1,
+      "gamma": 10,
+      "accuracy": 0.9933333333333333,
+      "supportVectors": 51
+    },
+    {
+      "kernel": "rbf",
+      "C": 100,
+      "gamma": 0.1,
+      "accuracy": 0.9933333333333333,
+      "supportVectors": 45
+    },
+    {
+      "kernel": "rbf",
+      "C": 100,
+      "gamma": 1,
+      "accuracy": 1.0,
+      "supportVectors": 10
+    },
+    {
+      "kernel": "rbf",
+      "C": 100,
+      "gamma": 10,
+      "accuracy": 1.0,
+      "supportVectors": 32
+    }
+  ],
+  "polynomialFeatureCount": 46897636623981,
+  "sourceLines": {
+    "Perceptron": {
+      "accuracy": 1.0,
+      "minSignedDistance": 0.09663472647966122
+    },
+    "Separator 1": {
+      "accuracy": 1.0,
+      "minSignedDistance": 0.25373724898948946
+    },
+    "Separator 2": {
+      "accuracy": 1.0,
+      "minSignedDistance": 0.060042019880833845
+    }
+  }
+}

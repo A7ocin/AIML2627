@@ -1,0 +1,10 @@
+window.C2Visuals={mount(){const text=(x,y,t,n=30,c='#e8ecf4')=>`<text x="${x}" y="${y}" font-size="${n}" fill="${c}" text-anchor="middle">${t}</text>`;
+for(const el of document.querySelectorAll('[data-diagram]')){let s='',vb='0 0 1200 340';const k=el.dataset.diagram;
+if(k==='cover'){vb='0 0 650 500';const ps=COURSE_DATA.cls_svm_margin.data.filter(t=>t.name.startsWith('Class ')),w=FITTED_MODELS.margin.w,b=FITTED_MODELS.margin.bias,px=x=>100+(x+1.5)*130,py=y=>350-(y+1.1)*110;
+s='<rect x="35" y="25" width="580" height="390" rx="24" fill="#101722" stroke="#263148"/>';
+for(const c of [-1,0,1]){const p=C2Engine.clippedLine(w,b-c,[-1.8,2.3,-1.2,1.3]);if(p.length===2)s+=`<path d="M${px(p[0][0])} ${py(p[0][1])}L${px(p[1][0])} ${py(p[1][1])}" stroke="${c?'#707a56':'#45d6c0'}" stroke-width="${c?2:4}" ${c?'stroke-dasharray="7 7"':''}/>`;}
+ps.forEach((t,c)=>t.x.forEach((x,i)=>{s+=`<circle cx="${px(x)}" cy="${py(t.y[i])}" r="9" fill="${c?'#f4a261':'#6ea8fe'}"/>`;}));s+=text(325,466,'Make room for the margin',28,'#45d6c0');}
+if(k==='normal'){s='<path d="M220 285L920 80" stroke="#45d6c0" stroke-width="5"/><path d="M570 182L527 35" stroke="#ba8cff" stroke-width="4"/><path d="M527 35l-4 22m4-22l16 16" stroke="#ba8cff" stroke-width="4"/>'+text(665,55,'normal w',28,'#ba8cff')+text(925,140,'wᵀx + b = 0',30,'#45d6c0')+text(350,95,'positive score',28,'#f4a261')+text(820,285,'negative score',28,'#6ea8fe');}
+if(k==='lift'){s='<circle cx="245" cy="160" r="100" stroke="#f4a261" stroke-width="6" fill="none"/><circle cx="245" cy="160" r="35" fill="#6ea8fe" opacity=".8"/>'+text(245,315,'A circular boundary in 2D',28)+text(570,175,'→',65,'#45d6c0')+'<ellipse cx="925" cy="100" rx="140" ry="35" fill="none" stroke="#f4a261" stroke-width="5"/><ellipse cx="925" cy="240" rx="55" ry="18" fill="#6ea8fe"/><path d="M730 175L1080 145L1140 195L790 225Z" fill="#45d6c0" fill-opacity=".18" stroke="#45d6c0" stroke-width="2"/>'+text(925,315,'A separating plane in 3D',28);}
+el.innerHTML=`<svg class="rg-svg" role="img" aria-label="${k} diagram" viewBox="${vb}">${s}</svg>`;
+}}};

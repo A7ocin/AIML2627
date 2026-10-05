@@ -1,0 +1,10 @@
+{
+  "passed": true,
+  "assertions": 274266,
+  "silhouetteComparisons": 2160,
+  "responsibilityVectors": 9840,
+  "pcaAngles": 543,
+  "kmeansRuns": 9,
+  "kmeansStates": 79,
+  "hierarchyMethods": 4
+}

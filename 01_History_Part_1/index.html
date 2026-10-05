@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>History of artificial intelligence · Part 1 · Lecture 01 · AIML</title>
+<link href="../_shared/history/lib/reveal/reset.min.css" rel="stylesheet"/>
+<link href="../_shared/history/lib/reveal/reveal.min.css" rel="stylesheet"/>
+<link href="../_shared/history/css/theme.css?v=4" rel="stylesheet"/>
+<style id="course-navigation-style">
+.course-navigation{font-family:'Segoe UI',Arial,sans-serif;text-align:left;box-sizing:border-box}
+.course-navigation *{box-sizing:border-box}
+.course-links{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.course-navigation .course-link{display:flex;flex-direction:column;align-items:flex-start;gap:14px;min-width:0;padding:25px;border:1px solid #d5e1e2;border-radius:12px;background:#fff;color:#233348;text-decoration:none;transition:border-color .15s,background .15s}
+.course-navigation a.course-link:hover{border-color:#007e77;background:#eef8f5;text-decoration:none}
+.course-navigation .course-link-label{display:block;color:#006f69;font-size:12px;line-height:1.5;font-weight:700;letter-spacing:.055em;text-transform:uppercase}
+.course-navigation .course-link strong{font-size:19px;line-height:1.4;font-weight:650}
+.course-navigation .course-link-detail{font-size:13px;line-height:1.6;color:#64758a;margin-top:auto}
+.course-navigation .course-companion{border-color:#80bcb2;background:#f0f8f5}
+.course-navigation .course-boundary{background:transparent;border-style:dashed}
+.course-navigation .course-home{display:flex;align-items:center;justify-content:space-between;gap:20px;margin-top:20px;padding:18px 0;color:#006f69;font-size:14px;line-height:1.5;text-decoration:none}
+.course-navigation .course-home:hover{text-decoration:underline}
+.course-navigation a:focus-visible{outline:3px solid #cf811a;outline-offset:5px}
+.course-reading-end{margin:45px 0 0;padding-top:35px;border-top:2px solid #233348}
+.course-reading-end h2{font:700 28px/1.3 'Segoe UI',Arial,sans-serif;margin:0 0 22px;color:#233348}
+.reveal #course-navigation .slide-body{height:100%;display:flex;flex-direction:column;justify-content:center;gap:0}
+.reveal #course-navigation .course-end-shell{width:100%;text-align:left}
+.reveal #course-navigation h2{font:700 68px/1.2 'Segoe UI',Arial,sans-serif;margin:0 0 24px!important;color:#edf4fa;letter-spacing:-.025em}
+.reveal #course-navigation .course-intro{font:29px/1.5 'Segoe UI',Arial,sans-serif;color:#aebcce;margin:0 0 48px}
+.reveal #course-navigation .course-links{gap:26px}
+.reveal #course-navigation .course-link{padding:32px;min-height:290px;gap:24px;border-color:#35465c;background:#141e2d;color:#edf4fa}
+.reveal #course-navigation a.course-link:hover{background:#1b303a;border-color:#45d6c0}
+.reveal #course-navigation .course-link-label{font-size:22px;color:#45d6c0;letter-spacing:.03em}
+.reveal #course-navigation .course-link strong{font-size:34px;line-height:1.35}
+.reveal #course-navigation .course-link-detail{font-size:23px;line-height:1.5;color:#aebcce}
+.reveal #course-navigation .course-companion{border-color:#45d6c0;background:#142b30}
+.reveal #course-navigation .course-boundary{background:transparent}
+.reveal #course-navigation .course-home{font-size:25px;color:#45d6c0;margin-top:34px;padding:25px 0;border-top:1px solid #35465c}
+@media(max-width:1000px){.course-reading-end .course-links{grid-template-columns:1fr}.course-reading-end .course-link{gap:10px}.course-reading-end .course-home{align-items:flex-start;flex-direction:column;gap:5px}}
+@media(prefers-reduced-motion:reduce){.course-navigation .course-link{transition:none}}
+@media print{.course-reading-end{break-inside:avoid}.course-navigation .course-links{display:block}.course-navigation .course-link{padding:12px;margin-bottom:8px;gap:4px;break-inside:avoid}.course-navigation .course-link strong{font-size:12pt}.course-navigation .course-link-label,.course-navigation .course-link-detail{font-size:9pt}.course-navigation .course-boundary{display:none}}
+</style>
+<style id="course-home-style">
+.course-home-button{display:inline-flex;align-items:center;justify-content:center;gap:7px;box-sizing:border-box;padding:8px 12px;border:1px solid #536578;border-radius:7px;background:#111e2d;color:#91e5d6!important;font:600 13px/1.4 'Segoe UI',Arial,sans-serif;text-decoration:none!important;white-space:nowrap;min-height:36px}
+.course-home-button:hover{background:#203743;border-color:#91e5d6}
+.course-home-button:focus-visible{outline:3px solid #ffd166;outline-offset:3px}
+.course-home-button svg{flex:none;display:block}
+@media print{.course-home-button{display:none!important}}
+.course-home-button{position:fixed;top:12px;right:16px;z-index:50}
+</style><link href="../wooclap/slides-wooclap.css?v=1" rel="stylesheet"/>
+<link href="../course-parts.css?v=9" rel="stylesheet"/>
+<link href="concepts.css?v=2" rel="stylesheet"/><link rel="stylesheet" href="../image-viewer.css?v=1"/>
+</head>
+<body data-lecture-label="AIML · Lecture 01 · History of artificial intelligence · Part 1">
+<div class="reveal"><div class="slides"><section class="part-cover" data-slide="part-cover" id="part-cover"><span class="kicker">Artificial Intelligence and Machine Learning · Lecture 01 of 16</span><div class="part-shell"><p class="part-label">History of artificial intelligence · Part 1</p><h1>Foundations and the birth of AI</h1><p class="part-intro">The first part connects the ideas that made AI possible: probability, computation, artificial neurons and early learning systems.</p><div class="part-topics"><div><span>01</span><strong>Probability and learning from evidence</strong></div><div><span>02</span><strong>Computation, Turing and early neurons</strong></div><div><span>03</span><strong>The birth of AI and early learning systems</strong></div></div></div></section><section class="concept-slide concept-index" data-slide="part-roadmap" id="part-roadmap"><span class="kicker">Lecture 01 · Concept map</span><h2>The ideas behind the historical milestones</h2><p class="concept-lead">Follow the story in order, or jump to a concept.</p><div class="concept-grid three"><div class="concept-card"><h3>Probability &amp; prediction</h3><p><a href="#/ml-workflow">Training and evaluation</a><a href="#/bayes-formula">Bayes: formula → example</a><a href="#/regression-model">Regression and least squares</a><a href="#/logistic-probability">Logistic / probit probabilities</a><a href="#/markov-transitions">Markov and hidden states</a></p></div><div class="concept-card"><h3>Computation &amp; reasoning</h3><p><a href="#/computation-model">What is computation?</a><a href="#/computation-limits">Computability and efficiency</a><a href="#/search-evaluation">Search and evaluation</a><a href="#/behavior-evaluation">Behavior and intelligence</a><a href="#/reasoning-search">Proofs and means–ends analysis</a></p></div><div class="concept-card"><h3>Neurons &amp; learning</h3><p><a href="#/neuron-logic">Threshold units and logic</a><a href="#/feedback-loop">Feedback loops</a><a href="#/hebbian-learning">Hebbian learning</a><a href="#/perceptron-learning">Perceptron: rule and limits</a><a href="#/symbolic-representation">Lisp and learning from play</a></p></div></div><p class="concept-small">Each concept slide links to its explanation in the handout.</p></section><section data-slide="aiml" id="aiml">
+<span class="kicker">Framing the course</span>
+<div class="cols" style="gap:90px">
+<div class="col fragment fade-up">
+<div class="card card-neural" style="height:100%">
+<span class="label">Artificial Intelligence</span>
+<p style="margin:.2em 0 .6em; font-size:1.05em">Engineering systems that <strong>reason, perceive, plan or learn</strong>.</p>
+<ul class="tight">
+<li>AI studies tasks associated with intelligent behavior</li>
+<li>Evaluate capabilities with explicit tasks and measures</li>
+<li><strong>Turing</strong> shifted the focus: from definition → <em>testable behavior</em></li>
+</ul>
+</div>
+</div>
+<div class="col fragment fade-up">
+<div class="card card-stat" style="height:100%">
+<span class="label">Machine Learning</span>
+<p style="margin:.2em 0 .6em; font-size:1.05em"><strong>Learning from data or experience</strong> — one major approach within AI.</p>
+<ul class="tight">
+<li>Learns <em>patterns from examples</em></li>
+<li>Requires data or experience and an objective</li>
+<li>Training updates a model; use need not involve further learning</li>
+</ul>
+</div>
+</div>
+</div>
+<p class="fragment fade-up" style="margin-top:36px; font-size:.6em; color:var(--text-muted)">
+      Also in this course: pattern recognition · computer vision · reinforcement learning · NLP
+    </p>
+</section>
+<section class="concept-slide neural" data-slide="ml-workflow" id="ml-workflow">
+<span class="kicker">Concepts · The birth of AI</span>
+<h2>What actually changes when a machine learns?</h2>
+<div class="concept-flow"><div class="concept-card"><h3>1 · Define the task</h3><p>Example: recognize spam.<br>Choose what counts as a good prediction.</p></div><span class="concept-arrow" aria-hidden="true">→</span><div class="concept-card"><h3>2 · Train</h3><p>Use labeled examples to adjust the model’s <strong>parameters</strong>.</p></div><span class="concept-arrow" aria-hidden="true">→</span><div class="concept-card"><h3>3 · Evaluate</h3><p>Check predictions on <strong>unseen examples</strong> to test generalization.</p></div></div><div class="concept-equation">Training: data → parameter updates<br>Prediction: input + trained model → output</div><p class="concept-takeaway fragment fade-up">Using a trained model usually leaves its parameters fixed. Further learning needs an update procedure.</p>
+<nav class="concept-links" aria-label="Concept resources"><a href="handout.html#chapter-aiml">Read the explanation in the handout →</a><a href="#/ml-workflow" aria-label="Permanent link to What actually changes when a machine learns?">Link to this slide</a></nav>
+</section><section data-slide="eras" id="eras" style="text-align:center">
+<span class="kicker">The road ahead</span>
+<h2 style="font-size:.95em; margin-bottom:.4em">Ten eras in the history of AI — at a glance</h2>
+<!-- filled via JS (js/slides.js → eras()) -->
+<div id="era-list"></div>
+</section><section class="chapter" data-slide="div-era-i" id="div-era-i">
+<span class="kicker">Chapter I</span>
+<h1 class="ct-title"><span>ERA I:</span> <em style="color:#45d6c0">Foundations · Statistics</em></h1>
+<p class="ct-year">1763 – 1936</p>
+</section><section data-slide="era-stat" id="era-stat" style="text-align:left">
+<span class="kicker">Era I — Foundations <b><span class="era stat">Statistics</span></b> 1763→1936</span>
+<h2 style="font-size:.9em; margin-bottom:.4em">Before computers, there was probability</h2>
+<!-- interactive timeline cards for the statistics era (left lane, keeps clear of the side figure) -->
+<div class="tl-cards" id="tl-stat" style="max-width:1350px; margin-top:-20px">
+<div class="fragment tl-row"><div class="tl-card card-stat">
+<span class="yr">1763</span>
+<div><h4>Bayes’ Theorem → is about updating uncertainty</h4>
+<p>Update a prior probability using the likelihood of observed evidence.</p></div>
+</div></div>
+<div class="fragment tl-row"><div class="tl-card card-stat">
+<span class="yr">1805–86</span>
+<div><h4>Linear Regression → is about describing relationships between variables</h4>
+<p>Least squares: Legendre (1805), Gauss (1809). Galton studied regression toward the mean (1886).</p></div>
+</div></div>
+<div class="fragment tl-row"><div class="tl-card card-stat">
+<span class="yr">1838–1944</span>
+<div><h4>Logistic Curve → Logit</h4>
+<p>Verhulst modeled continuous population growth; later logit models describe binary probabilities.</p></div>
+</div></div>
+<div class="fragment tl-row"><div class="tl-card card-stat">
+<span class="yr">1906</span>
+<div><h4>Markov Models → are about simplifying sequences</h4>
+<p>The <em>memorylessness</em> property: the next state depends only on the current one. For sequences — time series, text.</p></div>
+</div></div>
+<div class="fragment tl-row"><div class="tl-card card-stat">
+<span class="yr">1930s</span>
+<div><h4>Logistic and Probit Models → are about predicting categories</h4>
+<p>A binary-response model using the normal cumulative distribution; an alternative to logit.</p></div>
+</div></div>
+</div>
+</section><section data-slide="bayes" id="bayes" style="text-align:left">
+<span class="kicker">Era I — Statistics <b><span class="era stat">1763</span></b> · Bayes' Theorem</span>
+<div class="cols" style="gap:70px; align-items:center">
+<figure class="col fragment fade-up" style="flex:0 0 520px">
+<img alt="A graphical representation of Bayes' theorem" class="photo document-image" src="../_shared/history/assets/img/bayes_theorem.svg" style="height:380px"/>
+<figcaption>Graphical representation of Bayes’ theorem<span class="media-credit"><a href="https://en.wikipedia.org/wiki/Bayes%27_theorem" rel="noopener noreferrer" target="_blank">Wikimedia Commons · timeline source</a></span></figcaption>
+</figure>
+<div class="col fragment fade-up">
+<h2 style="font-size:.95em; margin-bottom:.4em">Bayes' Theorem</h2>
+<p style="font-size:.72em">Bayes’ theorem relates a <strong>posterior probability</strong> to a prior and the likelihood of evidence. Bayes’ essay was published posthumously in 1763.</p>
+<ul class="tight" style="margin-top:16px">
+<li>A foundational concept of <em>Bayesian thinking</em></li>
+<li>A core tool for developing statistical &amp; machine-learning models</li>
+<li>The bedrock that the whole era builds upon</li>
+</ul>
+</div>
+</div>
+</section>
+<section class="concept-slide stat" data-slide="bayes-formula" id="bayes-formula">
+<span class="kicker">Concepts · Statistics</span>
+<h2>Bayes: reverse the direction of the question</h2>
+<p class="concept-lead">H = hypothesis (“spam”) · E = evidence (“contains ‘prize’”)</p><div class="concept-equation">P(H | E) = <span class="concept-fraction"><span>P(H) · P(E | H)</span><span>P(E)</span></span><small>Read P(H | E) as “the probability of H, given E”; assume P(E) &gt; 0.</small></div><div class="concept-grid three"><div class="concept-card"><h3>Prior · P(H)</h3><p>How plausible is H <strong>before</strong> seeing E?</p></div><div class="concept-card"><h3>Likelihood · P(E | H)</h3><p>How likely is this evidence <strong>if H is true</strong>?</p></div><div class="concept-card"><h3>Posterior · P(H | E)</h3><p>How plausible is H <strong>after</strong> seeing E?</p></div></div><p class="concept-takeaway fragment fade-up"><strong>P(E)</strong> accounts for the evidence across all hypotheses; it makes the posterior probabilities sum to 1.</p>
+<nav class="concept-links" aria-label="Concept resources"><a href="handout.html#chapter-bayes">Read the explanation in the handout →</a><a href="#/bayes-formula" aria-label="Permanent link to Bayes: reverse the direction of the question">Link to this slide</a></nav>
+</section>
+<section class="concept-slide stat" data-slide="bayes-example" id="bayes-example">
+<span class="kicker">Concepts · Statistics</span>
+<h2>Bayes in numbers: is ‘prize’ enough?</h2>
+<p class="concept-lead">Toy inbox: 1,000 emails. Assume 10% are spam.</p><table class="concept-table"><thead><tr><th scope="col">Email type</th><th scope="col">Total</th><th scope="col">Contain ‘prize’</th><th scope="col">Matching emails</th></tr></thead><tbody><tr><td>Spam</td><td>100</td><td>80%</td><td>80</td></tr><tr><td>Not spam</td><td>900</td><td>10%</td><td>90</td></tr></tbody></table><div class="concept-equation">P(spam | ‘prize’) = 80 / (80 + 90) ≈ 47%<small>P(‘prize’) = 0.8 × 0.1 + 0.1 × 0.9 = 0.17</small></div><p class="concept-takeaway fragment fade-up">The evidence raises the probability from <strong>10% to 47%</strong> — even though 80% of spam contains ‘prize’.</p>
+<nav class="concept-links" aria-label="Concept resources"><a href="handout.html#chapter-bayes">Read the explanation in the handout →</a><a href="#/bayes-example" aria-label="Permanent link to Bayes in numbers: is ‘prize’ enough?">Link to this slide</a></nav>
+</section>
+<section class="concept-slide stat" data-slide="bayes-lessons" id="bayes-lessons">
+<span class="kicker">Concepts · Statistics</span>
+<h2>What the Bayesian update is telling us</h2>
+<div class="concept-grid"><div class="concept-card"><h3>The direction matters</h3><p>P(‘prize’ | spam) = <strong>80%</strong><br>P(spam | ‘prize’) ≈ <strong>47%</strong><br>These answer different questions.</p></div><div class="concept-card"><h3>The starting rate matters</h3><p>There are many more legitimate emails. Even a small matching fraction contributes many examples.</p></div></div><div class="concept-equation">Posterior ∝ likelihood × prior<small>For the same evidence, compare candidate classes using both ingredients.</small></div><p class="concept-takeaway fragment fade-up">Bayes’ theorem is a probability identity. The <strong>prior and likelihood must be specified or estimated</strong>; the formula does not supply them.</p>
+<nav class="concept-links" aria-label="Concept resources"><a href="handout.html#chapter-bayes">Read the explanation in the handout →</a><a href="#/bayes-lessons" aria-label="Permanent link to What the Bayesian update is telling us">Link to this slide</a></nav>
+</section><section data-slide="linreg" id="linreg" style="text-align:left">
+<span class="kicker">Era I — Statistics <b><span class="era stat">1805–1886</span></b> · Linear Regression</span>
+<div class="cols" style="gap:70px; align-items:center">
+<figure class="col fragment fade-up" style="flex:0 0 520px">
+<img alt="Francis Galton's illustration of parent–child height correlation" class="photo document-image" src="../_shared/history/assets/img/galton_regression.jpg" style="height:380px"/>
+<figcaption>Galton’s 1886 study of parent–child height correlation<span class="media-credit"><a href="https://en.wikipedia.org/wiki/Linear_regression" rel="noopener noreferrer" target="_blank">Wikimedia Commons · timeline source</a></span></figcaption>
+</figure>
+<div class="col fragment fade-up">
+<h2 style="font-size:.95em; margin-bottom:.4em">Linear Regression</h2>
+<p style="font-size:.72em"><a href="https://en.wikipedia.org/wiki/Linear_regression"><strong>Linear regression</strong></a> is one of the simplest models in statistical analysis: it assesses a linear law between two or more variables of interest.</p>
+<ul class="tight" style="margin-top:16px">
+<li>Galton’s 1886 height study describes <em>regression toward the mean</em></li>
+<li>Least squares: <strong>Legendre published in 1805</strong>; Gauss gave a probabilistic treatment in 1809</li>
+<li>Still one of the most widely used models today</li>
+</ul>
+</div>
+</div>
+</section>
+<section class="concept-slide stat" data-slide="regression-model" id="regression-model">
+<span class="kicker">Concepts · Statistics</span>
+<h2>Linear regression: a model you can read</h2>
+<div class="concept-equation">ŷ = w₁x₁ + w₂x₂ + b<small>x = predictors · ŷ = predicted response · w = learned weights · b = intercept</small></div><div class="concept-grid"><div class="concept-card"><h3>Representation</h3><p>A weighted sum describes how an output varies with its inputs. The intercept sets a baseline.</p></div><div class="concept-card"><h3>Toy example</h3><p>Predicted score = 40 + 5 × study hours<br>4 hours → <strong>60 points</strong><br>The slope is 5 points per extra hour.</p></div></div><p class="concept-takeaway fragment fade-up">A linear relationship is a <strong>modeling assumption</strong>. Choosing a linear model is not a claim that reality is always linear; it is a choice of representation. Sometimes that simplicity is worth more than perfect accuracy.</p>
+<nav class="concept-links" aria-label="Concept resources"><a href="handout.html#chapter-linreg">Read the explanation in the handout →</a><a href="#/regression-model" aria-label="Permanent link to Linear regression: a model you can read">Link to this slide</a></nav>
+</section>
+<section class="concept-slide stat" data-slide="least-squares" id="least-squares">
+<span class="kicker">Concepts · Statistics</span>
+<h2>How do we choose the line? Minimize error.</h2>
+<div class="concept-equation">Residual: rᵢ = yᵢ − ŷᵢ<br>Choose w and b to minimize Σᵢ (yᵢ − ŷᵢ)²<small>yᵢ is an observed response; ŷᵢ is the model’s prediction for that example.</small></div><table class="concept-table"><thead><tr><th scope="col">Candidate predictions</th><th scope="col">Residuals</th><th scope="col">Sum of squared errors</th></tr></thead><tbody><tr><td>Line A</td><td>−2, +2</td><td>4 + 4 = 8</td></tr><tr><td>Line B</td><td>0, +5</td><td>0 + 25 = 25</td></tr></tbody></table><p class="concept-takeaway fragment fade-up">Squaring prevents positive and negative errors from canceling, and penalizes large misses more. <strong>Line A fits these observations better.</strong></p><p class="concept-small">A better fit on training data still needs evaluation on unseen data.</p>
+<nav class="concept-links" aria-label="Concept resources"><a href="handout.html#chapter-linreg">Read the explanation in the handout →</a><a href="#/least-squares" aria-label="Permanent link to How do we choose the line? Minimize error.">Link to this slide</a></nav>
+</section><section data-slide="logreg" id="logreg" style="text-align:left">
+<span class="kicker">Era I — Statistics <b><span class="era stat">1838–1944</span></b> · Logistic Regression</span>
+<div class="cols" style="gap:70px; align-items:center">
+<figure class="col fragment fade-up" style="flex:0 0 520px">
+<img alt="Verhulst’s historical population-growth curves" class="photo document-image" src="../_shared/history/assets/img/logistic_curve.png" style="height:380px"/>
+<figcaption>Verhulst’s historical population-growth curves<span class="media-credit"><a href="https://en.wikipedia.org/wiki/Logistic_function" rel="noopener noreferrer" target="_blank">Wikimedia Commons · timeline source</a></span></figcaption>
+</figure>
+<div class="col fragment fade-up">
+<h2 style="font-size:.95em; margin-bottom:.4em">From the logistic curve to logistic regression</h2>
+<p style="font-size:.72em">The same sigmoid shape connects two distinct models: <strong>continuous population growth</strong> and <strong>binary-response probabilities</strong>.</p>
+<ul class="tight" style="margin-top:16px">
+<li>Verhulst’s 1838 work concerns population growth, not binary regression</li>
+<li>Berkson popularized the logistic alternative to probit and the term <em>logit</em> in 1944</li>
+<li>Still widely applied to classification problems</li>
+</ul>
+</div>
+</div>
+</section>
+<section class="concept-slide stat" data-slide="logistic-probability" id="logistic-probability">
+<span class="kicker">Concepts · Statistics</span>
+<h2>From a score to a probability to a decision</h2>
+<div class="concept-flow"><div class="concept-card"><h3>Linear score</h3><p>z = w₁x₁ + w₂x₂ + b<br>Can be any real number.</p></div><span class="concept-arrow" aria-hidden="true">→</span><div class="concept-card"><h3>Sigmoid</h3><p>p = 1 / (1 + e<sup>−z</sup>)<br>Maps z into (0, 1).</p></div><span class="concept-arrow" aria-hidden="true">→</span><div class="concept-card"><h3>Decision</h3><p>Predict class 1 if p ≥ τ.<br>τ is a chosen threshold.</p></div></div><table class="concept-table"><thead><tr><th scope="col">Score z</th><th scope="col">Probability p</th><th scope="col">Decision if τ = 0.5</th></tr></thead><tbody><tr><td>−2</td><td>≈ 0.12</td><td>Class 0</td></tr><tr><td>0</td><td>0.50</td><td>Class 1</td></tr><tr><td>+2</td><td>≈ 0.88</td><td>Class 1</td></tr></tbody></table><p class="concept-takeaway fragment fade-up">Logistic regression models a <strong>binary outcome’s probability</strong>. Changing the threshold changes decisions, without changing those probabilities.</p>
+<nav class="concept-links" aria-label="Concept resources"><a href="handout.html#chapter-logreg">Read the explanation in the handout →</a><a href="#/logistic-probability" aria-label="Permanent link to From a score to a probability to a decision">Link to this slide</a></nav>
+</section><section data-slide="markov" id="markov" style="text-align:left">
+<span class="kicker">Era I — Statistics <b><span class="era stat">1906</span></b> · Markov Chain</span>
+<div class="cols" style="gap:70px; align-items:center">
+<figure class="col fragment fade-up" style="flex:0 0 520px">
+<img alt="The mathematician Andrey Markov" class="photo portrait" src="../_shared/history/assets/img/markov_portrait.jpg" style="height:380px"/>
+<figcaption>Andrey Markov · mathematician<span class="media-credit"><a href="https://en.wikipedia.org/wiki/Andrey_Markov" rel="noopener noreferrer" target="_blank">Wikimedia Commons · timeline source</a></span></figcaption>
+</figure>
+<div class="col fragment fade-up">
+<h2 style="font-size:.95em; margin-bottom:.4em">Markov Chain</h2>
+<p style="font-size:.72em">Named after its inventor, <a href="https://en.wikipedia.org/wiki/Andrey_Markov"><strong>Andrey Markov</strong></a>, the chain is used in sequential data analysis — time series, sentences, proteic sequences.</p>
+<ul class="tight" style="margin-top:16px">
+<li>The <em>Markov (memorylessness) property</em>: the next state depends only on the current one</li>
+<li><strong>The future is independent of the past, given the present</strong></li>
+<li>Foundation of <a href="https://en.wikipedia.org/wiki/Hidden_Markov_model"><span class="chip" style="background:rgba(69,214,192,.12);border:none;color:#45d6c0">Hidden Markov Models</span></a>, long used in NLP</li>
+</ul>
+</div>
+</div>
+</section>
+<section class="concept-slide stat" data-slide="markov-transitions" id="markov-transitions">
+<span class="kicker">Concepts · Statistics</span>
+<h2>A sequence model that keeps one current state</h2>
+<div class="concept-equation">P(next state | entire history) = P(next state | current state)<small>The Markov assumption: earlier history adds no information once the current state is known.</small></div><table class="concept-table"><thead><tr><th scope="col">Today ↓ / Tomorrow →</th><th scope="col">Sunny</th><th scope="col">Rainy</th></tr></thead><tbody><tr><td>Sunny</td><td>0.8</td><td>0.2</td></tr><tr><td>Rainy</td><td>0.4</td><td>0.6</td></tr></tbody></table><p class="concept-small">Illustrative transition probabilities. Each row sums to 1.</p><p class="concept-takeaway fragment fade-up">If today is rainy, this model predicts <strong>60% rain tomorrow</strong>, regardless of yesterday. Whether that simplification is useful depends on the chosen state.</p>
+<nav class="concept-links" aria-label="Concept resources"><a href="handout.html#chapter-markov">Read the explanation in the handout →</a><a href="#/markov-transitions" aria-label="Permanent link to A sequence model that keeps one current state">Link to this slide</a></nav>
+</section>
+<section class="concept-slide stat" data-slide="hidden-markov" id="hidden-markov">
+<span class="kicker">Concepts · Statistics</span>
+<h2>What if we cannot observe the state?</h2>
+<div class="concept-flow"><div class="concept-card"><h3>Hidden states</h3><p>Weather today → weather tomorrow<br>States evolve through <strong>transitions</strong>.</p></div><span class="concept-arrow" aria-hidden="true">→</span><div class="concept-card"><h3>Observations</h3><p>Umbrella today · umbrella tomorrow<br>Each state can produce observable <strong>evidence</strong>.</p></div></div><div class="concept-grid"><div class="concept-card"><h3>Ordinary Markov chain</h3><p>We observe the current state and predict the next state.</p></div><div class="concept-card"><h3>Hidden Markov model</h3><p>We observe indirect signals and infer the hidden state sequence.</p></div></div><p class="concept-takeaway fragment fade-up">An umbrella suggests rain, but does not prove it. Combine <strong>state transitions + observation probabilities</strong> to reason under uncertainty.</p>
+<nav class="concept-links" aria-label="Concept resources"><a href="handout.html#chapter-markov">Read the explanation in the handout →</a><a href="#/hidden-markov" aria-label="Permanent link to What if we cannot observe the state?">Link to this slide</a></nav>
+</section><section data-slide="probit" id="probit" style="text-align:left">
+<span class="kicker">Era I — Statistics <b><span class="era stat">1930s</span></b> · Probit Model</span>
+<div class="cols" style="gap:70px; align-items:center">
+<figure class="col fragment fade-up" style="flex:0 0 520px">
+<img alt="A comparison between logit and probit models" class="photo document-image" src="../_shared/history/assets/img/probit_logit.png" style="height:380px">
+<figcaption>Logit and probit fitted curves<span class="media-credit"><a href="http://www.econometricsbysimulation.com/2012/07/probit-vs-logit.html?m=0" rel="noopener noreferrer" target="_blank">Francis Smart · timeline source</a></span></figcaption>
+</img></figure>
+<div class="col fragment fade-up">
+<h2 style="font-size:.95em; margin-bottom:.4em">Probit Model</h2>
+<p style="font-size:.72em">Like other regression models, the probit model was rediscovered many times and became popular in the 1930s for classification tasks.</p>
+<ul class="tight" style="margin-top:16px">
+<li>A sibling of logistic regression — a different link function on the same idea</li>
+<li>Uses the standard normal CDF to map a linear score to a probability</li>
+<li>Remains a useful alternative to logistic regression</li>
+</ul>
+</div>
+</div>
+</section>
+<section class="concept-slide stat" data-slide="probit-probability" id="probit-probability">
+<span class="kicker">Concepts · Statistics</span>
+<h2>Logit and probit: two probability mappings</h2>
+<p class="concept-lead">Start from the same kind of linear score: z = w · x + b.</p><div class="concept-grid"><div class="concept-card"><h3>Logistic model</h3><p>p = 1 / (1 + e<sup>−z</sup>)<br>The logistic sigmoid maps a score to a probability.</p></div><div class="concept-card"><h3>Probit model</h3><p>p = Φ(z)<br>Φ(z) is the probability that a standard normal variable is ≤ z.</p></div></div><div class="concept-equation">Both: real-valued score → probability in (0, 1)<small>Both give p = 0.5 at z = 0; their scales and tail behavior differ.</small></div><p class="concept-takeaway fragment fade-up">The choice expresses different distributional assumptions. <strong>Neither mapping is universally best.</strong></p>
+<nav class="concept-links" aria-label="Concept resources"><a href="handout.html#chapter-probit">Read the explanation in the handout →</a><a href="#/probit-probability" aria-label="Permanent link to Logit and probit: two probability mappings">Link to this slide</a></nav>
+</section><section class="chapter" data-slide="div-era-ii" id="div-era-ii">
+<span class="kicker">Chapter II</span>
+<h1 class="ct-title"><span>ERA II:</span> <em style="color:#c792ea">Computation Theory &amp; Turing</em></h1>
+<p class="ct-year">1936 – 1950</p>
+</section><section data-slide="era2-stat" id="era2-stat" style="text-align:left">
+<span class="kicker">Era II — Computation Theory <b><span class="era comp">1936–1950</span></b></span>
+<h2 style="font-size:.9em; margin-bottom:.4em">Before the machine, a definition of computation</h2>
+<div class="tl-cards" id="tl-era2" style="max-width:1350px; margin-top:-20px">
+<div class="fragment tl-row"><div class="tl-card card-comp">
+<span class="yr">1936–37</span>
+<div><h4>Computability and Its Limits</h4>
+<p>Church and Turing formalize effective procedures and prove the general decision problem undecidable.</p></div>
+</div></div>
+<div class="fragment tl-row"><div class="tl-card card-comp">
+<span class="yr">1940s–50s</span>
+<div><h4>Early Chess Algorithms · TuroChamp</h4>
+<p>Turing and Champernowne specify chess decisions before a practical contemporary implementation.</p></div>
+</div></div>
+<div class="fragment tl-row"><div class="tl-card card-comp">
+<span class="yr">1950</span>
+<div><h4>The Imitation Game (“Turing Test”)</h4>
+<p>“Computing Machinery and Intelligence”: machine intelligence framed as observable behavior.</p></div>
+</div></div>
+</div>
+</section><section class="concept-slide comp era-focus" data-slide="churchturing" id="churchturing">
+<span class="kicker">Era II — Computation Theory <b><span class="era comp">1936</span></b> · Church–Turing Thesis</span>
+<h2>What counts as a computation?</h2>
+<div class="era-layout">
+<figure class="era-media"><div class="video-card" data-youtube="vo8izCKHiF0">
+<img alt="Mechanical Turing Machine in Wood — video preview" class="video-poster" src="../_shared/history/assets/img/turing_machine_video.jpg"/>
+<button aria-label="Play Mechanical Turing Machine in Wood" type="button"><span>▶ Play video</span></button>
+</div><figcaption>A wooden implementation of a Turing machine · modern demonstration<span class="media-credit"><a href="https://www.youtube.com/watch?v=vo8izCKHiF0" rel="noopener noreferrer" target="_blank">Richard Ridel · from timeline.md</a></span></figcaption>
+<p class="video-links"><a href="https://www.youtube.com/watch?v=vo8izCKHiF0" rel="noopener noreferrer" target="_blank">Watch on YouTube ↗</a></p></figure>
+<div class="era-explanation">
+<p class="concept-lead">Can we make “a calculation carried out by precise rules” mathematically exact?</p>
+<ul class="era-steps">
+<li class="fragment fade-up"><strong>Alonzo Church: functions.</strong> Lambda calculus expresses computation through functions applied to arguments.</li>
+<li class="fragment fade-up"><strong>Alan Turing: a machine.</strong> An unbounded tape, a read/write head and rules for changing symbols and moving.</li>
+<li class="fragment fade-up"><strong>Same computational power.</strong> Both formalisms describe exactly the same class of computable functions.</li>
+</ul>
+</div>
+</div>
+<p class="concept-takeaway fragment fade-up"><strong>The thesis:</strong> Anything that can be computed by a clear, finite, mechanical step-by-step procedure can be computed by a Turing machine. It does not say that every problem is computable.</p>
+<nav class="concept-links" aria-label="Concept resources"><a href="handout.html#chapter-churchturing">Read the handout →</a><a href="#/computation-model">How the machine works →</a><a href="#/computation-limits">Computability and its limits →</a></nav>
+</section>
+<section class="concept-slide comp" data-slide="computation-model" id="computation-model">
+<span class="kicker">Concepts · Computation &amp; Turing</span>
+<h2>A Turing machine: read → apply a rule → move</h2>
+<svg class="turing-machine-diagram" viewBox="0 0 1720 520" role="img" aria-labelledby="tm-title tm-description" xmlns="http://www.w3.org/2000/svg">
+<title id="tm-title">One step of a Turing machine, connecting its parts to its operations</title>
+<desc id="tm-description">An unbounded tape contains symbols. The read/write head is over a cell containing 1. In the example, the machine is in state q0. Its rule for state q0 and symbol 1 says to write 0, enter state q1, and move the head one cell right. The three connected boxes explain reading, applying the rule, and moving and repeating. Other rules may move left; computation stops if a halting state is reached.</desc>
+<defs><marker id="tm-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 Z" fill="#c792ea"/></marker></defs>
+<g font-family="Segoe UI, Arial, sans-serif" fill="#e8ecf4">
+<text x="40" y="73" font-size="32" fill="#c792ea">Unbounded tape</text>
+<text x="40" y="116" font-size="27" fill="#93a0b6">One symbol per cell · □ = blank</text>
+<path d="M450 112 H500 M1220 112 H1280" stroke="#93a0b6" stroke-width="3" stroke-dasharray="6 8"/>
+<rect x="500" y="72" width="720" height="80" rx="3" fill="#141a26" stroke="#93a0b6" stroke-width="2"/>
+<path d="M580 72 V152 M660 72 V152 M740 72 V152 M820 72 V152 M900 72 V152 M980 72 V152 M1060 72 V152 M1140 72 V152" stroke="#93a0b6" stroke-width="2"/>
+<rect x="820" y="72" width="80" height="80" fill="#30233d" stroke="#c792ea" stroke-width="4"/>
+<g font-size="38" text-anchor="middle"><text x="540" y="125">□</text><text x="620" y="125">0</text><text x="700" y="125">1</text><text x="780" y="125">1</text><text x="860" y="125" fill="#c792ea">1</text><text x="940" y="125">0</text><text x="1020" y="125">□</text><text x="1100" y="125">□</text><text x="1180" y="125">□</text></g>
+<path d="M860 49 H940" stroke="#c792ea" stroke-width="3" marker-end="url(#tm-arrow)"/>
+<text x="970" y="49" font-size="27" fill="#c792ea">R: one cell right</text>
+<path d="M842 171 L860 152 L878 171" fill="#30233d" stroke="#c792ea" stroke-width="3"/>
+<rect x="747" y="171" width="226" height="54" rx="10" fill="#30233d" stroke="#c792ea" stroke-width="2"/>
+<text x="860" y="207" text-anchor="middle" font-size="28">Read/write head</text>
+<!-- Connect the physical head to the first operation, and movement back to the tape. -->
+<path d="M747 198 H275 V276" fill="none" stroke="#c792ea" stroke-width="2" marker-end="url(#tm-arrow)"/>
+<path d="M1455 276 V112 H1288" fill="none" stroke="#c792ea" stroke-width="2" marker-end="url(#tm-arrow)"/>
+<text x="1480" y="194" font-size="25" fill="#93a0b6">Next cell,</text><text x="1480" y="228" font-size="25" fill="#93a0b6">next step</text>
+<g fill="#141a26" stroke="#c792ea" stroke-width="2"><rect x="40" y="280" width="470" height="216" rx="14"/><rect x="600" y="280" width="530" height="216" rx="14"/><rect x="1230" y="280" width="450" height="216" rx="14"/></g>
+<path d="M521 385 H586" stroke="#c792ea" stroke-width="3" marker-end="url(#tm-arrow)"/>
+<path d="M1141 385 H1216" stroke="#c792ea" stroke-width="3" marker-end="url(#tm-arrow)"/>
+<g font-size="32" fill="#c792ea" font-weight="600"><text x="68" y="326">1 · Read</text><text x="628" y="326">2 · Apply a rule</text><text x="1258" y="326">3 · Move and repeat</text></g>
+<g font-size="29">
+<text x="68" y="376">Read the symbol under the head.</text><text x="68" y="421">Here: 1; current state: q₀.</text><text x="68" y="466" font-size="25" fill="#93a0b6">q₀ is the current control state.</text>
+<text x="628" y="376">Look up (state q₀, symbol 1).</text><text x="628" y="421">Write 0 · enter q₁ · move R.</text><text x="628" y="466" font-size="25" fill="#93a0b6">Illustrative entry in the rule table</text>
+<text x="1258" y="376">Move the head one cell right.</text><text x="1258" y="421">Read again in state q₁.</text><text x="1258" y="466" font-size="25" fill="#93a0b6">Other rules may move left (L).</text>
+</g>
+</g>
+</svg>
+<p class="concept-takeaway fragment fade-up">Each step depends only on the <strong>current state + scanned symbol</strong>. Repeat until a halting state is reached; some computations run forever.</p>
+<nav class="concept-links" aria-label="Concept resources"><a href="handout.html#chapter-churchturing">Read the explanation in the handout →</a><a href="#/computation-model" aria-label="Permanent link to the Turing machine diagram">Link to this slide</a></nav>
+</section>
+<section class="concept-slide comp" data-slide="computation-limits" id="computation-limits">
+<span class="kicker">Concepts · Computation &amp; Turing</span>
+<h2>Three different questions about an algorithm</h2>
+<div class="concept-grid three"><div class="concept-card"><h3>Computability</h3><p>Does an algorithm exist that always solves the problem?</p></div><div class="concept-card"><h3>Efficiency</h3><p>If it exists, how much time and memory does it require?</p></div><div class="concept-card"><h3>Implementation</h3><p>Can we run it on the hardware available to us?</p></div></div><div class="concept-equation">Undecidable ≠ merely slow<small>Example: no general algorithm can decide whether every arbitrary program/input pair will halt.</small></div><p class="concept-takeaway fragment fade-up">Equivalence of formal models and undecidability are mathematical results. The link to informal “effective calculation” is the <strong>thesis</strong>.</p>
+<nav class="concept-links" aria-label="Concept resources"><a href="handout.html#chapter-churchturing">Read the explanation in the handout →</a><a href="#/computation-limits" aria-label="Permanent link to Three different questions about an algorithm">Link to this slide</a></nav>
+</section><section class="concept-slide comp era-focus" data-slide="turochamp" id="turochamp">
+<span class="kicker">Era II — Computation Theory <b><span class="era comp">1940s–50s</span></b> · Chess Programs</span>
+<h2>TuroChamp: a procedure for choosing a move</h2>
+<div class="era-layout">
+<figure class="era-media">
+<img alt="The 1952 TuroChamp vs Glennie game" class="photo" src="../_shared/history/assets/img/turochamp_game.gif" style="height:380px"/>
+<figcaption>TuroChamp (white) vs. Glennie (black), 1952 · animated game<span class="media-credit"><a href="https://en.wikipedia.org/wiki/Turochamp#/media/File:TUROCHAMP_vs_Glennie,_1952.gif" rel="noopener noreferrer" target="_blank">Wikimedia Commons · timeline source</a></span></figcaption>
+</figure>
+<div class="era-explanation">
+<p class="concept-lead">Turing and Champernowne faced a useful challenge: clear rules, but far too many possible continuations to explore exhaustively.</p>
+<ol class="era-steps">
+<li class="fragment fade-up"><strong>1 · Search.</strong> Look ahead at candidate moves and possible replies.</li>
+<li class="fragment fade-up"><strong>2 · Evaluate.</strong> Score positions using material, mobility and development.</li>
+<li class="fragment fade-up"><strong>3 · Choose.</strong> Use those estimates to select a promising move.</li>
+</ol>
+<p class="concept-small">Search + evaluation turns a huge decision space into a manageable procedure.</p>
+</div>
+</div>
+<p class="concept-takeaway fragment fade-up"><strong>1952: execution on paper.</strong> Turing carried out the algorithm by hand. Specifying a procedure and running it on available hardware are different milestones.</p>
+<nav class="concept-links" aria-label="Concept resources"><a href="handout.html#chapter-turochamp">Read the handout →</a><a href="#/search-evaluation">Why search needs heuristics →</a></nav>
+</section>
+<section class="concept-slide comp" data-slide="search-evaluation" id="search-evaluation">
+<span class="kicker">Concepts · Computation &amp; Turing</span>
+<h2>Playing chess: search + evaluation</h2>
+<div class="concept-flow"><div class="concept-card"><h3>Generate</h3><p>List legal moves and possible opponent replies.</p></div><span class="concept-arrow" aria-hidden="true">→</span><div class="concept-card"><h3>Look ahead</h3><p>Explore continuations to a limited depth.</p></div><span class="concept-arrow" aria-hidden="true">→</span><div class="concept-card"><h3>Evaluate</h3><p>Score resulting positions; use likely replies to choose a move.</p></div></div><div class="concept-equation">10 choices at each step → 10⁴ = 10,000 paths after 4 steps<small>Toy branching example: the number of possibilities grows rapidly with depth.</small></div><p class="concept-takeaway fragment fade-up">A <strong>heuristic</strong> estimates which positions or paths look promising. It makes search practical, but need not identify the best possible move.</p>
+<nav class="concept-links" aria-label="Concept resources"><a href="handout.html#chapter-turochamp">Read the explanation in the handout →</a><a href="#/search-evaluation" aria-label="Permanent link to Playing chess: search + evaluation">Link to this slide</a></nav>
+</section><section class="concept-slide comp era-focus" data-slide="imitation" id="imitation">
+<span class="kicker">Era II — Computation Theory <b><span class="era comp">1950</span></b> · The Imitation Game</span>
+<h2>From “thinking” to an observable test</h2>
+<p class="concept-lead">In his 1950 paper <em>Computing Machinery and Intelligence</em>, Turing reframes “Can machines think?” as a question about conversational behavior. He proposed a way to make the question testable: <em>the imitation game</em>.</p>
+<div class="era-layout">
+<figure class="era-media">
+<img alt="Alan Turing" class="photo portrait" src="../_shared/history/assets/img/imitation_turing.jpg" style="height:380px"/>
+<figcaption>Alan Turing</figcaption>
+</figure>
+<div class="era-explanation">
+<div class="concept-grid">
+<div class="concept-card"><h3>A human</h3><p>Identity concealed</p></div>
+<div class="concept-card"><h3>A machine</h3><p>Identity concealed</p></div>
+</div>
+<p class="test-channel">↕ Typed messages only — no face, voice or body language ↕</p>
+<div class="concept-card test-examiner"><h3>A human examiner</h3><p>Asks questions and tries to identify which respondent is the machine.</p></div>
+<p class="fragment fade-up"><strong>The test:</strong> can the examiner reliably tell them apart under the chosen protocol?</p>
+</div>
+</div>
+<p class="concept-takeaway fragment fade-up"><strong>The shift:</strong> evaluate what a machine does. Conversational success alone does not establish consciousness or settle every meaning of intelligence.</p>
+<nav class="concept-links" aria-label="Concept resources"><a href="handout.html#chapter-imitation">Read the handout →</a><a href="#/behavior-evaluation">What the test can establish →</a></nav>
+</section>
+<section class="concept-slide comp" data-slide="behavior-evaluation" id="behavior-evaluation">
+<span class="kicker">Concepts · Computation &amp; Turing</span>
+<h2>What does the imitation game measure?</h2>
+<div class="concept-grid"><div class="concept-card"><h3>An operational test</h3><p>Specify a text conversation, an examiner and a protocol. Measure how reliably the examiner distinguishes human from machine.</p></div><div class="concept-card"><h3>Scope of the evidence</h3><p>The result concerns conversational behavior under that protocol. It does not, by itself, establish consciousness or inner experience.</p></div></div><p class="concept-takeaway fragment fade-up">A test makes a capability measurable. <strong>Its result supports only the claims that the test actually measures.</strong></p><p class="concept-small">Discussion: could a system be good at planning or perception but poor at imitating human conversation?</p>
+<nav class="concept-links" aria-label="Concept resources"><a href="handout.html#chapter-imitation">Read the explanation in the handout →</a><a href="#/behavior-evaluation" aria-label="Permanent link to What does the imitation game measure?">Link to this slide</a></nav>
+</section><section class="chapter" data-slide="div-era-iii" id="div-era-iii">
+<span class="kicker">Chapter III</span>
+<h1 class="ct-title"><span>ERA III:</span> <em style="color:#ff9d4d">Cybernetics &amp; Neurons</em></h1>
+<p class="ct-year">1943 – 49</p>
+</section><section data-slide="era3-stat" id="era3-stat" style="text-align:left">
+<span class="kicker">Era III — Cybernetics &amp; Neurons <b><span class="era cyber">1943–49</span></b></span>
+<h2 style="font-size:.9em; margin-bottom:.4em">From biology to the first artificial neuron</h2>
+<div class="tl-cards" id="tl-era3" style="max-width:1350px; margin-top:-20px">
+<div class="fragment tl-row"><div class="tl-card card-cyber">
+<span class="yr">1943</span>
+<div><h4>McCulloch &amp; Pitts Neuron — What does a single processing unit compute?</h4>
+<p>An influential logical model of idealized neural activity, without a learned-weight rule.</p></div>
+</div></div>
+<div class="fragment tl-row"><div class="tl-card card-cyber">
+<span class="yr">1948</span>
+<div><h4>Wiener Publishes “Cybernetics” — How does a whole system regulate its own behavior?</h4>
+<p>The science of regulatory systems &amp; feedback — a field at AI's root.</p></div>
+</div></div>
+<div class="fragment tl-row"><div class="tl-card card-cyber">
+<span class="yr">1949</span>
+<div><h4>Hebb’s Learning Postulate — How do neural connections change with experience?</h4>
+<p>Correlated neural activity can strengthen connections — inspiration for later learning rules.</p></div>
+</div></div>
+</div>
+</section><section data-slide="mp-neuron" id="mp-neuron" style="text-align:left">
+<span class="kicker">Era III — Cybernetics &amp; Neurons <b><span class="era cyber">1943</span></b> · McCulloch–Pitts Neuron</span>
+<div class="cols" style="gap:60px; align-items:center">
+<figure class="col fragment fade-up" style="flex:0 0 380px">
+<img alt="The structure of an artificial neuron" class="photo document-image" src="../_shared/history/assets/img/mcculloch_pitts.png" style="height:320px"/>
+<figcaption>Generalized artificial-neuron structure<span class="media-credit"><a href="https://en.wikipedia.org/wiki/Artificial_neuron#/media/File:Artificial_neuron.png" rel="noopener noreferrer" target="_blank">Wikimedia Commons · timeline source</a></span></figcaption>
+</figure>
+<div class="col fragment fade-up">
+<h3 style="font-size:.78em; color:var(--c-cyber)">McCulloch &amp; Pitts · 1943</h3>
+<p style="font-size:.8em">Designed by cybernetician Warren McCulloch and logician Walter Pitts to model neuronal activity.</p>
+<ul class="tight" style="margin-top:12px">
+<li>Binary inputs &amp; output</li>
+<li>Original model: excitatory and inhibitory inputs; diagram: a generalized teaching abstraction</li>
+<li><strong>Threshold function</strong> decides the firing output (0 / 1)</li>
+</ul>
+</div>
+</div>
+<!-- interactive diagram drawn on canvas -->
+<canvas id="neuron-canvas" style="width:760px; height:340px; margin-top:14px"></canvas>
+</section>
+<section class="concept-slide cyber" data-slide="neuron-logic" id="neuron-logic">
+<span class="kicker">Concepts · Cybernetics &amp; neurons</span>
+<h2>A threshold unit can implement logic</h2>
+<div class="concept-equation">s = w₁x₁ + w₂x₂; output = 1 if s ≥ θ, else 0<small>Generalized teaching model · binary inputs · fixed weights w₁ = w₂ = 1</small></div><table class="concept-table"><thead><tr><th scope="col">Inputs (x₁, x₂)</th><th scope="col">Sum s</th><th scope="col">AND: θ = 2</th><th scope="col">OR: θ = 1</th></tr></thead><tbody><tr><td>(0, 0)</td><td>0</td><td>0</td><td>0</td></tr><tr><td>(0, 1) or (1, 0)</td><td>1</td><td>0</td><td>1</td></tr><tr><td>(1, 1)</td><td>2</td><td>1</td><td>1</td></tr></tbody></table><p class="concept-takeaway fragment fade-up">Choosing weights and a threshold specifies <strong>what the unit computes</strong>. We still need a separate procedure to learn suitable parameters.</p>
+<nav class="concept-links" aria-label="Concept resources"><a href="handout.html#chapter-mp-neuron">Read the explanation in the handout →</a><a href="#/neuron-logic" aria-label="Permanent link to A threshold unit can implement logic">Link to this slide</a></nav>
+</section><section data-slide="cybernetics" id="cybernetics" style="text-align:left">
+<span class="kicker">Era III — Cybernetics &amp; Neurons <b><span class="era cyber">1948</span></b> · Norbert Wiener</span>
+<div class="cols" style="gap:70px; align-items:center">
+<figure class="col media-figure fragment fade-up"><img alt="First edition of Norbert Wiener's Cybernetics" class="photo media-archive" src="../_shared/history/assets/img/wiener_cybernetics.jpg"/><figcaption>Wiener’s <em>Cybernetics</em> · first edition, 1948<span class="media-credit"><a href="https://en.wikipedia.org/wiki/Cybernetics:_Or_Control_and_Communication_in_the_Animal_and_the_Machine#/media/File:CyberneticsBook.jpg" rel="noopener noreferrer" target="_blank">Wikimedia Commons · timeline source</a></span></figcaption></figure>
+<div class="col fragment fade-up">
+<h3 style="font-size:.78em; color:var(--c-cyber)">Cybernetics · 1948 — Norbert Wiener</h3>
+<p style="font-size:.72em"><em>“Control and Communication in the Animal and the Machine”</em></p>
+<ul class="tight" style="margin-top:12px">
+<li>The science of <strong>regulatory systems &amp; feedback</strong></li>
+<li>A transdisciplinary field that gathers AI, analog computing, neuroscience &amp; communication</li>
+</ul>
+</div>
+</div>
+</section>
+<section class="concept-slide cyber" data-slide="feedback-loop" id="feedback-loop">
+<span class="kicker">Concepts · Cybernetics &amp; neurons</span>
+<h2>Feedback: observe → compare → adjust</h2>
+<div class="concept-flow"><div class="concept-card"><h3>Observe</h3><p>Thermostat measures<br><strong>19 °C</strong>.</p></div><span class="concept-arrow" aria-hidden="true">→</span><div class="concept-card"><h3>Compare</h3><p>Target: 21 °C<br>Error: <strong>+2 °C</strong>.</p></div><span class="concept-arrow" aria-hidden="true">→</span><div class="concept-card"><h3>Act</h3><p>Turn on heating.<br>Measure again.</p></div></div><div class="concept-equation">Action → environment → measurement → next action ↻<small>The loop reacts to disturbances, such as an open window.</small></div><p class="concept-takeaway fragment fade-up">Feedback changes the next <strong>action</strong>. Learning changes the system’s <strong>parameters or decision rule</strong>; a fixed thermostat can use feedback without learning.</p>
+<nav class="concept-links" aria-label="Concept resources"><a href="handout.html#chapter-cybernetics">Read the explanation in the handout →</a><a href="#/feedback-loop" aria-label="Permanent link to Feedback: observe → compare → adjust">Link to this slide</a></nav>
+</section><section data-slide="hebb" id="hebb" style="text-align:left">
+<span class="kicker">Era III — Cybernetics &amp; Neurons <b><span class="era cyber">1949</span></b> · Hebb's Rule</span>
+<div class="cols" style="gap:70px; align-items:center">
+<figure class="col media-figure fragment fade-up"><img alt="Donald Olding Hebb" class="photo portrait" src="../_shared/history/assets/img/donald_hebb.gif"><figcaption>Donald Hebb · neuropsychologist<span class="media-credit"><a href="https://en.wikipedia.org/wiki/Donald_O._Hebb#/media/File:Donald_Hebb.gif" rel="noopener noreferrer" target="_blank">Wikimedia Commons · timeline source</a></span></figcaption></img></figure>
+<div class="col fragment fade-up">
+<h3 style="font-size:.78em; color:var(--c-cyber)">Hebb's Rule · 1949 — Donald Hebb</h3>
+<p style="font-size:.72em"><em>“The Organization of Behavior. A Neuropsychological Theory”</em></p>
+<div class="quote" style="margin-top:12px">
+<span class="q">Neurons that fire together wire together.</span>
+<div class="attrib">Correlated activity can strengthen neural connections.</div>
+</div>
+</div>
+</div>
+</section>
+<section class="concept-slide cyber" data-slide="hebbian-learning" id="hebbian-learning">
+<span class="kicker">Concepts · Cybernetics &amp; neurons</span>
+<h2>Unsupervised learning from co-activity</h2>
+<div class="concept-equation">Δwᵢⱼ = η xᵢ xⱼ<small>A simple later mathematical illustration of Hebbian learning; η &gt; 0 sets the update size.</small></div><div class="concept-grid"><div class="concept-card"><h3>Local signal</h3><p>When both connected units are active, their connection strengthens. With binary activities, if either is 0, this update is 0.</p></div><div class="concept-card"><h3>No target answer</h3><p>The rule reinforces co-occurrence. It does not compare a prediction with a correct label.</p></div></div><p class="concept-takeaway fragment fade-up">Experience can change a connection <strong>without an external teacher</strong>. Co-activity alone does not tell us whether a prediction is correct.</p>
+<nav class="concept-links" aria-label="Concept resources"><a href="handout.html#chapter-hebb">Read the explanation in the handout →</a><a href="#/hebbian-learning" aria-label="Permanent link to Learning from co-activity">Link to this slide</a></nav>
+</section><section class="chapter" data-slide="div-era-iv" id="div-era-iv">
+<span class="kicker">Chapter IV</span>
+<h1 class="ct-title"><span>ERA IV:</span> <em style="color:#4db8ff">The Birth of AI</em></h1>
+<p class="ct-year">1950s</p>
+</section><section data-slide="era4-stat" id="era4-stat" style="text-align:left">
+<span class="kicker">Era IV — The Birth of AI <b><span class="era neural">1950s</span></b></span>
+<h2 style="font-size:.9em; margin-bottom:.4em">A field is born, and names itself</h2>
+<div class="tl-cards" id="tl-era4" style="max-width:1350px; margin-top:-20px">
+<div class="fragment tl-row"><div class="tl-card card-neural">
+<span class="yr">1955–61</span>
+<div><h4>Logic Theorist &amp; General Problem Solver</h4>
+<p>Early demonstrations of automated reasoning, heuristic search and means–ends analysis.</p></div>
+</div></div>
+<div class="fragment tl-row"><div class="tl-card card-neural">
+<span class="yr">1955–56</span>
+<div><h4>Dartmouth Proposal and Workshop</h4>
+<p>The 1955 proposal uses “artificial intelligence”; the summer study follows in 1956.</p></div>
+</div></div>
+<div class="fragment tl-row"><div class="tl-card card-neural">
+<span class="yr">1957</span>
+<div><h4>The Perceptron</h4>
+<p>Rosenblatt's neuron learns its weights — a working learning machine.</p></div>
+</div></div>
+<div class="fragment tl-row"><div class="tl-card card-neural">
+<span class="yr">1958–59</span>
+<div><h4>LISP &amp; “Machine Learning”</h4>
+<p>McCarthy's AI language and Arthur Samuel naming the field.</p></div>
+</div></div>
+</div>
+</section><section data-slide="logic-theorist" id="logic-theorist" style="text-align:left">
+<span class="kicker">Era IV — The Birth of AI <b><span class="era neural">1955–56</span></b> · Logic Theorist &amp; GPS</span>
+<div class="cols" style="gap:70px; align-items:center">
+<figure class="col media-figure fragment fade-up"><img alt="Illustrative theorem-proving search tree" class="photo media-archive" src="../_shared/history/assets/img/proof_search.svg"/><figcaption>A schematic search through goals and known results<span class="media-credit"><a href="https://history.computer.org/shaw.html" rel="noopener noreferrer" target="_blank">Original teaching diagram · Logic Theorist context</a></span></figcaption></figure>
+<div class="col fragment fade-up">
+<h3 style="font-size:.78em; color:#4db8ff">Logic Theorist · developed 1955–56</h3>
+<p style="font-size:.72em">One of the first algorithms able to perform automated reasoning for theorem proving — it explores a search tree from an hypothesis toward the statement to prove.</p>
+<ul class="tight" style="margin-top:12px">
+<li>Proved 38 of 52 theorems in chapter 2 of <em>Principia Mathematica</em></li>
+<li>For one, found a more elegant proof than the book's own</li>
+</ul>
+<h3 class="fragment fade-up" style="font-size:.78em; color:#4db8ff; margin-top:22px">General Problem Solver · 1957–61</h3>
+<p class="fragment fade-up" style="font-size:.72em">Uses a new search method, <strong>means-ends analysis</strong>, to solve tasks like theorem proving or the Tower of Hanoi.</p>
+</div>
+</div>
+</section>
+<section class="concept-slide neural" data-slide="reasoning-search" id="reasoning-search">
+<span class="kicker">Concepts · The birth of AI</span>
+<h2>Turn reasoning into a search problem</h2>
+<div class="concept-flow"><div class="concept-card"><h3>Representation</h3><p>Encode known statements, a target and valid inference rules.</p></div><span class="concept-arrow" aria-hidden="true">→</span><div class="concept-card"><h3>Legal operations</h3><p>Apply a rule to derive another statement.</p></div><span class="concept-arrow" aria-hidden="true">→</span><div class="concept-card"><h3>Search strategy</h3><p>Choose which deduction or subgoal to explore next.</p></div></div><div class="concept-equation">Known: A and (A ⇒ B) → derive B<br>Known: B and (B ⇒ C) → derive C<small>Toy proof: find a chain of valid deductions that reaches the goal C.</small></div><p class="concept-takeaway fragment fade-up"><strong>Inference rules</strong> determine which steps are valid. <strong>Heuristics</strong> determine which valid steps to try first.</p>
+<nav class="concept-links" aria-label="Concept resources"><a href="handout.html#chapter-logic-theorist">Read the explanation in the handout →</a><a href="#/reasoning-search" aria-label="Permanent link to Turn reasoning into a search problem">Link to this slide</a></nav>
+</section>
+<section class="concept-slide neural" data-slide="means-ends" id="means-ends">
+<span class="kicker">Concepts · The birth of AI</span>
+<h2>Means–ends analysis: work on the gap</h2>
+<p class="concept-lead">General Problem Solver: compare the current state with the goal.</p><div class="concept-flow"><div class="concept-card"><h3>Find a difference</h3><p>Goal: have a book at home.<br>Current state: book is at the library.</p></div><span class="concept-arrow" aria-hidden="true">→</span><div class="concept-card"><h3>Choose an operator</h3><p>Borrow the book.<br>Precondition: be at the library with a valid card.</p></div><span class="concept-arrow" aria-hidden="true">→</span><div class="concept-card"><h3>Create subgoals</h3><p>Get the card and reach the library, then borrow the book.</p></div></div><p class="concept-takeaway fragment fade-up">Actions may require <strong>subgoals</strong> before they can be applied. A useful heuristic organizes search; it does not guarantee that every task is solvable.</p>
+<nav class="concept-links" aria-label="Concept resources"><a href="handout.html#chapter-logic-theorist">Read the explanation in the handout →</a><a href="#/means-ends" aria-label="Permanent link to Means–ends analysis: work on the gap">Link to this slide</a></nav>
+</section><section data-slide="dartmouth" id="dartmouth" style="text-align:left">
+<span class="kicker">Era IV — The Birth of AI <b><span class="era neural">1956</span></b> · Dartmouth Workshop</span>
+<div style="display:flex; gap:60px; align-items:center">
+<figure class="fragment fade-up" style="margin:0; flex:1">
+<img alt="Dartmouth 1956 workshop" class="photo" src="../_shared/history/assets/img/dartmouth.jpg" style="height:520px"/>
+<figcaption>Participants in the 1956 Dartmouth summer research project</figcaption>
+</figure>
+<div class="col fragment fade-up" style="text-align:left; flex:1">
+<h3 style="font-size:.85em; color:#4db8ff">“Artificial Intelligence” is born</h3>
+<ul class="tight" style="margin-top:16px">
+<li>The 1955 proposal names “artificial intelligence”; the workshop follows in 1956</li>
+<li>Proposal authors: McCarthy, Minsky, Rochester and Shannon</li>
+<li>An organizing milestone connecting existing research traditions</li>
+</ul>
+</div>
+</div>
+</section><section data-slide="perceptron" id="perceptron" style="text-align:left">
+<span class="kicker">Era IV — The Birth of AI <b><span class="era neural">1957</span></b> · Perceptron</span>
+<div class="cols" style="gap:70px; align-items:center">
+<figure class="col fragment fade-up" style="flex:0 0 520px">
+<img alt="Mark I Perceptron machine" class="photo" src="../_shared/history/assets/img/mark1_perceptron.jpeg" style="height:380px"/>
+<figcaption>Mark I Perceptron · an early learning machine<span class="media-credit"><a href="https://en.wikipedia.org/wiki/Perceptron#/media/File:Mark_I_perceptron.jpeg" rel="noopener noreferrer" target="_blank">Wikimedia Commons · timeline source</a></span></figcaption>
+</figure>
+<div class="col fragment fade-up">
+<h3 style="font-size:.78em; color:#4db8ff">Perceptron · 1957 — Frank Rosenblatt</h3>
+<p style="font-size:.72em">A new kind of artificial neuron, inspired by the McCulloch &amp; Pitts design, that can automatically update its weights from inputs and expected outputs.</p>
+<ul class="tight" style="margin-top:12px">
+<li>Supervised <strong>mistake-driven updates</strong> — distinct from Hebbian learning and the delta rule</li>
+<li>An important precursor of later neural learning systems</li>
+<li>Modern MLPs generally use differentiable nonlinear units and backpropagation</li>
+</ul>
+</div>
+</div>
+</section>
+<section class="concept-slide neural" data-slide="perceptron-learning" id="perceptron-learning">
+<span class="kicker">Concepts · The birth of AI</span>
+<h2>The perceptron learns from mistakes</h2>
+<div class="concept-equation">ŷ = 1 if w · x + b ≥ 0, else 0<br>w ← w + η(y − ŷ)x &nbsp; · &nbsp; b ← b + η(y − ŷ)<small>y ∈ {0, 1} is the target; ŷ is the prediction; η &gt; 0 is the learning rate.</small></div><div class="concept-grid"><div class="concept-card"><h3>Predict and compare</h3><p>Show a labeled example.<br>Compute the prediction and the difference y − ŷ.</p></div><div class="concept-card"><h3>Update and repeat</h3><p>Correct prediction → no update.<br>Wrong prediction → adjust weights and bias toward the target.</p></div></div><p class="concept-takeaway fragment fade-up">Unlike Hebbian co-activity, this update needs a <strong>correct answer</strong>. It is a supervised, mistake-driven rule; the delta rule is a different learning algorithm.</p>
+<nav class="concept-links" aria-label="Concept resources"><a href="handout.html#chapter-perceptron">Read the explanation in the handout →</a><a href="#/perceptron-learning" aria-label="Permanent link to The perceptron learns from mistakes">Link to this slide</a></nav>
+</section>
+<section class="concept-slide neural" data-slide="perceptron-boundary" id="perceptron-boundary">
+<span class="kicker">Concepts · The birth of AI</span>
+<h2>What can one perceptron represent?</h2>
+<div class="concept-equation">Decision boundary: w₁x₁ + w₂x₂ + b = 0<small>A straight line in two dimensions; a hyperplane with more inputs.</small></div><div class="concept-grid"><div class="concept-card"><h3>XOR: opposite corners share a class</h3><svg class="concept-plot" viewBox="0 0 600 340" role="img" aria-label="XOR inputs: zero at (0,0) and (1,1), one at (0,1) and (1,0). No single line separates the classes."><path d="M100 40 V280 H510" fill="none" stroke="#93a0b6" stroke-width="2"/><g font-family="Segoe UI,Arial" font-size="26" text-anchor="middle"><g fill="#e8ecf4"><text x="140" y="317">0</text><text x="460" y="317">1</text><text x="62" y="265">0</text><text x="62" y="88">1</text><text x="540" y="287">x₁</text><text x="75" y="35">x₂</text></g><g fill="#ff9d4d"><circle cx="140" cy="255" r="26"/><circle cx="460" cy="80" r="26"/></g><g fill="#45d6c0"><circle cx="140" cy="80" r="26"/><circle cx="460" cy="255" r="26"/></g><g fill="#0b0f17"><text x="140" y="264">0</text><text x="460" y="89">0</text><text x="140" y="89">1</text><text x="460" y="264">1</text></g></g></svg></div><div class="concept-card"><h3>Geometry limits learning</h3><p>XOR cannot be separated by one straight line.<br><br>More training cannot fix an insufficient representation. Networks of units can represent richer boundaries.</p></div></div><p class="concept-takeaway fragment fade-up">The perceptron converges on <strong>linearly separable</strong> training data. If no separating boundary exists, mistakes need not stop.</p>
+<nav class="concept-links" aria-label="Concept resources"><a href="handout.html#chapter-perceptron">Read the explanation in the handout →</a><a href="#/perceptron-boundary" aria-label="Permanent link to What can one perceptron represent?">Link to this slide</a></nav>
+</section><section data-slide="lisp-ml" id="lisp-ml" style="text-align:left">
+<span class="kicker">Era IV — The Birth of AI <b><span class="era neural">1958–59</span></b> · LISP &amp; “Machine Learning”</span>
+<div class="cols" style="gap:60px; align-items:center">
+<figure class="col media-figure fragment fade-up"><img alt="John McCarthy" class="photo portrait" src="../_shared/history/assets/img/mccarthy.jpg"/><figcaption>John McCarthy · creator of Lisp<span class="media-credit"><a href="https://web.stanford.edu/class/ee380/Abstracts/051102.html" rel="noopener noreferrer" target="_blank">Stanford University · EE380</a></span></figcaption></figure>
+<div class="col fragment fade-up">
+<h3 style="font-size:.78em; color:#4db8ff">LISP · 1958 — John McCarthy</h3>
+<p style="font-size:.72em">Inspired by IPL (Newell, Shaw &amp; Simon), McCarthy creates LISP — a high-level language for AI programming that powers algorithms like SHRDLU.</p>
+<h3 class="fragment fade-up" style="font-size:.78em; color:#7ee08a; margin-top:24px">“Machine Learning” · 1959</h3>
+<p class="fragment fade-up" style="font-size:.72em"><strong>Arthur Samuel</strong> popularizes the term while building a self-learning checkers algorithm.</p>
+</div>
+</div>
+</section>
+<section class="concept-slide neural" data-slide="symbolic-representation" id="symbolic-representation">
+<span class="kicker">Concepts · The birth of AI</span>
+<h2>Lisp: make symbolic structure easy to manipulate</h2>
+<div class="concept-grid"><div class="concept-card"><h3>Represent an expression</h3><p><code>(OR (NOT A) B)</code><br>A logical formula stored as nested lists.</p></div><div class="concept-card"><h3>Represent a computation</h3><p><code>(+ 1 2)</code><br>A list that yields 3 when evaluated as a program.</p></div></div><div class="concept-flow"><div class="concept-card"><h3>Build</h3><p>Create expressions from smaller parts.</p></div><span class="concept-arrow" aria-hidden="true">→</span><div class="concept-card"><h3>Traverse</h3><p>Use recursion to visit nested structures.</p></div><span class="concept-arrow" aria-hidden="true">→</span><div class="concept-card"><h3>Transform</h3><p>Rewrite expressions using explicit rules.</p></div></div><p class="concept-takeaway fragment fade-up">A program can manipulate <strong>symbolic expressions, including code, as data</strong>. The representation makes reasoning procedures easier to express.</p>
+<nav class="concept-links" aria-label="Concept resources"><a href="handout.html#chapter-lisp-ml">Read the explanation in the handout →</a><a href="#/symbolic-representation" aria-label="Permanent link to Lisp: make symbolic structure easy to manipulate">Link to this slide</a></nav>
+</section>
+<section class="concept-slide neural" data-slide="learning-from-play" id="learning-from-play">
+<span class="kicker">Concepts · The birth of AI</span>
+<h2>Samuel’s checkers: improve through experience</h2>
+<div class="concept-flow"><div class="concept-card"><h3>Play</h3><p>Generate experience through games, including self-play.</p></div><span class="concept-arrow" aria-hidden="true">→</span><div class="concept-card"><h3>Evaluate</h3><p>Estimate how promising a board position is.</p></div><span class="concept-arrow" aria-hidden="true">→</span><div class="concept-card"><h3>Adapt</h3><p>Use experience to improve evaluations that guide future moves.</p></div></div><table class="concept-table"><thead><tr><th scope="col">Learning idea</th><th scope="col">What drives change?</th></tr></thead><tbody><tr><td>Hebbian learning</td><td>Co-activity of connected units</td></tr><tr><td>Perceptron</td><td>A labeled example and a prediction error</td></tr><tr><td>Learning from play</td><td>Experience with positions and game results</td></tr></tbody></table><p class="concept-takeaway fragment fade-up"><strong>Representation</strong> makes a problem computable. <strong>Adaptation</strong> lets a learning system improve its decisions through experience.</p>
+<nav class="concept-links" aria-label="Concept resources"><a href="handout.html#chapter-lisp-ml">Read the explanation in the handout →</a><a href="#/learning-from-play" aria-label="Permanent link to Samuel’s checkers: improve through experience">Link to this slide</a></nav>
+</section><section class="part-notes" data-slide="part-takeaways" id="part-takeaways"><span class="kicker">Lecture 01 · Wrap-up</span><div class="part-shell"><h2>Before you leave this part</h2><ul><li><a href="#/bayes-example">Explain how evidence can change a belief.</a></li><li><a href="#/behavior-evaluation">Distinguish a test of behavior from a claim about consciousness.</a></li><li><a href="#/learning-from-play">Connect early learning systems with examples and feedback.</a></li></ul><p class="part-intro">Choose one idea and explain it in your own words. Use an example or an interactive experiment to support your explanation.</p></div></section><section class="part-notes" data-slide="part-references" id="part-references"><span class="kicker">Sources and further reading</span><div class="part-shell"><h2>Follow the sources</h2><p class="part-intro">Image, video and research credits remain beside the material they support. The reading companion keeps the explanations and source links for this part.</p><p><a href="handout.html">Read this part’s handout →</a></p></div></section><section data-slide="course-navigation" id="course-navigation"><span class="kicker">Continue learning</span><div class="course-end-shell"><h2>Continue the course</h2><p class="course-intro">Lecture 01 · History of artificial intelligence · Part 1</p><nav aria-label="Lecture navigation" class="course-navigation"><div class="course-links"><div class="course-link course-boundary"><span class="course-link-label">Start of the course</span><strong>Welcome to the first lecture.</strong></div><a class="course-link course-companion" data-course-link="companion" href="handout.html"><span class="course-link-label">Read this handout</span><strong>History of artificial intelligence · Part 1</strong><span class="course-link-detail">The same lecture in its companion format.</span></a><a class="course-link" data-course-link="next" href="../02_History_Part_2/index.html" rel="next"><span class="course-link-label">Next lecture</span><strong>History of artificial intelligence · Part 2</strong><span class="course-link-detail">Lecture 02 · From AI winters to generative models</span></a></div><a class="course-home" data-course-link="home" href="../index.html">Course home · All 16 lectures →</a></nav></div></section></div></div>
+<!-- scripts -->
+<script src="../_shared/history/lib/reveal/reveal.min.js"></script>
+<script src="../wooclap/slides-data.js?v=3"></script>
+<script src="concept-navigation.js?v=2"></script>
+<script src="../wooclap/slides-wooclap.js?v=1"></script>
+<script src="../course-parts.js?v=8"></script><script src="../_shared/history/js/deck.js?v=2"></script>
+<script src="../_shared/history/js/slides.js?v=5"></script>
+<script src="../_shared/history/js/media.js?v=1"></script>
+<a aria-label="Course home — all slides and handouts" class="course-home-button" data-course-home="" href="../index.html" title="All slides and handouts"><svg aria-hidden="true" fill="none" height="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24" width="18"><path d="M3 10.5 12 3l9 7.5M5 9v12h5v-7h4v7h5V9"></path></svg><span>Course home</span></a><script src="../image-viewer.js?v=1"></script>
+</body>
+</html>

@@ -1,0 +1,216 @@
+{
+  "count": 46,
+  "errors": [],
+  "offlineRequests": [],
+  "slides": [
+    {
+      "slide": "title",
+      "issues": []
+    },
+    {
+      "slide": "map",
+      "issues": []
+    },
+    {
+      "slide": "data-lab",
+      "issues": []
+    },
+    {
+      "slide": "classification",
+      "issues": []
+    },
+    {
+      "slide": "uncertainty",
+      "issues": []
+    },
+    {
+      "slide": "posterior",
+      "issues": []
+    },
+    {
+      "slide": "bayes-rule",
+      "issues": []
+    },
+    {
+      "slide": "bayes-proof",
+      "issues": []
+    },
+    {
+      "slide": "bayes-error",
+      "issues": []
+    },
+    {
+      "slide": "decision-lab",
+      "issues": []
+    },
+    {
+      "slide": "accuracy",
+      "issues": []
+    },
+    {
+      "slide": "confusion",
+      "issues": []
+    },
+    {
+      "slide": "bayes-theorem",
+      "issues": []
+    },
+    {
+      "slide": "independence",
+      "issues": []
+    },
+    {
+      "slide": "nb-score",
+      "issues": []
+    },
+    {
+      "slide": "estimate",
+      "issues": []
+    },
+    {
+      "slide": "smoothing",
+      "issues": []
+    },
+    {
+      "slide": "naive-lab",
+      "issues": []
+    },
+    {
+      "slide": "nb-limits",
+      "issues": []
+    },
+    {
+      "slide": "logistic",
+      "issues": []
+    },
+    {
+      "slide": "log-odds",
+      "issues": []
+    },
+    {
+      "slide": "logistic-lab",
+      "issues": []
+    },
+    {
+      "slide": "likelihood",
+      "issues": []
+    },
+    {
+      "slide": "log-loss",
+      "issues": []
+    },
+    {
+      "slide": "fit-lab",
+      "issues": []
+    },
+    {
+      "slide": "thresholds",
+      "issues": []
+    },
+    {
+      "slide": "plane-lab",
+      "issues": []
+    },
+    {
+      "slide": "knn-rule",
+      "issues": []
+    },
+    {
+      "slide": "boundary-lab",
+      "issues": []
+    },
+    {
+      "slide": "neighbors-lab",
+      "issues": []
+    },
+    {
+      "slide": "metric",
+      "issues": []
+    },
+    {
+      "slide": "ties",
+      "issues": []
+    },
+    {
+      "slide": "knn-density",
+      "issues": []
+    },
+    {
+      "slide": "knn-regression",
+      "issues": []
+    },
+    {
+      "slide": "regression-lab",
+      "issues": []
+    },
+    {
+      "slide": "complexity",
+      "issues": []
+    },
+    {
+      "slide": "splits",
+      "issues": []
+    },
+    {
+      "slide": "validation-lab",
+      "issues": []
+    },
+    {
+      "slide": "validation-notes",
+      "issues": []
+    },
+    {
+      "slide": "tradeoffs",
+      "issues": []
+    },
+    {
+      "slide": "cost",
+      "issues": []
+    },
+    {
+      "slide": "workflow",
+      "issues": []
+    },
+    {
+      "slide": "practice",
+      "issues": []
+    },
+    {
+      "slide": "answers",
+      "issues": []
+    },
+    {
+      "slide": "summary",
+      "issues": []
+    },
+    {
+      "slide": "references",
+      "issues": []
+    }
+  ],
+  "responsive": [],
+  "stateIssues": [],
+  "stateCount": 542,
+  "interactions": [
+    "Validation candidate locking, hidden test and explicit restart",
+    "decision-lab: keyboard range control",
+    "naive-lab: keyboard range control",
+    "logistic-lab: keyboard range control",
+    "neighbors-lab: keyboard range control",
+    "regression-lab: keyboard range control",
+    "data-lab: pan, drag zoom and reset",
+    "fit-lab: pan, drag zoom and reset",
+    "plane-lab: pan, drag zoom and reset",
+    "boundary-lab: pan, drag zoom and reset",
+    "decision-lab: pan, drag zoom and reset",
+    "naive-lab: pan, drag zoom and reset",
+    "logistic-lab: pan, drag zoom and reset",
+    "neighbors-lab: pan, drag zoom and reset",
+    "regression-lab: pan, drag zoom and reset",
+    "validation-lab: pan, drag zoom and reset",
+    "Original model legend toggle",
+    "Original data hover tooltip"
+  ],
+  "keyboardNavigation": true,
+  "directEntry": true
+}
