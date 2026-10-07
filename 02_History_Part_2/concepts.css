@@ -1,0 +1,54 @@
+/* Lecture 02 teaching diagrams, on the deck's 1920 × 1080 stage. */
+.reveal .concept-slide { --accent:#45d6c0; text-align:left; }
+.reveal .concept-slide.winter { --accent:#ff8ba0; }
+.reveal .concept-slide.symbolic { --accent:#7ee08a; }
+.reveal .concept-slide.neural { --accent:#4db8ff; }
+.reveal .concept-slide.deep { --accent:#ffd166; }
+.reveal .concept-slide .slide-body { gap:24px; }
+.reveal .concept-slide h2 { font-size:58px; line-height:1.14; margin:0!important; letter-spacing:-.025em; }
+.reveal .concept-slide p { margin:0; font-size:31px; line-height:1.4; }
+.reveal .concept-slide .concept-lead { color:var(--text-muted); font-size:29px; }
+.reveal .concept-slide .concept-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:24px; }
+.reveal .concept-slide .concept-grid.three { grid-template-columns:repeat(3,minmax(0,1fr)); }
+.reveal .concept-slide .concept-card { box-sizing:border-box; min-width:0; padding:28px; border:1px solid var(--line); border-top:4px solid var(--accent); border-radius:16px; background:var(--bg-elevated); }
+.reveal .concept-slide .concept-card h3 { color:var(--accent); font-size:31px; margin:0 0 16px; }
+.reveal .concept-slide .concept-card p + p { margin-top:18px; }
+.reveal .concept-slide .eyebrow { display:block; font-size:21px; font-weight:650; letter-spacing:.08em; text-transform:uppercase; color:var(--accent); margin-bottom:14px; }
+.reveal .concept-slide .concept-takeaway { padding:17px 24px; border-left:5px solid var(--accent); border-radius:0 10px 10px 0; background:rgba(255,255,255,.04); font-size:30px; }
+.reveal .concept-slide .concept-links { display:flex; gap:28px; flex-wrap:wrap; font-size:21px; line-height:1.4; }
+.reveal .concept-links a { color:var(--text-muted); text-decoration:underline; text-underline-offset:5px; }
+.reveal .concept-slide a:focus-visible { outline:3px solid #ffd166; outline-offset:5px; }
+.reveal .concept-slide .concept-flow { display:flex; align-items:stretch; gap:18px; }
+.reveal .concept-slide .concept-flow > .concept-card { flex:1; }
+.reveal .concept-slide .flow-arrow { align-self:center; font-size:42px; color:var(--accent); }
+.reveal .concept-slide .concept-equation { border:1px solid var(--line); border-radius:16px; background:var(--bg-elevated); padding:26px; text-align:center; font-size:44px; line-height:1.5; }
+.reveal .concept-slide .concept-equation small { display:block; margin-top:8px; font:26px/1.4 'Segoe UI',sans-serif; color:var(--text-muted); }
+.reveal .concept-slide .concept-small { font-size:25px; color:var(--text-muted); }
+.reveal .concept-slide .concept-split { display:grid; grid-template-columns:1.05fr 1fr; align-items:center; gap:36px; }
+.reveal .concept-slide .concept-stack { display:flex; flex-direction:column; gap:20px; }
+.reveal .concept-slide .concept-diagram { display:block; width:100%; height:360px; background:var(--bg-elevated); border:1px solid var(--line); border-radius:16px; }
+.reveal .concept-slide .concept-diagram.tall { height:420px; }
+.reveal .concept-slide .expert-process { height:190px; }
+.reveal .expert-chain .expert-result { margin-top:24px; padding:16px 20px; border-radius:10px; background:rgba(126,224,138,.09); color:var(--accent); font-size:27px; line-height:1.4; }
+.reveal .concept-slide .concept-diagram text { font-family:'Segoe UI',Arial,sans-serif; }
+.reveal .concept-slide .concept-table { width:100%; margin:0; font-size:29px; border-collapse:collapse; }
+.reveal .concept-slide .concept-table th, .reveal .concept-slide .concept-table td { padding:18px 24px; border-bottom:1px solid var(--line); text-align:left; }
+.reveal .concept-slide .concept-table th { color:var(--accent); font-size:25px; }
+.reveal .concept-slide .concept-table td:first-child { font-weight:650; }
+.reveal .concept-slide .concept-table tr:last-child td { border-bottom:0; }
+.reveal .concept-slide .concept-map .concept-card { padding:23px 27px; }
+.reveal .concept-slide .concept-map h3 { font-size:28px; margin-bottom:12px; }
+.reveal .concept-map a { display:block; color:var(--text); font-size:25px; line-height:1.4; margin-top:8px; text-decoration:underline; text-underline-offset:4px; }
+.reveal .concept-slide .token-row { display:flex; flex-wrap:wrap; gap:12px; align-items:center; }
+.reveal .concept-slide .token { padding:13px 22px; border:1px solid var(--line); border-radius:10px; background:var(--bg-soft); font-size:32px; }
+.reveal .concept-slide .token.focus { border-color:var(--accent); color:var(--accent); }
+.reveal .concept-slide .probabilities { display:grid; gap:16px; margin-top:20px; }
+.reveal .concept-slide .probability { display:grid; grid-template-columns:115px 1fr 85px; align-items:center; gap:16px; font-size:26px; }
+.reveal .concept-slide .probability i { display:block; height:19px; border-radius:5px; background:var(--accent); }
+.reveal .concept-slide .big-number { display:block; color:var(--accent); font-size:66px; line-height:1.2; margin-bottom:14px; }
+.reveal .concept-slide .prompt-example { padding:24px 28px; border:1px solid var(--line); border-radius:14px; background:var(--bg-elevated); font:32px/1.75 Consolas,monospace; }
+/* Give the retained historical introductions the same readable type hierarchy. */
+.reveal section:not(.concept-slide) .col h3 { font-size:44px!important; line-height:1.2; margin-bottom:22px; }
+.reveal section[data-slide$="-stat"] h2 { font-size:52px!important; line-height:1.2; }
+.reveal #summary h2 { font-size:52px!important; }
+.reveal #summary ul.tight { font-size:31px!important; }
