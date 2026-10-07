@@ -102,14 +102,14 @@ window.AIML_WOOCLAP = {
           "type": "MCQ",
           "slide": "winter1",
           "when": "before",
-          "purpose": "Prediction / intuition",
-          "stem": "A new technology is promised to solve almost every problem, but its first products often fail. What might happen next?",
+          "purpose": "Prediction / causal reasoning",
+          "stem": "A system performs well on a narrow benchmark. Its promoters claim that it is close to general intelligence, but deployments expose failures outside the benchmark. Which consequence could help produce an AI winter?",
           "seconds": 90,
           "choices": [
-            "Funding must keep growing because the promises were ambitious.",
-            "Some people may lose confidence and reduce funding.",
-            "Every useful discovery made so far must be wrong.",
-            "The technology must already work well in every setting."
+            "Success on one benchmark proves broad intelligence, so expectations no longer matter.",
+            "The gap between the claims and demonstrated capability may erode confidence and funding.",
+            "Failures outside the benchmark show that no AI technique can ever work.",
+            "Researchers must discard every useful result produced by the system."
           ],
           "src": "https://app.wooclap.com/events/GMSPICB/questions/6aa8fd64ee75ef7f05b11614"
         },
@@ -119,14 +119,14 @@ window.AIML_WOOCLAP = {
           "type": "MCQ",
           "slide": "winter2",
           "when": "after",
-          "purpose": "Check / core understanding",
-          "stem": "What does the term “AI winter” describe?",
+          "purpose": "Synthesis / compare eras",
+          "stem": "Which account best explains the two AI winters discussed in this lecture?",
           "seconds": 90,
           "choices": [
-            "A period when computers could not operate in cold weather.",
-            "The date when all AI research permanently ended.",
-            "A period when every AI system became equally successful.",
-            "A period of reduced enthusiasm and funding for AI."
+            "One decisive paper proved that every AI approach was impossible.",
+            "In each case, expectations met technical and economic limits; confidence and funding fell, but research continued.",
+            "Hardware stopped improving, causing all AI research to end until the next boom.",
+            "Both winters were planned pauses after AI systems had met their promises."
           ],
           "src": "https://app.wooclap.com/events/GMSPICB/questions/6aa8fd64ee75ef7f05b11619"
         },
@@ -136,14 +136,14 @@ window.AIML_WOOCLAP = {
           "type": "MCQ",
           "slide": "gpt3",
           "when": "before",
-          "purpose": "Prediction / intuition",
-          "stem": "You want a chatbot to answer in a particular format. Why might you include two example answers in your request?",
+          "purpose": "Prediction / distinguish mechanisms",
+          "stem": "The same fixed language model receives two prompts. One gives only an instruction; the other also gives two input-output examples. The second follows the requested format more reliably. What is the best interpretation?",
           "seconds": 90,
           "choices": [
-            "The examples guarantee that every fact in its answer will be correct.",
-            "The chatbot can use the examples only if you rewrite its software.",
-            "The examples show the pattern you want it to follow.",
-            "Adding examples prevents the chatbot from reading the rest of the request."
+            "The examples permanently updated the model’s weights for all future users.",
+            "Following the format proves that every fact in the response is correct.",
+            "The examples changed the model’s context and guided this response; they did not by themselves retrain its weights.",
+            "The examples changed the model’s software, so future prompts no longer matter."
           ],
           "src": "https://app.wooclap.com/events/GMSPICB/questions/6aa8fd64ee75ef7f05b1161e"
         },
@@ -153,9 +153,9 @@ window.AIML_WOOCLAP = {
           "type": "OpenQuestion",
           "slide": "summary",
           "when": "after",
-          "purpose": "Exit / one takeaway",
-          "stem": "Name one idea or event from today’s AI history that you would explain to a friend. Explain it in one sentence.",
-          "seconds": 120,
+          "purpose": "Exit / connect eras",
+          "stem": "Choose two milestones from different eras in this lecture. In two sentences, explain how the later milestone addressed a limitation or opportunity left by the earlier one, and name one limitation that still remained.",
+          "seconds": 150,
           "choices": [],
           "src": "https://app.wooclap.com/events/GMSPICB/questions/6aa8fd64ee75ef7f05b11623"
         },
@@ -165,14 +165,14 @@ window.AIML_WOOCLAP = {
           "type": "MCQ",
           "slide": "alphago-transformers",
           "when": "after",
-          "purpose": "Optional / basic extension",
-          "stem": "What was AlphaGo famous for?",
+          "purpose": "Optional / synthesis",
+          "stem": "AlphaGo combined learned components with search. Which conclusion is best supported by its success?",
           "seconds": 90,
           "choices": [
-            "Introducing the first electronic calculator.",
-            "Writing the original proposal for the Turing test.",
-            "Playing the board game Go at a very high level.",
-            "Being the first system to send an email."
+            "Learning made search unnecessary once enough games had been observed.",
+            "Combining learning with structured search can be powerful on a well-defined task without proving general intelligence.",
+            "Beating expert players shows that the same system can solve unrelated intellectual tasks.",
+            "Once a system outperforms humans, the method and task boundaries no longer matter."
           ],
           "src": "https://app.wooclap.com/events/GMSPICB/questions/6aa90139d2f1e8b522d94339"
         }

@@ -40,7 +40,7 @@ Learning changes the way a system makes predictions using examples. The other de
 
 ### L00-C02 · Core · Prediction / intuition
 
-**Placement:** [Before slide 7: Bayes' Theorem](../01_History_Part_1/index.html#/6) · [Handout](../01_History_Part_1/handout.html#chapter-bayes)  
+**Placement:** [Before slide 8: Bayes' Theorem](../01_History_Part_1/index.html#/7) · [Handout](../01_History_Part_1/handout.html#chapter-bayes)  
 **Time:** 90 seconds, including debrief.
 
 You think it will stay dry. Then you see dark clouds approaching. What is a reasonable response?
@@ -60,7 +60,7 @@ New evidence can change how plausible an outcome seems without making it certain
 
 ### L00-C03 · Core · Check / core understanding
 
-**Placement:** [After slide 16: “Can machines think?” — reframed as behavior · 1950](../01_History_Part_1/index.html#/15) · [Handout](../01_History_Part_1/handout.html#chapter-imitation)  
+**Placement:** [After slide 29: From “thinking” to an observable test](../01_History_Part_1/index.html#/28) · [Handout](../01_History_Part_1/handout.html#chapter-imitation)  
 **Time:** 90 seconds, including debrief.
 
 What does the Turing imitation game focus on?
@@ -80,7 +80,7 @@ The test concerns conversational behavior. Passing this kind of test would not b
 
 ### L00-O01 · Optional · Optional / basic extension
 
-**Placement:** [After slide 26: Perceptron · 1957 — Frank Rosenblatt](../01_History_Part_1/index.html#/25) · [Handout](../01_History_Part_1/handout.html#chapter-perceptron)  
+**Placement:** [After slide 45: Perceptron · 1957 — Frank Rosenblatt](../01_History_Part_1/index.html#/44) · [Handout](../01_History_Part_1/handout.html#chapter-perceptron)  
 **Time:** 90 seconds, including debrief.
 
 During perceptron training, why do we show the model the correct answer?
@@ -100,7 +100,7 @@ The correct label lets the learning rule detect a mistake and adjust the model.
 
 ### L00-O03 · Optional · Optional / basic extension
 
-**Placement:** [After slide 9: From the logistic curve to logistic regression](../01_History_Part_1/index.html#/8) · [Handout](../01_History_Part_1/handout.html#chapter-logreg)  
+**Placement:** [After slide 15: From the logistic curve to logistic regression](../01_History_Part_1/index.html#/14) · [Handout](../01_History_Part_1/handout.html#chapter-logreg)  
 **Time:** 90 seconds, including debrief.
 
 Two models use a similar S-shaped curve. Must they describe the same real-world problem?
@@ -120,103 +120,103 @@ Population growth and class-probability models can use related curve shapes for 
 
 ## 02 · History of artificial intelligence · Part 2
 
-4 core + 1 optional. Core budget: approximately 6.5 minutes.
+4 core + 1 optional. Core budget: approximately 7 minutes.
 
 [Core import](imports/02_History_Part_2.xlsx) · [Optional import](imports/optional/02_History_Part_2_optional.xlsx)
 
-### L00-C04 · Core · Prediction / intuition
+### L00-C04 · Core · Prediction / causal reasoning
 
 **Placement:** [Before slide 5: Minsky & Papert — “Perceptrons” (1969)](../02_History_Part_2/index.html#/4) · [Handout](../02_History_Part_2/handout.html#chapter-winter1)  
 **Time:** 90 seconds, including debrief.
 
-A new technology is promised to solve almost every problem, but its first products often fail. What might happen next?
+A system performs well on a narrow benchmark. Its promoters claim that it is close to general intelligence, but deployments expose failures outside the benchmark. Which consequence could help produce an AI winter?
 
-- **A.** Funding must keep growing because the promises were ambitious.
-- **B.** Some people may lose confidence and reduce funding.
-- **C.** Every useful discovery made so far must be wrong.
-- **D.** The technology must already work well in every setting.
+- **A.** Success on one benchmark proves broad intelligence, so expectations no longer matter.
+- **B.** The gap between the claims and demonstrated capability may erode confidence and funding.
+- **C.** Failures outside the benchmark show that no AI technique can ever work.
+- **D.** Researchers must discard every useful result produced by the system.
 
-**Answer:** B. Some people may lose confidence and reduce funding.
+**Answer:** B. The gap between the claims and demonstrated capability may erode confidence and funding.
 
-A gap between promises and results can reduce confidence and investment. This helps introduce the AI winters; research did not simply stop.
+A narrow success can be real without supporting broad claims. When deployment exposes that gap, confidence and investment may fall even though useful research continues.
 
-**Misconception:** Treating technological progress as an uninterrupted rise.
+**Misconception:** Treating success on one benchmark as proof of broad intelligence, or treating later disappointment as proof that all prior work was worthless.
 
 **Facilitation:** Invite a guess before teaching the idea. Ask one student for their reasoning, then use the next explanation or demonstration to revisit the answer. Do not grade prior knowledge.
 
-### L00-C05 · Core · Check / core understanding
+### L00-C05 · Core · Synthesis / compare eras
 
-**Placement:** [After slide 17: The Vanishing Gradient (Hochreiter, 1991)](../02_History_Part_2/index.html#/16) · [Handout](../02_History_Part_2/handout.html#chapter-winter2)  
+**Placement:** [After slide 25: When the learning signal fades](../02_History_Part_2/index.html#/24) · [Handout](../02_History_Part_2/handout.html#chapter-winter2)  
 **Time:** 90 seconds, including debrief.
 
-What does the term “AI winter” describe?
+Which account best explains the two AI winters discussed in this lecture?
 
-- **A.** A period when computers could not operate in cold weather.
-- **B.** The date when all AI research permanently ended.
-- **C.** A period when every AI system became equally successful.
-- **D.** A period of reduced enthusiasm and funding for AI.
+- **A.** One decisive paper proved that every AI approach was impossible.
+- **B.** In each case, expectations met technical and economic limits; confidence and funding fell, but research continued.
+- **C.** Hardware stopped improving, causing all AI research to end until the next boom.
+- **D.** Both winters were planned pauses after AI systems had met their promises.
 
-**Answer:** D. A period of reduced enthusiasm and funding for AI.
+**Answer:** B. In each case, expectations met technical and economic limits; confidence and funding fell, but research continued.
 
-AI winters involved reduced confidence and investment. Work continued, and several technical and economic factors contributed.
+The downturns had different immediate triggers, but both involved a mismatch between expectations and practical capability alongside funding or market pressures. Neither winter ended AI research.
 
-**Misconception:** Thinking an AI winter means all AI research stopped.
+**Misconception:** Reducing each winter to one paper or one technical limitation, or assuming research stopped completely.
 
 **Facilitation:** Give students a moment to answer, then explain the correct choice in everyday language and address the misconception.
 
-### L00-C06 · Core · Prediction / intuition
+### L00-C06 · Core · Prediction / distinguish mechanisms
 
-**Placement:** [Before slide 26: GPT-3 · 2020 — “Generative Pre-trained Transformer 3”](../02_History_Part_2/index.html#/25) · [Handout](../02_History_Part_2/handout.html#chapter-gpt3)  
+**Placement:** [Before slide 45: GPT-3 · 2020 — “Generative Pre-trained Transformer 3”](../02_History_Part_2/index.html#/44) · [Handout](../02_History_Part_2/handout.html#chapter-gpt3)  
 **Time:** 90 seconds, including debrief.
 
-You want a chatbot to answer in a particular format. Why might you include two example answers in your request?
+The same fixed language model receives two prompts. One gives only an instruction; the other also gives two input-output examples. The second follows the requested format more reliably. What is the best interpretation?
 
-- **A.** The examples guarantee that every fact in its answer will be correct.
-- **B.** The chatbot can use the examples only if you rewrite its software.
-- **C.** The examples show the pattern you want it to follow.
-- **D.** Adding examples prevents the chatbot from reading the rest of the request.
+- **A.** The examples permanently updated the model’s weights for all future users.
+- **B.** Following the format proves that every fact in the response is correct.
+- **C.** The examples changed the model’s context and guided this response; they did not by themselves retrain its weights.
+- **D.** The examples changed the model’s software, so future prompts no longer matter.
 
-**Answer:** C. The examples show the pattern you want it to follow.
+**Answer:** C. The examples changed the model’s context and guided this response; they did not by themselves retrain its weights.
 
-Examples in a prompt can guide the next response. Explain afterward that using this context is different from retraining the model.
+Examples can demonstrate a pattern inside the current prompt. This in-context guidance can change the response without a training update, and it does not guarantee factual correctness.
 
-**Misconception:** Confusing guidance in a prompt with guaranteed correctness or retraining.
+**Misconception:** Confusing temporary in-context guidance with weight updates, software changes or guaranteed accuracy.
 
 **Facilitation:** Invite a guess before teaching the idea. Ask one student for their reasoning, then use the next explanation or demonstration to revisit the answer. Do not grade prior knowledge.
 
-### L00-C07 · Core · Exit / one takeaway
+### L00-C07 · Core · Exit / connect eras
 
-**Placement:** [After slide 29: A history of interacting ideas and changing expectations](../02_History_Part_2/index.html#/28) · [Handout](../02_History_Part_2/handout.html#chapter-summary)  
-**Time:** 120 seconds, including debrief.
+**Placement:** [After slide 53: A history of interacting ideas and changing expectations](../02_History_Part_2/index.html#/52) · [Handout](../02_History_Part_2/handout.html#chapter-summary)  
+**Time:** 150 seconds, including debrief.
 
-Name one idea or event from today’s AI history that you would explain to a friend. Explain it in one sentence.
+Choose two milestones from different eras in this lecture. In two sentences, explain how the later milestone addressed a limitation or opportunity left by the earlier one, and name one limitation that still remained.
 
 
 **Answer:** Suggested rubric (no automatic answer key)
 
-Accept any accurate lecture example: learning from examples, the imitation game, AI winters, or a later application. One clear sentence is enough.
+Accept any accurate cross-era connection supported by the lecture. For example, multilayer networks with backpropagation addressed the representational and training limits of single-layer perceptrons, while vanishing gradients still made deep learning difficult.
 
-**Misconception:** Remembering a name without understanding the main idea.
+**Misconception:** Treating AI history as an isolated list of names rather than a sequence of partial solutions with remaining limitations.
 
-**Facilitation:** Accept a short answer in the student’s own words. Use a few responses to identify what needs revisiting; do not grade terminology.
+**Facilitation:** Ask for one explicit connection and one remaining limitation. Compare two responses that use different eras and discuss whether the claimed link is causal, conceptual or enabled by new resources.
 
-### L00-O02 · Optional · Optional / basic extension
+### L00-O02 · Optional · Optional / synthesis
 
-**Placement:** [After slide 25: The modern turning points](../02_History_Part_2/index.html#/24) · [Handout](../02_History_Part_2/handout.html#chapter-alphago-transformers)  
+**Placement:** [After slide 40: The modern turning points](../02_History_Part_2/index.html#/39) · [Handout](../02_History_Part_2/handout.html#chapter-alphago-transformers)  
 **Time:** 90 seconds, including debrief.
 
-What was AlphaGo famous for?
+AlphaGo combined learned components with search. Which conclusion is best supported by its success?
 
-- **A.** Introducing the first electronic calculator.
-- **B.** Writing the original proposal for the Turing test.
-- **C.** Playing the board game Go at a very high level.
-- **D.** Being the first system to send an email.
+- **A.** Learning made search unnecessary once enough games had been observed.
+- **B.** Combining learning with structured search can be powerful on a well-defined task without proving general intelligence.
+- **C.** Beating expert players shows that the same system can solve unrelated intellectual tasks.
+- **D.** Once a system outperforms humans, the method and task boundaries no longer matter.
 
-**Answer:** C. Playing the board game Go at a very high level.
+**Answer:** B. Combining learning with structured search can be powerful on a well-defined task without proving general intelligence.
 
-AlphaGo combined learned models with search to achieve landmark results in Go.
+AlphaGo’s achievement shows the strength of combining learned evaluation and policy components with search in the structured domain of Go. It does not establish competence on unrelated tasks.
 
-**Misconception:** Mixing up the roles of different milestones.
+**Misconception:** Treating exceptional performance on one difficult task as evidence of general intelligence, or assuming learning made search unnecessary.
 
 **Facilitation:** Give students a moment to answer, then explain the correct choice in everyday language and address the misconception.
 
@@ -228,7 +228,7 @@ AlphaGo combined learned models with search to achieve landmark results in Go.
 
 ### L01-C01 · Core · Opening / everyday intuition
 
-**Placement:** [Before slide 5: A path is a solution; its cost measures quality](../03_Search_Part_1/index.html#/4) · [Handout](../03_Search_Part_1/handout.html#chapter-paths-costs)  
+**Placement:** [Before slide 8: A solution path reaches a goal; its cost measures quality](../03_Search_Part_1/index.html#/7) · [Handout](../03_Search_Part_1/handout.html#chapter-paths-costs)  
 **Time:** 60 seconds, including debrief.
 
 One route takes two roads of 3 minutes each. Another takes three roads of 1 minute each. Which route is faster?
@@ -248,7 +248,7 @@ Add the travel times: the routes take 6 and 3 minutes. Fewer steps need not mean
 
 ### L01-C02 · Core · Prediction / intuition
 
-**Placement:** [Before slide 13: BFS · watch the queue expand](../03_Search_Part_1/index.html#/12) · [Handout](../03_Search_Part_1/handout.html#chapter-bfs-lab)  
+**Placement:** [Before slide 21: BFS · watch the queue expand](../03_Search_Part_1/index.html#/20) · [Handout](../03_Search_Part_1/handout.html#chapter-bfs-lab)  
 **Time:** 60 seconds, including debrief.
 
 A search uses a waiting line: the first item added is the first served. B is waiting before C. Which is served first?
@@ -268,7 +268,7 @@ A first-in, first-out queue serves B first. Connect this familiar waiting-line r
 
 ### L01-C03 · Core · Prediction / intuition
 
-**Placement:** [Before slide 15: DFS · follow the stack](../03_Search_Part_1/index.html#/14) · [Handout](../03_Search_Part_1/handout.html#chapter-dfs-lab)  
+**Placement:** [Before slide 24: DFS · follow the stack](../03_Search_Part_1/index.html#/23) · [Handout](../03_Search_Part_1/handout.html#chapter-dfs-lab)  
 **Time:** 60 seconds, including debrief.
 
 You put book B on a pile, then put book C on top. If you remove the top book first, which comes out first?
@@ -288,7 +288,7 @@ The last book added is the first removed. A stack uses this rule, as depth-first
 
 ### L01-C04 · Core · Check / core understanding
 
-**Placement:** [After slide 19: Repeated work can be a reasonable price](../03_Search_Part_1/index.html#/18) · [Handout](../03_Search_Part_1/handout.html#chapter-ids-overhead)  
+**Placement:** [After slide 33: Repeated work can be a reasonable price](../03_Search_Part_1/index.html#/32) · [Handout](../03_Search_Part_1/handout.html#chapter-ids-overhead)  
 **Time:** 90 seconds, including debrief.
 
 How does iterative deepening search work?
@@ -308,7 +308,7 @@ It first searches shallowly, then increases the depth limit. Repeating some work
 
 ### L01-C05 · Core · Prediction / intuition
 
-**Placement:** [Before slide 21: Lowest-cost-first · compare cumulative costs](../03_Search_Part_1/index.html#/20) · [Handout](../03_Search_Part_1/handout.html#chapter-ucs-lab)  
+**Placement:** [Before slide 36: Lowest-cost-first · compare cumulative costs](../03_Search_Part_1/index.html#/35) · [Handout](../03_Search_Part_1/handout.html#chapter-ucs-lab)  
 **Time:** 60 seconds, including debrief.
 
 You found a route to the destination that costs 10. Another route has cost 2 so far and needs one final step costing 1. Which is cheaper?
@@ -328,7 +328,7 @@ The second complete route costs 2+1=3. Finding a destination once does not prove
 
 ### L01-O02 · Optional · Optional / basic extension
 
-**Placement:** [After slide 7: A search tree can repeat a graph state](../03_Search_Part_1/index.html#/6) · [Handout](../03_Search_Part_1/handout.html#chapter-graph-versus-tree)  
+**Placement:** [After slide 12: A search tree can repeat a graph state](../03_Search_Part_1/index.html#/11) · [Handout](../03_Search_Part_1/handout.html#chapter-graph-versus-tree)  
 **Time:** 60 seconds, including debrief.
 
 A robot can move A → B → A. If it never checks where it has already been, what problem could occur?
@@ -354,7 +354,7 @@ Repeatedly following a cycle can waste work or continue indefinitely. This motiv
 
 ### L01-C06 · Core · Prediction / intuition
 
-**Placement:** [Before slide 10: The first A* decision](../04_Search_Part_2/index.html#/9) · [Handout](../04_Search_Part_2/handout.html#chapter-astar-scores)  
+**Placement:** [Before slide 14: The first A* decision](../04_Search_Part_2/index.html#/13) · [Handout](../04_Search_Part_2/handout.html#chapter-astar-scores)  
 **Time:** 60 seconds, including debrief.
 
 A journey has cost 4 so far. You estimate that the remaining journey will cost 3. What is your estimate of the total cost?
@@ -374,7 +374,7 @@ Add cost so far and estimated cost still to come: 4+3=7. This introduces the sco
 
 ### L01-C07 · Core · Check / core understanding
 
-**Placement:** [After slide 14: Graph search must keep better routes alive](../04_Search_Part_2/index.html#/13) · [Handout](../04_Search_Part_2/handout.html#chapter-graph-cautions)  
+**Placement:** [After slide 22: Graph search must keep better routes alive](../04_Search_Part_2/index.html#/21) · [Handout](../04_Search_Part_2/handout.html#chapter-graph-cautions)  
 **Time:** 90 seconds, including debrief.
 
 A search finds a cheaper route to a place it has already reached. What information should it keep?
@@ -394,7 +394,7 @@ Keeping the best known route avoids throwing away useful improvements. Some sear
 
 ### L01-C08 · Core · Prediction / intuition
 
-**Placement:** [Before slide 16: Branch-and-bound · watch the incumbent improve](../04_Search_Part_2/index.html#/15) · [Handout](../04_Search_Part_2/handout.html#chapter-branch-bound-lab)  
+**Placement:** [Before slide 28: Branch-and-bound · watch the incumbent improve](../04_Search_Part_2/index.html#/27) · [Handout](../04_Search_Part_2/handout.html#chapter-branch-bound-lab)  
 **Time:** 60 seconds, including debrief.
 
 Your best complete route costs 6. Another route already costs 8, and every extra step adds a nonnegative cost. Can it beat your best route?
@@ -414,7 +414,7 @@ Its final cost will be at least 8, so it cannot improve on 6. This is the intuit
 
 ### L01-C09 · Core · Exit / one takeaway
 
-**Placement:** [After slide 21: Search is controlled exploration](../04_Search_Part_2/index.html#/20) · [Handout](../04_Search_Part_2/handout.html#chapter-summary)  
+**Placement:** [After slide 35: Search is controlled exploration](../04_Search_Part_2/index.html#/34) · [Handout](../04_Search_Part_2/handout.html#chapter-summary)  
 **Time:** 120 seconds, including debrief.
 
 In one sentence, explain the main difference between breadth-first and depth-first search.
@@ -430,7 +430,7 @@ Breadth-first explores one depth level before the next; depth-first follows a br
 
 ### L01-O01 · Optional · Optional / basic extension
 
-**Placement:** [After slide 12: Admissible means “never overestimate”](../04_Search_Part_2/index.html#/11) · [Handout](../04_Search_Part_2/handout.html#chapter-admissibility)  
+**Placement:** [After slide 17: Admissible means “never overestimate”](../04_Search_Part_2/index.html#/16) · [Handout](../04_Search_Part_2/handout.html#chapter-admissibility)  
 **Time:** 60 seconds, including debrief.
 
 An estimate must never be greater than the true remaining cost. The true cost is 5. Which estimate breaks this rule?
@@ -450,7 +450,7 @@ Seven exceeds five. A heuristic that never overestimates is called admissible.
 
 ### L01-O03 · Optional · Optional / basic extension
 
-**Placement:** [After slide 13: Consistency checks each edge](../04_Search_Part_2/index.html#/12) · [Handout](../04_Search_Part_2/handout.html#chapter-consistency)  
+**Placement:** [After slide 20: Consistency checks each edge](../04_Search_Part_2/index.html#/19) · [Handout](../04_Search_Part_2/handout.html#chapter-consistency)  
 **Time:** 90 seconds, including debrief.
 
 Why can an estimate of the remaining distance help a search algorithm?

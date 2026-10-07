@@ -1,5 +1,5 @@
 {
-  "date": "2026-09-15",
+  "date": "2026-10-06",
   "questions": 92,
   "core": 68,
   "optional": 24,
@@ -9,9 +9,9 @@
   },
   "correct_positions": {
     "1": 21,
-    "4": 21,
-    "3": 21,
-    "2": 21
+    "4": 20,
+    "3": 20,
+    "2": 23
   },
   "workbooks": 32,
   "schema": [
@@ -32,87 +32,87 @@
   "core_teaching_order": "passed",
   "sources": {
     "01_History_Part_1": {
-      "slides_sha256": "ed10832feabdaa132b5c91e929d625b991a81907f87fdeea432ea778fcbbb545",
-      "handout_sha256": "d46e27f485627e4a7b1a29968fefbb6686b11f44896f0c5b388c94058123a617",
-      "slides": 30
+      "slides_sha256": "3a1ebea79f12924c177c697b2311c29577d3ca516ddf0acce84c9029e6957ded",
+      "handout_sha256": "c0a059822ccde95bf4879509691255eccd01d8adc8dbcaf2c45ef83e741f1edb",
+      "slides": 53
     },
     "02_History_Part_2": {
-      "slides_sha256": "2a1030ec7589a33e5646bdbff7d185179e6a056f6f2357ca4f57ff487c043f44",
-      "handout_sha256": "a6a010248e5290daaecc0bcefdcb96a9e80958a900420598ea4f019a922de342",
-      "slides": 32
+      "slides_sha256": "d5cf571ec97af1ad8f0ac47011dc997ee8e6cc807ad7f18039ca565dcadf08a5",
+      "handout_sha256": "f6c77905485819f5498f727d3aa5d23c30e488b5ae0fe00234c14af625681c4b",
+      "slides": 57
     },
     "03_Search_Part_1": {
-      "slides_sha256": "9da130cdd6430e6e5d132e07bb7b3e5630b3090380cf6b342e7f74f222a82e77",
-      "handout_sha256": "b8c62b54cda339e5d245fd0220fa378f8dafe5c7dc719d2dccfa4b19e7e417e7",
-      "slides": 26
+      "slides_sha256": "2bd8ae10da856f592bec23358a2d8b87fdcd4b75833103e32c83deafcb0d0e5c",
+      "handout_sha256": "8f4fb8da9f35abfa3ed24b70aa4b98dcbf26fe932dcf1624859e82e895724560",
+      "slides": 43
     },
     "04_Search_Part_2": {
-      "slides_sha256": "2dbfbb03ecc09caf76fd69e6cd18b7d0808a7c4c2d2092d93d6a2fea37400c94",
-      "handout_sha256": "849b243ee7a79daec52747e4863bdb554af0f403c8471cab3a6e4614f95c3925",
-      "slides": 24
+      "slides_sha256": "28b9f6ffd0020b3e7aec3b075b775ee6c2855e58f606a7e4762a63b925d6722d",
+      "handout_sha256": "64089412454d8d64fe13b36b216a87f8592450161ea5503f76a74908b6be65c1",
+      "slides": 38
     },
     "05_Constraints_Part_1": {
-      "slides_sha256": "9bd939ff2ccaba37acd55b4c1448738d13f57c7e002a74912249cd4f0c76ca66",
-      "handout_sha256": "eb3478347e6582bbd08184b2cfea595c4f633affe3b4e20aaeb5217bafbbfaa5",
+      "slides_sha256": "a3bbbe205cc75939d4b2d2c10ece599524135c5491126a1d78ce5e817561dca1",
+      "handout_sha256": "bfd7dc6ac9be6e2e1ad08165bb3a4d7b9ecbc344b64ed676fa7469b435f8cd1e",
       "slides": 24
     },
     "06_Constraints_Part_2": {
-      "slides_sha256": "0cc94d4a9d6c5439d68fb6fb6bc55e3a0ef4337f62136c2ddd6921ab676843de",
-      "handout_sha256": "22d949101681b16e53ee2b9eed986d2a27d832a6b5cb6487d44a36eccbdf5bdc",
+      "slides_sha256": "46b0cc011046ddb2c19316135e9927578da70fd375bf284c50be4db43ce9e242",
+      "handout_sha256": "4fea2c6ec46e4cc5763a6c8333cd1e9c09bc107944c158caed3ef31e1469554e",
       "slides": 21
     },
     "07_Intro_ML_Part_1": {
-      "slides_sha256": "cf1e73cd5ad5917c852104af234efeccfdb1f1333a7808f92de82b2016603e5e",
-      "handout_sha256": "61f717ebbc3c6fc1a25034902237fbe1bf9dc8399dd253503a948434e2618fe9",
+      "slides_sha256": "16e32d5674714fc1c2399ead1199b2b0280e96b6eb6dcf62f1d76c6f1af06d23",
+      "handout_sha256": "329f7a8d33571022ada5f39d52d11c3a7867557cc4237ed641a18bda8a412d51",
       "slides": 21
     },
     "08_Intro_ML_Part_2": {
-      "slides_sha256": "6b7c3c8d8e8734781b7636cbdace3d1d147412ba98ec0fa8a2dcdaf4042956ba",
-      "handout_sha256": "da7cabf9ebbfadf965904c4fc4321d733332e5e7dac6f3b4c14ac86656e4f1f4",
+      "slides_sha256": "801aa5e44bc33e016d58daee1974cdc7bfc91fe16bdd5a6d10560c6c281a465e",
+      "handout_sha256": "d09c98dd5788f31e72e4cff2ff01127e784b97f8286b0b66ffc3f01c0c2746ab",
       "slides": 22
     },
     "09_Regression_Part_1": {
-      "slides_sha256": "5e01abbbb0e1a2a9891741b47e1b2e01dc05c5aaacbab66b1cbe7d2aa12bf03b",
-      "handout_sha256": "a3bf5a32a1f816de4cd0be176796ccb0968c461b404c48b1096004e365930077",
+      "slides_sha256": "9b9f90c372c51b03081751967f5b1778c2821c534a7b81cede676fe9f4316cf3",
+      "handout_sha256": "dbde1cf5f239fbea6aa6f3cc2f11224768f393505322fe36d7f925dc906c5efd",
       "slides": 26
     },
     "10_Regression_Part_2": {
-      "slides_sha256": "98911816ce34908a8fb197a4d413e42bc7cf1a50d5bcbc325266e9b85ba06af4",
-      "handout_sha256": "d8790aad7edeaf063f20b5b43174724443a3df70dc9416904ee2470dd351ce62",
+      "slides_sha256": "5bea59f8ad3ccc7949f6d410adb17b2197ea43adcb02dbf90c4209f2f94b786b",
+      "handout_sha256": "4d176eb62c6afd65517f4c9c5769fb8f84b195b9a3b774b8be78f69c08187bf5",
       "slides": 27
     },
     "11_Classification_Part_1": {
-      "slides_sha256": "b66e98446d673b8115344d46df046bdd5a98982cb0af5ef421b6150f13c5ee55",
-      "handout_sha256": "c9c34c56e3bfa4e743429d0947464eee39ca488c68c484df1d6743a2294230bf",
+      "slides_sha256": "0ab24c37f263af1b891d367a308cd0b21be532129a664eb31dccfa5ee86d4f4d",
+      "handout_sha256": "d1a4f241eaee306b2f9e300b6b35ed95705028bb40ff1e2af510dea6608d8b17",
       "slides": 25
     },
     "12_Classification_Part_2": {
-      "slides_sha256": "0d2d6f477c31e446037408a8710fb02d13f7d6169cc440709699193262a4e8a8",
-      "handout_sha256": "84ca95eeaf1036ce1613494f40d52fb1beca72a429c8bb0f92e409e36ce14123",
+      "slides_sha256": "a0091573adecfeae67f705994492f15b3162f3b2c4e3f4c241a6dd3cec71bd9e",
+      "handout_sha256": "d7efcdfda1cfa080207a6c9af4aebe80ceefbb87f9919f89b6a38717e563e4c7",
       "slides": 28
     },
     "13_Classification_Part_3": {
-      "slides_sha256": "aecbc1a01c853c05a896768d16991688342cf878b5efff7f418ca8ce56d8ee7b",
-      "handout_sha256": "f064e20341bb99910bc58c8845cfa144d8c0a6d49173f032cc2e75dab94244ef",
+      "slides_sha256": "128c61294559182b5f283f84f63a126ced97ed6e659d1d8abcda7aae6b1db699",
+      "handout_sha256": "829b5dd26b05cb01c24b89196bbd7f2ddff76a9bf5101f0d7aa04af9dc205d39",
       "slides": 29
     },
     "14_Classification_Part_4": {
-      "slides_sha256": "20ca6fd0305dffa703a9e360ad649ca7e3ec76233f2f65fa109112d7264a866d",
-      "handout_sha256": "3c6e2c30fab911f9296064c9f6f899f594595d7eacb8df29a375b3465afc22bb",
+      "slides_sha256": "65456a2e1927892c623a38c8bb6266c15d0cb6fe05e5bad64e4b76116e10690f",
+      "handout_sha256": "540a4200e0cab4988a6f507f6171cea1a4905d0e605535b72c4abd9056f1bd6b",
       "slides": 25
     },
     "15_Clustering_Part_1": {
-      "slides_sha256": "1045864302d7e2d74343aa4f127619c014dfda21403d080032ca33273f9ef850",
-      "handout_sha256": "7de7cd0825669d96402120447b7cdb82b1be361020a20b268e94b0d2287d4784",
+      "slides_sha256": "8882f175411ea399b388eba9d7d3b8429a5dbc07f3a3b81801c1c26b888862b1",
+      "handout_sha256": "768bb953f1fdaa955bc1d7a7257c0224859b1f7fd98412f9978e0b5b0d35666e",
       "slides": 33
     },
     "16_Clustering_Part_2": {
-      "slides_sha256": "286abe23f9e36a0dc10a23aa28226d4357d4032f421fc2af59b4f703492ffd3b",
-      "handout_sha256": "74a3831757a8b97ecae9688e68cf82961e6eb85306db67d5e37070b4ebfd9b2a",
+      "slides_sha256": "3df5ce50241b89d73742d873cb8fff0a9070d79ebb4c7e3b6d62bfeb3ae29159",
+      "handout_sha256": "1b1cc89bed46c85385a66ad68bdf5dc2c64081594650896f5b9a3313c58bda13",
       "slides": 28
     }
   },
   "live_wooclap_import_tested": true,
   "audience": "Bachelor course; first introduction to AI and ML",
-  "live_revision_verification": "See live-revision-validation.json"
+  "live_revision_verification": "Current; see live-revision-validation.json"
 }

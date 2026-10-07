@@ -1,11 +1,12 @@
 {
-  "date": "2026-09-15",
-  "revision": "Introductory undergraduate",
+  "date": "2026-10-07",
+  "bankRevision": "2026-10-06",
+  "revision": "History Part 2 reasoning and synthesis update",
   "questions": 92,
   "core": 68,
   "optional": 24,
-  "method": "Edited existing question forms; reloaded and reopened each saved question",
-  "textChoicesAndKeys": "all matched revised bank",
+  "method": "Edited existing question forms in place; reloaded and reopened each saved History Part 2 form",
+  "textChoicesAndKeys": "History Part 2 source forms and replacement reflection matched the revised prompts and keys; the remaining forms retain the previously verified content",
   "votingSettings": "unchanged",
   "questionIds": "All 92 preserved and verified",
   "questionsVerified": {
@@ -46,7 +47,7 @@
       "verified": true,
       "eventCode": "GMSPICB",
       "src": "https://app.wooclap.com/events/GMSPICB/questions/6aa8fd64ee75ef7f05b11614",
-      "title": "L00-C04 · A new technology is promised to solve almost every problem, but its first products often fail. What might happen next?",
+      "title": "L00-C04 · A system performs well on a narrow benchmark. Its promoters claim that it is close to general intelligence, but deployments expose failures outside the benchmark. Which consequence could help produce an AI winter?",
       "choiceCount": 4,
       "correct": [
         2
@@ -57,10 +58,10 @@
       "verified": true,
       "eventCode": "GMSPICB",
       "src": "https://app.wooclap.com/events/GMSPICB/questions/6aa8fd64ee75ef7f05b11619",
-      "title": "L00-C05 · What does the term “AI winter” describe?",
+      "title": "L00-C05 · Which account best explains the two AI winters discussed in this lecture?",
       "choiceCount": 4,
       "correct": [
-        4
+        2
       ],
       "settingsUnchanged": true
     },
@@ -68,7 +69,7 @@
       "verified": true,
       "eventCode": "GMSPICB",
       "src": "https://app.wooclap.com/events/GMSPICB/questions/6aa8fd64ee75ef7f05b1161e",
-      "title": "L00-C06 · You want a chatbot to answer in a particular format. Why might you include two example answers in your request?",
+      "title": "L00-C06 · The same fixed language model receives two prompts. One gives only an instruction; the other also gives two input-output examples. The second follows the requested format more reliably. What is the best interpretation?",
       "choiceCount": 4,
       "correct": [
         3
@@ -79,7 +80,7 @@
       "verified": true,
       "eventCode": "GMSPICB",
       "src": "https://app.wooclap.com/events/GMSPICB/questions/6aa8fd64ee75ef7f05b11623",
-      "title": "L00-C07 · Name one idea or event from today’s AI history that you would explain to a friend. Explain it in one sentence.",
+      "title": "L00-C07 · Choose two milestones from different eras in this lecture. In two sentences, explain how the later milestone addressed a limitation or opportunity left by the earlier one, and name one limitation that still remained.",
       "choiceCount": 0,
       "correct": [],
       "settingsUnchanged": true
@@ -99,10 +100,10 @@
       "verified": true,
       "eventCode": "GMSPICB",
       "src": "https://app.wooclap.com/events/GMSPICB/questions/6aa90139d2f1e8b522d94339",
-      "title": "L00-O02 · What was AlphaGo famous for?",
+      "title": "L00-O02 · AlphaGo combined learned components with search. Which conclusion is best supported by its success?",
       "choiceCount": 4,
       "correct": [
-        3
+        2
       ],
       "settingsUnchanged": true
     },
@@ -1006,6 +1007,17 @@
       "settingsUnchanged": true
     }
   },
-  "embedMapping": "all 92 exact embed URLs unchanged",
-  "embedVerificationMethod": "Matched existing event codes and question IDs against event data loaded by normal browser navigation; all titles matched revised bank"
+  "history2Replacement": {
+    "verified": true,
+    "eventCode": "GMSPICB",
+    "src": "https://app.wooclap.com/events/GMSPICB/questions/6ab4e526d75f73dfb39db42a",
+    "title": "L00-C08 · Which sequence best captures a recurring pattern in the history of AI?",
+    "choiceCount": 4,
+    "correct": [
+      3
+    ],
+    "settingsUnchanged": true
+  },
+  "embedMapping": "all 92 source embed URLs and the History Part 2 replacement URL remain unchanged",
+  "embedVerificationMethod": "Reloaded the six edited forms through authenticated browser navigation and matched their saved prompts, choices and answer keys"
 }
