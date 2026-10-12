@@ -1,12 +1,12 @@
 {
-  "date": "2026-10-07",
-  "bankRevision": "2026-10-06",
-  "revision": "History Part 2 reasoning and synthesis update",
+  "date": "2026-10-12",
+  "bankRevision": "2026-10-12",
+  "revision": "Search Part 1 reasoning and trace update; earlier History Part 2 verification retained",
   "questions": 92,
   "core": 68,
   "optional": 24,
-  "method": "Edited existing question forms in place; reloaded and reopened each saved History Part 2 form",
-  "textChoicesAndKeys": "History Part 2 source forms and replacement reflection matched the revised prompts and keys; the remaining forms retain the previously verified content",
+  "method": "Edited six existing Search Part 1 forms in place through the browser; reloaded and reopened each saved form; compared rendered slide prompts, choices and existing URLs with the bank",
+  "textChoicesAndKeys": "All six Search Part 1 prompts, choices and keys matched after reload; previous verification entries are retained for unchanged questions",
   "votingSettings": "unchanged",
   "questionIds": "All 92 preserved and verified",
   "questionsVerified": {
@@ -122,56 +122,201 @@
       "verified": true,
       "eventCode": "GLDXPMN",
       "src": "https://app.wooclap.com/events/GLDXPMN/questions/6aa8fdba099c5058e29a3a94",
-      "title": "L01-C01 · One route takes two roads of 3 minutes each. Another takes three roads of 1 minute each. Which route is faster?",
+      "title": "L01-C01 · Three routes reach the same destination: P has road times 4 + 4, Q has 1 + 2 + 2, and R has 6 + 1 minutes. Which comparison of road count and total time is correct?",
       "choiceCount": 4,
       "correct": [
         1
       ],
-      "settingsUnchanged": true
+      "settingsUnchanged": true,
+      "choices": [
+        "P and R tie for fewest roads; Q is fastest at 5 minutes.",
+        "P and R tie for fewest roads; R is fastest at 1 minute.",
+        "Q uses the fewest roads and is fastest at 5 minutes.",
+        "P and R tie for fewest roads and must tie for fastest time."
+      ],
+      "verifiedAt": "2026-10-12",
+      "settings": [
+        {
+          "label": "resultsType-list",
+          "value": "true"
+        },
+        {
+          "label": "resultsType-cloud",
+          "value": "false"
+        },
+        {
+          "label": "Multiple answers",
+          "value": "false"
+        },
+        {
+          "label": "Allow comments",
+          "value": "false"
+        },
+        {
+          "label": "Timer",
+          "value": "false"
+        }
+      ]
     },
     "L01-C02": {
       "verified": true,
       "eventCode": "GLDXPMN",
       "src": "https://app.wooclap.com/events/GLDXPMN/questions/6aa8fdba099c5058e29a3a99",
-      "title": "L01-C02 · A search uses a waiting line: the first item added is the first served. B is waiting before C. Which is served first?",
+      "title": "L01-C02 · A search removes the oldest waiting path and adds children at the back. Its queue is [B, C, D], next first. B is expanded, adding E then F; C is then expanded, adding H. No node is a goal. Which two nodes are selected next?",
       "choiceCount": 4,
       "correct": [
         1
       ],
-      "settingsUnchanged": true
+      "settingsUnchanged": true,
+      "choices": [
+        "D, then E.",
+        "E, then F.",
+        "H, then D.",
+        "D, then H."
+      ],
+      "verifiedAt": "2026-10-12",
+      "settings": [
+        {
+          "label": "resultsType-list",
+          "value": "true"
+        },
+        {
+          "label": "resultsType-cloud",
+          "value": "false"
+        },
+        {
+          "label": "Multiple answers",
+          "value": "false"
+        },
+        {
+          "label": "Allow comments",
+          "value": "false"
+        },
+        {
+          "label": "Timer",
+          "value": "false"
+        }
+      ]
     },
     "L01-C03": {
       "verified": true,
       "eventCode": "GLDXPMN",
       "src": "https://app.wooclap.com/events/GLDXPMN/questions/6aa8fdba099c5058e29a3a9e",
-      "title": "L01-C03 · You put book B on a pile, then put book C on top. If you remove the top book first, which comes out first?",
+      "title": "L01-C03 · A search removes the most recently added path. It pushes B, then C, then D onto an empty stack. After selecting D, it pushes J, then K. J and K have no children; K is then selected. No node is a goal. Which two nodes are selected next?",
       "choiceCount": 4,
       "correct": [
         4
       ],
-      "settingsUnchanged": true
+      "settingsUnchanged": true,
+      "choices": [
+        "C, then B.",
+        "C, then J.",
+        "J, then B.",
+        "J, then C."
+      ],
+      "verifiedAt": "2026-10-12",
+      "settings": [
+        {
+          "label": "resultsType-list",
+          "value": "true"
+        },
+        {
+          "label": "resultsType-cloud",
+          "value": "false"
+        },
+        {
+          "label": "Multiple answers",
+          "value": "false"
+        },
+        {
+          "label": "Allow comments",
+          "value": "false"
+        },
+        {
+          "label": "Timer",
+          "value": "false"
+        }
+      ]
     },
     "L01-C04": {
       "verified": true,
       "eventCode": "GLDXPMN",
       "src": "https://app.wooclap.com/events/GLDXPMN/questions/6aa8fdba099c5058e29a3aa3",
-      "title": "L01-C04 · How does iterative deepening search work?",
+      "title": "L01-C04 · In a finite tree, the only goals are G at depth 3 with path cost 12, and H at depth 4 with path cost 4. All edge costs are positive. Iterative deepening increases its limit from 0 by one each time and stops at its first goal. What does it return, and why?",
       "choiceCount": 4,
       "correct": [
         3
       ],
-      "settingsUnchanged": true
+      "settingsUnchanged": true,
+      "choices": [
+        "H: positive edge costs make the deeper goal cheaper to find.",
+        "H: iterative deepening compares total costs across all limits.",
+        "G: the depth-3 pass reaches it before H is allowed; fewest edges need not mean lowest cost.",
+        "G: the first goal found must have minimum cost whenever all edge costs are positive."
+      ],
+      "verifiedAt": "2026-10-12",
+      "settings": [
+        {
+          "label": "resultsType-list",
+          "value": "true"
+        },
+        {
+          "label": "resultsType-cloud",
+          "value": "false"
+        },
+        {
+          "label": "Multiple answers",
+          "value": "false"
+        },
+        {
+          "label": "Allow comments",
+          "value": "false"
+        },
+        {
+          "label": "Timer",
+          "value": "false"
+        }
+      ]
     },
     "L01-C05": {
       "verified": true,
       "eventCode": "GLDXPMN",
       "src": "https://app.wooclap.com/events/GLDXPMN/questions/6aa8fdba099c5058e29a3aa8",
-      "title": "L01-C05 · You found a route to the destination that costs 10. Another route has cost 2 so far and needs one final step costing 1. Which is cheaper?",
+      "title": "L01-C05 · Only these directed edges exist: S→G costs 9, S→A costs 2, A→G costs 8, S→B costs 4, and B→G costs 1. After expanding S, a search selects the waiting path with the lowest cost so far. Which path comes next, and which complete route is cheapest?",
       "choiceCount": 4,
       "correct": [
         3
       ],
-      "settingsUnchanged": true
+      "settingsUnchanged": true,
+      "choices": [
+        "Next S→G; cheapest S→G, because a goal has already been discovered.",
+        "Next S→B; cheapest S→B→G, because its final edge is cheapest.",
+        "Next S→A; cheapest S→B→G, with total cost 5.",
+        "Next S→A; cheapest S→A→G, because A is selected first."
+      ],
+      "verifiedAt": "2026-10-12",
+      "settings": [
+        {
+          "label": "resultsType-list",
+          "value": "true"
+        },
+        {
+          "label": "resultsType-cloud",
+          "value": "false"
+        },
+        {
+          "label": "Multiple answers",
+          "value": "false"
+        },
+        {
+          "label": "Allow comments",
+          "value": "false"
+        },
+        {
+          "label": "Timer",
+          "value": "false"
+        }
+      ]
     },
     "L01-C06": {
       "verified": true,
@@ -230,12 +375,41 @@
       "verified": true,
       "eventCode": "GLDXPMN",
       "src": "https://app.wooclap.com/events/GLDXPMN/questions/6aa9014ad2f1e8b522d96954",
-      "title": "L01-O02 · A robot can move A → B → A. If it never checks where it has already been, what problem could occur?",
+      "title": "L01-O02 · The only directed edges are S→A, S→B, A→X and B→X. A search rejects a child only if its state already appears on that same path; it has no global visited set. What happens to S→A→X and S→B→X?",
       "choiceCount": 4,
       "correct": [
         3
       ],
-      "settingsUnchanged": true
+      "settingsUnchanged": true,
+      "choices": [
+        "The second path is rejected as a cycle because X was reached on the first path.",
+        "Both paths are rejected because a state may have only one parent.",
+        "Both paths are kept: neither contains a cycle, though both end at X.",
+        "The second path is automatically merged with the first by the path cycle check."
+      ],
+      "verifiedAt": "2026-10-12",
+      "settings": [
+        {
+          "label": "resultsType-list",
+          "value": "true"
+        },
+        {
+          "label": "resultsType-cloud",
+          "value": "false"
+        },
+        {
+          "label": "Multiple answers",
+          "value": "false"
+        },
+        {
+          "label": "Allow comments",
+          "value": "false"
+        },
+        {
+          "label": "Timer",
+          "value": "false"
+        }
+      ]
     },
     "L01-O03": {
       "verified": true,
@@ -1019,5 +1193,14 @@
     "settingsUnchanged": true
   },
   "embedMapping": "all 92 source embed URLs and the History Part 2 replacement URL remain unchanged",
-  "embedVerificationMethod": "Reloaded the six edited forms through authenticated browser navigation and matched their saved prompts, choices and answer keys"
+  "embedVerificationMethod": "Reloaded the six edited forms through authenticated browser navigation and matched their saved prompts, choices and answer keys",
+  "latestQuestionsVerified": [
+    "L01-C01",
+    "L01-C02",
+    "L01-C03",
+    "L01-C04",
+    "L01-C05",
+    "L01-O02"
+  ],
+  "slidePromptVerification": "All six rendered HTML question slides match the revised bank and live forms"
 }

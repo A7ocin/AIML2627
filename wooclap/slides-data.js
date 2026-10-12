@@ -188,14 +188,14 @@ window.AIML_WOOCLAP = {
           "type": "MCQ",
           "slide": "paths-costs",
           "when": "before",
-          "purpose": "Opening / everyday intuition",
-          "stem": "One route takes two roads of 3 minutes each. Another takes three roads of 1 minute each. Which route is faster?",
-          "seconds": 60,
+          "purpose": "Opening / compare objectives",
+          "stem": "Three routes reach the same destination: P has road times 4 + 4, Q has 1 + 2 + 2, and R has 6 + 1 minutes. Which comparison of road count and total time is correct?",
+          "seconds": 90,
           "choices": [
-            "The second route: 3 minutes in total.",
-            "The first route: fewer roads always means less travel time.",
-            "Both routes take 3 minutes.",
-            "The first route: 3 minutes in total."
+            "P and R tie for fewest roads; Q is fastest at 5 minutes.",
+            "P and R tie for fewest roads; R is fastest at 1 minute.",
+            "Q uses the fewest roads and is fastest at 5 minutes.",
+            "P and R tie for fewest roads and must tie for fastest time."
           ],
           "src": "https://app.wooclap.com/events/GLDXPMN/questions/6aa8fdba099c5058e29a3a94"
         },
@@ -205,14 +205,14 @@ window.AIML_WOOCLAP = {
           "type": "MCQ",
           "slide": "bfs-lab",
           "when": "before",
-          "purpose": "Prediction / intuition",
-          "stem": "A search uses a waiting line: the first item added is the first served. B is waiting before C. Which is served first?",
-          "seconds": 60,
+          "purpose": "Prediction / trace a queue",
+          "stem": "A search removes the oldest waiting path and adds children at the back. Its queue is [B, C, D], next first. B is expanded, adding E then F; C is then expanded, adding H. No node is a goal. Which two nodes are selected next?",
+          "seconds": 90,
           "choices": [
-            "B.",
-            "C.",
-            "The item with the longest name.",
-            "Both must be served at once."
+            "D, then E.",
+            "E, then F.",
+            "H, then D.",
+            "D, then H."
           ],
           "src": "https://app.wooclap.com/events/GLDXPMN/questions/6aa8fdba099c5058e29a3a99"
         },
@@ -222,14 +222,14 @@ window.AIML_WOOCLAP = {
           "type": "MCQ",
           "slide": "dfs-lab",
           "when": "before",
-          "purpose": "Prediction / intuition",
-          "stem": "You put book B on a pile, then put book C on top. If you remove the top book first, which comes out first?",
-          "seconds": 60,
+          "purpose": "Prediction / trace a stack",
+          "stem": "A search removes the most recently added path. It pushes B, then C, then D onto an empty stack. After selecting D, it pushes J, then K. J and K have no children; K is then selected. No node is a goal. Which two nodes are selected next?",
+          "seconds": 90,
           "choices": [
-            "B.",
-            "Whichever book was cheaper.",
-            "Both books must come out at once.",
-            "C."
+            "C, then B.",
+            "C, then J.",
+            "J, then B.",
+            "J, then C."
           ],
           "src": "https://app.wooclap.com/events/GLDXPMN/questions/6aa8fdba099c5058e29a3a9e"
         },
@@ -239,14 +239,14 @@ window.AIML_WOOCLAP = {
           "type": "MCQ",
           "slide": "ids-overhead",
           "when": "after",
-          "purpose": "Check / core understanding",
-          "stem": "How does iterative deepening search work?",
-          "seconds": 90,
+          "purpose": "Check / distinguish guarantees",
+          "stem": "In a finite tree, the only goals are G at depth 3 with path cost 12, and H at depth 4 with path cost 4. All edge costs are positive. Iterative deepening increases its limit from 0 by one each time and stops at its first goal. What does it return, and why?",
+          "seconds": 120,
           "choices": [
-            "It searches only the start state and then stops.",
-            "It stores every possible path before starting.",
-            "It repeats depth-limited search, gradually allowing greater depth.",
-            "It chooses roads only by their names."
+            "H: positive edge costs make the deeper goal cheaper to find.",
+            "H: iterative deepening compares total costs across all limits.",
+            "G: the depth-3 pass reaches it before H is allowed; fewest edges need not mean lowest cost.",
+            "G: the first goal found must have minimum cost whenever all edge costs are positive."
           ],
           "src": "https://app.wooclap.com/events/GLDXPMN/questions/6aa8fdba099c5058e29a3aa3"
         },
@@ -256,14 +256,14 @@ window.AIML_WOOCLAP = {
           "type": "MCQ",
           "slide": "ucs-lab",
           "when": "before",
-          "purpose": "Prediction / intuition",
-          "stem": "You found a route to the destination that costs 10. Another route has cost 2 so far and needs one final step costing 1. Which is cheaper?",
-          "seconds": 60,
+          "purpose": "Prediction / frontier versus solution cost",
+          "stem": "Only these directed edges exist: S→G costs 9, S→A costs 2, A→G costs 8, S→B costs 4, and B→G costs 1. After expanding S, a search selects the waiting path with the lowest cost so far. Which path comes next, and which complete route is cheapest?",
+          "seconds": 120,
           "choices": [
-            "The first route, because it was found first.",
-            "The second route, with total cost 2.",
-            "The second route, with total cost 3.",
-            "Both routes cost 10."
+            "Next S→G; cheapest S→G, because a goal has already been discovered.",
+            "Next S→B; cheapest S→B→G, because its final edge is cheapest.",
+            "Next S→A; cheapest S→B→G, with total cost 5.",
+            "Next S→A; cheapest S→A→G, because A is selected first."
           ],
           "src": "https://app.wooclap.com/events/GLDXPMN/questions/6aa8fdba099c5058e29a3aa8"
         },
@@ -273,14 +273,14 @@ window.AIML_WOOCLAP = {
           "type": "MCQ",
           "slide": "graph-versus-tree",
           "when": "after",
-          "purpose": "Optional / basic extension",
-          "stem": "A robot can move A → B → A. If it never checks where it has already been, what problem could occur?",
-          "seconds": 60,
+          "purpose": "Optional / cycle versus duplicate",
+          "stem": "The only directed edges are S→A, S→B, A→X and B→X. A search rejects a child only if its state already appears on that same path; it has no global visited set. What happens to S→A→X and S→B→X?",
+          "seconds": 90,
           "choices": [
-            "It must reach every goal immediately.",
-            "The two locations automatically become one location.",
-            "It could keep going around the same loop.",
-            "The robot can never return to A."
+            "The second path is rejected as a cycle because X was reached on the first path.",
+            "Both paths are rejected because a state may have only one parent.",
+            "Both paths are kept: neither contains a cycle, though both end at X.",
+            "The second path is automatically merged with the first by the path cycle check."
           ],
           "src": "https://app.wooclap.com/events/GLDXPMN/questions/6aa9014ad2f1e8b522d96954"
         }

@@ -222,129 +222,129 @@ AlphaGo’s achievement shows the strength of combining learned evaluation and p
 
 ## 03 · Search algorithms · Part 1
 
-5 core + 1 optional. Core budget: approximately 5.5 minutes.
+5 core + 1 optional. Core budget: approximately 8.5 minutes.
 
 [Core import](imports/03_Search_Part_1.xlsx) · [Optional import](imports/optional/03_Search_Part_1_optional.xlsx)
 
-### L01-C01 · Core · Opening / everyday intuition
+### L01-C01 · Core · Opening / compare objectives
 
 **Placement:** [Before slide 8: A solution path reaches a goal; its cost measures quality](../03_Search_Part_1/index.html#/7) · [Handout](../03_Search_Part_1/handout.html#chapter-paths-costs)  
-**Time:** 60 seconds, including debrief.
-
-One route takes two roads of 3 minutes each. Another takes three roads of 1 minute each. Which route is faster?
-
-- **A.** The second route: 3 minutes in total.
-- **B.** The first route: fewer roads always means less travel time.
-- **C.** Both routes take 3 minutes.
-- **D.** The first route: 3 minutes in total.
-
-**Answer:** A. The second route: 3 minutes in total.
-
-Add the travel times: the routes take 6 and 3 minutes. Fewer steps need not mean lower cost.
-
-**Misconception:** Confusing the number of steps with their total cost.
-
-**Facilitation:** Invite a guess before teaching the idea. Ask one student for their reasoning, then use the next explanation or demonstration to revisit the answer. Do not grade prior knowledge.
-
-### L01-C02 · Core · Prediction / intuition
-
-**Placement:** [Before slide 21: BFS · watch the queue expand](../03_Search_Part_1/index.html#/20) · [Handout](../03_Search_Part_1/handout.html#chapter-bfs-lab)  
-**Time:** 60 seconds, including debrief.
-
-A search uses a waiting line: the first item added is the first served. B is waiting before C. Which is served first?
-
-- **A.** B.
-- **B.** C.
-- **C.** The item with the longest name.
-- **D.** Both must be served at once.
-
-**Answer:** A. B.
-
-A first-in, first-out queue serves B first. Connect this familiar waiting-line rule to breadth-first search.
-
-**Misconception:** Confusing a queue with a last-in, first-out stack.
-
-**Facilitation:** Invite a guess before teaching the idea. Ask one student for their reasoning, then use the next explanation or demonstration to revisit the answer. Do not grade prior knowledge.
-
-### L01-C03 · Core · Prediction / intuition
-
-**Placement:** [Before slide 24: DFS · follow the stack](../03_Search_Part_1/index.html#/23) · [Handout](../03_Search_Part_1/handout.html#chapter-dfs-lab)  
-**Time:** 60 seconds, including debrief.
-
-You put book B on a pile, then put book C on top. If you remove the top book first, which comes out first?
-
-- **A.** B.
-- **B.** Whichever book was cheaper.
-- **C.** Both books must come out at once.
-- **D.** C.
-
-**Answer:** D. C.
-
-The last book added is the first removed. A stack uses this rule, as depth-first search does.
-
-**Misconception:** Mixing up stack and queue order.
-
-**Facilitation:** Invite a guess before teaching the idea. Ask one student for their reasoning, then use the next explanation or demonstration to revisit the answer. Do not grade prior knowledge.
-
-### L01-C04 · Core · Check / core understanding
-
-**Placement:** [After slide 33: Repeated work can be a reasonable price](../03_Search_Part_1/index.html#/32) · [Handout](../03_Search_Part_1/handout.html#chapter-ids-overhead)  
 **Time:** 90 seconds, including debrief.
 
-How does iterative deepening search work?
+Three routes reach the same destination: P has road times 4 + 4, Q has 1 + 2 + 2, and R has 6 + 1 minutes. Which comparison of road count and total time is correct?
 
-- **A.** It searches only the start state and then stops.
-- **B.** It stores every possible path before starting.
-- **C.** It repeats depth-limited search, gradually allowing greater depth.
-- **D.** It chooses roads only by their names.
+- **A.** P and R tie for fewest roads; Q is fastest at 5 minutes.
+- **B.** P and R tie for fewest roads; R is fastest at 1 minute.
+- **C.** Q uses the fewest roads and is fastest at 5 minutes.
+- **D.** P and R tie for fewest roads and must tie for fastest time.
 
-**Answer:** C. It repeats depth-limited search, gradually allowing greater depth.
+**Answer:** A. P and R tie for fewest roads; Q is fastest at 5 minutes.
 
-It first searches shallowly, then increases the depth limit. Repeating some work allows it to use little memory.
+P and R each use two roads, while Q uses three. Their total times are 8, 5 and 7 minutes respectively. Minimizing the number of steps and minimizing the sum of step costs are different objectives.
 
-**Misconception:** Thinking the depth limit stays fixed throughout iterative deepening.
+**Misconception:** Using only the last edge cost, or assuming a shortest path by edge count is also cheapest.
 
-**Facilitation:** Give students a moment to answer, then explain the correct choice in everyday language and address the misconception.
+**Facilitation:** Collect a prediction before defining path cost. Ask students to name the two objectives and show their sums. Revisit the distinction on the next slide.
 
-### L01-C05 · Core · Prediction / intuition
+### L01-C02 · Core · Prediction / trace a queue
+
+**Placement:** [Before slide 21: BFS · watch the queue expand](../03_Search_Part_1/index.html#/20) · [Handout](../03_Search_Part_1/handout.html#chapter-bfs-lab)  
+**Time:** 90 seconds, including debrief.
+
+A search removes the oldest waiting path and adds children at the back. Its queue is [B, C, D], next first. B is expanded, adding E then F; C is then expanded, adding H. No node is a goal. Which two nodes are selected next?
+
+- **A.** D, then E.
+- **B.** E, then F.
+- **C.** H, then D.
+- **D.** D, then H.
+
+**Answer:** A. D, then E.
+
+After B, the queue is [C, D, E, F]. After C, it is [D, E, F, H]. Therefore D and then E are selected. Children join behind all paths that were already waiting; this is the BFS queue rule.
+
+**Misconception:** Giving newly generated children priority over older waiting alternatives, or placing H ahead of E and F.
+
+**Facilitation:** The selection rule is supplied, so no prior knowledge of BFS is required. Ask students to write both intermediate queues before naming the strategy on the next slide.
+
+### L01-C03 · Core · Prediction / trace a stack
+
+**Placement:** [Before slide 24: DFS · follow the stack](../03_Search_Part_1/index.html#/23) · [Handout](../03_Search_Part_1/handout.html#chapter-dfs-lab)  
+**Time:** 90 seconds, including debrief.
+
+A search removes the most recently added path. It pushes B, then C, then D onto an empty stack. After selecting D, it pushes J, then K. J and K have no children; K is then selected. No node is a goal. Which two nodes are selected next?
+
+- **A.** C, then B.
+- **B.** C, then J.
+- **C.** J, then B.
+- **D.** J, then C.
+
+**Answer:** D. J, then C.
+
+With the top written first, the stack changes from [D, C, B] to [K, J, C, B] after D is expanded. Removing leaf K leaves [J, C, B]. J is also a leaf, so C follows it; this is DFS backtracking to an older alternative.
+
+**Misconception:** Returning to C too early, or discarding older alternatives when descending into the D branch.
+
+**Facilitation:** Ask students to sketch the stack after each step. Use the supplied rule to predict the return from a leaf, then connect it to DFS and backtracking.
+
+### L01-C04 · Core · Check / distinguish guarantees
+
+**Placement:** [After slide 33: Repeated work can be a reasonable price](../03_Search_Part_1/index.html#/32) · [Handout](../03_Search_Part_1/handout.html#chapter-ids-overhead)  
+**Time:** 120 seconds, including debrief.
+
+In a finite tree, the only goals are G at depth 3 with path cost 12, and H at depth 4 with path cost 4. All edge costs are positive. Iterative deepening increases its limit from 0 by one each time and stops at its first goal. What does it return, and why?
+
+- **A.** H: positive edge costs make the deeper goal cheaper to find.
+- **B.** H: iterative deepening compares total costs across all limits.
+- **C.** G: the depth-3 pass reaches it before H is allowed; fewest edges need not mean lowest cost.
+- **D.** G: the first goal found must have minimum cost whenever all edge costs are positive.
+
+**Answer:** C. G: the depth-3 pass reaches it before H is allowed; fewest edges need not mean lowest cost.
+
+Limits 0, 1 and 2 cannot reach either goal. The depth-3 pass can reach G but not H, so IDS returns G and stops. It guarantees a shallowest goal under these assumptions, but equal positive edge costs would be needed to turn that guarantee into minimum total cost.
+
+**Misconception:** Treating increasing depth limits as increasing cost limits, or confusing positive costs with equal costs.
+
+**Facilitation:** After the IDS lab, ask which limit first permits each goal. Discuss why a shallowest solution may still be more expensive before moving to the repeated-work calculation.
+
+### L01-C05 · Core · Prediction / frontier versus solution cost
 
 **Placement:** [Before slide 36: Lowest-cost-first · compare cumulative costs](../03_Search_Part_1/index.html#/35) · [Handout](../03_Search_Part_1/handout.html#chapter-ucs-lab)  
-**Time:** 60 seconds, including debrief.
+**Time:** 120 seconds, including debrief.
 
-You found a route to the destination that costs 10. Another route has cost 2 so far and needs one final step costing 1. Which is cheaper?
+Only these directed edges exist: S→G costs 9, S→A costs 2, A→G costs 8, S→B costs 4, and B→G costs 1. After expanding S, a search selects the waiting path with the lowest cost so far. Which path comes next, and which complete route is cheapest?
 
-- **A.** The first route, because it was found first.
-- **B.** The second route, with total cost 2.
-- **C.** The second route, with total cost 3.
-- **D.** Both routes cost 10.
+- **A.** Next S→G; cheapest S→G, because a goal has already been discovered.
+- **B.** Next S→B; cheapest S→B→G, because its final edge is cheapest.
+- **C.** Next S→A; cheapest S→B→G, with total cost 5.
+- **D.** Next S→A; cheapest S→A→G, because A is selected first.
 
-**Answer:** C. The second route, with total cost 3.
+**Answer:** C. Next S→A; cheapest S→B→G, with total cost 5.
 
-The second complete route costs 2+1=3. Finding a destination once does not prove you found the cheapest route.
+The frontier costs after S are 9, 2 and 4, so S→A is selected next. The complete routes cost 9, 10 and 5; the cheapest is S→B→G. Selection uses accumulated cost, not the final edge or hindsight about the remaining route. Discovering S→G does not justify stopping.
 
-**Misconception:** Stopping at the first discovered route without comparing costs.
+**Misconception:** Confusing the cheapest unfinished path with the cheapest complete route, or accepting the first generated goal.
 
-**Facilitation:** Invite a guess before teaching the idea. Ask one student for their reasoning, then use the next explanation or demonstration to revisit the answer. Do not grade prior knowledge.
+**Facilitation:** Compute frontier priorities and complete-route costs separately. The supplied selection rule supports the prediction before UCS is named. Revisit why goals must be accepted on selection in the stopping-rule explanation.
 
-### L01-O02 · Optional · Optional / basic extension
+### L01-O02 · Optional · Optional / cycle versus duplicate
 
 **Placement:** [After slide 12: A search tree can repeat a graph state](../03_Search_Part_1/index.html#/11) · [Handout](../03_Search_Part_1/handout.html#chapter-graph-versus-tree)  
-**Time:** 60 seconds, including debrief.
+**Time:** 90 seconds, including debrief.
 
-A robot can move A → B → A. If it never checks where it has already been, what problem could occur?
+The only directed edges are S→A, S→B, A→X and B→X. A search rejects a child only if its state already appears on that same path; it has no global visited set. What happens to S→A→X and S→B→X?
 
-- **A.** It must reach every goal immediately.
-- **B.** The two locations automatically become one location.
-- **C.** It could keep going around the same loop.
-- **D.** The robot can never return to A.
+- **A.** The second path is rejected as a cycle because X was reached on the first path.
+- **B.** Both paths are rejected because a state may have only one parent.
+- **C.** Both paths are kept: neither contains a cycle, though both end at X.
+- **D.** The second path is automatically merged with the first by the path cycle check.
 
-**Answer:** C. It could keep going around the same loop.
+**Answer:** C. Both paths are kept: neither contains a cycle, though both end at X.
 
-Repeatedly following a cycle can waste work or continue indefinitely. This motivates checking repeated states.
+S, A and X are distinct on the first path; S, B and X are distinct on the second. Neither path repeats an ancestor, so path cycle checking accepts both. Recognizing the duplicate endpoint across routes requires additional bookkeeping and a suitable search-specific policy.
 
-**Misconception:** Assuming a small map cannot lead to repeated search work.
+**Misconception:** Assuming path cycle checking also removes all duplicate states across different branches.
 
-**Facilitation:** Give students a moment to answer, then explain the correct choice in everyday language and address the misconception.
+**Facilitation:** Ask students to underline repeated states within each individual path. Then compare the endpoints across paths to distinguish a cycle from a duplicate.
 
 ## 04 · Search algorithms · Part 2
 

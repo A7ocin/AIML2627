@@ -1,5 +1,5 @@
 {
-  "date": "2026-10-06",
+  "date": "2026-10-12",
   "questions": 92,
   "core": 68,
   "optional": 24,
@@ -42,13 +42,13 @@
       "slides": 57
     },
     "03_Search_Part_1": {
-      "slides_sha256": "2bd8ae10da856f592bec23358a2d8b87fdcd4b75833103e32c83deafcb0d0e5c",
-      "handout_sha256": "8f4fb8da9f35abfa3ed24b70aa4b98dcbf26fe932dcf1624859e82e895724560",
+      "slides_sha256": "d1d61815a515845f61fe76a1906759ad62ca7f26acaeb96ff6700d629d1912d2",
+      "handout_sha256": "96d81666eea9c6d43954f821f7f12816dba9391ebbfbeb5a92ab192412b2eb42",
       "slides": 43
     },
     "04_Search_Part_2": {
-      "slides_sha256": "28b9f6ffd0020b3e7aec3b075b775ee6c2855e58f606a7e4762a63b925d6722d",
-      "handout_sha256": "64089412454d8d64fe13b36b216a87f8592450161ea5503f76a74908b6be65c1",
+      "slides_sha256": "bc1da981be10155b7934b3815bb22b8c2096845853ab67d804c4d5b9dd758053",
+      "handout_sha256": "b4db85b6330b8b93da98effb792b4fb04514dac279feaa3ddb175ea8d1ccf9f7",
       "slides": 38
     },
     "05_Constraints_Part_1": {

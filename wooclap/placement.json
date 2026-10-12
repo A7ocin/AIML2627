@@ -129,7 +129,7 @@
     "slide_href": "../03_Search_Part_1/index.html#/7",
     "handout_href": "../03_Search_Part_1/handout.html#chapter-paths-costs",
     "core": true,
-    "seconds": 60
+    "seconds": 90
   },
   {
     "id": "L01-C02",
@@ -141,7 +141,7 @@
     "slide_href": "../03_Search_Part_1/index.html#/20",
     "handout_href": "../03_Search_Part_1/handout.html#chapter-bfs-lab",
     "core": true,
-    "seconds": 60
+    "seconds": 90
   },
   {
     "id": "L01-C03",
@@ -153,7 +153,7 @@
     "slide_href": "../03_Search_Part_1/index.html#/23",
     "handout_href": "../03_Search_Part_1/handout.html#chapter-dfs-lab",
     "core": true,
-    "seconds": 60
+    "seconds": 90
   },
   {
     "id": "L01-C04",
@@ -165,7 +165,7 @@
     "slide_href": "../03_Search_Part_1/index.html#/32",
     "handout_href": "../03_Search_Part_1/handout.html#chapter-ids-overhead",
     "core": true,
-    "seconds": 90
+    "seconds": 120
   },
   {
     "id": "L01-C05",
@@ -177,7 +177,7 @@
     "slide_href": "../03_Search_Part_1/index.html#/35",
     "handout_href": "../03_Search_Part_1/handout.html#chapter-ucs-lab",
     "core": true,
-    "seconds": 60
+    "seconds": 120
   },
   {
     "id": "L01-C06",
@@ -249,7 +249,7 @@
     "slide_href": "../03_Search_Part_1/index.html#/11",
     "handout_href": "../03_Search_Part_1/handout.html#chapter-graph-versus-tree",
     "core": false,
-    "seconds": 60
+    "seconds": 90
   },
   {
     "id": "L01-O03",
