@@ -189,7 +189,7 @@
     "slide_href": "../04_Search_Part_2/index.html#/13",
     "handout_href": "../04_Search_Part_2/handout.html#chapter-astar-scores",
     "core": true,
-    "seconds": 60
+    "seconds": 90
   },
   {
     "id": "L01-C07",
@@ -201,7 +201,7 @@
     "slide_href": "../04_Search_Part_2/index.html#/21",
     "handout_href": "../04_Search_Part_2/handout.html#chapter-graph-cautions",
     "core": true,
-    "seconds": 90
+    "seconds": 120
   },
   {
     "id": "L01-C08",
@@ -213,7 +213,7 @@
     "slide_href": "../04_Search_Part_2/index.html#/27",
     "handout_href": "../04_Search_Part_2/handout.html#chapter-branch-bound-lab",
     "core": true,
-    "seconds": 60
+    "seconds": 120
   },
   {
     "id": "L01-C09",
@@ -237,7 +237,7 @@
     "slide_href": "../04_Search_Part_2/index.html#/16",
     "handout_href": "../04_Search_Part_2/handout.html#chapter-admissibility",
     "core": false,
-    "seconds": 60
+    "seconds": 90
   },
   {
     "id": "L01-O02",

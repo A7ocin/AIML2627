@@ -296,14 +296,14 @@ window.AIML_WOOCLAP = {
           "type": "MCQ",
           "slide": "astar-scores",
           "when": "before",
-          "purpose": "Prediction / intuition",
-          "stem": "A journey has cost 4 so far. You estimate that the remaining journey will cost 3. What is your estimate of the total cost?",
-          "seconds": 60,
+          "purpose": "Prediction / compare frontier scores",
+          "stem": "The frontier contains paths P, Q and R. Their costs so far g and remaining estimates h are: P (6, 1), Q (2, 4), R (4, 3). Greedy selects minimum h; A* selects minimum g + h. Which paths do they select next?",
+          "seconds": 90,
           "choices": [
-            "1.",
-            "3.",
-            "7.",
-            "4."
+            "Both select P, because its remaining estimate is smallest.",
+            "Both select Q, because its cost so far is smallest.",
+            "Greedy selects P; A* selects Q, whose total estimate is 6.",
+            "Greedy selects P; A* ties P and R at a total estimate of 7."
           ],
           "src": "https://app.wooclap.com/events/GLDXPMN/questions/6aa8fdba099c5058e29a3aad"
         },
@@ -313,14 +313,14 @@ window.AIML_WOOCLAP = {
           "type": "MCQ",
           "slide": "graph-cautions",
           "when": "after",
-          "purpose": "Check / core understanding",
-          "stem": "A search finds a cheaper route to a place it has already reached. What information should it keep?",
-          "seconds": 90,
+          "purpose": "Check / reopen and propagate",
+          "stem": "Graph A* has expanded X at cost g = 6 and found X→G with cost 3. Later it finds a route to X at g = 4. Its heuristic is admissible but inconsistent; G is the goal. Which action preserves the cheaper route through X?",
+          "seconds": 120,
           "choices": [
-            "Only the first route, even when it is more expensive.",
-            "Only the name of the place, with no cost information.",
-            "A claim that no route to this place exists.",
-            "The new, lower cost and the route that achieves it."
+            "Keep X closed: an admissible heuristic makes its first expansion final.",
+            "Update X to g = 4, but do not revisit its outgoing edge; keep G at cost 9.",
+            "Reopen X at g = 4, but keep G at cost 9 because a goal was already discovered.",
+            "Update X’s cost and parent, reopen it, and propagate the improvement to G at cost 7."
           ],
           "src": "https://app.wooclap.com/events/GLDXPMN/questions/6aa8fdba099c5058e29a3ab2"
         },
@@ -330,14 +330,14 @@ window.AIML_WOOCLAP = {
           "type": "MCQ",
           "slide": "branch-bound-lab",
           "when": "before",
-          "purpose": "Prediction / intuition",
-          "stem": "Your best complete route costs 6. Another route already costs 8, and every extra step adds a nonnegative cost. Can it beat your best route?",
-          "seconds": 60,
+          "purpose": "Prediction / lower bounds and equality",
+          "stem": "Branch-and-bound already holds a complete route costing 6. Waiting path P has g = 4, h = 3; Q has g = 2, h = 4. The estimates are admissible and costs nonnegative. If the aim is to return one cheapest route, which paths may be pruned?",
+          "seconds": 120,
           "choices": [
-            "Yes. Taking more steps always makes a route cheaper.",
-            "Yes. An unfinished route always beats a finished one.",
-            "No. Continuing cannot bring its total below 6.",
-            "There is not enough information, even with the stated cost rule."
+            "Only P: a lower bound equal to 6 must always be explored.",
+            "Only Q: its remaining estimate is larger than P’s.",
+            "Both P and Q: neither lower bound is below 6, and the saved route is retained.",
+            "Neither: their costs so far are below 6, so both must be completed."
           ],
           "src": "https://app.wooclap.com/events/GLDXPMN/questions/6aa8fdba099c5058e29a3ab7"
         },
@@ -347,8 +347,8 @@ window.AIML_WOOCLAP = {
           "type": "OpenQuestion",
           "slide": "summary",
           "when": "after",
-          "purpose": "Exit / one takeaway",
-          "stem": "In one sentence, explain the main difference between breadth-first and depth-first search.",
+          "purpose": "Exit / explain a guarantee",
+          "stem": "A graph A* search uses an admissible but inconsistent heuristic and never reopens expanded states. Can its first selected goal be suboptimal? Explain using the reopening example, where cost 6 improves to 5, and state the repair.",
           "seconds": 120,
           "choices": [],
           "src": "https://app.wooclap.com/events/GLDXPMN/questions/6aa8fdba099c5058e29a3abc"
@@ -359,14 +359,14 @@ window.AIML_WOOCLAP = {
           "type": "MCQ",
           "slide": "admissibility",
           "when": "after",
-          "purpose": "Optional / basic extension",
-          "stem": "An estimate must never be greater than the true remaining cost. The true cost is 5. Which estimate breaks this rule?",
-          "seconds": 60,
+          "purpose": "Optional / justify a relaxed bound",
+          "stem": "A robot moves horizontally or vertically on a grid, one unit per move, and must avoid obstacles. Which proposed heuristic is guaranteed admissible for every reachable state?",
+          "seconds": 90,
           "choices": [
-            "0.",
-            "3.",
-            "5.",
-            "7."
+            "The length of any legal route already found from that state to the goal.",
+            "Manhattan distance plus 1, to compensate for possible obstacles.",
+            "Twice Manhattan distance when the map contains many obstacles.",
+            "Manhattan distance to the goal with the obstacles ignored."
           ],
           "src": "https://app.wooclap.com/events/GLDXPMN/questions/6aa9014ad2f1e8b522d9694f"
         },
@@ -376,14 +376,14 @@ window.AIML_WOOCLAP = {
           "type": "MCQ",
           "slide": "consistency",
           "when": "after",
-          "purpose": "Optional / basic extension",
-          "stem": "Why can an estimate of the remaining distance help a search algorithm?",
+          "purpose": "Optional / test an edge condition",
+          "stem": "An edge u→v costs 2. The heuristic values are h(u) = 5 and h(v) = 2; the current path to u has cost g = 3. After extending that path to v, how does its A* score f = g + h change, and is this edge consistent?",
           "seconds": 90,
           "choices": [
-            "It removes the need for a destination.",
-            "Every estimate guarantees the shortest route.",
-            "It replaces the map with a list of correct answers.",
-            "It can help the algorithm choose promising places to explore first."
+            "f rises from 8 to 9; the edge is consistent because the step costs 2.",
+            "f falls from 8 to 7; the edge is consistent because its cost is positive.",
+            "f stays at 8; the increase in g always exactly cancels the change in h.",
+            "f falls from 8 to 7; the edge is inconsistent because 5 > 2 + 2."
           ],
           "src": "https://app.wooclap.com/events/GLDXPMN/questions/6aa9014ad2f1e8b522d96959"
         }

@@ -1,12 +1,12 @@
 {
   "date": "2026-10-12",
   "bankRevision": "2026-10-12",
-  "revision": "Search Part 1 reasoning and trace update; earlier History Part 2 verification retained",
+  "revision": "Search Parts 1 and 2 reasoning revisions; earlier History verifications retained",
   "questions": 92,
   "core": 68,
   "optional": 24,
-  "method": "Edited six existing Search Part 1 forms in place through the browser; reloaded and reopened each saved form; compared rendered slide prompts, choices and existing URLs with the bank",
-  "textChoicesAndKeys": "All six Search Part 1 prompts, choices and keys matched after reload; previous verification entries are retained for unchanged questions",
+  "method": "Latest batch: edited six existing Part 2 forms through the browser, then reloaded and reopened each; previous form verifications retained",
+  "textChoicesAndKeys": "All six Part 2 titles, choices, keys and settings matched after reload; rendered question slides match the bank and live forms",
   "votingSettings": "unchanged",
   "questionIds": "All 92 preserved and verified",
   "questionsVerified": {
@@ -322,54 +322,206 @@
       "verified": true,
       "eventCode": "GLDXPMN",
       "src": "https://app.wooclap.com/events/GLDXPMN/questions/6aa8fdba099c5058e29a3aad",
-      "title": "L01-C06 · A journey has cost 4 so far. You estimate that the remaining journey will cost 3. What is your estimate of the total cost?",
+      "title": "L01-C06 · The frontier contains paths P, Q and R. Their costs so far g and remaining estimates h are: P (6, 1), Q (2, 4), R (4, 3). Greedy selects minimum h; A* selects minimum g + h. Which paths do they select next?",
       "choiceCount": 4,
       "correct": [
         3
       ],
-      "settingsUnchanged": true
+      "settingsUnchanged": true,
+      "choices": [
+        "Both select P, because its remaining estimate is smallest.",
+        "Both select Q, because its cost so far is smallest.",
+        "Greedy selects P; A* selects Q, whose total estimate is 6.",
+        "Greedy selects P; A* ties P and R at a total estimate of 7."
+      ],
+      "verifiedAt": "2026-10-12",
+      "settings": [
+        {
+          "label": "resultsType-list",
+          "value": "true"
+        },
+        {
+          "label": "resultsType-cloud",
+          "value": "false"
+        },
+        {
+          "label": "Multiple answers",
+          "value": "false"
+        },
+        {
+          "label": "Allow comments",
+          "value": "false"
+        },
+        {
+          "label": "Timer",
+          "value": "false"
+        }
+      ]
     },
     "L01-C07": {
       "verified": true,
       "eventCode": "GLDXPMN",
       "src": "https://app.wooclap.com/events/GLDXPMN/questions/6aa8fdba099c5058e29a3ab2",
-      "title": "L01-C07 · A search finds a cheaper route to a place it has already reached. What information should it keep?",
+      "title": "L01-C07 · Graph A* has expanded X at cost g = 6 and found X→G with cost 3. Later it finds a route to X at g = 4. Its heuristic is admissible but inconsistent; G is the goal. Which action preserves the cheaper route through X?",
       "choiceCount": 4,
       "correct": [
         4
       ],
-      "settingsUnchanged": true
+      "settingsUnchanged": true,
+      "choices": [
+        "Keep X closed: an admissible heuristic makes its first expansion final.",
+        "Update X to g = 4, but do not revisit its outgoing edge; keep G at cost 9.",
+        "Reopen X at g = 4, but keep G at cost 9 because a goal was already discovered.",
+        "Update X’s cost and parent, reopen it, and propagate the improvement to G at cost 7."
+      ],
+      "verifiedAt": "2026-10-12",
+      "settings": [
+        {
+          "label": "resultsType-list",
+          "value": "true"
+        },
+        {
+          "label": "resultsType-cloud",
+          "value": "false"
+        },
+        {
+          "label": "Multiple answers",
+          "value": "false"
+        },
+        {
+          "label": "Allow comments",
+          "value": "false"
+        },
+        {
+          "label": "Timer",
+          "value": "false"
+        }
+      ]
     },
     "L01-C08": {
       "verified": true,
       "eventCode": "GLDXPMN",
       "src": "https://app.wooclap.com/events/GLDXPMN/questions/6aa8fdba099c5058e29a3ab7",
-      "title": "L01-C08 · Your best complete route costs 6. Another route already costs 8, and every extra step adds a nonnegative cost. Can it beat your best route?",
+      "title": "L01-C08 · Branch-and-bound already holds a complete route costing 6. Waiting path P has g = 4, h = 3; Q has g = 2, h = 4. The estimates are admissible and costs nonnegative. If the aim is to return one cheapest route, which paths may be pruned?",
       "choiceCount": 4,
       "correct": [
         3
       ],
-      "settingsUnchanged": true
+      "settingsUnchanged": true,
+      "choices": [
+        "Only P: a lower bound equal to 6 must always be explored.",
+        "Only Q: its remaining estimate is larger than P’s.",
+        "Both P and Q: neither lower bound is below 6, and the saved route is retained.",
+        "Neither: their costs so far are below 6, so both must be completed."
+      ],
+      "verifiedAt": "2026-10-12",
+      "settings": [
+        {
+          "label": "resultsType-list",
+          "value": "true"
+        },
+        {
+          "label": "resultsType-cloud",
+          "value": "false"
+        },
+        {
+          "label": "Multiple answers",
+          "value": "false"
+        },
+        {
+          "label": "Allow comments",
+          "value": "false"
+        },
+        {
+          "label": "Timer",
+          "value": "false"
+        }
+      ]
     },
     "L01-C09": {
       "verified": true,
       "eventCode": "GLDXPMN",
       "src": "https://app.wooclap.com/events/GLDXPMN/questions/6aa8fdba099c5058e29a3abc",
-      "title": "L01-C09 · In one sentence, explain the main difference between breadth-first and depth-first search.",
+      "title": "L01-C09 · A graph A* search uses an admissible but inconsistent heuristic and never reopens expanded states. Can its first selected goal be suboptimal? Explain using the reopening example, where cost 6 improves to 5, and state the repair.",
       "choiceCount": 0,
       "correct": [],
-      "settingsUnchanged": true
+      "settingsUnchanged": true,
+      "choices": [],
+      "verifiedAt": "2026-10-12",
+      "settings": [
+        {
+          "label": "resultsType-list",
+          "value": "true"
+        },
+        {
+          "label": "resultsType-cloud",
+          "value": "false"
+        },
+        {
+          "label": "Multiple answers",
+          "value": "false"
+        },
+        {
+          "label": "Likes on answers",
+          "value": "false"
+        },
+        {
+          "label": "Allow images",
+          "value": "false"
+        },
+        {
+          "label": "Stop words",
+          "value": "true"
+        },
+        {
+          "label": "Merge accents",
+          "value": "true"
+        },
+        {
+          "label": "Timer",
+          "value": "false"
+        }
+      ]
     },
     "L01-O01": {
       "verified": true,
       "eventCode": "GLDXPMN",
       "src": "https://app.wooclap.com/events/GLDXPMN/questions/6aa9014ad2f1e8b522d9694f",
-      "title": "L01-O01 · An estimate must never be greater than the true remaining cost. The true cost is 5. Which estimate breaks this rule?",
+      "title": "L01-O01 · A robot moves horizontally or vertically on a grid, one unit per move, and must avoid obstacles. Which proposed heuristic is guaranteed admissible for every reachable state?",
       "choiceCount": 4,
       "correct": [
         4
       ],
-      "settingsUnchanged": true
+      "settingsUnchanged": true,
+      "choices": [
+        "The length of any legal route already found from that state to the goal.",
+        "Manhattan distance plus 1, to compensate for possible obstacles.",
+        "Twice Manhattan distance when the map contains many obstacles.",
+        "Manhattan distance to the goal with the obstacles ignored."
+      ],
+      "verifiedAt": "2026-10-12",
+      "settings": [
+        {
+          "label": "resultsType-list",
+          "value": "true"
+        },
+        {
+          "label": "resultsType-cloud",
+          "value": "false"
+        },
+        {
+          "label": "Multiple answers",
+          "value": "false"
+        },
+        {
+          "label": "Allow comments",
+          "value": "false"
+        },
+        {
+          "label": "Timer",
+          "value": "false"
+        }
+      ]
     },
     "L01-O02": {
       "verified": true,
@@ -415,12 +567,41 @@
       "verified": true,
       "eventCode": "GLDXPMN",
       "src": "https://app.wooclap.com/events/GLDXPMN/questions/6aa9014ad2f1e8b522d96959",
-      "title": "L01-O03 · Why can an estimate of the remaining distance help a search algorithm?",
+      "title": "L01-O03 · An edge u→v costs 2. The heuristic values are h(u) = 5 and h(v) = 2; the current path to u has cost g = 3. After extending that path to v, how does its A* score f = g + h change, and is this edge consistent?",
       "choiceCount": 4,
       "correct": [
         4
       ],
-      "settingsUnchanged": true
+      "settingsUnchanged": true,
+      "choices": [
+        "f rises from 8 to 9; the edge is consistent because the step costs 2.",
+        "f falls from 8 to 7; the edge is consistent because its cost is positive.",
+        "f stays at 8; the increase in g always exactly cancels the change in h.",
+        "f falls from 8 to 7; the edge is inconsistent because 5 > 2 + 2."
+      ],
+      "verifiedAt": "2026-10-12",
+      "settings": [
+        {
+          "label": "resultsType-list",
+          "value": "true"
+        },
+        {
+          "label": "resultsType-cloud",
+          "value": "false"
+        },
+        {
+          "label": "Multiple answers",
+          "value": "false"
+        },
+        {
+          "label": "Allow comments",
+          "value": "false"
+        },
+        {
+          "label": "Timer",
+          "value": "false"
+        }
+      ]
     },
     "L02-C01": {
       "verified": true,
@@ -1195,12 +1376,12 @@
   "embedMapping": "all 92 source embed URLs and the History Part 2 replacement URL remain unchanged",
   "embedVerificationMethod": "Reloaded the six edited forms through authenticated browser navigation and matched their saved prompts, choices and answer keys",
   "latestQuestionsVerified": [
-    "L01-C01",
-    "L01-C02",
-    "L01-C03",
-    "L01-C04",
-    "L01-C05",
-    "L01-O02"
+    "L01-C06",
+    "L01-C07",
+    "L01-C08",
+    "L01-C09",
+    "L01-O01",
+    "L01-O03"
   ],
-  "slidePromptVerification": "All six rendered HTML question slides match the revised bank and live forms"
+  "slidePromptVerification": "Part 2: all six rendered question slides match the bank and live forms; previous Part 1 verification retained"
 }

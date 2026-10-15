@@ -348,125 +348,125 @@ S, A and X are distinct on the first path; S, B and X are distinct on the second
 
 ## 04 · Search algorithms · Part 2
 
-4 core + 2 optional. Core budget: approximately 5.5 minutes.
+4 core + 2 optional. Core budget: approximately 7.5 minutes.
 
 [Core import](imports/04_Search_Part_2.xlsx) · [Optional import](imports/optional/04_Search_Part_2_optional.xlsx)
 
-### L01-C06 · Core · Prediction / intuition
+### L01-C06 · Core · Prediction / compare frontier scores
 
 **Placement:** [Before slide 14: The first A* decision](../04_Search_Part_2/index.html#/13) · [Handout](../04_Search_Part_2/handout.html#chapter-astar-scores)  
-**Time:** 60 seconds, including debrief.
-
-A journey has cost 4 so far. You estimate that the remaining journey will cost 3. What is your estimate of the total cost?
-
-- **A.** 1.
-- **B.** 3.
-- **C.** 7.
-- **D.** 4.
-
-**Answer:** C. 7.
-
-Add cost so far and estimated cost still to come: 4+3=7. This introduces the scoring idea used by A*.
-
-**Misconception:** Considering only the remaining cost or only the cost already paid.
-
-**Facilitation:** Invite a guess before teaching the idea. Ask one student for their reasoning, then use the next explanation or demonstration to revisit the answer. Do not grade prior knowledge.
-
-### L01-C07 · Core · Check / core understanding
-
-**Placement:** [After slide 22: Graph search must keep better routes alive](../04_Search_Part_2/index.html#/21) · [Handout](../04_Search_Part_2/handout.html#chapter-graph-cautions)  
 **Time:** 90 seconds, including debrief.
 
-A search finds a cheaper route to a place it has already reached. What information should it keep?
+The frontier contains paths P, Q and R. Their costs so far g and remaining estimates h are: P (6, 1), Q (2, 4), R (4, 3). Greedy selects minimum h; A* selects minimum g + h. Which paths do they select next?
 
-- **A.** Only the first route, even when it is more expensive.
-- **B.** Only the name of the place, with no cost information.
-- **C.** A claim that no route to this place exists.
-- **D.** The new, lower cost and the route that achieves it.
+- **A.** Both select P, because its remaining estimate is smallest.
+- **B.** Both select Q, because its cost so far is smallest.
+- **C.** Greedy selects P; A* selects Q, whose total estimate is 6.
+- **D.** Greedy selects P; A* ties P and R at a total estimate of 7.
 
-**Answer:** D. The new, lower cost and the route that achieves it.
+**Answer:** C. Greedy selects P; A* selects Q, whose total estimate is 6.
 
-Keeping the best known route avoids throwing away useful improvements. Some search methods must also revisit the state.
+Greedy compares h values 1, 4 and 3, so it selects P. A* compares f = g + h values 7, 6 and 7, so it selects Q. A tie between P and R does not matter because Q has a lower score than both.
 
-**Misconception:** Thinking that reaching a state once settles its best cost forever.
+**Misconception:** Assuming minimum remaining estimate or minimum cost so far alone determines the A* choice, or overlooking a lower-scoring candidate when two others tie.
 
-**Facilitation:** Give students a moment to answer, then explain the correct choice in everyday language and address the misconception.
+**Facilitation:** Ask students to write all three f scores before voting, then explain why the two global selection rules can disagree. Follow with the course-tree score table.
 
-### L01-C08 · Core · Prediction / intuition
+### L01-C07 · Core · Check / reopen and propagate
+
+**Placement:** [After slide 22: Graph search must keep better routes alive](../04_Search_Part_2/index.html#/21) · [Handout](../04_Search_Part_2/handout.html#chapter-graph-cautions)  
+**Time:** 120 seconds, including debrief.
+
+Graph A* has expanded X at cost g = 6 and found X→G with cost 3. Later it finds a route to X at g = 4. Its heuristic is admissible but inconsistent; G is the goal. Which action preserves the cheaper route through X?
+
+- **A.** Keep X closed: an admissible heuristic makes its first expansion final.
+- **B.** Update X to g = 4, but do not revisit its outgoing edge; keep G at cost 9.
+- **C.** Reopen X at g = 4, but keep G at cost 9 because a goal was already discovered.
+- **D.** Update X’s cost and parent, reopen it, and propagate the improvement to G at cost 7.
+
+**Answer:** D. Update X’s cost and parent, reopen it, and propagate the improvement to G at cost 7.
+
+The earlier route via X costs 6 + 3 = 9. The improvement gives 4 + 3 = 7. With an inconsistent admissible heuristic, an expanded state may later receive a better g. Updating only its record without reprocessing outgoing edges can leave descendant costs stale. Update the parent and cost, reopen X, and propagate the improvement.
+
+**Misconception:** Treating admissibility as permission to close states permanently, or recording a cheaper arrival without propagating it.
+
+**Facilitation:** Ask students to distinguish recording an improvement from propagating it. Relate their answer to the preceding reopening trace, keeping the toy numbers separate from that trace.
+
+### L01-C08 · Core · Prediction / lower bounds and equality
 
 **Placement:** [Before slide 28: Branch-and-bound · watch the incumbent improve](../04_Search_Part_2/index.html#/27) · [Handout](../04_Search_Part_2/handout.html#chapter-branch-bound-lab)  
-**Time:** 60 seconds, including debrief.
+**Time:** 120 seconds, including debrief.
 
-Your best complete route costs 6. Another route already costs 8, and every extra step adds a nonnegative cost. Can it beat your best route?
+Branch-and-bound already holds a complete route costing 6. Waiting path P has g = 4, h = 3; Q has g = 2, h = 4. The estimates are admissible and costs nonnegative. If the aim is to return one cheapest route, which paths may be pruned?
 
-- **A.** Yes. Taking more steps always makes a route cheaper.
-- **B.** Yes. An unfinished route always beats a finished one.
-- **C.** No. Continuing cannot bring its total below 6.
-- **D.** There is not enough information, even with the stated cost rule.
+- **A.** Only P: a lower bound equal to 6 must always be explored.
+- **B.** Only Q: its remaining estimate is larger than P’s.
+- **C.** Both P and Q: neither lower bound is below 6, and the saved route is retained.
+- **D.** Neither: their costs so far are below 6, so both must be completed.
 
-**Answer:** C. No. Continuing cannot bring its total below 6.
+**Answer:** C. Both P and Q: neither lower bound is below 6, and the saved route is retained.
 
-Its final cost will be at least 8, so it cannot improve on 6. This is the intuition behind pruning unpromising branches.
+The lower bounds are f(P) = 7 and f(Q) = 6. Neither can improve the saved cost-6 solution, so both may be pruned when only one optimum is needed. Equality can exclude an alternative equal-cost route; this is safe because the incumbent route is already saved. A threshold of 6 without a saved route would be a different situation.
 
-**Misconception:** Thinking every unfinished route must be explored to completion.
+**Misconception:** Pruning on g or h alone, or assuming an equal lower bound must be explored even when one incumbent solution suffices.
 
-**Facilitation:** Invite a guess before teaching the idea. Ask one student for their reasoning, then use the next explanation or demonstration to revisit the answer. Do not grade prior knowledge.
+**Facilitation:** Have students compute both lower bounds and identify the saved route as the evidence supporting equality pruning. Revisit the distinction between a strict cutoff and a saved incumbent after the lab.
 
-### L01-C09 · Core · Exit / one takeaway
+### L01-C09 · Core · Exit / explain a guarantee
 
 **Placement:** [After slide 35: Search is controlled exploration](../04_Search_Part_2/index.html#/34) · [Handout](../04_Search_Part_2/handout.html#chapter-summary)  
 **Time:** 120 seconds, including debrief.
 
-In one sentence, explain the main difference between breadth-first and depth-first search.
+A graph A* search uses an admissible but inconsistent heuristic and never reopens expanded states. Can its first selected goal be suboptimal? Explain using the reopening example, where cost 6 improves to 5, and state the repair.
 
 
 **Answer:** Suggested rubric (no automatic answer key)
 
-Breadth-first explores one depth level before the next; depth-first follows a branch deeper before returning. Either everyday wording is acceptable.
+Suggested rubric: yes. An admissible heuristic keeps path estimates optimistic, but an inconsistent heuristic can let a cheaper route to an expanded state arrive later. If that route is discarded, the frontier loses the prefix needed for the optimality argument. In the demo, reopening X at g = 2 improves the goal cost from 6 to 5. Keep best costs and parents, reopen improved states, and propagate improvements; test goals on selection under the stated cost/termination conditions.
 
-**Misconception:** Treating all search algorithms as using the same exploration order.
+**Misconception:** Believing admissibility alone guarantees optimality for every graph-search implementation, regardless of duplicate handling.
 
-**Facilitation:** Accept a short answer in the student’s own words. Use a few responses to identify what needs revisiting; do not grade terminology.
+**Facilitation:** Accept two or three sentences that connect the frontier argument to the concrete reopening trace. Keep the response ungraded; use it to diagnose whether students distinguish heuristic properties from implementation rules.
 
-### L01-O01 · Optional · Optional / basic extension
+### L01-O01 · Optional · Optional / justify a relaxed bound
 
 **Placement:** [After slide 17: Admissible means “never overestimate”](../04_Search_Part_2/index.html#/16) · [Handout](../04_Search_Part_2/handout.html#chapter-admissibility)  
-**Time:** 60 seconds, including debrief.
+**Time:** 90 seconds, including debrief.
 
-An estimate must never be greater than the true remaining cost. The true cost is 5. Which estimate breaks this rule?
+A robot moves horizontally or vertically on a grid, one unit per move, and must avoid obstacles. Which proposed heuristic is guaranteed admissible for every reachable state?
 
-- **A.** 0.
-- **B.** 3.
-- **C.** 5.
-- **D.** 7.
+- **A.** The length of any legal route already found from that state to the goal.
+- **B.** Manhattan distance plus 1, to compensate for possible obstacles.
+- **C.** Twice Manhattan distance when the map contains many obstacles.
+- **D.** Manhattan distance to the goal with the obstacles ignored.
 
-**Answer:** D. 7.
+**Answer:** D. Manhattan distance to the goal with the obstacles ignored.
 
-Seven exceeds five. A heuristic that never overestimates is called admissible.
+Ignoring obstacles removes constraints while preserving the unit move costs, so the relaxed shortest path cannot cost more than the real shortest path. Its cost is Manhattan distance. A legal route supplies an upper bound, not necessarily a lower bound; adding 1 or multiplying by 2 can overestimate, including simple unobstructed cases.
 
-**Misconception:** Confusing an optimistic estimate with an overestimate.
+**Misconception:** Confusing the cost of a feasible solution with an admissible lower bound, or assuming an obstacle correction is safe without proof.
 
-**Facilitation:** Give students a moment to answer, then explain the correct choice in everyday language and address the misconception.
+**Facilitation:** Ask for the guarantee argument, not just the name Manhattan distance. Students can refute the other proposals with an unobstructed path or the goal itself.
 
-### L01-O03 · Optional · Optional / basic extension
+### L01-O03 · Optional · Optional / test an edge condition
 
 **Placement:** [After slide 20: Consistency checks each edge](../04_Search_Part_2/index.html#/19) · [Handout](../04_Search_Part_2/handout.html#chapter-consistency)  
 **Time:** 90 seconds, including debrief.
 
-Why can an estimate of the remaining distance help a search algorithm?
+An edge u→v costs 2. The heuristic values are h(u) = 5 and h(v) = 2; the current path to u has cost g = 3. After extending that path to v, how does its A* score f = g + h change, and is this edge consistent?
 
-- **A.** It removes the need for a destination.
-- **B.** Every estimate guarantees the shortest route.
-- **C.** It replaces the map with a list of correct answers.
-- **D.** It can help the algorithm choose promising places to explore first.
+- **A.** f rises from 8 to 9; the edge is consistent because the step costs 2.
+- **B.** f falls from 8 to 7; the edge is consistent because its cost is positive.
+- **C.** f stays at 8; the increase in g always exactly cancels the change in h.
+- **D.** f falls from 8 to 7; the edge is inconsistent because 5 > 2 + 2.
 
-**Answer:** D. It can help the algorithm choose promising places to explore first.
+**Answer:** D. f falls from 8 to 7; the edge is inconsistent because 5 > 2 + 2.
 
-A heuristic guides the order of exploration. Whether a method guarantees the cheapest route depends on additional conditions.
+Before the edge, f = 3 + 5 = 8. After paying the edge cost, g = 5 and f = 5 + 2 = 7. Consistency would require h(u) ≤ cost(u,v) + h(v), but 5 > 4. The falling score exposes the inconsistency; positive edge costs alone do not establish the condition.
 
-**Misconception:** Thinking a helpful estimate is automatically an exact answer.
+**Misconception:** Assuming f always increases because g increases, or confusing positive edge costs with consistency of the heuristic.
 
-**Facilitation:** Give students a moment to answer, then explain the correct choice in everyday language and address the misconception.
+**Facilitation:** Compute the new g before adding the new h. Then check the edge inequality separately and connect the two results to the monotonicity explanation.
 
 ## 05 · Constraint satisfaction · Part 1
 

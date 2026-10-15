@@ -47,18 +47,18 @@
       "slides": 43
     },
     "04_Search_Part_2": {
-      "slides_sha256": "bc1da981be10155b7934b3815bb22b8c2096845853ab67d804c4d5b9dd758053",
-      "handout_sha256": "b4db85b6330b8b93da98effb792b4fb04514dac279feaa3ddb175ea8d1ccf9f7",
-      "slides": 38
+      "slides_sha256": "c570d3e21253bcfdf87897fc682370722f6afcce13d8c0ce0d07d8282808bc0f",
+      "handout_sha256": "ace0f7e89ee7b0b1f825041aa34cffe5c30504406b8b1a27a3b761180ee12340",
+      "slides": 37
     },
     "05_Constraints_Part_1": {
-      "slides_sha256": "a3bbbe205cc75939d4b2d2c10ece599524135c5491126a1d78ce5e817561dca1",
-      "handout_sha256": "bfd7dc6ac9be6e2e1ad08165bb3a4d7b9ecbc344b64ed676fa7469b435f8cd1e",
+      "slides_sha256": "97e35f8622b17bc217dc8aa17723aff21b117127c89757cbd1dd04415dce58ac",
+      "handout_sha256": "4e0fe9b51d8200f1059b5aa37c9a3ffbabbb9e9ab1fc8ff625cd1535649b73bc",
       "slides": 24
     },
     "06_Constraints_Part_2": {
-      "slides_sha256": "46b0cc011046ddb2c19316135e9927578da70fd375bf284c50be4db43ce9e242",
-      "handout_sha256": "4fea2c6ec46e4cc5763a6c8333cd1e9c09bc107944c158caed3ef31e1469554e",
+      "slides_sha256": "280771a2ab24159a7e895d3e55b7d761572f4a73e933fc9ab90b7d50d67ea418",
+      "handout_sha256": "5b1413f9a2d506cd7d9da2d138f57ae6c4ccaaee7f118fdeae5c485475c0cd00",
       "slides": 21
     },
     "07_Intro_ML_Part_1": {
@@ -114,5 +114,17 @@
   },
   "live_wooclap_import_tested": true,
   "audience": "Bachelor course; first introduction to AI and ML",
-  "live_revision_verification": "Current; see live-revision-validation.json"
+  "live_revision_verification": "Current; see live-revision-validation.json",
+  "constraints_clarity_review": {
+    "date": "2026-10-14",
+    "packs": [
+      "05_Constraints_Part_1",
+      "06_Constraints_Part_2"
+    ],
+    "source_slides": 45,
+    "handout_chapters": 40,
+    "interactive_examples": 8,
+    "course_reference": "https://www.aretor.it/courses/aiml2526/lessons/02_constraint/",
+    "stable_ids_preserved": true
+  }
 }

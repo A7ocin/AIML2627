@@ -1,32 +1,32 @@
-# AIML · Lesson 2 · Constraint Satisfaction Problems
+# AIML · Constraint Satisfaction Problems
 
-Open `index.html` in Chrome or Edge. The 38-slide presentation and all six labs work directly from disk, without a server or an internet connection. Its theme, typography, navigation and slide dimensions follow the approved History and Search packs.
+The active decks are `AIML/05_Constraints_Part_1/index.html` and `AIML/06_Constraints_Part_2/index.html`, each with a companion `handout.html`. Open either in Chrome or Edge; the included assets allow examples to work from disk. The packs contain 24 and 21 source slides, plus six and five inserted Wooclap questions: 30 and 26 rendered slides.
 
-Use the arrow keys or bottom navigation to move between slides; Escape opens the overview. Inside a lab, use its controls. Playback pauses when leaving the slide, opening the overview or hiding the browser tab.
+Arrow keys and bottom navigation move between slides; Escape opens the overview. Playback pauses when leaving a lab, opening the overview or hiding the browser tab.
 
-| Slide | Interactive lab | Controls |
+| Pack | Stable slide ID | Interactive example |
 | --- | --- | --- |
-| 8 | Assignment evaluator | Set or clear each variable; see true, false and pending constraints |
-| 12 | Original course DFS tree | Play, Back, Next, Reset, speed and value order; hover or focus a node to inspect its context |
-| 18 | Original course GAC network | Play, Back, Next, Reset, speed and three examples; inspect domains, worklist and support witnesses |
-| 23 | GAC with domain splitting | Step through branching and propagation for the same three examples |
-| 29 | Local search on graph coloring | Compare strict improvement, random sampling, random walk, tabu and annealing; change initialization and random seed |
-| 32 | Annealing acceptance | Change score difference, temperature and test draw; see the exact probability and decision |
+| 5 | `assignment-lab` | Set or clear values; distinguish true, false and pending rules |
+| 5 | `dfs-lab` | Follow the original course DFS tree and inspect contexts |
+| 5 | `support` | Remove partners and observe the loss of the last support |
+| 5 | `gac-lab` | Inspect domains, supports and the changing worklist |
+| 6 | `split-lab` | Follow propagation and branching for three CSP examples |
+| 6 | `improvement` | Escape a coloring plateau through a sideways move |
+| 6 | `local-lab` | Compare strict improvement, sampling, walk, tabu and annealing |
+| 6 | `anneal-lab` | Change score difference, temperature and test draw |
 
-The local-search lab uses reproducible seeded runs with a 40-step budget. Reset repeats the selected run. A run that does not find a solution does not prove that none exists.
+All eight examples are embedded in handout chapters, with static print previews. The local-search lab uses reproducible seeded runs and a 40-step budget. An unsuccessful run does not prove that no solution exists.
 
-## Review and teaching material
+## Editing
 
-- `_review/index.html`: gallery of all rendered slides.
-- `_review/AIML-Constraints-reviewed.pdf`: 38-page static handout. Use the HTML presentation for interactivity.
-- `_review/audit.json`: browser, layout and interaction validation results.
-- `notes/slide-notes.md`: explanations and teaching notes for each slide; these are also embedded in the HTML.
-- `notes/source-map.md`: source coverage, retained interactions and corrections.
+Edit the active pack HTML files directly and retain stable IDs for handouts, navigation and quiz placements. Revise each matching handout chapter and supporting excerpt together. Update embedded lab titles in `data-title`, visible headings, poster descriptions and the encoded `.lab-source` documents.
 
-## Editing and rebuilding
+Shared layouts live in `css/theme-base.css`, `css/search.css`, `css/csp.css` and `css/clarity.css`. Algorithms are in `js/csp-engine.js`; full labs use `js/visuals.js` and `js/widgets.js`. The focused support and plateau experiments use `js/clarity-widgets.js`. Refresh asset cache-version queries when shared assets change. Update source hashes in `AIML/wooclap/validation.json`; content edits alone do not require quiz-bank changes.
 
-Edit slide content in `tools/build-deck.py`, then run `python tools/build-deck.py`. Layout lives in `css/csp.css`; inherited theme files are `css/theme-base.css` and `css/search.css`. The engine, SVG drawings and widgets live in `js/csp-engine.js`, `js/visuals.js` and `js/widgets.js`.
+`tools/build-deck.py`, `notes/` and `_review/` describe the earlier combined 38-slide lecture. They are historical material, not the authoring source for the two split packs. The legacy builder does not update the active packs.
 
-Run `node tests/engine.test.js` for algorithm checks. The optional browser review script, `node tests/render-review.js`, requires Chrome and `puppeteer-core` at the path configured near the top of that script. It regenerates screenshots, gallery, PDF and audit. `python tools/contact-sheets.py` requires Pillow and regenerates contact sheets.
+## Verification
 
-All runtime assets are included. Developer review tools require their separately installed dependencies. `js/source-tree.js` retains the source tree as a regression fixture; it is not loaded by the presentation.
+Run `node tests/engine.test.js` for algorithm checks. Review every rendered slide in a browser for clipping, and exercise controls through their actual UI. Check handout embeds, chapter links and navigation. `js/source-tree.js` retains the original tree as a regression fixture and is not loaded by the presentation.
+
+Primary reference: [AIML Lesson 02 · Constraint Satisfaction Problems](https://www.aretor.it/courses/aiml2526/lessons/02_constraint/). The packs preserve its course CSP and algorithm sequence while adding clearer illustrations and precise statements of what each method establishes.
