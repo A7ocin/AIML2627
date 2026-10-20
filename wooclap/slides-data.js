@@ -399,14 +399,14 @@ window.AIML_WOOCLAP = {
           "type": "MCQ",
           "slide": "definition",
           "when": "before",
-          "purpose": "Opening / everyday intuition",
-          "stem": "Two exams must use different rooms. Each can use room 1 or room 2. Which room assignment is allowed?",
-          "seconds": 60,
+          "purpose": "Check / partial assignment and scope",
+          "stem": "A, B and C each have domain {1,2,3}. The rules are A < B and B ≠ C. Only A = 2 is assigned. Which statement about this partial assignment is correct?",
+          "seconds": 90,
           "choices": [
-            "Both exams in room 1.",
-            "Both exams in room 2.",
-            "Exam A in room 1; exam B in room 2.",
-            "Exam A in room 3; exam B in room 1."
+            "It already violates A < B, because B has no assigned value.",
+            "It is a solution, because no rule has been violated yet.",
+            "Neither rule is evaluable yet; one possible completion is B = 3, C = 1.",
+            "Both rules are satisfied, because each has at least one possible supporting pair."
           ],
           "src": "https://app.wooclap.com/events/JCKQKTX/questions/6aa8fdea099c5058e29a758f"
         },
@@ -416,14 +416,14 @@ window.AIML_WOOCLAP = {
           "type": "MCQ",
           "slide": "dfs-lab",
           "when": "before",
-          "purpose": "Prediction / intuition",
-          "stem": "While making a timetable, you put two classes in the same room at the same time. What is a sensible next step?",
+          "purpose": "Prediction / trace a pruned branch",
+          "stem": "X₁, X₂ and X₃ each have domain {0,1,2}. The rules are X₁ < 2, X₂ > 0 and X₃ < X₁. DFS assigns X₁ first and tries X₁ = 2. What can it prune immediately, without propagation?",
           "seconds": 90,
           "choices": [
-            "Undo one of those choices and try another.",
-            "Keep the clash and assume a later choice will remove it.",
-            "Conclude that no timetable could ever work.",
-            "Stop checking room conflicts for the remaining classes."
+            "All 9 completions of this branch: X₁ < 2 is already false.",
+            "Only the 3 completions with X₂ = 0: X₃ is still unassigned.",
+            "All 27 assignments: a false unary rule makes the whole CSP impossible.",
+            "Nothing yet: every rule must wait until all three variables are assigned."
           ],
           "src": "https://app.wooclap.com/events/JCKQKTX/questions/6aa8fdea099c5058e29a7594"
         },
@@ -433,14 +433,14 @@ window.AIML_WOOCLAP = {
           "type": "MCQ",
           "slide": "gac-lab",
           "when": "before",
-          "purpose": "Prediction / intuition",
-          "stem": "A task must finish before 3 pm. Its possible finish times are 1 pm, 2 pm and 3 pm. Which time can you rule out?",
-          "seconds": 60,
+          "purpose": "Prediction / propagation to a fixed point",
+          "stem": "A, B and C each start with domain {1,2,3,4}; the rules are A < B and B < C. Repeatedly remove values with no support in a rule, until no domain changes. What remains?",
+          "seconds": 120,
           "choices": [
-            "1 pm.",
-            "3 pm.",
-            "2 pm.",
-            "None of them."
+            "A = {1,2,3}, B = {2,3}, C = {2,3,4}.",
+            "A = {1,2}, B = {2,3}, C = {3,4}.",
+            "A = {1}, B = {2}, C = {3}: propagation chooses the smallest solution.",
+            "A = {1,2,3}, B = {1,2,3,4}, C = {2,3,4}."
           ],
           "src": "https://app.wooclap.com/events/JCKQKTX/questions/6aa8fdea099c5058e29a7599"
         },
@@ -450,14 +450,14 @@ window.AIML_WOOCLAP = {
           "type": "MCQ",
           "slide": "consistent-unsat",
           "when": "before",
-          "purpose": "Prediction / intuition",
-          "stem": "Three exams must all use different rooms, but only two rooms are available. Can you assign a room to every exam?",
-          "seconds": 90,
+          "purpose": "Prediction / local support versus solution",
+          "stem": "A, B and C each have domain {1,2}. The three separate binary rules are A = B, B = C and A ≠ C. What happens if we enforce arc consistency on each rule?",
+          "seconds": 120,
           "choices": [
-            "Yes, by putting all three exams in room 1.",
-            "Yes, because each pair of exams could fit in two rooms when considered alone.",
-            "No. Three different rooms would be needed.",
-            "Yes, as long as the rooms have different names."
+            "All domains become empty: arc consistency combines the two equalities into A = C.",
+            "A = 1 is removed, but A = 2 remains as a solution.",
+            "All values remain supported in each rule, although no total assignment satisfies all three.",
+            "All values remain, which proves that a solution exists."
           ],
           "src": "https://app.wooclap.com/events/JCKQKTX/questions/6aa8fdea099c5058e29a759e"
         },
@@ -467,14 +467,14 @@ window.AIML_WOOCLAP = {
           "type": "MCQ",
           "slide": "ordering",
           "when": "after",
-          "purpose": "Optional / basic extension",
-          "stem": "One unassigned exam has 2 possible time slots; another has 5. Which does the “fewest remaining choices first” rule select?",
-          "seconds": 60,
+          "purpose": "Optional / justify value ordering",
+          "stem": "We have already selected variable A. The only rule is A ≠ B, with dom(A) = {1,2} and dom(B) = {1,3}. Which value should least-constraining-value ordering try first, and why?",
+          "seconds": 90,
           "choices": [
-            "The exam with 5 possible time slots.",
-            "The exam with 2 possible time slots.",
-            "Always the exam with the longer name.",
-            "It cannot choose unless both have the same number of options."
+            "A = 1: it uses the smaller value and therefore removes fewer choices.",
+            "A = 2: both values of B remain available, whereas A = 1 removes B = 1.",
+            "A = 1: leaving B only one value is the aim of least-constraining-value ordering.",
+            "Either value: A has two choices, so both must affect B equally."
           ],
           "src": "https://app.wooclap.com/events/JCKQKTX/questions/6aa90155d2f1e8b522d97b6a"
         },
@@ -484,14 +484,14 @@ window.AIML_WOOCLAP = {
           "type": "MCQ",
           "slide": "requeue",
           "when": "after",
-          "purpose": "Optional / basic extension",
-          "stem": "A class loses one of its possible time slots. Should you recheck related room and teacher rules?",
+          "purpose": "Optional / trace a lost support",
+          "stem": "The rules are A < B and B < C. Currently A = {1,2,3}, B = {2,3,4}, C = {3,4}. Checking B < C removes B = 4. When A < B is rechecked, which value of A loses its last support?",
           "seconds": 90,
           "choices": [
-            "No. A rule can only be checked once.",
-            "No. Removing an option can never affect another class.",
-            "Yes. Fewer options for one class can affect the options for others.",
-            "Yes, because removing a slot adds every previously rejected slot back."
+            "A = 1, because B = 1 is unavailable.",
+            "A = 2, because B must use the same value as A.",
+            "A = 3, because its only larger partner was B = 4.",
+            "No value: A’s domain has not changed yet."
           ],
           "src": "https://app.wooclap.com/events/JCKQKTX/questions/6aa90155d2f1e8b522d97b6f"
         }
@@ -507,14 +507,14 @@ window.AIML_WOOCLAP = {
           "type": "MCQ",
           "slide": "split-lab",
           "when": "before",
-          "purpose": "Prediction / intuition",
-          "stem": "You must try all four choices 1, 2, 3 and 4. Which split covers every choice exactly once?",
-          "seconds": 60,
+          "purpose": "Prediction / independent split branches",
+          "stem": "At a propagation fixed point, dom(X) = {1,2,3,4}. We split into X ∈ {1,2} and X ∈ {3,4}. Propagation makes Y’s domain empty in the first branch. To find every solution, what should happen next?",
+          "seconds": 90,
           "choices": [
-            "Try {1,2} in one branch and {3,4} in the other.",
-            "Try {1,2} and {2,3}.",
-            "Try {1} and {2}.",
-            "Try {1,2,3} and {3,4}."
+            "Reject the first branch; propagate the second using its own copy of the parent domains.",
+            "Reject the whole CSP: an empty domain in either branch proves both impossible.",
+            "Explore the second branch, carrying over Y’s empty domain from the first.",
+            "Restore X to {1,2,3,4} in the second branch so that no value is missed."
           ],
           "src": "https://app.wooclap.com/events/JCKQKTX/questions/6aa8fdea099c5058e29a75a3"
         },
@@ -524,14 +524,14 @@ window.AIML_WOOCLAP = {
           "type": "MCQ",
           "slide": "local-intro",
           "when": "after",
-          "purpose": "Check / core understanding",
-          "stem": "In local search for a timetable, what might the starting timetable look like?",
+          "purpose": "Check / score the whole candidate",
+          "stem": "Three exams A, B and C use slots {1,2}. The only clash rules are A ≠ B and B ≠ C. Local search starts at (A,B,C) = (1,1,2) and changes only B to 2. How does the number of violated rules change?",
           "seconds": 90,
           "choices": [
-            "Only a timetable already proved to have no clashes.",
-            "A complete timetable with some clashes that we try to repair.",
-            "A list of every possible correct timetable.",
-            "A proof that making a timetable is impossible."
+            "It falls from 1 to 0: the clash between A and B disappears.",
+            "It stays at 1: the clash moves from A–B to B–C.",
+            "It rises from 1 to 2: both rules are now violated.",
+            "The move is forbidden: local search cannot visit an assignment with a clash."
           ],
           "src": "https://app.wooclap.com/events/JCKQKTX/questions/6aa8fdea099c5058e29a75a8"
         },
@@ -541,14 +541,14 @@ window.AIML_WOOCLAP = {
           "type": "MCQ",
           "slide": "anneal-lab",
           "when": "before",
-          "purpose": "Prediction / intuition",
-          "stem": "You are rearranging a timetable and seem stuck. Why might you briefly accept a change that adds a clash?",
+          "purpose": "Prediction / apply annealing acceptance",
+          "stem": "An annealing move raises the conflict count from 1 to 3. For this move, acceptance probability is 0.61 at T = 4 and 0.02 at T = 0.5. Accept when a random draw u is below that probability. Using u = 0.40, what happens?",
           "seconds": 90,
           "choices": [
-            "It guarantees the very next change solves everything.",
-            "It proves the current timetable is already the best possible one.",
-            "Adding a clash is the final goal of timetable construction.",
-            "It might let you reach a better arrangement after later changes."
+            "Accept at both temperatures, because every proposed move is allowed.",
+            "Reject at both temperatures, because the conflict count increases.",
+            "Accept only at T = 0.5: cooling makes uphill moves easier.",
+            "Accept at T = 4; reject at T = 0.5. Cooling makes this uphill move less likely."
           ],
           "src": "https://app.wooclap.com/events/JCKQKTX/questions/6aa8fdea099c5058e29a75ad"
         },
@@ -558,8 +558,8 @@ window.AIML_WOOCLAP = {
           "type": "OpenQuestion",
           "slide": "summary",
           "when": "after",
-          "purpose": "Exit / one takeaway",
-          "stem": "Your timetable search runs out of time without finding a solution. Does that prove no valid timetable exists? Briefly explain.",
+          "purpose": "Exit / compare evidence from two solvers",
+          "stem": "Solver A exhaustively explores all branches of a finite CSP using sound pruning and finds no solution. Solver B makes 10,000 local-search moves, with restarts, and finds no solution. Which can conclude that the CSP is unsatisfiable, and why? Answer in two sentences.",
           "seconds": 120,
           "choices": [],
           "src": "https://app.wooclap.com/events/JCKQKTX/questions/6aa8fdea099c5058e29a75b2"
@@ -570,14 +570,14 @@ window.AIML_WOOCLAP = {
           "type": "MCQ",
           "slide": "cooling",
           "when": "after",
-          "purpose": "Optional / basic extension",
-          "stem": "Why might you restart a local search from a different initial timetable?",
+          "purpose": "Optional / escape a plateau",
+          "stem": "A local-search candidate has 1 conflict. Every one-variable neighbor has at least 1. One neighbor also has 1 conflict, and from it a move reaches 0. Which conclusion follows for strict improvement, which accepts only lower scores?",
           "seconds": 90,
           "choices": [
-            "Every restart guarantees a valid timetable.",
-            "A different starting point may lead to a better result.",
-            "The rules of the problem stop applying after a restart.",
-            "All starting points must produce the same sequence of changes."
+            "Strict improvement takes the equal-score move, then reaches 0.",
+            "Strict improvement stops here; allowing the equal-score move could reach a solution in two steps.",
+            "The current candidate is globally optimal because no immediate move improves it.",
+            "A restart is guaranteed to reach the zero-conflict candidate on its next move."
           ],
           "src": "https://app.wooclap.com/events/JCKQKTX/questions/6aa90155d2f1e8b522d97b74"
         }

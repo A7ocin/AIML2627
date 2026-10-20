@@ -1,0 +1,23 @@
+/* Formal definitions paired with the existing CSP teaching layouts. */
+.reveal .cm-definition{box-sizing:border-box;padding:22px 28px;border-left:4px solid var(--c-stat);background:rgba(255,255,255,.035)}
+.reveal .cm-formula{font:35px/1.45 Cambria,'Cambria Math',serif;color:var(--c-comp);margin:8px 0 15px;overflow-wrap:normal}
+.reveal .cm-formula small{display:block;font:23px/1.45 'Segoe UI',sans-serif;color:var(--text-muted);margin-top:12px}
+.reveal .cm-formula sub,.reveal .cm-formula sup{font-size:.65em;line-height:0}
+.reveal .csp-math .cx-panel p{font-size:27px}
+.reveal .csp-math .cx-panel p+p{margin-top:13px}
+.reveal .csp-math .cx-code{font-size:23px;line-height:1.5}
+.reveal #arc-consistency .cm-formula{font-size:34px}
+.reveal #gac-requeue .cm-formula{font-size:37px}
+.reveal #annealing .cx-figure{height:310px}
+.reveal #annealing .cx-lead{font-size:25px}
+.cm-handout-definition{margin:25px 0;padding:20px 24px;background:var(--soft,#f0f5f5);border-left:3px solid #218c7f}
+.cm-handout-definition .cm-definition{padding:0;background:none;border:0}
+.cm-handout-definition .cm-formula,.reference-body .cm-formula{font:23px/1.65 Cambria,'Cambria Math',serif;color:#293d52;margin:12px 0;overflow-wrap:anywhere}
+.cm-handout-definition .cm-formula small,.reference-body .cm-formula small{display:block;font:15px/1.6 'Segoe UI',sans-serif;color:#526779;margin:10px 0}
+.cm-handout-definition .cm-formula sub,.cm-handout-definition .cm-formula sup,.reference-body .cm-formula sub,.reference-body .cm-formula sup{font-size:.7em;line-height:0}
+.cm-handout-definition p{margin:15px 0}
+.cm-handout-definition pre{white-space:pre-wrap;font:14px/1.7 Consolas,monospace;overflow-wrap:anywhere}
+.cm-handout-definition table{width:100%}
+.reference-body .cm-definition{padding:15px 20px;border-left:3px solid #218c7f;background:var(--soft,#f0f5f5)}
+@media(max-width:800px){.cm-handout-definition{padding:15px}.cm-handout-definition .cm-formula{font-size:20px}}
+@media print{.cm-handout-definition{break-inside:avoid;font-size:10pt}.cm-handout-definition .cm-formula{font-size:12pt}.cm-handout-definition pre{font-size:8pt}}

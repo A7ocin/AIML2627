@@ -1,12 +1,12 @@
 {
-  "date": "2026-10-12",
-  "bankRevision": "2026-10-12",
-  "revision": "Search Parts 1 and 2 reasoning revisions; earlier History verifications retained",
+  "date": "2026-10-17",
+  "bankRevision": "2026-10-17",
+  "revision": "CSP Parts 1 and 2 reasoning revision; earlier verifications retained",
   "questions": 92,
   "core": 68,
   "optional": 24,
-  "method": "Latest batch: edited six existing Part 2 forms through the browser, then reloaded and reopened each; previous form verifications retained",
-  "textChoicesAndKeys": "All six Part 2 titles, choices, keys and settings matched after reload; rendered question slides match the bank and live forms",
+  "method": "Edited eleven existing CSP forms through the browser, saved, reloaded and reopened each; compared DOM title, choices, keys and settings with the bank",
+  "textChoicesAndKeys": "All eleven CSP forms match the bank and rendered question slides after reload",
   "votingSettings": "unchanged",
   "questionIds": "All 92 preserved and verified",
   "questionsVerified": {
@@ -605,9 +605,10 @@
     },
     "L02-C01": {
       "verified": true,
+      "verifiedOn": "2026-10-17",
       "eventCode": "JCKQKTX",
       "src": "https://app.wooclap.com/events/JCKQKTX/questions/6aa8fdea099c5058e29a758f",
-      "title": "L02-C01 · Two exams must use different rooms. Each can use room 1 or room 2. Which room assignment is allowed?",
+      "title": "L02-C01 · A, B and C each have domain {1,2,3}. The rules are A < B and B ≠ C. Only A = 2 is assigned. Which statement about this partial assignment is correct?",
       "choiceCount": 4,
       "correct": [
         3
@@ -616,9 +617,10 @@
     },
     "L02-C02": {
       "verified": true,
+      "verifiedOn": "2026-10-17",
       "eventCode": "JCKQKTX",
       "src": "https://app.wooclap.com/events/JCKQKTX/questions/6aa8fdea099c5058e29a7594",
-      "title": "L02-C02 · While making a timetable, you put two classes in the same room at the same time. What is a sensible next step?",
+      "title": "L02-C02 · X₁, X₂ and X₃ each have domain {0,1,2}. The rules are X₁ < 2, X₂ > 0 and X₃ < X₁. DFS assigns X₁ first and tries X₁ = 2. What can it prune immediately, without propagation?",
       "choiceCount": 4,
       "correct": [
         1
@@ -627,9 +629,10 @@
     },
     "L02-C03": {
       "verified": true,
+      "verifiedOn": "2026-10-17",
       "eventCode": "JCKQKTX",
       "src": "https://app.wooclap.com/events/JCKQKTX/questions/6aa8fdea099c5058e29a7599",
-      "title": "L02-C03 · A task must finish before 3 pm. Its possible finish times are 1 pm, 2 pm and 3 pm. Which time can you rule out?",
+      "title": "L02-C03 · A, B and C each start with domain {1,2,3,4}; the rules are A < B and B < C. Repeatedly remove values with no support in a rule, until no domain changes. What remains?",
       "choiceCount": 4,
       "correct": [
         2
@@ -638,9 +641,10 @@
     },
     "L02-C04": {
       "verified": true,
+      "verifiedOn": "2026-10-17",
       "eventCode": "JCKQKTX",
       "src": "https://app.wooclap.com/events/JCKQKTX/questions/6aa8fdea099c5058e29a759e",
-      "title": "L02-C04 · Three exams must all use different rooms, but only two rooms are available. Can you assign a room to every exam?",
+      "title": "L02-C04 · A, B and C each have domain {1,2}. The three separate binary rules are A = B, B = C and A ≠ C. What happens if we enforce arc consistency on each rule?",
       "choiceCount": 4,
       "correct": [
         3
@@ -649,9 +653,10 @@
     },
     "L02-C05": {
       "verified": true,
+      "verifiedOn": "2026-10-17",
       "eventCode": "JCKQKTX",
       "src": "https://app.wooclap.com/events/JCKQKTX/questions/6aa8fdea099c5058e29a75a3",
-      "title": "L02-C05 · You must try all four choices 1, 2, 3 and 4. Which split covers every choice exactly once?",
+      "title": "L02-C05 · At a propagation fixed point, dom(X) = {1,2,3,4}. We split into X ∈ {1,2} and X ∈ {3,4}. Propagation makes Y’s domain empty in the first branch. To find every solution, what should happen next?",
       "choiceCount": 4,
       "correct": [
         1
@@ -660,9 +665,10 @@
     },
     "L02-C06": {
       "verified": true,
+      "verifiedOn": "2026-10-17",
       "eventCode": "JCKQKTX",
       "src": "https://app.wooclap.com/events/JCKQKTX/questions/6aa8fdea099c5058e29a75a8",
-      "title": "L02-C06 · In local search for a timetable, what might the starting timetable look like?",
+      "title": "L02-C06 · Three exams A, B and C use slots {1,2}. The only clash rules are A ≠ B and B ≠ C. Local search starts at (A,B,C) = (1,1,2) and changes only B to 2. How does the number of violated rules change?",
       "choiceCount": 4,
       "correct": [
         2
@@ -671,9 +677,10 @@
     },
     "L02-C07": {
       "verified": true,
+      "verifiedOn": "2026-10-17",
       "eventCode": "JCKQKTX",
       "src": "https://app.wooclap.com/events/JCKQKTX/questions/6aa8fdea099c5058e29a75ad",
-      "title": "L02-C07 · You are rearranging a timetable and seem stuck. Why might you briefly accept a change that adds a clash?",
+      "title": "L02-C07 · An annealing move raises the conflict count from 1 to 3. For this move, acceptance probability is 0.61 at T = 4 and 0.02 at T = 0.5. Accept when a random draw u is below that probability. Using u = 0.40, what happens?",
       "choiceCount": 4,
       "correct": [
         4
@@ -682,18 +689,20 @@
     },
     "L02-C08": {
       "verified": true,
+      "verifiedOn": "2026-10-17",
       "eventCode": "JCKQKTX",
       "src": "https://app.wooclap.com/events/JCKQKTX/questions/6aa8fdea099c5058e29a75b2",
-      "title": "L02-C08 · Your timetable search runs out of time without finding a solution. Does that prove no valid timetable exists? Briefly explain.",
+      "title": "L02-C08 · Solver A exhaustively explores all branches of a finite CSP using sound pruning and finds no solution. Solver B makes 10,000 local-search moves, with restarts, and finds no solution. Which can conclude that the CSP is unsatisfiable, and why? Answer in two sentences.",
       "choiceCount": 0,
       "correct": [],
       "settingsUnchanged": true
     },
     "L02-O01": {
       "verified": true,
+      "verifiedOn": "2026-10-17",
       "eventCode": "JCKQKTX",
       "src": "https://app.wooclap.com/events/JCKQKTX/questions/6aa90155d2f1e8b522d97b6a",
-      "title": "L02-O01 · One unassigned exam has 2 possible time slots; another has 5. Which does the “fewest remaining choices first” rule select?",
+      "title": "L02-O01 · We have already selected variable A. The only rule is A ≠ B, with dom(A) = {1,2} and dom(B) = {1,3}. Which value should least-constraining-value ordering try first, and why?",
       "choiceCount": 4,
       "correct": [
         2
@@ -702,9 +711,10 @@
     },
     "L02-O02": {
       "verified": true,
+      "verifiedOn": "2026-10-17",
       "eventCode": "JCKQKTX",
       "src": "https://app.wooclap.com/events/JCKQKTX/questions/6aa90155d2f1e8b522d97b6f",
-      "title": "L02-O02 · A class loses one of its possible time slots. Should you recheck related room and teacher rules?",
+      "title": "L02-O02 · The rules are A < B and B < C. Currently A = {1,2,3}, B = {2,3,4}, C = {3,4}. Checking B < C removes B = 4. When A < B is rechecked, which value of A loses its last support?",
       "choiceCount": 4,
       "correct": [
         3
@@ -713,9 +723,10 @@
     },
     "L02-O03": {
       "verified": true,
+      "verifiedOn": "2026-10-17",
       "eventCode": "JCKQKTX",
       "src": "https://app.wooclap.com/events/JCKQKTX/questions/6aa90155d2f1e8b522d97b74",
-      "title": "L02-O03 · Why might you restart a local search from a different initial timetable?",
+      "title": "L02-O03 · A local-search candidate has 1 conflict. Every one-variable neighbor has at least 1. One neighbor also has 1 conflict, and from it a move reaches 0. Which conclusion follows for strict improvement, which accepts only lower scores?",
       "choiceCount": 4,
       "correct": [
         2

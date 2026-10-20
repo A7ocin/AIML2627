@@ -374,7 +374,7 @@ Greedy compares h values 1, 4 and 3, so it selects P. A* compares f = g + h valu
 
 ### L01-C07 · Core · Check / reopen and propagate
 
-**Placement:** [After slide 22: Graph search must keep better routes alive](../04_Search_Part_2/index.html#/21) · [Handout](../04_Search_Part_2/handout.html#chapter-graph-cautions)  
+**Placement:** [After slide 23: Same state, cheaper route: update the record](../04_Search_Part_2/index.html#/22) · [Handout](../04_Search_Part_2/handout.html#chapter-graph-cautions)  
 **Time:** 120 seconds, including debrief.
 
 Graph A* has expanded X at cost g = 6 and found X→G with cost 3. Later it finds a route to X at g = 4. Its heuristic is admissible but inconsistent; G is the goal. Which action preserves the cheaper route through X?
@@ -394,7 +394,7 @@ The earlier route via X costs 6 + 3 = 9. The improvement gives 4 + 3 = 7. With a
 
 ### L01-C08 · Core · Prediction / lower bounds and equality
 
-**Placement:** [Before slide 28: Branch-and-bound · watch the incumbent improve](../04_Search_Part_2/index.html#/27) · [Handout](../04_Search_Part_2/handout.html#chapter-branch-bound-lab)  
+**Placement:** [Before slide 29: Branch-and-bound · watch the incumbent improve](../04_Search_Part_2/index.html#/28) · [Handout](../04_Search_Part_2/handout.html#chapter-branch-bound-lab)  
 **Time:** 120 seconds, including debrief.
 
 Branch-and-bound already holds a complete route costing 6. Waiting path P has g = 4, h = 3; Q has g = 2, h = 4. The estimates are admissible and costs nonnegative. If the aim is to return one cheapest route, which paths may be pruned?
@@ -414,7 +414,7 @@ The lower bounds are f(P) = 7 and f(Q) = 6. Neither can improve the saved cost-6
 
 ### L01-C09 · Core · Exit / explain a guarantee
 
-**Placement:** [After slide 35: Search is controlled exploration](../04_Search_Part_2/index.html#/34) · [Handout](../04_Search_Part_2/handout.html#chapter-summary)  
+**Placement:** [After slide 34: Search is controlled exploration](../04_Search_Part_2/index.html#/33) · [Handout](../04_Search_Part_2/handout.html#chapter-summary)  
 **Time:** 120 seconds, including debrief.
 
 A graph A* search uses an admissible but inconsistent heuristic and never reopens expanded states. Can its first selected goal be suboptimal? Explain using the reopening example, where cost 6 improves to 5, and state the repair.
@@ -430,7 +430,7 @@ Suggested rubric: yes. An admissible heuristic keeps path estimates optimistic, 
 
 ### L01-O01 · Optional · Optional / justify a relaxed bound
 
-**Placement:** [After slide 17: Admissible means “never overestimate”](../04_Search_Part_2/index.html#/16) · [Handout](../04_Search_Part_2/handout.html#chapter-admissibility)  
+**Placement:** [After slide 18: Admissible means “never overestimate”](../04_Search_Part_2/index.html#/17) · [Handout](../04_Search_Part_2/handout.html#chapter-admissibility)  
 **Time:** 90 seconds, including debrief.
 
 A robot moves horizontally or vertically on a grid, one unit per move, and must avoid obstacles. Which proposed heuristic is guaranteed admissible for every reachable state?
@@ -450,7 +450,7 @@ Ignoring obstacles removes constraints while preserving the unit move costs, so 
 
 ### L01-O03 · Optional · Optional / test an edge condition
 
-**Placement:** [After slide 20: Consistency checks each edge](../04_Search_Part_2/index.html#/19) · [Handout](../04_Search_Part_2/handout.html#chapter-consistency)  
+**Placement:** [After slide 21: Consistency: check how the estimate changes in one move](../04_Search_Part_2/index.html#/20) · [Handout](../04_Search_Part_2/handout.html#chapter-consistency)  
 **Time:** 90 seconds, including debrief.
 
 An edge u→v costs 2. The heuristic values are h(u) = 5 and h(v) = 2; the current path to u has cost g = 3. After extending that path to v, how does its A* score f = g + h change, and is this edge consistent?
@@ -470,231 +470,231 @@ Before the edge, f = 3 + 5 = 8. After paying the edge cost, g = 5 and f = 5 + 2 
 
 ## 05 · Constraint satisfaction · Part 1
 
-4 core + 2 optional. Core budget: approximately 5 minutes.
+4 core + 2 optional. Core budget: approximately 7 minutes.
 
 [Core import](imports/05_Constraints_Part_1.xlsx) · [Optional import](imports/optional/05_Constraints_Part_1_optional.xlsx)
 
-### L02-C01 · Core · Opening / everyday intuition
+### L02-C01 · Core · Check / partial assignment and scope
 
-**Placement:** [Before slide 7: A CSP is variables, domains and constraints](../05_Constraints_Part_1/index.html#/6) · [Handout](../05_Constraints_Part_1/handout.html#chapter-definition)  
-**Time:** 60 seconds, including debrief.
-
-Two exams must use different rooms. Each can use room 1 or room 2. Which room assignment is allowed?
-
-- **A.** Both exams in room 1.
-- **B.** Both exams in room 2.
-- **C.** Exam A in room 1; exam B in room 2.
-- **D.** Exam A in room 3; exam B in room 1.
-
-**Answer:** C. Exam A in room 1; exam B in room 2.
-
-The assignment must use available rooms and satisfy the different-room rule.
-
-**Misconception:** Checking one rule but forgetting another.
-
-**Facilitation:** Invite a guess before teaching the idea. Ask one student for their reasoning, then use the next explanation or demonstration to revisit the answer. Do not grade prior knowledge.
-
-### L02-C02 · Core · Prediction / intuition
-
-**Placement:** [Before slide 12: DFS solver · inspect the assignment tree](../05_Constraints_Part_1/index.html#/11) · [Handout](../05_Constraints_Part_1/handout.html#chapter-dfs-lab)  
+**Placement:** [Before slide 12: The running CSP has exactly two solutions](../05_Constraints_Part_1/index.html#/11) · [Handout](../05_Constraints_Part_1/handout.html#chapter-definition)  
 **Time:** 90 seconds, including debrief.
 
-While making a timetable, you put two classes in the same room at the same time. What is a sensible next step?
+A, B and C each have domain {1,2,3}. The rules are A < B and B ≠ C. Only A = 2 is assigned. Which statement about this partial assignment is correct?
 
-- **A.** Undo one of those choices and try another.
-- **B.** Keep the clash and assume a later choice will remove it.
-- **C.** Conclude that no timetable could ever work.
-- **D.** Stop checking room conflicts for the remaining classes.
+- **A.** It already violates A < B, because B has no assigned value.
+- **B.** It is a solution, because no rule has been violated yet.
+- **C.** Neither rule is evaluable yet; one possible completion is B = 3, C = 1.
+- **D.** Both rules are satisfied, because each has at least one possible supporting pair.
 
-**Answer:** A. Undo one of those choices and try another.
+**Answer:** C. Neither rule is evaluable yet; one possible completion is B = 3, C = 1.
 
-Backtracking revises a choice when it creates a conflict. One failed choice does not prove that all choices fail.
+Neither rule has its whole scope assigned: A < B still needs B, and B ≠ C needs B and C. Pending is different from false or true. The total assignment (A,B,C) = (2,3,1) satisfies both rules, so this partial assignment can be extended to a solution.
 
-**Misconception:** Confusing a failed partial attempt with an impossible problem.
+**Misconception:** Confusing a rule that is not yet evaluable with a failed or satisfied rule, and confusing a partial context with a solution.
 
-**Facilitation:** Invite a guess before teaching the idea. Ask one student for their reasoning, then use the next explanation or demonstration to revisit the answer. Do not grade prior knowledge.
+**Facilitation:** Ask students to name the missing variables in each scope before voting. Then ask for a second valid completion.
 
-### L02-C03 · Core · Prediction / intuition
+### L02-C02 · Core · Prediction / trace a pruned branch
 
-**Placement:** [Before slide 18: GAC · prune values and update the worklist](../05_Constraints_Part_1/index.html#/17) · [Handout](../05_Constraints_Part_1/handout.html#chapter-gac-lab)  
-**Time:** 60 seconds, including debrief.
-
-A task must finish before 3 pm. Its possible finish times are 1 pm, 2 pm and 3 pm. Which time can you rule out?
-
-- **A.** 1 pm.
-- **B.** 3 pm.
-- **C.** 2 pm.
-- **D.** None of them.
-
-**Answer:** B. 3 pm.
-
-Finishing at 3 pm is not finishing before 3 pm. Removing a forbidden option leaves fewer choices to search.
-
-**Misconception:** Failing to remove a value that cannot satisfy a rule.
-
-**Facilitation:** Invite a guess before teaching the idea. Ask one student for their reasoning, then use the next explanation or demonstration to revisit the answer. Do not grade prior knowledge.
-
-### L02-C04 · Core · Prediction / intuition
-
-**Placement:** [Before slide 21: Local support does not imply global agreement](../05_Constraints_Part_1/index.html#/20) · [Handout](../05_Constraints_Part_1/handout.html#chapter-consistent-unsat)  
+**Placement:** [Before slide 19: Follow one branch, then watch DFS undo it](../05_Constraints_Part_1/index.html#/18) · [Handout](../05_Constraints_Part_1/handout.html#chapter-dfs-lab)  
 **Time:** 90 seconds, including debrief.
 
-Three exams must all use different rooms, but only two rooms are available. Can you assign a room to every exam?
+X₁, X₂ and X₃ each have domain {0,1,2}. The rules are X₁ < 2, X₂ > 0 and X₃ < X₁. DFS assigns X₁ first and tries X₁ = 2. What can it prune immediately, without propagation?
 
-- **A.** Yes, by putting all three exams in room 1.
-- **B.** Yes, because each pair of exams could fit in two rooms when considered alone.
-- **C.** No. Three different rooms would be needed.
-- **D.** Yes, as long as the rooms have different names.
+- **A.** All 9 completions of this branch: X₁ < 2 is already false.
+- **B.** Only the 3 completions with X₂ = 0: X₃ is still unassigned.
+- **C.** All 27 assignments: a false unary rule makes the whole CSP impossible.
+- **D.** Nothing yet: every rule must wait until all three variables are assigned.
 
-**Answer:** C. No. Three different rooms would be needed.
+**Answer:** A. All 9 completions of this branch: X₁ < 2 is already false.
 
-Checking pairs separately does not guarantee a solution to the whole problem. Three mutually different choices need at least three options.
+X₁ < 2 has scope {X₁}, so it is evaluable and false as soon as X₁ = 2. The 3 × 3 = 9 choices for X₂ and X₃ cannot repair that fixed value. Reject this branch, not the entire CSP: other values of X₁ remain to try.
 
-**Misconception:** Assuming that local checks guarantee a complete solution.
+**Misconception:** Waiting for a total assignment before checking a unary rule, or confusing one rejected branch with global unsatisfiability.
 
-**Facilitation:** Invite a guess before teaching the idea. Ask one student for their reasoning, then use the next explanation or demonstration to revisit the answer. Do not grade prior knowledge.
+**Facilitation:** Have students identify the failed scope and count the skipped leaves. Compare the branch with X₁ = 0, where plain DFS needs a later X₃ choice to expose the conflict.
 
-### L02-O01 · Optional · Optional / basic extension
+### L02-C03 · Core · Prediction / propagation to a fixed point
 
-**Placement:** [After slide 13: Good ordering exposes contradictions sooner](../05_Constraints_Part_1/index.html#/12) · [Handout](../05_Constraints_Part_1/handout.html#chapter-ordering)  
-**Time:** 60 seconds, including debrief.
+**Placement:** [Before slide 30: Watch domains shrink and checks return](../05_Constraints_Part_1/index.html#/29) · [Handout](../05_Constraints_Part_1/handout.html#chapter-gac-lab)  
+**Time:** 120 seconds, including debrief.
 
-One unassigned exam has 2 possible time slots; another has 5. Which does the “fewest remaining choices first” rule select?
+A, B and C each start with domain {1,2,3,4}; the rules are A < B and B < C. Repeatedly remove values with no support in a rule, until no domain changes. What remains?
 
-- **A.** The exam with 5 possible time slots.
-- **B.** The exam with 2 possible time slots.
-- **C.** Always the exam with the longer name.
-- **D.** It cannot choose unless both have the same number of options.
+- **A.** A = {1,2,3}, B = {2,3}, C = {2,3,4}.
+- **B.** A = {1,2}, B = {2,3}, C = {3,4}.
+- **C.** A = {1}, B = {2}, C = {3}: propagation chooses the smallest solution.
+- **D.** A = {1,2,3}, B = {1,2,3,4}, C = {2,3,4}.
 
-**Answer:** B. The exam with 2 possible time slots.
+**Answer:** B. A = {1,2}, B = {2,3}, C = {3,4}.
 
-The most constrained choice is tackled first, which can reveal conflicts early.
+A < B removes A = 4 and B = 1. B < C removes B = 4 and forces C ≥ 3 once B ≥ 2. Rechecking A < B then removes A = 3, which has lost B = 4 as its only support. The fixed point is A {1,2}, B {2,3}, C {3,4}; propagation retains supported alternatives rather than choosing one solution.
 
-**Misconception:** Reversing the fewest-remaining-choices rule.
+**Misconception:** Stopping after one pass, forgetting that a lost support can trigger another deletion, or treating filtering as value selection.
 
-**Facilitation:** Give students a moment to answer, then explain the correct choice in everyday language and address the misconception.
+**Facilitation:** Collect predictions, then run the GAC lab and pause when B loses 4. Ask which earlier value has just lost its last support.
 
-### L02-O02 · Optional · Optional / basic extension
+### L02-C04 · Core · Prediction / local support versus solution
 
-**Placement:** [After slide 19: A changed domain can invalidate old support](../05_Constraints_Part_1/index.html#/18) · [Handout](../05_Constraints_Part_1/handout.html#chapter-requeue)  
+**Placement:** [Before slide 34: A partner for each rule is not one shared solution](../05_Constraints_Part_1/index.html#/33) · [Handout](../05_Constraints_Part_1/handout.html#chapter-consistent-unsat)  
+**Time:** 120 seconds, including debrief.
+
+A, B and C each have domain {1,2}. The three separate binary rules are A = B, B = C and A ≠ C. What happens if we enforce arc consistency on each rule?
+
+- **A.** All domains become empty: arc consistency combines the two equalities into A = C.
+- **B.** A = 1 is removed, but A = 2 remains as a solution.
+- **C.** All values remain supported in each rule, although no total assignment satisfies all three.
+- **D.** All values remain, which proves that a solution exists.
+
+**Answer:** C. All values remain supported in each rule, although no total assignment satisfies all three.
+
+In either equality, a value is supported by the same value at the other variable. In A ≠ C, it is supported by the other value. No individual rule removes anything. Globally the equalities imply A = C, contradicting A ≠ C. Separate local supports need not fit into one common solution.
+
+**Misconception:** Assuming local supports can always be combined into a global solution, or attributing arbitrary logical inference to ordinary arc consistency.
+
+**Facilitation:** Ask students to give A = 1 a support in each adjacent rule, then explain why the supporting choices cannot satisfy the whole network together.
+
+### L02-O01 · Optional · Optional / justify value ordering
+
+**Placement:** [After slide 20: Choose the next decision to reduce wasted work](../05_Constraints_Part_1/index.html#/19) · [Handout](../05_Constraints_Part_1/handout.html#chapter-ordering)  
 **Time:** 90 seconds, including debrief.
 
-A class loses one of its possible time slots. Should you recheck related room and teacher rules?
+We have already selected variable A. The only rule is A ≠ B, with dom(A) = {1,2} and dom(B) = {1,3}. Which value should least-constraining-value ordering try first, and why?
 
-- **A.** No. A rule can only be checked once.
-- **B.** No. Removing an option can never affect another class.
-- **C.** Yes. Fewer options for one class can affect the options for others.
-- **D.** Yes, because removing a slot adds every previously rejected slot back.
+- **A.** A = 1: it uses the smaller value and therefore removes fewer choices.
+- **B.** A = 2: both values of B remain available, whereas A = 1 removes B = 1.
+- **C.** A = 1: leaving B only one value is the aim of least-constraining-value ordering.
+- **D.** Either value: A has two choices, so both must affect B equally.
 
-**Answer:** C. Yes. Fewer options for one class can affect the options for others.
+**Answer:** B. A = 2: both values of B remain available, whereas A = 1 removes B = 1.
 
-Constraints connect choices. A reduction in one set of options may trigger reductions elsewhere.
+Choosing A = 2 conflicts with neither 1 nor 3, leaving two choices for B. Choosing A = 1 leaves only B = 3. LCV orders values to preserve options for other variables. MRV is a separate decision about which variable to select; A was already selected here.
 
-**Misconception:** Thinking constraints can always be checked independently once.
+**Misconception:** Confusing variable ordering with value ordering, choosing the smallest numeral, or reversing the least-constraining rule.
 
-**Facilitation:** Give students a moment to answer, then explain the correct choice in everyday language and address the misconception.
+**Facilitation:** Ask students to write the remaining domain of B under each tentative choice. Explain why an exhaustive solver still tries the other value later if needed.
+
+### L02-O02 · Optional · Optional / trace a lost support
+
+**Placement:** [After slide 31: Deleting a partner can break an earlier check](../05_Constraints_Part_1/index.html#/30) · [Handout](../05_Constraints_Part_1/handout.html#chapter-requeue)  
+**Time:** 90 seconds, including debrief.
+
+The rules are A < B and B < C. Currently A = {1,2,3}, B = {2,3,4}, C = {3,4}. Checking B < C removes B = 4. When A < B is rechecked, which value of A loses its last support?
+
+- **A.** A = 1, because B = 1 is unavailable.
+- **B.** A = 2, because B must use the same value as A.
+- **C.** A = 3, because its only larger partner was B = 4.
+- **D.** No value: A’s domain has not changed yet.
+
+**Answer:** C. A = 3, because its only larger partner was B = 4.
+
+A = 3 needs a B value strictly greater than 3. Its only support was B = 4, which has disappeared. A = 1 still has B = 2 or 3, and A = 2 still has B = 3. This is why a reduction in B requires checking related constraints again.
+
+**Misconception:** Ignoring a support lost in another constraint, or replacing the strict inequality with equality.
+
+**Facilitation:** Ask students to identify the exact supporting value before naming the affected arc. This makes the requeue rule concrete.
 
 ## 06 · Constraint satisfaction · Part 2
 
-4 core + 1 optional. Core budget: approximately 6 minutes.
+4 core + 1 optional. Core budget: approximately 6.5 minutes.
 
 [Core import](imports/06_Constraints_Part_2.xlsx) · [Optional import](imports/optional/06_Constraints_Part_2_optional.xlsx)
 
-### L02-C05 · Core · Prediction / intuition
+### L02-C05 · Core · Prediction / independent split branches
 
-**Placement:** [Before slide 4: Domain splitting · turn pruning into a solver](../06_Constraints_Part_2/index.html#/3) · [Handout](../06_Constraints_Part_2/handout.html#chapter-split-lab)  
-**Time:** 60 seconds, including debrief.
-
-You must try all four choices 1, 2, 3 and 4. Which split covers every choice exactly once?
-
-- **A.** Try {1,2} in one branch and {3,4} in the other.
-- **B.** Try {1,2} and {2,3}.
-- **C.** Try {1} and {2}.
-- **D.** Try {1,2,3} and {3,4}.
-
-**Answer:** A. Try {1,2} in one branch and {3,4} in the other.
-
-The first split includes all four choices, with no overlap. This lets two branches cover the original possibilities.
-
-**Misconception:** Missing or unnecessarily repeating choices when splitting a search.
-
-**Facilitation:** Invite a guess before teaching the idea. Ask one student for their reasoning, then use the next explanation or demonstration to revisit the answer. Do not grade prior knowledge.
-
-### L02-C06 · Core · Check / core understanding
-
-**Placement:** [After slide 5: Start complete. Repair what is wrong.](../06_Constraints_Part_2/index.html#/4) · [Handout](../06_Constraints_Part_2/handout.html#chapter-local-intro)  
+**Placement:** [Before slide 12: Turn the remaining choices into a search tree](../06_Constraints_Part_2/index.html#/11) · [Handout](../06_Constraints_Part_2/handout.html#chapter-split-lab)  
 **Time:** 90 seconds, including debrief.
 
-In local search for a timetable, what might the starting timetable look like?
+At a propagation fixed point, dom(X) = {1,2,3,4}. We split into X ∈ {1,2} and X ∈ {3,4}. Propagation makes Y’s domain empty in the first branch. To find every solution, what should happen next?
 
-- **A.** Only a timetable already proved to have no clashes.
-- **B.** A complete timetable with some clashes that we try to repair.
-- **C.** A list of every possible correct timetable.
-- **D.** A proof that making a timetable is impossible.
+- **A.** Reject the first branch; propagate the second using its own copy of the parent domains.
+- **B.** Reject the whole CSP: an empty domain in either branch proves both impossible.
+- **C.** Explore the second branch, carrying over Y’s empty domain from the first.
+- **D.** Restore X to {1,2,3,4} in the second branch so that no value is missed.
 
-**Answer:** B. A complete timetable with some clashes that we try to repair.
+**Answer:** A. Reject the first branch; propagate the second using its own copy of the parent domains.
 
-Local search often starts with a complete but imperfect assignment and changes parts of it to reduce conflicts.
+An empty domain proves only that the current branch has no solution. The disjoint branches cover the parent domain, so the second must still be searched. Each starts with its own copy of the parent domains; reductions caused by X ∈ {1,2} must not leak into the X ∈ {3,4} branch.
 
-**Misconception:** Thinking every search method builds only conflict-free partial assignments.
+**Misconception:** Treating a failed branch as a global proof, sharing mutable domain reductions between siblings, or undoing the partition.
 
-**Facilitation:** Give students a moment to answer, then explain the correct choice in everyday language and address the misconception.
+**Facilitation:** Draw the parent and two branches. Cross out only the first and ask students which domains the second should inherit.
 
-### L02-C07 · Core · Prediction / intuition
+### L02-C06 · Core · Check / score the whole candidate
 
-**Placement:** [Before slide 13: Annealing · temperature changes the decision](../06_Constraints_Part_2/index.html#/12) · [Handout](../06_Constraints_Part_2/handout.html#chapter-anneal-lab)  
+**Placement:** [After slide 13: Local search starts complete and repairs errors](../06_Constraints_Part_2/index.html#/12) · [Handout](../06_Constraints_Part_2/handout.html#chapter-local-intro)  
 **Time:** 90 seconds, including debrief.
 
-You are rearranging a timetable and seem stuck. Why might you briefly accept a change that adds a clash?
+Three exams A, B and C use slots {1,2}. The only clash rules are A ≠ B and B ≠ C. Local search starts at (A,B,C) = (1,1,2) and changes only B to 2. How does the number of violated rules change?
 
-- **A.** It guarantees the very next change solves everything.
-- **B.** It proves the current timetable is already the best possible one.
-- **C.** Adding a clash is the final goal of timetable construction.
-- **D.** It might let you reach a better arrangement after later changes.
+- **A.** It falls from 1 to 0: the clash between A and B disappears.
+- **B.** It stays at 1: the clash moves from A–B to B–C.
+- **C.** It rises from 1 to 2: both rules are now violated.
+- **D.** The move is forbidden: local search cannot visit an assignment with a clash.
 
-**Answer:** D. It might let you reach a better arrangement after later changes.
+**Answer:** B. It stays at 1: the clash moves from A–B to B–C.
 
-A temporarily worse move can help escape a stuck arrangement, but does not guarantee success. Simulated annealing uses this idea.
+Initially A = B violates the first rule, while B ≠ C satisfies the second. After B changes to 2, A ≠ B holds but B = C violates the second. Both candidates are total and domain-valid, with one violated rule each. Repairing one constraint does not necessarily improve the overall score.
 
-**Misconception:** Thinking every useful search step must immediately improve the score.
+**Misconception:** Counting only the repaired constraint instead of all affected constraints, or applying conflict-free partial-search rules to local search.
 
-**Facilitation:** Invite a guess before teaching the idea. Ask one student for their reasoning, then use the next explanation or demonstration to revisit the answer. Do not grade prior knowledge.
+**Facilitation:** Ask students to check both rules before and after the move. Use the unchanged count to introduce the plateau idea later in the lecture.
 
-### L02-C08 · Core · Exit / one takeaway
+### L02-C07 · Core · Prediction / apply annealing acceptance
 
-**Placement:** [After slide 18: Represent, prune, branch — or repair](../06_Constraints_Part_2/index.html#/17) · [Handout](../06_Constraints_Part_2/handout.html#chapter-summary)  
+**Placement:** [Before slide 28: Keep the move fixed and change its temperature](../06_Constraints_Part_2/index.html#/27) · [Handout](../06_Constraints_Part_2/handout.html#chapter-anneal-lab)  
+**Time:** 90 seconds, including debrief.
+
+An annealing move raises the conflict count from 1 to 3. For this move, acceptance probability is 0.61 at T = 4 and 0.02 at T = 0.5. Accept when a random draw u is below that probability. Using u = 0.40, what happens?
+
+- **A.** Accept at both temperatures, because every proposed move is allowed.
+- **B.** Reject at both temperatures, because the conflict count increases.
+- **C.** Accept only at T = 0.5: cooling makes uphill moves easier.
+- **D.** Accept at T = 4; reject at T = 0.5. Cooling makes this uphill move less likely.
+
+**Answer:** D. Accept at T = 4; reject at T = 0.5. Cooling makes this uphill move less likely.
+
+The increase is Δh = 3 − 1 = 2. The rule p = exp(−Δh/T) gives approximately 0.61 and 0.02. Since 0.40 < 0.61 but 0.40 is not below 0.02, the hot run accepts and the cold run rejects. Higher temperature makes temporary deterioration easier to accept; acceptance does not guarantee eventual success.
+
+**Misconception:** Treating a worse move as automatically accepted or rejected, reversing the effect of temperature, or comparing the random draw in the wrong direction.
+
+**Facilitation:** Have students compare u with each probability before opening the lab. Use the same proposed move and draw in both runs to isolate the effect of temperature.
+
+### L02-C08 · Core · Exit / compare evidence from two solvers
+
+**Placement:** [After slide 34: Build systematically—or repair a candidate](../06_Constraints_Part_2/index.html#/33) · [Handout](../06_Constraints_Part_2/handout.html#chapter-summary)  
 **Time:** 120 seconds, including debrief.
 
-Your timetable search runs out of time without finding a solution. Does that prove no valid timetable exists? Briefly explain.
+Solver A exhaustively explores all branches of a finite CSP using sound pruning and finds no solution. Solver B makes 10,000 local-search moves, with restarts, and finds no solution. Which can conclude that the CSP is unsatisfiable, and why? Answer in two sentences.
 
 
 **Answer:** Suggested rubric (no automatic answer key)
 
-No. This attempt may simply not have found one. A timeout without a complete impossibility proof is not proof that no solution exists.
+Suggested rubric: A can conclude unsatisfiability because exhaustive coverage with sound pruning rules out every possible solution. B cannot: a finite unsuccessful local search, even with restarts, may miss an existing solution. A single fully checked solution from either solver would instead prove satisfiability.
 
-**Misconception:** Confusing “not found” with “does not exist”.
+**Misconception:** Confusing a large search budget or repeated failure with exhaustive coverage and an impossibility proof.
 
-**Facilitation:** Accept a short answer in the student’s own words. Use a few responses to identify what needs revisiting; do not grade terminology.
+**Facilitation:** Keep this response ungraded. Look for an explicit link between coverage and proof, rather than merely the names of the two methods.
 
-### L02-O03 · Optional · Optional / basic extension
+### L02-O03 · Optional · Optional / escape a plateau
 
-**Placement:** [After slide 14: Cooling shifts the balance toward improvement](../06_Constraints_Part_2/index.html#/13) · [Handout](../06_Constraints_Part_2/handout.html#chapter-cooling)  
+**Placement:** [After slide 29: Cooling gradually makes worse moves less likely](../06_Constraints_Part_2/index.html#/28) · [Handout](../06_Constraints_Part_2/handout.html#chapter-cooling)  
 **Time:** 90 seconds, including debrief.
 
-Why might you restart a local search from a different initial timetable?
+A local-search candidate has 1 conflict. Every one-variable neighbor has at least 1. One neighbor also has 1 conflict, and from it a move reaches 0. Which conclusion follows for strict improvement, which accepts only lower scores?
 
-- **A.** Every restart guarantees a valid timetable.
-- **B.** A different starting point may lead to a better result.
-- **C.** The rules of the problem stop applying after a restart.
-- **D.** All starting points must produce the same sequence of changes.
+- **A.** Strict improvement takes the equal-score move, then reaches 0.
+- **B.** Strict improvement stops here; allowing the equal-score move could reach a solution in two steps.
+- **C.** The current candidate is globally optimal because no immediate move improves it.
+- **D.** A restart is guaranteed to reach the zero-conflict candidate on its next move.
 
-**Answer:** B. A different starting point may lead to a better result.
+**Answer:** B. Strict improvement stops here; allowing the equal-score move could reach a solution in two steps.
 
-Local search can depend on its starting point. Restarts offer another attempt, not a guarantee.
+No neighbor has a lower score, so strict improvement cannot move. The stated equal-score step crosses a plateau and exposes an improving move. A sideways policy could use that route; a restart supplies another attempt but does not guarantee it. A local stopping condition is not a global impossibility proof.
 
-**Misconception:** Assuming all local searches reach the same result.
+**Misconception:** Confusing strict improvement with sideways moves, or interpreting a locally stuck candidate as a global optimum or proof of unsatisfiability.
 
-**Facilitation:** Give students a moment to answer, then explain the correct choice in everyday language and address the misconception.
+**Facilitation:** Sketch three candidates labelled 1 → 1 → 0. Ask which edge strict improvement refuses and what policy change would allow it.
 
 ## 07 · Introduction to machine learning · Part 1
 

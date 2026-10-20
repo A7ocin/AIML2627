@@ -60,3 +60,9 @@
 @media print{.teaching-explorer button,.teaching-explorer select{pointer-events:none}.cx-links{display:none!important}}
 
 .reveal #summary .cx-panel>.cx-flow+p{margin-top:18px}
+
+/* The GAC procedure pairs numbered pseudocode with its control flow. */
+.reveal #gac .cx-cols{grid-template-columns:1.3fr 1fr}
+.reveal #gac .cx-code{font-size:24px;line-height:1.5}
+.reveal #gac .cx-step{padding:11px 0}
+.reveal #gac .cx-step p{font-size:25px}

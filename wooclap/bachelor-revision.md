@@ -10,7 +10,7 @@ Before-topic questions invite a prediction using a familiar situation or an idea
 |---|---|---|
 | History | Compare posterior probabilities given a likelihood ratio | Update a weather expectation after seeing dark clouds |
 | Search | Compare greedy search and A* scores before the A* explanation | Add cost so far and estimated remaining cost |
-| Constraints | Infer how an exponential acceptance probability changes | Consider why a temporarily worse timetable change might help |
+| Constraints | Recognise an obvious valid assignment or restate a rule | Trace pruning and propagation, compare local supports with a global solution, score a repair move, and apply supplied annealing probabilities |
 | Introduction to ML | Recall data-scaler fitting rules before leakage | Compare a fair fresh test with a memorized practice sheet |
 | Regression | Interpret negative held-out R² or residual degrees of freedom | Read a fit score on the same data and interpret slope |
 | Classification | Explain nonexistent finite estimates under perfect separation | Choose which prediction gives the true class more probability |

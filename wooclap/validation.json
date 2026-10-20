@@ -1,5 +1,5 @@
 {
-  "date": "2026-10-12",
+  "date": "2026-10-17",
   "questions": 92,
   "core": 68,
   "optional": 24,
@@ -52,14 +52,14 @@
       "slides": 37
     },
     "05_Constraints_Part_1": {
-      "slides_sha256": "97e35f8622b17bc217dc8aa17723aff21b117127c89757cbd1dd04415dce58ac",
-      "handout_sha256": "4e0fe9b51d8200f1059b5aa37c9a3ffbabbb9e9ab1fc8ff625cd1535649b73bc",
-      "slides": 24
+      "slides_sha256": "1fef278be1d9a84f93ba7b1d3f816c95299fcb2794c62b8e8edfbde0eb763619",
+      "handout_sha256": "6e0168e59098b0118de0ec06e3b1f138a6407cd3fc75abced9174eb54812e7ab",
+      "slides": 37
     },
     "06_Constraints_Part_2": {
-      "slides_sha256": "280771a2ab24159a7e895d3e55b7d761572f4a73e933fc9ab90b7d50d67ea418",
-      "handout_sha256": "5b1413f9a2d506cd7d9da2d138f57ae6c4ccaaee7f118fdeae5c485475c0cd00",
-      "slides": 21
+      "slides_sha256": "f6e5db3ff20f382d66bc7fec2c8ddd67c8f77a43000b2600c4574e6fa5ab79d2",
+      "handout_sha256": "12a8057d0420805d9a4169a833286d9c9d80b42ef68a394ab1a82a9f27e2d8a9",
+      "slides": 37
     },
     "07_Intro_ML_Part_1": {
       "slides_sha256": "16e32d5674714fc1c2399ead1199b2b0280e96b6eb6dcf62f1d76c6f1af06d23",
@@ -126,5 +126,387 @@
     "interactive_examples": 8,
     "course_reference": "https://www.aretor.it/courses/aiml2526/lessons/02_constraint/",
     "stable_ids_preserved": true
+  },
+  "constraints_math_review": {
+    "date": "2026-10-16",
+    "course_reference": "https://www.aretor.it/courses/aiml2526/lessons/02_constraint/",
+    "source_slides": 60,
+    "handout_chapters": 55,
+    "new_definition_slides": 15,
+    "existing_slide_ids_preserved": true
+  },
+  "constraints_question_review": {
+    "date": "2026-10-17",
+    "questions": 11,
+    "live_forms_reloaded_and_verified": 11,
+    "rendered_question_slides_checked": 11,
+    "types_keys_urls_and_settings_preserved": true,
+    "mathematical_examples": "verified by enumeration and direct calculation",
+    "source_slide_counts": [
+      34,
+      26
+    ],
+    "rendered_slide_counts": [
+      40,
+      31
+    ]
+  },
+  "constraints_flow_review": {
+    "date": "2026-10-17",
+    "source_sections": {
+      "2.1": "21---variables",
+      "2.2": "22---constraints",
+      "2.3": "23---constraint-satisfaction-problems",
+      "2.3.1": "231---generate-and-test",
+      "2.3.2": "232---depth-first-search-solver",
+      "2.3.3": "233---consistency-algorithms",
+      "2.3.3.1": "2331---generalized-arc-consistency",
+      "2.3.3.2": "2332---domain-splitting",
+      "2.3.4": "234---local-search",
+      "2.3.4.1": "2341---generic-search",
+      "2.3.4.2": "2342---random-sampling",
+      "2.3.4.3": "2343---random-walk",
+      "2.3.4.4": "2344---iterative-best-improvement",
+      "2.3.4.5": "2345---simulated-annealing"
+    },
+    "added_introductions": [
+      "consistency-algorithms",
+      "local-neighborhood"
+    ],
+    "source_slides": [
+      35,
+      27
+    ],
+    "rendered_slides": [
+      41,
+      32
+    ],
+    "handout_chapters": [
+      32,
+      25
+    ],
+    "question_content_unchanged": true,
+    "source_coverage": "All 14 numbered course sections introduced and directly linked in slides and handouts",
+    "comparison_lab": "Moved after all policies and cooling; stable local-lab ID retained",
+    "browser_review": {
+      "slides_checked": 73,
+      "overflow": 0,
+      "handout_navigation": "passed",
+      "handout_plateau_example": "strict 1, sideways then improvement 0",
+      "relocated_policy_lab": "strict improvement stops on plateau; annealing accepts an equal-score move"
+    }
+  },
+  "arc_formula_explanation": {
+    "date": "2026-10-17",
+    "slide": "arc-consistency",
+    "rendered_slide": 28,
+    "changes": "Three-step quantifier reading, explicit evaluation meaning and four-value A<B witness table; matching handout explanation"
+  },
+  "gac_notation_explanation": {
+    "date": "2026-10-17",
+    "slide": "gac-notation",
+    "rendered_slide": 30,
+    "changes": "Explicit Q/Q0/E and X/x/c/N_X definitions, consistent capital-X subscripts, one-rule worklist and domain-update example; matching handout",
+    "rendering": "Capital-X subscripts visibly lowered; slide and matching handout checked in browser"
+  },
+  "gac_worklist_pair_display": {
+    "date": "2026-10-17",
+    "slide": 32,
+    "notation": "(variable, constraint), with explicit reading key",
+    "browser_checks": [
+      "one step removes the processed pair",
+      "chain requeues (A, A < B)",
+      "handout iframe shows the same pairs and steps correctly"
+    ],
+    "static_handout_preview": "updated from rendered widget",
+    "algorithm_checks": 1002,
+    "algorithm_unchanged": true
+  },
+  "explicit_csp_example": {
+    "date": "2026-10-17",
+    "slide": 32,
+    "display": "X₁,X₂,X₃ ∈ {0,1,2}; X₁<2; X₂>0; X₃<X₁",
+    "handouts": "live selectors and GAC/splitting static previews synchronized",
+    "browser_verified": true
+  },
+  "gac_requeue_explanation": {
+    "date": "2026-10-17",
+    "slide": 35,
+    "id": "gac-requeue",
+    "changes": "Lost-support example before formula; concrete X/c/Z/c-prime mapping; plain-language worklist update; matching handout",
+    "verification": "Slide and matching handout checked in browser; no overflow; lost-support sequence matches the verified interactive chain trace"
+  },
+  "constraints_part2_recap": {
+    "date": "2026-10-18",
+    "new_slides": [
+      "recap-model",
+      "recap-assignments",
+      "recap-methods",
+      "recap-support",
+      "recap-handoff"
+    ],
+    "source_slides": 32,
+    "rendered_slides": 37,
+    "handout_chapters": 30,
+    "quiz_content_and_ids_unchanged": true,
+    "verification": {
+      "opening_and_transition_slides_checked": 8,
+      "new_slide_links_and_handout_navigation": "passed",
+      "source_ids_and_old_order_preserved": true,
+      "example_numbers": "checked by enumeration",
+      "question_bank_unchanged": true,
+      "handout_embeds_preserved": 4
+    }
+  },
+  "constraints_part2_structure": {
+    "date": "2026-10-18",
+    "new_slides": [
+      "local-methods",
+      "random-walk",
+      "ibi-best",
+      "tabu"
+    ],
+    "source_slides": 36,
+    "rendered_slides": 41,
+    "handout_chapters": 34,
+    "original_course_sequence": "2.3.4.1 → 2.3.4.2 → 2.3.4.3 → 2.3.4.4 → 2.3.4.5",
+    "quiz_content_and_ids_unchanged": true,
+    "browser_verification": {
+      "rendered_slide_count": 41,
+      "changed_slide_layouts": 18,
+      "handout_no_horizontal_overflow": true,
+      "plateau_in_slide_and_handout": "strict: 1; sideways + strict: 0",
+      "review_gallery": "C:\\Users\\Nicola\\Documents\\Codex\\2026-10-12\\can\\outputs\\csp2-structure\\index.html"
+    }
+  },
+  "constraints_logic_notation": {
+    "date": "2026-10-19",
+    "new_slides": [
+      "logic-connectives",
+      "recap-logic"
+    ],
+    "source_slides": [
+      36,
+      37
+    ],
+    "rendered_slides": [
+      42,
+      42
+    ],
+    "handout_chapters": [
+      33,
+      35
+    ],
+    "question_bank_unchanged": true,
+    "changed_slides": {
+      "05_Constraints_Part_1": [
+        "logic-connectives",
+        "definition",
+        "csp-solution",
+        "consistent-unsat",
+        "gac-requeue",
+        "assignment-lab",
+        "gac-lab"
+      ],
+      "06_Constraints_Part_2": [
+        "recap-logic",
+        "recap-model",
+        "recap-assignments",
+        "recap-handoff",
+        "splitting",
+        "domain-partition",
+        "local-intro",
+        "local-neighborhood",
+        "ibi-best",
+        "split-lab"
+      ]
+    },
+    "verification": {
+      "packs": [
+        {
+          "pack": "05_Constraints_Part_1",
+          "source_slides": 36,
+          "rendered_slides": 42,
+          "chapters": 33,
+          "interactive_examples": 4,
+          "previous_order_preserved": true,
+          "truth_table": "passed",
+          "embedded_documents": "passed",
+          "local_links": "passed"
+        },
+        {
+          "pack": "06_Constraints_Part_2",
+          "source_slides": 37,
+          "rendered_slides": 42,
+          "chapters": 35,
+          "interactive_examples": 4,
+          "previous_order_preserved": true,
+          "truth_table": "passed",
+          "embedded_documents": "passed",
+          "local_links": "passed"
+        }
+      ],
+      "course_sections_linked": 14,
+      "question_bank_unchanged": true,
+      "original_solution_set_preserved": [
+        [
+          1,
+          1,
+          0
+        ],
+        [
+          1,
+          2,
+          0
+        ]
+      ],
+      "browser_layouts": 17,
+      "browser_interactions": {
+        "assignment": "(1,0,0) rejected; (1,1,0) accepted",
+        "gac": "5 steps to the nonempty fixed point",
+        "embedded_splitting": "3 steps; original two solutions found",
+        "handout_truth_tables": "four rows in each; no horizontal overflow",
+        "static_previews": "GAC and splitting updated"
+      }
+    }
+  },
+  "constraints_consistency_introduction": {
+    "date": "2026-10-19",
+    "slide_id": "consistency-algorithms",
+    "source_section": "2.3.3",
+    "change": "Motivate filtering with ordinary DFS repeating four failed A=4 completions, then define consistency algorithms and propagation.",
+    "slide_order_and_question_bank_unchanged": true,
+    "browser_verification": {
+      "rendered_slide": 24,
+      "rendered_slide_count": 42,
+      "slide_layout": "passed",
+      "handout_link": "passed",
+      "handout_overflow": false,
+      "scope": "consistency-algorithms section and matching handout"
+    }
+  },
+  "constraints_gac_introduction": {
+    "date": "2026-10-19",
+    "new_slide": "gac-introduction",
+    "position": "before network; first visible GAC mention in Part 1",
+    "part2_recap": "full name and purpose at first mention",
+    "part1_source_slides": 37,
+    "part1_rendered_slides": 43,
+    "part1_handout_chapters": 34,
+    "question_bank_unchanged": true,
+    "verification": {
+      "packs": [
+        {
+          "pack": "05_Constraints_Part_1",
+          "source_slides": 37,
+          "rendered_slides": 43,
+          "chapters": 34,
+          "first_GAC_mention": "gac-introduction",
+          "previous_slide_order_preserved": true,
+          "local_links": "passed"
+        },
+        {
+          "pack": "06_Constraints_Part_2",
+          "source_slides": 37,
+          "rendered_slides": 42,
+          "chapters": 35,
+          "first_GAC_mention": "recap-support",
+          "previous_slide_order_preserved": true,
+          "local_links": "passed"
+        }
+      ],
+      "rendered_first_mention": "new introduction, including inserted quiz questions",
+      "layouts": "passed",
+      "handout_link": "passed",
+      "question_bank_unchanged": true
+    }
+  },
+  "constraints_arc_definition_sentence": {
+    "date": "2026-10-19",
+    "slide_id": "arc-consistency",
+    "definition": "Given a constraint network G and a constraint c with scope(c)={X,Y₁,…,Yₖ}, the edge (X,c) is arc consistent if:",
+    "quantified_formula_unchanged": true,
+    "matching_handout_updated": true,
+    "verification": {
+      "rendered_slide": 30,
+      "slide_layout": "passed",
+      "handout_definition_and_link": "passed",
+      "handout_overflow": false
+    }
+  },
+  "constraints_gac_flow_revision": {
+    "date": "2026-10-19",
+    "notation": "E: pending checks; E₀: full initial network edge set; N_X: retained values",
+    "pseudocode_slide": "gac",
+    "notation_before_pseudocode": true,
+    "question_bank_unchanged": true,
+    "counts_unchanged": true,
+    "changed_slides": {
+      "05_Constraints_Part_1": [
+        "gac-introduction",
+        "network-definition",
+        "arc-consistency",
+        "gac-notation",
+        "gac",
+        "gac-lab",
+        "requeue",
+        "gac-requeue"
+      ],
+      "06_Constraints_Part_2": [
+        "recap-support",
+        "consistency-solver"
+      ]
+    },
+    "verification": {
+      "verified_date": "2026-10-20",
+      "packs": [
+        {
+          "pack": "05_Constraints_Part_1",
+          "source_slides": 37,
+          "rendered_slides": 43,
+          "chapters": 34,
+          "previous_ids_preserved": true,
+          "worklist": "E",
+          "initial_edges": "E₀",
+          "links": "passed",
+          "embedded_labs": 4
+        },
+        {
+          "pack": "06_Constraints_Part_2",
+          "source_slides": 37,
+          "rendered_slides": 42,
+          "chapters": 35,
+          "previous_ids_preserved": true,
+          "worklist": "E",
+          "initial_edges": "E₀",
+          "links": "passed",
+          "embedded_labs": 4
+        }
+      ],
+      "layouts_reviewed": 10,
+      "all_three_interactive_examples": "passed",
+      "course_domains_before_and_kept": "passed",
+      "recheck_added_vs_already_pending": "passed",
+      "back_navigation": "passed",
+      "handout_pseudocode_and_live_embed": "passed",
+      "algorithm_checks": 1002,
+      "question_bank_unchanged": true,
+      "GAC_handout_paragraphs_before": 43,
+      "GAC_handout_paragraphs_after": 28
+    }
+  },
+  "constraints_gac_retained_values": {
+    "date": "2026-10-19",
+    "slide": "gac-lab",
+    "display": "dom(X) before and N_X kept, with selected X/c; network shows updated domains",
+    "algorithm_unchanged": true,
+    "initial_and_final_summary": "no selected revision; Next/Back instructions"
+  },
+  "constraints_gac_recheck_highlighting": {
+    "date": "2026-10-19",
+    "event": "domain reduction with a nonempty retained set",
+    "display": "instantiated E union; Added now vs Already pending; empty affected set",
+    "algorithm_unchanged": true,
+    "verification": "All examples, a newly added chain check, an already pending pair, unchanged-value states and Back navigation passed."
   }
 }
