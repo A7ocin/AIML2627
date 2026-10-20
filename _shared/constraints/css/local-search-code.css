@@ -1,0 +1,37 @@
+.local-code-explainer{--lc-font:14px;--lc-comment:13px;--lc-line:1.45;--lc-pad:12px;font-family:'Segoe UI',sans-serif}
+.lc-toolbar{display:flex;align-items:center;gap:9px;margin-bottom:10px;flex-wrap:wrap}
+.lc-toolbar button{border:1px solid #526079;border-radius:6px;background:var(--bg-soft,#edf3f3);color:var(--text,#233348);font:600 13px/1.25 'Segoe UI',sans-serif;padding:7px 11px;cursor:pointer}
+.lc-toolbar button:disabled{opacity:.4;cursor:default}
+.lc-toolbar button[data-lc-action=next]{color:var(--c-stat,#007c70);border-color:var(--c-stat,#007c70)}
+.lc-progress{font-size:13px;color:var(--text-muted,#607186);margin-left:auto}
+.lc-code{border:1px solid var(--line,#b5c8cd);border-radius:10px;padding:var(--lc-pad);background:var(--bg-soft,#f4f7f6);overflow-x:auto}
+.lc-row{display:grid;grid-template-columns:32px minmax(0,1.65fr) minmax(0,1fr);align-items:baseline;column-gap:10px;border-left:3px solid transparent;min-height:calc(var(--lc-font)*var(--lc-line));padding:0 5px}
+.lc-row code{font:var(--lc-font)/var(--lc-line) Consolas,'Cambria Math',monospace!important;white-space:pre!important;background:transparent!important;padding:0!important;color:inherit!important;overflow:visible!important}
+.lc-number{border:0;background:none;color:var(--text-muted,#607186);font:var(--lc-font)/var(--lc-line) Consolas,monospace;padding:0;cursor:pointer;text-align:right}
+.lc-comment{font:var(--lc-comment)/var(--lc-line) 'Segoe UI',sans-serif;color:var(--c-stat,#007c70);visibility:hidden;white-space:nowrap}
+.lc-revealed .lc-comment{visibility:visible}
+.lc-current{border-left-color:var(--c-stat,#007c70);background:rgba(69,214,192,.09)}
+.lc-current .lc-number{color:var(--c-stat,#007c70);font-weight:700}
+.lc-toolbar button:focus-visible,.lc-number:focus-visible{outline:3px solid var(--c-comp,#7752aa);outline-offset:3px}
+.reveal .local-code-slide .slide-body{gap:12px}
+.reveal .local-code-slide h2{font-size:48px}
+.reveal .local-code-slide .lc-inputs{font-size:23px;line-height:1.3;color:var(--text-muted)}
+.reveal .local-code-explainer{--lc-font:23px;--lc-comment:22px;--lc-line:1.25;--lc-pad:12px}
+.reveal .lc-toolbar{gap:14px;margin-bottom:10px}
+.reveal .lc-toolbar button{font-size:21px;padding:8px 14px}
+.reveal .lc-progress{font-size:21px}
+.reveal .lc-row{grid-template-columns:40px minmax(0,1.65fr) minmax(0,1fr);column-gap:16px;padding:0 8px}
+.lc-key{display:grid;grid-template-columns:1.05fr 1.2fr 1fr;gap:10px 22px;margin-top:12px}
+.lc-key p{margin:0;font:13px/1.4 'Segoe UI',sans-serif}
+.lc-key strong{font-weight:650}
+.lc-key-note{grid-column:1/-1}
+.reveal .local-code-slide .lc-key p{font-size:21px;line-height:1.3}
+.reveal .local-code-slide .lc-key{margin-top:12px;gap:8px 22px}
+@media(max-width:800px){.lc-code{overflow-x:auto}.lc-row{min-width:760px}.lc-key{grid-template-columns:1fr}.lc-key-note{grid-column:auto}}
+@media print{.lc-toolbar{display:none}.lc-comment{visibility:visible!important;white-space:normal}.lc-current{background:none}.lc-row{border-left:0;break-inside:avoid}.lc-number{pointer-events:none;color:inherit}.lc-key{grid-template-columns:1fr 1fr}.lc-key-note{grid-column:1/-1}}
+
+/* Full consistency-solver notation fits beside its line comments. */
+.reveal #consistency-solver .local-code-explainer{--lc-font:23px;--lc-comment:22px;--lc-line:1.25}
+
+/* Let the long recursive return wrap within the narrower handout code column. */
+#chapter-consistency-solver .lc-row code{white-space:pre-wrap!important;overflow-wrap:anywhere}

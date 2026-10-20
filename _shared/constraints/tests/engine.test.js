@@ -35,7 +35,7 @@ check(()=>assert(Math.abs(C.acceptance(2,4)-Math.exp(-.5))<1e-12));check(()=>ass
 for(const mode of ['sampling','walk','best','tabu','anneal'])for(const seed of [1,7,23])for(const start of ['plateau','red']){
  const states=C.local(mode,seed,start);check(()=>assert.deepEqual(states,C.local(mode,seed,start)));
  for(let i=0;i<states.length;i++){const s=states[i];check(()=>{assert.equal(s.score,C.edges.filter(([v,w])=>s.a[v]===s.a[w]).length);assert(C.names.every(v=>[0,1,2].includes(s.a[v])));});
-  if(i&&s.move){const prev=states[i-1];check(()=>{assert.equal(C.names.filter(v=>s.a[v]!==prev.a[v]).length,s.accepted?1:0);if(mode==='anneal'){assert.equal(s.accepted,s.u<s.p);assert(Math.abs(s.p-C.acceptance(s.delta,s.T))<1e-12);}});}
+  if(i&&s.move){const prev=states[i-1];check(()=>{assert.equal(C.names.filter(v=>s.a[v]!==prev.a[v]).length,s.accepted?1:0);if(mode==='tabu')assert(!prev.tabu.includes(s.move.v));if(mode==='anneal'){assert.equal(s.accepted,s.u<s.p);assert(Math.abs(s.p-C.acceptance(s.delta,s.T))<1e-12);}});}
  }
  check(()=>assert(states.at(-1).done));
 }

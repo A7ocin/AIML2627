@@ -52,14 +52,14 @@
       "slides": 37
     },
     "05_Constraints_Part_1": {
-      "slides_sha256": "1fef278be1d9a84f93ba7b1d3f816c95299fcb2794c62b8e8edfbde0eb763619",
-      "handout_sha256": "6e0168e59098b0118de0ec06e3b1f138a6407cd3fc75abced9174eb54812e7ab",
+      "slides_sha256": "03a04c7065983d3c84124f55f9c63a6258fdcc5c7992d812c8a710c20166af5e",
+      "handout_sha256": "e0eab5beb41d2f4a9b9c2ccd904c550c44a02fe46ed0db4308af4fe0904d70ce",
       "slides": 37
     },
     "06_Constraints_Part_2": {
-      "slides_sha256": "f6e5db3ff20f382d66bc7fec2c8ddd67c8f77a43000b2600c4574e6fa5ab79d2",
-      "handout_sha256": "12a8057d0420805d9a4169a833286d9c9d80b42ef68a394ab1a82a9f27e2d8a9",
-      "slides": 37
+      "slides_sha256": "193175e10cc60540a9233e25b2f27617e174a400d1055715d369c83a4333b902",
+      "handout_sha256": "1872c60192697cc1e5e26421c98c577701bb00515ef33663182a57c20dafc3a4",
+      "slides": 41
     },
     "07_Intro_ML_Part_1": {
       "slides_sha256": "16e32d5674714fc1c2399ead1199b2b0280e96b6eb6dcf62f1d76c6f1af06d23",
@@ -508,5 +508,199 @@
     "display": "instantiated E union; Added now vs Already pending; empty affected set",
     "algorithm_unchanged": true,
     "verification": "All examples, a newly added chain check, an already pending pair, unchanged-value states and Back navigation passed."
+  },
+  "constraints_legacy_references_removed": {
+    "date": "2026-10-20",
+    "packs": [
+      {
+        "pack": "05_Constraints_Part_1",
+        "source_slides": 37,
+        "handout_chapters": 34,
+        "embedded_labs": 4,
+        "legacy_references": 0,
+        "links": "passed",
+        "math_and_code": "preserved",
+        "scripts_and_quizzes": "unchanged"
+      },
+      {
+        "pack": "06_Constraints_Part_2",
+        "source_slides": 37,
+        "handout_chapters": 35,
+        "embedded_labs": 4,
+        "legacy_references": 0,
+        "links": "passed",
+        "math_and_code": "preserved",
+        "scripts_and_quizzes": "unchanged"
+      }
+    ],
+    "browser_review": "Clean local-search reading map, matching handout navigation and reading route; both packs further-reading slides and Part 1 consistency introduction checked."
+  },
+  "constraints_local_search_transition": {
+    "date": "2026-10-20",
+    "slide": "why-local-search",
+    "source_slides": 38,
+    "rendered_slides": 43,
+    "handout_chapters": 36,
+    "placed_before": "local-intro (previously rendered slide 14)",
+    "question_content_unchanged": true,
+    "verification": "Browser: new slide is 14/43, directly before the previous slide 14; no clipping; handout section and link verified. Stable slide order, all internal links, four labs, scripts, quiz content and workbook bytes preserved."
+  },
+  "constraints_conflict_score_introduction": {
+    "date": "2026-10-20",
+    "slide": "local-intro",
+    "rendered_slide": 15,
+    "changes": "Define a and E(a) at the top before use, label scores in the worked example, remove premature E from the roadmap; matching handout explains E of a, counting and worklist distinction."
+  },
+  "constraints_local_methods_review": {
+    "date": "2026-10-20",
+    "source_checked": "Original lesson retrieved with authorized course access; five-method sequence and essential mathematics retained.",
+    "added_labs": [
+      "generic-lab",
+      "sampling-lab",
+      "walk-lab",
+      "ibi-lab"
+    ],
+    "existing_final_lab": "local-lab starts with annealing; full comparison retained",
+    "removed_extras": [
+      "sampling success-probability calculation",
+      "summation notation for conflict counting",
+      "Gibbs normalization and Metropolis/symmetric-proposal derivation",
+      "tabu aspiration exception",
+      "geometric cooling formula and convergence discussion"
+    ],
+    "source_slides": 42,
+    "rendered_slides": 47,
+    "handout_chapters": 40,
+    "handout_labs": 8,
+    "questions_and_import_bytes_unchanged": true,
+    "verification": {
+      "internal_links_checked": 407,
+      "source_slides": 42,
+      "rendered_slides": 47,
+      "handout_chapters": 40,
+      "embedded_labs": 8,
+      "new_method_labs": 4,
+      "all_five_presets": "verified in slides and live handout frames",
+      "core_demo_sequences": "generic 5→2→0; random walk 1→1→0; strict IBI stops at 1; tabu reaches 0; annealing accepts and rejects",
+      "algorithm_checks": 1002,
+      "tabu_rule": "recent variables remain blocked; no aspiration exception",
+      "layout_review": "changed slides and all five method labs fit; acceptance lab refined to keep footer clear",
+      "handout_print_previews": "all five policies and acceptance formula refreshed",
+      "legacy_references": 0
+    }
+  },
+  "constraints_coloring_rule_example": {
+    "date": "2026-10-20",
+    "slide": "conflicts",
+    "rendered_slide": 19,
+    "rule": "(A≠B) ∧ (B≠C) ∧ (C≠D) ∧ (D≠A) ∧ (A≠C)",
+    "assignment": {
+      "A": "red",
+      "B": "green",
+      "C": "red",
+      "D": "blue"
+    },
+    "violated_constraints": [
+      "A≠C"
+    ],
+    "handout_updated": true
+  },
+  "constraints_single_score_notation": {
+    "date": "2026-10-20",
+    "score": "h(a)",
+    "score_change": "Δh",
+    "acceptance_probability": "p",
+    "reason": "Use the original lesson notation in slides, handouts and widgets; reserve E for worklists.",
+    "slide19": "Full-width rule and assignment rows; removed forced breaks.",
+    "algorithm_unchanged": true,
+    "quiz_content_unchanged": true,
+    "verification": {
+      "date": "2026-10-20",
+      "single_score": "h(a)",
+      "score_change": "Δh",
+      "probability": "p",
+      "local_score_E_aliases": 0,
+      "GAC_worklist_E_preserved": true,
+      "algorithm_pseudocode_unchanged": true,
+      "slide19": "Full-width unbroken rule and assignment",
+      "handout_labs": 8,
+      "print_previews_refreshed": 7,
+      "internal_links_checked": 407,
+      "quiz_bank_unchanged": true
+    }
+  },
+  "constraints_annotated_local_algorithm": {
+    "date": "2026-10-20",
+    "removed_slide": "local-controls (former 21)",
+    "merged_slide": "local-loop (former 22, now 21)",
+    "algorithm_lines": 16,
+    "interactive_comments": "Next/Back, direct line selection, Show all and Reset",
+    "handout": "Merged chapter, matching interactive algorithm, all comments visible when printed",
+    "source_slides": 41,
+    "rendered_slides": 46,
+    "handout_chapters": 39,
+    "quiz_content_unchanged": true,
+    "verification": {
+      "source_slides": 41,
+      "rendered_slides": 46,
+      "handout_chapters": 39,
+      "algorithm_lines": 16,
+      "removed": "local-controls",
+      "merged_into": "local-loop, now slide 21",
+      "links_checked": 223,
+      "step_controls": "Reset 0 → Next 1 → Next 2 → Back 1 → direct line 6 → keyboard 7 → Show all 16",
+      "handout": "Show all reveals all 16 comments; no page overflow",
+      "layout": "All comments and symbol key fit on one slide",
+      "printing": "All comments shown automatically",
+      "quiz_content_unchanged": true,
+      "existing_eight_CSP_labs_preserved": true
+    }
+  },
+  "constraints_annotated_consistency_solver": {
+    "date": "2026-10-20",
+    "slide": 11,
+    "id": "consistency-solver",
+    "algorithm_lines": 15,
+    "interactive_comments": "Next/Back, direct line selection, keyboard arrows, Show all, Reset",
+    "handout": "Full notation, symbol key and explanation of 𝓧[domⱼ]; interactive comments retained",
+    "slide_order_and_quizzes_unchanged": true,
+    "notation": "Full variables/constraints signature and formulas, matching the supplied image",
+    "logic_unchanged": true,
+    "branch_domain_quantifiers": "Parentheses explicitly separate other-variable copies from the selected X domain",
+    "verification": {
+      "code_lines": 15,
+      "notation": "Con_Solve(𝓧,𝓒,E), full branch maps, affected-edge set, singleton-solution comprehension, and 𝓧[domⱼ] recursive calls",
+      "comments": "Direct line 13, Back to 12, Show all 15 passed; handout reveals all 15",
+      "layout": "No code/comment overlap in slides or handout; long handout return wraps correctly",
+      "links_checked": 223,
+      "slide_counts_and_quizzes": "unchanged"
+    }
+  },
+  "constraints_annealing_proposal_clarification": {
+    "date": "2026-10-20",
+    "slide": "gibbs-weight",
+    "meaning": "Same proposal h=1→2, higher/lower acceptance chance, acceptance moves to 2 and rejection stays at 1",
+    "removed_from_deck": "L02-C07 (formerly rendered slide 34)",
+    "question_bank_and_live_event": "retained",
+    "source_slides": 41,
+    "rendered_slides": 45,
+    "handout_updated": true,
+    "verification": {
+      "part2_rendered_slides": 45,
+      "removed_question_present": false,
+      "remaining_question_slides": 4,
+      "part1_default_behavior": "43 slides and all 6 questions preserved",
+      "layout": "fits without clipping",
+      "handout": "matching heading and explanations verified"
+    }
+  },
+  "constraints_removed_question_slide36": {
+    "date": "2026-10-20",
+    "question": "L02-O03",
+    "topic": "Strict improvement and a sideways plateau move",
+    "excluded_from_deck": true,
+    "rendered_slides": 44,
+    "remaining_questions": 3,
+    "bank_and_live_event": "retained"
   }
 }

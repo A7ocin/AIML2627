@@ -56,3 +56,8 @@
 .cp-requeued-existing small{color:var(--c-deep)}
 
 [data-kind="gac"] .cp-queue-entry:first-child:not(.cp-requeued-existing):not(.cp-requeued-new){border-color:var(--line)}
+
+/* Keep the two simple acceptance cases and controls within one teaching slide. */
+[data-kind="anneal"] .cp-side{gap:10px}
+[data-kind="anneal"] .cp-side .formula{padding:12px 18px}
+[data-kind="anneal"] .cp-decision{padding:14px}

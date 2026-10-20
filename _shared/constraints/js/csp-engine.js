@@ -65,7 +65,7 @@
    if(mode==='sampling'){a=Object.fromEntries(names.map(v=>[v,Math.floor(rand()*3)]));}
    else {
     if(mode==='walk'||mode==='anneal')move=choose(all);
-    else {const allowed=mode==='tabu'?all.filter(m=>!tabu.includes(m.v)||m.score<best):all,min=Math.min(...allowed.map(m=>m.score));move=choose(allowed.filter(m=>m.score===min));}
+    else {const allowed=mode==='tabu'?all.filter(m=>!tabu.includes(m.v)):all,min=Math.min(...allowed.map(m=>m.score));move=choose(allowed.filter(m=>m.score===min));}
     if(!move){snap('No admissible move. Stop this run.',{done:true});break;}
     if(mode==='best'&&move.score>=before){snap('No strictly improving one-variable move. Stop on this plateau.',{done:true});break;}
     delta=move.score-before;

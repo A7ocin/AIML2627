@@ -24,8 +24,11 @@
     if (text !== undefined) element.textContent = text;
     return element;
   };
+  // A deck can omit a prompt without deleting its reusable bank/event entry.
+  const excluded = new Set((slides.dataset.wooclapExclude || '').split(/[\s,]+/).filter(Boolean));
   const afterTail = new Map();
   for (const question of lecture.questions) {
+    if (excluded.has(question.id)) continue;
     const anchor = originals.find(el => el.dataset.slide === question.slide);
     if (!anchor) throw new Error(`Missing slide for ${question.id}`);
     const section = make('section', 'wc-question');

@@ -622,7 +622,7 @@ An empty domain proves only that the current branch has no solution. The disjoin
 
 ### L02-C06 · Core · Check / score the whole candidate
 
-**Placement:** [After slide 13: Local search starts complete and repairs errors](../06_Constraints_Part_2/index.html#/12) · [Handout](../06_Constraints_Part_2/handout.html#chapter-local-intro)  
+**Placement:** [After slide 14: Local search starts complete and repairs errors](../06_Constraints_Part_2/index.html#/13) · [Handout](../06_Constraints_Part_2/handout.html#chapter-local-intro)  
 **Time:** 90 seconds, including debrief.
 
 Three exams A, B and C use slots {1,2}. The only clash rules are A ≠ B and B ≠ C. Local search starts at (A,B,C) = (1,1,2) and changes only B to 2. How does the number of violated rules change?
@@ -642,7 +642,7 @@ Initially A = B violates the first rule, while B ≠ C satisfies the second. Aft
 
 ### L02-C07 · Core · Prediction / apply annealing acceptance
 
-**Placement:** [Before slide 28: Keep the move fixed and change its temperature](../06_Constraints_Part_2/index.html#/27) · [Handout](../06_Constraints_Part_2/handout.html#chapter-anneal-lab)  
+**Placement:** [Before slide 32: Keep the move fixed and change its temperature](../06_Constraints_Part_2/index.html#/31) · [Handout](../06_Constraints_Part_2/handout.html#chapter-anneal-lab)  
 **Time:** 90 seconds, including debrief.
 
 An annealing move raises the conflict count from 1 to 3. For this move, acceptance probability is 0.61 at T = 4 and 0.02 at T = 0.5. Accept when a random draw u is below that probability. Using u = 0.40, what happens?
@@ -662,7 +662,7 @@ The increase is Δh = 3 − 1 = 2. The rule p = exp(−Δh/T) gives approximatel
 
 ### L02-C08 · Core · Exit / compare evidence from two solvers
 
-**Placement:** [After slide 34: Build systematically—or repair a candidate](../06_Constraints_Part_2/index.html#/33) · [Handout](../06_Constraints_Part_2/handout.html#chapter-summary)  
+**Placement:** [After slide 38: Build systematically—or repair a candidate](../06_Constraints_Part_2/index.html#/37) · [Handout](../06_Constraints_Part_2/handout.html#chapter-summary)  
 **Time:** 120 seconds, including debrief.
 
 Solver A exhaustively explores all branches of a finite CSP using sound pruning and finds no solution. Solver B makes 10,000 local-search moves, with restarts, and finds no solution. Which can conclude that the CSP is unsatisfiable, and why? Answer in two sentences.
@@ -678,7 +678,7 @@ Suggested rubric: A can conclude unsatisfiability because exhaustive coverage wi
 
 ### L02-O03 · Optional · Optional / escape a plateau
 
-**Placement:** [After slide 29: Cooling gradually makes worse moves less likely](../06_Constraints_Part_2/index.html#/28) · [Handout](../06_Constraints_Part_2/handout.html#chapter-cooling)  
+**Placement:** [After slide 33: Cooling: explore first, then become more selective](../06_Constraints_Part_2/index.html#/32) · [Handout](../06_Constraints_Part_2/handout.html#chapter-cooling)  
 **Time:** 90 seconds, including debrief.
 
 A local-search candidate has 1 conflict. Every one-variable neighbor has at least 1. One neighbor also has 1 conflict, and from it a move reaches 0. Which conclusion follows for strict improvement, which accepts only lower scores?

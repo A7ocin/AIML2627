@@ -47,7 +47,7 @@
     this.el.querySelector('.teaching-message').textContent=witness?'Possible partners: B = '+good.join(' or ')+'. One working partner is enough to keep this A value.':this.remaining.length?'No remaining B value is larger than '+this.value+'. Remove this A value when revising A against A < B.':'B has an empty domain, so this branch already has no solution.';
     this.el.dataset.support=String(!!witness);this.el.dataset.a=String(this.value);this.el.dataset.b=this.remaining.join(',');
    }else{
-    this.el.querySelector('.teaching-graphic').innerHTML=graph(this.a);this.el.querySelector('.teaching-result').textContent='E(a) = '+CSP.score(this.a)+' conflict'+(CSP.score(this.a)===1?'':'s');
+    this.el.querySelector('.teaching-graphic').innerHTML=graph(this.a);this.el.querySelector('.teaching-result').textContent='h(a) = '+CSP.score(this.a)+' conflict'+(CSP.score(this.a)===1?'':'s');
     this.el.querySelector('.teaching-message').textContent=this.message;
     this.el.querySelector('[data-teaching-action="sideways"]').disabled=this.a.B===2||CSP.score(this.a)===0;
     this.el.querySelector('[data-teaching-action="strict"]').disabled=CSP.score(this.a)===0;
