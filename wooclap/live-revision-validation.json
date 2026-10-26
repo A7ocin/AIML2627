@@ -737,109 +737,129 @@
       "verified": true,
       "eventCode": "JCBAAQM",
       "src": "https://app.wooclap.com/events/JCBAAQM/questions/6aa8fe064c33f3f9df45d408",
-      "title": "L03-C01 · An app is shown many photos marked “cat” or “dog”. It then labels a new photo. Which part is learning from examples?",
+      "title": "L03-C01 · A crop model predicts a new field’s yield without changing its parameters. Later, an optimizer updates those parameters using the measured yield. How should we describe these two stages?",
       "choiceCount": 4,
       "correct": [
         4
       ],
-      "settingsUnchanged": true
+      "settingsUnchanged": true,
+      "reviewed": "2026-10-24",
+      "method": "Compared title and choices in the live edit form; visually checked the retained answer key and settings before Save; confirmed all ten updated titles after reloading the event."
     },
     "L03-C02": {
       "verified": true,
       "eventCode": "JCBAAQM",
       "src": "https://app.wooclap.com/events/JCBAAQM/questions/6aa8fe064c33f3f9df45d40d",
-      "title": "L03-C02 · You want to teach a computer to tell cats from dogs using examples. Which training collection gives it the most useful feedback?",
+      "title": "L03-C02 · One dataset records plant species as codes {0,1,2}; another records crop yield in kg. Both targets are numbers. Which task choice follows from what those targets mean?",
       "choiceCount": 4,
       "correct": [
         2
       ],
-      "settingsUnchanged": true
+      "settingsUnchanged": true,
+      "reviewed": "2026-10-24",
+      "method": "Compared title and choices in the live edit form; visually checked the retained answer key and settings before Save; confirmed all ten updated titles after reloading the event."
     },
     "L03-C03": {
       "verified": true,
       "eventCode": "JCBAAQM",
       "src": "https://app.wooclap.com/events/JCBAAQM/questions/6aa8fe064c33f3f9df45d412",
-      "title": "L03-C03 · We hide one word from an existing sentence and ask a model to guess it. Where can we find the correct answer?",
+      "title": "L03-C03 · The recorded sentence is “The crop needs water”. We hide “water”; a model predicts the plausible word “sunlight”. Which statement about this self-supervised training pair is correct?",
       "choiceCount": 4,
       "correct": [
         1
       ],
-      "settingsUnchanged": true
+      "settingsUnchanged": true,
+      "reviewed": "2026-10-24",
+      "method": "Compared title and choices in the live edit form; visually checked the retained answer key and settings before Save; confirmed all ten updated titles after reloading the event."
     },
     "L03-C04": {
       "verified": true,
       "eventCode": "JCBAAQM",
       "src": "https://app.wooclap.com/events/JCBAAQM/questions/6aa8fe064c33f3f9df45d417",
-      "title": "L03-C04 · You usually choose a restaurant you like. Why might you try a new one?",
+      "title": "L03-C04 · A bandit arm A rewarded 6 of 10 pulls, B rewarded 1 of 2, and C rewarded 0 of 1. Rewards are noisy. A rule now always picks A and never samples the other arms. What can go wrong?",
       "choiceCount": 4,
       "correct": [
         2
       ],
-      "settingsUnchanged": true
+      "settingsUnchanged": true,
+      "reviewed": "2026-10-24",
+      "method": "Compared title and choices in the live edit form; visually checked the retained answer key and settings before Save; confirmed all ten updated titles after reloading the event."
     },
     "L03-C05": {
       "verified": true,
       "eventCode": "JCBAAQM",
       "src": "https://app.wooclap.com/events/JCBAAQM/questions/6aa8fe064c33f3f9df45d41c",
-      "title": "L03-C05 · A table has one row per house and columns for area, number of rooms and price. Which column is the target when predicting price?",
+      "title": "L03-C05 · 60 field trials record fertilizer and soil moisture to predict yield. A trial ID is kept only for lookup. With one row per trial, which input/target representation is correct?",
       "choiceCount": 4,
       "correct": [
         2
       ],
-      "settingsUnchanged": true
+      "settingsUnchanged": true,
+      "reviewed": "2026-10-24",
+      "method": "Compared title and choices in the live edit form; visually checked the retained answer key and settings before Save; confirmed all ten updated titles after reloading the event."
     },
     "L03-C06": {
       "verified": true,
       "eventCode": "JCBAAQM",
       "src": "https://app.wooclap.com/events/JCBAAQM/questions/6aa8fe064c33f3f9df45d421",
-      "title": "L03-C06 · You want a fair test of whether a student can solve new exercises. Which set should you use for the test?",
+      "title": "L03-C06 · An engineer computes a feature mean from all 1,000 rows, uses it to scale the inputs, and only then splits into training and test sets. Test targets never enter fitting. Is the final test independent of model preparation?",
       "choiceCount": 4,
       "correct": [
         4
       ],
-      "settingsUnchanged": true
+      "settingsUnchanged": true,
+      "reviewed": "2026-10-24",
+      "method": "Compared title and choices in the live edit form; visually checked the retained answer key and settings before Save; confirmed all ten updated titles after reloading the event."
     },
     "L03-C07": {
       "verified": true,
       "eventCode": "JCBAAQM",
       "src": "https://app.wooclap.com/events/JCBAAQM/questions/6aa8fe064c33f3f9df45d426",
-      "title": "L03-C07 · Why do we test a machine-learning model on examples it did not learn from? Answer in one sentence.",
+      "title": "L03-C07 · Two polynomial models have training/validation errors: degree 2 = (0.08, 0.10), degree 9 = (0.01, 0.35). Choose a model for new fields, justify your choice, and say which data should provide the final performance estimate.",
       "choiceCount": 0,
       "correct": [],
-      "settingsUnchanged": true
+      "settingsUnchanged": true,
+      "reviewed": "2026-10-24",
+      "method": "Compared title and choices in the live edit form; visually checked the retained answer key and settings before Save; confirmed all ten updated titles after reloading the event."
     },
     "L03-O01": {
       "verified": true,
       "eventCode": "JCBAAQM",
       "src": "https://app.wooclap.com/events/JCBAAQM/questions/6aa90164d2f1e8b522d99a9e",
-      "title": "L03-O01 · A training collection has a few labeled photos and many unlabeled photos. Learning from both is called what?",
+      "title": "L03-O01 · A system learns from labeled scans at hospital A and unlabeled scans at hospital B. B uses a different scanner. Which interpretation is justified?",
       "choiceCount": 4,
       "correct": [
         1
       ],
-      "settingsUnchanged": true
+      "settingsUnchanged": true,
+      "reviewed": "2026-10-24",
+      "method": "Compared title and choices in the live edit form; visually checked the retained answer key and settings before Save; confirmed all ten updated titles after reloading the event."
     },
     "L03-O02": {
       "verified": true,
       "eventCode": "JCBAAQM",
       "src": "https://app.wooclap.com/events/JCBAAQM/questions/6aa90164d2f1e8b522d99aa3",
-      "title": "L03-O02 · Which is a setting you choose before fitting a polynomial model, rather than a coefficient learned during fitting?",
+      "title": "L03-O02 · We choose the family fθ(x)=ax²+bx+c, then fitting changes θ from (1,0,0) to (2,−1,0.5). What changed?",
       "choiceCount": 4,
       "correct": [
         4
       ],
-      "settingsUnchanged": true
+      "settingsUnchanged": true,
+      "reviewed": "2026-10-24",
+      "method": "Compared title and choices in the live edit form; visually checked the retained answer key and settings before Save; confirmed all ten updated titles after reloading the event."
     },
     "L03-O03": {
       "verified": true,
       "eventCode": "JCBAAQM",
       "src": "https://app.wooclap.com/events/JCBAAQM/questions/6aa90164d2f1e8b522d99aa8",
-      "title": "L03-O03 · You want to predict next month’s sales. Which test best resembles that use?",
+      "title": "L03-O03 · Deployment will predict future months for fields not used in training. The dataset has repeated monthly rows for each field. Which held-out evaluation matches both requirements?",
       "choiceCount": 4,
       "correct": [
         2
       ],
-      "settingsUnchanged": true
+      "settingsUnchanged": true,
+      "reviewed": "2026-10-24",
+      "method": "Compared title and choices in the live edit form; visually checked the retained answer key and settings before Save; confirmed all ten updated titles after reloading the event."
     },
     "L04-C01": {
       "verified": true,
@@ -1387,12 +1407,38 @@
   "embedMapping": "all 92 source embed URLs and the History Part 2 replacement URL remain unchanged",
   "embedVerificationMethod": "Reloaded the six edited forms through authenticated browser navigation and matched their saved prompts, choices and answer keys",
   "latestQuestionsVerified": [
-    "L01-C06",
-    "L01-C07",
-    "L01-C08",
-    "L01-C09",
-    "L01-O01",
-    "L01-O03"
+    "L03-C01",
+    "L03-C02",
+    "L03-C03",
+    "L03-C04",
+    "L03-C05",
+    "L03-C06",
+    "L03-C07",
+    "L03-O01",
+    "L03-O02",
+    "L03-O03"
   ],
-  "slidePromptVerification": "Part 2: all six rendered question slides match the bank and live forms; previous Part 1 verification retained"
+  "slidePromptVerification": "Part 2: all six rendered question slides match the bank and live forms; previous Part 1 verification retained",
+  "introMLReview": {
+    "date": "2026-10-24",
+    "eventCode": "JCBAAQM",
+    "questions": [
+      "L03-C01",
+      "L03-C02",
+      "L03-C03",
+      "L03-C04",
+      "L03-C05",
+      "L03-C06",
+      "L03-C07",
+      "L03-O01",
+      "L03-O02",
+      "L03-O03"
+    ],
+    "updated": 10,
+    "correctKeys": "Retained and visually checked in each MCQ form",
+    "openQuestion": "L03-C07 remains ungraded with no exact-answer entries",
+    "persistence": "All ten updated titles confirmed after reloading the event",
+    "writtenPrompts": "All ten rendered stems and choices match the local bank",
+    "proof": "Local review artifact: wooclap-saved.png"
+  }
 }

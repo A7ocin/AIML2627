@@ -62,14 +62,14 @@
       "slides": 41
     },
     "07_Intro_ML_Part_1": {
-      "slides_sha256": "16e32d5674714fc1c2399ead1199b2b0280e96b6eb6dcf62f1d76c6f1af06d23",
-      "handout_sha256": "329f7a8d33571022ada5f39d52d11c3a7867557cc4237ed641a18bda8a412d51",
-      "slides": 21
+      "slides_sha256": "562c6a5b36415348314b8b248da3c56788925046a005bf9f8302ea10f9fb2d15",
+      "handout_sha256": "617eba708370bd604591562427bfd00b4ff2d7495a8f62e88bd9623189185160",
+      "slides": 34
     },
     "08_Intro_ML_Part_2": {
-      "slides_sha256": "801aa5e44bc33e016d58daee1974cdc7bfc91fe16bdd5a6d10560c6c281a465e",
-      "handout_sha256": "d09c98dd5788f31e72e4cff2ff01127e784b97f8286b0b66ffc3f01c0c2746ab",
-      "slides": 22
+      "slides_sha256": "997eb26e2468202537abbb4ed321fd7584063686ba6539469ce588f3c06fc081",
+      "handout_sha256": "36cbecaf7a240c7397f3f52f94eaa0bf2f254cf291ceb94e4a27be7d3bdf60a4",
+      "slides": 27
     },
     "09_Regression_Part_1": {
       "slides_sha256": "9b9f90c372c51b03081751967f5b1778c2821c534a7b81cede676fe9f4316cf3",
@@ -702,5 +702,118 @@
     "rendered_slides": 44,
     "remaining_questions": 3,
     "bank_and_live_event": "retained"
+  },
+  "intro_ml_review": {
+    "date": "2026-10-24",
+    "original_source": "https://www.aretor.it/courses/aiml2526/lessons/03_intro/",
+    "coverage": "components, settings, application domains, regression definitions, spaces, observations, matrices, functions, hypotheses, noise and generalization",
+    "structure": "Original topic order with Part 2 recap and gradual notation; mixed signal exercise after the settings",
+    "slide_counts_with_questions": {
+      "07_Intro_ML_Part_1": 30,
+      "08_Intro_ML_Part_2": 33
+    },
+    "handout_sections": {
+      "07_Intro_ML_Part_1": 22,
+      "08_Intro_ML_Part_2": 26
+    },
+    "live_questions_updated": 10,
+    "rendered_question_bank_comparison": "10/10 stems, choices and anchors pass",
+    "layout": "27 revised content slides and 10 quiz slides checked; no clipping or horizontal overflow at 1280×720",
+    "numerical_checks": "4051 passed; original chart data and numerical engine retained",
+    "interactive_labs": "All six retained; handout target reveal and slide degree change checked",
+    "source_map": "_shared/intro-ml/notes/source-map.md"
+  },
+  "intro_ml_part1_story": {
+    "date": "2026-10-26",
+    "source_slides": 32,
+    "slides_with_questions": 37,
+    "reading_sections": 29,
+    "chapters": [
+      "How learning works",
+      "Supervised learning",
+      "Unsupervised learning",
+      "Semi-supervised learning",
+      "Reinforcement learning",
+      "Application domains"
+    ],
+    "new_subchapters": [
+      "regression",
+      "classification",
+      "clustering",
+      "generative-modeling",
+      "multimodal"
+    ],
+    "opening": "Student learning → four roles → crop-yield goal → training versus inference → chapter map → learning signals",
+    "visuals": "Four attributed local photographs, six original SVG diagrams, role icons and teaching overlays",
+    "interactions": "Three original labs retained; classification reference reveal added",
+    "questions": "Text, answer keys and live Wooclap event unchanged; placements regenerated",
+    "guide_links": "Use stable slide IDs so inserted quiz slides do not shift the target",
+    "checks": {
+      "layout": "32 source slides checked at 1280×720; no clipping or horizontal overflow",
+      "bookmarks": "all previous slide IDs retained",
+      "handout": "6 chapters, 29 sections, valid local assets and anchors",
+      "labs": "all 3 embedded lab documents byte-for-byte preserved",
+      "numerical_data": "original data and engine unchanged",
+      "guide_links": "92/92 stable slide target IDs resolve",
+      "interaction_smoke_checks": "Classification reveal, chapter navigation and a bandit pull passed"
+    }
+  },
+  "intro_ml_both_layout_review": {
+    "date": "2026-10-26",
+    "rendered_slides": {
+      "part_1": 37,
+      "part_2": 32
+    },
+    "source_slides": {
+      "part_1": 32,
+      "part_2": 27
+    },
+    "handout_readings": {
+      "part_1": 29,
+      "part_2": 25
+    },
+    "chapters": {
+      "part_1": 6,
+      "part_2": 4
+    },
+    "cover_photo_removed": true,
+    "all_69_slide_screenshots_visually_reviewed": true,
+    "whole_photo_centering_and_aspect_checks": "passed in decks and handouts",
+    "local_assets_and_anchors": "passed",
+    "matching_handout_headings": "passed",
+    "unchanged_standalone_labs": 6,
+    "question_bank_and_32_workbooks_unchanged": true,
+    "live_questions_changed_this_review": false
+  },
+  "intro_ml_part1_targeted_refinements": {
+    "date": "2026-10-26",
+    "slides": [
+      2,
+      3,
+      6,
+      9,
+      11,
+      32
+    ],
+    "four_human_roles_match_ml_components": true,
+    "notation_manual_line_breaks": true,
+    "fitted_model_and_predicted_class_single_line": "visually verified",
+    "vision_image_caption_centers": "identical; all three image and caption rows aligned",
+    "companion_handout_updated": true
+  },
+  "intro_ml_part1_teaching_refinements": {
+    "date": "2026-10-26",
+    "source_slides": 34,
+    "displayed_slides": 39,
+    "handout_readings": 31,
+    "new_slides": [
+      "semi-supervised-intro",
+      "bandit-intro"
+    ],
+    "unchanged_embedded_labs": 3,
+    "question_bank_and_32_workbooks_unchanged": true,
+    "slide_handout_title_and_link_checks": "passed",
+    "bandit_introduced_before_question": true,
+    "distinct_training_and_inference_icons": true
   }
 }

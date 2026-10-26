@@ -593,14 +593,14 @@ window.AIML_WOOCLAP = {
           "type": "MCQ",
           "slide": "training-inference",
           "when": "before",
-          "purpose": "Opening / everyday intuition",
-          "stem": "An app is shown many photos marked “cat” or “dog”. It then labels a new photo. Which part is learning from examples?",
+          "purpose": "Opening / distinguish stages",
+          "stem": "A crop model predicts a new field’s yield without changing its parameters. Later, an optimizer updates those parameters using the measured yield. How should we describe these two stages?",
           "seconds": 90,
           "choices": [
-            "Displaying the app’s logo.",
-            "Saving the new photo’s file name.",
-            "Simply opening the app on a phone.",
-            "Using the marked photos to adjust how it recognizes cats and dogs."
+            "Both are inference because the model family stays unchanged.",
+            "Both are training because both stages use data.",
+            "The prediction is training; the later parameter update is inference.",
+            "The fixed-model prediction is inference; the parameter update is training."
           ],
           "src": "https://app.wooclap.com/events/JCBAAQM/questions/6aa8fe064c33f3f9df45d408"
         },
@@ -608,16 +608,16 @@ window.AIML_WOOCLAP = {
           "id": "L03-C02",
           "core": true,
           "type": "MCQ",
-          "slide": "signal-lab",
-          "when": "before",
-          "purpose": "Prediction / intuition",
-          "stem": "You want to teach a computer to tell cats from dogs using examples. Which training collection gives it the most useful feedback?",
+          "slide": "regression-classification",
+          "when": "after",
+          "purpose": "Check / interpret the target",
+          "stem": "One dataset records plant species as codes {0,1,2}; another records crop yield in kg. Both targets are numbers. Which task choice follows from what those targets mean?",
           "seconds": 90,
           "choices": [
-            "Photos paired only with random file names.",
-            "Photos paired with the correct “cat” or “dog” label.",
-            "A list of camera prices with no animal photos.",
-            "Only the words “cat” and “dog”, with no examples."
+            "Regression for both, because both targets are stored as numbers.",
+            "Classification for species; regression for yield.",
+            "Regression for species; classification for yield, because yield was measured.",
+            "Classification for both, because each training example has a known target."
           ],
           "src": "https://app.wooclap.com/events/JCBAAQM/questions/6aa8fe064c33f3f9df45d40d"
         },
@@ -627,14 +627,14 @@ window.AIML_WOOCLAP = {
           "type": "MCQ",
           "slide": "mask-lab",
           "when": "before",
-          "purpose": "Prediction / intuition",
-          "stem": "We hide one word from an existing sentence and ask a model to guess it. Where can we find the correct answer?",
-          "seconds": 60,
+          "purpose": "Prediction / distinguish target from guess",
+          "stem": "The recorded sentence is “The crop needs water”. We hide “water”; a model predicts the plausible word “sunlight”. Which statement about this self-supervised training pair is correct?",
+          "seconds": 90,
           "choices": [
-            "In the original sentence before the word was hidden.",
-            "Only by asking someone to write an entirely new sentence.",
-            "In the model’s guess, which must always be right.",
-            "Nowhere: hiding a word removes all possibility of checking it."
+            "“Water” is the target; a plausible alternative can still disagree with this recorded target.",
+            "“Sunlight” becomes the target because the model predicted it.",
+            "Any plausible word automatically counts as the recorded correct target.",
+            "A person must annotate a new target because the original word was hidden."
           ],
           "src": "https://app.wooclap.com/events/JCBAAQM/questions/6aa8fe064c33f3f9df45d412"
         },
@@ -644,14 +644,14 @@ window.AIML_WOOCLAP = {
           "type": "MCQ",
           "slide": "bandit-lab",
           "when": "before",
-          "purpose": "Prediction / intuition",
-          "stem": "You usually choose a restaurant you like. Why might you try a new one?",
-          "seconds": 90,
+          "purpose": "Prediction / reason about uncertainty",
+          "stem": "A bandit arm A rewarded 6 of 10 pulls, B rewarded 1 of 2, and C rewarded 0 of 1. Rewards are noisy. A rule now always picks A and never samples the other arms. What can go wrong?",
+          "seconds": 120,
           "choices": [
-            "Because a new restaurant is guaranteed to be better.",
-            "To learn whether it might be even better.",
-            "Because trying something new guarantees a good meal.",
-            "Because previous experience tells you exactly how every new restaurant tastes."
+            "The 6/10 rate establishes A’s true reward probability exactly, so no better arm can be missed.",
+            "Early noisy results may hide a better arm; occasionally sampling other arms can reveal it.",
+            "C’s one zero reward proves that it cannot be the best arm.",
+            "Trying B instead guarantees a larger reward on the very next pull."
           ],
           "src": "https://app.wooclap.com/events/JCBAAQM/questions/6aa8fe064c33f3f9df45d417"
         },
@@ -659,16 +659,16 @@ window.AIML_WOOCLAP = {
           "id": "L03-O01",
           "core": false,
           "type": "MCQ",
-          "slide": "semi-supervised",
+          "slide": "domain-shift",
           "when": "after",
-          "purpose": "Optional / basic extension",
-          "stem": "A training collection has a few labeled photos and many unlabeled photos. Learning from both is called what?",
-          "seconds": 90,
+          "purpose": "Optional / separate two learning issues",
+          "stem": "A system learns from labeled scans at hospital A and unlabeled scans at hospital B. B uses a different scanner. Which interpretation is justified?",
+          "seconds": 120,
           "choices": [
-            "Semi-supervised learning.",
-            "Testing only.",
-            "Reinforcement learning because every photo gives a reward.",
-            "Supervised learning that ignores all unlabeled photos."
+            "Using both pools can be semi-supervised learning, while the scanner difference introduces domain shift.",
+            "Semi-supervised learning guarantees that both hospitals have the same input distribution.",
+            "A scanner difference by itself proves the training labels are noisy.",
+            "Adding unlabeled B scans automatically corrects every scanner-related performance difference."
           ],
           "src": "https://app.wooclap.com/events/JCBAAQM/questions/6aa90164d2f1e8b522d99a9e"
         }
@@ -684,14 +684,14 @@ window.AIML_WOOCLAP = {
           "type": "MCQ",
           "slide": "matrix",
           "when": "after",
-          "purpose": "Check / core understanding",
-          "stem": "A table has one row per house and columns for area, number of rooms and price. Which column is the target when predicting price?",
-          "seconds": 60,
+          "purpose": "Check / construct a dataset",
+          "stem": "60 field trials record fertilizer and soil moisture to predict yield. A trial ID is kept only for lookup. With one row per trial, which input/target representation is correct?",
+          "seconds": 90,
           "choices": [
-            "Area.",
-            "Price.",
-            "Number of rooms.",
-            "The row number."
+            "X has shape 60×3 because the lookup ID must also be a predictor; Y has 60 entries.",
+            "X has shape 60×2 for the two predictors; Y has the 60 measured yields.",
+            "X has shape 2×60 and Y has two entries, one per predictor.",
+            "X has shape 60×3 including measured yield; Y repeats that same yield column."
           ],
           "src": "https://app.wooclap.com/events/JCBAAQM/questions/6aa8fe064c33f3f9df45d41c"
         },
@@ -701,14 +701,14 @@ window.AIML_WOOCLAP = {
           "type": "MCQ",
           "slide": "leakage",
           "when": "before",
-          "purpose": "Prediction / intuition",
-          "stem": "You want a fair test of whether a student can solve new exercises. Which set should you use for the test?",
-          "seconds": 90,
+          "purpose": "Prediction / detect evaluation leakage",
+          "stem": "An engineer computes a feature mean from all 1,000 rows, uses it to scale the inputs, and only then splits into training and test sets. Test targets never enter fitting. Is the final test independent of model preparation?",
+          "seconds": 120,
           "choices": [
-            "Only the exercises they have memorized.",
-            "The practice sheet with the answers printed next to each question.",
-            "Whichever practice exercises gave the highest score.",
-            "Exercises the student has not already practiced or used to choose a strategy."
+            "Yes: preprocessing cannot leak information unless it uses test targets.",
+            "Yes: a random split makes every earlier preparation step independent.",
+            "Yes, provided the best model is also selected using the test score.",
+            "No: test inputs influenced learned preprocessing; fit that preprocessing on training data only."
           ],
           "src": "https://app.wooclap.com/events/JCBAAQM/questions/6aa8fe064c33f3f9df45d421"
         },
@@ -718,9 +718,9 @@ window.AIML_WOOCLAP = {
           "type": "OpenQuestion",
           "slide": "summary",
           "when": "after",
-          "purpose": "Exit / one takeaway",
-          "stem": "Why do we test a machine-learning model on examples it did not learn from? Answer in one sentence.",
-          "seconds": 120,
+          "purpose": "Exit / justify model selection and evaluation",
+          "stem": "Two polynomial models have training/validation errors: degree 2 = (0.08, 0.10), degree 9 = (0.01, 0.35). Choose a model for new fields, justify your choice, and say which data should provide the final performance estimate.",
+          "seconds": 150,
           "choices": [],
           "src": "https://app.wooclap.com/events/JCBAAQM/questions/6aa8fe064c33f3f9df45d426"
         },
@@ -728,16 +728,16 @@ window.AIML_WOOCLAP = {
           "id": "L03-O02",
           "core": false,
           "type": "MCQ",
-          "slide": "hypotheses",
+          "slide": "hypothesis-space",
           "when": "after",
-          "purpose": "Optional / basic extension",
-          "stem": "Which is a setting you choose before fitting a polynomial model, rather than a coefficient learned during fitting?",
+          "purpose": "Optional / distinguish θ from Θ",
+          "stem": "We choose the family fθ(x)=ax²+bx+c, then fitting changes θ from (1,0,0) to (2,−1,0.5). What changed?",
           "seconds": 90,
           "choices": [
-            "The fitted intercept.",
-            "The fitted coefficient of x.",
-            "The fitted coefficient of x squared.",
-            "The polynomial degree: for example, choosing a line or a quadratic curve."
+            "The family changed from quadratic to cubic.",
+            "The polynomial degree was learned, but the coefficients stayed fixed.",
+            "A new parameter space was required because a coefficient became negative.",
+            "The parameter setting changed within the same Θ=ℝ³; allowing a different degree would change the family."
           ],
           "src": "https://app.wooclap.com/events/JCBAAQM/questions/6aa90164d2f1e8b522d99aa3"
         },
@@ -745,16 +745,16 @@ window.AIML_WOOCLAP = {
           "id": "L03-O03",
           "core": false,
           "type": "MCQ",
-          "slide": "generalization",
+          "slide": "leakage",
           "when": "after",
-          "purpose": "Optional / basic extension",
-          "stem": "You want to predict next month’s sales. Which test best resembles that use?",
-          "seconds": 90,
+          "purpose": "Optional / design a realistic evaluation",
+          "stem": "Deployment will predict future months for fields not used in training. The dataset has repeated monthly rows for each field. Which held-out evaluation matches both requirements?",
+          "seconds": 120,
           "choices": [
-            "Learn from next month’s actual sales before predicting them.",
-            "Learn from earlier months and test on a later month.",
-            "Report only how well the model fits its training months.",
-            "Include the answer for each test month among its inputs."
+            "Randomly shuffle individual rows so the same fields and future dates can appear in training.",
+            "Train on earlier data from one group of fields, then evaluate later data from different fields.",
+            "Hold out later months but keep exactly the same fields in training and evaluation.",
+            "Hold out field identities but allow later measurements to enter training before predicting earlier dates."
           ],
           "src": "https://app.wooclap.com/events/JCBAAQM/questions/6aa90164d2f1e8b522d99aa8"
         }

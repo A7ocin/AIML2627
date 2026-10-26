@@ -20,7 +20,7 @@ The official help page documents template-based Excel import. The workbooks use 
 
 ### L00-C01 · Core · Opening / everyday intuition
 
-**Placement:** [Before slide 3: aiml](../01_History_Part_1/index.html#/2) · [Handout](../01_History_Part_1/handout.html#chapter-aiml)  
+**Placement:** [Before “aiml”](../01_History_Part_1/index.html#/aiml) · [Handout](../01_History_Part_1/handout.html#chapter-aiml)  
 **Time:** 90 seconds, including debrief.
 
 Which example shows a computer learning from examples?
@@ -40,7 +40,7 @@ Learning changes the way a system makes predictions using examples. The other de
 
 ### L00-C02 · Core · Prediction / intuition
 
-**Placement:** [Before slide 8: Bayes' Theorem](../01_History_Part_1/index.html#/7) · [Handout](../01_History_Part_1/handout.html#chapter-bayes)  
+**Placement:** [Before “Bayes' Theorem”](../01_History_Part_1/index.html#/bayes) · [Handout](../01_History_Part_1/handout.html#chapter-bayes)  
 **Time:** 90 seconds, including debrief.
 
 You think it will stay dry. Then you see dark clouds approaching. What is a reasonable response?
@@ -60,7 +60,7 @@ New evidence can change how plausible an outcome seems without making it certain
 
 ### L00-C03 · Core · Check / core understanding
 
-**Placement:** [After slide 29: From “thinking” to an observable test](../01_History_Part_1/index.html#/28) · [Handout](../01_History_Part_1/handout.html#chapter-imitation)  
+**Placement:** [After “From “thinking” to an observable test”](../01_History_Part_1/index.html#/imitation) · [Handout](../01_History_Part_1/handout.html#chapter-imitation)  
 **Time:** 90 seconds, including debrief.
 
 What does the Turing imitation game focus on?
@@ -80,7 +80,7 @@ The test concerns conversational behavior. Passing this kind of test would not b
 
 ### L00-O01 · Optional · Optional / basic extension
 
-**Placement:** [After slide 45: Perceptron · 1957 — Frank Rosenblatt](../01_History_Part_1/index.html#/44) · [Handout](../01_History_Part_1/handout.html#chapter-perceptron)  
+**Placement:** [After “Perceptron · 1957 — Frank Rosenblatt”](../01_History_Part_1/index.html#/perceptron) · [Handout](../01_History_Part_1/handout.html#chapter-perceptron)  
 **Time:** 90 seconds, including debrief.
 
 During perceptron training, why do we show the model the correct answer?
@@ -100,7 +100,7 @@ The correct label lets the learning rule detect a mistake and adjust the model.
 
 ### L00-O03 · Optional · Optional / basic extension
 
-**Placement:** [After slide 15: From the logistic curve to logistic regression](../01_History_Part_1/index.html#/14) · [Handout](../01_History_Part_1/handout.html#chapter-logreg)  
+**Placement:** [After “From the logistic curve to logistic regression”](../01_History_Part_1/index.html#/logreg) · [Handout](../01_History_Part_1/handout.html#chapter-logreg)  
 **Time:** 90 seconds, including debrief.
 
 Two models use a similar S-shaped curve. Must they describe the same real-world problem?
@@ -126,7 +126,7 @@ Population growth and class-probability models can use related curve shapes for 
 
 ### L00-C04 · Core · Prediction / causal reasoning
 
-**Placement:** [Before slide 5: Minsky & Papert — “Perceptrons” (1969)](../02_History_Part_2/index.html#/4) · [Handout](../02_History_Part_2/handout.html#chapter-winter1)  
+**Placement:** [Before “Minsky & Papert — “Perceptrons” (1969)”](../02_History_Part_2/index.html#/winter1) · [Handout](../02_History_Part_2/handout.html#chapter-winter1)  
 **Time:** 90 seconds, including debrief.
 
 A system performs well on a narrow benchmark. Its promoters claim that it is close to general intelligence, but deployments expose failures outside the benchmark. Which consequence could help produce an AI winter?
@@ -146,7 +146,7 @@ A narrow success can be real without supporting broad claims. When deployment ex
 
 ### L00-C05 · Core · Synthesis / compare eras
 
-**Placement:** [After slide 25: When the learning signal fades](../02_History_Part_2/index.html#/24) · [Handout](../02_History_Part_2/handout.html#chapter-winter2)  
+**Placement:** [After “When the learning signal fades”](../02_History_Part_2/index.html#/winter2) · [Handout](../02_History_Part_2/handout.html#chapter-winter2)  
 **Time:** 90 seconds, including debrief.
 
 Which account best explains the two AI winters discussed in this lecture?
@@ -166,7 +166,7 @@ The downturns had different immediate triggers, but both involved a mismatch bet
 
 ### L00-C06 · Core · Prediction / distinguish mechanisms
 
-**Placement:** [Before slide 45: GPT-3 · 2020 — “Generative Pre-trained Transformer 3”](../02_History_Part_2/index.html#/44) · [Handout](../02_History_Part_2/handout.html#chapter-gpt3)  
+**Placement:** [Before “GPT-3 · 2020 — “Generative Pre-trained Transformer 3””](../02_History_Part_2/index.html#/gpt3) · [Handout](../02_History_Part_2/handout.html#chapter-gpt3)  
 **Time:** 90 seconds, including debrief.
 
 The same fixed language model receives two prompts. One gives only an instruction; the other also gives two input-output examples. The second follows the requested format more reliably. What is the best interpretation?
@@ -186,7 +186,7 @@ Examples can demonstrate a pattern inside the current prompt. This in-context gu
 
 ### L00-C07 · Core · Exit / connect eras
 
-**Placement:** [After slide 53: A history of interacting ideas and changing expectations](../02_History_Part_2/index.html#/52) · [Handout](../02_History_Part_2/handout.html#chapter-summary)  
+**Placement:** [After “A history of interacting ideas and changing expectations”](../02_History_Part_2/index.html#/summary) · [Handout](../02_History_Part_2/handout.html#chapter-summary)  
 **Time:** 150 seconds, including debrief.
 
 Choose two milestones from different eras in this lecture. In two sentences, explain how the later milestone addressed a limitation or opportunity left by the earlier one, and name one limitation that still remained.
@@ -202,7 +202,7 @@ Accept any accurate cross-era connection supported by the lecture. For example, 
 
 ### L00-O02 · Optional · Optional / synthesis
 
-**Placement:** [After slide 40: The modern turning points](../02_History_Part_2/index.html#/39) · [Handout](../02_History_Part_2/handout.html#chapter-alphago-transformers)  
+**Placement:** [After “The modern turning points”](../02_History_Part_2/index.html#/alphago-transformers) · [Handout](../02_History_Part_2/handout.html#chapter-alphago-transformers)  
 **Time:** 90 seconds, including debrief.
 
 AlphaGo combined learned components with search. Which conclusion is best supported by its success?
@@ -228,7 +228,7 @@ AlphaGo’s achievement shows the strength of combining learned evaluation and p
 
 ### L01-C01 · Core · Opening / compare objectives
 
-**Placement:** [Before slide 8: A solution path reaches a goal; its cost measures quality](../03_Search_Part_1/index.html#/7) · [Handout](../03_Search_Part_1/handout.html#chapter-paths-costs)  
+**Placement:** [Before “A solution path reaches a goal; its cost measures quality”](../03_Search_Part_1/index.html#/paths-costs) · [Handout](../03_Search_Part_1/handout.html#chapter-paths-costs)  
 **Time:** 90 seconds, including debrief.
 
 Three routes reach the same destination: P has road times 4 + 4, Q has 1 + 2 + 2, and R has 6 + 1 minutes. Which comparison of road count and total time is correct?
@@ -248,7 +248,7 @@ P and R each use two roads, while Q uses three. Their total times are 8, 5 and 7
 
 ### L01-C02 · Core · Prediction / trace a queue
 
-**Placement:** [Before slide 21: BFS · watch the queue expand](../03_Search_Part_1/index.html#/20) · [Handout](../03_Search_Part_1/handout.html#chapter-bfs-lab)  
+**Placement:** [Before “BFS · watch the queue expand”](../03_Search_Part_1/index.html#/bfs-lab) · [Handout](../03_Search_Part_1/handout.html#chapter-bfs-lab)  
 **Time:** 90 seconds, including debrief.
 
 A search removes the oldest waiting path and adds children at the back. Its queue is [B, C, D], next first. B is expanded, adding E then F; C is then expanded, adding H. No node is a goal. Which two nodes are selected next?
@@ -268,7 +268,7 @@ After B, the queue is [C, D, E, F]. After C, it is [D, E, F, H]. Therefore D and
 
 ### L01-C03 · Core · Prediction / trace a stack
 
-**Placement:** [Before slide 24: DFS · follow the stack](../03_Search_Part_1/index.html#/23) · [Handout](../03_Search_Part_1/handout.html#chapter-dfs-lab)  
+**Placement:** [Before “DFS · follow the stack”](../03_Search_Part_1/index.html#/dfs-lab) · [Handout](../03_Search_Part_1/handout.html#chapter-dfs-lab)  
 **Time:** 90 seconds, including debrief.
 
 A search removes the most recently added path. It pushes B, then C, then D onto an empty stack. After selecting D, it pushes J, then K. J and K have no children; K is then selected. No node is a goal. Which two nodes are selected next?
@@ -288,7 +288,7 @@ With the top written first, the stack changes from [D, C, B] to [K, J, C, B] aft
 
 ### L01-C04 · Core · Check / distinguish guarantees
 
-**Placement:** [After slide 33: Repeated work can be a reasonable price](../03_Search_Part_1/index.html#/32) · [Handout](../03_Search_Part_1/handout.html#chapter-ids-overhead)  
+**Placement:** [After “Repeated work can be a reasonable price”](../03_Search_Part_1/index.html#/ids-overhead) · [Handout](../03_Search_Part_1/handout.html#chapter-ids-overhead)  
 **Time:** 120 seconds, including debrief.
 
 In a finite tree, the only goals are G at depth 3 with path cost 12, and H at depth 4 with path cost 4. All edge costs are positive. Iterative deepening increases its limit from 0 by one each time and stops at its first goal. What does it return, and why?
@@ -308,7 +308,7 @@ Limits 0, 1 and 2 cannot reach either goal. The depth-3 pass can reach G but not
 
 ### L01-C05 · Core · Prediction / frontier versus solution cost
 
-**Placement:** [Before slide 36: Lowest-cost-first · compare cumulative costs](../03_Search_Part_1/index.html#/35) · [Handout](../03_Search_Part_1/handout.html#chapter-ucs-lab)  
+**Placement:** [Before “Lowest-cost-first · compare cumulative costs”](../03_Search_Part_1/index.html#/ucs-lab) · [Handout](../03_Search_Part_1/handout.html#chapter-ucs-lab)  
 **Time:** 120 seconds, including debrief.
 
 Only these directed edges exist: S→G costs 9, S→A costs 2, A→G costs 8, S→B costs 4, and B→G costs 1. After expanding S, a search selects the waiting path with the lowest cost so far. Which path comes next, and which complete route is cheapest?
@@ -328,7 +328,7 @@ The frontier costs after S are 9, 2 and 4, so S→A is selected next. The comple
 
 ### L01-O02 · Optional · Optional / cycle versus duplicate
 
-**Placement:** [After slide 12: A search tree can repeat a graph state](../03_Search_Part_1/index.html#/11) · [Handout](../03_Search_Part_1/handout.html#chapter-graph-versus-tree)  
+**Placement:** [After “A search tree can repeat a graph state”](../03_Search_Part_1/index.html#/graph-versus-tree) · [Handout](../03_Search_Part_1/handout.html#chapter-graph-versus-tree)  
 **Time:** 90 seconds, including debrief.
 
 The only directed edges are S→A, S→B, A→X and B→X. A search rejects a child only if its state already appears on that same path; it has no global visited set. What happens to S→A→X and S→B→X?
@@ -354,7 +354,7 @@ S, A and X are distinct on the first path; S, B and X are distinct on the second
 
 ### L01-C06 · Core · Prediction / compare frontier scores
 
-**Placement:** [Before slide 14: The first A* decision](../04_Search_Part_2/index.html#/13) · [Handout](../04_Search_Part_2/handout.html#chapter-astar-scores)  
+**Placement:** [Before “The first A* decision”](../04_Search_Part_2/index.html#/astar-scores) · [Handout](../04_Search_Part_2/handout.html#chapter-astar-scores)  
 **Time:** 90 seconds, including debrief.
 
 The frontier contains paths P, Q and R. Their costs so far g and remaining estimates h are: P (6, 1), Q (2, 4), R (4, 3). Greedy selects minimum h; A* selects minimum g + h. Which paths do they select next?
@@ -374,7 +374,7 @@ Greedy compares h values 1, 4 and 3, so it selects P. A* compares f = g + h valu
 
 ### L01-C07 · Core · Check / reopen and propagate
 
-**Placement:** [After slide 23: Same state, cheaper route: update the record](../04_Search_Part_2/index.html#/22) · [Handout](../04_Search_Part_2/handout.html#chapter-graph-cautions)  
+**Placement:** [After “Same state, cheaper route: update the record”](../04_Search_Part_2/index.html#/graph-cautions) · [Handout](../04_Search_Part_2/handout.html#chapter-graph-cautions)  
 **Time:** 120 seconds, including debrief.
 
 Graph A* has expanded X at cost g = 6 and found X→G with cost 3. Later it finds a route to X at g = 4. Its heuristic is admissible but inconsistent; G is the goal. Which action preserves the cheaper route through X?
@@ -394,7 +394,7 @@ The earlier route via X costs 6 + 3 = 9. The improvement gives 4 + 3 = 7. With a
 
 ### L01-C08 · Core · Prediction / lower bounds and equality
 
-**Placement:** [Before slide 29: Branch-and-bound · watch the incumbent improve](../04_Search_Part_2/index.html#/28) · [Handout](../04_Search_Part_2/handout.html#chapter-branch-bound-lab)  
+**Placement:** [Before “Branch-and-bound · watch the incumbent improve”](../04_Search_Part_2/index.html#/branch-bound-lab) · [Handout](../04_Search_Part_2/handout.html#chapter-branch-bound-lab)  
 **Time:** 120 seconds, including debrief.
 
 Branch-and-bound already holds a complete route costing 6. Waiting path P has g = 4, h = 3; Q has g = 2, h = 4. The estimates are admissible and costs nonnegative. If the aim is to return one cheapest route, which paths may be pruned?
@@ -414,7 +414,7 @@ The lower bounds are f(P) = 7 and f(Q) = 6. Neither can improve the saved cost-6
 
 ### L01-C09 · Core · Exit / explain a guarantee
 
-**Placement:** [After slide 34: Search is controlled exploration](../04_Search_Part_2/index.html#/33) · [Handout](../04_Search_Part_2/handout.html#chapter-summary)  
+**Placement:** [After “Search is controlled exploration”](../04_Search_Part_2/index.html#/summary) · [Handout](../04_Search_Part_2/handout.html#chapter-summary)  
 **Time:** 120 seconds, including debrief.
 
 A graph A* search uses an admissible but inconsistent heuristic and never reopens expanded states. Can its first selected goal be suboptimal? Explain using the reopening example, where cost 6 improves to 5, and state the repair.
@@ -430,7 +430,7 @@ Suggested rubric: yes. An admissible heuristic keeps path estimates optimistic, 
 
 ### L01-O01 · Optional · Optional / justify a relaxed bound
 
-**Placement:** [After slide 18: Admissible means “never overestimate”](../04_Search_Part_2/index.html#/17) · [Handout](../04_Search_Part_2/handout.html#chapter-admissibility)  
+**Placement:** [After “Admissible means “never overestimate””](../04_Search_Part_2/index.html#/admissibility) · [Handout](../04_Search_Part_2/handout.html#chapter-admissibility)  
 **Time:** 90 seconds, including debrief.
 
 A robot moves horizontally or vertically on a grid, one unit per move, and must avoid obstacles. Which proposed heuristic is guaranteed admissible for every reachable state?
@@ -450,7 +450,7 @@ Ignoring obstacles removes constraints while preserving the unit move costs, so 
 
 ### L01-O03 · Optional · Optional / test an edge condition
 
-**Placement:** [After slide 21: Consistency: check how the estimate changes in one move](../04_Search_Part_2/index.html#/20) · [Handout](../04_Search_Part_2/handout.html#chapter-consistency)  
+**Placement:** [After “Consistency: check how the estimate changes in one move”](../04_Search_Part_2/index.html#/consistency) · [Handout](../04_Search_Part_2/handout.html#chapter-consistency)  
 **Time:** 90 seconds, including debrief.
 
 An edge u→v costs 2. The heuristic values are h(u) = 5 and h(v) = 2; the current path to u has cost g = 3. After extending that path to v, how does its A* score f = g + h change, and is this edge consistent?
@@ -476,7 +476,7 @@ Before the edge, f = 3 + 5 = 8. After paying the edge cost, g = 5 and f = 5 + 2 
 
 ### L02-C01 · Core · Check / partial assignment and scope
 
-**Placement:** [Before slide 12: The running CSP has exactly two solutions](../05_Constraints_Part_1/index.html#/11) · [Handout](../05_Constraints_Part_1/handout.html#chapter-definition)  
+**Placement:** [Before “The running CSP has exactly two solutions”](../05_Constraints_Part_1/index.html#/definition) · [Handout](../05_Constraints_Part_1/handout.html#chapter-definition)  
 **Time:** 90 seconds, including debrief.
 
 A, B and C each have domain {1,2,3}. The rules are A < B and B ≠ C. Only A = 2 is assigned. Which statement about this partial assignment is correct?
@@ -496,7 +496,7 @@ Neither rule has its whole scope assigned: A < B still needs B, and B ≠ C need
 
 ### L02-C02 · Core · Prediction / trace a pruned branch
 
-**Placement:** [Before slide 19: Follow one branch, then watch DFS undo it](../05_Constraints_Part_1/index.html#/18) · [Handout](../05_Constraints_Part_1/handout.html#chapter-dfs-lab)  
+**Placement:** [Before “Follow one branch, then watch DFS undo it”](../05_Constraints_Part_1/index.html#/dfs-lab) · [Handout](../05_Constraints_Part_1/handout.html#chapter-dfs-lab)  
 **Time:** 90 seconds, including debrief.
 
 X₁, X₂ and X₃ each have domain {0,1,2}. The rules are X₁ < 2, X₂ > 0 and X₃ < X₁. DFS assigns X₁ first and tries X₁ = 2. What can it prune immediately, without propagation?
@@ -516,7 +516,7 @@ X₁ < 2 has scope {X₁}, so it is evaluable and false as soon as X₁ = 2. The
 
 ### L02-C03 · Core · Prediction / propagation to a fixed point
 
-**Placement:** [Before slide 30: Watch domains shrink and checks return](../05_Constraints_Part_1/index.html#/29) · [Handout](../05_Constraints_Part_1/handout.html#chapter-gac-lab)  
+**Placement:** [Before “Watch domains shrink and checks return”](../05_Constraints_Part_1/index.html#/gac-lab) · [Handout](../05_Constraints_Part_1/handout.html#chapter-gac-lab)  
 **Time:** 120 seconds, including debrief.
 
 A, B and C each start with domain {1,2,3,4}; the rules are A < B and B < C. Repeatedly remove values with no support in a rule, until no domain changes. What remains?
@@ -536,7 +536,7 @@ A < B removes A = 4 and B = 1. B < C removes B = 4 and forces C ≥ 3 once B ≥
 
 ### L02-C04 · Core · Prediction / local support versus solution
 
-**Placement:** [Before slide 34: A partner for each rule is not one shared solution](../05_Constraints_Part_1/index.html#/33) · [Handout](../05_Constraints_Part_1/handout.html#chapter-consistent-unsat)  
+**Placement:** [Before “A partner for each rule is not one shared solution”](../05_Constraints_Part_1/index.html#/consistent-unsat) · [Handout](../05_Constraints_Part_1/handout.html#chapter-consistent-unsat)  
 **Time:** 120 seconds, including debrief.
 
 A, B and C each have domain {1,2}. The three separate binary rules are A = B, B = C and A ≠ C. What happens if we enforce arc consistency on each rule?
@@ -556,7 +556,7 @@ In either equality, a value is supported by the same value at the other variable
 
 ### L02-O01 · Optional · Optional / justify value ordering
 
-**Placement:** [After slide 20: Choose the next decision to reduce wasted work](../05_Constraints_Part_1/index.html#/19) · [Handout](../05_Constraints_Part_1/handout.html#chapter-ordering)  
+**Placement:** [After “Choose the next decision to reduce wasted work”](../05_Constraints_Part_1/index.html#/ordering) · [Handout](../05_Constraints_Part_1/handout.html#chapter-ordering)  
 **Time:** 90 seconds, including debrief.
 
 We have already selected variable A. The only rule is A ≠ B, with dom(A) = {1,2} and dom(B) = {1,3}. Which value should least-constraining-value ordering try first, and why?
@@ -576,7 +576,7 @@ Choosing A = 2 conflicts with neither 1 nor 3, leaving two choices for B. Choosi
 
 ### L02-O02 · Optional · Optional / trace a lost support
 
-**Placement:** [After slide 31: Deleting a partner can break an earlier check](../05_Constraints_Part_1/index.html#/30) · [Handout](../05_Constraints_Part_1/handout.html#chapter-requeue)  
+**Placement:** [After “Deleting a partner can break an earlier check”](../05_Constraints_Part_1/index.html#/requeue) · [Handout](../05_Constraints_Part_1/handout.html#chapter-requeue)  
 **Time:** 90 seconds, including debrief.
 
 The rules are A < B and B < C. Currently A = {1,2,3}, B = {2,3,4}, C = {3,4}. Checking B < C removes B = 4. When A < B is rechecked, which value of A loses its last support?
@@ -602,7 +602,7 @@ A = 3 needs a B value strictly greater than 3. Its only support was B = 4, which
 
 ### L02-C05 · Core · Prediction / independent split branches
 
-**Placement:** [Before slide 12: Turn the remaining choices into a search tree](../06_Constraints_Part_2/index.html#/11) · [Handout](../06_Constraints_Part_2/handout.html#chapter-split-lab)  
+**Placement:** [Before “Turn the remaining choices into a search tree”](../06_Constraints_Part_2/index.html#/split-lab) · [Handout](../06_Constraints_Part_2/handout.html#chapter-split-lab)  
 **Time:** 90 seconds, including debrief.
 
 At a propagation fixed point, dom(X) = {1,2,3,4}. We split into X ∈ {1,2} and X ∈ {3,4}. Propagation makes Y’s domain empty in the first branch. To find every solution, what should happen next?
@@ -622,7 +622,7 @@ An empty domain proves only that the current branch has no solution. The disjoin
 
 ### L02-C06 · Core · Check / score the whole candidate
 
-**Placement:** [After slide 14: Local search starts complete and repairs errors](../06_Constraints_Part_2/index.html#/13) · [Handout](../06_Constraints_Part_2/handout.html#chapter-local-intro)  
+**Placement:** [After “Local search starts complete and repairs errors”](../06_Constraints_Part_2/index.html#/local-intro) · [Handout](../06_Constraints_Part_2/handout.html#chapter-local-intro)  
 **Time:** 90 seconds, including debrief.
 
 Three exams A, B and C use slots {1,2}. The only clash rules are A ≠ B and B ≠ C. Local search starts at (A,B,C) = (1,1,2) and changes only B to 2. How does the number of violated rules change?
@@ -642,7 +642,7 @@ Initially A = B violates the first rule, while B ≠ C satisfies the second. Aft
 
 ### L02-C07 · Core · Prediction / apply annealing acceptance
 
-**Placement:** [Before slide 32: Keep the move fixed and change its temperature](../06_Constraints_Part_2/index.html#/31) · [Handout](../06_Constraints_Part_2/handout.html#chapter-anneal-lab)  
+**Placement:** [Before “Keep the move fixed and change its temperature”](../06_Constraints_Part_2/index.html#/anneal-lab) · [Handout](../06_Constraints_Part_2/handout.html#chapter-anneal-lab)  
 **Time:** 90 seconds, including debrief.
 
 An annealing move raises the conflict count from 1 to 3. For this move, acceptance probability is 0.61 at T = 4 and 0.02 at T = 0.5. Accept when a random draw u is below that probability. Using u = 0.40, what happens?
@@ -662,7 +662,7 @@ The increase is Δh = 3 − 1 = 2. The rule p = exp(−Δh/T) gives approximatel
 
 ### L02-C08 · Core · Exit / compare evidence from two solvers
 
-**Placement:** [After slide 38: Build systematically—or repair a candidate](../06_Constraints_Part_2/index.html#/37) · [Handout](../06_Constraints_Part_2/handout.html#chapter-summary)  
+**Placement:** [After “Build systematically—or repair a candidate”](../06_Constraints_Part_2/index.html#/summary) · [Handout](../06_Constraints_Part_2/handout.html#chapter-summary)  
 **Time:** 120 seconds, including debrief.
 
 Solver A exhaustively explores all branches of a finite CSP using sound pruning and finds no solution. Solver B makes 10,000 local-search moves, with restarts, and finds no solution. Which can conclude that the CSP is unsatisfiable, and why? Answer in two sentences.
@@ -678,7 +678,7 @@ Suggested rubric: A can conclude unsatisfiability because exhaustive coverage wi
 
 ### L02-O03 · Optional · Optional / escape a plateau
 
-**Placement:** [After slide 33: Cooling: explore first, then become more selective](../06_Constraints_Part_2/index.html#/32) · [Handout](../06_Constraints_Part_2/handout.html#chapter-cooling)  
+**Placement:** [After “Cooling: explore first, then become more selective”](../06_Constraints_Part_2/index.html#/cooling) · [Handout](../06_Constraints_Part_2/handout.html#chapter-cooling)  
 **Time:** 90 seconds, including debrief.
 
 A local-search candidate has 1 conflict. Every one-variable neighbor has at least 1. One neighbor also has 1 conflict, and from it a move reaches 0. Which conclusion follows for strict improvement, which accepts only lower scores?
@@ -698,211 +698,211 @@ No neighbor has a lower score, so strict improvement cannot move. The stated equ
 
 ## 07 · Introduction to machine learning · Part 1
 
-4 core + 1 optional. Core budget: approximately 5.5 minutes.
+4 core + 1 optional. Core budget: approximately 6.5 minutes.
 
 [Core import](imports/07_Intro_ML_Part_1.xlsx) · [Optional import](imports/optional/07_Intro_ML_Part_1_optional.xlsx)
 
-### L03-C01 · Core · Opening / everyday intuition
+### L03-C01 · Core · Opening / distinguish stages
 
-**Placement:** [Before slide 4: Training changes the model; inference uses it](../07_Intro_ML_Part_1/index.html#/3) · [Handout](../07_Intro_ML_Part_1/handout.html#chapter-training-inference)  
+**Placement:** [Before “Learning a rule and using it are different steps”](../07_Intro_ML_Part_1/index.html#/training-inference) · [Handout](../07_Intro_ML_Part_1/handout.html#chapter-training-inference)  
 **Time:** 90 seconds, including debrief.
 
-An app is shown many photos marked “cat” or “dog”. It then labels a new photo. Which part is learning from examples?
+A crop model predicts a new field’s yield without changing its parameters. Later, an optimizer updates those parameters using the measured yield. How should we describe these two stages?
 
-- **A.** Displaying the app’s logo.
-- **B.** Saving the new photo’s file name.
-- **C.** Simply opening the app on a phone.
-- **D.** Using the marked photos to adjust how it recognizes cats and dogs.
+- **A.** Both are inference because the model family stays unchanged.
+- **B.** Both are training because both stages use data.
+- **C.** The prediction is training; the later parameter update is inference.
+- **D.** The fixed-model prediction is inference; the parameter update is training.
 
-**Answer:** D. Using the marked photos to adjust how it recognizes cats and dogs.
+**Answer:** D. The fixed-model prediction is inference; the parameter update is training.
 
-Training uses examples to adjust a model. Applying the trained model to the new photo is prediction, or inference.
+Inference applies the current fitted function. Training uses a learning signal to change its parameters. Keeping the model family fixed does not prevent its parameters from being learned.
 
-**Misconception:** Confusing the learning stage with every action performed by the app.
+**Misconception:** Confusing parameter updates with applying a model, or treating a fixed model family as a model that cannot learn.
 
-**Facilitation:** Invite a guess before teaching the idea. Ask one student for their reasoning, then use the next explanation or demonstration to revisit the answer. Do not grade prior knowledge.
+**Facilitation:** Ask students to commit to a choice, explain the relevant evidence, and compare a plausible distractor before revealing the answer.
 
-### L03-C02 · Core · Prediction / intuition
+### L03-C02 · Core · Check / interpret the target
 
-**Placement:** [Before slide 9: Identify the signal, then reveal the reasoning](../07_Intro_ML_Part_1/index.html#/8) · [Handout](../07_Intro_ML_Part_1/handout.html#chapter-signal-lab)  
+**Placement:** [After “The target’s meaning decides the task”](../07_Intro_ML_Part_1/index.html#/regression-classification) · [Handout](../07_Intro_ML_Part_1/handout.html#chapter-regression-classification)  
 **Time:** 90 seconds, including debrief.
 
-You want to teach a computer to tell cats from dogs using examples. Which training collection gives it the most useful feedback?
+One dataset records plant species as codes {0,1,2}; another records crop yield in kg. Both targets are numbers. Which task choice follows from what those targets mean?
 
-- **A.** Photos paired only with random file names.
-- **B.** Photos paired with the correct “cat” or “dog” label.
-- **C.** A list of camera prices with no animal photos.
-- **D.** Only the words “cat” and “dog”, with no examples.
+- **A.** Regression for both, because both targets are stored as numbers.
+- **B.** Classification for species; regression for yield.
+- **C.** Regression for species; classification for yield, because yield was measured.
+- **D.** Classification for both, because each training example has a known target.
 
-**Answer:** B. Photos paired with the correct “cat” or “dog” label.
+**Answer:** B. Classification for species; regression for yield.
 
-The correct labels tell the model which answer to learn for each example. This introduces supervised learning.
+Species codes name categories: their arithmetic differences do not measure how much species differ. Yield in kg is a quantitative magnitude. Target meaning, rather than its numerical storage format, distinguishes these tasks.
 
-**Misconception:** Overlooking the role of correct example labels.
+**Misconception:** Treating numerical category IDs as quantitative outcomes, or confusing known targets with classification.
 
-**Facilitation:** Invite a guess before teaching the idea. Ask one student for their reasoning, then use the next explanation or demonstration to revisit the answer. Do not grade prior knowledge.
+**Facilitation:** Ask students to commit to a choice, explain the relevant evidence, and compare a plausible distractor before revealing the answer.
 
-### L03-C03 · Core · Prediction / intuition
+### L03-C03 · Core · Prediction / distinguish target from guess
 
-**Placement:** [Before slide 11: Build a self-supervised training pair](../07_Intro_ML_Part_1/index.html#/10) · [Handout](../07_Intro_ML_Part_1/handout.html#chapter-mask-lab)  
-**Time:** 60 seconds, including debrief.
-
-We hide one word from an existing sentence and ask a model to guess it. Where can we find the correct answer?
-
-- **A.** In the original sentence before the word was hidden.
-- **B.** Only by asking someone to write an entirely new sentence.
-- **C.** In the model’s guess, which must always be right.
-- **D.** Nowhere: hiding a word removes all possibility of checking it.
-
-**Answer:** A. In the original sentence before the word was hidden.
-
-The original text supplies its own training target. This is an example of self-supervised learning.
-
-**Misconception:** Thinking every training target must be a newly written human label.
-
-**Facilitation:** Invite a guess before teaching the idea. Ask one student for their reasoning, then use the next explanation or demonstration to revisit the answer. Do not grade prior knowledge.
-
-### L03-C04 · Core · Prediction / intuition
-
-**Placement:** [Before slide 15: Explore or exploit? Try three uncertain actions](../07_Intro_ML_Part_1/index.html#/14) · [Handout](../07_Intro_ML_Part_1/handout.html#chapter-bandit-lab)  
+**Placement:** [Before “Build a self-supervised training pair”](../07_Intro_ML_Part_1/index.html#/mask-lab) · [Handout](../07_Intro_ML_Part_1/handout.html#chapter-mask-lab)  
 **Time:** 90 seconds, including debrief.
 
-You usually choose a restaurant you like. Why might you try a new one?
+The recorded sentence is “The crop needs water”. We hide “water”; a model predicts the plausible word “sunlight”. Which statement about this self-supervised training pair is correct?
 
-- **A.** Because a new restaurant is guaranteed to be better.
-- **B.** To learn whether it might be even better.
-- **C.** Because trying something new guarantees a good meal.
-- **D.** Because previous experience tells you exactly how every new restaurant tastes.
+- **A.** “Water” is the target; a plausible alternative can still disagree with this recorded target.
+- **B.** “Sunlight” becomes the target because the model predicted it.
+- **C.** Any plausible word automatically counts as the recorded correct target.
+- **D.** A person must annotate a new target because the original word was hidden.
 
-**Answer:** B. To learn whether it might be even better.
+**Answer:** A. “Water” is the target; a plausible alternative can still disagree with this recorded target.
 
-Trying an unfamiliar option gives information. Exploration trades some immediate certainty for the chance to discover a better option.
+Masking constructs the visible input, while the original recorded token supplies the target. Plausibility does not change which token occurred in that example. No extra manual task annotation is required.
 
-**Misconception:** Expecting exploration to guarantee an immediate improvement.
+**Misconception:** Equating a plausible generated continuation with the recorded training target, or assuming self-supervision has no targets.
 
-**Facilitation:** Invite a guess before teaching the idea. Ask one student for their reasoning, then use the next explanation or demonstration to revisit the answer. Do not grade prior knowledge.
+**Facilitation:** Ask students to commit to a choice, explain the relevant evidence, and compare a plausible distractor before revealing the answer.
 
-### L03-O01 · Optional · Optional / basic extension
+### L03-C04 · Core · Prediction / reason about uncertainty
 
-**Placement:** [After slide 12: Use the labeled and unlabeled parts together](../07_Intro_ML_Part_1/index.html#/11) · [Handout](../07_Intro_ML_Part_1/handout.html#chapter-semi-supervised)  
-**Time:** 90 seconds, including debrief.
+**Placement:** [Before “Explore or exploit? Try three uncertain actions”](../07_Intro_ML_Part_1/index.html#/bandit-lab) · [Handout](../07_Intro_ML_Part_1/handout.html#chapter-bandit-lab)  
+**Time:** 120 seconds, including debrief.
 
-A training collection has a few labeled photos and many unlabeled photos. Learning from both is called what?
+A bandit arm A rewarded 6 of 10 pulls, B rewarded 1 of 2, and C rewarded 0 of 1. Rewards are noisy. A rule now always picks A and never samples the other arms. What can go wrong?
 
-- **A.** Semi-supervised learning.
-- **B.** Testing only.
-- **C.** Reinforcement learning because every photo gives a reward.
-- **D.** Supervised learning that ignores all unlabeled photos.
+- **A.** The 6/10 rate establishes A’s true reward probability exactly, so no better arm can be missed.
+- **B.** Early noisy results may hide a better arm; occasionally sampling other arms can reveal it.
+- **C.** C’s one zero reward proves that it cannot be the best arm.
+- **D.** Trying B instead guarantees a larger reward on the very next pull.
 
-**Answer:** A. Semi-supervised learning.
+**Answer:** B. Early noisy results may hide a better arm; occasionally sampling other arms can reveal it.
 
-Semi-supervised methods combine labeled and unlabeled examples during training.
+A has the highest observed rate, but finite noisy samples do not establish the arms’ true probabilities. Exploiting A forever may leave a better option poorly measured. Exploration gathers information and can cost immediate reward; it does not guarantee a better next outcome.
 
-**Misconception:** Thinking unlabeled examples can never contribute to learning.
+**Misconception:** Treating small-sample estimates as known true rewards, or expecting exploration to guarantee immediate improvement.
 
-**Facilitation:** Give students a moment to answer, then explain the correct choice in everyday language and address the misconception.
+**Facilitation:** Ask students to commit to a choice, explain the relevant evidence, and compare a plausible distractor before revealing the answer.
+
+### L03-O01 · Optional · Optional / separate two learning issues
+
+**Placement:** [After “The same task can arrive in different-looking data”](../07_Intro_ML_Part_1/index.html#/domain-shift) · [Handout](../07_Intro_ML_Part_1/handout.html#chapter-domain-shift)  
+**Time:** 120 seconds, including debrief.
+
+A system learns from labeled scans at hospital A and unlabeled scans at hospital B. B uses a different scanner. Which interpretation is justified?
+
+- **A.** Using both pools can be semi-supervised learning, while the scanner difference introduces domain shift.
+- **B.** Semi-supervised learning guarantees that both hospitals have the same input distribution.
+- **C.** A scanner difference by itself proves the training labels are noisy.
+- **D.** Adding unlabeled B scans automatically corrects every scanner-related performance difference.
+
+**Answer:** A. Using both pools can be semi-supervised learning, while the scanner difference introduces domain shift.
+
+Semi-supervision describes how labeled and unlabeled examples are used. Domain shift describes a difference between training/deployment distributions. They can coexist. A different scanner does not itself establish label errors, and adaptation still needs appropriate assumptions and evaluation.
+
+**Misconception:** Conflating supervision quality with distribution change, or assuming extra unlabeled data automatically fixes it.
+
+**Facilitation:** Ask students to commit to a choice, explain the relevant evidence, and compare a plausible distractor before revealing the answer.
 
 ## 08 · Introduction to machine learning · Part 2
 
-3 core + 2 optional. Core budget: approximately 4.5 minutes.
+3 core + 2 optional. Core budget: approximately 6 minutes.
 
 [Core import](imports/08_Intro_ML_Part_2.xlsx) · [Optional import](imports/optional/08_Intro_ML_Part_2_optional.xlsx)
 
-### L03-C05 · Core · Check / core understanding
+### L03-C05 · Core · Check / construct a dataset
 
-**Placement:** [After slide 7: Rows are observations; columns are features](../08_Intro_ML_Part_2/index.html#/6) · [Handout](../08_Intro_ML_Part_2/handout.html#chapter-matrix)  
-**Time:** 60 seconds, including debrief.
-
-A table has one row per house and columns for area, number of rooms and price. Which column is the target when predicting price?
-
-- **A.** Area.
-- **B.** Price.
-- **C.** Number of rooms.
-- **D.** The row number.
-
-**Answer:** B. Price.
-
-The target is what we want to predict. Area and room count are possible input features.
-
-**Misconception:** Mixing up input features and the prediction target.
-
-**Facilitation:** Give students a moment to answer, then explain the correct choice in everyday language and address the misconception.
-
-### L03-C06 · Core · Prediction / intuition
-
-**Placement:** [Before slide 16: Evaluation must match the intended use](../08_Intro_ML_Part_2/index.html#/15) · [Handout](../08_Intro_ML_Part_2/handout.html#chapter-leakage)  
+**Placement:** [After “Stack input vectors into rows; keep targets separate”](../08_Intro_ML_Part_2/index.html#/matrix) · [Handout](../08_Intro_ML_Part_2/handout.html#chapter-matrix)  
 **Time:** 90 seconds, including debrief.
 
-You want a fair test of whether a student can solve new exercises. Which set should you use for the test?
+60 field trials record fertilizer and soil moisture to predict yield. A trial ID is kept only for lookup. With one row per trial, which input/target representation is correct?
 
-- **A.** Only the exercises they have memorized.
-- **B.** The practice sheet with the answers printed next to each question.
-- **C.** Whichever practice exercises gave the highest score.
-- **D.** Exercises the student has not already practiced or used to choose a strategy.
+- **A.** X has shape 60×3 because the lookup ID must also be a predictor; Y has 60 entries.
+- **B.** X has shape 60×2 for the two predictors; Y has the 60 measured yields.
+- **C.** X has shape 2×60 and Y has two entries, one per predictor.
+- **D.** X has shape 60×3 including measured yield; Y repeats that same yield column.
 
-**Answer:** D. Exercises the student has not already practiced or used to choose a strategy.
+**Answer:** B. X has shape 60×2 for the two predictors; Y has the 60 measured yields.
 
-A fresh test checks transfer beyond practice. Similarly, model evaluation needs data kept separate from training and model selection.
+n=60 is the number of observations and m=2 is the number of predictors. The design matrix X has n rows and m columns. Y contains one outcome per row. A lookup ID is not automatically a predictor, and the unknown yield must not be included as its own input.
 
-**Misconception:** Using familiar practice cases as if they were an independent final test.
+**Misconception:** Counting targets or administrative IDs as predictors, or transposing observations and features.
 
-**Facilitation:** Invite a guess before teaching the idea. Ask one student for their reasoning, then use the next explanation or demonstration to revisit the answer. Do not grade prior knowledge.
+**Facilitation:** Ask students to commit to a choice, explain the relevant evidence, and compare a plausible distractor before revealing the answer.
 
-### L03-C07 · Core · Exit / one takeaway
+### L03-C06 · Core · Prediction / detect evaluation leakage
 
-**Placement:** [After slide 19: Define the task before choosing the algorithm](../08_Intro_ML_Part_2/index.html#/18) · [Handout](../08_Intro_ML_Part_2/handout.html#chapter-summary)  
+**Placement:** [Before “Keep evaluation inputs out of model preparation”](../08_Intro_ML_Part_2/index.html#/leakage) · [Handout](../08_Intro_ML_Part_2/handout.html#chapter-leakage)  
 **Time:** 120 seconds, including debrief.
 
-Why do we test a machine-learning model on examples it did not learn from? Answer in one sentence.
+An engineer computes a feature mean from all 1,000 rows, uses it to scale the inputs, and only then splits into training and test sets. Test targets never enter fitting. Is the final test independent of model preparation?
+
+- **A.** Yes: preprocessing cannot leak information unless it uses test targets.
+- **B.** Yes: a random split makes every earlier preparation step independent.
+- **C.** Yes, provided the best model is also selected using the test score.
+- **D.** No: test inputs influenced learned preprocessing; fit that preprocessing on training data only.
+
+**Answer:** D. No: test inputs influenced learned preprocessing; fit that preprocessing on training data only.
+
+The preprocessing mean is learned from data. Computing it before splitting lets held-out inputs influence preparation, even without using their targets. Split first, fit preprocessing and model parameters on training data, use validation for choices, and reserve the final test for assessment.
+
+**Misconception:** Believing leakage requires target labels, or that a later random split undoes earlier information sharing.
+
+**Facilitation:** Ask students to commit to a choice, explain the relevant evidence, and compare a plausible distractor before revealing the answer.
+
+### L03-C07 · Core · Exit / justify model selection and evaluation
+
+**Placement:** [After “A complete prediction problem follows this chain”](../08_Intro_ML_Part_2/index.html#/summary) · [Handout](../08_Intro_ML_Part_2/handout.html#chapter-summary)  
+**Time:** 150 seconds, including debrief.
+
+Two polynomial models have training/validation errors: degree 2 = (0.08, 0.10), degree 9 = (0.01, 0.35). Choose a model for new fields, justify your choice, and say which data should provide the final performance estimate.
 
 
 **Answer:** Suggested rubric (no automatic answer key)
 
-To check whether it works on new cases rather than only on remembered training cases. Accept equivalent plain-language answers.
+Suggested rubric: prefer degree 2 because its validation error is lower despite a worse training fit. Degree 9’s low training error does not establish better generalization. Once all choices are fixed, use an untouched test set representative of the intended new fields to estimate final performance.
 
-**Misconception:** Treating a good training score as sufficient evidence of future performance.
+**Misconception:** Selecting only by training error, or reusing the validation results that guided model choice as an untouched final test.
 
-**Facilitation:** Accept a short answer in the student’s own words. Use a few responses to identify what needs revisiting; do not grade terminology.
+**Facilitation:** Ask for a short justification that separates training fit, validation-based choice and final testing.
 
-### L03-O02 · Optional · Optional / basic extension
+### L03-O02 · Optional · Optional / distinguish θ from Θ
 
-**Placement:** [After slide 9: A model family contains many possible functions](../08_Intro_ML_Part_2/index.html#/8) · [Handout](../08_Intro_ML_Part_2/handout.html#chapter-hypotheses)  
+**Placement:** [After “One parameter choice belongs to an allowed space”](../08_Intro_ML_Part_2/index.html#/hypothesis-space) · [Handout](../08_Intro_ML_Part_2/handout.html#chapter-hypothesis-space)  
 **Time:** 90 seconds, including debrief.
 
-Which is a setting you choose before fitting a polynomial model, rather than a coefficient learned during fitting?
+We choose the family fθ(x)=ax²+bx+c, then fitting changes θ from (1,0,0) to (2,−1,0.5). What changed?
 
-- **A.** The fitted intercept.
-- **B.** The fitted coefficient of x.
-- **C.** The fitted coefficient of x squared.
-- **D.** The polynomial degree: for example, choosing a line or a quadratic curve.
+- **A.** The family changed from quadratic to cubic.
+- **B.** The polynomial degree was learned, but the coefficients stayed fixed.
+- **C.** A new parameter space was required because a coefficient became negative.
+- **D.** The parameter setting changed within the same Θ=ℝ³; allowing a different degree would change the family.
 
-**Answer:** D. The polynomial degree: for example, choosing a line or a quadratic curve.
+**Answer:** D. The parameter setting changed within the same Θ=ℝ³; allowing a different degree would change the family.
 
-The degree is a model setting, or hyperparameter. Fitting then estimates the coefficients for that choice.
+The family fixes the functional form and Θ describes its permitted coefficient settings. Both triples lie in ℝ³ and select functions from the same family. Choosing a different maximum polynomial degree is a model-family or hyperparameter choice rather than this coefficient update.
 
-**Misconception:** Treating a chosen model setting and a learned coefficient as the same thing.
+**Misconception:** Confusing one fitted parameter setting with the entire hypothesis space or the chosen model family.
 
-**Facilitation:** Give students a moment to answer, then explain the correct choice in everyday language and address the misconception.
+**Facilitation:** Ask students to commit to a choice, explain the relevant evidence, and compare a plausible distractor before revealing the answer.
 
-### L03-O03 · Optional · Optional / basic extension
+### L03-O03 · Optional · Optional / design a realistic evaluation
 
-**Placement:** [After slide 13: Generalization is performance on new cases](../08_Intro_ML_Part_2/index.html#/12) · [Handout](../08_Intro_ML_Part_2/handout.html#chapter-generalization)  
-**Time:** 90 seconds, including debrief.
+**Placement:** [After “Keep evaluation inputs out of model preparation”](../08_Intro_ML_Part_2/index.html#/leakage) · [Handout](../08_Intro_ML_Part_2/handout.html#chapter-leakage)  
+**Time:** 120 seconds, including debrief.
 
-You want to predict next month’s sales. Which test best resembles that use?
+Deployment will predict future months for fields not used in training. The dataset has repeated monthly rows for each field. Which held-out evaluation matches both requirements?
 
-- **A.** Learn from next month’s actual sales before predicting them.
-- **B.** Learn from earlier months and test on a later month.
-- **C.** Report only how well the model fits its training months.
-- **D.** Include the answer for each test month among its inputs.
+- **A.** Randomly shuffle individual rows so the same fields and future dates can appear in training.
+- **B.** Train on earlier data from one group of fields, then evaluate later data from different fields.
+- **C.** Hold out later months but keep exactly the same fields in training and evaluation.
+- **D.** Hold out field identities but allow later measurements to enter training before predicting earlier dates.
 
-**Answer:** B. Learn from earlier months and test on a later month.
+**Answer:** B. Train on earlier data from one group of fields, then evaluate later data from different fields.
 
-Testing later observations after training on earlier ones resembles forecasting and avoids using future answers.
+The intended use has both a time boundary and a new-field boundary. Training on earlier dates and evaluating later dates from disjoint fields tests both forms of transfer. A row-level shuffle can share related field records or future information across the boundary; satisfying only one requirement tests a narrower use case.
 
-**Misconception:** Letting future information enter a forecasting evaluation.
+**Misconception:** Assuming any random row split measures the intended deployment task, or addressing only time or only grouping.
 
-**Facilitation:** Give students a moment to answer, then explain the correct choice in everyday language and address the misconception.
+**Facilitation:** Ask students to commit to a choice, explain the relevant evidence, and compare a plausible distractor before revealing the answer.
 
 ## 09 · Regression · Part 1
 
@@ -912,7 +912,7 @@ Testing later observations after training on earlier ones resembles forecasting 
 
 ### L04-C01 · Core · Opening / everyday intuition
 
-**Placement:** [Before slide 5: Move the line and watch the residuals change](../09_Regression_Part_1/index.html#/4) · [Handout](../09_Regression_Part_1/handout.html#chapter-residual-lab)  
+**Placement:** [Before “Move the line and watch the residuals change”](../09_Regression_Part_1/index.html#/residual-lab) · [Handout](../09_Regression_Part_1/handout.html#chapter-residual-lab)  
 **Time:** 60 seconds, including debrief.
 
 A house costs 7 units, but a model predicts 5. Using error = actual value minus prediction, what is the error?
@@ -932,7 +932,7 @@ The signed error is 7-5=2. This is a residual for an observation used to fit the
 
 ### L04-C02 · Core · Prediction / intuition
 
-**Placement:** [Before slide 9: Compare the supplied line with a fresh OLS fit](../09_Regression_Part_1/index.html#/8) · [Handout](../09_Regression_Part_1/handout.html#chapter-fit-lab)  
+**Placement:** [Before “Compare the supplied line with a fresh OLS fit”](../09_Regression_Part_1/index.html#/fit-lab) · [Handout](../09_Regression_Part_1/handout.html#chapter-fit-lab)  
 **Time:** 60 seconds, including debrief.
 
 A line predicts every training value exactly. What is its sum of squared prediction errors?
@@ -952,7 +952,7 @@ Every error is zero, so every squared error is zero. Least squares tries to make
 
 ### L04-C03 · Core · Check / core understanding
 
-**Placement:** [After slide 12: R² compares squared error to a baseline](../09_Regression_Part_1/index.html#/11) · [Handout](../09_Regression_Part_1/handout.html#chapter-r2)  
+**Placement:** [After “R² compares squared error to a baseline”](../09_Regression_Part_1/index.html#/r2) · [Handout](../09_Regression_Part_1/handout.html#chapter-r2)  
 **Time:** 90 seconds, including debrief.
 
 On the same nonconstant dataset, model A has R²=0.8 and model B has R²=0.3. Which has the smaller sum of squared errors?
@@ -972,7 +972,7 @@ With the same baseline and data, higher R² means smaller squared error. It does
 
 ### L04-C04 · Core · Prediction / intuition
 
-**Placement:** [Before slide 15: Curved in x can still be linear in the parameters](../09_Regression_Part_1/index.html#/14) · [Handout](../09_Regression_Part_1/handout.html#chapter-polynomial)  
+**Placement:** [Before “Curved in x can still be linear in the parameters”](../09_Regression_Part_1/index.html#/polynomial) · [Handout](../09_Regression_Part_1/handout.html#chapter-polynomial)  
 **Time:** 90 seconds, including debrief.
 
 A scatterplot shows a clear U-shaped pattern. Which model could follow that shape better than a straight line?
@@ -992,7 +992,7 @@ A quadratic term can represent curvature. Introduce polynomial regression throug
 
 ### L04-C05 · Core · Prediction / intuition
 
-**Placement:** [Before slide 20: Explore the original high-degree curves](../09_Regression_Part_1/index.html#/19) · [Handout](../09_Regression_Part_1/handout.html#chapter-overfit-lab)  
+**Placement:** [Before “Explore the original high-degree curves”](../09_Regression_Part_1/index.html#/overfit-lab) · [Handout](../09_Regression_Part_1/handout.html#chapter-overfit-lab)  
 **Time:** 90 seconds, including debrief.
 
 A student memorizes every practice answer but struggles with new exercises. Which model behavior is this most like?
@@ -1012,7 +1012,7 @@ This is the intuition behind overfitting: a model can fit the training set witho
 
 ### L04-O01 · Optional · Optional / basic extension
 
-**Placement:** [After slide 4: Simple linear regression has two parameters](../09_Regression_Part_1/index.html#/3) · [Handout](../09_Regression_Part_1/handout.html#chapter-line)  
+**Placement:** [After “Simple linear regression has two parameters”](../09_Regression_Part_1/index.html#/line) · [Handout](../09_Regression_Part_1/handout.html#chapter-line)  
 **Time:** 90 seconds, including debrief.
 
 In a straight-line model y ≈ intercept + slope × x, what does the slope describe?
@@ -1038,7 +1038,7 @@ The slope measures predicted change per unit of x. The intercept is the predicti
 
 ### L04-C06 · Core · Check / core understanding
 
-**Placement:** [After slide 4: Repeat the experiment: how much do fits move?](../10_Regression_Part_2/index.html#/3) · [Handout](../10_Regression_Part_2/handout.html#chapter-bias-lab)  
+**Placement:** [After “Repeat the experiment: how much do fits move?”](../10_Regression_Part_2/index.html#/bias-lab) · [Handout](../10_Regression_Part_2/handout.html#chapter-bias-lab)  
 **Time:** 90 seconds, including debrief.
 
 You fit a model again using a slightly different training sample, and its curve changes a lot. What does this suggest?
@@ -1058,7 +1058,7 @@ Strong changes across training samples indicate high variability in fitted predi
 
 ### L04-C07 · Core · Check / core understanding
 
-**Placement:** [After slide 11: A p-value is conditional on the null model](../10_Regression_Part_2/index.html#/10) · [Handout](../10_Regression_Part_2/handout.html#chapter-pvalues)  
+**Placement:** [After “A p-value is conditional on the null model”](../10_Regression_Part_2/index.html#/pvalues) · [Handout](../10_Regression_Part_2/handout.html#chapter-pvalues)  
 **Time:** 90 seconds, including debrief.
 
 A regression slope has a small p-value. Does that alone prove that changing the input causes the output to change?
@@ -1078,7 +1078,7 @@ The test concerns evidence against a specified null model under its assumptions.
 
 ### L04-C08 · Core · Check / core understanding
 
-**Placement:** [After slide 17: Adjustment can change the apparent relationship](../10_Regression_Part_2/index.html#/16) · [Handout](../10_Regression_Part_2/handout.html#chapter-adjustment)  
+**Placement:** [After “Adjustment can change the apparent relationship”](../10_Regression_Part_2/index.html#/adjustment) · [Handout](../10_Regression_Part_2/handout.html#chapter-adjustment)  
 **Time:** 90 seconds, including debrief.
 
 Ice-cream sales and swimming incidents both rise in warm weather. What could help explain their association?
@@ -1098,7 +1098,7 @@ A common influence can produce an association. This is a possible explanation, n
 
 ### L04-C09 · Core · Exit / one takeaway
 
-**Placement:** [After slide 24: Fit carefully. Evaluate separately. Interpret precisely.](../10_Regression_Part_2/index.html#/23) · [Handout](../10_Regression_Part_2/handout.html#chapter-summary)  
+**Placement:** [After “Fit carefully. Evaluate separately. Interpret precisely.”](../10_Regression_Part_2/index.html#/summary) · [Handout](../10_Regression_Part_2/handout.html#chapter-summary)  
 **Time:** 120 seconds, including debrief.
 
 In one sentence, explain what overfitting would look like when comparing training results with results on new data.
@@ -1114,7 +1114,7 @@ A model fits training data very well but performs noticeably worse on new data. 
 
 ### L04-O02 · Optional · Optional / basic extension
 
-**Placement:** [After slide 12: A confidence interval expresses coefficient precision](../10_Regression_Part_2/index.html#/11) · [Handout](../10_Regression_Part_2/handout.html#chapter-interval)  
+**Placement:** [After “A confidence interval expresses coefficient precision”](../10_Regression_Part_2/index.html#/interval) · [Handout](../10_Regression_Part_2/handout.html#chapter-interval)  
 **Time:** 90 seconds, including debrief.
 
 Two confidence intervals for the same slope are computed using the same confidence level. What does the wider interval communicate?
@@ -1134,7 +1134,7 @@ A wider interval expresses more uncertainty about the coefficient. A coefficient
 
 ### L04-O03 · Optional · Optional / basic extension
 
-**Placement:** [After slide 13: Multiple regression adds one coefficient per feature](../10_Regression_Part_2/index.html#/12) · [Handout](../10_Regression_Part_2/handout.html#chapter-multiple)  
+**Placement:** [After “Multiple regression adds one coefficient per feature”](../10_Regression_Part_2/index.html#/multiple) · [Handout](../10_Regression_Part_2/handout.html#chapter-multiple)  
 **Time:** 90 seconds, including debrief.
 
 A model uses house area and number of rooms to predict price. How does this differ from using area alone?
@@ -1160,7 +1160,7 @@ Multiple regression can include several input features. Adding a feature does no
 
 ### L05-C01 · Core · Opening / everyday intuition
 
-**Placement:** [Before slide 4: A class label is not a continuous quantity](../11_Classification_Part_1/index.html#/3) · [Handout](../11_Classification_Part_1/handout.html#chapter-classification)  
+**Placement:** [Before “A class label is not a continuous quantity”](../11_Classification_Part_1/index.html#/classification) · [Handout](../11_Classification_Part_1/handout.html#chapter-classification)  
 **Time:** 60 seconds, including debrief.
 
 Which task predicts a category rather than a number?
@@ -1180,7 +1180,7 @@ Spam/not spam is a category. The other tasks ask for numerical predictions.
 
 ### L05-C02 · Core · Prediction / intuition
 
-**Placement:** [Before slide 9: Even the ideal classifier can make mistakes](../11_Classification_Part_1/index.html#/8) · [Handout](../11_Classification_Part_1/handout.html#chapter-bayes-error)  
+**Placement:** [Before “Even the ideal classifier can make mistakes”](../11_Classification_Part_1/index.html#/bayes-error) · [Handout](../11_Classification_Part_1/handout.html#chapter-bayes-error)  
 **Time:** 60 seconds, including debrief.
 
 A model says an email has a 70% chance of being spam. Can that email still turn out not to be spam?
@@ -1200,7 +1200,7 @@ A likely outcome is not a certain outcome. Even useful probabilistic predictions
 
 ### L05-C03 · Core · Check / core understanding
 
-**Placement:** [After slide 13: Reverse the direction with Bayes’ theorem](../11_Classification_Part_1/index.html#/12) · [Handout](../11_Classification_Part_1/handout.html#chapter-bayes-theorem)  
+**Placement:** [After “Reverse the direction with Bayes’ theorem”](../11_Classification_Part_1/index.html#/bayes-theorem) · [Handout](../11_Classification_Part_1/handout.html#chapter-bayes-theorem)  
 **Time:** 90 seconds, including debrief.
 
 An email contains a word that is more common in spam than in ordinary mail. What can this word provide?
@@ -1220,7 +1220,7 @@ A feature can change a class probability without determining the class with cert
 
 ### L05-C04 · Core · Check / core understanding
 
-**Placement:** [After slide 14: “Naive” means independent given the class](../11_Classification_Part_1/index.html#/13) · [Handout](../11_Classification_Part_1/handout.html#chapter-independence)  
+**Placement:** [After ““Naive” means independent given the class”](../11_Classification_Part_1/index.html#/independence) · [Handout](../11_Classification_Part_1/handout.html#chapter-independence)  
 **Time:** 90 seconds, including debrief.
 
 What simplifying assumption does Naive Bayes make about input features once the class is known?
@@ -1240,7 +1240,7 @@ The “naive” assumption is conditional independence: within a given class, th
 
 ### L05-C05 · Core · Prediction / intuition
 
-**Placement:** [Before slide 22: Explore a sigmoid and its decision threshold](../11_Classification_Part_1/index.html#/21) · [Handout](../11_Classification_Part_1/handout.html#chapter-logistic-lab)  
+**Placement:** [Before “Explore a sigmoid and its decision threshold”](../11_Classification_Part_1/index.html#/logistic-lab) · [Handout](../11_Classification_Part_1/handout.html#chapter-logistic-lab)  
 **Time:** 90 seconds, including debrief.
 
 A spam filter flags emails when their spam score is at least 0.5. If we lower the cutoff to 0.2 and keep all scores fixed, what can happen?
@@ -1260,7 +1260,7 @@ A lower cutoff admits scores that previously fell below the threshold. It change
 
 ### L05-O01 · Optional · Optional / basic extension
 
-**Placement:** [After slide 10: Change the costs and the best decision changes](../11_Classification_Part_1/index.html#/9) · [Handout](../11_Classification_Part_1/handout.html#chapter-decision-lab)  
+**Placement:** [After “Change the costs and the best decision changes”](../11_Classification_Part_1/index.html#/decision-lab) · [Handout](../11_Classification_Part_1/handout.html#chapter-decision-lab)  
 **Time:** 90 seconds, including debrief.
 
 In a screening task, missing a real problem is much more costly than a false alarm. What tradeoff might we accept?
@@ -1280,7 +1280,7 @@ A decision threshold can reflect unequal error costs. Improving one error rate m
 
 ### L05-O02 · Optional · Optional / basic extension
 
-**Placement:** [After slide 17: One unseen category should not erase a class](../11_Classification_Part_1/index.html#/16) · [Handout](../11_Classification_Part_1/handout.html#chapter-smoothing)  
+**Placement:** [After “One unseen category should not erase a class”](../11_Classification_Part_1/index.html#/smoothing) · [Handout](../11_Classification_Part_1/handout.html#chapter-smoothing)  
 **Time:** 90 seconds, including debrief.
 
 Why might Naive Bayes use smoothing for a word that never appeared in one class’s training examples?
@@ -1306,7 +1306,7 @@ A missing observation need not mean a truly impossible event. Smoothing avoids a
 
 ### L05-C06 · Core · Prediction / intuition
 
-**Placement:** [Before slide 4: Minimize negative log likelihood](../12_Classification_Part_2/index.html#/3) · [Handout](../12_Classification_Part_2/handout.html#chapter-log-loss)  
+**Placement:** [Before “Minimize negative log likelihood”](../12_Classification_Part_2/index.html#/log-loss) · [Handout](../12_Classification_Part_2/handout.html#chapter-log-loss)  
 **Time:** 60 seconds, including debrief.
 
 The correct label for a training photo is “cat”. Which prediction gives the correct label more probability?
@@ -1326,7 +1326,7 @@ The first prediction gives the observed class the highest probability. Log loss 
 
 ### L05-C07 · Core · Prediction / intuition
 
-**Placement:** [Before slide 10: Move a query and inspect the neighbors that vote](../12_Classification_Part_2/index.html#/9) · [Handout](../12_Classification_Part_2/handout.html#chapter-neighbors-lab)  
+**Placement:** [Before “Move a query and inspect the neighbors that vote”](../12_Classification_Part_2/index.html#/neighbors-lab) · [Handout](../12_Classification_Part_2/handout.html#chapter-neighbors-lab)  
 **Time:** 60 seconds, including debrief.
 
 A new point’s three nearest labeled neighbors are two cats and one dog. What does a simple majority vote predict?
@@ -1346,7 +1346,7 @@ Two of the three neighbors vote cat, so the majority is cat. This is the basic K
 
 ### L05-C08 · Core · Prediction / intuition
 
-**Placement:** [Before slide 18: Select K before revealing the test score](../12_Classification_Part_2/index.html#/17) · [Handout](../12_Classification_Part_2/handout.html#chapter-validation-lab)  
+**Placement:** [Before “Select K before revealing the test score”](../12_Classification_Part_2/index.html#/validation-lab) · [Handout](../12_Classification_Part_2/handout.html#chapter-validation-lab)  
 **Time:** 90 seconds, including debrief.
 
 You are choosing among several classifiers. Which data should you use to compare choices while keeping a final test fair?
@@ -1366,7 +1366,7 @@ Validation supports model selection. Reserving a separate final test avoids choo
 
 ### L05-C09 · Core · Exit / one takeaway
 
-**Placement:** [After slide 25: Estimate uncertainty. Make a decision. Check it.](../12_Classification_Part_2/index.html#/24) · [Handout](../12_Classification_Part_2/handout.html#chapter-summary)  
+**Placement:** [After “Estimate uncertainty. Make a decision. Check it.”](../12_Classification_Part_2/index.html#/summary) · [Handout](../12_Classification_Part_2/handout.html#chapter-summary)  
 **Time:** 120 seconds, including debrief.
 
 A spam filter wrongly blocks an important email. In one sentence, explain why counting only its correct predictions might miss something important.
@@ -1382,7 +1382,7 @@ Different mistakes have different consequences. Overall accuracy can hide harmfu
 
 ### L05-O03 · Optional · Optional / basic extension
 
-**Placement:** [After slide 15: See a neighbor average become smoother](../12_Classification_Part_2/index.html#/14) · [Handout](../12_Classification_Part_2/handout.html#chapter-regression-lab)  
+**Placement:** [After “See a neighbor average become smoother”](../12_Classification_Part_2/index.html#/regression-lab) · [Handout](../12_Classification_Part_2/handout.html#chapter-regression-lab)  
 **Time:** 60 seconds, including debrief.
 
 A nearest-neighbor regressor averages two nearby examples with values 2 and 6. What does it predict?
@@ -1408,7 +1408,7 @@ The average is (2+6)/2=4. Neighbor methods can average numeric targets as well a
 
 ### L06-C01 · Core · Opening / everyday intuition
 
-**Placement:** [Before slide 5: Move the threshold and change the logic](../13_Classification_Part_3/index.html#/4) · [Handout](../13_Classification_Part_3/handout.html#chapter-threshold-lab)  
+**Placement:** [Before “Move the threshold and change the logic”](../13_Classification_Part_3/index.html#/threshold-lab) · [Handout](../13_Classification_Part_3/handout.html#chapter-threshold-lab)  
 **Time:** 60 seconds, including debrief.
 
 An alarm should activate only when BOTH switches are on. Which input should activate it?
@@ -1428,7 +1428,7 @@ Both conditions must hold. This is the AND rule that the threshold-unit demonstr
 
 ### L06-C02 · Core · Check / core understanding
 
-**Placement:** [After slide 10: The score moves by a squared input length](../13_Classification_Part_3/index.html#/9) · [Handout](../13_Classification_Part_3/handout.html#chapter-update-intuition)  
+**Placement:** [After “The score moves by a squared input length”](../13_Classification_Part_3/index.html#/update-intuition) · [Handout](../13_Classification_Part_3/handout.html#chapter-update-intuition)  
 **Time:** 90 seconds, including debrief.
 
 A perceptron predicts the wrong class for a training example. What is the purpose of its weight update?
@@ -1448,7 +1448,7 @@ The update uses the error as feedback. Fixing one mistake does not guarantee tha
 
 ### L06-C03 · Core · Prediction / intuition
 
-**Placement:** [Before slide 11: Step through the perceptron’s learning process](../13_Classification_Part_3/index.html#/10) · [Handout](../13_Classification_Part_3/handout.html#chapter-training-lab)  
+**Placement:** [Before “Step through the perceptron’s learning process”](../13_Classification_Part_3/index.html#/training-lab) · [Handout](../13_Classification_Part_3/handout.html#chapter-training-lab)  
 **Time:** 60 seconds, including debrief.
 
 A classifier gets one training example right. Is that enough to know it gets every training example right?
@@ -1468,7 +1468,7 @@ One success is evidence only about that example. Checking a whole training pass 
 
 ### L06-C04 · Core · Prediction / intuition
 
-**Placement:** [Before slide 15: XOR exposes the limit of one linear separator](../13_Classification_Part_3/index.html#/14) · [Handout](../13_Classification_Part_3/handout.html#chapter-xor-lab)  
+**Placement:** [Before “XOR exposes the limit of one linear separator”](../13_Classification_Part_3/index.html#/xor-lab) · [Handout](../13_Classification_Part_3/handout.html#chapter-xor-lab)  
 **Time:** 90 seconds, including debrief.
 
 Two classes are arranged so that no straight line can separate them. What kind of change could help?
@@ -1488,7 +1488,7 @@ If the boundary shape is too limited, we need a richer representation or model. 
 
 ### L06-C05 · Core · Prediction / intuition
 
-**Placement:** [Before slide 20: Normalize the score by the length of w](../13_Classification_Part_3/index.html#/19) · [Handout](../13_Classification_Part_3/handout.html#chapter-distance)  
+**Placement:** [Before “Normalize the score by the length of w”](../13_Classification_Part_3/index.html#/distance) · [Handout](../13_Classification_Part_3/handout.html#chapter-distance)  
 **Time:** 90 seconds, including debrief.
 
 A point lies very close to a classifier’s dividing line. What could a small change to that point’s measured features do?
@@ -1508,7 +1508,7 @@ A nearby point can cross the boundary after a small change. Distance to the boun
 
 ### L06-C06 · Core · Check / core understanding
 
-**Placement:** [After slide 25: Slack variables make room for violations](../13_Classification_Part_3/index.html#/24) · [Handout](../13_Classification_Part_3/handout.html#chapter-soft-margin)  
+**Placement:** [After “Slack variables make room for violations”](../13_Classification_Part_3/index.html#/soft-margin) · [Handout](../13_Classification_Part_3/handout.html#chapter-soft-margin)  
 **Time:** 90 seconds, including debrief.
 
 Why does a soft-margin SVM allow some training points to violate the margin?
@@ -1528,7 +1528,7 @@ Soft margins balance a wide separation with penalties for violations, making the
 
 ### L06-O01 · Optional · Optional / basic extension
 
-**Placement:** [After slide 26: A margin violation need not be a wrong label](../13_Classification_Part_3/index.html#/25) · [Handout](../13_Classification_Part_3/handout.html#chapter-hinge)  
+**Placement:** [After “A margin violation need not be a wrong label”](../13_Classification_Part_3/index.html#/hinge) · [Handout](../13_Classification_Part_3/handout.html#chapter-hinge)  
 **Time:** 90 seconds, including debrief.
 
 For an SVM, can a correctly classified point still lie too close to the boundary to satisfy the desired margin?
@@ -1554,7 +1554,7 @@ Correct classification and satisfying the margin are different conditions. Hinge
 
 ### L06-C07 · Core · Prediction / intuition
 
-**Placement:** [Before slide 5: Rotate the original data in the lifted space](../14_Classification_Part_4/index.html#/4) · [Handout](../14_Classification_Part_4/handout.html#chapter-lift-lab)  
+**Placement:** [Before “Rotate the original data in the lifted space”](../14_Classification_Part_4/index.html#/lift-lab) · [Handout](../14_Classification_Part_4/handout.html#chapter-lift-lab)  
 **Time:** 90 seconds, including debrief.
 
 Points near the center belong to one class; points in a surrounding ring belong to another. Which extra feature could help describe this pattern?
@@ -1574,7 +1574,7 @@ Distance from the center captures a useful distinction that a single straight bo
 
 ### L06-C08 · Core · Prediction / intuition
 
-**Placement:** [Before slide 13: Check the quadratic kernel identity numerically](../14_Classification_Part_4/index.html#/12) · [Handout](../14_Classification_Part_4/handout.html#chapter-kernel-lab)  
+**Placement:** [Before “Check the quadratic kernel identity numerically”](../14_Classification_Part_4/index.html#/kernel-lab) · [Handout](../14_Classification_Part_4/handout.html#chapter-kernel-lab)  
 **Time:** 90 seconds, including debrief.
 
 What is the main benefit of a kernel in the SVM examples?
@@ -1594,7 +1594,7 @@ A kernel can compute similarities corresponding to a richer feature representati
 
 ### L06-C09 · Core · Exit / one takeaway
 
-**Placement:** [After slide 22: Learn the line. Choose the margin. Change the space.](../14_Classification_Part_4/index.html#/21) · [Handout](../14_Classification_Part_4/handout.html#chapter-summary)  
+**Placement:** [After “Learn the line. Choose the margin. Change the space.”](../14_Classification_Part_4/index.html#/summary) · [Handout](../14_Classification_Part_4/handout.html#chapter-summary)  
 **Time:** 120 seconds, including debrief.
 
 An SVM gets every training example right. What would you check before trusting it on new examples?
@@ -1610,7 +1610,7 @@ Evaluate on suitable held-out data. Accept a short answer about checking new cas
 
 ### L06-O02 · Optional · Optional / basic extension
 
-**Placement:** [After slide 11: Only pairwise inner products remain](../14_Classification_Part_4/index.html#/10) · [Handout](../14_Classification_Part_4/handout.html#chapter-dual)  
+**Placement:** [After “Only pairwise inner products remain”](../14_Classification_Part_4/index.html#/dual) · [Handout](../14_Classification_Part_4/handout.html#chapter-dual)  
 **Time:** 90 seconds, including debrief.
 
 Why are support vectors important in an SVM?
@@ -1630,7 +1630,7 @@ Support vectors are the training observations with a role in determining the sep
 
 ### L06-O03 · Optional · Optional / basic extension
 
-**Placement:** [After slide 17: The Gram matrix must be positive semidefinite](../14_Classification_Part_4/index.html#/16) · [Handout](../14_Classification_Part_4/handout.html#chapter-valid-kernel)  
+**Placement:** [After “The Gram matrix must be positive semidefinite”](../14_Classification_Part_4/index.html#/valid-kernel) · [Handout](../14_Classification_Part_4/handout.html#chapter-valid-kernel)  
 **Time:** 90 seconds, including debrief.
 
 Why should we compare a flexible kernel model with a simpler model on validation data?
@@ -1656,7 +1656,7 @@ Flexibility may help or may overfit. Validation provides evidence for choosing a
 
 ### L07-C01 · Core · Opening / everyday intuition
 
-**Placement:** [Before slide 3: The labels are no longer supplied](../15_Clustering_Part_1/index.html#/2) · [Handout](../15_Clustering_Part_1/handout.html#chapter-unlabeled)  
+**Placement:** [Before “The labels are no longer supplied”](../15_Clustering_Part_1/index.html#/unlabeled) · [Handout](../15_Clustering_Part_1/handout.html#chapter-unlabeled)  
 **Time:** 90 seconds, including debrief.
 
 You have a folder of unlabeled photos and want to group similar ones. Which information is missing compared with supervised classification?
@@ -1676,7 +1676,7 @@ Clustering starts without supplied target categories and proposes groups from th
 
 ### L07-C02 · Core · Prediction / intuition
 
-**Placement:** [Before slide 11: Separate assignment from centroid movement](../15_Clustering_Part_1/index.html#/10) · [Handout](../15_Clustering_Part_1/handout.html#chapter-kmeans-lab)  
+**Placement:** [Before “Separate assignment from centroid movement”](../15_Clustering_Part_1/index.html#/kmeans-lab) · [Handout](../15_Clustering_Part_1/handout.html#chapter-kmeans-lab)  
 **Time:** 60 seconds, including debrief.
 
 Three points lie at positions 0, 2 and 4 on a line. Where is their average position?
@@ -1696,7 +1696,7 @@ Their average is (0+2+4)/3=2. K-means uses this average as the center of an assi
 
 ### L07-C03 · Core · Prediction / intuition
 
-**Placement:** [Before slide 14: The objective alone cannot choose K](../15_Clustering_Part_1/index.html#/13) · [Handout](../15_Clustering_Part_1/handout.html#chapter-choose-k)  
+**Placement:** [Before “The objective alone cannot choose K”](../15_Clustering_Part_1/index.html#/choose-k) · [Handout](../15_Clustering_Part_1/handout.html#chapter-choose-k)  
 **Time:** 90 seconds, including debrief.
 
 You group 20 photos. If you put each photo in its own group, have you necessarily found a useful summary?
@@ -1716,7 +1716,7 @@ Very small groups can fit the data closely without giving a useful summary. This
 
 ### L07-C04 · Core · Prediction / intuition
 
-**Placement:** [Before slide 20: Inspect silhouette one observation at a time](../15_Clustering_Part_1/index.html#/19) · [Handout](../15_Clustering_Part_1/handout.html#chapter-silhouette-lab)  
+**Placement:** [Before “Inspect silhouette one observation at a time”](../15_Clustering_Part_1/index.html#/silhouette-lab) · [Handout](../15_Clustering_Part_1/handout.html#chapter-silhouette-lab)  
 **Time:** 90 seconds, including debrief.
 
 A point is close to others in its own group and far from other groups. Does it appear well placed?
@@ -1736,7 +1736,7 @@ This is the intuition behind a high silhouette score. A good geometric fit is no
 
 ### L07-C05 · Core · Prediction / intuition
 
-**Placement:** [Before slide 28: Watch EM reshape three Gaussian components](../15_Clustering_Part_1/index.html#/27) · [Handout](../15_Clustering_Part_1/handout.html#chapter-gmm-lab)  
+**Placement:** [Before “Watch EM reshape three Gaussian components”](../15_Clustering_Part_1/index.html#/gmm-lab) · [Handout](../15_Clustering_Part_1/handout.html#chapter-gmm-lab)  
 **Time:** 90 seconds, including debrief.
 
 A point sits between two overlapping groups. What could a soft assignment say?
@@ -1756,7 +1756,7 @@ Soft assignments represent uncertainty about membership instead of immediately c
 
 ### L07-C06 · Core · Prediction / intuition
 
-**Placement:** [Before slide 29: A rising likelihood still needs interpretation](../15_Clustering_Part_1/index.html#/28) · [Handout](../15_Clustering_Part_1/handout.html#chapter-em-limits)  
+**Placement:** [Before “A rising likelihood still needs interpretation”](../15_Clustering_Part_1/index.html#/em-limits) · [Handout](../15_Clustering_Part_1/handout.html#chapter-em-limits)  
 **Time:** 90 seconds, including debrief.
 
 A fitting method stops because its result is no longer changing much. Does this prove it found the best possible result?
@@ -1776,7 +1776,7 @@ Stability is a stopping signal, not a global-optimality proof. Repeated starts c
 
 ### L07-O01 · Optional · Optional / basic extension
 
-**Placement:** [After slide 9: The derivative explains why the mean appears](../15_Clustering_Part_1/index.html#/8) · [Handout](../15_Clustering_Part_1/handout.html#chapter-update)  
+**Placement:** [After “The derivative explains why the mean appears”](../15_Clustering_Part_1/index.html#/update) · [Handout](../15_Clustering_Part_1/handout.html#chapter-update)  
 **Time:** 90 seconds, including debrief.
 
 What does a K-means centroid represent?
@@ -1802,7 +1802,7 @@ A centroid summarizes an assigned group by its mean position. It need not coinci
 
 ### L07-C07 · Core · Prediction / intuition
 
-**Placement:** [Before slide 7: Change the linkage and the merge budget](../16_Clustering_Part_2/index.html#/6) · [Handout](../16_Clustering_Part_2/handout.html#chapter-hierarchy-lab)  
+**Placement:** [Before “Change the linkage and the merge budget”](../16_Clustering_Part_2/index.html#/hierarchy-lab) · [Handout](../16_Clustering_Part_2/handout.html#chapter-hierarchy-lab)  
 **Time:** 90 seconds, including debrief.
 
 A grouping method starts with each point alone and repeatedly joins the closest groups. What does it build?
@@ -1822,7 +1822,7 @@ Repeated merges form a hierarchy, commonly drawn as a dendrogram. The distance r
 
 ### L07-C08 · Core · Prediction / intuition
 
-**Placement:** [Before slide 15: Rotate a projection and find the first component](../16_Clustering_Part_2/index.html#/14) · [Handout](../16_Clustering_Part_2/handout.html#chapter-pca-lab)  
+**Placement:** [Before “Rotate a projection and find the first component”](../16_Clustering_Part_2/index.html#/pca-lab) · [Handout](../16_Clustering_Part_2/handout.html#chapter-pca-lab)  
 **Time:** 90 seconds, including debrief.
 
 A cloud of points is stretched along a diagonal. Which line would usually preserve more of its spread when the points are projected onto it?
@@ -1842,7 +1842,7 @@ Projecting along the long direction preserves more variation. PCA formalizes thi
 
 ### L07-C09 · Core · Check / core understanding
 
-**Placement:** [After slide 19: Rescaling does not make a feature Gaussian](../16_Clustering_Part_2/index.html#/18) · [Handout](../16_Clustering_Part_2/handout.html#chapter-scaling)  
+**Placement:** [After “Rescaling does not make a feature Gaussian”](../16_Clustering_Part_2/index.html#/scaling) · [Handout](../16_Clustering_Part_2/handout.html#chapter-scaling)  
 **Time:** 90 seconds, including debrief.
 
 Why can feature scaling matter before clustering?
@@ -1862,7 +1862,7 @@ Distance-based results depend on the relative scales of features. Choose preproc
 
 ### L07-C10 · Core · Exit / one takeaway
 
-**Placement:** [After slide 25: Structure depends on the question you ask](../16_Clustering_Part_2/index.html#/24) · [Handout](../16_Clustering_Part_2/handout.html#chapter-summary)  
+**Placement:** [After “Structure depends on the question you ask”](../16_Clustering_Part_2/index.html#/summary) · [Handout](../16_Clustering_Part_2/handout.html#chapter-summary)  
 **Time:** 120 seconds, including debrief.
 
 In one sentence, explain one reason why a clustering result should be interpreted rather than automatically accepted as the truth.
@@ -1878,7 +1878,7 @@ Accept one reason: selected features, scaling, number of groups, distance rule, 
 
 ### L07-O02 · Optional · Optional / basic extension
 
-**Placement:** [After slide 16: Keep d directions, then map back approximately](../16_Clustering_Part_2/index.html#/15) · [Handout](../16_Clustering_Part_2/handout.html#chapter-reconstruct)  
+**Placement:** [After “Keep d directions, then map back approximately”](../16_Clustering_Part_2/index.html#/reconstruct) · [Handout](../16_Clustering_Part_2/handout.html#chapter-reconstruct)  
 **Time:** 90 seconds, including debrief.
 
 PCA keeps only a few directions from a dataset with many features. What is a possible tradeoff?
@@ -1898,7 +1898,7 @@ Keeping fewer directions can compress the data, but discarded variation may cont
 
 ### L07-O03 · Optional · Optional / basic extension
 
-**Placement:** [After slide 8: A tree makes structure inspectable](../16_Clustering_Part_2/index.html#/7) · [Handout](../16_Clustering_Part_2/handout.html#chapter-hierarchy-limits)  
+**Placement:** [After “A tree makes structure inspectable”](../16_Clustering_Part_2/index.html#/hierarchy-limits) · [Handout](../16_Clustering_Part_2/handout.html#chapter-hierarchy-limits)  
 **Time:** 90 seconds, including debrief.
 
 In a clustering tree, two observations join together early, at a small merge distance. What does that suggest under the chosen method?

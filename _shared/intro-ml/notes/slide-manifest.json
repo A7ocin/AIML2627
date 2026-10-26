@@ -1,254 +1,475 @@
 [
   {
-    "id": "title",
-    "kicker": "AI &amp; Machine Learning \u00b7 Lesson 3",
-    "title": "Introduction to Machine Learning",
-    "notes": "Follows the next course resource, 03_intro. Both original interactive plots retain all source coordinates. Four additional labs explore learning signals, self-supervised targets, exploration/exploitation and generalization.",
-    "cls": "cover-slide"
+    "lecture": 7,
+    "source_position": 1,
+    "id": "part-cover",
+    "title": "How does a machine learn?"
   },
   {
-    "id": "roadmap",
-    "kicker": "The road ahead",
-    "title": "Three questions organize the lecture",
-    "notes": "",
-    "cls": ""
+    "lecture": 7,
+    "source_position": 2,
+    "id": "learning-story",
+    "title": "Think about learning with a teacher",
+    "chapter": 1,
+    "handout": "07_Intro_ML_Part_1/handout.html#chapter-learning-story"
   },
   {
+    "lecture": 7,
+    "source_position": 3,
     "id": "components",
-    "kicker": "01 \u00b7 How learning works",
-    "title": "Learning needs more than a model",
-    "notes": "The student/teacher analogy is helpful, but the model is not the entire learning system. The training procedure defines how evidence changes parameters; evaluation measures an explicitly chosen task.",
-    "cls": ""
+    "title": "Machine learning has four corresponding roles",
+    "chapter": 1,
+    "handout": "07_Intro_ML_Part_1/handout.html#chapter-components"
   },
   {
+    "lecture": 7,
+    "source_position": 4,
+    "id": "learning-goal",
+    "title": "Can examples help predict the next harvest?",
+    "chapter": 1,
+    "handout": "07_Intro_ML_Part_1/handout.html#chapter-learning-goal"
+  },
+  {
+    "lecture": 7,
+    "source_position": 5,
     "id": "training-inference",
-    "kicker": "01 \u00b7 How learning works",
-    "title": "Training changes the model; inference uses it",
-    "notes": "",
-    "cls": ""
+    "title": "Learning a rule and using it are different steps",
+    "chapter": 1,
+    "handout": "07_Intro_ML_Part_1/handout.html#chapter-training-inference"
   },
   {
+    "lecture": 7,
+    "source_position": 6,
+    "id": "part-roadmap",
+    "title": "One thread through six chapters",
+    "chapter": 1,
+    "handout": "07_Intro_ML_Part_1/handout.html#chapter-part-roadmap"
+  },
+  {
+    "lecture": 7,
+    "source_position": 7,
     "id": "signals",
-    "kicker": "01 \u00b7 Learning signals",
-    "title": "Ask where the learning signal comes from",
-    "notes": "Self-supervision is often grouped under unsupervised learning because labels are not manually provided. Generative modeling can use supervised conditioning or self-supervised objectives. This taxonomy is a guide rather than a disjoint partition.",
-    "cls": ""
+    "title": "The key question: where does feedback come from?",
+    "chapter": 1,
+    "handout": "07_Intro_ML_Part_1/handout.html#chapter-signals"
   },
   {
+    "lecture": 7,
+    "source_position": 8,
     "id": "supervised",
-    "kicker": "01 \u00b7 Learning signals",
-    "title": "Supervised learning compares a prediction to a target",
-    "notes": "Labels may come from instruments, logs, expert annotation or other processes. They are not necessarily perfect or manually produced.",
-    "cls": ""
+    "title": "Supervised learning: compare with a known answer",
+    "chapter": 2,
+    "handout": "07_Intro_ML_Part_1/handout.html#chapter-supervised"
   },
   {
+    "lecture": 7,
+    "source_position": 9,
+    "id": "regression",
+    "title": "Regression predicts a numerical magnitude",
+    "chapter": 2,
+    "handout": "07_Intro_ML_Part_1/handout.html#chapter-regression"
+  },
+  {
+    "lecture": 7,
+    "source_position": 10,
+    "id": "classification",
+    "title": "Classification predicts one of the named categories",
+    "chapter": 2,
+    "handout": "07_Intro_ML_Part_1/handout.html#chapter-classification"
+  },
+  {
+    "lecture": 7,
+    "source_position": 11,
     "id": "regression-classification",
-    "kicker": "01 \u00b7 Learning signals",
-    "title": "The output determines the prediction task",
-    "notes": "The course focuses on continuous-response regression. Count prediction is also possible with appropriate regression models; numerical storage alone does not identify a task.",
-    "cls": ""
+    "title": "The target’s meaning decides the task",
+    "chapter": 2,
+    "handout": "07_Intro_ML_Part_1/handout.html#chapter-regression-classification"
   },
   {
+    "lecture": 7,
+    "source_position": 12,
+    "id": "label-cost",
+    "title": "Useful examples need useful labels",
+    "chapter": 2,
+    "handout": "07_Intro_ML_Part_1/handout.html#chapter-label-cost"
+  },
+  {
+    "lecture": 7,
+    "source_position": 13,
     "id": "unsupervised",
-    "kicker": "01 \u00b7 Learning signals",
-    "title": "Without task labels, look for structure",
-    "notes": "Clustering depends on representation, distance and modeling choices. Generative training is not universally reconstruction. Avoid claiming that unlabeled data always makes training cheaper or inherently harder.",
-    "cls": ""
+    "title": "Unsupervised learning: start without task labels",
+    "chapter": 3,
+    "handout": "07_Intro_ML_Part_1/handout.html#chapter-unsupervised"
   },
   {
-    "id": "signal-lab",
-    "kicker": "Interactive lab \u00b7 Introduction to ML",
-    "title": "Identify the signal, then reveal the reasoning",
-    "notes": "Added six-scenario concept check, including classification, regression, clustering, masking, semi-supervised data and reward-based action selection. Answers are fixed explanations, not model-generated judgments.",
-    "cls": "lab-slide"
+    "lecture": 7,
+    "source_position": 14,
+    "id": "clustering",
+    "title": "Clustering groups similar observations",
+    "chapter": 3,
+    "handout": "07_Intro_ML_Part_1/handout.html#chapter-clustering"
   },
   {
+    "lecture": 7,
+    "source_position": 15,
+    "id": "generative-modeling",
+    "title": "Generative modeling learns patterns for new samples",
+    "chapter": 3,
+    "handout": "07_Intro_ML_Part_1/handout.html#chapter-generative-modeling"
+  },
+  {
+    "lecture": 7,
+    "source_position": 16,
     "id": "self-supervised",
-    "kicker": "01 \u00b7 Learning signals",
-    "title": "Create a target from the observation itself",
-    "notes": "Self-supervised objectives include generative and contrastive approaches. Masked reconstruction and next-token prediction are examples, not the whole category. Pretraining may be followed by supervised adaptation.",
-    "cls": ""
+    "title": "Self-supervised learning: create a target from the data",
+    "chapter": 3,
+    "handout": "07_Intro_ML_Part_1/handout.html#chapter-self-supervised"
   },
   {
+    "lecture": 7,
+    "source_position": 17,
     "id": "mask-lab",
-    "kicker": "Interactive lab \u00b7 Introduction to ML",
     "title": "Build a self-supervised training pair",
-    "notes": "Added target-construction demonstration. This does not train or run a language model: it separates the observed input from the known training target. The correct target is what occurred in the source sentence, not the only plausible completion.",
-    "cls": "lab-slide"
+    "chapter": 3,
+    "handout": "07_Intro_ML_Part_1/handout.html#chapter-mask-lab"
   },
   {
+    "lecture": 7,
+    "source_position": 18,
+    "id": "pretrain-transfer",
+    "title": "Learn broadly first; adapt to a task next",
+    "chapter": 3,
+    "handout": "07_Intro_ML_Part_1/handout.html#chapter-pretrain-transfer"
+  },
+  {
+    "lecture": 7,
+    "source_position": 19,
+    "id": "semi-supervised-intro",
+    "title": "Few labels, many examples: semi-supervised learning",
+    "chapter": 4,
+    "handout": "07_Intro_ML_Part_1/handout.html#chapter-semi-supervised-intro"
+  },
+  {
+    "lecture": 7,
+    "source_position": 20,
     "id": "semi-supervised",
-    "kicker": "01 \u00b7 Learning signals",
-    "title": "Use the labeled and unlabeled parts together",
-    "notes": "Semi-supervised learning uses both labeled and unlabeled data. Transduction and induction describe prediction goals; they are not restricted to this learning setting.",
-    "cls": ""
+    "title": "Two goals: label this batch, or label future photos",
+    "chapter": 4,
+    "handout": "07_Intro_ML_Part_1/handout.html#chapter-semi-supervised"
   },
   {
+    "lecture": 7,
+    "source_position": 21,
     "id": "weak-shift",
-    "kicker": "01 \u00b7 Learning signals",
-    "title": "Weak labels and domain shift are different issues",
-    "notes": "Corrects the course subsection that describes weak supervision primarily as distribution alignment. Zhou distinguishes incomplete, inexact and inaccurate supervision. The website A/B example describes domain shift; adaptation addresses this change. A changed distribution does not automatically imply failure.",
-    "cls": ""
+    "title": "Weak supervision: learn from imperfect labels",
+    "chapter": 4,
+    "handout": "07_Intro_ML_Part_1/handout.html#chapter-weak-shift"
   },
   {
+    "lecture": 7,
+    "source_position": 22,
+    "id": "domain-shift",
+    "title": "The same task can arrive in different-looking data",
+    "chapter": 4,
+    "handout": "07_Intro_ML_Part_1/handout.html#chapter-domain-shift"
+  },
+  {
+    "lecture": 7,
+    "source_position": 23,
     "id": "reinforcement",
-    "kicker": "01 \u00b7 Learning signals",
-    "title": "Reinforcement learning learns which actions to take",
-    "notes": "The course motivates reinforcement learning through chess. This presentation avoids the unsupported comparison of chess states with atoms in the universe. Offline reinforcement learning also exists; interaction is not required during every training procedure.",
-    "cls": ""
+    "title": "Reinforcement learning: improve by acting",
+    "chapter": 5,
+    "handout": "07_Intro_ML_Part_1/handout.html#chapter-reinforcement"
   },
   {
+    "lecture": 7,
+    "source_position": 24,
+    "id": "explore-exploit",
+    "title": "Use what you know—or try what you do not?",
+    "chapter": 5,
+    "handout": "07_Intro_ML_Part_1/handout.html#chapter-explore-exploit"
+  },
+  {
+    "lecture": 7,
+    "source_position": 25,
+    "id": "bandit-intro",
+    "title": "What is a bandit arm?",
+    "chapter": 5,
+    "handout": "07_Intro_ML_Part_1/handout.html#chapter-bandit-intro"
+  },
+  {
+    "lecture": 7,
+    "source_position": 26,
     "id": "bandit-lab",
-    "kicker": "Interactive lab \u00b7 Introduction to ML",
     "title": "Explore or exploit? Try three uncertain actions",
-    "notes": "Added stationary three-armed Bernoulli bandit with reward probabilities 0.25, 0.50 and 0.75. It is a simple reinforcement-learning setting without state transitions or delayed rewards. Each arm is tried once before automated epsilon-greedy selection. Ties use seeded randomness. The finite run need not identify the best arm.",
-    "cls": "lab-slide"
+    "chapter": 5,
+    "handout": "07_Intro_ML_Part_1/handout.html#chapter-bandit-lab"
   },
   {
+    "lecture": 7,
+    "source_position": 27,
+    "id": "signal-lab",
+    "title": "Identify the signal, then reveal the reasoning",
+    "handout": "07_Intro_ML_Part_1/handout.html#chapter-signal-lab"
+  },
+  {
+    "lecture": 7,
+    "source_position": 28,
     "id": "domains",
-    "kicker": "02 \u00b7 Describe the data",
-    "title": "Learning setting and data domain are separate axes",
-    "notes": "",
-    "cls": ""
+    "title": "The learning setting and the data domain are different",
+    "chapter": 6,
+    "handout": "07_Intro_ML_Part_1/handout.html#chapter-domains"
   },
   {
+    "lecture": 7,
+    "source_position": 29,
     "id": "vision",
-    "kicker": "02 \u00b7 Data domains",
     "title": "One scene, three kinds of visual output",
-    "notes": "The vector scene is a conceptual illustration. Its boxes and regions are hand-authored teaching annotations, not outputs of a trained vision model. Semantic segmentation assigns class labels; instance segmentation additionally separates individual objects.",
-    "cls": ""
+    "chapter": 6,
+    "handout": "07_Intro_ML_Part_1/handout.html#chapter-vision"
   },
   {
+    "lecture": 7,
+    "source_position": 30,
     "id": "language",
-    "kicker": "02 \u00b7 Data domains",
-    "title": "Language tasks depend on context",
-    "notes": "The source uses genre and topic interchangeably; these are distinct label schemes. The slide explicitly uses topic classification.",
-    "cls": ""
+    "title": "Context changes both a word’s role and its meaning",
+    "chapter": 6,
+    "handout": "07_Intro_ML_Part_1/handout.html#chapter-language"
   },
   {
+    "lecture": 7,
+    "source_position": 31,
+    "id": "multimodal",
+    "title": "Multimodal learning connects different kinds of data",
+    "chapter": 6,
+    "handout": "07_Intro_ML_Part_1/handout.html#chapter-multimodal"
+  },
+  {
+    "lecture": 7,
+    "source_position": 32,
+    "id": "part-takeaways",
+    "title": "Before you leave this part",
+    "handout": "07_Intro_ML_Part_1/handout.html#chapter-part-takeaways"
+  },
+  {
+    "lecture": 7,
+    "source_position": 33,
+    "id": "part-references",
+    "title": "Continue exploring"
+  },
+  {
+    "lecture": 7,
+    "source_position": 34,
+    "id": "course-navigation",
+    "title": "Continue the course"
+  },
+  {
+    "lecture": 8,
+    "source_position": 1,
+    "id": "part-cover",
+    "title": "From data to predictions"
+  },
+  {
+    "lecture": 8,
+    "source_position": 2,
+    "id": "recap-signal",
+    "title": "Now make the prediction task precise",
+    "handout": "08_Intro_ML_Part_2/handout.html#chapter-recap-signal"
+  },
+  {
+    "lecture": 8,
+    "source_position": 3,
+    "id": "part-roadmap",
+    "title": "Four chapters: from a record to an evaluation",
+    "handout": "08_Intro_ML_Part_2/handout.html#chapter-part-roadmap"
+  },
+  {
+    "lecture": 8,
+    "source_position": 4,
     "id": "fertilizer",
-    "kicker": "02 \u00b7 A running regression problem",
-    "title": "Predict yield before the crop grows",
-    "notes": "Retains the agronomy example. Source numerical axes do not document physical units or data provenance. The deck treats the 25 points as course illustration data and does not claim measured field results or convert the original 0\u20131 fertilizer coordinates to physical doses.",
-    "cls": ""
+    "title": "Decide what one observation represents",
+    "chapter": 1,
+    "handout": "08_Intro_ML_Part_2/handout.html#chapter-fertilizer"
   },
   {
+    "lecture": 8,
+    "source_position": 5,
+    "id": "measurements",
+    "title": "A variable names a quantity; a value records one case",
+    "chapter": 1,
+    "handout": "08_Intro_ML_Part_2/handout.html#chapter-measurements"
+  },
+  {
+    "lecture": 8,
+    "source_position": 6,
     "id": "variable-types",
-    "kicker": "02 \u00b7 Variables and datasets",
-    "title": "Variable type describes what values mean",
-    "notes": "Age may be measured continuously or recorded in completed years; it is not intrinsically discrete. Binary variables may be nominal or ordinal depending on interpretation. Avoid using yes/no degree status as a general ordinal example.",
-    "cls": ""
+    "title": "The type tells us what a value means",
+    "chapter": 1,
+    "handout": "08_Intro_ML_Part_2/handout.html#chapter-variable-types"
   },
   {
+    "lecture": 8,
+    "source_position": 7,
     "id": "roles",
-    "kicker": "02 \u00b7 Variables and datasets",
-    "title": "Predictors are inputs; the outcome is the target",
-    "notes": "Predictor does not imply statistical independence, and explanatory-variable terminology does not imply causation. Rainfall observed after prediction time cannot be used as if it were already known; forecasts and past measurements must be distinguished.",
-    "cls": ""
+    "title": "Choose the inputs and the outcome for this task",
+    "chapter": 1,
+    "handout": "08_Intro_ML_Part_2/handout.html#chapter-roles"
   },
   {
+    "lecture": 8,
+    "source_position": 8,
     "id": "dataset",
-    "kicker": "02 \u00b7 Variables and datasets",
-    "title": "A dataset pairs each observation with its target",
-    "notes": "The first three rows reproduce the source values to four decimal places. Targets are available for supervised training; they are unknown for a new inference case.",
-    "cls": ""
+    "title": "Collect the observed input–target pairs",
+    "chapter": 1,
+    "handout": "08_Intro_ML_Part_2/handout.html#chapter-dataset"
   },
   {
-    "id": "matrix",
-    "kicker": "02 \u00b7 Variables and datasets",
-    "title": "Rows are observations; columns are features",
-    "notes": "Corrects the source display that stacks column observations without explicit transposes. Numerical matrix form requires a suitable representation for categorical, image or text data; raw categories do not automatically have a meaningful real-valued encoding.",
-    "cls": ""
-  },
-  {
+    "lecture": 8,
+    "source_position": 9,
     "id": "observations-lab",
-    "kicker": "Interactive lab \u00b7 Introduction to ML",
     "title": "Inspect the original fertilizer observations",
-    "notes": "Original nonlinear.json scatter plot, all 25 x/y coordinates preserved. Plotly remains fully interactive offline. The slide adds explicit zoom/pan/reset controls and a keyboard-accessible point inspector. The original horizontal axis title is retained; its physical interpretation is unspecified.",
-    "cls": "lab-slide"
+    "chapter": 1,
+    "handout": "08_Intro_ML_Part_2/handout.html#chapter-observations-lab"
   },
   {
+    "lecture": 8,
+    "source_position": 10,
+    "id": "input-output-spaces",
+    "title": "A domain lists possible values; a space combines them",
+    "chapter": 1,
+    "handout": "08_Intro_ML_Part_2/handout.html#chapter-input-output-spaces"
+  },
+  {
+    "lecture": 8,
+    "source_position": 11,
+    "id": "observation-vector",
+    "title": "One input vector collects one value per predictor",
+    "chapter": 1,
+    "handout": "08_Intro_ML_Part_2/handout.html#chapter-observation-vector"
+  },
+  {
+    "lecture": 8,
+    "source_position": 12,
+    "id": "matrix",
+    "title": "Stack input vectors into rows; keep targets separate",
+    "chapter": 1,
+    "handout": "08_Intro_ML_Part_2/handout.html#chapter-matrix"
+  },
+  {
+    "lecture": 8,
+    "source_position": 13,
+    "id": "prediction-function",
+    "title": "A prediction function maps inputs to outputs",
+    "chapter": 2,
+    "handout": "08_Intro_ML_Part_2/handout.html#chapter-prediction-function"
+  },
+  {
+    "lecture": 8,
+    "source_position": 14,
     "id": "hypotheses",
-    "kicker": "03 \u00b7 Models and generalization",
-    "title": "A model family contains many possible functions",
-    "notes": "The course calls a parameter setting a hypothesis. More commonly, the corresponding function is the hypothesis; both conventions are clarified here. The course curve is illustrative and is not asserted to be an optimal fit or quadratic.",
-    "cls": ""
+    "title": "Fix a form; allow its coefficients to change",
+    "chapter": 2,
+    "handout": "08_Intro_ML_Part_2/handout.html#chapter-hypotheses"
   },
   {
+    "lecture": 8,
+    "source_position": 15,
+    "id": "hypothesis-space",
+    "title": "One parameter choice belongs to an allowed space",
+    "chapter": 2,
+    "handout": "08_Intro_ML_Part_2/handout.html#chapter-hypothesis-space"
+  },
+  {
+    "lecture": 8,
+    "source_position": 16,
     "id": "hypothesis-lab",
-    "kicker": "Interactive lab \u00b7 Introduction to ML",
     "title": "Compare the original observations and hypothesis",
-    "notes": "Original nonlinear_mod.json: both 25-point traces retained exactly, including the illustrative hypothesis curve. Interactive hover, trace toggles, pan and zoom are preserved. The sidebar computes residuals and mean squared error against the provided curve, without claiming the source used a particular fitting algorithm.",
-    "cls": "lab-slide"
+    "chapter": 2,
+    "handout": "08_Intro_ML_Part_2/handout.html#chapter-hypothesis-lab"
   },
   {
+    "lecture": 8,
+    "source_position": 17,
     "id": "residuals",
-    "kicker": "03 \u00b7 Models and generalization",
-    "title": "Residuals measure disagreement on the observed data",
-    "notes": "MSE is a supplemental concrete score that prepares for the next Regression lecture. It has squared target units and is not appropriate for every task.",
-    "cls": ""
+    "title": "A residual is the gap between observation and prediction",
+    "chapter": 3,
+    "handout": "08_Intro_ML_Part_2/handout.html#chapter-residuals"
   },
   {
+    "lecture": 8,
+    "source_position": 18,
     "id": "noise",
-    "kicker": "03 \u00b7 Models and generalization",
-    "title": "The same input can have different outcomes",
-    "notes": "The source emphasizes measurement error. This slide broadens the explanation to omitted predictors, irreducible variation and misspecification. No claim of zero-mean or independent noise is made without an assumption.",
-    "cls": ""
+    "title": "A gap need not be a mistake in the measurement",
+    "chapter": 3,
+    "handout": "08_Intro_ML_Part_2/handout.html#chapter-noise"
   },
   {
+    "lecture": 8,
+    "source_position": 19,
     "id": "generalization",
-    "kicker": "03 \u00b7 Models and generalization",
-    "title": "Generalization is performance on new cases",
-    "notes": "Corrects the source domain-wide approximation statement. In noisy problems the same input can have several possible targets. Generalization concerns expected or otherwise specified performance under a relevant distribution, not uniform exactness throughout the Cartesian product.",
-    "cls": ""
+    "title": "Generalization asks how the rule works beyond its data",
+    "chapter": 3,
+    "handout": "08_Intro_ML_Part_2/handout.html#chapter-generalization"
   },
   {
+    "lecture": 8,
+    "source_position": 20,
     "id": "splits",
-    "kicker": "03 \u00b7 Models and generalization",
-    "title": "Give training, validation and testing different jobs",
-    "notes": "Supplemental practical evaluation guidance. Repeated use of test results for model choice compromises a final independent assessment. Use the validation set in the following interactive lab; it is intentionally not called a test set.",
-    "cls": ""
+    "title": "Give three sets three different jobs",
+    "chapter": 4,
+    "handout": "08_Intro_ML_Part_2/handout.html#chapter-splits"
   },
   {
+    "lecture": 8,
+    "source_position": 21,
     "id": "generalization-lab",
-    "kicker": "Interactive lab \u00b7 Introduction to ML",
     "title": "Fit the training points; compare unseen validation points",
-    "notes": "Added synthetic regression experiment. Training and validation are disjoint samples from y=2+1.2x\u22120.9x\u00b2 plus independent seeded noise, on x in [\u22121,1]. Degrees 0,1,2,5,9 are fitted by least squares using Householder QR. Validation outcomes never enter fitting. Displaying and comparing validation results makes this model development, not a final test evaluation.",
-    "cls": "lab-slide"
+    "chapter": 4,
+    "handout": "08_Intro_ML_Part_2/handout.html#chapter-generalization-lab"
   },
   {
+    "lecture": 8,
+    "source_position": 22,
     "id": "leakage",
-    "kicker": "03 \u00b7 Models and generalization",
-    "title": "Evaluation must match the intended use",
-    "notes": "Data leakage and domain shift are distinct failure modes. This summary follows scikit-learn common-pitfalls guidance for split-before-fit preprocessing and the course website A/B example for domain shift.",
-    "cls": ""
+    "title": "Keep evaluation inputs out of model preparation",
+    "chapter": 4,
+    "handout": "08_Intro_ML_Part_2/handout.html#chapter-leakage"
   },
   {
+    "lecture": 8,
+    "source_position": 23,
     "id": "practice",
-    "kicker": "Check your understanding",
-    "title": "Name the signal, shape and evaluation target",
-    "notes": "",
-    "cls": ""
+    "title": "Use the notation to reason about four cases",
+    "chapter": 4,
+    "handout": "08_Intro_ML_Part_2/handout.html#chapter-practice"
   },
   {
+    "lecture": 8,
+    "source_position": 24,
     "id": "answers",
-    "kicker": "Check your understanding",
-    "title": "Explain the choices",
-    "notes": "",
-    "cls": ""
+    "title": "Reason from the definition, then apply it",
+    "chapter": 4,
+    "handout": "08_Intro_ML_Part_2/handout.html#chapter-answers"
   },
   {
+    "lecture": 8,
+    "source_position": 25,
     "id": "summary",
-    "kicker": "Lesson 3 \u00b7 Takeaways",
-    "title": "Define the task before choosing the algorithm",
-    "notes": "",
-    "cls": ""
+    "title": "A complete prediction problem follows this chain",
+    "chapter": 4,
+    "handout": "08_Intro_ML_Part_2/handout.html#chapter-summary"
   },
   {
+    "lecture": 8,
+    "source_position": 26,
     "id": "references",
-    "kicker": "Sources & further reading",
-    "title": "Continue exploring",
-    "notes": "",
-    "cls": ""
+    "title": "Sources for the data, notation and evaluation",
+    "handout": "08_Intro_ML_Part_2/handout.html#chapter-references"
+  },
+  {
+    "lecture": 8,
+    "source_position": 27,
+    "id": "course-navigation",
+    "title": "Continue the course"
   }
 ]

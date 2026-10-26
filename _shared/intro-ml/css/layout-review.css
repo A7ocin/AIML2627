@@ -1,0 +1,60 @@
+/* Both introduction packs: whole photographs and consistent figure stages. */
+.sv-photo{display:flex;flex-direction:column;min-width:0;--sv-photo-h:330px}
+.sv-photo.small{--sv-photo-h:235px}.sv-photo.micro{--sv-photo-h:180px}.sv-photo.tall{--sv-photo-h:410px}
+.sv-photo>.sv-annotated{position:relative;display:flex;align-items:center;justify-content:center;container-type:size;width:100%;height:var(--sv-photo-h);min-height:var(--sv-photo-h);flex:1 1 auto;overflow:hidden;background:#111d2b}
+.sv-image-bounds{position:relative;flex:none;width:min(100cqw,calc(100cqh * var(--sv-aspect)));aspect-ratio:var(--sv-aspect);max-width:100%;max-height:100%}
+.sv-photo .sv-image-bounds>img,.reveal .sv-photo .sv-image-bounds>img{display:block!important;width:100%!important;height:100%!important;max-width:100%!important;max-height:100%!important;object-fit:contain!important;object-position:center!important;margin:0!important;padding:0!important;border:0!important;box-shadow:none!important}
+.sv-photo figcaption{display:flex;align-items:center;justify-content:center;text-align:center;min-height:64px;flex:none}
+.reveal .sv-diagram{object-fit:contain;object-position:center;max-width:100%;margin:0 auto!important;padding:0!important;border:0!important;box-shadow:none!important}
+.sv-reading-visual .sv-photo{--sv-photo-h:245px}.sv-reading-visual .sv-photo.tall{--sv-photo-h:290px}.sv-reading-visual .sv-photo.micro{--sv-photo-h:160px}
+.sv-reading-visual .sv-photo figcaption{min-height:48px}
+.sv-chapter-nav{gap:28px;font-size:21px}
+.sv-title{max-width:1650px}.reveal .sv-title h1{font-size:106px;line-height:1.05;letter-spacing:-.025em;margin:32px 0;max-width:1550px}.reveal .sv-title p{font-size:34px;line-height:1.45;color:#b6c6d8;max-width:1400px}
+.sv-title .sv-tag{font-size:27px}.reveal #part-cover .sv-title .sv-label{color:#45d6c0;font-size:28px;margin-top:38px}
+.sv-math{font:34px/1.5 'Cambria Math','Segoe UI',sans-serif;text-align:center;background:#111b2a;border:1px solid #3d5067;border-radius:12px;padding:22px 25px;color:#dbc3f6;margin:16px 0}
+.sv-grid.wide-left{grid-template-columns:1.25fr 1fr}.sv-grid.wide-right{grid-template-columns:1fr 1.25fr}
+.sv-reading-visual .sv-math{font-size:22px;padding:16px}
+.sv-panel .sv-math{font-size:32px}.sv-reading-visual .sv-panel .sv-math{font-size:21px}
+.sv-matrix{display:inline-grid;grid-template-columns:repeat(2,1fr);gap:8px 25px;border-left:3px solid;border-right:3px solid;padding:12px 24px;vertical-align:middle;color:#6ce0cf}
+.sv-table{width:100%;border-collapse:separate;border-spacing:0;font:28px/1.4 'Segoe UI',sans-serif;background:#131e2c;border:1px solid #43566f;border-radius:12px;overflow:hidden}
+.sv-table th,.sv-table td{padding:17px 22px;text-align:center;border-bottom:1px solid #36475b}.sv-table th{color:#c9d7e8;font-size:25px;background:#1a2b3e}.sv-table tr:last-child td{border-bottom:0}.sv-input{color:#69dfcc!important}.sv-target-cell{color:#ffd166!important}.sv-lookup{color:#94a9bf!important}
+.sv-reading-visual .sv-table{font-size:18px}.sv-reading-visual .sv-table th{font-size:17px}.sv-reading-visual .sv-table th,.sv-reading-visual .sv-table td{padding:12px}
+.sv-compact .sv-panel{padding:22px 26px}.reveal .sv-compact .sv-panel p{font-size:28px}.reveal .sv-compact .sv-panel h3{font-size:30px}
+.sv-reading-visual.sv-grid.wide-left,.sv-reading-visual.sv-grid.wide-right{grid-template-columns:1fr 1fr}
+@media(max-width:800px){.sv-reading-visual.sv-grid.wide-left,.sv-reading-visual.sv-grid.wide-right{grid-template-columns:1fr}}
+@media print{.sv-photo>.sv-annotated{background:white!important}.sv-math,.sv-table,.sv-table th{background:white!important;color:#183149!important}.sv-input{color:#07695c!important}.sv-target-cell{color:#805300!important}.sv-table td,.sv-table th{border-color:#8ca2b5}}
+
+/* Matte frames keep a complete photo visible without oversized caption bands. */
+.sv-photo.small{--sv-photo-h:285px}.sv-photo.micro{--sv-photo-h:215px}
+.sv-photo>.sv-annotated{background:transparent}
+.sv-photo figcaption{box-sizing:border-box;min-height:60px;padding:12px 18px}
+.sv-scene-strip{max-width:1200px;width:100%;margin:0 auto;gap:28px}
+.sv-scene-strip .sv-photo.micro{--sv-photo-h:250px}
+.sv-grid.sv-portrait-layout{grid-template-columns:.58fr 1.42fr}
+.sv-reading-visual.sv-grid.sv-portrait-layout{grid-template-columns:.65fr 1.35fr}
+@media(max-width:800px){.sv-reading-visual.sv-grid.sv-portrait-layout{grid-template-columns:1fr}}
+
+#domains .sv-panel,#chapter-domains .sv-reading-visual .sv-panel{display:flex;flex-direction:column}#domains .sv-panel>.sv-token-row,#chapter-domains .sv-panel>.sv-token-row{flex:1;align-content:center;justify-content:center}#domains .sv-panel>p:last-child,#chapter-domains .sv-panel>p:last-child{margin-top:auto}
+
+/* Targeted clarity and alignment refinements. */
+.reveal .sv-grid.sv-classification-layout{grid-template-columns:.62fr 1.38fr}
+.reveal .sv-grid.sv-training-layout{grid-template-columns:.82fr 1.18fr}
+.reveal .sv-classification-layout .sv-box,.reveal .sv-training-layout>.sv-panel:last-child .sv-box{white-space:nowrap;padding-left:18px;padding-right:18px}
+.sv-vision-card{margin:0;padding:20px;background:#141c29;border:1px solid #36475c;border-radius:16px;min-width:0;text-align:center}
+.sv-vision-card>img{display:block;width:100%;height:350px;object-fit:contain;margin:0!important;border:0!important;box-shadow:none!important;max-width:100%!important;max-height:none!important}
+.sv-vision-card figcaption{display:flex;flex-direction:column;align-items:center;gap:10px;font:29px/1.4 'Segoe UI',sans-serif;padding:18px 0 8px}
+.sv-vision-card figcaption strong{color:#45d6c0;font-size:30px;white-space:nowrap}
+.sv-reading-visual .sv-vision-card{padding:12px}.sv-reading-visual .sv-vision-card>img{height:200px}.sv-reading-visual .sv-vision-card figcaption{font-size:17px}.sv-reading-visual .sv-vision-card figcaption strong{font-size:18px;white-space:normal}
+@media(max-width:800px){.sv-reading-visual.sv-vision-grid{grid-template-columns:1fr}}
+
+/* Explain the crop task, distinguish learning/use, and introduce the bandit. */
+.sv-field-goal{grid-template-columns:.65fr 1.35fr}.sv-goal-chain{margin-top:18px}.sv-goal-chain .sv-box{position:relative;font-size:25px;padding:20px 18px}.sv-goal-chain .sv-box strong{font-size:29px;white-space:nowrap}.sv-goal-chain .sv-meaning-icon{width:48px;height:48px;display:inline-block;vertical-align:middle;margin:0 8px 0 0!important}.sv-goal-chain .sv-box:has(.sv-meaning-icon){padding-top:12px}
+.sv-meaning-icon{display:block;width:80px;height:80px;object-fit:contain;margin:0!important;border:0!important;box-shadow:none!important}.sv-inline-icon{display:block;width:42px;height:42px;object-fit:contain;margin:0 auto 8px!important;border:0!important;box-shadow:none!important}
+.reveal .sv-training-parallel{grid-template-columns:1fr 1fr}.sv-process-heading{display:flex;align-items:center;gap:24px;margin-bottom:24px}.reveal .sv-process-heading h3{margin:0!important}.reveal .sv-training-parallel .sv-chain{gap:16px;margin:22px 0}.reveal .sv-training-parallel .sv-box{font-size:28px;padding:25px 10px;white-space:nowrap}.reveal .sv-training-parallel .sv-arrow{font-size:37px}.reveal .sv-training-parallel .sv-panel>p{margin-top:24px}
+.reveal .sv-lead{font-size:29px;line-height:1.4;margin:0 0 10px}.sv-mini-flow{display:flex;align-items:center;gap:15px;margin:20px 0 24px;font:26px/1.4 'Segoe UI',sans-serif}.sv-mini-flow span{padding:18px 14px;border:1px solid #40556e;border-radius:10px;background:#152638;flex:1;text-align:center}.sv-mini-flow b{color:#ffd166;font-size:38px}
+.reveal .sv-goal-pairs .sv-panel p{font-size:27px}.sv-bandit-intro{grid-template-columns:1.15fr 1fr;align-items:center}.sv-bandit-intro>.sv-diagram{height:390px}.reveal .sv-bandit-intro .sv-panel p{font-size:27px;line-height:1.4}
+.sv-reading-visual .sv-meaning-icon{width:55px;height:55px}.sv-reading-visual .sv-inline-icon{width:30px;height:30px}.sv-reading-visual .sv-goal-chain .sv-box{font-size:17px}.sv-reading-visual .sv-goal-chain strong{font-size:19px;white-space:normal}.sv-reading-visual .sv-mini-flow{font-size:17px}.sv-reading-visual .sv-mini-flow span{padding:12px 8px}.sv-reading-visual.sv-bandit-intro{grid-template-columns:1fr}.sv-reading-visual.sv-bandit-intro>.sv-diagram{height:280px}
+@media(max-width:800px){.sv-reading-visual .sv-field-goal,.sv-reading-visual.sv-training-parallel{grid-template-columns:1fr}}
+
+.sv-goal-chain{align-items:stretch}.sv-goal-chain>.sv-arrow{align-self:center}.sv-goal-chain>.sv-box{display:flex;flex-direction:column;align-items:center;justify-content:center}.sv-goal-chain .sv-meaning-icon{display:block;margin:0 auto 8px!important}.sv-goal-chain .sv-box{padding-top:12px}
+.sv-inline-icon{display:inline-block;width:34px;height:34px;vertical-align:middle;margin:0 10px 0 0!important}.sv-reading-visual .sv-inline-icon{display:inline-block;width:25px;height:25px;margin:0 6px 0 0!important}

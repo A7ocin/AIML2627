@@ -1,0 +1,46 @@
+[
+  {
+    "id": "wheat",
+    "file": "wheat.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:A_field_of_wheat.JPG",
+    "download": "https://upload.wikimedia.org/wikipedia/commons/b/bc/A_field_of_wheat.JPG",
+    "author": "Max Ronnersjö",
+    "license": "CC BY-SA 3.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/3.0/",
+    "modifications": "Original file displayed whole and centered. Separate masking, annotation or darkening overlays are used where labeled.",
+    "bytes": 3226050
+  },
+  {
+    "id": "cat",
+    "file": "cat.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Felis_catus-cat_on_snow.jpg",
+    "download": "https://upload.wikimedia.org/wikipedia/commons/b/b6/Felis_catus-cat_on_snow.jpg",
+    "author": "Von.grzanka",
+    "license": "CC BY-SA 3.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/3.0/",
+    "modifications": "Original file displayed whole and centered. Separate masking, annotation or darkening overlays are used where labeled.",
+    "bytes": 2125399
+  },
+  {
+    "id": "dog",
+    "file": "dog.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Black_Labrador.jpg",
+    "download": "https://upload.wikimedia.org/wikipedia/commons/7/70/Black_Labrador.jpg",
+    "author": "Melbelle",
+    "license": "CC BY-SA 3.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/3.0/",
+    "modifications": "Original file displayed whole and centered. Separate masking, annotation or darkening overlays are used where labeled.",
+    "bytes": 2458128
+  },
+  {
+    "id": "chess",
+    "file": "chess.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Chess_pieces_on_the_board.jpg",
+    "download": "https://upload.wikimedia.org/wikipedia/commons/e/ee/Chess_pieces_on_the_board.jpg",
+    "author": "Shixart1985",
+    "license": "CC BY 2.0",
+    "license_url": "https://creativecommons.org/licenses/by/2.0/",
+    "modifications": "Original file displayed whole and centered. Separate masking, annotation or darkening overlays are used where labeled.",
+    "bytes": 11585149
+  }
+]

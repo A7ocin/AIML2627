@@ -6,7 +6,7 @@
     "slide_number": 3,
     "slide_title": "aiml",
     "when": "before",
-    "slide_href": "../01_History_Part_1/index.html#/2",
+    "slide_href": "../01_History_Part_1/index.html#/aiml",
     "handout_href": "../01_History_Part_1/handout.html#chapter-aiml",
     "core": true,
     "seconds": 90
@@ -18,7 +18,7 @@
     "slide_number": 8,
     "slide_title": "Bayes' Theorem",
     "when": "before",
-    "slide_href": "../01_History_Part_1/index.html#/7",
+    "slide_href": "../01_History_Part_1/index.html#/bayes",
     "handout_href": "../01_History_Part_1/handout.html#chapter-bayes",
     "core": true,
     "seconds": 90
@@ -30,7 +30,7 @@
     "slide_number": 29,
     "slide_title": "From “thinking” to an observable test",
     "when": "after",
-    "slide_href": "../01_History_Part_1/index.html#/28",
+    "slide_href": "../01_History_Part_1/index.html#/imitation",
     "handout_href": "../01_History_Part_1/handout.html#chapter-imitation",
     "core": true,
     "seconds": 90
@@ -42,7 +42,7 @@
     "slide_number": 5,
     "slide_title": "Minsky & Papert — “Perceptrons” (1969)",
     "when": "before",
-    "slide_href": "../02_History_Part_2/index.html#/4",
+    "slide_href": "../02_History_Part_2/index.html#/winter1",
     "handout_href": "../02_History_Part_2/handout.html#chapter-winter1",
     "core": true,
     "seconds": 90
@@ -54,7 +54,7 @@
     "slide_number": 25,
     "slide_title": "When the learning signal fades",
     "when": "after",
-    "slide_href": "../02_History_Part_2/index.html#/24",
+    "slide_href": "../02_History_Part_2/index.html#/winter2",
     "handout_href": "../02_History_Part_2/handout.html#chapter-winter2",
     "core": true,
     "seconds": 90
@@ -66,7 +66,7 @@
     "slide_number": 45,
     "slide_title": "GPT-3 · 2020 — “Generative Pre-trained Transformer 3”",
     "when": "before",
-    "slide_href": "../02_History_Part_2/index.html#/44",
+    "slide_href": "../02_History_Part_2/index.html#/gpt3",
     "handout_href": "../02_History_Part_2/handout.html#chapter-gpt3",
     "core": true,
     "seconds": 90
@@ -78,7 +78,7 @@
     "slide_number": 53,
     "slide_title": "A history of interacting ideas and changing expectations",
     "when": "after",
-    "slide_href": "../02_History_Part_2/index.html#/52",
+    "slide_href": "../02_History_Part_2/index.html#/summary",
     "handout_href": "../02_History_Part_2/handout.html#chapter-summary",
     "core": true,
     "seconds": 150
@@ -90,7 +90,7 @@
     "slide_number": 45,
     "slide_title": "Perceptron · 1957 — Frank Rosenblatt",
     "when": "after",
-    "slide_href": "../01_History_Part_1/index.html#/44",
+    "slide_href": "../01_History_Part_1/index.html#/perceptron",
     "handout_href": "../01_History_Part_1/handout.html#chapter-perceptron",
     "core": false,
     "seconds": 90
@@ -102,7 +102,7 @@
     "slide_number": 40,
     "slide_title": "The modern turning points",
     "when": "after",
-    "slide_href": "../02_History_Part_2/index.html#/39",
+    "slide_href": "../02_History_Part_2/index.html#/alphago-transformers",
     "handout_href": "../02_History_Part_2/handout.html#chapter-alphago-transformers",
     "core": false,
     "seconds": 90
@@ -114,7 +114,7 @@
     "slide_number": 15,
     "slide_title": "From the logistic curve to logistic regression",
     "when": "after",
-    "slide_href": "../01_History_Part_1/index.html#/14",
+    "slide_href": "../01_History_Part_1/index.html#/logreg",
     "handout_href": "../01_History_Part_1/handout.html#chapter-logreg",
     "core": false,
     "seconds": 90
@@ -126,7 +126,7 @@
     "slide_number": 8,
     "slide_title": "A solution path reaches a goal; its cost measures quality",
     "when": "before",
-    "slide_href": "../03_Search_Part_1/index.html#/7",
+    "slide_href": "../03_Search_Part_1/index.html#/paths-costs",
     "handout_href": "../03_Search_Part_1/handout.html#chapter-paths-costs",
     "core": true,
     "seconds": 90
@@ -138,7 +138,7 @@
     "slide_number": 21,
     "slide_title": "BFS · watch the queue expand",
     "when": "before",
-    "slide_href": "../03_Search_Part_1/index.html#/20",
+    "slide_href": "../03_Search_Part_1/index.html#/bfs-lab",
     "handout_href": "../03_Search_Part_1/handout.html#chapter-bfs-lab",
     "core": true,
     "seconds": 90
@@ -150,7 +150,7 @@
     "slide_number": 24,
     "slide_title": "DFS · follow the stack",
     "when": "before",
-    "slide_href": "../03_Search_Part_1/index.html#/23",
+    "slide_href": "../03_Search_Part_1/index.html#/dfs-lab",
     "handout_href": "../03_Search_Part_1/handout.html#chapter-dfs-lab",
     "core": true,
     "seconds": 90
@@ -162,7 +162,7 @@
     "slide_number": 33,
     "slide_title": "Repeated work can be a reasonable price",
     "when": "after",
-    "slide_href": "../03_Search_Part_1/index.html#/32",
+    "slide_href": "../03_Search_Part_1/index.html#/ids-overhead",
     "handout_href": "../03_Search_Part_1/handout.html#chapter-ids-overhead",
     "core": true,
     "seconds": 120
@@ -174,7 +174,7 @@
     "slide_number": 36,
     "slide_title": "Lowest-cost-first · compare cumulative costs",
     "when": "before",
-    "slide_href": "../03_Search_Part_1/index.html#/35",
+    "slide_href": "../03_Search_Part_1/index.html#/ucs-lab",
     "handout_href": "../03_Search_Part_1/handout.html#chapter-ucs-lab",
     "core": true,
     "seconds": 120
@@ -186,7 +186,7 @@
     "slide_number": 14,
     "slide_title": "The first A* decision",
     "when": "before",
-    "slide_href": "../04_Search_Part_2/index.html#/13",
+    "slide_href": "../04_Search_Part_2/index.html#/astar-scores",
     "handout_href": "../04_Search_Part_2/handout.html#chapter-astar-scores",
     "core": true,
     "seconds": 90
@@ -198,7 +198,7 @@
     "slide_number": 23,
     "slide_title": "Same state, cheaper route: update the record",
     "when": "after",
-    "slide_href": "../04_Search_Part_2/index.html#/22",
+    "slide_href": "../04_Search_Part_2/index.html#/graph-cautions",
     "handout_href": "../04_Search_Part_2/handout.html#chapter-graph-cautions",
     "core": true,
     "seconds": 120
@@ -210,7 +210,7 @@
     "slide_number": 29,
     "slide_title": "Branch-and-bound · watch the incumbent improve",
     "when": "before",
-    "slide_href": "../04_Search_Part_2/index.html#/28",
+    "slide_href": "../04_Search_Part_2/index.html#/branch-bound-lab",
     "handout_href": "../04_Search_Part_2/handout.html#chapter-branch-bound-lab",
     "core": true,
     "seconds": 120
@@ -222,7 +222,7 @@
     "slide_number": 34,
     "slide_title": "Search is controlled exploration",
     "when": "after",
-    "slide_href": "../04_Search_Part_2/index.html#/33",
+    "slide_href": "../04_Search_Part_2/index.html#/summary",
     "handout_href": "../04_Search_Part_2/handout.html#chapter-summary",
     "core": true,
     "seconds": 120
@@ -234,7 +234,7 @@
     "slide_number": 18,
     "slide_title": "Admissible means “never overestimate”",
     "when": "after",
-    "slide_href": "../04_Search_Part_2/index.html#/17",
+    "slide_href": "../04_Search_Part_2/index.html#/admissibility",
     "handout_href": "../04_Search_Part_2/handout.html#chapter-admissibility",
     "core": false,
     "seconds": 90
@@ -246,7 +246,7 @@
     "slide_number": 12,
     "slide_title": "A search tree can repeat a graph state",
     "when": "after",
-    "slide_href": "../03_Search_Part_1/index.html#/11",
+    "slide_href": "../03_Search_Part_1/index.html#/graph-versus-tree",
     "handout_href": "../03_Search_Part_1/handout.html#chapter-graph-versus-tree",
     "core": false,
     "seconds": 90
@@ -258,7 +258,7 @@
     "slide_number": 21,
     "slide_title": "Consistency: check how the estimate changes in one move",
     "when": "after",
-    "slide_href": "../04_Search_Part_2/index.html#/20",
+    "slide_href": "../04_Search_Part_2/index.html#/consistency",
     "handout_href": "../04_Search_Part_2/handout.html#chapter-consistency",
     "core": false,
     "seconds": 90
@@ -270,7 +270,7 @@
     "slide_number": 12,
     "slide_title": "The running CSP has exactly two solutions",
     "when": "before",
-    "slide_href": "../05_Constraints_Part_1/index.html#/11",
+    "slide_href": "../05_Constraints_Part_1/index.html#/definition",
     "handout_href": "../05_Constraints_Part_1/handout.html#chapter-definition",
     "core": true,
     "seconds": 90
@@ -282,7 +282,7 @@
     "slide_number": 19,
     "slide_title": "Follow one branch, then watch DFS undo it",
     "when": "before",
-    "slide_href": "../05_Constraints_Part_1/index.html#/18",
+    "slide_href": "../05_Constraints_Part_1/index.html#/dfs-lab",
     "handout_href": "../05_Constraints_Part_1/handout.html#chapter-dfs-lab",
     "core": true,
     "seconds": 90
@@ -294,7 +294,7 @@
     "slide_number": 30,
     "slide_title": "Watch domains shrink and checks return",
     "when": "before",
-    "slide_href": "../05_Constraints_Part_1/index.html#/29",
+    "slide_href": "../05_Constraints_Part_1/index.html#/gac-lab",
     "handout_href": "../05_Constraints_Part_1/handout.html#chapter-gac-lab",
     "core": true,
     "seconds": 120
@@ -306,7 +306,7 @@
     "slide_number": 34,
     "slide_title": "A partner for each rule is not one shared solution",
     "when": "before",
-    "slide_href": "../05_Constraints_Part_1/index.html#/33",
+    "slide_href": "../05_Constraints_Part_1/index.html#/consistent-unsat",
     "handout_href": "../05_Constraints_Part_1/handout.html#chapter-consistent-unsat",
     "core": true,
     "seconds": 120
@@ -318,7 +318,7 @@
     "slide_number": 12,
     "slide_title": "Turn the remaining choices into a search tree",
     "when": "before",
-    "slide_href": "../06_Constraints_Part_2/index.html#/11",
+    "slide_href": "../06_Constraints_Part_2/index.html#/split-lab",
     "handout_href": "../06_Constraints_Part_2/handout.html#chapter-split-lab",
     "core": true,
     "seconds": 90
@@ -330,7 +330,7 @@
     "slide_number": 14,
     "slide_title": "Local search starts complete and repairs errors",
     "when": "after",
-    "slide_href": "../06_Constraints_Part_2/index.html#/13",
+    "slide_href": "../06_Constraints_Part_2/index.html#/local-intro",
     "handout_href": "../06_Constraints_Part_2/handout.html#chapter-local-intro",
     "core": true,
     "seconds": 90
@@ -342,7 +342,7 @@
     "slide_number": 32,
     "slide_title": "Keep the move fixed and change its temperature",
     "when": "before",
-    "slide_href": "../06_Constraints_Part_2/index.html#/31",
+    "slide_href": "../06_Constraints_Part_2/index.html#/anneal-lab",
     "handout_href": "../06_Constraints_Part_2/handout.html#chapter-anneal-lab",
     "core": true,
     "seconds": 90
@@ -354,7 +354,7 @@
     "slide_number": 38,
     "slide_title": "Build systematically—or repair a candidate",
     "when": "after",
-    "slide_href": "../06_Constraints_Part_2/index.html#/37",
+    "slide_href": "../06_Constraints_Part_2/index.html#/summary",
     "handout_href": "../06_Constraints_Part_2/handout.html#chapter-summary",
     "core": true,
     "seconds": 120
@@ -366,7 +366,7 @@
     "slide_number": 20,
     "slide_title": "Choose the next decision to reduce wasted work",
     "when": "after",
-    "slide_href": "../05_Constraints_Part_1/index.html#/19",
+    "slide_href": "../05_Constraints_Part_1/index.html#/ordering",
     "handout_href": "../05_Constraints_Part_1/handout.html#chapter-ordering",
     "core": false,
     "seconds": 90
@@ -378,7 +378,7 @@
     "slide_number": 31,
     "slide_title": "Deleting a partner can break an earlier check",
     "when": "after",
-    "slide_href": "../05_Constraints_Part_1/index.html#/30",
+    "slide_href": "../05_Constraints_Part_1/index.html#/requeue",
     "handout_href": "../05_Constraints_Part_1/handout.html#chapter-requeue",
     "core": false,
     "seconds": 90
@@ -390,7 +390,7 @@
     "slide_number": 33,
     "slide_title": "Cooling: explore first, then become more selective",
     "when": "after",
-    "slide_href": "../06_Constraints_Part_2/index.html#/32",
+    "slide_href": "../06_Constraints_Part_2/index.html#/cooling",
     "handout_href": "../06_Constraints_Part_2/handout.html#chapter-cooling",
     "core": false,
     "seconds": 90
@@ -399,10 +399,10 @@
     "id": "L03-C01",
     "pack": "07_Intro_ML_Part_1",
     "slide": "training-inference",
-    "slide_number": 4,
-    "slide_title": "Training changes the model; inference uses it",
+    "slide_number": 5,
+    "slide_title": "Learning a rule and using it are different steps",
     "when": "before",
-    "slide_href": "../07_Intro_ML_Part_1/index.html#/3",
+    "slide_href": "../07_Intro_ML_Part_1/index.html#/training-inference",
     "handout_href": "../07_Intro_ML_Part_1/handout.html#chapter-training-inference",
     "core": true,
     "seconds": 90
@@ -410,12 +410,12 @@
   {
     "id": "L03-C02",
     "pack": "07_Intro_ML_Part_1",
-    "slide": "signal-lab",
-    "slide_number": 9,
-    "slide_title": "Identify the signal, then reveal the reasoning",
-    "when": "before",
-    "slide_href": "../07_Intro_ML_Part_1/index.html#/8",
-    "handout_href": "../07_Intro_ML_Part_1/handout.html#chapter-signal-lab",
+    "slide": "regression-classification",
+    "slide_number": 11,
+    "slide_title": "The target’s meaning decides the task",
+    "when": "after",
+    "slide_href": "../07_Intro_ML_Part_1/index.html#/regression-classification",
+    "handout_href": "../07_Intro_ML_Part_1/handout.html#chapter-regression-classification",
     "core": true,
     "seconds": 90
   },
@@ -423,97 +423,97 @@
     "id": "L03-C03",
     "pack": "07_Intro_ML_Part_1",
     "slide": "mask-lab",
-    "slide_number": 11,
+    "slide_number": 17,
     "slide_title": "Build a self-supervised training pair",
     "when": "before",
-    "slide_href": "../07_Intro_ML_Part_1/index.html#/10",
+    "slide_href": "../07_Intro_ML_Part_1/index.html#/mask-lab",
     "handout_href": "../07_Intro_ML_Part_1/handout.html#chapter-mask-lab",
     "core": true,
-    "seconds": 60
+    "seconds": 90
   },
   {
     "id": "L03-C04",
     "pack": "07_Intro_ML_Part_1",
     "slide": "bandit-lab",
-    "slide_number": 15,
+    "slide_number": 26,
     "slide_title": "Explore or exploit? Try three uncertain actions",
     "when": "before",
-    "slide_href": "../07_Intro_ML_Part_1/index.html#/14",
+    "slide_href": "../07_Intro_ML_Part_1/index.html#/bandit-lab",
     "handout_href": "../07_Intro_ML_Part_1/handout.html#chapter-bandit-lab",
     "core": true,
-    "seconds": 90
+    "seconds": 120
   },
   {
     "id": "L03-C05",
     "pack": "08_Intro_ML_Part_2",
     "slide": "matrix",
-    "slide_number": 7,
-    "slide_title": "Rows are observations; columns are features",
+    "slide_number": 12,
+    "slide_title": "Stack input vectors into rows; keep targets separate",
     "when": "after",
-    "slide_href": "../08_Intro_ML_Part_2/index.html#/6",
+    "slide_href": "../08_Intro_ML_Part_2/index.html#/matrix",
     "handout_href": "../08_Intro_ML_Part_2/handout.html#chapter-matrix",
     "core": true,
-    "seconds": 60
+    "seconds": 90
   },
   {
     "id": "L03-C06",
     "pack": "08_Intro_ML_Part_2",
     "slide": "leakage",
-    "slide_number": 16,
-    "slide_title": "Evaluation must match the intended use",
+    "slide_number": 22,
+    "slide_title": "Keep evaluation inputs out of model preparation",
     "when": "before",
-    "slide_href": "../08_Intro_ML_Part_2/index.html#/15",
+    "slide_href": "../08_Intro_ML_Part_2/index.html#/leakage",
     "handout_href": "../08_Intro_ML_Part_2/handout.html#chapter-leakage",
     "core": true,
-    "seconds": 90
+    "seconds": 120
   },
   {
     "id": "L03-C07",
     "pack": "08_Intro_ML_Part_2",
     "slide": "summary",
-    "slide_number": 19,
-    "slide_title": "Define the task before choosing the algorithm",
+    "slide_number": 25,
+    "slide_title": "A complete prediction problem follows this chain",
     "when": "after",
-    "slide_href": "../08_Intro_ML_Part_2/index.html#/18",
+    "slide_href": "../08_Intro_ML_Part_2/index.html#/summary",
     "handout_href": "../08_Intro_ML_Part_2/handout.html#chapter-summary",
     "core": true,
-    "seconds": 120
+    "seconds": 150
   },
   {
     "id": "L03-O01",
     "pack": "07_Intro_ML_Part_1",
-    "slide": "semi-supervised",
-    "slide_number": 12,
-    "slide_title": "Use the labeled and unlabeled parts together",
+    "slide": "domain-shift",
+    "slide_number": 22,
+    "slide_title": "The same task can arrive in different-looking data",
     "when": "after",
-    "slide_href": "../07_Intro_ML_Part_1/index.html#/11",
-    "handout_href": "../07_Intro_ML_Part_1/handout.html#chapter-semi-supervised",
+    "slide_href": "../07_Intro_ML_Part_1/index.html#/domain-shift",
+    "handout_href": "../07_Intro_ML_Part_1/handout.html#chapter-domain-shift",
     "core": false,
-    "seconds": 90
+    "seconds": 120
   },
   {
     "id": "L03-O02",
     "pack": "08_Intro_ML_Part_2",
-    "slide": "hypotheses",
-    "slide_number": 9,
-    "slide_title": "A model family contains many possible functions",
+    "slide": "hypothesis-space",
+    "slide_number": 15,
+    "slide_title": "One parameter choice belongs to an allowed space",
     "when": "after",
-    "slide_href": "../08_Intro_ML_Part_2/index.html#/8",
-    "handout_href": "../08_Intro_ML_Part_2/handout.html#chapter-hypotheses",
+    "slide_href": "../08_Intro_ML_Part_2/index.html#/hypothesis-space",
+    "handout_href": "../08_Intro_ML_Part_2/handout.html#chapter-hypothesis-space",
     "core": false,
     "seconds": 90
   },
   {
     "id": "L03-O03",
     "pack": "08_Intro_ML_Part_2",
-    "slide": "generalization",
-    "slide_number": 13,
-    "slide_title": "Generalization is performance on new cases",
+    "slide": "leakage",
+    "slide_number": 22,
+    "slide_title": "Keep evaluation inputs out of model preparation",
     "when": "after",
-    "slide_href": "../08_Intro_ML_Part_2/index.html#/12",
-    "handout_href": "../08_Intro_ML_Part_2/handout.html#chapter-generalization",
+    "slide_href": "../08_Intro_ML_Part_2/index.html#/leakage",
+    "handout_href": "../08_Intro_ML_Part_2/handout.html#chapter-leakage",
     "core": false,
-    "seconds": 90
+    "seconds": 120
   },
   {
     "id": "L04-C01",
@@ -522,7 +522,7 @@
     "slide_number": 5,
     "slide_title": "Move the line and watch the residuals change",
     "when": "before",
-    "slide_href": "../09_Regression_Part_1/index.html#/4",
+    "slide_href": "../09_Regression_Part_1/index.html#/residual-lab",
     "handout_href": "../09_Regression_Part_1/handout.html#chapter-residual-lab",
     "core": true,
     "seconds": 60
@@ -534,7 +534,7 @@
     "slide_number": 9,
     "slide_title": "Compare the supplied line with a fresh OLS fit",
     "when": "before",
-    "slide_href": "../09_Regression_Part_1/index.html#/8",
+    "slide_href": "../09_Regression_Part_1/index.html#/fit-lab",
     "handout_href": "../09_Regression_Part_1/handout.html#chapter-fit-lab",
     "core": true,
     "seconds": 60
@@ -546,7 +546,7 @@
     "slide_number": 12,
     "slide_title": "R² compares squared error to a baseline",
     "when": "after",
-    "slide_href": "../09_Regression_Part_1/index.html#/11",
+    "slide_href": "../09_Regression_Part_1/index.html#/r2",
     "handout_href": "../09_Regression_Part_1/handout.html#chapter-r2",
     "core": true,
     "seconds": 90
@@ -558,7 +558,7 @@
     "slide_number": 15,
     "slide_title": "Curved in x can still be linear in the parameters",
     "when": "before",
-    "slide_href": "../09_Regression_Part_1/index.html#/14",
+    "slide_href": "../09_Regression_Part_1/index.html#/polynomial",
     "handout_href": "../09_Regression_Part_1/handout.html#chapter-polynomial",
     "core": true,
     "seconds": 90
@@ -570,7 +570,7 @@
     "slide_number": 20,
     "slide_title": "Explore the original high-degree curves",
     "when": "before",
-    "slide_href": "../09_Regression_Part_1/index.html#/19",
+    "slide_href": "../09_Regression_Part_1/index.html#/overfit-lab",
     "handout_href": "../09_Regression_Part_1/handout.html#chapter-overfit-lab",
     "core": true,
     "seconds": 90
@@ -582,7 +582,7 @@
     "slide_number": 4,
     "slide_title": "Repeat the experiment: how much do fits move?",
     "when": "after",
-    "slide_href": "../10_Regression_Part_2/index.html#/3",
+    "slide_href": "../10_Regression_Part_2/index.html#/bias-lab",
     "handout_href": "../10_Regression_Part_2/handout.html#chapter-bias-lab",
     "core": true,
     "seconds": 90
@@ -594,7 +594,7 @@
     "slide_number": 11,
     "slide_title": "A p-value is conditional on the null model",
     "when": "after",
-    "slide_href": "../10_Regression_Part_2/index.html#/10",
+    "slide_href": "../10_Regression_Part_2/index.html#/pvalues",
     "handout_href": "../10_Regression_Part_2/handout.html#chapter-pvalues",
     "core": true,
     "seconds": 90
@@ -606,7 +606,7 @@
     "slide_number": 17,
     "slide_title": "Adjustment can change the apparent relationship",
     "when": "after",
-    "slide_href": "../10_Regression_Part_2/index.html#/16",
+    "slide_href": "../10_Regression_Part_2/index.html#/adjustment",
     "handout_href": "../10_Regression_Part_2/handout.html#chapter-adjustment",
     "core": true,
     "seconds": 90
@@ -618,7 +618,7 @@
     "slide_number": 24,
     "slide_title": "Fit carefully. Evaluate separately. Interpret precisely.",
     "when": "after",
-    "slide_href": "../10_Regression_Part_2/index.html#/23",
+    "slide_href": "../10_Regression_Part_2/index.html#/summary",
     "handout_href": "../10_Regression_Part_2/handout.html#chapter-summary",
     "core": true,
     "seconds": 120
@@ -630,7 +630,7 @@
     "slide_number": 4,
     "slide_title": "Simple linear regression has two parameters",
     "when": "after",
-    "slide_href": "../09_Regression_Part_1/index.html#/3",
+    "slide_href": "../09_Regression_Part_1/index.html#/line",
     "handout_href": "../09_Regression_Part_1/handout.html#chapter-line",
     "core": false,
     "seconds": 90
@@ -642,7 +642,7 @@
     "slide_number": 12,
     "slide_title": "A confidence interval expresses coefficient precision",
     "when": "after",
-    "slide_href": "../10_Regression_Part_2/index.html#/11",
+    "slide_href": "../10_Regression_Part_2/index.html#/interval",
     "handout_href": "../10_Regression_Part_2/handout.html#chapter-interval",
     "core": false,
     "seconds": 90
@@ -654,7 +654,7 @@
     "slide_number": 13,
     "slide_title": "Multiple regression adds one coefficient per feature",
     "when": "after",
-    "slide_href": "../10_Regression_Part_2/index.html#/12",
+    "slide_href": "../10_Regression_Part_2/index.html#/multiple",
     "handout_href": "../10_Regression_Part_2/handout.html#chapter-multiple",
     "core": false,
     "seconds": 90
@@ -666,7 +666,7 @@
     "slide_number": 4,
     "slide_title": "A class label is not a continuous quantity",
     "when": "before",
-    "slide_href": "../11_Classification_Part_1/index.html#/3",
+    "slide_href": "../11_Classification_Part_1/index.html#/classification",
     "handout_href": "../11_Classification_Part_1/handout.html#chapter-classification",
     "core": true,
     "seconds": 60
@@ -678,7 +678,7 @@
     "slide_number": 9,
     "slide_title": "Even the ideal classifier can make mistakes",
     "when": "before",
-    "slide_href": "../11_Classification_Part_1/index.html#/8",
+    "slide_href": "../11_Classification_Part_1/index.html#/bayes-error",
     "handout_href": "../11_Classification_Part_1/handout.html#chapter-bayes-error",
     "core": true,
     "seconds": 60
@@ -690,7 +690,7 @@
     "slide_number": 13,
     "slide_title": "Reverse the direction with Bayes’ theorem",
     "when": "after",
-    "slide_href": "../11_Classification_Part_1/index.html#/12",
+    "slide_href": "../11_Classification_Part_1/index.html#/bayes-theorem",
     "handout_href": "../11_Classification_Part_1/handout.html#chapter-bayes-theorem",
     "core": true,
     "seconds": 90
@@ -702,7 +702,7 @@
     "slide_number": 14,
     "slide_title": "“Naive” means independent given the class",
     "when": "after",
-    "slide_href": "../11_Classification_Part_1/index.html#/13",
+    "slide_href": "../11_Classification_Part_1/index.html#/independence",
     "handout_href": "../11_Classification_Part_1/handout.html#chapter-independence",
     "core": true,
     "seconds": 90
@@ -714,7 +714,7 @@
     "slide_number": 22,
     "slide_title": "Explore a sigmoid and its decision threshold",
     "when": "before",
-    "slide_href": "../11_Classification_Part_1/index.html#/21",
+    "slide_href": "../11_Classification_Part_1/index.html#/logistic-lab",
     "handout_href": "../11_Classification_Part_1/handout.html#chapter-logistic-lab",
     "core": true,
     "seconds": 90
@@ -726,7 +726,7 @@
     "slide_number": 4,
     "slide_title": "Minimize negative log likelihood",
     "when": "before",
-    "slide_href": "../12_Classification_Part_2/index.html#/3",
+    "slide_href": "../12_Classification_Part_2/index.html#/log-loss",
     "handout_href": "../12_Classification_Part_2/handout.html#chapter-log-loss",
     "core": true,
     "seconds": 60
@@ -738,7 +738,7 @@
     "slide_number": 10,
     "slide_title": "Move a query and inspect the neighbors that vote",
     "when": "before",
-    "slide_href": "../12_Classification_Part_2/index.html#/9",
+    "slide_href": "../12_Classification_Part_2/index.html#/neighbors-lab",
     "handout_href": "../12_Classification_Part_2/handout.html#chapter-neighbors-lab",
     "core": true,
     "seconds": 60
@@ -750,7 +750,7 @@
     "slide_number": 18,
     "slide_title": "Select K before revealing the test score",
     "when": "before",
-    "slide_href": "../12_Classification_Part_2/index.html#/17",
+    "slide_href": "../12_Classification_Part_2/index.html#/validation-lab",
     "handout_href": "../12_Classification_Part_2/handout.html#chapter-validation-lab",
     "core": true,
     "seconds": 90
@@ -762,7 +762,7 @@
     "slide_number": 25,
     "slide_title": "Estimate uncertainty. Make a decision. Check it.",
     "when": "after",
-    "slide_href": "../12_Classification_Part_2/index.html#/24",
+    "slide_href": "../12_Classification_Part_2/index.html#/summary",
     "handout_href": "../12_Classification_Part_2/handout.html#chapter-summary",
     "core": true,
     "seconds": 120
@@ -774,7 +774,7 @@
     "slide_number": 10,
     "slide_title": "Change the costs and the best decision changes",
     "when": "after",
-    "slide_href": "../11_Classification_Part_1/index.html#/9",
+    "slide_href": "../11_Classification_Part_1/index.html#/decision-lab",
     "handout_href": "../11_Classification_Part_1/handout.html#chapter-decision-lab",
     "core": false,
     "seconds": 90
@@ -786,7 +786,7 @@
     "slide_number": 17,
     "slide_title": "One unseen category should not erase a class",
     "when": "after",
-    "slide_href": "../11_Classification_Part_1/index.html#/16",
+    "slide_href": "../11_Classification_Part_1/index.html#/smoothing",
     "handout_href": "../11_Classification_Part_1/handout.html#chapter-smoothing",
     "core": false,
     "seconds": 90
@@ -798,7 +798,7 @@
     "slide_number": 15,
     "slide_title": "See a neighbor average become smoother",
     "when": "after",
-    "slide_href": "../12_Classification_Part_2/index.html#/14",
+    "slide_href": "../12_Classification_Part_2/index.html#/regression-lab",
     "handout_href": "../12_Classification_Part_2/handout.html#chapter-regression-lab",
     "core": false,
     "seconds": 60
@@ -810,7 +810,7 @@
     "slide_number": 5,
     "slide_title": "Move the threshold and change the logic",
     "when": "before",
-    "slide_href": "../13_Classification_Part_3/index.html#/4",
+    "slide_href": "../13_Classification_Part_3/index.html#/threshold-lab",
     "handout_href": "../13_Classification_Part_3/handout.html#chapter-threshold-lab",
     "core": true,
     "seconds": 60
@@ -822,7 +822,7 @@
     "slide_number": 10,
     "slide_title": "The score moves by a squared input length",
     "when": "after",
-    "slide_href": "../13_Classification_Part_3/index.html#/9",
+    "slide_href": "../13_Classification_Part_3/index.html#/update-intuition",
     "handout_href": "../13_Classification_Part_3/handout.html#chapter-update-intuition",
     "core": true,
     "seconds": 90
@@ -834,7 +834,7 @@
     "slide_number": 11,
     "slide_title": "Step through the perceptron’s learning process",
     "when": "before",
-    "slide_href": "../13_Classification_Part_3/index.html#/10",
+    "slide_href": "../13_Classification_Part_3/index.html#/training-lab",
     "handout_href": "../13_Classification_Part_3/handout.html#chapter-training-lab",
     "core": true,
     "seconds": 60
@@ -846,7 +846,7 @@
     "slide_number": 15,
     "slide_title": "XOR exposes the limit of one linear separator",
     "when": "before",
-    "slide_href": "../13_Classification_Part_3/index.html#/14",
+    "slide_href": "../13_Classification_Part_3/index.html#/xor-lab",
     "handout_href": "../13_Classification_Part_3/handout.html#chapter-xor-lab",
     "core": true,
     "seconds": 90
@@ -858,7 +858,7 @@
     "slide_number": 20,
     "slide_title": "Normalize the score by the length of w",
     "when": "before",
-    "slide_href": "../13_Classification_Part_3/index.html#/19",
+    "slide_href": "../13_Classification_Part_3/index.html#/distance",
     "handout_href": "../13_Classification_Part_3/handout.html#chapter-distance",
     "core": true,
     "seconds": 90
@@ -870,7 +870,7 @@
     "slide_number": 25,
     "slide_title": "Slack variables make room for violations",
     "when": "after",
-    "slide_href": "../13_Classification_Part_3/index.html#/24",
+    "slide_href": "../13_Classification_Part_3/index.html#/soft-margin",
     "handout_href": "../13_Classification_Part_3/handout.html#chapter-soft-margin",
     "core": true,
     "seconds": 90
@@ -882,7 +882,7 @@
     "slide_number": 5,
     "slide_title": "Rotate the original data in the lifted space",
     "when": "before",
-    "slide_href": "../14_Classification_Part_4/index.html#/4",
+    "slide_href": "../14_Classification_Part_4/index.html#/lift-lab",
     "handout_href": "../14_Classification_Part_4/handout.html#chapter-lift-lab",
     "core": true,
     "seconds": 90
@@ -894,7 +894,7 @@
     "slide_number": 13,
     "slide_title": "Check the quadratic kernel identity numerically",
     "when": "before",
-    "slide_href": "../14_Classification_Part_4/index.html#/12",
+    "slide_href": "../14_Classification_Part_4/index.html#/kernel-lab",
     "handout_href": "../14_Classification_Part_4/handout.html#chapter-kernel-lab",
     "core": true,
     "seconds": 90
@@ -906,7 +906,7 @@
     "slide_number": 22,
     "slide_title": "Learn the line. Choose the margin. Change the space.",
     "when": "after",
-    "slide_href": "../14_Classification_Part_4/index.html#/21",
+    "slide_href": "../14_Classification_Part_4/index.html#/summary",
     "handout_href": "../14_Classification_Part_4/handout.html#chapter-summary",
     "core": true,
     "seconds": 120
@@ -918,7 +918,7 @@
     "slide_number": 26,
     "slide_title": "A margin violation need not be a wrong label",
     "when": "after",
-    "slide_href": "../13_Classification_Part_3/index.html#/25",
+    "slide_href": "../13_Classification_Part_3/index.html#/hinge",
     "handout_href": "../13_Classification_Part_3/handout.html#chapter-hinge",
     "core": false,
     "seconds": 90
@@ -930,7 +930,7 @@
     "slide_number": 11,
     "slide_title": "Only pairwise inner products remain",
     "when": "after",
-    "slide_href": "../14_Classification_Part_4/index.html#/10",
+    "slide_href": "../14_Classification_Part_4/index.html#/dual",
     "handout_href": "../14_Classification_Part_4/handout.html#chapter-dual",
     "core": false,
     "seconds": 90
@@ -942,7 +942,7 @@
     "slide_number": 17,
     "slide_title": "The Gram matrix must be positive semidefinite",
     "when": "after",
-    "slide_href": "../14_Classification_Part_4/index.html#/16",
+    "slide_href": "../14_Classification_Part_4/index.html#/valid-kernel",
     "handout_href": "../14_Classification_Part_4/handout.html#chapter-valid-kernel",
     "core": false,
     "seconds": 90
@@ -954,7 +954,7 @@
     "slide_number": 3,
     "slide_title": "The labels are no longer supplied",
     "when": "before",
-    "slide_href": "../15_Clustering_Part_1/index.html#/2",
+    "slide_href": "../15_Clustering_Part_1/index.html#/unlabeled",
     "handout_href": "../15_Clustering_Part_1/handout.html#chapter-unlabeled",
     "core": true,
     "seconds": 90
@@ -966,7 +966,7 @@
     "slide_number": 11,
     "slide_title": "Separate assignment from centroid movement",
     "when": "before",
-    "slide_href": "../15_Clustering_Part_1/index.html#/10",
+    "slide_href": "../15_Clustering_Part_1/index.html#/kmeans-lab",
     "handout_href": "../15_Clustering_Part_1/handout.html#chapter-kmeans-lab",
     "core": true,
     "seconds": 60
@@ -978,7 +978,7 @@
     "slide_number": 14,
     "slide_title": "The objective alone cannot choose K",
     "when": "before",
-    "slide_href": "../15_Clustering_Part_1/index.html#/13",
+    "slide_href": "../15_Clustering_Part_1/index.html#/choose-k",
     "handout_href": "../15_Clustering_Part_1/handout.html#chapter-choose-k",
     "core": true,
     "seconds": 90
@@ -990,7 +990,7 @@
     "slide_number": 20,
     "slide_title": "Inspect silhouette one observation at a time",
     "when": "before",
-    "slide_href": "../15_Clustering_Part_1/index.html#/19",
+    "slide_href": "../15_Clustering_Part_1/index.html#/silhouette-lab",
     "handout_href": "../15_Clustering_Part_1/handout.html#chapter-silhouette-lab",
     "core": true,
     "seconds": 90
@@ -1002,7 +1002,7 @@
     "slide_number": 28,
     "slide_title": "Watch EM reshape three Gaussian components",
     "when": "before",
-    "slide_href": "../15_Clustering_Part_1/index.html#/27",
+    "slide_href": "../15_Clustering_Part_1/index.html#/gmm-lab",
     "handout_href": "../15_Clustering_Part_1/handout.html#chapter-gmm-lab",
     "core": true,
     "seconds": 90
@@ -1014,7 +1014,7 @@
     "slide_number": 29,
     "slide_title": "A rising likelihood still needs interpretation",
     "when": "before",
-    "slide_href": "../15_Clustering_Part_1/index.html#/28",
+    "slide_href": "../15_Clustering_Part_1/index.html#/em-limits",
     "handout_href": "../15_Clustering_Part_1/handout.html#chapter-em-limits",
     "core": true,
     "seconds": 90
@@ -1026,7 +1026,7 @@
     "slide_number": 7,
     "slide_title": "Change the linkage and the merge budget",
     "when": "before",
-    "slide_href": "../16_Clustering_Part_2/index.html#/6",
+    "slide_href": "../16_Clustering_Part_2/index.html#/hierarchy-lab",
     "handout_href": "../16_Clustering_Part_2/handout.html#chapter-hierarchy-lab",
     "core": true,
     "seconds": 90
@@ -1038,7 +1038,7 @@
     "slide_number": 15,
     "slide_title": "Rotate a projection and find the first component",
     "when": "before",
-    "slide_href": "../16_Clustering_Part_2/index.html#/14",
+    "slide_href": "../16_Clustering_Part_2/index.html#/pca-lab",
     "handout_href": "../16_Clustering_Part_2/handout.html#chapter-pca-lab",
     "core": true,
     "seconds": 90
@@ -1050,7 +1050,7 @@
     "slide_number": 19,
     "slide_title": "Rescaling does not make a feature Gaussian",
     "when": "after",
-    "slide_href": "../16_Clustering_Part_2/index.html#/18",
+    "slide_href": "../16_Clustering_Part_2/index.html#/scaling",
     "handout_href": "../16_Clustering_Part_2/handout.html#chapter-scaling",
     "core": true,
     "seconds": 90
@@ -1062,7 +1062,7 @@
     "slide_number": 25,
     "slide_title": "Structure depends on the question you ask",
     "when": "after",
-    "slide_href": "../16_Clustering_Part_2/index.html#/24",
+    "slide_href": "../16_Clustering_Part_2/index.html#/summary",
     "handout_href": "../16_Clustering_Part_2/handout.html#chapter-summary",
     "core": true,
     "seconds": 120
@@ -1074,7 +1074,7 @@
     "slide_number": 9,
     "slide_title": "The derivative explains why the mean appears",
     "when": "after",
-    "slide_href": "../15_Clustering_Part_1/index.html#/8",
+    "slide_href": "../15_Clustering_Part_1/index.html#/update",
     "handout_href": "../15_Clustering_Part_1/handout.html#chapter-update",
     "core": false,
     "seconds": 90
@@ -1086,7 +1086,7 @@
     "slide_number": 16,
     "slide_title": "Keep d directions, then map back approximately",
     "when": "after",
-    "slide_href": "../16_Clustering_Part_2/index.html#/15",
+    "slide_href": "../16_Clustering_Part_2/index.html#/reconstruct",
     "handout_href": "../16_Clustering_Part_2/handout.html#chapter-reconstruct",
     "core": false,
     "seconds": 90
@@ -1098,7 +1098,7 @@
     "slide_number": 8,
     "slide_title": "A tree makes structure inspectable",
     "when": "after",
-    "slide_href": "../16_Clustering_Part_2/index.html#/7",
+    "slide_href": "../16_Clustering_Part_2/index.html#/hierarchy-limits",
     "handout_href": "../16_Clustering_Part_2/handout.html#chapter-hierarchy-limits",
     "core": false,
     "seconds": 90

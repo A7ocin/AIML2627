@@ -1,0 +1,32 @@
+/* Split Introduction to ML: concise explanations and notation keys. */
+.reveal .ml-clear .slide-body>h2{font-size:51px;margin-bottom:28px}
+.reveal .ml-clear .ml-panels{display:grid;grid-auto-flow:column;grid-auto-columns:minmax(0,1fr);gap:28px;margin:24px 0}
+.ml-clear .ml-panel{border:1px solid #35445a;border-top:4px solid #45d6c0;border-radius:13px;background:#141b27;padding:28px 30px;min-width:0}
+.reveal .ml-clear .ml-panel h3{font:700 31px/1.3 'Segoe UI',sans-serif;color:#45d6c0;margin:0 0 20px;text-transform:none;letter-spacing:0}
+.reveal .ml-clear .ml-panel p{font-size:29px;line-height:1.45;margin:14px 0}
+.ml-clear .ml-math{background:#101722;border:1px solid #344258;border-radius:10px;padding:24px 28px;font:34px/1.6 'Cambria Math','Segoe UI',sans-serif;color:#dec6ff;margin:20px 0;text-align:center}
+.ml-clear .ml-panel .ml-math{font-size:32px;padding:15px 12px}
+.ml-clear .ml-flow{display:flex;align-items:stretch;gap:22px;margin:35px 0}
+.ml-clear .ml-flow>div{flex:1;min-width:0;border:1px solid #415269;border-radius:12px;background:#152333;padding:28px 20px;font-size:29px;line-height:1.5;text-align:center}
+.ml-clear .ml-flow b{color:#ffd166}.ml-clear .ml-arrow{align-self:center;color:#ffd166;font-size:44px}
+.reveal .ml-clear .takeaway{font-size:27px;line-height:1.5;margin-top:28px}
+.ml-clear .ml-links{font-size:21px;margin-top:20px;display:flex;gap:28px}
+.reveal .ml-clear .comparison{font-size:29px;margin:25px 0}
+.reveal .ml-clear .comparison th,.reveal .ml-clear .comparison td{padding:14px 26px}
+/* Handout excerpts use the same diagrams at reading scale. */
+body:not(.reveal-viewport) .reference-body .ml-flow{flex-wrap:wrap;gap:10px;margin:16px 0}
+body:not(.reveal-viewport) .reference-body .ml-flow>div{font-size:16px;padding:12px}
+body:not(.reveal-viewport) .reference-body .ml-arrow{font-size:24px}
+body:not(.reveal-viewport) .reference-body .ml-panels{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:12px}
+body:not(.reveal-viewport) .reference-body .ml-panel{padding:16px}
+body:not(.reveal-viewport) .reference-body .ml-panel h3{color:#45d6c0;font-size:19px;margin:0 0 12px}
+body:not(.reveal-viewport) .reference-body .ml-panel p{font-size:16px;line-height:1.6}
+body:not(.reveal-viewport) .reference-body .ml-math{font-size:19px;padding:15px;overflow-wrap:anywhere}
+body:not(.reveal-viewport) .reference-body .ml-links{font-size:14px}
+@media print{.ml-clear .ml-panel,.ml-clear .ml-math,.ml-clear .ml-flow>div{background:white;color:#172536;border-color:#8796a8}.ml-clear .ml-panel h3,.ml-clear .ml-flow b{color:#16496b}}
+
+.ml-matrix{display:inline-grid;grid-template-columns:repeat(2,1fr);gap:10px 28px;padding:8px 22px;border-left:3px solid;border-right:3px solid;vertical-align:middle;position:relative}.ml-matrix:before,.ml-matrix:after{content:"";position:absolute;inset:0;border-top:3px solid;border-bottom:3px solid;width:12px}.ml-matrix:before{left:0}.ml-matrix:after{left:auto;right:0}.ml-matrix-name{vertical-align:middle}
+
+body:not(.reveal-viewport) .reference-body .ml-panel,body:not(.reveal-viewport) .reference-body .ml-flow>div{color:#eef3fa}body:not(.reveal-viewport) .reference-body .takeaway{color:#243849;background:#edf5f4;padding:12px;border-left:3px solid #278b7e}
+
+@media print{body:not(.reveal-viewport) .reference-body .ml-panel,body:not(.reveal-viewport) .reference-body .ml-flow>div{background:#fff!important;color:#172536!important}body:not(.reveal-viewport) .reference-body .ml-panel h3{color:#16496b!important}}

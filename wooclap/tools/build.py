@@ -31,7 +31,8 @@ for lecture in bank['lectures']:
         assert q['slide'] in ids,(q['id'],q['slide'])
         n,s=ids[q['slide']];q['slide_number']=n
         head=s.select_one('h2,h3,h1');q['slide_title']=head.get_text(' ',strip=True) if head else q['slide']
-        q['slide_href']=f'../{pack}/index.html#/{n-1}'
+        # Question slides are inserted at runtime, so source positions can shift.
+        q['slide_href']=f'../{pack}/index.html#/{s.get("id") or q["slide"]}'
         chapter=handout.select_one('[data-source-slide="'+q['slide']+'"]');assert chapter,q['id']
         q['handout_href']=f'../{pack}/handout.html#{chapter["id"]}'
         assert q['when'] in ['before','after']
@@ -102,7 +103,7 @@ for lecture in bank['lectures']:
         tier='Core' if q['core'] else 'Optional'
         choicehtml='<ol type="A">'+''.join('<li>'+H(c)+'</li>' for c in q['choices'])+'</ol>' if q['choices'] else '<p class="open-prompt">Open response · one or two sentences</p>'
         answer=(chr(64+q['correct_index'])+'. '+q['correct']) if q['correct_index'] else 'Suggested rubric (no automatic answer key)'
-        placement=f'{q["when"].capitalize()} slide {q["slide_number"]}: {q["slide_title"]}'
+        placement=f'{q["when"].capitalize()} “{q["slide_title"]}”'
         block.append(f'''<article class="question" id="{q['id']}" data-lecture="{q['lecture']}" data-tier="{tier.lower()}"><div class="qmeta"><span>{H(q['id'])}</span><span class="badge">{tier}</span><span>{H(q['purpose'])}</span><span>{q['seconds']} s including debrief</span></div><p class="placement"><a href="{q['slide_href']}">{H(placement)}</a> · <a href="{q['handout_href']}">Handout section</a></p><h3>{H(q['stem'])}</h3>{choicehtml}<div class="answer"><strong>{H(answer)}</strong><p>{H(q['explanation'])}</p></div><p><strong>Misconception to diagnose:</strong> {H(q['misconception'])}</p>{'<p><strong>Facilitation:</strong> '+H(q['activity'])+'</p>' if q['activity'] else ''}</article>''')
         md.extend([f'### {q["id"]} · {tier} · {q["purpose"]}','',f'**Placement:** [{placement}]({q["slide_href"]}) · [Handout]({q["handout_href"]})  ',f'**Time:** {q["seconds"]} seconds, including debrief.','',q['stem'],''])
         md.extend([f'- **{chr(65+i)}.** {c}' for i,c in enumerate(q['choices'])]);md.extend(['',f'**Answer:** {answer}','',q['explanation'],'',f'**Misconception:** {q["misconception"]}',''])
