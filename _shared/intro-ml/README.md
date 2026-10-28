@@ -2,7 +2,7 @@
 
 The active teaching material is in `../../07_Intro_ML_Part_1/` and `../../08_Intro_ML_Part_2/`. Each contains `index.html` (slides) and `handout.html` (reading material with standalone interactive examples). Open these files directly in a browser or through the course home page. All teaching assets work offline.
 
-Part 1 moves from learning components to learning settings, then application domains. Part 2 recaps supervised regression, introduces variables and spaces, organizes observations, defines functions and hypotheses, then explains fit and generalization. The 24 October 2026 review restores technical definitions from the original lesson, with concise symbol keys on the slides and fuller explanations in the handouts.
+Part 1 moves from learning components to learning settings, then application domains. Part 2 follows the original Formulating a regression task structure: Variables and datasets, Models and hypotheses, and Generalization. Evaluation is included within Generalization. The 24 October 2026 review restores technical definitions from the original lesson, with concise symbol keys on the slides and fuller explanations in the handouts.
 
 | Pack | Interactive slide IDs | Purpose |
 | --- | --- | --- |
@@ -40,3 +40,19 @@ All 69 rendered slides were visually reviewed at 1280 × 720. Frame aspect ratio
 Part 1 now has 34 source slides, 39 displayed slides and 31 handout reading sections. The agricultural example uses field trials rather than the ambiguous word plot, with a full-width examples → learning → prediction sequence. Training and inference use equal parallel layouts and separate shared icons: parameter adjustment versus prediction through a fitted model. Those meanings are reused on the related example slides.
 
 A new semi-supervised introduction motivates the labeled/unlabeled mixture. The following slide distinguishes labeling a particular batch (transduction) from learning a rule for future photos (induction), using the same 100 labeled and 10,000 unlabeled photos. Weak supervision is introduced through the cost and limitations of labels. A pictured bandit setup precedes the bandit question and lab, defining arm, pull, reward and the repeated decision loop. The companion handout includes both new sections, updated examples and contents. All three Part 1 standalone labs and question text are unchanged.
+
+## Part 2 source-aligned chapters and notation · 27 October 2026
+
+The active Part 2 deck and handout now use the original three subsection names under Formulating a regression task: Variables and datasets; Models and hypotheses; Generalization. The practical evaluation material is grouped within Generalization. The chapter map, navigation bars, section numbers and nested handout contents match. Counts remain 27 source slides, 32 displayed slides, 25 reading sections and three interactive examples.
+
+Every green note uses line-separated explanations rather than middle-dot separators. Longer symbol keys use balanced columns. Local definitions cover variable versus value, indices, domains, vectors/matrices, transpose, prediction functions, coefficient tuples/spaces, residuals, MSE and the lab controls. Training-only preprocessing and the roles of held-out sets are explained where used. The polynomial family explicitly includes degree-at-most-two special cases when a = 0. The notation remains consistent with the original parameter-based hypothesis-space convention.
+
+`css/p2-review.css` applies symmetric card and note padding only to Part 2, with centered figures and aligned mathematical panels. All 32 displayed slides were rendered and visually inspected; no horizontal clipping, asymmetric card/note padding or green-note separator dots were found. The standalone handout lab documents, question text, original numerical payloads and numerical routines are unchanged.
+
+## Original definition-box and equation audit · 27 October 2026
+
+`notes/original-math-coverage.json` maps all three original light-blue definition boxes and all three display-math blocks to the active slides and handout. The full symbolic input matrix and target column vector now follow the numerical example in `matrix-notation`. Predictor-component domain membership, the dataset-scoped fitting equation and the domain-scoped generalization equation are explicit. Model, hypothesis and hypothesis space use the original fixed-form parameter convention consistently.
+
+The sequence now matches the original reasoning more closely: collect/organize data; inspect the original scatter in Models and hypotheses; choose a function and parameters; inspect the supplied curve in Generalization; ask the source's two questions about better fit and nonvisual assessment; measure disagreement; extend to relevant unseen cases. All source variable-type examples and terminology qualifications are retained in the handout. The transpose needed to stack column observations as matrix rows is explicit. The generalization formula explains associated outcomes rather than every arbitrary input–outcome combination.
+
+Current Part 2 totals are 28 source slides, 33 displayed slides, 26 reading sections and three unchanged interactive labs. All 33 rendered slides were reviewed for layout after the changes. Question wording and all original numerical chart coordinates remain unchanged.

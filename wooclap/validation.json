@@ -62,14 +62,14 @@
       "slides": 41
     },
     "07_Intro_ML_Part_1": {
-      "slides_sha256": "562c6a5b36415348314b8b248da3c56788925046a005bf9f8302ea10f9fb2d15",
+      "slides_sha256": "4020c9f079d64b77076660d5266cb63f02e0c79b895b66c0c99a2eae492420fd",
       "handout_sha256": "617eba708370bd604591562427bfd00b4ff2d7495a8f62e88bd9623189185160",
       "slides": 34
     },
     "08_Intro_ML_Part_2": {
-      "slides_sha256": "997eb26e2468202537abbb4ed321fd7584063686ba6539469ce588f3c06fc081",
-      "handout_sha256": "36cbecaf7a240c7397f3f52f94eaa0bf2f254cf291ceb94e4a27be7d3bdf60a4",
-      "slides": 27
+      "slides_sha256": "f9e3754b65a1e77dd5015c0f81f8e2f2d8cdd0c3b7cd6a09bedd1291fb2e8262",
+      "handout_sha256": "10a79d215a17d618ff21eb3b8c6fd6de5aea8ccdc9ce0b42bbbe9ce7a5692b2b",
+      "slides": 28
     },
     "09_Regression_Part_1": {
       "slides_sha256": "9b9f90c372c51b03081751967f5b1778c2821c534a7b81cede676fe9f4316cf3",
@@ -815,5 +815,140 @@
     "slide_handout_title_and_link_checks": "passed",
     "bandit_introduced_before_question": true,
     "distinct_training_and_inference_icons": true
+  },
+  "intro_ml_part2_clarity_review": {
+    "date": "2026-10-27",
+    "source_slides": 27,
+    "displayed_slides": 32,
+    "handout_sections": 25,
+    "chapter_names": [
+      "Variables and datasets",
+      "Models and hypotheses",
+      "Generalization"
+    ],
+    "all_32_rendered_and_visually_reviewed": true,
+    "symmetric_card_and_green_note_padding": "passed",
+    "horizontal_clipping": "none",
+    "green_note_middle_dots": 0,
+    "all_symbols_explained_locally": true,
+    "interactive_degree_control": "passed",
+    "local_links_and_184_guide_targets": "passed",
+    "unchanged_standalone_handout_labs": 3,
+    "question_bank_and_32_workbooks_unchanged": true,
+    "live_question_content_changed": false
+  },
+  "intro_ml_part2_original_math_audit": {
+    "date": "2026-10-27",
+    "definition_boxes_audited": 3,
+    "display_math_blocks_audited": 3,
+    "itemized_coverage": "../_shared/intro-ml/notes/original-math-coverage.json",
+    "source_slides": 28,
+    "displayed_slides": 33,
+    "handout_sections": 26,
+    "source_reasoning_order": "passed",
+    "all_33_rendered_and_visually_reviewed": true,
+    "clipping_and_green_dot_checks": "passed",
+    "complete_matrix_formula": true,
+    "dataset_and_predictor_domain_memberships": true,
+    "dataset_and_domain_scoped_fit_equations": true,
+    "source_parameter_based_hypothesis_convention": true,
+    "unchanged_embedded_labs": 3,
+    "question_bank_and_32_workbooks_unchanged": true,
+    "local_links_and_184_guide_targets": "passed"
+  },
+  "intro_ml_part2_predictor_introduction": {
+    "date": "2026-10-27",
+    "definition_slide": "recap-signal",
+    "before_notation_slide": "measurements",
+    "concrete_example_reinforced_on": "fertilizer",
+    "handout_aligned": true
+  },
+  "intro_ml_part2_index_example": {
+    "date": "2026-10-27",
+    "slide": "measurements",
+    "example_values": {
+      "x_21": 0.6,
+      "x_22": 0.5,
+      "y_2": 1.1
+    },
+    "same_toy_data_as_later_vector_and_matrix_slides": true,
+    "handout_aligned": true
+  },
+  "intro_ml_part2_dataset_limits": {
+    "date": "2026-10-27",
+    "upper_n_and_lower_i_1_stacked": true,
+    "slides_and_visible_handout_formulas_updated": true
+  },
+  "intro_ml_part2_noise_diagram": {
+    "date": "2026-10-27",
+    "slide": "noise",
+    "uses_original_observations_and_supplied_curve": true,
+    "fertilizer_range": [
+      0.2,
+      0.55
+    ],
+    "highlighted_input": 0.25,
+    "observed": 2.225,
+    "predicted": 2.475,
+    "handout_aligned": true
+  },
+  "intro_ml_part2_math_typesetting": {
+    "date": "2026-10-27",
+    "native_mathml": true,
+    "summation_limits": "munderover",
+    "combined_lower_upper_scripts": "msubsup",
+    "dataset_limits": "msubsup",
+    "replacement_counts": {
+      "index.html": {
+        "dataset": 1,
+        "mse": 1,
+        "combined_scripts": 4
+      },
+      "handout.html": {
+        "dataset": 2,
+        "mse": 2,
+        "combined_scripts": 6
+      }
+    },
+    "standalone_lab_documents_unchanged": true,
+    "all_33_slides_rendered": true,
+    "clipping_checks": "passed",
+    "mathml_namespace_and_nonzero_render_sizes": "passed",
+    "remaining_visible_consecutive_unicode_lower_upper_scripts": 0,
+    "affected_math_slides_visually_reviewed": [
+      "dataset",
+      "matrix",
+      "matrix-notation",
+      "residuals"
+    ]
+  },
+  "intro_ml_part2_split_illustration": {
+    "date": "2026-10-27",
+    "dot_counts": {
+      "training": 30,
+      "validation": 10,
+      "test": 10
+    },
+    "block_widths": {
+      "training": 912,
+      "validation": 304,
+      "test": 304
+    },
+    "proportions": [
+      0.6,
+      0.2,
+      0.2
+    ],
+    "ratios_labeled_illustrative": true,
+    "handout_aligned": true
+  },
+  "introMLCurveAndQuestionReview": {
+    "date": "2026-10-27",
+    "question": "L03-O03",
+    "localBankAndWorkbookMatch": true,
+    "renderedSlide": 27,
+    "liveSavedAndReloadVerified": true,
+    "unaffectedWorkbooksPreserved": 31,
+    "curveExplanation": "Simulator uses y=2+1.2x−0.9x² plus noise; slide and handout distinguish true and fitted curves; numerical engine unchanged."
   }
 }

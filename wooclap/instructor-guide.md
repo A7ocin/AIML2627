@@ -810,7 +810,7 @@ Semi-supervision describes how labeled and unlabeled examples are used. Domain s
 
 ### L03-C05 · Core · Check / construct a dataset
 
-**Placement:** [After “Stack input vectors into rows; keep targets separate”](../08_Intro_ML_Part_2/index.html#/matrix) · [Handout](../08_Intro_ML_Part_2/handout.html#chapter-matrix)  
+**Placement:** [After “A design matrix stores input rows; a vector stores targets”](../08_Intro_ML_Part_2/index.html#/matrix) · [Handout](../08_Intro_ML_Part_2/handout.html#chapter-matrix)  
 **Time:** 90 seconds, including debrief.
 
 60 field trials record fertilizer and soil moisture to predict yield. A trial ID is kept only for lookup. With one row per trial, which input/target representation is correct?
@@ -830,7 +830,7 @@ n=60 is the number of observations and m=2 is the number of predictors. The desi
 
 ### L03-C06 · Core · Prediction / detect evaluation leakage
 
-**Placement:** [Before “Keep evaluation inputs out of model preparation”](../08_Intro_ML_Part_2/index.html#/leakage) · [Handout](../08_Intro_ML_Part_2/handout.html#chapter-leakage)  
+**Placement:** [Before “Data leakage lets evaluation information enter preparation”](../08_Intro_ML_Part_2/index.html#/leakage) · [Handout](../08_Intro_ML_Part_2/handout.html#chapter-leakage)  
 **Time:** 120 seconds, including debrief.
 
 An engineer computes a feature mean from all 1,000 rows, uses it to scale the inputs, and only then splits into training and test sets. Test targets never enter fitting. Is the final test independent of model preparation?
@@ -866,7 +866,7 @@ Suggested rubric: prefer degree 2 because its validation error is lower despite 
 
 ### L03-O02 · Optional · Optional / distinguish θ from Θ
 
-**Placement:** [After “One parameter choice belongs to an allowed space”](../08_Intro_ML_Part_2/index.html#/hypothesis-space) · [Handout](../08_Intro_ML_Part_2/handout.html#chapter-hypothesis-space)  
+**Placement:** [After “A hypothesis space contains the allowed choices”](../08_Intro_ML_Part_2/index.html#/hypothesis-space) · [Handout](../08_Intro_ML_Part_2/handout.html#chapter-hypothesis-space)  
 **Time:** 90 seconds, including debrief.
 
 We choose the family fθ(x)=ax²+bx+c, then fitting changes θ from (1,0,0) to (2,−1,0.5). What changed?
@@ -886,23 +886,23 @@ The family fixes the functional form and Θ describes its permitted coefficient 
 
 ### L03-O03 · Optional · Optional / design a realistic evaluation
 
-**Placement:** [After “Keep evaluation inputs out of model preparation”](../08_Intro_ML_Part_2/index.html#/leakage) · [Handout](../08_Intro_ML_Part_2/handout.html#chapter-leakage)  
+**Placement:** [After “Data leakage lets evaluation information enter preparation”](../08_Intro_ML_Part_2/index.html#/leakage) · [Handout](../08_Intro_ML_Part_2/handout.html#chapter-leakage)  
 **Time:** 120 seconds, including debrief.
 
-Deployment will predict future months for fields not used in training. The dataset has repeated monthly rows for each field. Which held-out evaluation matches both requirements?
+A yield model is trained on fields A–D using data from 2021–2023. We want to predict yields in 2024 for new fields. Which test set best checks this?
 
-- **A.** Randomly shuffle individual rows so the same fields and future dates can appear in training.
-- **B.** Train on earlier data from one group of fields, then evaluate later data from different fields.
-- **C.** Hold out later months but keep exactly the same fields in training and evaluation.
-- **D.** Hold out field identities but allow later measurements to enter training before predicting earlier dates.
+- **A.** 2024 records from fields A–D.
+- **B.** 2024 records from different fields, E–H.
+- **C.** 2021–2023 records from different fields, E–H.
+- **D.** Unused 2021–2023 records from fields A–D, selected at random.
 
-**Answer:** B. Train on earlier data from one group of fields, then evaluate later data from different fields.
+**Answer:** B. 2024 records from different fields, E–H.
 
-The intended use has both a time boundary and a new-field boundary. Training on earlier dates and evaluating later dates from disjoint fields tests both forms of transfer. A row-level shuffle can share related field records or future information across the boundary; satisfying only one requirement tests a narrower use case.
+B checks both intended changes: 2024 is later than the training years, and fields E–H do not occur in training. A checks a later year on familiar fields. C checks new fields in the same years. D checks unused records from familiar fields and years. None of A, C or D checks both requirements.
 
-**Misconception:** Assuming any random row split measures the intended deployment task, or addressing only time or only grouping.
+**Misconception:** Testing only a new time period or only new field identities, rather than matching both aspects of the intended use.
 
-**Facilitation:** Ask students to commit to a choice, explain the relevant evidence, and compare a plausible distractor before revealing the answer.
+**Facilitation:** Ask what each option tests: later time, unseen fields, both, or neither. Then connect the test split to the intended prediction task.
 
 ## 09 · Regression · Part 1
 

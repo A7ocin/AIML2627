@@ -852,7 +852,7 @@
       "verified": true,
       "eventCode": "JCBAAQM",
       "src": "https://app.wooclap.com/events/JCBAAQM/questions/6aa90164d2f1e8b522d99aa8",
-      "title": "L03-O03 · Deployment will predict future months for fields not used in training. The dataset has repeated monthly rows for each field. Which held-out evaluation matches both requirements?",
+      "title": "L03-O03 · A yield model is trained on fields A–D using data from 2021–2023. We want to predict yields in 2024 for new fields. Which test set best checks this?",
       "choiceCount": 4,
       "correct": [
         2
@@ -1440,5 +1440,22 @@
     "persistence": "All ten updated titles confirmed after reloading the event",
     "writtenPrompts": "All ten rendered stems and choices match the local bank",
     "proof": "Local review artifact: wooclap-saved.png"
+  },
+  "introMLQuestionClarityReview": {
+    "date": "2026-10-27",
+    "questionId": "L03-O03",
+    "eventCode": "JCBAAQM",
+    "stem": "A yield model is trained on fields A–D using data from 2021–2023. We want to predict yields in 2024 for new fields. Which test set best checks this?",
+    "choices": [
+      "2024 records from fields A–D.",
+      "2024 records from different fields, E–H.",
+      "2021–2023 records from different fields, E–H.",
+      "Unused 2021–2023 records from fields A–D, selected at random."
+    ],
+    "correct": [
+      2
+    ],
+    "method": "Edited the existing form through the authenticated Zen Work browser, saved, reloaded the event, reopened the form and visually verified all wording, answer B and unchanged voting settings. Rendered slide 27 matches.",
+    "proof": "outputs/ml2-curve-question-20261027/wooclap-saved.png"
   }
 }

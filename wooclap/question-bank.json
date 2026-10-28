@@ -1191,24 +1191,24 @@
       "slide": "leakage",
       "when": "after",
       "purpose": "Optional / design a realistic evaluation",
-      "stem": "Deployment will predict future months for fields not used in training. The dataset has repeated monthly rows for each field. Which held-out evaluation matches both requirements?",
-      "correct": "Train on earlier data from one group of fields, then evaluate later data from different fields.",
-      "explanation": "The intended use has both a time boundary and a new-field boundary. Training on earlier dates and evaluating later dates from disjoint fields tests both forms of transfer. A row-level shuffle can share related field records or future information across the boundary; satisfying only one requirement tests a narrower use case.",
-      "misconception": "Assuming any random row split measures the intended deployment task, or addressing only time or only grouping.",
-      "activity": "Ask students to commit to a choice, explain the relevant evidence, and compare a plausible distractor before revealing the answer.",
+      "stem": "A yield model is trained on fields A–D using data from 2021–2023. We want to predict yields in 2024 for new fields. Which test set best checks this?",
+      "correct": "2024 records from different fields, E–H.",
+      "explanation": "B checks both intended changes: 2024 is later than the training years, and fields E–H do not occur in training. A checks a later year on familiar fields. C checks new fields in the same years. D checks unused records from familiar fields and years. None of A, C or D checks both requirements.",
+      "misconception": "Testing only a new time period or only new field identities, rather than matching both aspects of the intended use.",
+      "activity": "Ask what each option tests: later time, unseen fields, both, or neither. Then connect the test split to the intended prediction task.",
       "seconds": 120,
       "pack": "08_Intro_ML_Part_2",
       "choices": [
-        "Randomly shuffle individual rows so the same fields and future dates can appear in training.",
-        "Train on earlier data from one group of fields, then evaluate later data from different fields.",
-        "Hold out later months but keep exactly the same fields in training and evaluation.",
-        "Hold out field identities but allow later measurements to enter training before predicting earlier dates."
+        "2024 records from fields A–D.",
+        "2024 records from different fields, E–H.",
+        "2021–2023 records from different fields, E–H.",
+        "Unused 2021–2023 records from fields A–D, selected at random."
       ],
       "correct_index": 2,
       "audience": "First undergraduate introduction to AI and ML",
       "original_pack": "03_Intro_ML",
       "original_lecture": 3,
-      "reviewed": "2026-10-24"
+      "reviewed": "2026-10-27"
     },
     {
       "id": "L04-C01",

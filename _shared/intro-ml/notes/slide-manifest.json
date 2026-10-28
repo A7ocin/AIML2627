@@ -280,14 +280,14 @@
     "lecture": 8,
     "source_position": 3,
     "id": "part-roadmap",
-    "title": "Four chapters: from a record to an evaluation",
+    "title": "Formulating a regression task: three chapters",
     "handout": "08_Intro_ML_Part_2/handout.html#chapter-part-roadmap"
   },
   {
     "lecture": 8,
     "source_position": 4,
     "id": "fertilizer",
-    "title": "Decide what one observation represents",
+    "title": "One observation is one field trial",
     "chapter": 1,
     "handout": "08_Intro_ML_Part_2/handout.html#chapter-fertilizer"
   },
@@ -295,7 +295,7 @@
     "lecture": 8,
     "source_position": 5,
     "id": "measurements",
-    "title": "A variable names a quantity; a value records one case",
+    "title": "Variables name quantities; indexed values name records",
     "chapter": 1,
     "handout": "08_Intro_ML_Part_2/handout.html#chapter-measurements"
   },
@@ -303,7 +303,7 @@
     "lecture": 8,
     "source_position": 6,
     "id": "variable-types",
-    "title": "The type tells us what a value means",
+    "title": "Variable types: magnitudes and categories",
     "chapter": 1,
     "handout": "08_Intro_ML_Part_2/handout.html#chapter-variable-types"
   },
@@ -311,7 +311,7 @@
     "lecture": 8,
     "source_position": 7,
     "id": "roles",
-    "title": "Choose the inputs and the outcome for this task",
+    "title": "Predictors are inputs; the outcome is the target",
     "chapter": 1,
     "handout": "08_Intro_ML_Part_2/handout.html#chapter-roles"
   },
@@ -326,22 +326,14 @@
   {
     "lecture": 8,
     "source_position": 9,
-    "id": "observations-lab",
-    "title": "Inspect the original fertilizer observations",
-    "chapter": 1,
-    "handout": "08_Intro_ML_Part_2/handout.html#chapter-observations-lab"
-  },
-  {
-    "lecture": 8,
-    "source_position": 10,
     "id": "input-output-spaces",
-    "title": "A domain lists possible values; a space combines them",
+    "title": "Domains contain values; input spaces contain combinations",
     "chapter": 1,
     "handout": "08_Intro_ML_Part_2/handout.html#chapter-input-output-spaces"
   },
   {
     "lecture": 8,
-    "source_position": 11,
+    "source_position": 10,
     "id": "observation-vector",
     "title": "One input vector collects one value per predictor",
     "chapter": 1,
@@ -349,47 +341,71 @@
   },
   {
     "lecture": 8,
-    "source_position": 12,
+    "source_position": 11,
     "id": "matrix",
-    "title": "Stack input vectors into rows; keep targets separate",
+    "title": "A design matrix stores input rows; a vector stores targets",
     "chapter": 1,
     "handout": "08_Intro_ML_Part_2/handout.html#chapter-matrix"
   },
   {
     "lecture": 8,
+    "source_position": 12,
+    "id": "matrix-notation",
+    "title": "General matrix notation: n rows and m predictors",
+    "chapter": 1,
+    "handout": "08_Intro_ML_Part_2/handout.html#chapter-matrix-notation"
+  },
+  {
+    "lecture": 8,
     "source_position": 13,
+    "id": "observations-lab",
+    "title": "Inspect the original fertilizer observations",
+    "chapter": 2,
+    "handout": "08_Intro_ML_Part_2/handout.html#chapter-observations-lab"
+  },
+  {
+    "lecture": 8,
+    "source_position": 14,
     "id": "prediction-function",
-    "title": "A prediction function maps inputs to outputs",
+    "title": "Training fits predictions to recorded targets",
     "chapter": 2,
     "handout": "08_Intro_ML_Part_2/handout.html#chapter-prediction-function"
   },
   {
     "lecture": 8,
-    "source_position": 14,
+    "source_position": 15,
     "id": "hypotheses",
-    "title": "Fix a form; allow its coefficients to change",
+    "title": "A model fixes a form; a hypothesis chooses its parameters",
     "chapter": 2,
     "handout": "08_Intro_ML_Part_2/handout.html#chapter-hypotheses"
   },
   {
     "lecture": 8,
-    "source_position": 15,
+    "source_position": 16,
     "id": "hypothesis-space",
-    "title": "One parameter choice belongs to an allowed space",
+    "title": "A hypothesis space contains the allowed choices",
     "chapter": 2,
     "handout": "08_Intro_ML_Part_2/handout.html#chapter-hypothesis-space"
   },
   {
     "lecture": 8,
-    "source_position": 16,
+    "source_position": 17,
     "id": "hypothesis-lab",
     "title": "Compare the original observations and hypothesis",
-    "chapter": 2,
+    "chapter": 3,
     "handout": "08_Intro_ML_Part_2/handout.html#chapter-hypothesis-lab"
   },
   {
     "lecture": 8,
-    "source_position": 17,
+    "source_position": 18,
+    "id": "noise",
+    "title": "Why does the curve miss some observed points?",
+    "chapter": 3,
+    "handout": "08_Intro_ML_Part_2/handout.html#chapter-noise"
+  },
+  {
+    "lecture": 8,
+    "source_position": 19,
     "id": "residuals",
     "title": "A residual is the gap between observation and prediction",
     "chapter": 3,
@@ -397,78 +413,70 @@
   },
   {
     "lecture": 8,
-    "source_position": 18,
-    "id": "noise",
-    "title": "A gap need not be a mistake in the measurement",
-    "chapter": 3,
-    "handout": "08_Intro_ML_Part_2/handout.html#chapter-noise"
-  },
-  {
-    "lecture": 8,
-    "source_position": 19,
+    "source_position": 20,
     "id": "generalization",
-    "title": "Generalization asks how the rule works beyond its data",
+    "title": "Generalization means predicting relevant new cases",
     "chapter": 3,
     "handout": "08_Intro_ML_Part_2/handout.html#chapter-generalization"
   },
   {
     "lecture": 8,
-    "source_position": 20,
+    "source_position": 21,
     "id": "splits",
-    "title": "Give three sets three different jobs",
-    "chapter": 4,
+    "title": "Training, validation and test sets have different jobs",
+    "chapter": 3,
     "handout": "08_Intro_ML_Part_2/handout.html#chapter-splits"
   },
   {
     "lecture": 8,
-    "source_position": 21,
+    "source_position": 22,
     "id": "generalization-lab",
     "title": "Fit the training points; compare unseen validation points",
-    "chapter": 4,
+    "chapter": 3,
     "handout": "08_Intro_ML_Part_2/handout.html#chapter-generalization-lab"
   },
   {
     "lecture": 8,
-    "source_position": 22,
+    "source_position": 23,
     "id": "leakage",
-    "title": "Keep evaluation inputs out of model preparation",
-    "chapter": 4,
+    "title": "Data leakage lets evaluation information enter preparation",
+    "chapter": 3,
     "handout": "08_Intro_ML_Part_2/handout.html#chapter-leakage"
   },
   {
     "lecture": 8,
-    "source_position": 23,
+    "source_position": 24,
     "id": "practice",
     "title": "Use the notation to reason about four cases",
-    "chapter": 4,
+    "chapter": 3,
     "handout": "08_Intro_ML_Part_2/handout.html#chapter-practice"
   },
   {
     "lecture": 8,
-    "source_position": 24,
+    "source_position": 25,
     "id": "answers",
     "title": "Reason from the definition, then apply it",
-    "chapter": 4,
+    "chapter": 3,
     "handout": "08_Intro_ML_Part_2/handout.html#chapter-answers"
   },
   {
     "lecture": 8,
-    "source_position": 25,
+    "source_position": 26,
     "id": "summary",
     "title": "A complete prediction problem follows this chain",
-    "chapter": 4,
+    "chapter": 3,
     "handout": "08_Intro_ML_Part_2/handout.html#chapter-summary"
   },
   {
     "lecture": 8,
-    "source_position": 26,
+    "source_position": 27,
     "id": "references",
     "title": "Sources for the data, notation and evaluation",
     "handout": "08_Intro_ML_Part_2/handout.html#chapter-references"
   },
   {
     "lecture": 8,
-    "source_position": 27,
+    "source_position": 28,
     "id": "course-navigation",
     "title": "Continue the course"
   }

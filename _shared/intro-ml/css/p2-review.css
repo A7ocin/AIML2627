@@ -1,0 +1,52 @@
+/* Part 2: source-aligned chapters, balanced spacing, self-contained symbol keys. */
+.ml2-review .sv-chapter-nav{gap:36px;font-size:21px}
+.ml2-review .sv-panel{padding:30px;box-sizing:border-box}
+.ml2-review .sv-panel>:first-child{margin-top:0!important}.ml2-review .sv-panel>:last-child{margin-bottom:0!important}
+.ml2-review .sv-grid{gap:32px}.ml2-review .sv-art.sv-grid>img.sv-diagram{align-self:center}
+.ml2-review .slide-body>.sv-math{margin:0;font-size:31px;line-height:1.4;padding:18px 28px}
+.ml2-review .sv-note{padding:20px 28px;box-sizing:border-box;font-size:25px;line-height:1.4}
+.ml2-review .p2-note-lines{display:grid;grid-template-columns:1fr 1fr;gap:8px 32px;text-align:left}
+.ml2-review .p2-note-lines>span{display:block}.ml2-review .p2-note-lines>.p2-wide{grid-column:1/-1}
+.ml2-review .p2-lab-note{font-size:23px;padding:14px 24px}
+.ml2-review #variable-types .sv-diagram{height:345px}
+.ml2-review #matrix .sv-art .sv-math{min-height:180px;display:flex;align-items:center;justify-content:center;gap:16px;margin:16px 0}
+.ml2-review #observation-vector .sv-art{align-items:stretch}
+.ml2-review #hypothesis-space .sv-panel{display:flex;flex-direction:column}.ml2-review #hypothesis-space .sv-panel>.sv-math{flex:1;display:flex;flex-direction:column;justify-content:center}
+.ml2-review #part-roadmap .sv-chapter-card{padding:32px;min-height:240px;justify-content:flex-start}.ml2-review #part-roadmap .sv-chapter-card strong{font-size:35px}
+.ml2-review .p2-reading-key{padding:18px 22px;margin-top:20px;border-left:3px solid #208b7e;background:#edf5f3;color:#20394c;font:17px/1.6 'Segoe UI',sans-serif}
+.ml2-review .p2-reading-key.p2-note-lines{gap:8px 24px}
+@media(max-width:800px){.ml2-review .p2-reading-key.p2-note-lines{grid-template-columns:1fr}.ml2-review .sv-reading-visual.sv-grid.three{grid-template-columns:1fr}}
+@media print{.ml2-review .p2-reading-key{break-inside:avoid}}
+
+.ml2-review .sv-note:not(.p2-note-lines)>span{display:block}.ml2-review #hypothesis-space .sv-panel>.sv-math{gap:12px}.ml2-review #hypothesis-space .sv-math>span{display:block}
+
+.ml2-review #chapter-hypothesis-space .sv-math>span{display:block}
+
+/* Complete source mathematics and its teaching sequence. */
+.ml2-review .p2-symbolic-matrices{grid-template-columns:1.45fr 1fr}
+.p2-matrix-equation{display:flex;align-items:center;justify-content:center;gap:16px;min-height:280px;font:34px/1.5 'Cambria Math','Segoe UI',serif;color:#dec6ff;margin:12px 0;background:#111b2a;border:1px solid #3d5067;border-radius:12px;padding:20px 16px}
+.p2-symbol-matrix{display:inline-grid;border-left:2px solid;border-right:2px solid;padding:8px 18px;text-align:center;gap:12px 25px}.p2-column-matrix{grid-template-columns:1fr}.p2-entry-matrix{grid-template-columns:repeat(3,1fr)}
+.ml2-review #generalization .sv-diagram{height:265px}.ml2-review .p2-scope-equations{font-size:29px!important;line-height:1.6!important;padding:14px 24px!important}.p2-scope-equations>span{display:block}.p2-scope-equations strong{font:600 26px 'Segoe UI',sans-serif;color:#6ee1cf;margin-right:16px}
+.ml2-review #noise .sv-panel p{font-size:28px}.ml2-review #hypotheses .sv-panel p{font-size:28px}
+.p2-source-equation{text-align:center;font-family:'Cambria Math','Segoe UI',serif;font-size:21px!important;line-height:1.7!important}.p2-source-types{width:100%;border-collapse:collapse;font:17px/1.6 'Segoe UI',sans-serif;margin:22px 0}.p2-source-types td,.p2-source-types th{border:1px solid #b6c9ce;padding:12px 16px;text-align:left;vertical-align:top}.p2-source-types th{background:#edf5f3}.p2-source-types td:first-child{font-weight:600;min-width:145px}
+.sv-reading-visual .p2-matrix-equation{font-size:22px;min-height:210px;padding:16px 10px;gap:10px}.sv-reading-visual .p2-symbol-matrix{padding:6px 10px;gap:8px 16px}
+@media(max-width:1100px){.sv-reading-visual.p2-symbolic-matrices{grid-template-columns:1fr}}
+
+.p2-symbol-matrix{position:relative}.p2-symbol-matrix:before,.p2-symbol-matrix:after{content:"";position:absolute;top:0;bottom:0;width:10px;border-top:2px solid;border-bottom:2px solid}.p2-symbol-matrix:before{left:0}.p2-symbol-matrix:after{right:0}
+
+/* Slide 5: one trial, two predictor columns, explicit readings of both indices. */
+.ml2-review .p2-index-example{grid-template-columns:1.08fr 1fr}.p2-index-table th{font-size:23px}.p2-index-table th,.p2-index-table td{padding:12px 14px}.p2-selected-trial td{background:#173c40;color:#9aeee0}.p2-selected-value{box-shadow:inset 0 0 0 2px #ffd166;color:#ffd166!important}
+.p2-index-value{padding:16px 20px;background:#111b2a;border:1px solid #3d5067;border-radius:12px;margin:14px 0;font:26px/1.5 'Segoe UI',sans-serif}.p2-index-value>strong{display:block;font:37px/1.4 'Cambria Math','Segoe UI',serif;color:#dbc3f6;margin-bottom:6px}.p2-row-index{color:#6ee1cf}.p2-column-index{color:#ffd166}
+.sv-reading-visual .p2-index-value{font-size:17px;padding:12px 15px}.sv-reading-visual .p2-index-value>strong{font-size:25px}.sv-reading-visual .p2-index-table th{font-size:16px}
+@media(max-width:900px){.sv-reading-visual.p2-index-example{grid-template-columns:1fr}}
+
+/* The upper and lower dataset limits share one horizontal anchor. */
+.p2-dataset-expression{white-space:nowrap}.p2-stacked-limits{display:inline-grid;grid-template-columns:1fr;grid-template-rows:auto auto;justify-items:start;vertical-align:middle;font-size:.65em;line-height:1;row-gap:.25em;margin-left:.12em;position:relative;top:-.06em}
+
+.ml2-review #noise .sv-art.sv-grid{grid-template-columns:1.2fr 1fr;align-items:center}.ml2-review #noise .sv-diagram{height:470px}.ml2-review #noise .sv-panel{align-self:stretch;display:flex;flex-direction:column;justify-content:center}.ml2-review #noise .sv-note>span{display:block}
+
+.ml2-review #chapter-noise .p2-reading-key>span{display:block}
+
+/* Structured mathematical scripts: native MathML keeps shared bases and sum limits aligned. */
+.ml2-review math.p2-math{font-family:'Cambria Math','STIX Two Math',serif;font-size:1em;line-height:normal;color:inherit;margin:0;padding:0;vertical-align:baseline;math-style:normal}
+.ml2-review .p2-script-math{white-space:nowrap}.ml2-review .p2-mse-math{font-size:1.04em}

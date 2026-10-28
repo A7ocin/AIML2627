@@ -748,13 +748,13 @@ window.AIML_WOOCLAP = {
           "slide": "leakage",
           "when": "after",
           "purpose": "Optional / design a realistic evaluation",
-          "stem": "Deployment will predict future months for fields not used in training. The dataset has repeated monthly rows for each field. Which held-out evaluation matches both requirements?",
+          "stem": "A yield model is trained on fields A–D using data from 2021–2023. We want to predict yields in 2024 for new fields. Which test set best checks this?",
           "seconds": 120,
           "choices": [
-            "Randomly shuffle individual rows so the same fields and future dates can appear in training.",
-            "Train on earlier data from one group of fields, then evaluate later data from different fields.",
-            "Hold out later months but keep exactly the same fields in training and evaluation.",
-            "Hold out field identities but allow later measurements to enter training before predicting earlier dates."
+            "2024 records from fields A–D.",
+            "2024 records from different fields, E–H.",
+            "2021–2023 records from different fields, E–H.",
+            "Unused 2021–2023 records from fields A–D, selected at random."
           ],
           "src": "https://app.wooclap.com/events/JCBAAQM/questions/6aa90164d2f1e8b522d99aa8"
         }

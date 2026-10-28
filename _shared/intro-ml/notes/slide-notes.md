@@ -1,6 +1,6 @@
 # Teaching notes · Introduction to machine learning
 
-Both packs reviewed on 26 October 2026. Stable IDs are used because inserted questions change displayed slide numbers.
+Part 2 original definitions and mathematical boxes audited on 27 October 2026. Stable IDs are used because inserted questions change displayed slide numbers.
 
 ## 07_Intro_ML_Part_1 · part-cover · How does a machine learn?
 
@@ -136,37 +136,33 @@ Multimodal means combining data types, such as image/text or audio/video. Matchi
 
 ## 08_Intro_ML_Part_2 · recap-signal · Now make the prediction task precise
 
-Part 1 compared learning settings and application domains. Here we focus on one chosen task: supervised regression for crop yield. The shared example provides continuity; the new material explains how to record observations, define candidate functions and assess predictions. We will not reclassify the learning settings. Instead, we move from an informal task to a dataset, a prediction function, a model family and a procedure for evaluating new cases.
+Introduce predictor as an input used for prediction and outcome/target as what is predicted, before later slides use predictor indices. In this task fertilizer level is the predictor and crop yield is the outcome. The subsequent chapters formalize the observations, function and assessment for this supervised regression task.
 
-## 08_Intro_ML_Part_2 · part-roadmap · Four chapters: from a record to an evaluation
+## 08_Intro_ML_Part_2 · part-roadmap · Formulating a regression task: three chapters
 
-The four chapters follow the steps needed to specify and evaluate a prediction problem. First describe the measurements and organize their values. Then define a prediction function and the family of functions considered. Next measure fit and discuss generalization. Finally assign separate roles to training, validation and testing.
+Follow the original Formulating a regression task section: Variables and datasets, Models and hypotheses, then Generalization. Fit scores, held-out evaluation and leakage are taught within the final chapter.
 
-## 08_Intro_ML_Part_2 · fertilizer · Decide what one observation represents
+## 08_Intro_ML_Part_2 · fertilizer · One observation is one field trial
 
-An observation in the original example is one field trial: one plot receives a recorded fertilizer level, and its yield is measured later. A dataset row joins those values for the same trial. This identifies the unit of observation before introducing formulas. The original illustration contains 25 trials and one predictor. Its physical dosage and yield units are not specified. Later, a clearly marked two-predictor toy example adds measured soil moisture to illustrate vectors and matrices; it is separate from the original observations.
+An observation in the original example is one field trial: one field receives a recorded fertilizer level, and its yield is measured later. A dataset row joins those values for the same trial. This identifies the unit of observation before introducing formulas. The original illustration contains 25 trials and one predictor. Its physical dosage and yield units are not specified. Later, a clearly marked two-predictor toy example adds measured soil moisture to illustrate vectors and matrices; it is separate from the original observations.
 
-## 08_Intro_ML_Part_2 · measurements · A variable names a quantity; a value records one case
+## 08_Intro_ML_Part_2 · measurements · Variables name quantities; indexed values name records
 
-A variable names a feature recorded across experiments. X₁ denotes fertilizer level and Y denotes crop yield. Their values vary from one plot to another. In experiment i, xᵢ₁ is the recorded fertilizer value and yᵢ is the recorded yield. Uppercase symbols name variables; lowercase indexed symbols name measured values in particular observations. The index i identifies an observation, and the second index in xᵢ₁ identifies predictor 1. Later we allow m predictors X₁, …, Xₘ.
+Use the shared three-record toy example to introduce indices before the general dataset notation. Select trial 2: x₂₁=0.6 reads predictor 1 (fertilizer), x₂₂=0.5 reads predictor 2 (soil moisture), and y₂=1.1 is the measured target for the same trial. The first index selects the row and the second selects the input column. Uppercase names variables and lowercase indexes their recorded values. This example is separate from the original one-predictor observations.
 
-## 08_Intro_ML_Part_2 · variable-types · The type tells us what a value means
+## 08_Intro_ML_Part_2 · variable-types · Variable types: magnitudes and categories
 
-A quantitative variable expresses a magnitude for which numerical differences have meaning. Continuous variables are modeled as ranging along a continuum, such as temperature or yield. Discrete quantitative variables take separate values, such as the integer count of plants in a plot. A categorical variable names a category. Nominal categories, such as species, have no natural order. Ordinal categories, such as low, medium and high, have an order but not necessarily equally spaced differences. Binary means there are two categories; a binary variable may also have an ordering. These meanings survive changes in storage. Coding low, medium and high as 0, 1 and 2 does not establish equal distances between the categories. Decide how to represent a variable from its meaning and the intended model.
+A quantitative variable expresses a magnitude for which numerical differences have meaning. Continuous variables are modeled as ranging along a continuum, such as temperature or yield. Discrete quantitative variables take separate values, such as the integer count of plants in a field. A categorical variable names a category. Nominal categories, such as species, have no natural order. Ordinal categories, such as low, medium and high, have an order but not necessarily equally spaced differences. Binary means there are two categories; a binary variable may also have an ordering. These meanings survive changes in storage. Coding low, medium and high as 0, 1 and 2 does not establish equal distances between the categories. Decide how to represent a variable from its meaning and the intended model.
 
-## 08_Intro_ML_Part_2 · roles · Choose the inputs and the outcome for this task
+## 08_Intro_ML_Part_2 · roles · Predictors are inputs; the outcome is the target
 
 Predictors X₁, …, Xₘ are the input variables; m is their number. The outcome Y is the variable whose value we want to predict. Other names for predictors include features, explanatory variables and independent variables. Other names for the outcome include target, response and dependent variable. These names describe roles in the prediction task. “Independent variable” does not establish statistical independence, and “explanatory” does not prove a causal effect. A variable can be an input in one task and the target in another. Every predictor must be available at prediction time. Soil moisture measured before planting is a possible input for predicting yield. Future realized rainfall is unavailable if the prediction is made before that rainfall occurs. A forecast of rainfall is different from its later realized value.
 
 ## 08_Intro_ML_Part_2 · dataset · Collect the observed input–target pairs
 
-The supervised dataset 𝓓 = {(xᵢ, yᵢ)}ᵢ₌₁ⁿ is a collection of n recorded input–target pairs. Here i identifies a trial, xᵢ records its input and yᵢ its target. With one predictor, xᵢ can be displayed as a single number; with several predictors it will be a vector. The original fertilizer illustration contains n = 25 observations and m = 1 predictor. The table displays its first three rows, rounded to four decimal places. The next interactive plot retains all 25 observations.
+The supervised dataset 𝓓 = {(xᵢ, yᵢ)}ᵢ₌₁ⁿ is a collection of n recorded input–target pairs. Here i identifies a trial, xᵢ records its input and yᵢ its target. With one predictor, xᵢ can be displayed as a single number; with several predictors it will be a vector. The original fertilizer illustration contains n = 25 observations and m = 1 predictor. The table displays its first three rows, rounded to four decimal places. The observations example at the start of Models and hypotheses retains all 25 observations.
 
-## 08_Intro_ML_Part_2 · observations-lab · Inspect the original fertilizer observations
-
-Original nonlinear.json scatter plot, all 25 x/y coordinates preserved. Plotly remains fully interactive offline. The slide adds explicit zoom/pan/reset controls and a keyboard-accessible point inspector. The original horizontal axis title is retained; its physical interpretation is unspecified.
-
-## 08_Intro_ML_Part_2 · input-output-spaces · A domain lists possible values; a space combines them
+## 08_Intro_ML_Part_2 · input-output-spaces · Domains contain values; input spaces contain combinations
 
 The domain 𝓧ⱼ is the set of values allowed for predictor Xⱼ. The outcome domain is 𝓨. For quantitative regression, 𝓨 is typically a subset of the real numbers ℝ; for classification it is a finite set of class labels. The full input space is the Cartesian product 𝓧 = 𝓧₁ × ··· × 𝓧ₘ. Here × means that we form tuples by choosing one value from each domain; it is not multiplication of measured values. With fertilizer and soil moisture as predictors, one input is a pair consisting of one fertilizer value and one moisture value. The notation x ∈ 𝓧 means that x belongs to the input space. A space describes possible cases; a dataset contains only the particular cases we recorded. A suitable encoding is needed before categorical, image or text inputs can be used in a numerical design matrix.
 
@@ -174,19 +170,27 @@ The domain 𝓧ⱼ is the set of values allowed for predictor Xⱼ. The outcome 
 
 Observation i consists of an input vector xᵢ and, in supervised training data, a target value yᵢ. The vector xᵢ = (xᵢ₁, …, xᵢₘ)ᵀ collects one value for each of the m predictors. The superscript T denotes transpose; we use it here to write the listed values as a column vector. For an illustrative two-predictor example, let x₁ = (0.2, 0.4)ᵀ and y₁ = 0.8. The first input entry is fertilizer level and the second is soil moisture; the target is yield. These toy values illustrate vector and matrix notation. They are separate from the original 25-observation plot, which has only one predictor. In xᵢⱼ, i identifies the observation and j identifies the predictor. The notation xᵢ ∈ 𝓧 and yᵢ ∈ 𝓨 states that recorded inputs and targets belong to their respective spaces.
 
-## 08_Intro_ML_Part_2 · matrix · Stack input vectors into rows; keep targets separate
+## 08_Intro_ML_Part_2 · matrix · A design matrix stores input rows; a vector stores targets
 
 The design matrix X stores input observations as rows and predictors as columns. For n observations and m numerical predictors, X ∈ ℝ n×m . Entry Xᵢⱼ is predictor j in observation i. Since xᵢ is a column vector, row i of the matrix is xᵢᵀ. The target vector Y = (y₁, …, yₙ)ᵀ has one entry for each row. In the three-row toy example, the input matrix has rows (0.2, 0.4), (0.6, 0.5), (0.9, 0.3), and the target vector is (0.8, 1.1, 0.7)ᵀ. It has n = 3 and m = 2, unlike the original one-predictor chart. Bold X names the whole matrix; Xⱼ names a predictor variable; xᵢ names an observed input vector. Bold Y names the vector of recorded targets, while Y names the outcome variable and yᵢ one recorded target. Matrix notation assumes suitable numerical representations: raw text, images or categories may need encoding.
 
-## 08_Intro_ML_Part_2 · prediction-function · A prediction function maps inputs to outputs
+## 08_Intro_ML_Part_2 · matrix-notation · General matrix notation: n rows and m predictors
 
-A prediction function f: 𝓧 → 𝓨 maps an input in the input space to a prediction in the output space. For observed input xᵢ, its prediction is ŷᵢ = f(xᵢ). The hat distinguishes the predicted target ŷᵢ from the recorded target yᵢ. Fitting seeks a useful relationship between predictors and outcome, so that yᵢ ≈ f(xᵢ) on the training observations according to a chosen measure of error. The symbol ≈ means approximately equal. Real measurements need not fall exactly on a single fitted curve. We do not search over every imaginable function at once. The next step is to choose a model family and let its parameters select a candidate function.
+This expands the source matrix formula in full. Each xᵢ is a column vector, so its transpose xᵢᵀ must be used as a row of X. The source abbreviates these rows as xᵢ. The matrix contains every xᵢⱼ in the indicated row and predictor column; the target vector aligns yᵢ with that row. Dots continue the same pattern to n rows and m columns.
 
-## 08_Intro_ML_Part_2 · hypotheses · Fix a form; allow its coefficients to change
+## 08_Intro_ML_Part_2 · observations-lab · Inspect the original fertilizer observations
 
-A model family restricts the prediction functions we consider. The quadratic family f θ (x) = ax² + bx + c fixes a form with a squared term, a linear term and an intercept. Its adjustable coefficients are collected in θ = (a, b, c). Training fits coefficients within the chosen family. Changing the degree of the polynomial changes the family or model complexity; changing a, b and c keeps the quadratic form. The source’s displayed hypothesis curve is an illustration and is not asserted to be the optimal fit or a quadratic curve.
+Original nonlinear.json scatter plot, all 25 x/y coordinates preserved. Plotly remains fully interactive offline. The slide adds explicit zoom/pan/reset controls and a keyboard-accessible point inspector. The original horizontal axis title is retained; its physical interpretation is unspecified.
 
-## 08_Intro_ML_Part_2 · hypothesis-space · One parameter choice belongs to an allowed space
+## 08_Intro_ML_Part_2 · prediction-function · Training fits predictions to recorded targets
+
+The source first visualizes the observations, then introduces a function that fits them. Preserve its full fitting equation yᵢ ≈ ŷᵢ = f(xᵢ) for recorded pairs (xᵢ,yᵢ) ∈ D. Training is the search for such a useful fitted function; its model family specifies the assumed form. This is regression because the outcome is quantitative.
+
+## 08_Intro_ML_Part_2 · hypotheses · A model fixes a form; a hypothesis chooses its parameters
+
+Follow the source convention: model means the assumed functional form, and a hypothesis θ is one allowed parameter setting when that form is fixed. The hypothesis space Θ lists the allowed settings. A full function also depends on its form; parameters alone do not specify it without that assumption. This family allows degree at most two, including linear or constant cases when a=0.
+
+## 08_Intro_ML_Part_2 · hypothesis-space · A hypothesis space contains the allowed choices
 
 The parameter setting θ selects one candidate function. The hypothesis space Θ is the set of allowed parameter settings, following the parameter-based convention used in the course. In the unrestricted quadratic example, Θ = ℝ³: every triple (a, b, c) of real coefficients is allowed. For θ = (1, 0, 0), the selected function is f θ (x) = x². For θ = (2, −1, 0.5), it is f θ (x) = 2x² − x + 0.5. Both choices belong to the same space Θ and use the same functional form. Another common convention calls the functions themselves hypotheses and calls their set the hypothesis space. Here θ names the coefficients and f θ names the corresponding function, so the distinction stays explicit. Fitting chooses a θ; model selection can compare families or complexity settings.
 
@@ -194,27 +198,27 @@ The parameter setting θ selects one candidate function. The hypothesis space Θ
 
 Original nonlinear_mod.json: both 25-point traces retained exactly, including the illustrative hypothesis curve. Interactive hover, trace toggles, pan and zoom are preserved. The sidebar computes residuals and mean squared error against the provided curve, without claiming the source used a particular fitting algorithm.
 
+## 08_Intro_ML_Part_2 · noise · Why does the curve miss some observed points?
+
+The diagram now zooms the original course observations over fertilizer levels 0.20–0.55, with the supplied curve and a highlighted same-input gap. At x=0.25 the measured value is 2.225 and the supplied prediction is 2.475. Blue dots are measurements; the purple line is the original supplied curve. A gap does not by itself distinguish measurement noise, unrecorded conditions or model mismatch. The following residual/MSE slide quantifies such gaps.
+
 ## 08_Intro_ML_Part_2 · residuals · A residual is the gap between observation and prediction
 
 The prediction for observation i is ŷᵢ = f θ (xᵢ). Its residual is rᵢ = yᵢ − ŷᵢ, the observed target minus the prediction. A positive residual means the model predicted too low; a negative one means it predicted too high. Mean squared error (MSE) averages the squared residuals over n observations: MSE = (1/n) ∑ᵢ₌₁ⁿ (yᵢ − ŷᵢ)². The summation symbol ∑ means add the terms for i = 1 through n. Squaring prevents positive and negative residuals from cancelling and gives larger disagreements more weight. MSE is one concrete score for regression, used here as a bridge to the regression lecture. Its units are squared target units. A lower training MSE means a closer fit to these recorded targets, not necessarily more accurate predictions on new cases.
 
-## 08_Intro_ML_Part_2 · noise · A gap need not be a mistake in the measurement
+## 08_Intro_ML_Part_2 · generalization · Generalization means predicting relevant new cases
 
-Observed values need not sit exactly on a fitted curve. Measurements may be imprecise, and plots with the same fertilizer level may differ in soil, weather or other unrecorded conditions. Some variation remains even when the model captures a useful trend. A residual can also reflect model mismatch: the chosen family may be too simple or fitted imperfectly. A residual therefore does not identify a measurement error by itself. The observed–predicted difference mixes effects that the plot alone cannot separate. Trying to pass through every training point can reproduce accidental variation rather than a relationship that transfers. This motivates the next question: how should a fitted function perform on new observations?
+Retain both source scopes: approximate agreement on recorded pairs in D and extension to new cases in X×Y. Membership in a Cartesian product specifies valid input/output types; it does not mean every arbitrarily combined x and y should agree with a single function. Read y as the outcome associated with x in the task. Generalization is performance on relevant unseen cases, with approximate rather than exact agreement when outcomes are noisy.
 
-## 08_Intro_ML_Part_2 · generalization · Generalization asks how the rule works beyond its data
+## 08_Intro_ML_Part_2 · splits · Training, validation and test sets have different jobs
 
-The dataset 𝓓 contains only the observed input–target pairs. The spaces 𝓧 and 𝓨 describe possible inputs and outputs beyond those records. Generalization concerns how well a learned rule performs on relevant new cases, rather than only those used for fitting. A small training error is not enough: a flexible function may match the training points while giving poor predictions between them or on new fields. With noisy outcomes, we do not require one function to reproduce every possible input–output pair exactly. Evaluation uses held-out observations to estimate performance for an intended use. Which observations should be held out depends on whether that use concerns later dates, new fields or other settings. The next slides separate fitting, model choice and final assessment.
-
-## 08_Intro_ML_Part_2 · splits · Give three sets three different jobs
-
-Supplemental practical evaluation guidance. Repeated use of test results for model choice compromises a final independent assessment. Use the validation set in the following interactive lab; it is intentionally not called a test set.
+Supplemental practical evaluation guidance. Repeated use of test results for model choice compromises a final independent assessment. Use the validation set in the following interactive lab; it is intentionally not called a test set. The diagram is an illustrative 60/20/20 partition of 50 observations: 30 training, 10 validation and 10 test. Training has three times the width and three times the dot count of each held-out set. These percentages are not a fixed rule.
 
 ## 08_Intro_ML_Part_2 · generalization-lab · Fit the training points; compare unseen validation points
 
 Added synthetic regression experiment. Training and validation are disjoint samples from y=2+1.2x−0.9x² plus independent seeded noise, on x in [−1,1]. Degrees 0,1,2,5,9 are fitted by least squares using Householder QR. Validation outcomes never enter fitting. Displaying and comparing validation results makes this model development, not a final test evaluation.
 
-## 08_Intro_ML_Part_2 · leakage · Keep evaluation inputs out of model preparation
+## 08_Intro_ML_Part_2 · leakage · Data leakage lets evaluation information enter preparation
 
 Data leakage and domain shift are distinct failure modes. This summary follows scikit-learn common-pitfalls guidance for split-before-fit preprocessing and the course website A/B example for domain shift.
 

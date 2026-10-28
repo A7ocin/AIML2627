@@ -1,0 +1,179 @@
+{
+  "date": "2026-10-27",
+  "source": "https://www.aretor.it/courses/aiml2526/lessons/03_intro/",
+  "cached_source_sha256": "66f37b311be1abd5351415ed54763172129c230c98b1e2286bd4c210c3cd856e",
+  "scope": "Part 2 / Formulating a regression task",
+  "definition_boxes": 3,
+  "display_math_blocks": 3,
+  "coverage": [
+    {
+      "source": "Definition box 1: variables and types",
+      "slides": [
+        "measurements",
+        "variable-types"
+      ],
+      "handout": [
+        "chapter-measurements",
+        "chapter-variable-types"
+      ],
+      "content": [
+        "variable as feature collected across experiments",
+        "quantitative: continuous and discrete",
+        "categorical: nominal, binary nominal, ordinal",
+        "all source example categories retained in reading table"
+      ],
+      "qualification": "Age depends on recording precision; binary can also be ordered; category codes do not establish distances."
+    },
+    {
+      "source": "Definition box 2: predictor and outcome",
+      "slides": [
+        "roles"
+      ],
+      "handout": [
+        "chapter-roles"
+      ],
+      "content": [
+        "one outcome Y, one or more predictors X1..Xm",
+        "predictor/input/independent/explanatory names",
+        "outcome/output/dependent/predicted/response names",
+        "proposed predictor need not be useful"
+      ],
+      "qualification": "Names do not establish statistical independence or causation."
+    },
+    {
+      "source": "Definition box 3: dataset",
+      "slides": [
+        "dataset",
+        "input-output-spaces",
+        "observation-vector"
+      ],
+      "handout": [
+        "chapter-dataset",
+        "chapter-input-output-spaces",
+        "chapter-observation-vector"
+      ],
+      "content": [
+        "D={(xi,yi)} i=1..n",
+        "i in {1,...,n}",
+        "yi in outcome domain: target measurement",
+        "xi=(xi1,...,xim)^T in input space: observation/data point",
+        "xij in predictor j domain",
+        "varied dataset types and terminology flexibility"
+      ],
+      "qualification": "Input vector versus complete input-target pair is stated explicitly."
+    },
+    {
+      "source": "Display mathematics 1: matrix and target vector",
+      "slides": [
+        "matrix",
+        "matrix-notation"
+      ],
+      "handout": [
+        "chapter-matrix",
+        "chapter-matrix-notation"
+      ],
+      "content": [
+        "X stacks every observation as a row",
+        "complete scalar-entry matrix x11..x1m / ... / xn1..xnm",
+        "Y=(y1,...,yn)^T",
+        "n rows, m predictors, n corresponding targets"
+      ],
+      "qualification": "Rows explicitly use xi^T because xi is a column vector."
+    },
+    {
+      "source": "Display mathematics 2: dataset fit",
+      "slides": [
+        "prediction-function"
+      ],
+      "handout": [
+        "chapter-prediction-function"
+      ],
+      "content": [
+        "f maps input space to output space",
+        "yi approximately yhat_i = f(xi)",
+        "(xi,yi) belongs to D",
+        "training searches a useful fitted function; model restricts its form"
+      ],
+      "qualification": "Approximate fit rather than exact interpolation."
+    },
+    {
+      "source": "Model/hypothesis parameter convention",
+      "slides": [
+        "hypotheses",
+        "hypothesis-space"
+      ],
+      "handout": [
+        "chapter-hypotheses",
+        "chapter-hypothesis-space"
+      ],
+      "content": [
+        "model assumed function form",
+        "theta in Theta",
+        "hypothesis=parameter setting for a fixed form",
+        "hypothesis space=allowed settings",
+        "f_theta(x), theta=(a,b,c), Theta=R^3",
+        "model may also mean fitted function"
+      ],
+      "qualification": "The family permits degree at most two, including a=0. Full function also depends on assumed form."
+    },
+    {
+      "source": "Display mathematics 3: domain-level generalization",
+      "slides": [
+        "generalization"
+      ],
+      "handout": [
+        "chapter-generalization"
+      ],
+      "content": [
+        "y approximately yhat=f_theta(x)",
+        "(x,y) belongs to input-space x outcome-domain",
+        "extends recorded dataset scope to unseen cases"
+      ],
+      "qualification": "New-case subscripts are suppressed for clarity. y is the associated outcome of x; Cartesian-product membership is not a demand to fit every arbitrary combination."
+    },
+    {
+      "source": "Reasoning: data -> curve -> fit -> parameters -> discrepancy -> assessment -> unseen cases",
+      "slides": [
+        "part-cover",
+        "recap-signal",
+        "part-roadmap",
+        "fertilizer",
+        "measurements",
+        "variable-types",
+        "roles",
+        "dataset",
+        "input-output-spaces",
+        "observation-vector",
+        "matrix",
+        "matrix-notation",
+        "observations-lab",
+        "prediction-function",
+        "hypotheses",
+        "hypothesis-space",
+        "hypothesis-lab",
+        "noise",
+        "residuals",
+        "generalization",
+        "splits",
+        "generalization-lab",
+        "leakage",
+        "practice",
+        "answers",
+        "summary",
+        "references",
+        "course-navigation"
+      ],
+      "handout": "same sequence",
+      "content": [
+        "original scatter begins Models and hypotheses",
+        "original supplied curve begins Generalization",
+        "two source questions about better fit and nonvisual assessment are explicit",
+        "residual/MSE answers the scoring question before held-out evaluation"
+      ],
+      "qualification": "Measurement noise is one possible cause, along with unrecorded conditions and model mismatch."
+    }
+  ],
+  "source_slides": 28,
+  "displayed_slides": 33,
+  "handout_sections": 26
+}
