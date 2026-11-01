@@ -906,251 +906,251 @@ B checks both intended changes: 2024 is later than the training years, and field
 
 ## 09 · Regression · Part 1
 
-5 core + 1 optional. Core budget: approximately 6.5 minutes.
+5 core + 1 optional. Core budget: approximately 10 minutes.
 
 [Core import](imports/09_Regression_Part_1.xlsx) · [Optional import](imports/optional/09_Regression_Part_1_optional.xlsx)
 
-### L04-C01 · Core · Opening / everyday intuition
+### L04-C01 · Core · Reasoning / residual cancellation
 
-**Placement:** [Before “Move the line and watch the residuals change”](../09_Regression_Part_1/index.html#/residual-lab) · [Handout](../09_Regression_Part_1/handout.html#chapter-residual-lab)  
-**Time:** 60 seconds, including debrief.
+**Placement:** [After “Least squares adds the squared vertical gaps”](../09_Regression_Part_1/index.html#/rss) · [Handout](../09_Regression_Part_1/handout.html#chapter-rss)  
+**Time:** 120 seconds, including debrief.
 
-A house costs 7 units, but a model predicts 5. Using error = actual value minus prediction, what is the error?
+Two observed responses are 2 and 4; a line predicts 3 for both. Residual = observed minus predicted. What does the zero sum of residuals tell us?
 
-- **A.** -2.
-- **B.** 12.
-- **C.** +2.
-- **D.** 4.
+- **A.** The fit is exact because its positive and negative errors sum to zero.
+- **B.** The residual sum is zero, so RSS must also be zero.
+- **C.** The residuals cancel, but RSS = 2: neither prediction is exact.
+- **D.** The model overpredicts both cases, with RSS = 4.
 
-**Answer:** C. +2.
+**Answer:** C. The residuals cancel, but RSS = 2: neither prediction is exact.
 
-The signed error is 7-5=2. This is a residual for an observation used to fit the model.
+Residuals are −1 and +1. Their sum is zero, but their squared sum is 1 + 1 = 2. Signed cancellation is not an exact fit.
 
-**Misconception:** Reversing the stated subtraction order.
+**Misconception:** Confusing distinct regression quantities or drawing a stronger conclusion than the evidence supports.
 
-**Facilitation:** Invite a guess before teaching the idea. Ask one student for their reasoning, then use the next explanation or demonstration to revisit the answer. Do not grade prior knowledge.
+**Facilitation:** Choose an answer, justify it using the stated numbers or definition, and explain why one plausible alternative fails.
 
-### L04-C02 · Core · Prediction / intuition
+### L04-C02 · Core · Reasoning / compare squared losses
 
-**Placement:** [Before “Compare the supplied line with a fresh OLS fit”](../09_Regression_Part_1/index.html#/fit-lab) · [Handout](../09_Regression_Part_1/handout.html#chapter-fit-lab)  
-**Time:** 60 seconds, including debrief.
+**Placement:** [Before “Compare a candidate line with the exact OLS fit”](../09_Regression_Part_1/index.html#/fit-lab) · [Handout](../09_Regression_Part_1/handout.html#chapter-fit-lab)  
+**Time:** 120 seconds, including debrief.
 
-A line predicts every training value exactly. What is its sum of squared prediction errors?
+On the same three training cases, line A has residuals (0, 0, 3), and line B has (2, 2, 0). Which line does ordinary least squares prefer?
 
-- **A.** 0.
-- **B.** 1.
-- **C.** The number of training examples.
-- **D.** We cannot tell even though every prediction is exact.
+- **A.** Line B: its RSS is 8, compared with 9 for line A.
+- **B.** Line A: it predicts two of the three cases exactly.
+- **C.** Line A: its signed residual sum is smaller.
+- **D.** They tie because both have a residual equal to zero.
 
-**Answer:** A. 0.
+**Answer:** A. Line B: its RSS is 8, compared with 9 for line A.
 
-Every error is zero, so every squared error is zero. Least squares tries to make the sum small.
+OLS compares the total squared residuals: A gives 0 + 0 + 9 = 9; B gives 4 + 4 + 0 = 8. More exact individual predictions need not mean a smaller total loss.
 
-**Misconception:** Thinking a perfect fit still has nonzero residual error.
+**Misconception:** Confusing distinct regression quantities or drawing a stronger conclusion than the evidence supports.
 
-**Facilitation:** Invite a guess before teaching the idea. Ask one student for their reasoning, then use the next explanation or demonstration to revisit the answer. Do not grade prior knowledge.
+**Facilitation:** Choose an answer, justify it using the stated numbers or definition, and explain why one plausible alternative fails.
 
-### L04-C03 · Core · Check / core understanding
+### L04-C03 · Core · Reasoning / interpret a negative held-out score
 
-**Placement:** [After “R² compares squared error to a baseline”](../09_Regression_Part_1/index.html#/r2) · [Handout](../09_Regression_Part_1/handout.html#chapter-r2)  
-**Time:** 90 seconds, including debrief.
+**Placement:** [After “R²: compare the model with a mean-only baseline”](../09_Regression_Part_1/index.html#/r2) · [Handout](../09_Regression_Part_1/handout.html#chapter-r2)  
+**Time:** 120 seconds, including debrief.
 
-On the same nonconstant dataset, model A has R²=0.8 and model B has R²=0.3. Which has the smaller sum of squared errors?
+On held-out data, a model has RSS = 50 and the mean-response baseline has TSS = 40. Using R² = 1 − RSS/TSS, which interpretation is correct?
 
-- **A.** Model A.
-- **B.** Model B.
-- **C.** They must have equal errors.
-- **D.** R² only tells us whether the slope is positive.
+- **A.** R² = −0.25: the model is worse than that baseline on these data.
+- **B.** R² = 0.25: the model explains one quarter of the variation.
+- **C.** A negative value proves that the regression code is incorrect.
+- **D.** R² is undefined whenever RSS is greater than TSS.
 
-**Answer:** A. Model A.
+**Answer:** A. R² = −0.25: the model is worse than that baseline on these data.
 
-With the same baseline and data, higher R² means smaller squared error. It does not by itself establish performance on other data.
+1 − 50/40 = −0.25. Held-out predictions can have greater squared error than the held-out mean baseline. TSS is positive here, so the ratio is defined.
 
-**Misconception:** Confusing the fit metric with slope direction or a guarantee about future cases.
+**Misconception:** Confusing distinct regression quantities or drawing a stronger conclusion than the evidence supports.
 
-**Facilitation:** Give students a moment to answer, then explain the correct choice in everyday language and address the misconception.
+**Facilitation:** Choose an answer, justify it using the stated numbers or definition, and explain why one plausible alternative fails.
 
-### L04-C04 · Core · Prediction / intuition
+### L04-C04 · Core · Reasoning / linearity in coefficients
 
-**Placement:** [Before “Curved in x can still be linear in the parameters”](../09_Regression_Part_1/index.html#/polynomial) · [Handout](../09_Regression_Part_1/handout.html#chapter-polynomial)  
-**Time:** 90 seconds, including debrief.
+**Placement:** [After “Why a polynomial is still linear in its coefficients”](../09_Regression_Part_1/index.html#/polynomial) · [Handout](../09_Regression_Part_1/handout.html#chapter-polynomial)  
+**Time:** 120 seconds, including debrief.
 
-A scatterplot shows a clear U-shaped pattern. Which model could follow that shape better than a straight line?
+Consider ŷ = β₀ + β₁x + β₂x². The inputs are known and only the three β coefficients are fitted. Why can this use ordinary linear least squares?
 
-- **A.** A horizontal line only.
-- **B.** The same straight line with a different color.
-- **C.** A curve that includes an x-squared term.
-- **D.** Deleting the response values before fitting.
+- **A.** Because every quadratic curve is also a straight line in x.
+- **B.** Because squaring x eliminates the need to estimate β₂.
+- **C.** Because 1, x and x² are known features, each multiplied by one unknown coefficient.
+- **D.** Because any function of x and β is linear once the data are recorded.
 
-**Answer:** C. A curve that includes an x-squared term.
+**Answer:** C. Because 1, x and x² are known features, each multiplied by one unknown coefficient.
 
-A quadratic term can represent curvature. Introduce polynomial regression through the shape before discussing coefficients.
+Linearity concerns the unknown coefficients. The powers of x are known features, so the predictions can be written Xβ and fitted by linear least squares.
 
-**Misconception:** Thinking regression models must always be straight lines.
+**Misconception:** Confusing distinct regression quantities or drawing a stronger conclusion than the evidence supports.
 
-**Facilitation:** Invite a guess before teaching the idea. Ask one student for their reasoning, then use the next explanation or demonstration to revisit the answer. Do not grade prior knowledge.
+**Facilitation:** Choose an answer, justify it using the stated numbers or definition, and explain why one plausible alternative fails.
 
-### L04-C05 · Core · Prediction / intuition
+### L04-C05 · Core · Reasoning / model selection and evaluation
 
-**Placement:** [Before “Explore the original high-degree curves”](../09_Regression_Part_1/index.html#/overfit-lab) · [Handout](../09_Regression_Part_1/handout.html#chapter-overfit-lab)  
-**Time:** 90 seconds, including debrief.
+**Placement:** [Before “Overfitting: a flexible curve can follow training noise”](../09_Regression_Part_1/index.html#/overfit-lab) · [Handout](../09_Regression_Part_1/handout.html#chapter-overfit-lab)  
+**Time:** 120 seconds, including debrief.
 
-A student memorizes every practice answer but struggles with new exercises. Which model behavior is this most like?
+On the same split, degree 1 has training/validation RMSE (0.10, 0.12); degree 15 has (0.04, 0.30). What is the best next decision for prediction?
 
-- **A.** Doing poorly on both practice and new examples.
-- **B.** Doing equally well on every new example.
-- **C.** Having too little flexibility to fit any practice example.
-- **D.** Doing very well on training examples but poorly on new examples.
+- **A.** Choose degree 15 because its training error is smaller.
+- **B.** Choose degree 15 because more coefficients guarantee better generalization.
+- **C.** Use the final test set repeatedly until one degree has the smallest score.
+- **D.** Prefer degree 1 using validation evidence, then assess the fixed choice on an untouched test set.
 
-**Answer:** D. Doing very well on training examples but poorly on new examples.
+**Answer:** D. Prefer degree 1 using validation evidence, then assess the fixed choice on an untouched test set.
 
-This is the intuition behind overfitting: a model can fit the training set without learning a relationship that transfers.
+The more flexible candidate improves training fit but worsens validation prediction. Validation supports degree 1 among these candidates; the final test set assesses the selected procedure.
 
-**Misconception:** Assuming the best training score always means the best model.
+**Misconception:** Confusing distinct regression quantities or drawing a stronger conclusion than the evidence supports.
 
-**Facilitation:** Invite a guess before teaching the idea. Ask one student for their reasoning, then use the next explanation or demonstration to revisit the answer. Do not grade prior knowledge.
+**Facilitation:** Choose an answer, justify it using the stated numbers or definition, and explain why one plausible alternative fails.
 
-### L04-O01 · Optional · Optional / basic extension
+### L04-O01 · Optional · Reasoning / rescale an input
 
-**Placement:** [After “Simple linear regression has two parameters”](../09_Regression_Part_1/index.html#/line) · [Handout](../09_Regression_Part_1/handout.html#chapter-line)  
-**Time:** 90 seconds, including debrief.
+**Placement:** [After “Make the approximation explicit: add a random error”](../09_Regression_Part_1/index.html#/line) · [Handout](../09_Regression_Part_1/handout.html#chapter-line)  
+**Time:** 120 seconds, including debrief.
 
-In a straight-line model y ≈ intercept + slope × x, what does the slope describe?
+A toy model predicts yield = 2 + 3x, where x is fertilizer in kilograms. We express the same input as z = 1000x grams. Which model gives exactly the same predictions?
 
-- **A.** The total number of observations.
-- **B.** The prediction when x is zero.
-- **C.** The color of the plotted line.
-- **D.** The predicted change in y when x increases by one unit.
+- **A.** Yield = 2000 + 3000z.
+- **B.** Yield = 2 + 3000z.
+- **C.** Yield = 0.002 + 3z.
+- **D.** Yield = 2 + 0.003z.
 
-**Answer:** D. The predicted change in y when x increases by one unit.
+**Answer:** D. Yield = 2 + 0.003z.
 
-The slope measures predicted change per unit of x. The intercept is the prediction at x=0.
+Substitute x = z/1000: 2 + 3(z/1000) = 2 + 0.003z. Rescaling an input changes the numerical slope and its units, while the response predictions and intercept stay the same.
 
-**Misconception:** Swapping the roles of slope and intercept.
+**Misconception:** Confusing distinct regression quantities or drawing a stronger conclusion than the evidence supports.
 
-**Facilitation:** Give students a moment to answer, then explain the correct choice in everyday language and address the misconception.
+**Facilitation:** Choose an answer, justify it using the stated numbers or definition, and explain why one plausible alternative fails.
 
 ## 10 · Regression · Part 2
 
-4 core + 2 optional. Core budget: approximately 6.5 minutes.
+4 core + 2 optional. Core budget: approximately 8 minutes.
 
 [Core import](imports/10_Regression_Part_2.xlsx) · [Optional import](imports/optional/10_Regression_Part_2_optional.xlsx)
 
-### L04-C06 · Core · Check / core understanding
+### L04-C06 · Core · Reasoning / separate bias from variance
 
-**Placement:** [After “Repeat the experiment: how much do fits move?”](../10_Regression_Part_2/index.html#/bias-lab) · [Handout](../10_Regression_Part_2/handout.html#chapter-bias-lab)  
-**Time:** 90 seconds, including debrief.
+**Placement:** [After “See bias and variance at the same input”](../10_Regression_Part_2/index.html#/bias-lab) · [Handout](../10_Regression_Part_2/handout.html#chapter-bias-lab)  
+**Time:** 120 seconds, including debrief.
 
-You fit a model again using a slightly different training sample, and its curve changes a lot. What does this suggest?
+At one fixed input, the true mean is 2. Across repeated training samples a method predicts 1 or 3 equally often. Which description is correct?
 
-- **A.** The model must make identical predictions on every dataset.
-- **B.** The fitted model is sensitive to which training examples it receives.
-- **C.** The training sample has no effect on the fit.
-- **D.** The target must be a category rather than a number.
+- **A.** Zero bias and zero variance: averaging to 2 makes every fit correct.
+- **B.** Zero bias but nonzero variance: the mean prediction is right, while individual fits move.
+- **C.** Nonzero bias but zero variance: each fitted prediction differs from 2.
+- **D.** Both bias and variance are zero once fresh response noise is removed.
 
-**Answer:** B. The fitted model is sensitive to which training examples it receives.
+**Answer:** B. Zero bias but nonzero variance: the mean prediction is right, while individual fits move.
 
-Strong changes across training samples indicate high variability in fitted predictions.
+The average prediction is 2, so bias is zero. Predictions differ from their mean by ±1, giving variance 1. The method can be unbiased without each fitted prediction being exact.
 
-**Misconception:** Thinking a flexible fitted curve is necessarily stable.
+**Misconception:** Confusing distinct regression quantities or drawing a stronger conclusion than the evidence supports.
 
-**Facilitation:** Give students a moment to answer, then explain the correct choice in everyday language and address the misconception.
+**Facilitation:** Choose an answer, justify it using the stated numbers or definition, and explain why one plausible alternative fails.
 
-### L04-C07 · Core · Check / core understanding
+### L04-C07 · Core · Reasoning / interpret a null probability
 
-**Placement:** [After “A p-value is conditional on the null model”](../10_Regression_Part_2/index.html#/pvalues) · [Handout](../10_Regression_Part_2/handout.html#chapter-pvalues)  
-**Time:** 90 seconds, including debrief.
+**Placement:** [After “Run the complete slope test on 90 observations”](../10_Regression_Part_2/index.html#/uncertainty-lab) · [Handout](../10_Regression_Part_2/handout.html#chapter-uncertainty-lab)  
+**Time:** 120 seconds, including debrief.
 
-A regression slope has a small p-value. Does that alone prove that changing the input causes the output to change?
+An observational regression gives a two-sided slope p-value of 0.03. Which statement matches what that number means?
 
-- **A.** Yes. Every small p-value proves causation.
-- **B.** No. Evidence of an association is not by itself proof of causation.
-- **C.** Yes, provided the graph uses a straight line.
-- **D.** No, because a small p-value means the slope must be exactly zero.
+- **A.** There is a 3% probability that the true slope is zero.
+- **B.** If the zero-slope null and assumptions held, statistics at least this extreme would occur with probability 3%.
+- **C.** There is a 97% probability that changing the predictor causes a change in the response.
+- **D.** The slope must be large enough to matter in practice because 0.03 is below 0.05.
 
-**Answer:** B. No. Evidence of an association is not by itself proof of causation.
+**Answer:** B. If the zero-slope null and assumptions held, statistics at least this extreme would occur with probability 3%.
 
-The test concerns evidence against a specified null model under its assumptions. Causal claims need more than a small p-value.
+The p-value is a tail probability conditional on the null model and its assumptions. It is neither a posterior null probability nor a measure of effect size or causal evidence.
 
-**Misconception:** Reading causal proof into a statistical association.
+**Misconception:** Confusing distinct regression quantities or drawing a stronger conclusion than the evidence supports.
 
-**Facilitation:** Give students a moment to answer, then explain the correct choice in everyday language and address the misconception.
+**Facilitation:** Choose an answer, justify it using the stated numbers or definition, and explain why one plausible alternative fails.
 
-### L04-C08 · Core · Check / core understanding
+### L04-C08 · Core · Reasoning / interpret adjustment
 
-**Placement:** [After “Adjustment can change the apparent relationship”](../10_Regression_Part_2/index.html#/adjustment) · [Handout](../10_Regression_Part_2/handout.html#chapter-adjustment)  
-**Time:** 90 seconds, including debrief.
+**Placement:** [After “Try the same data with and without temperature”](../10_Regression_Part_2/index.html#/adjustment-lab) · [Handout](../10_Regression_Part_2/handout.html#chapter-adjustment-lab)  
+**Time:** 120 seconds, including debrief.
 
-Ice-cream sales and swimming incidents both rise in warm weather. What could help explain their association?
+An ice-cream coefficient is positive with p = 0.001. After adding temperature, it is smaller with p = 0.40. What may we conclude?
 
-- **A.** Warm weather can affect both ice-cream buying and swimming activity.
-- **B.** Buying ice cream has been proved to cause every incident.
-- **C.** An association guarantees that one variable causes the other.
-- **D.** Two quantities that rise together cannot share another cause.
+- **A.** The conditional association is weaker; a shared-temperature explanation is plausible, but causality is not settled.
+- **B.** The new p-value proves that ice cream has exactly zero causal effect.
+- **C.** The original significant coefficient proves a direct causal effect despite the adjustment.
+- **D.** The coefficient must stay unchanged when a correlated predictor is added.
 
-**Answer:** A. Warm weather can affect both ice-cream buying and swimming activity.
+**Answer:** A. The conditional association is weaker; a shared-temperature explanation is plausible, but causality is not settled.
 
-A common influence can produce an association. This is a possible explanation, not proof about a particular dataset.
+The adjusted coefficient compares sales while holding temperature fixed, a different comparison. The change is compatible with confounding; lack of significance does not prove a zero effect or validate the causal mechanism.
 
-**Misconception:** Assuming correlation establishes a direct causal link.
+**Misconception:** Confusing distinct regression quantities or drawing a stronger conclusion than the evidence supports.
 
-**Facilitation:** Give students a moment to answer, then explain the correct choice in everyday language and address the misconception.
+**Facilitation:** Choose an answer, justify it using the stated numbers or definition, and explain why one plausible alternative fails.
 
-### L04-C09 · Core · Exit / one takeaway
+### L04-C09 · Core · Reasoning / connect fit, evaluation and causality
 
 **Placement:** [After “Fit carefully. Evaluate separately. Interpret precisely.”](../10_Regression_Part_2/index.html#/summary) · [Handout](../10_Regression_Part_2/handout.html#chapter-summary)  
 **Time:** 120 seconds, including debrief.
 
-In one sentence, explain what overfitting would look like when comparing training results with results on new data.
+Degree 1 has training/validation RMSE (0.20, 0.22); degree 9 has (0.02, 0.60). Recommend a degree, name the data for final assessment, and explain why a significant slope would not prove causation.
 
 
 **Answer:** Suggested rubric (no automatic answer key)
 
-A model fits training data very well but performs noticeably worse on new data. One clear comparison is sufficient.
+Prefer degree 1 using validation evidence; assess the fixed procedure on a genuinely held-out test set. A slope test concerns association under assumptions, while causal claims require study design and control of common causes.
 
-**Misconception:** Judging a model only by its training fit.
+**Misconception:** Confusing distinct regression quantities or drawing a stronger conclusion than the evidence supports.
 
-**Facilitation:** Accept a short answer in the student’s own words. Use a few responses to identify what needs revisiting; do not grade terminology.
+**Facilitation:** Ask for three short linked statements: choice, final assessment, and causal limitation. Accept sound reasoning rather than exact wording.
 
-### L04-O02 · Optional · Optional / basic extension
+### L04-O02 · Optional · Reasoning / compare interval evidence
 
-**Placement:** [After “A confidence interval expresses coefficient precision”](../10_Regression_Part_2/index.html#/interval) · [Handout](../10_Regression_Part_2/handout.html#chapter-interval)  
-**Time:** 90 seconds, including debrief.
+**Placement:** [After “A confidence interval shows the precision of the slope”](../10_Regression_Part_2/index.html#/interval) · [Handout](../10_Regression_Part_2/handout.html#chapter-interval)  
+**Time:** 120 seconds, including debrief.
 
-Two confidence intervals for the same slope are computed using the same confidence level. What does the wider interval communicate?
+Two studies report 95% slope intervals A: [0.2, 0.6] and B: [−0.1, 0.9], both centered at 0.4. Under the classical model, which interpretation is justified?
 
-- **A.** Greater precision about the slope.
-- **B.** Proof that the slope causes the outcome.
-- **C.** Less precision about the slope.
-- **D.** A guarantee that every future observation lies in the interval.
+- **A.** B estimates a larger slope because its upper limit is higher.
+- **B.** A proves causation because its interval excludes zero.
+- **C.** A is more precise and excludes zero; B is less precise and does not rule out a zero slope.
+- **D.** The true slope has a 95% probability of being exactly 0.4 in each study.
 
-**Answer:** C. Less precision about the slope.
+**Answer:** C. A is more precise and excludes zero; B is less precise and does not rule out a zero slope.
 
-A wider interval expresses more uncertainty about the coefficient. A coefficient interval is not a prediction interval for individual outcomes.
+Both point estimates are 0.4. A has a narrower interval and excludes zero, unlike B. A coefficient interval describes precision under assumptions and is not a causal claim or a posterior probability about a fixed parameter.
 
-**Misconception:** Confusing interval width with stronger evidence or prediction coverage.
+**Misconception:** Confusing distinct regression quantities or drawing a stronger conclusion than the evidence supports.
 
-**Facilitation:** Give students a moment to answer, then explain the correct choice in everyday language and address the misconception.
+**Facilitation:** Choose an answer, justify it using the stated numbers or definition, and explain why one plausible alternative fails.
 
-### L04-O03 · Optional · Optional / basic extension
+### L04-O03 · Optional · Reasoning / recognize dependent features
 
-**Placement:** [After “Multiple regression adds one coefficient per feature”](../10_Regression_Part_2/index.html#/multiple) · [Handout](../10_Regression_Part_2/handout.html#chapter-multiple)  
-**Time:** 90 seconds, including debrief.
+**Placement:** [After “Several predictors, one response: fit their coefficients together”](../10_Regression_Part_2/index.html#/multiple) · [Handout](../10_Regression_Part_2/handout.html#chapter-multiple)  
+**Time:** 120 seconds, including debrief.
 
-A model uses house area and number of rooms to predict price. How does this differ from using area alone?
+A price model includes an intercept, area in m², and the same area in cm² (= 10,000 × area in m²). What happens to ordinary least-squares coefficients?
 
-- **A.** It uses more than one input feature.
-- **B.** It no longer predicts a number.
-- **C.** It cannot be a regression model.
-- **D.** It is guaranteed to make every prediction correctly.
+- **A.** They need not be unique because the area columns are dependent; a least-squares fit still exists.
+- **B.** No least-squares solution can exist because XᵀX is singular.
+- **C.** The added area column guarantees strictly smaller training RSS.
+- **D.** Changing the area unit creates an independent new predictor.
 
-**Answer:** A. It uses more than one input feature.
+**Answer:** A. They need not be unique because the area columns are dependent; a least-squares fit still exists.
 
-Multiple regression can include several input features. Adding a feature does not guarantee better prediction on new data.
+One area column is an exact multiple of the other, so the design lacks full column rank. Coefficients are not uniquely identified, but least-squares solutions and unique fitted training values still exist.
 
-**Misconception:** Thinking more predictors automatically guarantee a perfect model.
+**Misconception:** Confusing distinct regression quantities or drawing a stronger conclusion than the evidence supports.
 
-**Facilitation:** Give students a moment to answer, then explain the correct choice in everyday language and address the misconception.
+**Facilitation:** Choose an answer, justify it using the stated numbers or definition, and explain why one plausible alternative fails.
 
 ## 11 · Classification · Part 1
 

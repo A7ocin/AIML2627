@@ -63,23 +63,23 @@
     },
     "07_Intro_ML_Part_1": {
       "slides_sha256": "4020c9f079d64b77076660d5266cb63f02e0c79b895b66c0c99a2eae492420fd",
-      "handout_sha256": "617eba708370bd604591562427bfd00b4ff2d7495a8f62e88bd9623189185160",
+      "handout_sha256": "7397b7a17997a7c8ad20860a5297015e80e549c93e4cdc600f4f4417e5204b8d",
       "slides": 34
     },
     "08_Intro_ML_Part_2": {
-      "slides_sha256": "f9e3754b65a1e77dd5015c0f81f8e2f2d8cdd0c3b7cd6a09bedd1291fb2e8262",
-      "handout_sha256": "10a79d215a17d618ff21eb3b8c6fd6de5aea8ccdc9ce0b42bbbe9ce7a5692b2b",
+      "slides_sha256": "469cdc66ee8051a74a728244fb5f7fa5013d5af5237f94c86f29c1e9b7fad76e",
+      "handout_sha256": "c5d4b8f33bc99ac6b36f685f69a4f1ab10713d4d9210c93bd9c34c255849892a",
       "slides": 28
     },
     "09_Regression_Part_1": {
-      "slides_sha256": "9b9f90c372c51b03081751967f5b1778c2821c534a7b81cede676fe9f4316cf3",
-      "handout_sha256": "dbde1cf5f239fbea6aa6f3cc2f11224768f393505322fe36d7f925dc906c5efd",
-      "slides": 26
+      "slides_sha256": "932f5e189c497f6539b4b72f6eb37d0f6e1b3e6e63fdef6fd3be5821000da5af",
+      "handout_sha256": "aaf6352ba439735b91854480179a4d0bb0ff1eb55beaa7a7f5fc41c0e2199fed",
+      "slides": 39
     },
     "10_Regression_Part_2": {
-      "slides_sha256": "5bea59f8ad3ccc7949f6d410adb17b2197ea43adcb02dbf90c4209f2f94b786b",
-      "handout_sha256": "4d176eb62c6afd65517f4c9c5769fb8f84b195b9a3b774b8be78f69c08187bf5",
-      "slides": 27
+      "slides_sha256": "b45f2d162be9966f1a935a59d5c6d789a184aa80f105a10a9bcb46d3453ec8e8",
+      "handout_sha256": "a0f36bbc46488ad31ffc6be843b9e3b4598c1b8ab8efed6ffc2ac886535f7ff4",
+      "slides": 34
     },
     "11_Classification_Part_1": {
       "slides_sha256": "0ab24c37f263af1b891d367a308cd0b21be532129a664eb31dccfa5ee86d4f4d",
@@ -950,5 +950,207 @@
     "liveSavedAndReloadVerified": true,
     "unaffectedWorkbooksPreserved": 31,
     "curveExplanation": "Simulator uses y=2+1.2x−0.9x² plus noise; slide and handout distinguish true and fitted curves; numerical engine unchanged."
+  },
+  "regressionReview20261029": {
+    "questions": 12,
+    "liveSavedAndReloaded": true,
+    "workbookRoundtrip": "passed",
+    "unrelatedWorkbooksPreserved": 28
+  },
+  "regressionLinearIntroductionRevision": {
+    "date": "2026-10-29",
+    "slides": [
+      "regression-notation",
+      "line-mean-example",
+      "line"
+    ],
+    "renderedPositions": [
+      4,
+      5,
+      6
+    ],
+    "change": "Expanded the approximate line rule, added a same-input/different-response illustration, and explained the random-error observation model.",
+    "handoutChaptersMatch": true,
+    "layoutBoundsIssues": 0,
+    "questionContentUnchanged": true,
+    "proof": "outputs/regression-linear-intro-20261029"
+  },
+  "regressionPart2TeachingReview20261030": {
+    "date": "2026-10-30",
+    "sourceReadBeforeEditing": true,
+    "sourceCoverage": {
+      "Bias and prediction variance": [
+        "bias-intuition",
+        "bias-variance",
+        "bias-lab"
+      ],
+      "Expected test MSE decomposition": [
+        "decomposition"
+      ],
+      "Validation versus final testing": [
+        "selection"
+      ],
+      "Null and alternative hypotheses": [
+        "inference-intro",
+        "hypothesis-test"
+      ],
+      "True sampling variance and normal standardization": [
+        "noise-versus-precision",
+        "inference-sampling"
+      ],
+      "Slope SE with fully expanded sums": [
+        "standard-error"
+      ],
+      "Observed and random Student t statistic": [
+        "t-statistic"
+      ],
+      "Two-sided p-value and prespecified significance threshold": [
+        "pvalues",
+        "tails-lab",
+        "uncertainty-lab"
+      ],
+      "Confidence interval and critical percentile": [
+        "interval"
+      ],
+      "Multiple-regression expanded, summation and matrix forms": [
+        "multiple-intro",
+        "multiple"
+      ],
+      "Conditional coefficient interpretation and 2D projections": [
+        "conditional",
+        "association-lab"
+      ],
+      "Common cause and adjusted fit": [
+        "confounding",
+        "adjustment",
+        "adjustment-lab"
+      ],
+      "LINE, zero conditional error mean and full rank": [
+        "assumptions"
+      ],
+      "Residual patterns, order and normal Q-Q definition": [
+        "diagnostics-lab",
+        "residual-reading"
+      ]
+    },
+    "correctionsRetained": [
+      "Model selection uses validation instead of repeatedly selecting by final test error.",
+      "The slope sampling standard deviation is sigma/sqrt(Sxx), rather than the response-error standard deviation sigma.",
+      "RSE is a standard deviation; its square estimates variance.",
+      "The 90 plotted observations give t approximately 5.99193 and a two-sided p-value approximately 4.445e-8.",
+      "A small association p-value and an adjusted coefficient change do not establish causality.",
+      "OLS computation does not require normal errors; exact classical t inference needs the stated stronger assumptions.",
+      "Multiple regression has several predictors and one response."
+    ],
+    "sourceSlides": 34,
+    "renderedSlides": 40,
+    "readingSections": 33,
+    "interactiveExamples": 6,
+    "numericalChecksPassed": 711,
+    "independentNewModelComparisons": 39,
+    "newModelSamples": [
+      7,
+      1,
+      23
+    ],
+    "handoutFormulaPanelsMatch": true,
+    "handoutTitlesMatch": true,
+    "allEmbeddedExamplesOpened": true,
+    "printPreviewsRefreshed": 6,
+    "layoutBoundsIssues": 0,
+    "formulaPanelClearanceIssues": 0,
+    "handoutNarrowViewport": 390,
+    "handoutNarrowDocumentWidth": 375,
+    "part1SmokeChecks": {
+      "startingGuessRSS": 9.6666,
+      "bestFitRSS": 0.3106,
+      "residualLabOLS_RSS": 0.3201
+    },
+    "questionWordingUnchanged": true,
+    "placementOnlyChanges": {
+      "L04-C07": "after uncertainty-lab",
+      "L04-C08": "after adjustment-lab"
+    },
+    "all48ImportWorkbooksPreservedByteForByte": true,
+    "explicitPreviousMaterialReferencesAdded": false,
+    "proofDirectory": "C:\\Users\\Nicola\\Documents\\Codex\\2026-10-12\\can\\outputs\\regression-part2-review-20261030"
+  },
+  "regressionMatrixTeachingClarityRevision": {
+    "date": "2026-10-31",
+    "oldPolynomialSectionReadBeforeEditing": true,
+    "originalRenderedRange": [
+      32,
+      35
+    ],
+    "newRenderedRange": [
+      32,
+      37
+    ],
+    "newSlides": [
+      "residual-vector-example",
+      "gradient-intuition"
+    ],
+    "sourceSlides": 40,
+    "renderedSlides": 46,
+    "readingSections": 39,
+    "labs": 6,
+    "changes": [
+      "Explained the residual norm and arg min in words.",
+      "Added a three-observation example connecting individual residuals, vectors and RSS.",
+      "Added a gradient illustration before differentiation.",
+      "Expanded the derivation to five steps with one interactive comment at a time.",
+      "Restored the inverse formula and explained full column rank and duplicate columns.",
+      "Illustrated degree selection versus coefficient fitting using degrees 1 and 2."
+    ],
+    "handoutTitlesFormulasAndKeysMatch": true,
+    "untouchedSourceSectionsPreserved": true,
+    "fiveDerivationStepsTested": true,
+    "workedNumbersAndGradientIndependentlyVerified": true,
+    "layoutBoundsIssues": 0,
+    "formulaClearanceIssues": 0,
+    "handout390pxDocumentWidth": 375,
+    "questionBankAnd48WorkbooksUnchanged": true,
+    "proofDirectory": "C:\\Users\\Nicola\\Documents\\Codex\\2026-10-12\\can\\outputs\\regression-p1-matrix-clarity-20261031"
+  },
+  "regressionExplicitRSSDotProductRevision": {
+    "date": "2026-10-31",
+    "slide": 33,
+    "id": "residual-vector-example",
+    "change": "Explicitly equated RSS with r transpose r, expanded the row-by-column calculation into squared terms, and explained the general sum-of-squares identity.",
+    "handoutMatches": true,
+    "layoutIssues": 0
+  },
+  "regressionResidualTableCaseCorrection": {
+    "date": "2026-10-31",
+    "slide": 33,
+    "change": "Disabled uppercase styling in the residual table so x, y and r keep their mathematical case in slides and handout."
+  },
+  "regressionFinalOLSIsolationStepRevision": {
+    "date": "2026-10-31",
+    "slide": 35,
+    "steps": 6,
+    "formula": "beta_hat = (X^T X)^(-1) X^T y",
+    "condition": "X^T X invertible (independent feature columns)",
+    "explanation": "Left multiplication by the inverse cancels X^T X and isolates the fitted coefficients.",
+    "selectionHighlight": "Amber box, amber formula and stronger bottom border",
+    "handoutSynchronized": true,
+    "allSixStepsChecked": true,
+    "layoutBoundsIssues": 0
+  },
+  "regressionRankSlideRemoval": {
+    "date": "2026-10-31",
+    "removedSlide": "rank",
+    "formerRenderedNumber": 36,
+    "newRenderedTotal": 45,
+    "handoutExplanationRetained": true,
+    "handoutBacklinkRepaired": true,
+    "finalCoefficientStepRetained": true,
+    "questionsUnchanged": true
+  },
+  "regressionRSSDotProductIntroductionRevision": {
+    "date": "2026-10-31",
+    "slide": 32,
+    "change": "Introduced r transpose r in the first RSS equation, defined r = y - X beta and transpose, and explained that all three score notations add squared residuals.",
+    "handoutMatches": true
   }
 }

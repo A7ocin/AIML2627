@@ -14,4 +14,10 @@ for(const degree of [0,1,2,5,9])for(const n of [12,25,60])for(const seed of [1,7
  for(let j=0;j<=degree;j++)check(()=>assert(Math.abs(data.reduce((s,p)=>s+(p.y-R.predict(e.fits[0],p.x))*p.x**j,0))<1e-8));
 }
 for(const kind of ['Well behaved','Curvature','Unequal variance','Serial pattern'])for(const seed of [1,7,23]){const d=R.diagnostic(kind,seed);check(()=>assert.deepEqual(d,R.diagnostic(kind,seed)));check(()=>near(d.residuals.reduce((s,p)=>s+p.residual,0),0));check(()=>near(d.residuals.reduce((s,p)=>s+p.residual*p.x,0),0));}
-console.log(checks+' checks passed: independent SciPy statistics, Student t tails, OLS/QR, rank cases, ensemble decomposition and diagnostic residuals.');
+// Independent NumPy least-squares and SciPy t-distribution references for the three controlled samples.
+for(const {seed,expected} of require('./confounding-reference.json')){
+ const c=R.confounding(seed);check(()=>assert.equal(c.data.length,80));check(()=>assert.deepEqual(c,R.confounding(seed)));
+ for(const [key,value] of Object.entries(expected))check(()=>near(c.adjusted[key],value,1e-9));
+ for(const feature of [()=>1,p=>p.sales,p=>p.temp])check(()=>assert(Math.abs(c.data.reduce((sum,p)=>sum+feature(p)*(p.attacks-c.adjusted.intercept-c.adjusted.salesSlope*p.sales-c.adjusted.tempSlope*p.temp),0))<1e-8));
+}
+console.log(checks+' checks passed: independent SciPy statistics, Student t tails, OLS/QR, rank cases, ensemble decomposition, diagnostic residuals and adjusted regression.');

@@ -21,5 +21,15 @@
  const truth=x=>2+1.2*x-.9*x*x;
  function ensemble(degree=2,n=25,seed=7){const fits=Array.from({length:60},(_,rep)=>{const r=rng(seed+1021*rep),data=Array.from({length:n},(_,i)=>{const x=-1+2*i/(n-1);return {x,y:truth(x)+.3*gaussian(r)};});return fit(data,degree);});return {fits,at(x){const vals=fits.map(c=>predict(c,x)),avg=mean(vals),bias2=(avg-truth(x))**2,variance=mean(vals.map(v=>(v-avg)**2));return {mean:avg,bias2,variance,noise:.09,total:bias2+variance+.09};}};}
  function diagnostic(kind='Well behaved',seed=7){const r=rng(seed);let prev=0;const data=Array.from({length:60},(_,i)=>{const x=kind==='Serial pattern'?2*r()-1:-1+2*i/59,z=gaussian(r);let err=.22*z;if(kind==='Curvature')err+=1.2*x*x;if(kind==='Unequal variance')err=(.08+.55*(x+1)/2)*z;if(kind==='Serial pattern'){prev=.85*prev+.18*z;err=prev;}return {x,y:1.5+1.1*x+err,order:i+1};});const o=ols(data);return {data,ols:o,residuals:data.map(p=>({...p,fitted:o.intercept+o.slope*p.x,residual:p.y-o.intercept-o.slope*p.x}))};}
- const api={mean,rng,gaussian,points,predict,metrics,ols,fit,tP,tPDF,critical,infer,truth,ensemble,diagnostic};if(typeof module!=='undefined')module.exports=api;else scope.RG=api;
+
+ // A controlled common-cause example. The outcome generator has no sales term.
+ function confounding(seed=7,n=80){
+  const random=rng(seed),data=Array.from({length:n},()=>{const temp=10+25*random(),sales=25+1.8*temp+6*gaussian(random),attacks=5+.5*temp+2*gaussian(random);return {temp,sales,attacks};});
+  const xb=mean(data.map(p=>p.sales)),tb=mean(data.map(p=>p.temp)),yb=mean(data.map(p=>p.attacks));
+  let xx=0,tt=0,xt=0,xy=0,ty=0;for(const p of data){const x=p.sales-xb,t=p.temp-tb,y=p.attacks-yb;xx+=x*x;tt+=t*t;xt+=x*t;xy+=x*y;ty+=t*y;}
+  const det=xx*tt-xt*xt,salesSlope=(xy*tt-ty*xt)/det,tempSlope=(ty*xx-xy*xt)/det,intercept=yb-salesSlope*xb-tempSlope*tb;
+  const rss=data.reduce((sum,p)=>sum+(p.attacks-intercept-salesSlope*p.sales-tempSlope*p.temp)**2,0),df=n-3,v=rss/df,salesSE=Math.sqrt(v*tt/det),tempSE=Math.sqrt(v*xx/det);
+  return {data,tempMean:tb,simple:infer(data.map(p=>({x:p.sales,y:p.attacks}))),adjusted:{intercept,salesSlope,tempSlope,rss,rse:Math.sqrt(v),df,salesSE,tempSE,salesT:salesSlope/salesSE,tempT:tempSlope/tempSE,salesP:tP(salesSlope/salesSE,df),tempP:tP(tempSlope/tempSE,df)}};
+ }
+ const api={mean,rng,gaussian,points,predict,metrics,ols,fit,tP,tPDF,critical,infer,truth,ensemble,diagnostic,confounding};if(typeof module!=='undefined')module.exports=api;else scope.RG=api;
 })(typeof window==='undefined'?globalThis:window);

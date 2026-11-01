@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 480" role="img" aria-labelledby="title desc">
+<title id="title">A mean line and two responses at the same input</title><desc id="desc">The illustrative line is f(x)=1+3x. At x=2 it predicts mean response 7. Two observed responses, 8 and 6, are one unit above and below that mean. The intercept is 1 and increasing x by one increases the line value by 3.</desc>
+<style>text{font-family:Segoe UI,Arial,sans-serif;fill:#e8ecf4} .muted{fill:#aabbd0} .grid{stroke:#334258;stroke-width:1}</style>
+<rect x="1" y="1" width="898" height="478" rx="16" fill="#111b2a" stroke="#3d5067" stroke-width="2"/>
+<path d="M90 55V405H820" fill="none" stroke="#aabbd0" stroke-width="2"/>
+<g class="grid"><path d="M90 374H820 M90 281H820 M90 188H820 M90 95H820"/></g>
+<g font-size="25" class="muted" text-anchor="end"><text x="76" y="383">1</text><text x="76" y="290">4</text><text x="76" y="197">7</text><text x="76" y="104">10</text></g>
+<g font-size="25" class="muted" text-anchor="middle"><text x="90" y="438">0</text><text x="300" y="438">1</text><text x="510" y="438">2</text><text x="720" y="438">3</text></g>
+<text x="455" y="468" text-anchor="middle" font-size="26">Input x (illustrative units)</text><text x="28" y="238" transform="rotate(-90 28 238)" text-anchor="middle" font-size="26">Response y</text>
+<path d="M510 137V405" stroke="#8ea3b8" stroke-width="2" stroke-dasharray="6 7"/>
+<path d="M90 374L762 76" stroke="#45d6c0" stroke-width="5" fill="none"/>
+<path d="M510 157V219" stroke="#c792ea" stroke-width="5"/>
+<circle cx="510" cy="157" r="10" fill="#4db8ff"/><circle cx="510" cy="219" r="10" fill="#4db8ff"/><circle cx="510" cy="188" r="8" fill="#45d6c0" stroke="#111b2a" stroke-width="3"/>
+<text x="554" y="155" font-size="27">Observed: 8</text><text x="554" y="197" font-size="27" fill="#45d6c0">Line value: 7</text><text x="554" y="239" font-size="27">Observed: 6</text>
+<text x="126" y="52" font-size="28" fill="#45d6c0">Toy mean line: f(x) = 1 + 3x</text>
+</svg>

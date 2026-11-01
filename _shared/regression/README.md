@@ -1,3 +1,17 @@
+## Active split packs · review of 31 October 2026
+
+The teaching files are `../../09_Regression_Part_1/` and `../../10_Regression_Part_2/`, each with `index.html` and `handout.html`. Edit these files directly; the historical combined-deck builder below must not regenerate them. The current packs contain 45 and 40 rendered slides, 39 and 33 reading sections, and 6 and 6 interactive examples.
+
+`css/review.css` provides shared card spacing, native MathML layout and reading styles. `js/review.js` controls the six-step normal-equation walkthrough. Each mathematical slide has a local symbol key; both handouts have full symbol reference tables. Their JSON-encoded standalone labs use the same runtime and their static print previews were refreshed. Keep mathematical panels synchronized between slides and handouts.
+
+`notes/coverage-review-20261029.json` records the topic-by-topic mathematical review. The seven chart datasets retain their original coordinates. The numerical engine now also supports a controlled two-predictor regression example; all 711 engine checks pass, including independent NumPy/SciPy references for its three samples. The twelve regression questions in the local bank and existing live event RBCJRAP were strengthened and verified after reload. Preserve their stable IDs, URLs, question types and answer positions. Changes to question wording require both regeneration of the local artifacts and an in-browser edit of the existing live form. Placement-only changes require local regeneration.
+
+Part 2 now moves from a short recap and repeated-prediction diagrams through bias–variance, sampling uncertainty, slope tests and confidence intervals, then multiple regression, conditional interpretation, confounding and LINE assumptions. Its six labs and handout print previews share the revised controls and calculations. The p-value and adjustment questions follow their worked examples. The review includes all 40 rendered slides, all formula panels, six embedded handout examples, and narrow-screen reading checks.
+
+Part 1 slides 32–36 explain the matrix objective, a three-observation residual example, the gradient intuition, a six-step derivation ending in the inverse formula, and degree versus coefficient selection. The separate independent-column/inverse slide was removed; its detailed handout section remains. Their handout sections preserve the full explanation and all six derivation comments.
+
+---
+
 # AIML · Lesson 4 · Regression
 
 Open `index.html` in Chrome or Edge. The 46-slide deck follows the style of the previous four lectures. All charts, data and libraries are local, so it works directly from disk without a server, course login or internet connection.
@@ -43,3 +57,5 @@ Run `node tests/engine.test.js` for numerical checks. `node tests/render-review.
 `python tools/verify-source.py` regenerates the independent numerical review using NumPy and SciPy. It evaluates the local source payloads and does not require network access.
 
 Reveal.js and Plotly.js 3.2.0 are bundled in `lib/`, with their copyright/license headers retained. No runtime installation is needed.
+
+The linear-regression introduction now uses three consecutive slides: an approximate prediction rule, a worked same-input/different-response illustration, and the observation equation with a random-error term. Their handout sections explain the meaning of approximately equal, the intercept and slope, the zero conditional error mean assumption, and the distinction between unobserved errors and fitted residuals.

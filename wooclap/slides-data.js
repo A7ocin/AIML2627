@@ -768,16 +768,16 @@ window.AIML_WOOCLAP = {
           "id": "L04-C01",
           "core": true,
           "type": "MCQ",
-          "slide": "residual-lab",
-          "when": "before",
-          "purpose": "Opening / everyday intuition",
-          "stem": "A house costs 7 units, but a model predicts 5. Using error = actual value minus prediction, what is the error?",
-          "seconds": 60,
+          "slide": "rss",
+          "when": "after",
+          "purpose": "Reasoning / residual cancellation",
+          "stem": "Two observed responses are 2 and 4; a line predicts 3 for both. Residual = observed minus predicted. What does the zero sum of residuals tell us?",
+          "seconds": 120,
           "choices": [
-            "-2.",
-            "12.",
-            "+2.",
-            "4."
+            "The fit is exact because its positive and negative errors sum to zero.",
+            "The residual sum is zero, so RSS must also be zero.",
+            "The residuals cancel, but RSS = 2: neither prediction is exact.",
+            "The model overpredicts both cases, with RSS = 4."
           ],
           "src": "https://app.wooclap.com/events/RBCJRAP/questions/6aa8fe5d4c33f3f9df46d96b"
         },
@@ -787,14 +787,14 @@ window.AIML_WOOCLAP = {
           "type": "MCQ",
           "slide": "fit-lab",
           "when": "before",
-          "purpose": "Prediction / intuition",
-          "stem": "A line predicts every training value exactly. What is its sum of squared prediction errors?",
-          "seconds": 60,
+          "purpose": "Reasoning / compare squared losses",
+          "stem": "On the same three training cases, line A has residuals (0, 0, 3), and line B has (2, 2, 0). Which line does ordinary least squares prefer?",
+          "seconds": 120,
           "choices": [
-            "0.",
-            "1.",
-            "The number of training examples.",
-            "We cannot tell even though every prediction is exact."
+            "Line B: its RSS is 8, compared with 9 for line A.",
+            "Line A: it predicts two of the three cases exactly.",
+            "Line A: its signed residual sum is smaller.",
+            "They tie because both have a residual equal to zero."
           ],
           "src": "https://app.wooclap.com/events/RBCJRAP/questions/6aa8fe5d4c33f3f9df46d970"
         },
@@ -804,14 +804,14 @@ window.AIML_WOOCLAP = {
           "type": "MCQ",
           "slide": "r2",
           "when": "after",
-          "purpose": "Check / core understanding",
-          "stem": "On the same nonconstant dataset, model A has R²=0.8 and model B has R²=0.3. Which has the smaller sum of squared errors?",
-          "seconds": 90,
+          "purpose": "Reasoning / interpret a negative held-out score",
+          "stem": "On held-out data, a model has RSS = 50 and the mean-response baseline has TSS = 40. Using R² = 1 − RSS/TSS, which interpretation is correct?",
+          "seconds": 120,
           "choices": [
-            "Model A.",
-            "Model B.",
-            "They must have equal errors.",
-            "R² only tells us whether the slope is positive."
+            "R² = −0.25: the model is worse than that baseline on these data.",
+            "R² = 0.25: the model explains one quarter of the variation.",
+            "A negative value proves that the regression code is incorrect.",
+            "R² is undefined whenever RSS is greater than TSS."
           ],
           "src": "https://app.wooclap.com/events/RBCJRAP/questions/6aa8fe5d4c33f3f9df46d975"
         },
@@ -820,15 +820,15 @@ window.AIML_WOOCLAP = {
           "core": true,
           "type": "MCQ",
           "slide": "polynomial",
-          "when": "before",
-          "purpose": "Prediction / intuition",
-          "stem": "A scatterplot shows a clear U-shaped pattern. Which model could follow that shape better than a straight line?",
-          "seconds": 90,
+          "when": "after",
+          "purpose": "Reasoning / linearity in coefficients",
+          "stem": "Consider ŷ = β₀ + β₁x + β₂x². The inputs are known and only the three β coefficients are fitted. Why can this use ordinary linear least squares?",
+          "seconds": 120,
           "choices": [
-            "A horizontal line only.",
-            "The same straight line with a different color.",
-            "A curve that includes an x-squared term.",
-            "Deleting the response values before fitting."
+            "Because every quadratic curve is also a straight line in x.",
+            "Because squaring x eliminates the need to estimate β₂.",
+            "Because 1, x and x² are known features, each multiplied by one unknown coefficient.",
+            "Because any function of x and β is linear once the data are recorded."
           ],
           "src": "https://app.wooclap.com/events/RBCJRAP/questions/6aa8fe5d4c33f3f9df46d97a"
         },
@@ -838,14 +838,14 @@ window.AIML_WOOCLAP = {
           "type": "MCQ",
           "slide": "overfit-lab",
           "when": "before",
-          "purpose": "Prediction / intuition",
-          "stem": "A student memorizes every practice answer but struggles with new exercises. Which model behavior is this most like?",
-          "seconds": 90,
+          "purpose": "Reasoning / model selection and evaluation",
+          "stem": "On the same split, degree 1 has training/validation RMSE (0.10, 0.12); degree 15 has (0.04, 0.30). What is the best next decision for prediction?",
+          "seconds": 120,
           "choices": [
-            "Doing poorly on both practice and new examples.",
-            "Doing equally well on every new example.",
-            "Having too little flexibility to fit any practice example.",
-            "Doing very well on training examples but poorly on new examples."
+            "Choose degree 15 because its training error is smaller.",
+            "Choose degree 15 because more coefficients guarantee better generalization.",
+            "Use the final test set repeatedly until one degree has the smallest score.",
+            "Prefer degree 1 using validation evidence, then assess the fixed choice on an untouched test set."
           ],
           "src": "https://app.wooclap.com/events/RBCJRAP/questions/6aa8fe5d4c33f3f9df46d97f"
         },
@@ -855,14 +855,14 @@ window.AIML_WOOCLAP = {
           "type": "MCQ",
           "slide": "line",
           "when": "after",
-          "purpose": "Optional / basic extension",
-          "stem": "In a straight-line model y ≈ intercept + slope × x, what does the slope describe?",
-          "seconds": 90,
+          "purpose": "Reasoning / rescale an input",
+          "stem": "A toy model predicts yield = 2 + 3x, where x is fertilizer in kilograms. We express the same input as z = 1000x grams. Which model gives exactly the same predictions?",
+          "seconds": 120,
           "choices": [
-            "The total number of observations.",
-            "The prediction when x is zero.",
-            "The color of the plotted line.",
-            "The predicted change in y when x increases by one unit."
+            "Yield = 2000 + 3000z.",
+            "Yield = 2 + 3000z.",
+            "Yield = 0.002 + 3z.",
+            "Yield = 2 + 0.003z."
           ],
           "src": "https://app.wooclap.com/events/RBCJRAP/questions/6aa90172f68598b6f2411259"
         }
@@ -878,14 +878,14 @@ window.AIML_WOOCLAP = {
           "type": "MCQ",
           "slide": "bias-lab",
           "when": "after",
-          "purpose": "Check / core understanding",
-          "stem": "You fit a model again using a slightly different training sample, and its curve changes a lot. What does this suggest?",
-          "seconds": 90,
+          "purpose": "Reasoning / separate bias from variance",
+          "stem": "At one fixed input, the true mean is 2. Across repeated training samples a method predicts 1 or 3 equally often. Which description is correct?",
+          "seconds": 120,
           "choices": [
-            "The model must make identical predictions on every dataset.",
-            "The fitted model is sensitive to which training examples it receives.",
-            "The training sample has no effect on the fit.",
-            "The target must be a category rather than a number."
+            "Zero bias and zero variance: averaging to 2 makes every fit correct.",
+            "Zero bias but nonzero variance: the mean prediction is right, while individual fits move.",
+            "Nonzero bias but zero variance: each fitted prediction differs from 2.",
+            "Both bias and variance are zero once fresh response noise is removed."
           ],
           "src": "https://app.wooclap.com/events/RBCJRAP/questions/6aa8fe5d4c33f3f9df46d984"
         },
@@ -893,16 +893,16 @@ window.AIML_WOOCLAP = {
           "id": "L04-C07",
           "core": true,
           "type": "MCQ",
-          "slide": "pvalues",
+          "slide": "uncertainty-lab",
           "when": "after",
-          "purpose": "Check / core understanding",
-          "stem": "A regression slope has a small p-value. Does that alone prove that changing the input causes the output to change?",
-          "seconds": 90,
+          "purpose": "Reasoning / interpret a null probability",
+          "stem": "An observational regression gives a two-sided slope p-value of 0.03. Which statement matches what that number means?",
+          "seconds": 120,
           "choices": [
-            "Yes. Every small p-value proves causation.",
-            "No. Evidence of an association is not by itself proof of causation.",
-            "Yes, provided the graph uses a straight line.",
-            "No, because a small p-value means the slope must be exactly zero."
+            "There is a 3% probability that the true slope is zero.",
+            "If the zero-slope null and assumptions held, statistics at least this extreme would occur with probability 3%.",
+            "There is a 97% probability that changing the predictor causes a change in the response.",
+            "The slope must be large enough to matter in practice because 0.03 is below 0.05."
           ],
           "src": "https://app.wooclap.com/events/RBCJRAP/questions/6aa8fe5d4c33f3f9df46d989"
         },
@@ -910,16 +910,16 @@ window.AIML_WOOCLAP = {
           "id": "L04-C08",
           "core": true,
           "type": "MCQ",
-          "slide": "adjustment",
+          "slide": "adjustment-lab",
           "when": "after",
-          "purpose": "Check / core understanding",
-          "stem": "Ice-cream sales and swimming incidents both rise in warm weather. What could help explain their association?",
-          "seconds": 90,
+          "purpose": "Reasoning / interpret adjustment",
+          "stem": "An ice-cream coefficient is positive with p = 0.001. After adding temperature, it is smaller with p = 0.40. What may we conclude?",
+          "seconds": 120,
           "choices": [
-            "Warm weather can affect both ice-cream buying and swimming activity.",
-            "Buying ice cream has been proved to cause every incident.",
-            "An association guarantees that one variable causes the other.",
-            "Two quantities that rise together cannot share another cause."
+            "The conditional association is weaker; a shared-temperature explanation is plausible, but causality is not settled.",
+            "The new p-value proves that ice cream has exactly zero causal effect.",
+            "The original significant coefficient proves a direct causal effect despite the adjustment.",
+            "The coefficient must stay unchanged when a correlated predictor is added."
           ],
           "src": "https://app.wooclap.com/events/RBCJRAP/questions/6aa8fe5d4c33f3f9df46d98e"
         },
@@ -929,8 +929,8 @@ window.AIML_WOOCLAP = {
           "type": "OpenQuestion",
           "slide": "summary",
           "when": "after",
-          "purpose": "Exit / one takeaway",
-          "stem": "In one sentence, explain what overfitting would look like when comparing training results with results on new data.",
+          "purpose": "Reasoning / connect fit, evaluation and causality",
+          "stem": "Degree 1 has training/validation RMSE (0.20, 0.22); degree 9 has (0.02, 0.60). Recommend a degree, name the data for final assessment, and explain why a significant slope would not prove causation.",
           "seconds": 120,
           "choices": [],
           "src": "https://app.wooclap.com/events/RBCJRAP/questions/6aa8fe5d4c33f3f9df46d993"
@@ -941,14 +941,14 @@ window.AIML_WOOCLAP = {
           "type": "MCQ",
           "slide": "interval",
           "when": "after",
-          "purpose": "Optional / basic extension",
-          "stem": "Two confidence intervals for the same slope are computed using the same confidence level. What does the wider interval communicate?",
-          "seconds": 90,
+          "purpose": "Reasoning / compare interval evidence",
+          "stem": "Two studies report 95% slope intervals A: [0.2, 0.6] and B: [−0.1, 0.9], both centered at 0.4. Under the classical model, which interpretation is justified?",
+          "seconds": 120,
           "choices": [
-            "Greater precision about the slope.",
-            "Proof that the slope causes the outcome.",
-            "Less precision about the slope.",
-            "A guarantee that every future observation lies in the interval."
+            "B estimates a larger slope because its upper limit is higher.",
+            "A proves causation because its interval excludes zero.",
+            "A is more precise and excludes zero; B is less precise and does not rule out a zero slope.",
+            "The true slope has a 95% probability of being exactly 0.4 in each study."
           ],
           "src": "https://app.wooclap.com/events/RBCJRAP/questions/6aa90172f68598b6f241125e"
         },
@@ -958,14 +958,14 @@ window.AIML_WOOCLAP = {
           "type": "MCQ",
           "slide": "multiple",
           "when": "after",
-          "purpose": "Optional / basic extension",
-          "stem": "A model uses house area and number of rooms to predict price. How does this differ from using area alone?",
-          "seconds": 90,
+          "purpose": "Reasoning / recognize dependent features",
+          "stem": "A price model includes an intercept, area in m², and the same area in cm² (= 10,000 × area in m²). What happens to ordinary least-squares coefficients?",
+          "seconds": 120,
           "choices": [
-            "It uses more than one input feature.",
-            "It no longer predicts a number.",
-            "It cannot be a regression model.",
-            "It is guaranteed to make every prediction correctly."
+            "They need not be unique because the area columns are dependent; a least-squares fit still exists.",
+            "No least-squares solution can exist because XᵀX is singular.",
+            "The added area column guarantees strictly smaller training RSS.",
+            "Changing the area unit creates an independent new predictor."
           ],
           "src": "https://app.wooclap.com/events/RBCJRAP/questions/6aa90172f68598b6f2411263"
         }

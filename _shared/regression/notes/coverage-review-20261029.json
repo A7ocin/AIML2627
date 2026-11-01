@@ -1,0 +1,725 @@
+{
+  "date": "2026-10-29",
+  "sourceReadBeforeReview": true,
+  "packs": {
+    "09_Regression_Part_1": {
+      "sourceSlides": 39,
+      "readingSections": 39,
+      "labs": 6,
+      "equationSectionsMatched": [
+        "scatter-lab",
+        "regression-notation",
+        "line-mean-example",
+        "line",
+        "residual-meaning",
+        "why-rss",
+        "rss",
+        "ols-objective",
+        "residual-lab",
+        "ols",
+        "uniqueness",
+        "fit-lab",
+        "evaluation-intro",
+        "rse",
+        "rse-to-r2",
+        "r2",
+        "evaluation",
+        "rmse",
+        "test-lab",
+        "metrics",
+        "why-polynomial",
+        "polynomial",
+        "design",
+        "polynomial-matrix",
+        "normal-equations",
+        "residual-vector-example",
+        "gradient-intuition",
+        "normal-derivation",
+        "hyperparameter",
+        "overfitting-underfitting",
+        "overfit-lab",
+        "overfit-metrics",
+        "underfit-lab",
+        "diagnose-fit",
+        "part-references"
+      ],
+      "handoutOnlySections": [
+        "chapter-rank",
+        "chapter-notation-reference"
+      ]
+    },
+    "10_Regression_Part_2": {
+      "sourceSlides": 34,
+      "readingSections": 33,
+      "labs": 6,
+      "equationSectionsMatched": [
+        "part2-recap",
+        "bias-intuition",
+        "bias-variance",
+        "decomposition",
+        "bias-lab",
+        "selection",
+        "inference-intro",
+        "hypothesis-test",
+        "noise-versus-precision",
+        "inference-sampling",
+        "standard-error",
+        "t-statistic",
+        "pvalues",
+        "tails-lab",
+        "uncertainty-lab",
+        "interval",
+        "multiple-intro",
+        "multiple",
+        "conditional",
+        "association-lab",
+        "confounding",
+        "adjustment",
+        "adjustment-lab",
+        "assumptions",
+        "diagnostics-lab",
+        "residual-reading",
+        "workflow",
+        "practice",
+        "answers",
+        "summary",
+        "references"
+      ]
+    }
+  },
+  "coverage": {
+    "Simple linear model and error": [
+      "regression-notation",
+      "line-mean-example",
+      "line"
+    ],
+    "RSS and argmin over R²": [
+      "residual-meaning",
+      "why-rss",
+      "rss",
+      "ols-objective"
+    ],
+    "Slope, intercept and sample means": [
+      "ols"
+    ],
+    "RSE, degrees of freedom, TSS and R²": [
+      "metrics",
+      "rse",
+      "r2"
+    ],
+    "Training versus held-out RMSE": [
+      "evaluation",
+      "test-lab"
+    ],
+    "Polynomial powers and coefficient count": [
+      "polynomial",
+      "design"
+    ],
+    "Full design/target/coefficient matrices": [
+      "polynomial-matrix"
+    ],
+    "Matrix norm, expansion, derivative, stationary equation": [
+      "normal-equations",
+      "residual-vector-example",
+      "gradient-intuition",
+      "normal-derivation"
+    ],
+    "Invertibility and pseudoinverse": [
+      "rank"
+    ],
+    "Overfitting, underfitting and validation": [
+      "hyperparameter",
+      "overfit-lab",
+      "overfit-metrics",
+      "underfit-lab",
+      "diagnose-fit",
+      "selection"
+    ],
+    "Bias, variance and squared-error identity": [
+      "bias-variance",
+      "bias-lab",
+      "decomposition"
+    ],
+    "Unknown versus estimated slope and normal pivot": [
+      "hypothesis-test",
+      "inference-sampling"
+    ],
+    "Expanded slope SE and Student t statistic": [
+      "standard-error"
+    ],
+    "Two-sided probability and significance": [
+      "tails-lab",
+      "pvalues"
+    ],
+    "Confidence interval and critical value": [
+      "interval"
+    ],
+    "Multiple-regression summation, x_i0 and matrix form": [
+      "multiple",
+      "conditional"
+    ],
+    "Confounding and conditional adjustment": [
+      "association-lab",
+      "confounding",
+      "adjustment"
+    ],
+    "LINE and zero conditional error mean": [
+      "assumptions",
+      "diagnostics-lab",
+      "residual-reading"
+    ],
+    "Evaluation motivation, mean baseline and held-out RMSE": [
+      "evaluation-intro",
+      "r2",
+      "evaluation",
+      "rmse",
+      "test-lab",
+      "metrics"
+    ],
+    "Absolute RSE scale and relative R2 motivation": [
+      "rse",
+      "rse-to-r2",
+      "r2"
+    ],
+    "Bias and prediction variance": [
+      "bias-intuition",
+      "bias-variance",
+      "bias-lab"
+    ],
+    "Expected test MSE decomposition": [
+      "decomposition"
+    ],
+    "Validation versus final testing": [
+      "selection"
+    ],
+    "Null and alternative hypotheses": [
+      "inference-intro",
+      "hypothesis-test"
+    ],
+    "True sampling variance and normal standardization": [
+      "noise-versus-precision",
+      "inference-sampling"
+    ],
+    "Slope SE with fully expanded sums": [
+      "standard-error"
+    ],
+    "Observed and random Student t statistic": [
+      "t-statistic"
+    ],
+    "Two-sided p-value and prespecified significance threshold": [
+      "pvalues",
+      "tails-lab",
+      "uncertainty-lab"
+    ],
+    "Confidence interval and critical percentile": [
+      "interval"
+    ],
+    "Multiple-regression expanded, summation and matrix forms": [
+      "multiple-intro",
+      "multiple"
+    ],
+    "Conditional coefficient interpretation and 2D projections": [
+      "conditional",
+      "association-lab"
+    ],
+    "Common cause and adjusted fit": [
+      "confounding",
+      "adjustment",
+      "adjustment-lab"
+    ],
+    "LINE, zero conditional error mean and full rank": [
+      "assumptions"
+    ],
+    "Residual patterns, order and normal Q-Q definition": [
+      "diagnostics-lab",
+      "residual-reading"
+    ]
+  },
+  "numericalChecks": 660,
+  "runtimeDataAndEngineUnchanged": false,
+  "questions": 12,
+  "liveAllSavedAndReloaded": true,
+  "untouchedImportWorkbooksPreserved": 28,
+  "teacherFacingReferencesToPreviousMaterial": 0,
+  "proof": "outputs/regression-review-20261029",
+  "renderedSlidesReviewed": 85,
+  "slideBoundsIssues": 0,
+  "handoutInteractiveControlCheck": "Degree-0 bias/variance recalculation passed in the embedded handout iframe",
+  "writtenQuestionsMatchLive": 12,
+  "handoutResponsiveOverflow": false,
+  "linearIntroductionRevision": {
+    "date": "2026-10-29",
+    "slides": [
+      "regression-notation",
+      "line-mean-example",
+      "line"
+    ],
+    "renderedPositions": [
+      4,
+      5,
+      6
+    ],
+    "change": "Expanded the approximate line rule, added a same-input/different-response illustration, and explained the random-error observation model.",
+    "handoutChaptersMatch": true,
+    "layoutBoundsIssues": 0,
+    "questionContentUnchanged": true,
+    "proof": "outputs/regression-linear-intro-20261029"
+  },
+  "rssEvaluationRevision": {
+    "date": "2026-10-29",
+    "sourceSlidesAdded": [
+      "residual-meaning",
+      "why-rss",
+      "evaluation-intro",
+      "r2-baseline",
+      "rmse"
+    ],
+    "trainingSequence": [
+      "residual-meaning",
+      "why-rss",
+      "rss",
+      "L04-C01",
+      "ols-objective",
+      "residual-lab"
+    ],
+    "metricsTable": "Moved after all four scores have been explained",
+    "handoutOrderAndEquationsMatch": true,
+    "earlyResidualLabOnlyShowsRSS": true,
+    "questionWordingUnchanged": true,
+    "questionPlacementChanges": [
+      [
+        "L04-C01",
+        "slide",
+        "residual-lab",
+        "rss"
+      ],
+      [
+        "L04-C01",
+        "when",
+        "before",
+        "after"
+      ]
+    ],
+    "proof": "outputs/regression-rss-evaluation-20261029"
+  },
+  "accentAndGreenBlockRevision": {
+    "renderedSlidesChecked": 76,
+    "slideBoundsIssues": 0,
+    "greenBlocksWithSemicolons": 0,
+    "inlineAccentsUseNativeMathML": true,
+    "remainingFontDependentCombiningMarks": 0,
+    "questionTextNormalizedWithoutChangingBank": true,
+    "fitLabPrintPreviewRefreshed": true,
+    "proof": "outputs/regression-accents-20261029"
+  },
+  "olsDefinitionAndDerivationRevision": {
+    "definedOLSBeforeItsInteractiveUse": true,
+    "ordinaryMeansEqualResidualWeights": true,
+    "slide14ExplainsRSSMinimizationOrigin": true,
+    "handoutHasBothPartialDerivativesAndCenteredEquation": true,
+    "equationsMirroredInSpeakerNotes": true,
+    "noAdditionalSlides": true,
+    "sourceSlides": 36,
+    "readingSections": 35,
+    "greenSemicolons": 0,
+    "proof": "outputs/regression-ols-origin-20261029"
+  },
+  "uniquenessExplanationRevision": {
+    "concreteTwoDatasetIllustration": true,
+    "sameInputMeansEveryTrialUsesX2": true,
+    "twoLinesTieAtRSS2": true,
+    "varyingInputsExampleRSS0": true,
+    "abstractTermsMovedToDetailedExplanation": true,
+    "fullColumnRankExplainedWhenUsedLater": true,
+    "slidesAndHandoutUpdated": true,
+    "greenSemicolons": 0,
+    "sourceSlides": 36,
+    "readingSections": 35,
+    "proof": "outputs/regression-uniqueness-20261029"
+  },
+  "fitComparisonRevision": {
+    "candidateDefinition": "A deliberately chosen starting guess, f(x)=2+2x",
+    "candidateRSS": 9.666614052599177,
+    "olsIntercept": 2.13386186966041,
+    "olsSlope": 2.8261067809615383,
+    "olsRSS": 0.310570558882034,
+    "trainingObservations": 25,
+    "rawObservationDataUnchanged": true,
+    "purposeExplicitInSlideAndHandout": true,
+    "recomputedLabelReplaced": "OLS best fit",
+    "showAndHideControlsVerified": true,
+    "slideBoundsIssues": 0,
+    "handoutPrintPreviewRefreshed": true,
+    "proof": "outputs/regression-fit-comparison-20261029"
+  },
+  "explicitFittingTermsRevision": {
+    "date": "2026-10-30",
+    "newDefinitionSlide": "overfitting-underfitting",
+    "beforeQuestionAndExamples": true,
+    "overfittingDefinedAsLearningTrainingNoise": true,
+    "underfittingDefinedAsMissingTheSignal": true,
+    "existingInteractiveExamplesExplicitlyLabelled": true,
+    "handoutOrderAndHeadingsMatch": true,
+    "sourceSlides": 37,
+    "renderedSlides": 43,
+    "readingSections": 36,
+    "changedSlidesBoundsChecked": 5,
+    "layoutIssues": 0,
+    "questionContentUnchanged": true,
+    "importWorkbookBytesPreserved": true,
+    "noReferencesToPreviousMaterialAdded": true,
+    "proof": "outputs/regression-fit-terms-20261030"
+  },
+  "evaluationIntroductionWordingRevision": {
+    "date": "2026-10-30",
+    "slide": 18,
+    "metricsAndInterpretationPitfallsExplicit": true,
+    "focusOnObservedFitAndGeneralization": true,
+    "RSEAndR2IntroducedByFullName": true,
+    "handoutMatched": true,
+    "slideAndHandoutOverflow": false,
+    "greenSemicolons": 0,
+    "proof": "outputs/regression-evaluation-wording-20261030"
+  },
+  "expandedRSERevision": {
+    "date": "2026-10-30",
+    "slide": 19,
+    "expandedRSSIntoSquaredResidualSum": true,
+    "removedSFromFormulaExampleAndSymbolKey": true,
+    "handoutAndPart1SymbolReferenceMatched": true,
+    "slideAndHandoutFormulaIdentical": true,
+    "layoutOverflow": false,
+    "proof": "outputs/regression-rse-expanded-20261030"
+  },
+  "trainingAndTestPerformanceRevision": {
+    "date": "2026-10-30",
+    "sourceSlides": 38,
+    "renderedSlides": 44,
+    "readingSections": 37,
+    "trainingPerformanceExplicit": true,
+    "RSEScaleAndUnboundedRangeExplained": true,
+    "meanBaselineCoefficientsAndTSSFormulaExplicit": true,
+    "allThreeR2FormsPresent": true,
+    "R2CasesRangeThresholdAndOutliersExplained": true,
+    "RMSEIntroducedAsTestPerformanceMetric": true,
+    "NDefinedAsTestSize": true,
+    "RSEIsStandardDeviationNotVariance": true,
+    "negativeTestR2CanBeValid": true,
+    "handoutOrderAndEquationsMatch": true,
+    "changedSlideLayoutsChecked": 8,
+    "layoutIssues": 0,
+    "questionWordingUnchanged": true,
+    "questionPlacementChanges": [
+      [
+        "L04-C03",
+        "slide",
+        "r2",
+        "r2-reading"
+      ]
+    ],
+    "importWorkbookBytesPreserved": true,
+    "handoutHorizontalOverflow": false,
+    "proof": "outputs/regression-evaluation-sequence-20261030"
+  },
+  "degreesOfFreedomIntuitionRevision": {
+    "date": "2026-10-30",
+    "twoPointExampleExplainsZeroRSSDoesNotMeanZeroNoise": true,
+    "noObservationsDiscarded": true,
+    "tenObservationsExampleGivesEightResidualDegreesOfFreedom": true,
+    "uppercaseNReplacedByNTest": true,
+    "trainingAndTestCountsDefinedSideBySide": true,
+    "handoutOrderAndEquationsMatch": true,
+    "sourceSlides": 39,
+    "renderedSlides": 45,
+    "readingSections": 38,
+    "changedSlideLayoutIssues": 0,
+    "handoutHorizontalOverflow": false,
+    "questionBankAndWorkbookBytesPreserved": true,
+    "proof": "outputs/regression-dof-intuition-20261030"
+  },
+  "mergedR2Revision": {
+    "date": "2026-10-30",
+    "formerSlide21Removed": true,
+    "formerSlides22And23MergedIntoSlide21": true,
+    "TSSFormulaTransferred": true,
+    "fullR2ExpressionsAndInterpretationPreserved": true,
+    "handoutConsolidated": true,
+    "mathAndReadingOrderMatch": true,
+    "sourceSlides": 37,
+    "renderedSlides": 43,
+    "readingSections": 36,
+    "layoutOverflow": false,
+    "questionWordingUnchanged": true,
+    "questionPlacementChanges": [
+      [
+        "L04-C03",
+        "slide",
+        "r2-reading",
+        "r2"
+      ]
+    ],
+    "importWorkbookBytesPreserved": true,
+    "proof": "outputs/regression-merged-r2-20261030"
+  },
+  "rseRelativeTransitionRevision": {
+    "date": "2026-10-30",
+    "replacedSlide20": "rse-to-r2",
+    "oldDegreesOfFreedomSlideRemoved": true,
+    "intuitionRetainedInHandoutAndNotes": true,
+    "absoluteRSEAndUnboundedRangeExplained": true,
+    "R2RelativeMeasureIntroduced": true,
+    "TSSRSSAndR2Visualized": true,
+    "barValues": {
+      "TSS": 8,
+      "RSS": 2,
+      "reduction": 6,
+      "R2": 0.75
+    },
+    "sameErrorDifferentUnitsIllustrated": true,
+    "handoutAligned": true,
+    "layoutOverflow": false,
+    "sourceSlides": 37,
+    "renderedSlides": 43,
+    "readingSections": 36,
+    "questionBankAndWorkbooksUnchanged": true,
+    "proof": "outputs/regression-rse-relative-20261030"
+  },
+  "metricRecapLayoutRevision": {
+    "date": "2026-10-30",
+    "slide": 26,
+    "fourEqualMetricCards": true,
+    "consistentCenteredEquationPanels": true,
+    "symmetricPadding": true,
+    "singleNotationStrip": true,
+    "handoutLayoutMatched": true,
+    "allEquationsRetained": true,
+    "slideAndHandoutOverflow": false,
+    "slideCountUnchanged": 43,
+    "proof": "outputs/regression-metrics-layout-20261030"
+  },
+  "metricFormulaClearanceRevision": {
+    "date": "2026-10-30",
+    "slide": 26,
+    "squareRootFormulasClearAllPanelBorders": true,
+    "minimumVerticalClearancePixels": 12.04998779296875,
+    "fullMetricNames": {
+      "RSS": "Residual sum of squares",
+      "RSE": "Residual standard error",
+      "R²": "Coefficient of determination",
+      "Test RMSE": "Root mean squared error"
+    },
+    "handoutMatchedAndVerified": true,
+    "layoutOverflow": false,
+    "proof": "outputs/regression-metric-clearance-20261030"
+  },
+  "linearInParametersExplanationRevision": {
+    "date": "2026-10-30",
+    "knownFeaturesAndUnknownWeightsExplicit": true,
+    "fixedDegreeAndInput2Example": true,
+    "squaredCoefficientCounterexample": true,
+    "coefficientCountPreserved": true,
+    "featureMatrixBridgeExplained": true,
+    "handoutMatched": true,
+    "slideAndHandoutOverflow": false,
+    "questionContentUnchanged": true,
+    "questionPlacementChanges": [
+      [
+        "L04-C04",
+        "when",
+        "before",
+        "after"
+      ]
+    ],
+    "importWorkbookBytesPreserved": true,
+    "proof": "outputs/regression-linear-parameters-20261030"
+  },
+  "polynomialMotivationBridgeRevision": {
+    "date": "2026-10-30",
+    "newSlide": 27,
+    "oneVisibleSentence": true,
+    "straightLineAndPolynomialSameDataVisualization": true,
+    "beforePolynomialFormulaExplanation": true,
+    "previousSlide27Now28": true,
+    "handoutAligned": true,
+    "layoutOverflow": false,
+    "sourceSlides": 38,
+    "renderedSlides": 44,
+    "readingSections": 37,
+    "questionContentAndWorkbooksUnchanged": true,
+    "proof": "outputs/regression-polynomial-bridge-20261030"
+  },
+  "runtimeChangeQualification": "Original seven chart payloads and existing numerical routines are preserved. Added controlled two-predictor simulation and targeted Part 2 widget improvements.",
+  "part2TeachingReview": {
+    "date": "2026-10-30",
+    "sourceReadBeforeEditing": true,
+    "sourceCoverage": {
+      "Bias and prediction variance": [
+        "bias-intuition",
+        "bias-variance",
+        "bias-lab"
+      ],
+      "Expected test MSE decomposition": [
+        "decomposition"
+      ],
+      "Validation versus final testing": [
+        "selection"
+      ],
+      "Null and alternative hypotheses": [
+        "inference-intro",
+        "hypothesis-test"
+      ],
+      "True sampling variance and normal standardization": [
+        "noise-versus-precision",
+        "inference-sampling"
+      ],
+      "Slope SE with fully expanded sums": [
+        "standard-error"
+      ],
+      "Observed and random Student t statistic": [
+        "t-statistic"
+      ],
+      "Two-sided p-value and prespecified significance threshold": [
+        "pvalues",
+        "tails-lab",
+        "uncertainty-lab"
+      ],
+      "Confidence interval and critical percentile": [
+        "interval"
+      ],
+      "Multiple-regression expanded, summation and matrix forms": [
+        "multiple-intro",
+        "multiple"
+      ],
+      "Conditional coefficient interpretation and 2D projections": [
+        "conditional",
+        "association-lab"
+      ],
+      "Common cause and adjusted fit": [
+        "confounding",
+        "adjustment",
+        "adjustment-lab"
+      ],
+      "LINE, zero conditional error mean and full rank": [
+        "assumptions"
+      ],
+      "Residual patterns, order and normal Q-Q definition": [
+        "diagnostics-lab",
+        "residual-reading"
+      ]
+    },
+    "correctionsRetained": [
+      "Model selection uses validation instead of repeatedly selecting by final test error.",
+      "The slope sampling standard deviation is sigma/sqrt(Sxx), rather than the response-error standard deviation sigma.",
+      "RSE is a standard deviation; its square estimates variance.",
+      "The 90 plotted observations give t approximately 5.99193 and a two-sided p-value approximately 4.445e-8.",
+      "A small association p-value and an adjusted coefficient change do not establish causality.",
+      "OLS computation does not require normal errors; exact classical t inference needs the stated stronger assumptions.",
+      "Multiple regression has several predictors and one response."
+    ],
+    "sourceSlides": 34,
+    "renderedSlides": 40,
+    "readingSections": 33,
+    "interactiveExamples": 6,
+    "numericalChecksPassed": 711,
+    "independentNewModelComparisons": 39,
+    "newModelSamples": [
+      7,
+      1,
+      23
+    ],
+    "handoutFormulaPanelsMatch": true,
+    "handoutTitlesMatch": true,
+    "allEmbeddedExamplesOpened": true,
+    "printPreviewsRefreshed": 6,
+    "layoutBoundsIssues": 0,
+    "formulaPanelClearanceIssues": 0,
+    "handoutNarrowViewport": 390,
+    "handoutNarrowDocumentWidth": 375,
+    "part1SmokeChecks": {
+      "startingGuessRSS": 9.6666,
+      "bestFitRSS": 0.3106,
+      "residualLabOLS_RSS": 0.3201
+    },
+    "questionWordingUnchanged": true,
+    "placementOnlyChanges": {
+      "L04-C07": "after uncertainty-lab",
+      "L04-C08": "after adjustment-lab"
+    },
+    "all48ImportWorkbooksPreservedByteForByte": true,
+    "explicitPreviousMaterialReferencesAdded": false,
+    "proofDirectory": "C:\\Users\\Nicola\\Documents\\Codex\\2026-10-12\\can\\outputs\\regression-part2-review-20261030"
+  },
+  "matrixTeachingClarityRevision": {
+    "date": "2026-10-31",
+    "oldPolynomialSectionReadBeforeEditing": true,
+    "originalRenderedRange": [
+      32,
+      35
+    ],
+    "newRenderedRange": [
+      32,
+      37
+    ],
+    "newSlides": [
+      "residual-vector-example",
+      "gradient-intuition"
+    ],
+    "sourceSlides": 40,
+    "renderedSlides": 46,
+    "readingSections": 39,
+    "labs": 6,
+    "changes": [
+      "Explained the residual norm and arg min in words.",
+      "Added a three-observation example connecting individual residuals, vectors and RSS.",
+      "Added a gradient illustration before differentiation.",
+      "Expanded the derivation to five steps with one interactive comment at a time.",
+      "Restored the inverse formula and explained full column rank and duplicate columns.",
+      "Illustrated degree selection versus coefficient fitting using degrees 1 and 2."
+    ],
+    "handoutTitlesFormulasAndKeysMatch": true,
+    "untouchedSourceSectionsPreserved": true,
+    "fiveDerivationStepsTested": true,
+    "workedNumbersAndGradientIndependentlyVerified": true,
+    "layoutBoundsIssues": 0,
+    "formulaClearanceIssues": 0,
+    "handout390pxDocumentWidth": 375,
+    "questionBankAnd48WorkbooksUnchanged": true,
+    "proofDirectory": "C:\\Users\\Nicola\\Documents\\Codex\\2026-10-12\\can\\outputs\\regression-p1-matrix-clarity-20261031"
+  },
+  "explicitRSSDotProductRevision": {
+    "date": "2026-10-31",
+    "slide": 33,
+    "id": "residual-vector-example",
+    "change": "Explicitly equated RSS with r transpose r, expanded the row-by-column calculation into squared terms, and explained the general sum-of-squares identity.",
+    "handoutMatches": true,
+    "layoutIssues": 0
+  },
+  "finalOLSIsolationStepRevision": {
+    "date": "2026-10-31",
+    "slide": 35,
+    "steps": 6,
+    "formula": "beta_hat = (X^T X)^(-1) X^T y",
+    "condition": "X^T X invertible (independent feature columns)",
+    "explanation": "Left multiplication by the inverse cancels X^T X and isolates the fitted coefficients.",
+    "selectionHighlight": "Amber box, amber formula and stronger bottom border",
+    "handoutSynchronized": true,
+    "allSixStepsChecked": true,
+    "layoutBoundsIssues": 0
+  },
+  "rankSlideRemoval": {
+    "date": "2026-10-31",
+    "removedSlide": "rank",
+    "formerRenderedNumber": 36,
+    "newRenderedTotal": 45,
+    "handoutExplanationRetained": true,
+    "handoutBacklinkRepaired": true,
+    "finalCoefficientStepRetained": true,
+    "questionsUnchanged": true
+  },
+  "RSSDotProductIntroductionRevision": {
+    "date": "2026-10-31",
+    "slide": 32,
+    "change": "Introduced r transpose r in the first RSS equation, defined r = y - X beta and transpose, and explained that all three score notations add squared residuals.",
+    "handoutMatches": true
+  }
+}

@@ -1457,5 +1457,173 @@
     ],
     "method": "Edited the existing form through the authenticated Zen Work browser, saved, reloaded the event, reopened the form and visually verified all wording, answer B and unchanged voting settings. Rendered slide 27 matches.",
     "proof": "outputs/ml2-curve-question-20261027/wooclap-saved.png"
+  },
+  "regressionReview20261029": {
+    "date": "2026-10-29",
+    "eventCode": "RBCJRAP",
+    "questionsVerified": [
+      {
+        "id": "L04-C01",
+        "title": "L04-C01 · Two observed responses are 2 and 4; a line predicts 3 for both. Residual = observed minus predicted. What does the zero sum of residuals tell us?",
+        "choices": [
+          "The fit is exact because its positive and negative errors sum to zero.",
+          "The residual sum is zero, so RSS must also be zero.",
+          "The residuals cancel, but RSS = 2: neither prediction is exact.",
+          "The model overpredicts both cases, with RSS = 4."
+        ],
+        "correct": [
+          3
+        ],
+        "verifiedAfterReload": true
+      },
+      {
+        "id": "L04-C02",
+        "title": "L04-C02 · On the same three training cases, line A has residuals (0, 0, 3), and line B has (2, 2, 0). Which line does ordinary least squares prefer?",
+        "choices": [
+          "Line B: its RSS is 8, compared with 9 for line A.",
+          "Line A: it predicts two of the three cases exactly.",
+          "Line A: its signed residual sum is smaller.",
+          "They tie because both have a residual equal to zero."
+        ],
+        "correct": [
+          1
+        ],
+        "verifiedAfterReload": true
+      },
+      {
+        "id": "L04-C03",
+        "title": "L04-C03 · On held-out data, a model has RSS = 50 and the mean-response baseline has TSS = 40. Using R² = 1 − RSS/TSS, which interpretation is correct?",
+        "choices": [
+          "R² = −0.25: the model is worse than that baseline on these data.",
+          "R² = 0.25: the model explains one quarter of the variation.",
+          "A negative value proves that the regression code is incorrect.",
+          "R² is undefined whenever RSS is greater than TSS."
+        ],
+        "correct": [
+          1
+        ],
+        "verifiedAfterReload": true
+      },
+      {
+        "id": "L04-C04",
+        "title": "L04-C04 · Consider ŷ = β₀ + β₁x + β₂x². The inputs are known and only the three β coefficients are fitted. Why can this use ordinary linear least squares?",
+        "choices": [
+          "Because every quadratic curve is also a straight line in x.",
+          "Because squaring x eliminates the need to estimate β₂.",
+          "Because 1, x and x² are known features, each multiplied by one unknown coefficient.",
+          "Because any function of x and β is linear once the data are recorded."
+        ],
+        "correct": [
+          3
+        ],
+        "verifiedAfterReload": true
+      },
+      {
+        "id": "L04-C05",
+        "title": "L04-C05 · On the same split, degree 1 has training/validation RMSE (0.10, 0.12); degree 15 has (0.04, 0.30). What is the best next decision for prediction?",
+        "choices": [
+          "Choose degree 15 because its training error is smaller.",
+          "Choose degree 15 because more coefficients guarantee better generalization.",
+          "Use the final test set repeatedly until one degree has the smallest score.",
+          "Prefer degree 1 using validation evidence, then assess the fixed choice on an untouched test set."
+        ],
+        "correct": [
+          4
+        ],
+        "verifiedAfterReload": true
+      },
+      {
+        "id": "L04-C06",
+        "title": "L04-C06 · At one fixed input, the true mean is 2. Across repeated training samples a method predicts 1 or 3 equally often. Which description is correct?",
+        "choices": [
+          "Zero bias and zero variance: averaging to 2 makes every fit correct.",
+          "Zero bias but nonzero variance: the mean prediction is right, while individual fits move.",
+          "Nonzero bias but zero variance: each fitted prediction differs from 2.",
+          "Both bias and variance are zero once fresh response noise is removed."
+        ],
+        "correct": [
+          2
+        ],
+        "verifiedAfterReload": true
+      },
+      {
+        "id": "L04-C07",
+        "title": "L04-C07 · An observational regression gives a two-sided slope p-value of 0.03. Which statement matches what that number means?",
+        "choices": [
+          "There is a 3% probability that the true slope is zero.",
+          "If the zero-slope null and assumptions held, statistics at least this extreme would occur with probability 3%.",
+          "There is a 97% probability that changing the predictor causes a change in the response.",
+          "The slope must be large enough to matter in practice because 0.03 is below 0.05."
+        ],
+        "correct": [
+          2
+        ],
+        "verifiedAfterReload": true
+      },
+      {
+        "id": "L04-C08",
+        "title": "L04-C08 · An ice-cream coefficient is positive with p = 0.001. After adding temperature, it is smaller with p = 0.40. What may we conclude?",
+        "choices": [
+          "The conditional association is weaker; a shared-temperature explanation is plausible, but causality is not settled.",
+          "The new p-value proves that ice cream has exactly zero causal effect.",
+          "The original significant coefficient proves a direct causal effect despite the adjustment.",
+          "The coefficient must stay unchanged when a correlated predictor is added."
+        ],
+        "correct": [
+          1
+        ],
+        "verifiedAfterReload": true
+      },
+      {
+        "id": "L04-C09",
+        "title": "L04-C09 · Degree 1 has training/validation RMSE (0.20, 0.22); degree 9 has (0.02, 0.60). Recommend a degree, name the data for final assessment, and explain why a significant slope would not prove causation.",
+        "choices": [],
+        "correct": [],
+        "verifiedAfterReload": true
+      },
+      {
+        "id": "L04-O01",
+        "title": "L04-O01 · A toy model predicts yield = 2 + 3x, where x is fertilizer in kilograms. We express the same input as z = 1000x grams. Which model gives exactly the same predictions?",
+        "choices": [
+          "Yield = 2000 + 3000z.",
+          "Yield = 2 + 3000z.",
+          "Yield = 0.002 + 3z.",
+          "Yield = 2 + 0.003z."
+        ],
+        "correct": [
+          4
+        ],
+        "verifiedAfterReload": true
+      },
+      {
+        "id": "L04-O02",
+        "title": "L04-O02 · Two studies report 95% slope intervals A: [0.2, 0.6] and B: [−0.1, 0.9], both centered at 0.4. Under the classical model, which interpretation is justified?",
+        "choices": [
+          "B estimates a larger slope because its upper limit is higher.",
+          "A proves causation because its interval excludes zero.",
+          "A is more precise and excludes zero; B is less precise and does not rule out a zero slope.",
+          "The true slope has a 95% probability of being exactly 0.4 in each study."
+        ],
+        "correct": [
+          3
+        ],
+        "verifiedAfterReload": true
+      },
+      {
+        "id": "L04-O03",
+        "title": "L04-O03 · A price model includes an intercept, area in m², and the same area in cm² (= 10,000 × area in m²). What happens to ordinary least-squares coefficients?",
+        "choices": [
+          "They need not be unique because the area columns are dependent; a least-squares fit still exists.",
+          "No least-squares solution can exist because XᵀX is singular.",
+          "The added area column guarantees strictly smaller training RSS.",
+          "Changing the area unit creates an independent new predictor."
+        ],
+        "correct": [
+          1
+        ],
+        "verifiedAfterReload": true
+      }
+    ],
+    "method": "Edited the 12 existing forms in the authenticated browser, saved, reloaded the event, reopened every form and matched title, choices and unchanged correct-answer positions. The open response remains ungraded. Voting settings were left unchanged."
   }
 }
