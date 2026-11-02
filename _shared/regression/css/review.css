@@ -293,3 +293,262 @@
 .reg-review .reveal .rg-derivation-slow .rg-step-final.active math{color:#ffda96}
 .reg-review .reveal .rg-derivation-slow .rg-step-final.active p{color:#f5ddaf}
 .rg-reading .rg-derivation-slow .rg-step-final{border:1px solid #c49232;border-left-width:3px;border-bottom-width:3px;border-radius:10px;background:#fff5e4;padding:14px 18px}
+
+/* Name the inverse factor without enlarging inline formulas in the comment. */
+.reg-review .reveal .rg-derivation-slow .rg-step p math{font-size:1em}
+.rg-reading .rg-derivation-slow .rg-step p math{font-size:1em}
+
+/* Align the two bias/variance formula panels despite different subscript depths. */
+.reg-review .reveal #bias-variance .rg-grid .card .formula{height:88px;display:flex;align-items:center;justify-content:center}
+
+/* Keep the full dataset-dependent definitions readable in the handout. */
+.rg-reading.reg-part-two #chapter-bias-variance .rg-grid{grid-template-columns:1fr}
+
+/* Five plain-language metric answers, shared across the lecture break. */
+.reg-review .reveal .rg-metric-recap .slide-body{gap:18px}
+.reg-review .reveal .rg-metric-recap .slide-body>h2{font-size:46px}
+.reg-review .rg-metric-recap-table{width:100%;border-collapse:collapse;table-layout:fixed}
+.reg-review .reveal .rg-metric-recap-table th{font-size:23px;font-weight:600;line-height:1.3;text-transform:none;text-align:left;padding:11px 24px;color:#a5bbce;border-bottom:1px solid #42516a}
+.reg-review .reveal .rg-metric-recap-table td{padding:15px 24px;text-align:left;vertical-align:middle;border-bottom:1px solid #2f3b4d}
+.reg-review .reveal .rg-metric-recap-table td:first-child{border-right:1px solid #2f3b4d}
+.reg-review .reveal .rg-metric-recap-table td:last-child{font-size:25px;line-height:1.4;color:#e4edf5}
+.reg-review .reveal .rg-metric-code{display:block;font-size:30px;font-weight:650;line-height:1.1;color:#45d6c0}
+.reg-review .reveal .rg-metric-fullname{display:block;font-size:20px;line-height:1.35;margin-top:5px;color:#b7c8d8}
+.reg-review .reveal .rg-metric-recap .takeaway{font-size:25px;padding:17px 25px}
+.rg-reading .rg-metric-recap-table{margin:24px 0;font-size:17px;line-height:1.5}
+.rg-reading .rg-metric-recap-table th,.rg-reading .rg-metric-recap-table td{padding:15px 18px;border:1px solid #cad8de;text-align:left;vertical-align:middle;overflow-wrap:anywhere}
+.rg-reading .rg-metric-recap-table th{background:#edf5f3;text-transform:none}
+.rg-reading .rg-metric-code{display:block;font-size:20px;color:#17776d}
+.rg-reading .rg-metric-fullname{display:block;font-size:14px;color:#52697b}
+@media(max-width:800px){.rg-reading .rg-metric-recap-table{font-size:15px}.rg-reading .rg-metric-recap-table th,.rg-reading .rg-metric-recap-table td{padding:11px 9px}.rg-reading .rg-metric-fullname{font-size:13px}}
+
+/* Metric recaps: formula column and concise symbol definitions. */
+.reg-review .reveal .rg-recap-has-formulas th{padding:10px 20px}
+.reg-review .reveal .rg-recap-has-formulas td{padding:10px 20px}
+.reg-review .reveal .rg-recap-has-formulas td:last-child{font-size:24px;line-height:1.35}
+.reg-review .reveal .rg-recap-has-formulas .rg-metric-code{font-size:29px}
+.reg-review .reveal .rg-recap-has-formulas .rg-metric-fullname{font-size:19px}
+.reg-review .reveal .rg-recap-has-formulas .rg-recap-formula{border-right:1px solid #2f3b4d;background:rgba(16,23,34,.55)}
+.reg-review .reveal .rg-recap-formula math{font-size:30px}
+.reg-review .reveal .rg-metric-recap-key{font-size:22px;padding:15px 22px;gap:10px 26px}
+.rg-reading .rg-recap-formula math{font-size:20px}
+@media(max-width:1150px){
+ .rg-reading .rg-recap-has-formulas,.rg-reading .rg-recap-has-formulas tbody{display:block}
+ .rg-reading .rg-recap-has-formulas colgroup,.rg-reading .rg-recap-has-formulas thead{display:none}
+ .rg-reading .rg-recap-has-formulas tr{display:block;margin-bottom:20px;border:1px solid #cad8de;border-radius:10px;overflow:hidden}
+ .rg-reading .rg-recap-has-formulas td{display:block;width:100%;border:0;padding:12px 16px}
+ .rg-reading .rg-recap-has-formulas .rg-recap-formula{background:#edf5f3}
+ .rg-reading .rg-recap-has-formulas td:last-child{border-top:1px solid #cad8de}
+}
+@media print{.rg-reading .rg-recap-has-formulas tr{break-inside:avoid}}
+
+/* New-observation terminology and a visual model-selection sequence. */
+.reg-review .reveal #bias-variance .takeaway{font-size:25px;line-height:1.4}
+.reg-review .reveal #decomposition .slide-body{gap:17px}
+.reg-review .reveal #decomposition .slide-body>h2{font-size:46px}
+.reg-review .reveal #decomposition .rg-grid .card{padding:19px 26px}
+.reg-review .reveal #decomposition .card p{font-size:25px;line-height:1.4}
+.reg-review .reveal #decomposition .rg-key{font-size:23px;padding:15px 25px}
+.reg-review .reveal #decomposition .formula{padding:18px 24px}
+.reg-review .reveal .rg-mse-caption{font-size:25px;line-height:1.4;margin:0;color:#bdd0df}
+.reg-review .reveal #bias-lab .rg-bias-reminder{font-size:24px;line-height:1.4;padding:14px 24px}
+.reg-review .rg-selection-flow{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:32px}
+.reg-review .rg-selection-stage{position:relative;display:flex;flex-direction:column;gap:16px;border-top:3px solid #45d6c0;min-width:0}
+.reg-review .rg-selection-stage[data-stage=validate]{border-top-color:#c792ea}
+.reg-review .rg-selection-stage[data-stage=test]{border-top-color:#4db8ff}
+.reg-review .reveal .rg-selection-stage{padding:25px}
+.reg-review .rg-selection-step{font-size:21px;font-weight:650;letter-spacing:.05em;color:#a9bdd0}
+.reg-review .reveal .rg-selection-stage h3{font-size:29px;line-height:1.25;margin:0;color:#e4edf5}
+.reg-review .reveal .rg-selection-stage p{font-size:25px;line-height:1.42;margin:0;margin-top:auto}
+.reg-review .rg-selection-graphic{display:block;width:100%;height:200px;color:#dbe8f2}
+.reg-review .rg-selection-graphic path{fill:none;stroke-width:3}
+.reg-review .rg-selection-graphic .rg-flow-axis{stroke:#63748a;stroke-width:2}
+.reg-review .rg-selection-graphic text{fill:currentColor;font:19px 'Segoe UI',sans-serif}
+.reg-review .rg-selection-legend{display:flex;justify-content:center;gap:24px;font-size:21px;margin-top:-10px}
+.reg-review .rg-selection-legend span:first-child{color:#45d6c0}.reg-review .rg-selection-legend span:last-child{color:#c792ea}
+.reg-review .rg-test-report{height:227px;display:flex;flex-direction:column;gap:24px;justify-content:center;align-items:center;background:#0e1520;border:1px solid #344058;border-radius:10px;font-size:23px;color:#bdd0df;box-sizing:border-box}
+.reg-review .rg-test-report strong{font-size:32px;color:#4db8ff}
+.reg-review .rg-selection-stage:not(:last-child)::after{content:'→';position:absolute;right:-27px;top:49%;color:#a9bdd0;font-size:29px}
+.reg-review .reveal #selection .slide-body{gap:23px}
+.reg-review .reveal #selection .slide-body>h2{font-size:44px}
+.rg-reading .rg-selection-flow{grid-template-columns:1fr;margin:24px 0;gap:22px}
+.rg-reading .rg-selection-stage{gap:14px}
+.rg-reading .rg-selection-stage h3{color:#233348;font-size:22px;margin:0}
+.rg-reading .rg-selection-stage p{font-size:17px;margin:0}
+.rg-reading .rg-selection-step{font-size:14px;color:#49616d}
+.rg-reading .rg-selection-graphic{height:190px;max-width:440px;margin:auto;color:#294650}
+.rg-reading .rg-selection-legend{font-size:17px}
+.rg-reading .rg-selection-legend span:first-child{color:#14796b}.rg-reading .rg-selection-legend span:last-child{color:#8553a9}
+.rg-reading .rg-test-report{height:150px;background:#edf5f3;color:#294650}
+.rg-reading .rg-test-report strong{color:#246d95;font-size:26px}
+.rg-reading .rg-selection-stage:not(:last-child)::after{display:none}
+
+.rg-reading .rg-selection-graphic path[stroke="#45d6c0"]{stroke:#17776d}
+.rg-reading .rg-selection-graphic rect[fill="#45d6c0"]{fill:#208b7e}
+
+/* Compare scatter within one study with slope variability across studies. */
+.reg-review .reveal #hypothesis-test .slide-body{gap:22px}
+.reg-review .reveal #hypothesis-test .card p{font-size:27px}
+.reg-review .reveal #hypothesis-test .formula{margin:18px 0}
+.reg-review .reveal #noise-versus-precision .slide-body{gap:26px}
+.reg-review .reveal #noise-versus-precision .slide-body>h2{font-size:46px}
+.reg-review .rg-precision-pair{gap:30px}
+.reg-review .reveal .rg-precision-pair>.card{display:flex;flex-direction:column;gap:17px;padding:26px 28px;min-width:0}
+.reg-review .reveal .rg-precision-pair h3{font-size:29px;line-height:1.3;color:#e4edf5;margin:0;min-height:1.3em}
+.reg-review .rg-precision-figure{display:block;width:100%;height:350px;object-fit:contain;margin:0}
+.reg-review .reveal .rg-precision-pair .label{font-size:22px;line-height:1.3;text-transform:none;letter-spacing:0}
+.reg-review .reveal .rg-precision-pair p{font-size:26px;line-height:1.4;margin:0}
+.reg-review .reveal .rg-precision-pair .rg-precision-unit{font-size:23px;line-height:1.35;color:#a9bfd1;margin-top:auto}
+.rg-reading .rg-precision-pair{grid-template-columns:1fr;margin:24px 0}
+.rg-reading .rg-precision-pair>.card{display:flex;flex-direction:column;gap:14px}
+.rg-reading .rg-precision-pair h3{font-size:22px;color:#294650;margin:0}
+.rg-reading .rg-precision-figure{height:auto;max-width:760px;margin:0 auto;border-radius:10px}
+.rg-reading .rg-precision-pair .label{font-size:17px;color:#246d95}
+.rg-reading .rg-precision-pair p{font-size:17px;margin:0}
+
+/* Accuracy of estimates: concrete interpretation before the calculation. */
+.reg-review .reveal #inference-sampling .slide-body,.reg-review .reveal #standard-error .slide-body,.reg-review .reveal #t-statistic .slide-body,.reg-review .reveal #pvalues .slide-body,.reg-review .reveal #interval .slide-body{gap:18px}
+.reg-review .reveal #inference-sampling h2,.reg-review .reveal #standard-error h2,.reg-review .reveal #t-statistic h2,.reg-review .reveal #pvalues h2,.reg-review .reveal #interval h2{font-size:45px}
+.reg-review .reveal .rg-standardize-pair .card{padding:20px 25px}
+.reg-review .reveal .rg-standardize-pair .formula{font-size:34px;padding:15px 20px;margin:12px 0}
+.reg-review .reveal .rg-standardize-pair .card p{font-size:25px;margin:8px 0 0}
+.reg-review .rg-infer-chart{display:block;width:100%;height:190px;object-fit:contain;margin:0}
+.reg-review .reveal #inference-sampling .rg-key,.reg-review .reveal #t-statistic .rg-key,.reg-review .reveal #pvalues .rg-key{font-size:23px;padding:15px 24px;line-height:1.4}
+.reg-review .reveal #inference-sampling .takeaway,.reg-review .reveal #t-statistic .takeaway,.reg-review .reveal #pvalues .takeaway{font-size:24px;padding:15px 24px}
+.reg-review .reveal .rg-se-derivation{padding:18px 25px}
+.reg-review .reveal .rg-se-derivation .rg-step{padding:10px 16px;opacity:.7}
+.reg-review .reveal .rg-se-derivation .rg-step.active{opacity:1}
+.reg-review .reveal .rg-se-derivation .rg-step math{font-size:32px}
+.reg-review .reveal .rg-se-derivation .rg-step p{font-size:23px!important;line-height:1.35}
+.reg-review .reveal #standard-error .rg-key{font-size:22px;line-height:1.4;padding:15px 24px}
+.reg-review .reveal #standard-error .takeaway{font-size:24px;padding:15px 24px}
+.reg-review .rg-t-ruler{width:100%;height:130px;object-fit:contain;display:block;margin:0}
+.reg-review .reveal #t-statistic .card{padding:20px 25px}
+.reg-review .reveal #t-statistic .card p{font-size:25px;line-height:1.4}
+.reg-review .rg-pvalue-layout{grid-template-columns:1.1fr 1fr}
+.reg-review .reveal .rg-pvalue-layout .card{padding:19px 25px}
+.reg-review .rg-pvalue-layout .rg-infer-chart{height:270px;margin-top:12px}
+.reg-review .reveal .rg-pvalue-layout .card p{font-size:25px;line-height:1.4;margin:13px 0 0}
+.reg-review .reveal #pvalues .formula{font-size:32px;padding:17px 24px}
+.reg-review .reveal #tails-lab .lab-prompt,.reg-review .reveal #uncertainty-lab .lab-prompt{font-size:25px;line-height:1.4}
+.reg-review .reveal .rg-lab-recap{font-size:24px;line-height:1.4;padding:13px 24px}
+.rg-widget math.rg-inline-math{display:inline math;font-family:'Cambria Math','STIX Two Math',serif;font-size:1em;white-space:nowrap;text-transform:none}
+.reg-review .rg-ci-layout{grid-template-columns:1.1fr 1fr}
+.reg-review .rg-ci-layout .rg-infer-chart{height:210px}
+.reg-review .reveal #interval .rg-ci-layout .formula{font-size:30px;margin:12px 0;padding:14px 18px}
+.reg-review .reveal #interval .rg-ci-layout .card p{font-size:25px;line-height:1.4}
+.reg-review .reveal #interval .rg-key{font-size:22px;line-height:1.4;padding:14px 24px}
+.reg-review .reveal #interval .takeaway{font-size:24px;padding:14px 24px}
+.rg-reading.reg-part-two .rg-standardize-pair,.rg-reading.reg-part-two .rg-pvalue-layout,.rg-reading.reg-part-two .rg-ci-layout{grid-template-columns:1fr;margin:24px 0}
+.rg-reading .rg-infer-chart,.rg-reading .rg-t-ruler{display:block;width:100%;height:auto;max-width:900px;margin:18px auto;border-radius:9px}
+.rg-reading .rg-se-derivation .rg-step p{visibility:visible;height:auto;margin:12px 0!important}
+.rg-reading .rg-se-derivation .rg-step math{font-size:22px}
+
+.reg-review .reveal .rg-standardize-pair .formula{height:110px;display:flex;align-items:center;justify-content:center}
+.reg-review .reveal #standard-error .slide-body{gap:14px}
+.reg-review .reveal .rg-se-derivation .rg-step{padding:8px 14px}
+.reg-review .reveal .rg-se-derivation .rg-step math{font-size:30px}
+.reg-review .reveal .rg-se-derivation .rg-step-controls{margin-bottom:10px}
+.reg-review .rg-t-ruler{height:150px}
+.reg-review .rg-pvalue-layout .rg-infer-chart{height:230px}
+
+/* Show one equivalent formula at a time; print all three in the handout. */
+.reg-review .reveal .rg-se-derivation .rg-step:not(.active){display:none}
+.reg-review .reveal .rg-se-derivation .rg-step.active{display:block;padding:18px 24px}
+.reg-review .reveal .rg-se-derivation .rg-step math{font-size:38px}
+.reg-review .reveal .rg-se-equation{min-height:210px;display:flex;align-items:center;justify-content:center}
+.rg-reading .rg-se-derivation .rg-step{display:block!important}
+.rg-reading .rg-se-equation{display:block;min-height:0}
+
+/* Left-to-right reveal with one stable explanatory area. */
+.reg-review .reveal #standard-error [data-layout=progressive-row] .rg-steps-row{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.reg-review .reveal #standard-error [data-layout=progressive-row] .rg-step{display:block;padding:15px 12px;border:1px solid #344058;border-radius:10px;opacity:.38;visibility:visible;min-width:0}
+.reg-review .reveal #standard-error [data-layout=progressive-row] .rg-step.active{opacity:1;border-color:#45d6c0;background:rgba(69,214,192,.07)}
+.reg-review .reveal #standard-error [data-layout=progressive-row] .rg-step.future{visibility:hidden}
+.reg-review .reveal #standard-error [data-layout=progressive-row] .rg-step .rg-heading{display:block;font-size:20px;margin:0 0 10px}
+.reg-review .reveal #standard-error [data-layout=progressive-row] .rg-step p{display:none}
+.reg-review .reveal #standard-error [data-layout=progressive-row] .rg-step math{font-size:32px}
+.reg-review .reveal #standard-error [data-layout=progressive-row] .rg-se-equation{min-height:215px}
+.reg-review .reveal .rg-step-description{font-size:25px;line-height:1.4;min-height:68px;margin:18px 0 0;padding:15px 20px;background:#0e1520;border-left:3px solid #45d6c0;box-sizing:border-box}
+.rg-reading .rg-steps-row{display:grid;grid-template-columns:1fr}
+.rg-reading .rg-step-description{display:none}
+.rg-reading .rg-steps-row .rg-heading{display:block;color:#17776d;font-size:17px}
+/* Interactive inference examples share the established regression controls. */
+.rg-inference-widget{background:rgba(20,26,38,.88);border:1px solid #344058;border-radius:18px;padding:18px 24px;box-sizing:border-box;color:#e8ecf4}
+.rg-inference-widget .rg-toolbar{min-height:48px;gap:10px;row-gap:8px}
+.rg-inference-widget .rg-toolbar label,.rg-inference-widget .rg-toolbar select{font-size:20px}
+.rg-inference-widget .rg-toolbar select{max-width:225px}
+.rg-inference-widget .rg-toolbar button{font-size:20px;min-height:42px;padding:8px 13px}
+.rg-inference-widget .rg-toolbar select:disabled{opacity:.4;cursor:default}
+.rg-inference-widget .rg-toolbar output{font-size:20px;min-width:70px}
+.rg-inference-widget .rg-main{margin-top:12px;gap:20px}
+.rg-inference-widget .rg-side{gap:9px;font:23px/1.35 'Segoe UI',sans-serif}
+.rg-inference-widget .rg-side .rg-box{padding:11px 15px}
+.rg-inference-widget .rg-side .rg-heading{font-size:18px;line-height:1.3;margin-bottom:5px}
+.rg-inference-widget .rg-side p{font-size:22px!important;line-height:1.35;margin:0!important}
+.rg-inference-widget .rg-metrics{gap:8px}
+.rg-inference-widget .rg-side .rg-metric{font-size:31px;line-height:1.35}
+.rg-inference-widget .rg-bottom{font-size:19px;line-height:1.35;margin-top:10px;gap:20px}
+.rg-inference-widget .rg-bottom span{max-width:58%}
+.rg-inference-widget math.rg-inline-math{display:inline math;font-family:'Cambria Math','STIX Two Math',serif;font-size:1em;white-space:nowrap;text-transform:none}
+.reg-review .reveal #pvalues .formula{padding:12px 20px;font-size:30px}
+.reg-review .reveal #pvalues .rg-key{padding:12px 22px;font-size:22px}
+.reg-review .reveal #pvalues .rg-inference-widget .rg-side .rg-box{padding:9px 13px}
+.reg-review .reveal #pvalues .rg-inference-widget .rg-side p{font-size:21px!important}
+.reg-review .reveal #pvalues .rg-inference-widget .rg-side .rg-heading{font-size:17px}
+.reg-review .reveal #pvalues .rg-inference-widget .rg-side .rg-metric{font-size:29px}
+.reg-review .reveal #interval .rg-inference-widget .rg-metric{font-size:27px}
+.reg-review .reveal #interval .rg-key{font-size:21px;line-height:1.35}
+.reg-review .reveal #interval .rg-inference-widget .rg-side p{font-size:21px!important}
+
+.rg-inference-widget .rg-i-fit-top{display:flex;align-items:center;gap:16px;width:100%}
+.rg-inference-widget .rg-i-simulation-controls{display:flex;align-items:center;flex-wrap:wrap;gap:14px;border:0;padding:0;margin:0;width:100%;min-width:0}
+.rg-inference-widget .rg-i-simulation-controls legend{font:18px/1.3 'Segoe UI',sans-serif;color:#a9bfd1;margin-bottom:6px;padding:0}
+.rg-inference-widget select[data-i-setting=fit]{max-width:none;width:285px}
+.rg-inference-widget select[data-i-setting=view]{max-width:none;width:270px}
+
+/* Lecture-discussion refinements: purpose, controlled comparison and p-value roles. */
+.reg-review .reveal #inference-sampling .rg-standardize-pair .card p{font-size:24px;line-height:1.4}
+.reg-review .reveal #inference-sampling .takeaway{font-size:24px}
+.reg-review .reveal #standard-error .rg-key{font-size:22px;line-height:1.35}
+.reg-review .reveal #standard-error .rg-step-description{font-size:24px;min-height:88px}
+.reg-review .reveal #slope-test-purpose .slide-body{gap:28px}
+.reg-review .reveal #slope-test-purpose h2,.reg-review .reveal #slope-scatter-comparison h2{font-size:45px}
+.reg-review .rg-purpose-steps{grid-template-columns:repeat(3,minmax(0,1fr))}
+.reg-review .reveal .rg-purpose-steps .card{padding:25px}
+.reg-review .reveal .rg-purpose-steps p{font-size:27px;line-height:1.45}
+.reg-review .rg-test-purpose-example{padding:25px 28px;background:#151e2b;border-left:3px solid #45d6c0;border-radius:0 10px 10px 0;font-size:31px;line-height:1.4}
+.reg-review .reveal #slope-scatter-comparison .slide-body{gap:20px}
+.reg-review .reveal .rg-height-weight-pair .card{padding:20px 24px}
+.reg-review .rg-height-weight-plot{display:block;width:100%;height:300px;object-fit:contain;margin:14px 0}
+.reg-review .reveal .rg-height-weight-pair .formula{font-size:27px;padding:14px 12px;margin:0}
+.reg-review .reveal .rg-height-weight-pair p{font-size:24px;line-height:1.4;margin-top:14px}
+.reg-review .reveal #slope-scatter-comparison .takeaway{font-size:24px;padding:16px 24px}
+.reg-review .rg-random-stat{color:#4db8ff}.reg-review .rg-observed-stat{color:#ffb86c}
+.rg-reading .rg-random-stat{color:#14658e}.rg-reading .rg-observed-stat{color:#915b12}
+.reg-review .reveal #pvalues .slide-body{gap:16px}
+.reg-review .reveal #pvalues h2{font-size:44px}
+.reg-review .reveal #pvalues .rg-intro-lead{font-size:28px}
+.reg-review .rg-p-role-row{grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+.reg-review .reveal .rg-p-role-row .card,.reg-review .reveal .rg-p-zero-row .card{padding:18px 22px}
+.reg-review .reveal .rg-p-role-row .label,.reg-review .reveal .rg-p-zero-row .label{font-size:22px;line-height:1.3}
+.reg-review .reveal .rg-p-role-row .formula{height:72px;display:flex;align-items:center;justify-content:center;font-size:29px;padding:10px;margin:8px 0}
+.reg-review .reveal .rg-p-role-row p,.reg-review .reveal .rg-p-zero-row p{font-size:24px;line-height:1.4;margin:10px 0 0}
+.reg-review .reveal .rg-p-zero-row .formula{font-size:28px;padding:10px 12px;margin:8px 0}
+.reg-review .reveal #pvalues .takeaway{font-size:24px;padding:15px 24px}
+.reg-review .reveal #tails-lab .rg-inference-widget .rg-side p{font-size:22px!important}
+.rg-reading.reg-part-two .rg-purpose-steps,.rg-reading.reg-part-two .rg-height-weight-pair,.rg-reading.reg-part-two .rg-p-role-row,.rg-reading.reg-part-two .rg-p-zero-row{grid-template-columns:1fr;margin:24px 0}
+.rg-reading .rg-height-weight-plot{display:block;width:100%;height:auto;max-width:850px;margin:20px auto}
+.rg-reading .rg-test-purpose-example{font-size:21px;padding:20px;background:#edf5f3;color:#294650;border-color:#208b7e;margin:24px 0}
+
+/* Part 1 slide 34: recall the optimization goal before the derivative intuition. */
+.reg-review .reveal #gradient-intuition .slide-body{gap:14px}
+.reg-review .reveal #gradient-intuition .rg-objective-reminder .formula{font-size:32px;padding:15px 24px;margin:0}
+.reg-review .reveal #gradient-intuition .rg-objective-reminder>p{font-size:24px;line-height:1.3;margin:9px 0 0;text-align:center}
+.reg-review .reveal #gradient-intuition .rg-gradient-plot{height:310px;object-fit:contain}
+.reg-review .reveal #gradient-intuition .rg-gradient-comments{gap:12px}
+.reg-review .reveal #gradient-intuition .rg-gradient-comments .card{padding:13px 22px}
+.reg-review .reveal #gradient-intuition .rg-gradient-comments .card p{font-size:23px;margin-top:6px}
+.reg-review .reveal #gradient-intuition .rg-key{font-size:23px;line-height:1.35}
+.reg-review .reveal #gradient-intuition h2 .rg-inline-math{font-size:1em}
+.rg-reading .rg-objective-reminder>p{text-align:center}

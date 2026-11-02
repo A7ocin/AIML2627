@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="532.8pt" height="176.4pt" viewBox="0 0 532.8 176.4" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-11-02T16:05:42.434884</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.10.9, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 176.4 
+L 532.8 176.4 
+L 532.8 0 
+L 0 0 
+z
+" style="fill: #0e1520"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 37.296 111.132 
+L 516.816 111.132 
+L 516.816 28.224 
+L 37.296 28.224 
+z
+" style="fill: #0e1520"/>
+   </g>
+   <g id="matplotlib.axis_1">
+    <g id="xtick_1">
+     <g id="line2d_1">
+      <defs>
+       <path id="m99c5679934" d="M 0 0 
+L 0 4 
+" style="stroke: #c0d0df; stroke-width: 0.8"/>
+      </defs>
+      <g>
+       <use xlink:href="#m99c5679934" x="51.826909" y="98.041263" style="fill: #c0d0df; stroke: #c0d0df; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_1">
+      <text style="font-size: 17px; font-family: 'Segoe UI'; text-anchor: middle; fill: #c0d0df" x="51.826909" y="121.626576" transform="rotate(-0 51.826909 121.626576)">0.00</text>
+     </g>
+    </g>
+    <g id="xtick_2">
+     <g id="line2d_2">
+      <g>
+       <use xlink:href="#m99c5679934" x="197.136" y="98.041263" style="fill: #c0d0df; stroke: #c0d0df; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_2">
+      <text style="font-size: 17px; font-family: 'Segoe UI'; text-anchor: middle; fill: #c0d0df" x="197.136" y="121.626576" transform="rotate(-0 197.136 121.626576)">0.05</text>
+     </g>
+    </g>
+    <g id="xtick_3">
+     <g id="line2d_3">
+      <g>
+       <use xlink:href="#m99c5679934" x="342.445091" y="98.041263" style="fill: #c0d0df; stroke: #c0d0df; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_3">
+      <text style="font-size: 17px; font-family: 'Segoe UI'; text-anchor: middle; fill: #c0d0df" x="342.445091" y="121.626576" transform="rotate(-0 342.445091 121.626576)">0.10</text>
+     </g>
+    </g>
+    <g id="xtick_4">
+     <g id="line2d_4">
+      <g>
+       <use xlink:href="#m99c5679934" x="487.754182" y="98.041263" style="fill: #c0d0df; stroke: #c0d0df; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_4">
+      <text style="font-size: 17px; font-family: 'Segoe UI'; text-anchor: middle; fill: #c0d0df" x="487.754182" y="121.626576" transform="rotate(-0 487.754182 121.626576)">0.15</text>
+     </g>
+    </g>
+    <g id="text_5">
+     <text style="font-size: 17px; font-family: 'Segoe UI'; text-anchor: middle; fill: #dce7f2" x="277.056" y="142.121888" transform="rotate(-0 277.056 142.121888)">Population slope values</text>
+    </g>
+   </g>
+   <g id="matplotlib.axis_2"/>
+   <g id="line2d_5">
+    <path d="M 51.826909 111.132 
+L 51.826909 28.224 
+" clip-path="url(#pb15b7b9d79)" style="fill: none; stroke-dasharray: 6.66,2.88; stroke-dashoffset: 0; stroke: #ffb86c; stroke-width: 1.8"/>
+   </g>
+   <g id="line2d_6">
+    <path d="M 260.699602 69.678 
+L 468.004177 69.678 
+" clip-path="url(#pb15b7b9d79)" style="fill: none; stroke: #45d6c0; stroke-width: 5; stroke-linecap: square"/>
+   </g>
+   <g id="LineCollection_1">
+    <path d="M 260.699602 78.405158 
+L 260.699602 60.950842 
+" clip-path="url(#pb15b7b9d79)" style="fill: none; stroke: #45d6c0; stroke-width: 2.2"/>
+    <path d="M 468.004177 78.405158 
+L 468.004177 60.950842 
+" clip-path="url(#pb15b7b9d79)" style="fill: none; stroke: #45d6c0; stroke-width: 2.2"/>
+   </g>
+   <g id="patch_3">
+    <path d="M 37.296 98.041263 
+L 516.816 98.041263 
+" style="fill: none; stroke: #70849a; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="PathCollection_1">
+    <defs>
+     <path id="m0dc68d324c" d="M 0 5.123475 
+C 1.358762 5.123475 2.662055 4.583634 3.622844 3.622844 
+C 4.583634 2.662055 5.123475 1.358762 5.123475 0 
+C 5.123475 -1.358762 4.583634 -2.662055 3.622844 -3.622844 
+C 2.662055 -4.583634 1.358762 -5.123475 0 -5.123475 
+C -1.358762 -5.123475 -2.662055 -4.583634 -3.622844 -3.622844 
+C -4.583634 -2.662055 -5.123475 -1.358762 -5.123475 0 
+C -5.123475 1.358762 -4.583634 2.662055 -3.622844 3.622844 
+C -2.662055 4.583634 -1.358762 5.123475 0 5.123475 
+z
+" style="stroke: #4db8ff"/>
+    </defs>
+    <g clip-path="url(#pb15b7b9d79)">
+     <use xlink:href="#m0dc68d324c" x="364.351889" y="69.678" style="fill: #4db8ff; stroke: #4db8ff"/>
+    </g>
+   </g>
+   <g id="text_6">
+    <text style="font-size: 17px; font-family: 'Segoe UI'; text-anchor: middle; fill: #45d6c0" x="260.699602" y="53.969116" transform="rotate(-0 260.699602 53.969116)">0.0719</text>
+   </g>
+   <g id="text_7">
+    <text style="font-size: 17px; font-family: 'Segoe UI'; text-anchor: middle; fill: #45d6c0" x="468.004177" y="53.969116" transform="rotate(-0 468.004177 53.969116)">0.1432</text>
+   </g>
+   <g id="text_8">
+    <text style="font-size: 16px; font-family: 'Segoe UI'; text-anchor: middle; fill: #4db8ff" x="364.351889" y="85.823242" transform="rotate(-0 364.351889 85.823242)">Estimate 0.1075</text>
+   </g>
+   <g id="text_9">
+    <text style="font-size: 16px; font-family: 'Segoe UI'; text-anchor: middle; fill: #ffb86c" x="51.826909" y="42.187453" transform="rotate(-0 51.826909 42.187453)">Zero</text>
+   </g>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="pb15b7b9d79">
+   <rect x="37.296" y="28.224" width="479.52" height="82.908"/>
+  </clipPath>
+ </defs>
+</svg>

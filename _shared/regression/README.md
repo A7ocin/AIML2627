@@ -1,14 +1,20 @@
-## Active split packs · review of 31 October 2026
+## Active split packs · review of 2 November 2026
 
-The teaching files are `../../09_Regression_Part_1/` and `../../10_Regression_Part_2/`, each with `index.html` and `handout.html`. Edit these files directly; the historical combined-deck builder below must not regenerate them. The current packs contain 45 and 40 rendered slides, 39 and 33 reading sections, and 6 and 6 interactive examples.
+The teaching files are `../../09_Regression_Part_1/` and `../../10_Regression_Part_2/`, each with `index.html` and `handout.html`. Edit these files directly; the historical combined-deck builder below must not regenerate them. The current packs contain 46 and 42 rendered slides, 40 and 35 reading sections, and 6 and 8 interactive examples.
 
 `css/review.css` provides shared card spacing, native MathML layout and reading styles. `js/review.js` controls the six-step normal-equation walkthrough. Each mathematical slide has a local symbol key; both handouts have full symbol reference tables. Their JSON-encoded standalone labs use the same runtime and their static print previews were refreshed. Keep mathematical panels synchronized between slides and handouts.
 
 `notes/coverage-review-20261029.json` records the topic-by-topic mathematical review. The seven chart datasets retain their original coordinates. The numerical engine now also supports a controlled two-predictor regression example; all 711 engine checks pass, including independent NumPy/SciPy references for its three samples. The twelve regression questions in the local bank and existing live event RBCJRAP were strengthened and verified after reload. Preserve their stable IDs, URLs, question types and answer positions. Changes to question wording require both regeneration of the local artifacts and an in-browser edit of the existing live form. Placement-only changes require local regeneration.
 
-Part 2 now moves from a short recap and repeated-prediction diagrams through bias–variance, sampling uncertainty, slope tests and confidence intervals, then multiple regression, conditional interpretation, confounding and LINE assumptions. Its six labs and handout print previews share the revised controls and calculations. The p-value and adjustment questions follow their worked examples. The review includes all 40 rendered slides, all formula panels, six embedded handout examples, and narrow-screen reading checks.
+Part 2 now moves from a short recap and repeated-prediction diagrams through bias–variance, sampling uncertainty, slope tests and confidence intervals, then multiple regression, conditional interpretation, confounding and LINE assumptions. Its eight labs and handout print previews share the revised controls and calculations. The p-value and adjustment questions follow their worked examples. The review includes all 42 rendered slides, all formula panels, eight embedded handout examples, and narrow-screen reading checks.
 
 Part 1 slides 32–36 explain the matrix objective, a three-observation residual example, the gradient intuition, a six-step derivation ending in the inverse formula, and degree versus coefficient selection. The separate independent-column/inverse slide was removed; its detailed handout section remains. Their handout sections preserve the full explanation and all six derivation comments.
+
+The Part 2 bias–variance section uses `f(x;𝒟)` for the prediction learned from dataset `𝒟`, blackboard `𝔼` for expectation and `Var(ε)` for the noise term. All symbols in its equations, inline explanations and handout reference are native MathML. Preserve this convention when editing the decomposition or example notes.
+
+A shared five-metric recap answers “What does it show me?” for RSS, TSS, RSE, R² and test RMSE. It appears at the end of Part 1 (slide 44) and in the existing opening recap of Part 2 (slide 3), with matching handout tables.
+
+The five-metric recap tables now include native MathML formulas and a symbol key. RSE uses n − q, with q the number of independent fitted coefficients including the intercept (q = 2 for a line); test RMSE uses the separate test-case count. The handout tables stack by metric on narrow screens.
 
 ---
 
@@ -59,3 +65,7 @@ Run `node tests/engine.test.js` for numerical checks. `node tests/render-review.
 Reveal.js and Plotly.js 3.2.0 are bundled in `lib/`, with their copyright/license headers retained. No runtime installation is needed.
 
 The linear-regression introduction now uses three consecutive slides: an approximate prediction rule, a worked same-input/different-response illustration, and the observation equation with a random-error term. Their handout sections explain the meaning of approximately equal, the intercept and slope, the zero conditional error mean assumption, and the distinction between unobserved errors and fitted residuals.
+
+Part 2 inference controls now use `js/inference-models.js` and `js/inference-interactions.js`: an adjustable t ruler, a two-sided tail probability, configurable sampled data with OLS/mean-only comparison, and repeated 95% slope intervals. `js/review.js` also supports a progressive row of equivalent standard-error formulas. The original 90 observations and numerical engine remain unchanged.
+
+Part 2 discussion notes revision: two slides now introduce the purpose of the slope test and a matched height–weight scatter comparison before the observed t formula. Both plots have n = 16, identical heights and axes, fitted slope 1 kg/cm, and independently checked slope SEs 0.10 and 0.50 kg/cm (t = 10 and 2). The sampling standardization is explicitly theoretical. The SE walkthrough explains the rise/run analogy and distinguishes estimated uncertainty from realized error. A static p-value explanation separates random repeated-study T from fixed observed t, including observed t = 0 and p = 1. Its dedicated interactive exploration follows on the next slide. The handout retains eight distinct labs, refreshed previews, expanded explanations and a matching notation reference. Question wording is unchanged, with local placements regenerated for the two-slide shift.

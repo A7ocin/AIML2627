@@ -72,14 +72,14 @@
       "slides": 28
     },
     "09_Regression_Part_1": {
-      "slides_sha256": "932f5e189c497f6539b4b72f6eb37d0f6e1b3e6e63fdef6fd3be5821000da5af",
-      "handout_sha256": "aaf6352ba439735b91854480179a4d0bb0ff1eb55beaa7a7f5fc41c0e2199fed",
-      "slides": 39
+      "slides_sha256": "a871ca61c357329d5522e8072a29847996cb0dc4ca84b2e53af26591b05b2c9d",
+      "handout_sha256": "e723a1de5013a352144d70ec6d45504359811be1ee58546a43656ccf6bbf3167",
+      "slides": 40
     },
     "10_Regression_Part_2": {
-      "slides_sha256": "b45f2d162be9966f1a935a59d5c6d789a184aa80f105a10a9bcb46d3453ec8e8",
-      "handout_sha256": "a0f36bbc46488ad31ffc6be843b9e3b4598c1b8ab8efed6ffc2ac886535f7ff4",
-      "slides": 34
+      "slides_sha256": "ad4724f9db816bf7f17ba7217b75e550466b56cb46fa5795cc0ee127964984ac",
+      "handout_sha256": "3c2fb3d1a4f390bb47e8a5a643e3a04e0e78eab4e882adcb98786943880abd0d",
+      "slides": 36
     },
     "11_Classification_Part_1": {
       "slides_sha256": "0ab24c37f263af1b891d367a308cd0b21be532129a664eb31dccfa5ee86d4f4d",
@@ -1152,5 +1152,407 @@
     "slide": 32,
     "change": "Introduced r transpose r in the first RSS equation, defined r = y - X beta and transpose, and explained that all three score notations add squared residuals.",
     "handoutMatches": true
+  },
+  "regressionPseudoinverseAndDegreeTransitionRevision": {
+    "date": "2026-11-02",
+    "slide": 35,
+    "additions": [
+      "Moore–Penrose pseudoinverse X+ = (X^T X)^(-1) X^T when X has full column rank",
+      "Equivalent coefficient formula beta_hat = X+ y",
+      "Degree p as a hyperparameter and transition to comparing polynomial degrees"
+    ],
+    "wordingCorrection": "Invertibility is required for the displayed inverse formula, not for the existence of least-squares solutions or the pseudoinverse.",
+    "handoutSynchronized": true,
+    "sixStepsAndAmberFinalHighlightChecked": true,
+    "layoutIssues": 0,
+    "allOtherSourceSlidesPreserved": true,
+    "questionsUnchanged": true,
+    "proofDirectory": "C:\\Users\\Nicola\\Documents\\Codex\\2026-10-12\\can\\outputs\\regression-pseudoinverse-20261102"
+  },
+  "regressionBiasVarianceIntuitiveDefinitionsRevision": {
+    "date": "2026-11-02",
+    "slide": 4,
+    "id": "bias-intuition",
+    "change": "Expanded the intuitive definitions of bias and variance, including the straight-line/quadratic example and variability across possible training datasets from the same population.",
+    "handoutSynchronized": true,
+    "diagramRetained": true,
+    "equalCardHeights": true,
+    "layoutIssues": 0,
+    "otherSlidesUnchanged": true
+  },
+  "regressionBiasVarianceNotationAlignmentRevision": {
+    "date": "2026-11-02",
+    "slides": [
+      5,
+      6
+    ],
+    "notation": {
+      "learnedPrediction": "f(x;𝒟)",
+      "trainingDataset": "𝒟",
+      "expectation": "𝔼_𝒟 and 𝔼_𝒟,ε",
+      "modelTerms": "Bias(f(x;𝒟)) and Var(f(x;𝒟))",
+      "noiseTerm": "Var(ε)",
+      "trueMeanExplanation": "𝔼_ε[y] at fixed x"
+    },
+    "nativeMathMLInEquationsAndSymbolKeys": true,
+    "handoutAndGlossarySynchronized": true,
+    "interactiveExampleExplanationsAligned": true,
+    "labRuntimeAndPostersUnchanged": true,
+    "allOtherSourceSlidesUnchanged": true,
+    "layoutIssues": 0,
+    "handoutDesktopFormulaOverflow": 0,
+    "handout390pxWidth": 375,
+    "questionsUnchanged": true,
+    "proofDirectory": "C:\\Users\\Nicola\\Documents\\Codex\\2026-10-12\\can\\outputs\\regression-bias-notation-20261102"
+  },
+  "regressionPlainMetricRecapsRevision": {
+    "date": "2026-11-02",
+    "metrics": [
+      "RSS",
+      "TSS",
+      "RSE",
+      "R²",
+      "test RMSE"
+    ],
+    "question": "What does it show me?",
+    "locations": {
+      "09_Regression_Part_1": 44,
+      "10_Regression_Part_2": 3
+    },
+    "packs": {
+      "09_Regression_Part_1": {
+        "sourceSlides": 40,
+        "readingSections": 40,
+        "labs": 6,
+        "recapId": "metrics-plain-recap",
+        "handoutTableMatches": true,
+        "existingQuestionPlacementsUnchanged": true
+      },
+      "10_Regression_Part_2": {
+        "sourceSlides": 34,
+        "readingSections": 33,
+        "labs": 6,
+        "recapId": "part2-recap",
+        "handoutTableMatches": true,
+        "existingQuestionPlacementsUnchanged": true
+      }
+    },
+    "part2ExistingSlideNumbersPreserved": true,
+    "handoutsSynchronized": true,
+    "layoutBoundsIssues": 0,
+    "handoutOverflowIssues": 0,
+    "questionTextUnchanged": true,
+    "chapter46ReadCompletely": true,
+    "proofDirectory": "C:\\Users\\Nicola\\Documents\\Codex\\2026-10-12\\can\\outputs\\regression-metric-recaps-20261102"
+  },
+  "regressionMetricRecapFormulasRevision": {
+    "date": "2026-11-02",
+    "locations": {
+      "09_Regression_Part_1": 44,
+      "10_Regression_Part_2": 3
+    },
+    "metrics": [
+      "RSS",
+      "TSS",
+      "RSE",
+      "R²",
+      "test RMSE"
+    ],
+    "nativeMathML": true,
+    "RSEDenominator": "n - q, with q the independent fitted coefficient count including the intercept; q = 2 for a line",
+    "symbolsExplained": true,
+    "testSetDenominator": "n_test",
+    "layoutsAndFormulaClearanceChecked": true,
+    "slideOverflow": 0,
+    "handoutFormulaOverflow": 0,
+    "mobileHandoutWidth": 375,
+    "packs": {
+      "09_Regression_Part_1": {
+        "formulaCount": 5,
+        "allOtherSourceSlidesUnchanged": true,
+        "handoutMatches": true
+      },
+      "10_Regression_Part_2": {
+        "formulaCount": 5,
+        "allOtherSourceSlidesUnchanged": true,
+        "handoutMatches": true
+      }
+    },
+    "questionContentAndPositionsUnchanged": true,
+    "proofDirectory": "C:\\Users\\Nicola\\Documents\\Codex\\2026-10-12\\can\\outputs\\regression-metric-formulas-20261102"
+  },
+  "regressionNewObservationAndSelectionClarityRevision": {
+    "date": "2026-11-02",
+    "slides": [
+      5,
+      6,
+      7,
+      9
+    ],
+    "newObservationAndNoiseExplained": true,
+    "MSEWholeSumLabelled": true,
+    "RMSESquareRootConnection": true,
+    "simulationReminderRepeated": true,
+    "guideColor": "#4db8ff",
+    "predictionDotColor": "#c792ea",
+    "controlsChecked": [
+      "degree=9",
+      "input=-0.8",
+      "input=0.8"
+    ],
+    "selectionVisualization": "train candidates → validation choice → untouched test assessment",
+    "handoutChaptersSynced": true,
+    "handoutLabOpenedSuccessfully": true,
+    "labPosterUpdated": true,
+    "otherFivePostersUnchanged": true,
+    "sourceSlides": 34,
+    "renderedSlides": 40,
+    "readingSections": 33,
+    "labs": 6,
+    "onlyFourSourceSectionsChanged": true,
+    "questionContentAndPositionsUnchanged": true,
+    "slideFormulaOverflow": 0,
+    "slideBodyMaxBottomAt720px": 656.13,
+    "handoutVisualOverflow": 0,
+    "proofDirectory": "C:\\Users\\Nicola\\Documents\\Codex\\2026-10-12\\can\\outputs\\regression-clarity-20261102"
+  },
+  "regressionHypothesisNotationAndPrecisionPanelsRevision": {
+    "date": "2026-11-02",
+    "slides": [
+      11,
+      12
+    ],
+    "hypothesesMotivatedBeforeDefinition": true,
+    "allNumericBetaSubscriptsUseMathML": true,
+    "remainingUnicodeBeta1": 0,
+    "twoSideBySidePanels": [
+      "RSE",
+      "Slope SE"
+    ],
+    "slopeVisualization": "Three repeated-fit lines matched by color to slope estimates on a numbered axis; all 20 estimates shown",
+    "sameSimulationForBothPanels": true,
+    "handoutUpdated": true,
+    "sourceSlides": 34,
+    "renderedSlides": 40,
+    "readingSections": 33,
+    "allSixLabPostersUnchanged": true,
+    "questionContentAndPositionsUnchanged": true,
+    "recheckedSourceSections": [
+      "hypothesis-test",
+      "noise-versus-precision",
+      "inference-sampling",
+      "t-statistic",
+      "pvalues",
+      "multiple",
+      "adjustment",
+      "answers"
+    ],
+    "formulaOverflow": 0,
+    "handoutOverflow": 0,
+    "proofDirectory": "C:\\Users\\Nicola\\Documents\\Codex\\2026-10-12\\can\\outputs\\regression-inference-layout-20261102"
+  },
+  "regressionAccuracyEstimatesTeachingSequenceRevision": {
+    "date": "2026-11-02",
+    "renderedSlideRange": [
+      13,
+      20
+    ],
+    "teachingSlidesReworked": [
+      "inference-sampling",
+      "standard-error",
+      "t-statistic",
+      "pvalues",
+      "tails-lab",
+      "uncertainty-lab",
+      "interval"
+    ],
+    "originalChapterReadBeforeEditing": "4.6 Accuracy of estimates",
+    "notation": {
+      "beta1": "population slope",
+      "betaHat1": "fitted slope",
+      "sigma": "true sampling standard deviation of the fitted slope",
+      "sigmaHat": "estimated slope standard error",
+      "sigmaEpsilon": "response-error standard deviation"
+    },
+    "fullExpandedStandardErrorPreserved": true,
+    "threeEquivalentFormulaSteps": 3,
+    "allThreeVisibleInHandout": true,
+    "randomVsObservedStatisticDistinctionPreserved": true,
+    "normalityAndRegressionAssumptionsPreserved": true,
+    "twoSidedPValueAndThresholdRulesPreserved": true,
+    "coverageAndPredictionIntervalDistinctionPreserved": true,
+    "noCausalityOrPosteriorMisinterpretation": true,
+    "separateIllustrativeAndComputedExamples": true,
+    "sourceNumericCheck": {
+      "n": 90,
+      "df": 88,
+      "slope": 0.10753799913136072,
+      "RSE": 0.049699409744633265,
+      "RSS": 0.2173627569489154,
+      "SE": 0.017947125772225306,
+      "forms": [
+        0.017947125772225306,
+        0.017947125772225306,
+        0.01794712577222531
+      ],
+      "t": 5.991934335122611,
+      "ratio": 5.991934335122611,
+      "p": 4.4453437122694686e-08,
+      "illustrativeP": 0.030426833100006524,
+      "pZero": 1,
+      "pPositive": 4.634598397447667e-12,
+      "pNegative": 4.634598397447667e-12
+    },
+    "sourceSlides": 34,
+    "renderedSlides": 40,
+    "handoutReadingSections": 33,
+    "labs": 6,
+    "questionWordingAndPlacementUnchanged": true,
+    "previewPostersUpdated": [
+      "tails-lab",
+      "uncertainty-lab"
+    ],
+    "otherFourPostersUnchanged": true,
+    "handoutGlossaryAndAssumptionsAligned": true,
+    "formulaAndSlideOverflow": 0,
+    "handoutOverflow": 0,
+    "interactiveControlsChecked": [
+      "all three SE derivation steps",
+      "t=-8 versus t=8 symmetry",
+      "load actual 90-point fit"
+    ],
+    "supportingPrimaryReference": "https://online.stat.psu.edu/stat501/Lesson02",
+    "proofDirectory": "C:\\Users\\Nicola\\Documents\\Codex\\2026-10-12\\can\\outputs\\regression-estimates-20261102"
+  },
+  "regressionInteractiveInferenceRevision": {
+    "date": "2026-11-02",
+    "slides": [
+      14,
+      15,
+      16,
+      18,
+      20
+    ],
+    "progressiveFormulaRow": {
+      "leftToRight": true,
+      "previousOpacity": 0.38,
+      "changingBottomDescription": true,
+      "threeEquivalentFormulasPreserved": true
+    },
+    "interactiveModes": {
+      "15": "t distance from fitted slope and estimated SE",
+      "16": "two-sided p-value, df and significance threshold",
+      "18": "supplied data or simulated samples; sample size, noise, true slope, input spread, seeds, resampling and OLS/mean-only comparison",
+      "20": "worked 95% interval and 20 repeated studies, with per-interval inspection"
+    },
+    "notationPreserved": [
+      "beta_1",
+      "beta_hat_1",
+      "sigma_hat",
+      "sigma_epsilon",
+      "t_(n-2)",
+      "t_(0.975,n-2)"
+    ],
+    "originalDataAndNumericalEngineUnchanged": true,
+    "numericReference": {
+      "cases": 162,
+      "reference": "SciPy linregress and Student t quantile",
+      "maximumPValueRelativeError": 3.748448549753959e-12,
+      "slopeAndSEAbsoluteErrorBelow": 1e-12,
+      "maximumConfidenceEndpointAbsoluteError": 1.730704468627664e-11,
+      "confidenceIntervalsAgree": true,
+      "checks": "passed"
+    },
+    "sourceSlides": 34,
+    "renderedSlides": 40,
+    "handoutReadings": 33,
+    "handoutExamples": 9,
+    "addedHandoutExamples": [
+      "t-statistic",
+      "pvalues",
+      "interval"
+    ],
+    "revisedHandoutExample": "uncertainty-lab",
+    "otherFiveOriginalPostersUnchanged": true,
+    "handoutControlsVerified": [
+      "repeated intervals",
+      "simulated data and sample size"
+    ],
+    "legacyPart1WalkthroughVerified": "step 2 / 6, exactly one active step",
+    "questionContentAndPlacementsUnchanged": true,
+    "sourceAndMathOverflow": 0,
+    "handoutOverflow": 0,
+    "resetPreservesData": true,
+    "consoleErrors": 0,
+    "proofDirectory": "C:\\Users\\Nicola\\Documents\\Codex\\2026-10-12\\can\\outputs\\regression-interactions-20261102"
+  },
+  "regressionDiscussionNotesRevision": {
+    "date": "2026-11-02",
+    "notes": "slide-improvement-notes.md",
+    "sourceSlides": 36,
+    "renderedSlides": 42,
+    "handoutReadings": 35,
+    "handoutExamples": 8,
+    "newSlides": [
+      "slope-test-purpose",
+      "slope-scatter-comparison"
+    ],
+    "revisedSlides": [
+      "inference-sampling",
+      "standard-error",
+      "t-statistic",
+      "pvalues",
+      "tails-lab"
+    ],
+    "changes": [
+      "Explicit theoretical standardization with unknown true slope and slope SD",
+      "Rise/run intuition distinguishes slope uncertainty from slope and realized error",
+      "Purpose and matched-scatter example precede t formula",
+      "Null zero and signed distance explained",
+      "Random T distinguished from fixed observed t",
+      "Two-sided p-value explained before one dedicated interactive plot",
+      "Positive-SE observed-zero case gives p=1 without proving the null"
+    ],
+    "matchedScatterSciPyChecks": [
+      {
+        "n": 16,
+        "slopeKgPerCm": 0.9999999999999997,
+        "slopeSEKgPerCm": 0.10000000000000014,
+        "t": 9.999999999999982
+      },
+      {
+        "n": 16,
+        "slopeKgPerCm": 0.9999999999999997,
+        "slopeSEKgPerCm": 0.5,
+        "t": 1.9999999999999993
+      }
+    ],
+    "formulaWalkthrough": "Three formulas appear left to right with past opacity 0.38 and changing bottom description",
+    "browserLayout": "Seven revised slides checked: no overflowing paragraphs, formulas, cards or symbol keys",
+    "handoutControls": "Dedicated tail example verified in larger view, including observed-zero case",
+    "handoutPageHorizontalOverflow": false,
+    "duplicateHandoutIDs": false,
+    "questionBankUnchanged": true,
+    "questionPlacementShiftedByTwo": [
+      "L04-C07",
+      "L04-C08",
+      "L04-C09",
+      "L04-O02",
+      "L04-O03"
+    ],
+    "importWorkbooksUnchanged": 48,
+    "engineAndSourceDataUnchanged": true,
+    "proofDirectory": "C:\\Users\\Nicola\\Documents\\Codex\\2026-10-12\\can\\outputs\\regression-discussion-notes-20261102"
+  },
+  "regressionArgminGradientIntroductionRevision": {
+    "date": "2026-11-02",
+    "pack": "09_Regression_Part_1",
+    "renderedSlide": 34,
+    "anchor": "gradient-intuition",
+    "title": "How do we find the best coefficients β?",
+    "argminVersusMinExplained": true,
+    "objectiveRepeatedBeforeDerivatives": true,
+    "handoutSynchronized": true,
+    "slideCountsUnchanged": true
   }
 }

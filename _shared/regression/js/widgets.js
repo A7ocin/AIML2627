@@ -8,6 +8,8 @@
  const range=(k,label,min,max,step,v)=>`<label>${label} <input data-setting="${k}" type="range" min="${min}" max="${max}" step="${step}" value="${v}"><output data-output="${k}">${v}</output></label>`;
  const box=(label,body)=>`<div class="rg-box"><div class="rg-heading">${label}</div>${body}</div>`;
  const metric=(label,n)=>box(label,`<span class="rg-metric">${num(n)}</span>`);
+
+ const RG_STATS_BETA="<math xmlns=\"http://www.w3.org/1998/Math/MathML\" class=\"rg-inline-math\"><mrow><msub><mover accent=\"true\"><mi>β</mi><mo stretchy=\"false\">ˆ</mo></mover><mrow><mn>1</mn></mrow></msub></mrow></math>",RG_STATS_SIGMA="<math xmlns=\"http://www.w3.org/1998/Math/MathML\" class=\"rg-inline-math\"><mrow><mover accent=\"true\"><mi>σ</mi><mo stretchy=\"false\">ˆ</mo></mover></mrow></math>";
  const chartButtons=()=>btn('zoom','Zoom',true)+btn('pan','Pan')+btn('view','Reset view');
  function layout(x='Predictor x',y='Response y'){return {paper_bgcolor:'rgba(0,0,0,0)',plot_bgcolor:'rgba(0,0,0,0)',font:{family:'Segoe UI, sans-serif',size:21,color:'#e8ecf4'},margin:{l:88,r:28,t:32,b:105},height:535,autosize:true,xaxis:{title:{text:x,standoff:12},gridcolor:'#293244',zeroline:false,autorange:true},yaxis:{title:{text:y,standoff:12},gridcolor:'#293244',zeroline:false,autorange:true},legend:{orientation:'h',y:-.22,x:0,font:{size:18}},hovermode:'closest',dragmode:'zoom',showlegend:true};}
  const line=(x,y,name,color='#45d6c0',dash='solid')=>({x,y,name,mode:'lines',line:{color,width:3,dash}});
@@ -82,10 +84,10 @@
     }
     if(this.source==='lr_maybe'){
      data=[markers(trainData,'90 observations')];
-     side=box('Fitted slope',`<p>Estimated change per unit of input: ${num(o.slope)}.</p>`)
-      +'<div class="rg-metrics">'+metric('Slope standard error',o.se)+metric('t statistic · '+o.df+' df',o.t)+metric('Two-sided p-value',o.p)+metric('Training RSE',o.rse)+'</div>'
-      +box('Read the result',`<p>The slope is ${num(o.t,2)} standard errors from zero. This supports linear association under the model assumptions.</p>`);
-     foot='OLS and slope-test results calculated from these 90 observations';
+     side=box('1 · Fit the slope '+RG_STATS_BETA,`<span class="rg-metric">${num(o.slope)}</span>`)
+      +'<div class="rg-metrics">'+box('2 · Estimate its SE '+RG_STATS_SIGMA,`<span class="rg-metric">${num(o.se,5)}</span>`)+metric('3 · Calculate t',o.t)+metric('4 · Two-sided p-value',o.p)+metric('Training RSE',o.rse)+'</div>'
+      +box('Interpret under the zero-slope null',`<p>The estimate is ${num(o.t,2)} standard errors from zero. Its tiny p-value supports a linear association.</p>`);
+     foot='n = 90 observations · degrees of freedom: n − 2 = '+o.df;
     }
     if(this.source==='lr_corcau'){
      l=layout('Ice-cream sales · normalized index','Shark-attack index');l.uirevision=this.source;const xs=[Math.min(...train.x),Math.max(...train.x)],test=RG.points(this.pointTraces[1]),tm=RG.metrics(test,x=>o.intercept+o.slope*x);
@@ -94,7 +96,7 @@
      foot='OLS fitted to 80 training observations · test RMSE uses 20 separate cases';
     }
     if(this.overlay){const xs=[Math.min(...train.x),Math.max(...train.x)];data.push(line(xs,xs.map(x=>o.intercept+o.slope*x),this.source==='lr_scatter_mod'?'OLS best fit':'OLS fitted line','#45d6c0','solid'));}
-    const overlay=this.el.querySelector('[data-action="overlay"]');if(overlay)overlay.textContent=this.source==='lr_scatter_mod'?(this.overlay?'Hide OLS best fit':'Show OLS best fit'):(this.overlay?'Hide fitted line':'Show fitted line');if(this.source!=='lr_scatter_mod')tail='Illustrative regression data';
+    const overlay=this.el.querySelector('[data-action="overlay"]');if(overlay)overlay.textContent=this.source==='lr_scatter_mod'?(this.overlay?'Hide OLS best fit':'Show OLS best fit'):(this.overlay?'Hide fitted line':'Show fitted line');if(this.source!=='lr_scatter_mod')tail=this.source==='lr_maybe'?'Statistics use unrounded values':'Illustrative regression data';
    }
    if(this.kind==='residual'){
     const pts=RG.points(COURSE_DATA.lr_scatter.data[0]),b0=this.exactOLS?.intercept??Number(this.value('intercept')),b1=this.exactOLS?.slope??Number(this.value('slope')),pred=x=>b0+b1*x,m=RG.metrics(pts,pred);
@@ -108,15 +110,15 @@
     data.push(line(xs,xs.map(x=>this.ensemble.at(x).mean),'Average of 60','#45d6c0'),line(xs,xs.map(RG.truth),'True mean','#ff9d4d','dash'));
     data.push({x:fs.map(()=>x0),y:fs.map(c=>RG.predict(c,x0)),name:'Predictions at x',mode:'markers',marker:{size:5,color:'#c792ea',opacity:.65},hovertemplate:'Prediction = %{y:.4f}<extra>One fitted model</extra>'});
     data.push({x:[x0,x0],y:[RG.truth(x0),stat.mean],name:'Truth and average at x',mode:'markers',showlegend:false,marker:{color:['#ff9d4d','#45d6c0'],size:12,symbol:['diamond','circle'],line:{color:'#fff',width:1}}});
-    l=layout('Input x · synthetic example','Predicted response');l.legend.font.size=18;l.shapes=[{type:'line',x0,x1:x0,y0:0,y1:1,yref:'paper',line:{color:'#c792ea',dash:'dot',width:2}}];
-    side=box('At input x = '+x0,'<p>Purple dots: one prediction from each of 60 independently fitted models.</p>')+'<div class="rg-metrics">'+metric('Squared bias',stat.bias2)+metric('Prediction variance',stat.variance)+metric('Fresh-noise variance',stat.noise)+metric('Expected test MSE*',stat.total)+'</div>'
+    l=layout('Input x · synthetic example','Predicted response');l.legend.font.size=18;l.shapes=[{type:'line',x0,x1:x0,y0:0,y1:1,yref:'paper',line:{color:'#4db8ff',dash:'dot',width:3}}];
+    side=box('At input x = '+x0,'<p>Purple dots: one prediction from each of 60 independently fitted models.</p>')+'<div class="rg-metrics">'+metric('Squared bias',stat.bias2)+metric('Prediction variance',stat.variance)+metric('Observation-noise variance',stat.noise)+metric('Expected test MSE*',stat.total)+'</div>'
      +box('What to compare','<p>Bias: average prediction versus truth. Variance: spread of the purple predictions.</p>');
     foot='*At the selected x · squared response units · 60-fit approximation';tail='15 curves shown · all 60 fits enter the scores';
    }
    if(this.kind==='tails'){
     const t=this.exactT??Number(this.value('t')),df=Number(this.value('df')),a=Math.abs(t),p=RG.tP(t,df);this.currentP=p;this.el.querySelector('[data-output="t"]').textContent=num(t,3);const extent=Math.max(5,a+1),xs=Array.from({length:401},(_,i)=>-extent+2*extent*i/400);data=[line(xs,xs.map(x=>RG.tPDF(x,df)),'t density','#4db8ff')];
     for(const sign of [-1,1]){const xx=Array.from({length:101},(_,i)=>sign*(a+(extent-a)*i/100)).sort((a,b)=>a-b);data.push({...line(xx,xx.map(x=>RG.tPDF(x,df)),sign<0?'Two-sided tail area':'Right tail','#c792ea'),fill:'tozeroy',fillcolor:'rgba(199,146,234,.42)',showlegend:sign<0});}
-    l=layout('t statistic under H₀','Density');l.shapes=[-a,a].map(x=>({type:'line',x0:x,x1:x,y0:0,y1:RG.tPDF(x,df),line:{color:'#ff9d4d',width:2,dash:'dot'}}));side=box('Observed statistic',`t = ${num(t)}<br>df = ${df}`)+metric('Two-sided p-value',p)+box('Meaning of the shaded area','<p>Probability of a result at least this far from zero if the null hypothesis holds.</p>')+box('Illustration: threshold α = 0.05',p<.05?'<p>Reject the zero-slope null at this threshold.</p>':'<p>Not enough evidence to reject the zero-slope null.</p>');foot='Purple shading: values at least as extreme in either direction';tail='A density height is not a probability';
+    l=layout('t statistic under H₀','Density');l.shapes=[-a,a].map(x=>({type:'line',x0:x,x1:x,y0:0,y1:RG.tPDF(x,df),line:{color:'#ff9d4d',width:2,dash:'dot'}}));side=box('Observed statistic',`t = ${num(t)}<br>df = n − 2 = ${df}`)+metric('Two-sided p-value',p)+box('What the shaded area means','<p>Repeat the study with a zero population slope. This area is the chance of a t value at least as far from zero as yours.</p>')+box('Illustration: threshold α = 0.05',p<.05?'<p>Reject the zero-slope null at this threshold.</p>':'<p>Not enough evidence to reject the zero-slope null.</p>');foot='Purple shading: values at least as extreme in either direction';tail='A density height is not a probability';
    }
    if(this.kind==='diagnostics'){
     const kind=this.value('example'),d=RG.diagnostic(kind,sampleSeed(this.value('seed'))),ordered=this.value('axis')==='Observation order';this.diagnostic=d;data=[{x:d.residuals.map(p=>ordered?p.order:p.fitted),y:d.residuals.map(p=>p.residual),name:'OLS residuals',mode:'markers',marker:{color:'#4db8ff',size:9}}];l=layout(ordered?'Observation order':'Fitted response','Residual y − ŷ');l.showlegend=false;l.shapes=[{type:'line',xref:'paper',x0:0,x1:1,y0:0,y1:0,line:{color:'#45d6c0',width:2,dash:'dot'}}];const notes={'Well behaved':'No designed mean or variance pattern. Random samples can still look uneven.','Curvature':'A straight line omits a quadratic term. Look for a curved residual mean.','Unequal variance':'The error scale grows with x. Look for a widening residual spread.','Serial pattern':'Each error partly carries over from the preceding observation. Use observation order to inspect runs.'};side=box(kind,`<p>${notes[kind]}</p>`)+metric('Training RSE',d.ols.rse)+box('Read the pattern','<p>A high R² does not certify independent, normal or equal-variance errors.</p>');foot='Synthetic observations · a new OLS fit for each scenario and sample set';tail='Patterns guide investigation';

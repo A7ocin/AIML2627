@@ -1058,7 +1058,7 @@ The average prediction is 2, so bias is zero. Predictions differ from their mean
 
 ### L04-C07 · Core · Reasoning / interpret a null probability
 
-**Placement:** [After “Run the complete slope test on 90 observations”](../10_Regression_Part_2/index.html#/uncertainty-lab) · [Handout](../10_Regression_Part_2/handout.html#chapter-uncertainty-lab)  
+**Placement:** [After “Follow one complete test: fit, estimate uncertainty, compare”](../10_Regression_Part_2/index.html#/uncertainty-lab) · [Handout](../10_Regression_Part_2/handout.html#chapter-uncertainty-lab)  
 **Time:** 120 seconds, including debrief.
 
 An observational regression gives a two-sided slope p-value of 0.03. Which statement matches what that number means?
@@ -1114,7 +1114,7 @@ Prefer degree 1 using validation evidence; assess the fixed procedure on a genui
 
 ### L04-O02 · Optional · Reasoning / compare interval evidence
 
-**Placement:** [After “A confidence interval shows the precision of the slope”](../10_Regression_Part_2/index.html#/interval) · [Handout](../10_Regression_Part_2/handout.html#chapter-interval)  
+**Placement:** [After “A confidence interval adds an uncertainty margin to the slope”](../10_Regression_Part_2/index.html#/interval) · [Handout](../10_Regression_Part_2/handout.html#chapter-interval)  
 **Time:** 120 seconds, including debrief.
 
 Two studies report 95% slope intervals A: [0.2, 0.6] and B: [−0.1, 0.9], both centered at 0.4. Under the classical model, which interpretation is justified?
