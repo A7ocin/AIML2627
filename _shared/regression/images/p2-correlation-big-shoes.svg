@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="940" height="440" viewBox="0 0 940 440" role="img" aria-labelledby="title desc">
+<title id="title">An absurd study tip: giant shoes before an exam</title><desc id="desc">A cartoon student reads a book while wearing comically oversized red shoes. A speech bubble asks whether size 48 gives an instant A plus. This illustrates a mistaken causal conclusion.</desc>
+<rect x="1" y="1" width="938" height="438" rx="24" fill="#101722"/>
+<g font-family="Segoe UI,Arial,sans-serif">
+<rect x="465" y="35" width="426" height="118" rx="22" fill="#202b3d" stroke="#526482" stroke-width="2"/>
+<path d="M518 153 L484 186 L557 153" fill="#202b3d" stroke="#526482" stroke-width="2"/>
+<text x="678" y="82" text-anchor="middle" font-size="31" font-weight="700" fill="#ffbc66">Size 48 = instant A+?</text>
+<text x="678" y="124" text-anchor="middle" font-size="24" fill="#d3ddec">A very expensive study strategy.</text>
+<path d="M110 371 H855" stroke="#344359" stroke-width="3"/>
+<path d="M310 251 L286 305 L358 314 L398 263" fill="#6475a9" stroke="#a7b7dd" stroke-width="3"/>
+<path d="M383 254 L400 312 L464 306 L443 250" fill="#6475a9" stroke="#a7b7dd" stroke-width="3"/>
+<path d="M282 298 C299 293 336 294 358 307 C391 320 422 318 465 331 C489 339 493 365 468 369 L167 369 C136 369 121 357 127 341 C136 319 209 309 258 319 Z" fill="#f16f75" stroke="#ffc0bd" stroke-width="4"/>
+<path d="M405 303 C423 295 451 296 470 311 C518 315 587 320 645 339 C671 348 671 369 643 370 L399 370 C380 368 374 356 380 342 Z" fill="#f16f75" stroke="#ffc0bd" stroke-width="4"/>
+<path d="M130 359 H481 M383 359 H658" stroke="#ffe1c9" stroke-width="9"/>
+<path d="M263 319 L310 326 M256 331 L303 338 M441 315 L477 326 M431 327 L468 338" stroke="#ffe1c9" stroke-width="5" stroke-linecap="round"/>
+<path d="M299 253 C297 208 305 166 329 150 L417 147 C448 166 465 214 450 256 Z" fill="#45bcae" stroke="#89eadc" stroke-width="3"/>
+<circle cx="369" cy="105" r="53" fill="#f4c69d"/>
+<path d="M316 105 C303 51 360 31 398 56 C419 67 427 87 422 110 L403 79 C372 96 352 85 329 98 Z" fill="#42372f"/>
+<circle cx="350" cy="108" r="5" fill="#202b3d"/><circle cx="388" cy="108" r="5" fill="#202b3d"/>
+<path d="M351 130 Q370 142 389 130" fill="none" stroke="#9c544b" stroke-width="4" stroke-linecap="round"/>
+<path d="M290 181 L365 200 L441 179 L444 252 L365 270 L289 250 Z" fill="#7b6cb0" stroke="#c8b6ef" stroke-width="4"/>
+<path d="M365 201 V269" stroke="#ddcff6" stroke-width="3"/>
+<path d="M305 202 L346 213 M305 216 L346 227 M387 213 L426 201 M387 227 L426 215" stroke="#e8dfff" stroke-width="3"/>
+<ellipse cx="291" cy="227" rx="13" ry="20" fill="#f4c69d"/><ellipse cx="442" cy="225" rx="13" ry="20" fill="#f4c69d"/>
+<text x="470" y="416" text-anchor="middle" font-size="26" fill="#b9c8d8">New shoes come with laces. Not reading skills.</text>
+</g></svg>

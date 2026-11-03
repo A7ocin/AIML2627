@@ -4,6 +4,7 @@
  const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
  const num=(x,d=4)=>Math.abs(x)>0&&Math.abs(x)<.0001?x.toExponential(3):Number(x).toFixed(d);
  const math=s=>'<math class="rg-inline-math" xmlns="http://www.w3.org/1998/Math/MathML"><mrow>'+s+'</mrow></math>';
+ const mathNum=(value,d=4)=>{const label=num(value,d);if(label.includes('e')){const [coefficient,power]=label.split('e');return '<mn>'+coefficient+'</mn><mo>×</mo><msup><mn>10</mn><mn>'+Number(power).toString().replace('-','−')+'</mn></msup>';}return '<mn>'+label.replace('-','−')+'</mn>';};
  const hat=x=>'<mover accent="true"><mi>'+x+'</mi><mo stretchy="false">ˆ</mo></mover>';
  const beta=math('<msub>'+hat('β')+'<mn>1</mn></msub>'),sigma=math(hat('σ'));
  const trueBeta=math('<msub><mi>β</mi><mn>1</mn></msub>'),noiseSigma=math('<msub><mi>σ</mi><mi>ε</mi></msub>');
@@ -23,13 +24,14 @@
     const a=actual().fit;
     controls=range('slope','Fitted slope '+beta,-.25,.25,a.slope)+range('se','Estimated SE '+sigma,.005,.1,a.se)+button('actual','90-point values')+button('near','Near zero')+button('far','Far from zero');
    }
-   if(this.mode==='p')controls=range('t','Observed t',-6,6,2.2)+select('df','Degrees of freedom',[3,10,23,88],88)+select('alpha','Threshold α',[.01,.05,.1],.05)+button('zero','t = 0')+button('actual','90-point result');
+   if(this.mode==='p')controls=range('t','Observed t',-6,6,2.2)+select('n','Observations n',[5,12,16,25,90],90)+select('alpha','Threshold α',[.01,.05,.1],.05)+button('zero','t = 0')+button('actual','90-point result');
    if(this.mode==='fit')controls='<div class="rg-i-fit-top">'+select('source','Data',[['actual','Supplied 90 cases'],['simulation','Simulate new data']],'actual')+select('fit','Fitting view',[['ols','OLS line'],['compare','OLS + mean-only fit']],'ols')+button('sample','New simulated sample',true)+button('reset','Reset view')+'</div><fieldset class="rg-i-simulation-controls"><legend>Simulation settings</legend>'+select('n','Cases n',[12,30,90],90)+select('noise','Noise SD '+noiseSigma,[.03,.08,.2],.08)+select('slope','True slope '+trueBeta,[0,.1,.3],.1)+select('spread','Input spread',[[.25,'Narrow'],[1,'Wide']],1)+select('seed','Sample set',seeds,7)+'</fieldset>';
    if(this.mode==='ci')controls=select('view','View',[['actual','90-point interval'],['repeat','20 repeated studies']],'actual')+select('n','Cases per study',[12,30,90],90)+select('noise','Noise SD '+noiseSigma,[.04,.1,.2],.1)+select('seed','Sample set',seeds,7)+select('inspect','Inspect interval',Array.from({length:20},(_,i)=>i+1),1)+button('repeat','Repeat 20 studies',true);
    if(this.mode!=='fit')controls+=button('reset','Reset view');
    this.el.setAttribute('role','region');this.el.setAttribute('aria-label',({t:'Adjust the t statistic',p:'Explore a two-sided p-value',fit:'Generate data and compare regression fits',ci:'Explore confidence intervals'})[this.mode]);
    this.el.innerHTML='<div class="rg-toolbar">'+controls+'</div><div class="rg-main"><div class="rg-graphic"><div class="rg-plot"></div></div><div class="rg-side" aria-live="polite"></div></div><div class="rg-bottom"><span></span><span></span></div>';
    this.plot=el.querySelector('.rg-plot');this.side=el.querySelector('.rg-side');this.footer=el.querySelector('.rg-bottom');
+   if(this.mode==='fit'){this.interpretation=document.createElement('div');this.interpretation.className='rg-fit-interpretation';this.interpretation.setAttribute('aria-live','polite');this.footer.before(this.interpretation);}
    el.addEventListener('input',e=>{if(e.target.matches('input[type=range]'))this.render();});
    el.addEventListener('change',()=>this.render());
    el.addEventListener('keydown',e=>e.stopPropagation());
@@ -39,7 +41,7 @@
     if(action==='zero')this.set('t',0);
     if(action==='near'){this.set('slope',.01);this.set('se',.05);}
     if(action==='far'){this.set('slope',.1);this.set('se',.02);}
-    if(action==='actual'){const a=actual().fit;if(this.mode==='t'){this.set('slope',a.slope);this.set('se',a.se);}else{this.set('t',a.t);this.set('df',a.df);}}
+    if(action==='actual'){const a=actual().fit;if(this.mode==='t'){this.set('slope',a.slope);this.set('se',a.se);}else{this.set('t',a.t);this.set('n',a.df+2);}}
     this.render();
    });
    this.render();
@@ -61,13 +63,13 @@
     foot='Keep the slope fixed and increase its SE: |t| becomes smaller.';tail='Illustration controls adjust the estimate and its uncertainty';
    }
    if(this.mode==='p'){
-    const t=Number(this.value('t')),df=Number(this.value('df')),alpha=Number(this.value('alpha')),a=Math.abs(t),p=RG.tP(t,df),extent=Math.max(5,a+1),xs=Array.from({length:401},(_,i)=>-extent+2*extent*i/400);
+    const t=Number(this.value('t')),n=Number(this.value('n')),df=n-2,alpha=Number(this.value('alpha')),a=Math.abs(t),p=RG.tP(t,df),extent=Math.max(5,a+1),xs=Array.from({length:401},(_,i)=>-extent+2*extent*i/400),reject=p<alpha;
     l=layout(Number(this.el.dataset.plotHeight)||270,'T values in hypothetical zero-slope studies','Density');l.margin={l:66,r:20,t:20,b:65};
     data=[{x:xs,y:xs.map(x=>RG.tPDF(x,df)),mode:'lines',line:{color:colors.blue,width:3},name:'Student t density'}];
     for(const sign of [-1,1]){const xx=Array.from({length:151},(_,i)=>sign*(a+(extent-a)*i/150)).sort((x,y)=>x-y);data.push({x:xx,y:xx.map(x=>RG.tPDF(x,df)),mode:'lines',line:{color:colors.purple,width:1},fill:'tozeroy',fillcolor:'rgba(199,146,234,.65)',hoverinfo:'skip'});}
     l.shapes=[-a,a].map(x=>({type:'line',x0:x,x1:x,y0:0,y1:RG.tPDF(x,df),line:{color:colors.orange,width:2,dash:'dot'}}));
-    side=metric('Both tails together: p-value',p)+box(a===0?'Why p = 1 here':'Assuming a zero population slope',a===0?'<p>With positive SE, observed t = 0 means a flat fitted line. Every hypothetical |T| ≥ 0, so p = 1.</p><p>This gives no evidence against zero. It does not prove the true slope is zero.</p>':'<p>'+num(100*p,2)+'% of hypothetical repetitions give |T| ≥ '+num(a,2)+', the fixed observed distance.</p>')+box('Compare with α = '+alpha,'<p>'+(p<alpha?'p < α: reject the zero-slope null.':'p ≥ α: insufficient evidence to reject the null.')+'</p>');
-    foot='Try t = 0. Then change the sign: equal |t| gives the same two-sided p-value.';tail='The shaded area is probability; the curve height is density.';
+    side=metric('Both tails together: p-value',p)+box(a===0?'Why p = 1 here':'Assuming a zero population slope',a===0?'<p>With positive SE, observed t = 0 means a flat fitted line. Every hypothetical |T| ≥ 0, so p = 1.</p><p>This gives no evidence against zero. It does not prove the true slope is zero.</p>':'<p>'+num(100*p,2)+'% of hypothetical repetitions give |T| ≥ '+num(a,2)+', the fixed observed distance.</p>')+box('Decision at α = '+alpha,'<strong class="rg-test-decision '+(reject?'rg-reject':'rg-dont-reject')+'">'+(reject?'REJECT':"DON'T REJECT")+'</strong><p>'+(reject?'p < α: reject H₀ (zero population slope).':'p ≥ α: insufficient evidence to reject H₀.')+'</p>');
+    foot='n = number of observations in each study.';tail='The shaded area is probability; the curve height is density.';
    }
    if(this.mode==='fit'){
     const simulated=this.value('source')==='simulation';this.disable(['n','noise','slope','spread','seed'],!simulated);
@@ -78,11 +80,14 @@
     if(simulated)data.push({x:xs,y:xs.map(x=>.5+config.slope*x),mode:'lines',name:'True mean (simulation)',line:{color:colors.orange,width:2,dash:'dash'}});
     const compare=this.value('fit')==='compare';if(compare)data.push({x:xs,y:[result.mean,result.mean],mode:'lines',name:'Mean-only fit',line:{color:colors.purple,width:3,dash:'dot'}});
     side='<div class="rg-metrics">'+metric('1 · Slope '+beta,o.slope)+metric('2 · Slope SE '+sigma,o.se,5)+metric('3 · t statistic',o.t)+metric('4 · Two-sided p-value',o.p)+metric('Training RSE',o.rse)+metric('OLS RSS',o.rss)+'</div>';
-    let meaning=o.p<.05?'Evidence of a linear association at α = 0.05.':'Insufficient evidence for a nonzero slope at α = 0.05.';
-    if(simulated&&config.slope===0&&o.p<.05)meaning='The true simulated slope is zero. This sample nevertheless rejects it: a false positive.';
-    if(compare)meaning+=' Mean-only RSS = '+num(o.tss)+'. Both models use these same observations.';
-    side+=box('Interpret this sample','<p>'+meaning+'</p>');
+    const reject=o.p<.05,step=(heading,body)=>'<div class="rg-fit-reason-step"><div class="rg-heading">'+heading+'</div>'+body+'</div>';
+    const distance=math('<mi>t</mi><mo>=</mo><mfrac><mrow><msub>'+hat('β')+'<mn>1</mn></msub><mo>−</mo><mn>0</mn></mrow>'+hat('σ')+'</mfrac><mo>≈</mo>'+mathNum(o.t,2));
+    const probability=math('<mi>p</mi><mo>≈</mo>'+mathNum(o.p,6))+'<br/>'+math('<mi>p</mi>'+(reject?'<mo>&lt;</mo>':'<mo>≥</mo>')+'<mi>α</mi><mo>=</mo><mn>0.05</mn>');
+    let meaning=reject?'A t this far from zero would be rare under a flat population mean. Evidence of association, not causation.':'This t is not rare enough under a flat population mean to reject it at α = 0.05. This does not prove the true slope is zero.';
+    if(simulated&&config.slope===0&&reject)meaning='The test rejects zero, but the simulation’s true slope is zero. Noise has produced a false positive in this sample.';
+    this.interpretation.innerHTML=step('1 · How far is the slope from zero?',distance+'<p>'+num(Math.abs(o.t),2)+' estimated slope SEs from zero.</p>')+step('2 · Compare p with α',probability+'<strong class="rg-test-decision '+(reject?'rg-reject':'rg-dont-reject')+'">'+(reject?'REJECT':"DON'T REJECT")+'</strong>')+step('3 · What does this sample tell us?','<p>'+meaning+'</p>');
     foot=(simulated?'Simulated: true slope '+config.slope+', response-noise SD '+config.noise:'Supplied 90-observation dataset')+' · n − 2 = '+o.df+' degrees of freedom';
+    if(compare)foot+=' · Mean-only RSS = '+num(o.tss);
     tail='Slope-test statistics describe the OLS line. '+(simulated?'New samples can give different results.':'Choose “Simulate new data” to change the generator.');
    }
    if(this.mode==='ci'){

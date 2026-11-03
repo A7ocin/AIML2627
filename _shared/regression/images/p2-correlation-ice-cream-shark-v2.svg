@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="940" height="440" viewBox="0 0 940 440" role="img" aria-labelledby="scene-title scene-description">
+ <title id="scene-title">An innocent ice cream and a shark at the beach</title>
+ <desc id="scene-description">On a sunny beach, a smiling two-scoop ice cream in a waffle cone says I plead delicious. In the sea, a blue shark with a pointed snout, dorsal fin, gills and forked tail replies Don't blame the sprinkles.</desc>
+ <defs>
+  <clipPath id="scene-round"><rect width="940" height="440" rx="24"/></clipPath>
+  <clipPath id="waffle-clip"><path d="M145 252 L255 252 L200 389 Z"/></clipPath>
+  <path id="shark-silhouette" d="M461 277 C486 254 534 231 581 229 C615 226 640 230 658 234 L692 166 Q708 190 727 240 Q774 249 806 277 L812 309 C758 340 688 350 618 337 Q526 328 488 301 Q469 291 461 277 Z"/>
+  <clipPath id="shark-body-clip"><use href="#shark-silhouette"/></clipPath>
+ </defs>
+ <g clip-path="url(#scene-round)">
+  <rect width="940" height="440" fill="#111e2b"/>
+  <circle cx="410" cy="159" r="30" fill="#ffca76"/>
+  <g stroke="#ffca76" stroke-width="4" stroke-linecap="round" opacity=".8">
+   <path d="M410 115 V106 M410 212 V203 M366 159 H357 M463 159 H454 M379 128 L373 122 M448 197 L442 191 M379 190 L373 196 M448 121 L442 127"/>
+  </g>
+  <path d="M0 323 Q100 310 200 324 T400 324 T600 324 T800 324 T1000 324 V440 H0 Z" fill="#173d52"/>
+  <path d="M0 349 Q124 321 255 338 Q335 350 383 395 L410 440 H0 Z" fill="#c4a57d"/>
+  <path d="M0 356 Q125 330 250 346 Q324 359 365 400" fill="none" stroke="#efdbb8" stroke-width="4" opacity=".8"/>
+  <path d="M402 374 Q447 361 492 374 T582 374 T672 374 T762 374 T852 374 T942 374 M474 395 Q509 386 544 395 T614 395 M738 397 Q778 385 818 397 T898 397" fill="none" stroke="#3f819a" stroke-width="3" opacity=".7"/>
+  <!-- Cone: a clear triangular waffle, with its pattern clipped inside. -->
+  <path d="M145 252 L255 252 L200 389 Z" fill="#dfaf72" stroke="#ffe0b4" stroke-width="4" stroke-linejoin="round"/>
+  <g clip-path="url(#waffle-clip)" stroke="#a77743" stroke-width="3" opacity=".8">
+   <path d="M105 255 L255 405 M132 239 L282 389 M161 226 L311 376 M91 282 L241 432 M116 394 L267 243 M95 375 L247 224 M138 414 L289 263 M160 434 L311 283"/>
+  </g>
+  <path d="M149 281 L122 275 L106 252 M251 281 L278 266 L287 244" stroke="#ffe6bb" stroke-width="7" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="105" cy="250" r="5" fill="#ffe6bb"/><circle cx="288" cy="242" r="5" fill="#ffe6bb"/>
+  <!-- Two round scoops, with a readable face on the lower vanilla scoop. -->
+  <circle cx="200" cy="224" r="56" fill="#ffdfaa" stroke="#fff0d4" stroke-width="4"/>
+  <circle cx="200" cy="161" r="43" fill="#eea8c6" stroke="#ffd8e8" stroke-width="4"/>
+  <path d="M175 149 Q181 131 199 129" fill="none" stroke="#ffe5ee" stroke-width="6" stroke-linecap="round"/>
+  <g stroke-width="4" stroke-linecap="round">
+   <path d="M197 149 L204 153 M216 172 L222 166 M180 174 L184 181" stroke="#b25c94"/>
+   <path d="M174 210 L181 205 M223 201 L229 205 M198 258 L205 255" stroke="#c18353"/>
+  </g>
+  <circle cx="182" cy="226" r="5" fill="#354457"/><circle cx="218" cy="226" r="5" fill="#354457"/>
+  <circle cx="171" cy="240" r="6" fill="#f0a8a1" opacity=".7"/><circle cx="229" cy="240" r="6" fill="#f0a8a1" opacity=".7"/>
+  <path d="M187 241 Q200 252 213 241" fill="none" stroke="#995d4f" stroke-width="4" stroke-linecap="round"/>
+  <!-- Forked tail behind the body, so the silhouette reads as a shark. -->
+  <path d="M794 277 L884 215 L863 282 L894 346 L799 312 Z" fill="#6d9eb6" stroke="#b6d9e8" stroke-width="4" stroke-linejoin="round"/>
+  <use href="#shark-silhouette" fill="#79abc2"/>
+  <path d="M469 281 Q553 303 629 316 Q720 332 812 300 L821 352 L485 354 Z" fill="#e1edf0" clip-path="url(#shark-body-clip)"/>
+  <use href="#shark-silhouette" fill="none" stroke="#b6d9e8" stroke-width="4" stroke-linejoin="round"/>
+  <path d="M638 294 L597 356 Q642 349 684 321 Z" fill="#4e819d" stroke="#a7cddf" stroke-width="3" stroke-linejoin="round"/>
+  <path d="M745 327 L769 350 L776 316" fill="#4e819d" stroke="#a7cddf" stroke-width="3" stroke-linejoin="round"/>
+  <!-- Eye, gill slits, pointed snout and toothy mouth are kept distinct. -->
+  <ellipse cx="531" cy="260" rx="13" ry="12" fill="#f7fbfb"/>
+  <circle cx="526" cy="260" r="6" fill="#193647"/><circle cx="524" cy="257" r="2" fill="#fff"/>
+  <path d="M519 242 Q531 236 543 242" fill="none" stroke="#365d73" stroke-width="4" stroke-linecap="round"/>
+  <path d="M483 283 Q515 299 556 286 Q535 318 507 304 Q490 295 483 283 Z" fill="#203d50"/>
+  <path d="M497 290 L503 301 L511 295 M518 296 L526 308 L533 295 M540 291 L544 300 L550 289" fill="#fff8e9"/>
+  <g fill="none" stroke="#365f77" stroke-width="4" stroke-linecap="round">
+   <path d="M573 259 Q583 275 576 290 M588 260 Q598 277 591 292 M603 261 Q613 278 606 293"/>
+  </g>
+  <!-- Separate, aligned balloons point to the two characters. -->
+  <g font-family="Segoe UI,Arial,sans-serif" text-anchor="middle">
+   <path d="M61 22 H338 Q356 22 356 40 V82 Q356 100 338 100 H240 L228 116 L204 100 H61 Q43 100 43 82 V40 Q43 22 61 22 Z" fill="#26364b" stroke="#647c99" stroke-width="2"/>
+   <text x="200" y="72" fill="#ffda8c" font-size="29" font-weight="600">I plead delicious.</text>
+   <path d="M526 22 H892 Q910 22 910 40 V90 Q910 108 892 108 H617 L575 153 L591 108 H526 Q508 108 508 90 V40 Q508 22 526 22 Z" fill="#26364b" stroke="#647c99" stroke-width="2"/>
+   <text x="709" y="59" fill="#e4f8f6" font-size="29" font-weight="600">Don’t blame</text>
+   <text x="709" y="93" fill="#e4f8f6" font-size="29" font-weight="600">the sprinkles!</text>
+   <rect x="100" y="399" width="740" height="35" rx="10" fill="#101722" opacity=".9"/>
+   <text x="470" y="425" fill="#e1edf4" font-size="25">A small p-value does not make vanilla guilty.</text>
+  </g>
+ </g>
+</svg>

@@ -552,3 +552,128 @@
 .reg-review .reveal #gradient-intuition .rg-key{font-size:23px;line-height:1.35}
 .reg-review .reveal #gradient-intuition h2 .rg-inline-math{font-size:1em}
 .rg-reading .rg-objective-reminder>p{text-align:center}
+
+/* A playful correlation-versus-causation bridge before the observed association. */
+.reg-review .rg-correlation-grid{grid-template-columns:1.12fr 1fr;gap:30px}
+.reg-review .rg-correlation-cartoon{display:block;width:100%;height:395px;object-fit:contain;margin:16px 0 0}
+.reg-review .rg-correlation-cause{display:block;width:100%;height:286px;margin:12px 0}
+.reg-review .reveal #correlation-not-causation .card .label{font-size:24px;text-transform:none;letter-spacing:.02em}
+.reg-review .reveal #correlation-not-causation .card p{font-size:26px;line-height:1.4;margin-top:12px}
+.reg-review .reveal #correlation-not-causation .slide-body{gap:22px}
+.rg-reading .rg-correlation-grid{grid-template-columns:1fr;margin:24px 0;gap:20px}
+.rg-reading .rg-correlation-cartoon{height:auto;max-height:450px;margin:14px auto 0}
+.rg-reading .rg-correlation-cause{height:auto;max-height:310px;margin:16px auto}
+
+/* Matching small mean-function plots in the two slope hypotheses. */
+.reg-review .rg-hypothesis-plot{display:block;width:100%;height:240px;object-fit:contain;margin:0 auto}
+.reg-review .reveal #hypothesis-test .slide-body{gap:18px}
+.reg-review .reveal #hypothesis-test .card{padding:22px 28px}
+.reg-review .reveal #hypothesis-test .formula{margin:12px 0;padding:14px 20px}
+.reg-review .reveal #hypothesis-test .card p{font-size:26px;line-height:1.4;margin-top:12px}
+.reg-review .reveal #hypothesis-test .rg-key{font-size:24px;padding:16px 26px}
+.rg-reading .rg-hypothesis-plot{height:auto;max-height:260px;margin:16px auto}
+
+/* Introduce the actual height–weight observations before testing their fitted slope. */
+.reg-review .rg-height-weight-intro{grid-template-columns:1.2fr 1fr;gap:30px}
+.reg-review .rg-height-weight-data-plot{display:block;width:100%;height:440px;object-fit:contain;margin:12px 0 0}
+.reg-review .rg-height-weight-table{width:100%;border-collapse:collapse;margin:12px 0;font-size:26px}
+.reg-review .rg-height-weight-table th,.reg-review .rg-height-weight-table td{padding:10px 18px;text-align:center;border-bottom:1px solid #344359}
+.reg-review .reveal #height-weight-data .card .label{text-transform:none;letter-spacing:.02em;font-size:24px}
+.reg-review .reveal #height-weight-data .card p{font-size:26px;line-height:1.4}
+.reg-review .reveal #height-weight-data .card .rg-data-example-note{font-size:22px;color:#b5c5d5;margin-top:14px}
+.reg-review .reveal #height-weight-data .slide-body{gap:22px}
+.rg-reading .rg-height-weight-intro{grid-template-columns:1fr;margin:24px 0}
+.rg-reading .rg-height-weight-data-plot{height:auto;max-height:450px;margin:14px auto}
+.rg-reading .rg-height-weight-table{font-size:1em}
+.rg-reading .rg-height-weight-table th,.rg-reading .rg-height-weight-table td{border-color:#cbd7e0}
+
+/* Three pictures for the logic of the slope test. */
+.reg-review .rg-slope-test-visual-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}
+.reg-review .rg-slope-test-visual-plot{display:block;width:100%;height:345px;object-fit:contain;margin:16px 0}
+.reg-review .reveal #slope-test-visual .card{padding:24px 22px}
+.reg-review .reveal #slope-test-visual .card .label{font-size:23px;text-transform:none;letter-spacing:0}
+.reg-review .reveal #slope-test-visual .card p{font-size:26px;line-height:1.4}
+.reg-review .reveal #slope-test-visual .slide-body{gap:24px}
+.rg-reading .rg-slope-test-visual-grid{grid-template-columns:1fr;margin:24px 0}
+.rg-reading .rg-slope-test-visual-plot{height:auto;max-height:350px;margin:16px auto}
+
+.reg-review .reveal #slope-test-visual .rg-slope-test-visual-plot{height:300px}
+.reg-review .reveal #slope-test-visual .rg-t-test-meaning{padding:18px 26px}
+.reg-review .reveal #slope-test-visual .rg-t-test-meaning>p{font-size:26px;line-height:1.35}
+.reg-review .reveal #slope-test-visual .rg-t-test-meaning>p:last-child{font-size:22px}
+.reg-review .rg-t-signs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;line-height:1.35}
+.rg-reading .rg-t-test-meaning{margin-top:24px}
+@media(max-width:650px){.rg-reading .rg-t-signs{grid-template-columns:1fr;gap:12px}}
+
+/* Explicit slope-test decisions, readable without relying on color alone. */
+.rg-inference-widget .rg-test-decision{display:block;font:800 34px/1.15 'Segoe UI',sans-serif;margin:0 0 9px}
+.rg-inference-widget .rg-test-decision.rg-reject{color:#ff5c77}
+.rg-inference-widget .rg-test-decision.rg-dont-reject{color:#ffd166}
+
+/* A worked reason for the complete fit's hypothesis-test decision. */
+.rg-inference-widget .rg-fit-interpretation{display:grid;grid-template-columns:1fr 1fr 1.25fr;gap:18px;margin-top:12px}
+.rg-inference-widget .rg-fit-reason-step{padding:13px 17px;border:1px solid #344058;border-radius:10px;background:#101722;min-width:0}
+.rg-inference-widget .rg-fit-reason-step .rg-heading{font:600 19px/1.3 'Segoe UI',sans-serif;color:#b7c8dc;margin-bottom:8px}
+.rg-inference-widget .rg-fit-reason-step math{font-size:27px}
+.rg-inference-widget .rg-fit-reason-step p{font:22px/1.35 'Segoe UI',sans-serif;color:#d6e1ed;margin:8px 0 0!important}
+.rg-inference-widget .rg-fit-reason-step .rg-test-decision{font-size:27px;margin:7px 0 0}
+
+.rg-inference-widget .rg-fit-reason-step{font:22px/1.35 Segoe UI,sans-serif}
+
+/* Introduce the observed ice-cream/shark regression before interpreting causes. */
+.reg-review .rg-icecream-result-layout{grid-template-columns:1.24fr 1fr;gap:28px}
+.reg-review .rg-icecream-result-plot{display:block;width:100%;height:390px;object-fit:contain;margin:12px 0 0}
+.reg-review .reveal #ice-cream-regression-intro .slide-body{gap:18px}
+.reg-review .reveal #ice-cream-regression-intro h2{font-size:45px}
+.reg-review .reveal #ice-cream-regression-intro .card{padding:22px 26px}
+.reg-review .reveal #ice-cream-regression-intro .card .label{font-size:23px;text-transform:none;letter-spacing:.01em}
+.reg-review .reveal #ice-cream-regression-intro .card p{font-size:26px;line-height:1.4}
+.reg-review .reveal #ice-cream-regression-intro .card .rg-icecream-causal-claim{font-size:32px;line-height:1.35;color:#ffbc66;margin:15px 0}
+.reg-review .rg-icecream-conclusion-label{display:block;margin-top:20px}
+.reg-review .rg-icecream-result-metrics{width:100%;border-collapse:collapse;table-layout:fixed;text-align:center}
+.reg-review .rg-icecream-result-metrics th,.reg-review .rg-icecream-result-metrics td{padding:10px 12px;text-align:center;border-bottom:1px solid #344359}
+.reg-review .rg-icecream-result-metrics th{font:600 24px/1.25 'Segoe UI',sans-serif;color:#d7e6f2;background:#151e2b}
+.reg-review .rg-icecream-result-metrics th span{display:block;font:19px/1.3 'Segoe UI',sans-serif;color:#aebfd1;margin-top:3px}
+.reg-review .rg-icecream-result-metrics td{font:28px/1.3 'Segoe UI',sans-serif;color:#e6eef6}
+.rg-reading .rg-icecream-result-layout{grid-template-columns:1fr;margin:24px 0}
+.rg-reading .rg-icecream-result-plot{height:auto;max-height:430px;margin:16px auto}
+.rg-reading .rg-icecream-result-metrics{margin:24px 0;font-size:.9em}
+.rg-reading .rg-icecream-result-metrics th,.rg-reading .rg-icecream-result-metrics td{border-color:#cbd7e0}
+.rg-reading .rg-icecream-result-metrics th{font-size:16px;color:#234058;background:#edf4f7}
+.rg-reading .rg-icecream-result-metrics th span{font-size:13px;color:#506779}
+.rg-reading .rg-icecream-result-metrics td{font-size:18px;color:#263e54}
+@media(max-width:650px){.rg-reading .rg-icecream-result-metrics th,.rg-reading .rg-icecream-result-metrics td{padding:8px 4px;font-size:12px;overflow-wrap:anywhere}.rg-reading .rg-icecream-result-metrics th span{font-size:11px}}
+
+.reg-review .reveal #correlation-not-causation .rg-correlation-resource{font-size:24px;line-height:1.35;margin:0}
+.rg-reading .rg-correlation-resource{margin:20px 0 0;font-size:1em}
+
+/* Explicit per-unit coefficient meanings and three-variable projection controls. */
+.reg-review .rg-widget .rg-conf-coefficient-guide{font:22px/1.35 'Segoe UI',sans-serif;padding:15px 22px;margin-top:12px;gap:16px 26px}
+.reg-review .rg-widget[data-kind=confounding] .rg-heading{font-size:18px;line-height:1.3}
+.reg-review .rg-widget[data-kind=confounding] .rg-side p{font-size:23px;line-height:1.35}
+.reg-review .rg-widget[data-kind=confounding] .rg-metric{font-size:31px}
+.reg-review .rg-widget[data-kind=confounding] .rg-toolbar{gap:12px;row-gap:10px}
+.reg-review .rg-widget[data-kind=confounding] .rg-toolbar select[data-setting=x],.reg-review .rg-widget[data-kind=confounding] .rg-toolbar select[data-setting=y]{width:205px;max-width:205px}
+.reg-review .reveal #adjustment .rg-key{font-size:23px;line-height:1.35}
+.reg-review .reveal #adjustment .card p{font-size:26px;line-height:1.4}
+
+.reg-review .rg-widget[data-kind=confounding] .rg-graphic{height:450px}
+.reg-review .rg-widget[data-kind=confounding] .rg-side p{font-size:23px!important}
+
+.reg-review .rg-widget .rg-conf-fixed-axis{font:21px/1.3 'Segoe UI',sans-serif;color:#aebfd1;white-space:nowrap}
+.reg-review .rg-widget .rg-conf-fixed-axis strong{color:#dce7f2;font-weight:600}
+
+/* LINE: two assumptions per slide, with schematic intuition and practical use. */
+.reg-review .reveal .rg-line-assumptions .slide-body{gap:18px}
+.reg-review .reveal .rg-line-assumptions .slide-body>h2{font-size:47px}
+.reg-review .reveal .rg-line-assumptions .rg-intro-lead{font-size:27px}
+.reg-review .reveal .rg-line-assumptions .card{padding:24px 28px}
+.reg-review .reveal .rg-line-assumptions .card p{font-size:25px;line-height:1.35;margin:12px 0 0}
+.reg-review .reveal .rg-line-assumptions .card .label{text-transform:none;letter-spacing:0;font-size:29px}
+.reg-review .reveal .rg-line-assumptions .rg-key{font-size:22px;line-height:1.35;padding:15px 24px}
+.reg-review .reveal .rg-line-assumptions .takeaway{font-size:24px;padding:15px 24px}
+.reg-review .rg-line-sketch{display:block;width:100%;height:150px;margin:16px 0 12px;color:#8fa4b9}
+.rg-line-sketch text{font:21px 'Segoe UI',sans-serif;fill:currentColor}
+.rg-line-why{color:#a5dcd4}
+.rg-reading .rg-line-sketch{width:100%;height:auto;max-height:190px;margin:18px 0;color:#53697b}
+.rg-reading .rg-line-why{color:#206e63}

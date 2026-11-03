@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="547.2pt" height="201.6pt" viewBox="0 0 547.2 201.6" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-11-03T13:03:57.236530</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.10.9, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 201.6 
+L 547.2 201.6 
+L 547.2 0 
+L 0 0 
+z
+" style="fill: #101722"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 82.08 155.232 
+L 536.256 155.232 
+L 536.256 12.096 
+L 82.08 12.096 
+z
+" style="fill: #101722"/>
+   </g>
+   <g id="matplotlib.axis_1">
+    <g id="text_1">
+     <text style="font-size: 17px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #d2deeb" x="309.168" y="176.149344" transform="rotate(-0 309.168 176.149344)">Input</text>
+    </g>
+   </g>
+   <g id="matplotlib.axis_2">
+    <g id="text_2">
+     <text style="font-size: 17px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #d2deeb" x="68.544531" y="83.664" transform="rotate(-90 68.544531 83.664)">Mean response</text>
+    </g>
+   </g>
+   <g id="line2d_1">
+    <path d="M 118.41408 86.52672 
+L 509.00544 86.52672 
+" clip-path="url(#p4d36e172d6)" style="fill: none; stroke: #45d6c0; stroke-width: 3.5; stroke-linecap: square"/>
+   </g>
+   <g id="patch_3">
+    <path d="M 82.08 155.232 
+L 82.08 12.096 
+" style="fill: none; stroke: #8093a8; stroke-width: 1.7; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 82.08 155.232 
+L 536.256 155.232 
+" style="fill: none; stroke: #8093a8; stroke-width: 1.7; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="text_3">
+    <text style="font-size: 18px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #45d6c0" x="309.168" y="67.160475" transform="rotate(-0 309.168 67.160475)">Flat population mean</text>
+   </g>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="p4d36e172d6">
+   <rect x="82.08" y="12.096" width="454.176" height="143.136"/>
+  </clipPath>
+ </defs>
+</svg>

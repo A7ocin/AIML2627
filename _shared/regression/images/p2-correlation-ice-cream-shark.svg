@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="940" height="440" viewBox="0 0 940 440" role="img" aria-labelledby="title desc">
+<title id="title">Don't blame the sprinkles</title><desc id="desc">An innocent cartoon ice-cream cone says I plead delicious. A shark wearing sunglasses says Don't blame the sprinkles. The joke challenges blaming ice cream for shark attacks.</desc>
+<rect x="1" y="1" width="938" height="438" rx="24" fill="#101722"/>
+<g font-family="Segoe UI,Arial,sans-serif">
+<circle cx="470" cy="105" r="35" fill="#ffbc66" opacity=".85"/>
+<path d="M0 311 Q65 290 130 311 T260 311 T390 311 T520 311 T650 311 T780 311 T940 311 V440 H0Z" fill="#142e43"/>
+<path d="M0 327 Q65 307 130 327 T260 327 T390 327 T520 327 T650 327 T780 327 T940 327" fill="none" stroke="#4087a1" stroke-width="3"/>
+<rect x="40" y="25" width="302" height="76" rx="18" fill="#263247" stroke="#6d809d" stroke-width="2"/>
+<path d="M226 101 L247 125 L273 101" fill="#263247" stroke="#6d809d" stroke-width="2"/>
+<text x="191" y="74" text-anchor="middle" fill="#ffda8d" font-size="32" font-weight="600">I plead delicious.</text>
+<path d="M146 245 L224 385 L300 245Z" fill="#d4a66b" stroke="#ffe0ad" stroke-width="4"/>
+<path d="M163 269 L250 331 M180 295 L239 348 M285 271 L198 331 M270 297 L210 349" stroke="#a87d4b" stroke-width="3"/>
+<path d="M140 243 C110 218 137 187 162 182 C147 155 177 128 205 144 C226 120 270 141 267 169 C304 161 328 201 300 228 L299 247Z" fill="#f3cfdb" stroke="#ffe4ed" stroke-width="4"/>
+<path d="M165 177 L177 171 M224 154 L228 165 M267 192 L281 188 M149 212 L161 219 M233 179 L221 185" stroke="#bf7bca" stroke-width="5" stroke-linecap="round"/>
+<circle cx="194" cy="218" r="5" fill="#31384c"/><circle cx="250" cy="218" r="5" fill="#31384c"/>
+<path d="M207 232 Q223 242 238 232" fill="none" stroke="#a9677f" stroke-width="3" stroke-linecap="round"/>
+<path d="M144 248 L101 268 L82 244 M297 245 L337 266 L355 242" stroke="#f3cfdb" stroke-width="8" fill="none" stroke-linecap="round"/>
+<rect x="503" y="25" width="395" height="98" rx="19" fill="#263247" stroke="#6d809d" stroke-width="2"/>
+<path d="M690 123 L674 149 L738 123" fill="#263247" stroke="#6d809d" stroke-width="2"/>
+<text x="700" y="69" text-anchor="middle" fill="#dff9f7" font-size="30" font-weight="600">Don’t blame</text><text x="700" y="105" text-anchor="middle" fill="#dff9f7" font-size="30" font-weight="600">the sprinkles.</text>
+<path d="M502 268 L450 214 L462 297 L442 348 L510 320 C576 361 743 357 829 315 C887 285 828 227 754 216 L690 150 L666 218 C590 215 537 232 502 268Z" fill="#6da2b8" stroke="#abd4df" stroke-width="4"/>
+<path d="M516 300 Q657 369 818 306 Q755 365 591 343Z" fill="#d6e8e9"/>
+<path d="M638 287 L601 332 L674 310" fill="#42758d" stroke="#abd4df" stroke-width="3"/>
+<path d="M732 291 Q776 312 810 288" fill="none" stroke="#1c3446" stroke-width="5" stroke-linecap="round"/>
+<path d="M748 299 L755 310 L763 302 M780 302 L787 311 L793 298" fill="#fff6e6"/>
+<path d="M727 253 L798 253 M731 253 L736 273 L755 273 L764 255 M770 255 L776 273 L794 270 L799 253" fill="#152331" stroke="#152331" stroke-width="7" stroke-linejoin="round"/>
+<text x="470" y="413" text-anchor="middle" font-size="26" fill="#c3d2df">A small p-value does not make vanilla guilty.</text>
+</g></svg>

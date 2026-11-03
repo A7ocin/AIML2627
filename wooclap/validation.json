@@ -73,13 +73,13 @@
     },
     "09_Regression_Part_1": {
       "slides_sha256": "a871ca61c357329d5522e8072a29847996cb0dc4ca84b2e53af26591b05b2c9d",
-      "handout_sha256": "e723a1de5013a352144d70ec6d45504359811be1ee58546a43656ccf6bbf3167",
+      "handout_sha256": "e22c79084775b8d18a8a3ac888bcde5606be8362e6734431e90c89f481e1c30d",
       "slides": 40
     },
     "10_Regression_Part_2": {
-      "slides_sha256": "ad4724f9db816bf7f17ba7217b75e550466b56cb46fa5795cc0ee127964984ac",
-      "handout_sha256": "3c2fb3d1a4f390bb47e8a5a643e3a04e0e78eab4e882adcb98786943880abd0d",
-      "slides": 36
+      "slides_sha256": "c0fb8233ea34ba5e784d1cc7b4c2dd06d071a7561a8c8175f5b3ac6c05d030a6",
+      "handout_sha256": "24857a80f3a7ae313bee8f4d2e9343fd73521d053f5ca6fefa8bb3a8b774891a",
+      "slides": 40
     },
     "11_Classification_Part_1": {
       "slides_sha256": "0ab24c37f263af1b891d367a308cd0b21be532129a664eb31dccfa5ee86d4f4d",
@@ -1554,5 +1554,381 @@
     "objectiveRepeatedBeforeDerivatives": true,
     "handoutSynchronized": true,
     "slideCountsUnchanged": true
+  },
+  "regressionCorrelationCausationRevision": {
+    "date": "2026-11-03",
+    "title": "Correlation does not imply causation",
+    "anchor": "correlation-not-causation",
+    "renderedSlide": 28,
+    "example": "Ice-cream sales and shark attacks, with a playful innocent cone and shark cartoon and hot weather as a possible common cause",
+    "position": "Before association-lab",
+    "handoutMatched": true,
+    "sourceSlides": 37,
+    "renderedSlides": 43,
+    "readingSections": 36,
+    "labs": 8,
+    "questionWordingUnchanged": true,
+    "shiftedQuestionPositions": [
+      "L04-C08",
+      "L04-C09"
+    ],
+    "workbooksPreserved": 48,
+    "revision": "Replaced the shoe-size example at the user’s request"
+  },
+  "regressionHeightWeightIntroductionRevision": {
+    "date": "2026-11-03",
+    "anchor": "height-weight-data",
+    "renderedSlide": 15,
+    "sourceSlides": 38,
+    "renderedSlides": 44,
+    "readingSections": 37,
+    "labs": 8,
+    "handoutMatched": true,
+    "dataFile": "_shared/regression/data/height-weight-teaching.json",
+    "heightRangeCm": [
+      155.0,
+      195.0
+    ],
+    "irregularHeightValues": true,
+    "slopeKgPerCm": 0.6,
+    "slopeSEKgPerCm": [
+      0.06,
+      0.3
+    ],
+    "tValues": [
+      10,
+      2
+    ],
+    "weightsKg": [
+      [
+        61.30523916160453,
+        91.20933269819916
+      ],
+      [
+        54.52619580802266,
+        108.04666349099578
+      ]
+    ],
+    "numericalChecks": "SciPy OLS slope and SE agree within 1e-12",
+    "sameHeightsAndPlotScales": true,
+    "questionWordingUnchanged": true
+  },
+  "regressionSlopeTestVisualRevision": {
+    "date": "2026-11-03",
+    "anchor": "slope-test-visual",
+    "renderedSlide": 17,
+    "sourceSlides": 39,
+    "renderedSlides": 45,
+    "readingSections": 38,
+    "labs": 8,
+    "repetitions": 500,
+    "casesPerRepetition": 16,
+    "noiseSDKg": 2.8206382256503577,
+    "observedSlopeKgPerCm": 0.5999999999999999,
+    "simulatedSlopeMean": 0.0013452109302933026,
+    "simulatedSlopeSD": 0.060842722343118064,
+    "theoreticalSlopeSD": 0.05999999999999999,
+    "threeSteps": [
+      "Assume flat population mean",
+      "Fit repeated noisy samples at the same heights",
+      "Compare their fitted slopes with the observed +0.60"
+    ],
+    "notAnExactPValueCalculation": true,
+    "handoutMatched": true,
+    "questionWordingUnchanged": true,
+    "shiftedQuestionPositions": [
+      "L04-C07",
+      "L04-C08",
+      "L04-C09",
+      "L04-O02",
+      "L04-O03"
+    ],
+    "workbooksPreserved": 48
+  },
+  "regressionPValueDecisionRevision": {
+    "date": "2026-11-03",
+    "anchor": "tails-lab",
+    "redLabel": "REJECT when p < alpha",
+    "yellowLabel": "DON'T REJECT when p >= alpha",
+    "control": "n, number of observations in each study",
+    "nOptions": [
+      5,
+      12,
+      16,
+      25,
+      90
+    ],
+    "internalReferenceDegreesOfFreedom": "n - 2",
+    "actualDataButtonSetsN": 90,
+    "numericNChecks": "All five options agree with SciPy to displayed precision",
+    "zeroCase": "p=1, yellow DONT REJECT",
+    "handoutRuntimeAndPreviewUpdated": true
+  },
+  "regressionFitInterpretationRevision": {
+    "date": "2026-11-03",
+    "slide": 22,
+    "anchor": "uncertainty-lab",
+    "workedInterpretation": [
+      "t = (fitted slope - 0) / estimated slope SE",
+      "Two-sided p compared with alpha = 0.05",
+      "Plain-language evidence under a zero population slope"
+    ],
+    "formulas": "Native MathML, including scientific notation for small p-values",
+    "decisionColors": "Red REJECT; yellow DONT REJECT",
+    "sampleSettingsUpdateExplanation": true,
+    "verifiedStates": [
+      "Supplied 90 observations",
+      "Simulated null with insufficient evidence",
+      "Simulated null with false positive",
+      "OLS plus mean-only comparison"
+    ],
+    "pValueReferences": "SciPy comparisons passed",
+    "originalDataAndNumericalEngineUnchanged": true,
+    "handoutTextRuntimeAndPosterUpdated": true,
+    "slideBoundsChecked": true
+  },
+  "regressionRemovedPValueQuestion": {
+    "date": "2026-11-03",
+    "question": "L04-C07",
+    "pack": "10_Regression_Part_2",
+    "change": "Excluded the p-value interpretation question from the slide deck",
+    "renderedSlides": 44,
+    "sourceSlidesUnchanged": 39,
+    "otherQuestionsRetained": 5,
+    "handoutUnchanged": true,
+    "implementation": "Existing data-wooclap-exclude presentation setting"
+  },
+  "regressionRemovedConfidenceSlides": {
+    "date": "2026-11-03",
+    "removedPresentationSlides": [
+      23,
+      24
+    ],
+    "removedTopics": [
+      "Confidence interval explanation and lab",
+      "Confidence interval optional question L04-O02"
+    ],
+    "renderedSlides": 42,
+    "remainingQuestions": 4,
+    "questionExclusions": [
+      "L04-C07",
+      "L04-O02"
+    ],
+    "confidenceSlideVisibility": "Reveal native hidden visibility",
+    "handoutUnchanged": true
+  },
+  "regressionIceCreamIntroductionRevision": {
+    "date": "2026-11-03",
+    "anchor": "ice-cream-regression-intro",
+    "renderedSlide": 27,
+    "position": "Before correlation-not-causation",
+    "trainingCases": 80,
+    "testCases": 20,
+    "R2": 0.5300353268014312,
+    "RSE": 0.15249725161829325,
+    "testRMSE": 0.1487342609115937,
+    "slopeT": 9.379228202433982,
+    "twoSidedP": 1.9870167829509554e-14,
+    "sourceModelMatchesRecomputedOLS": true,
+    "screenshotTReplacedWithRecomputedValue": true,
+    "sourceSlides": 40,
+    "renderedSlides": 43,
+    "handoutReadings": 39,
+    "handoutLabs": 8,
+    "questionBankUnchanged": true,
+    "shiftedQuestions": [
+      "L04-C08",
+      "L04-C09"
+    ],
+    "importWorkbooksPreserved": 48,
+    "removedSlidesStillExcluded": true,
+    "slideLayoutOverflow": false,
+    "handoutMatched": true
+  },
+  "regressionSceneAndReferenceRevision": {
+    "date": "2026-11-03",
+    "removedSlide25": "L04-O03, redundant predictor units question",
+    "correlationSlideWas": 28,
+    "correlationSlideNow": 27,
+    "renderedSlides": 42,
+    "sourceSlides": 40,
+    "handoutReadings": 39,
+    "handoutLabs": 8,
+    "scene": "Rebuilt as a beach scene: two round scoops, waffle cone, sun, sea, pointed shark snout, dorsal and pectoral fins, gill slits, forked tail and separate speech bubbles",
+    "resourceLink": "https://www.tylervigen.com/spurious-correlations",
+    "pastCourseAudit": [
+      {
+        "file": "09_Regression_Part_1/index.html",
+        "pastCourseLinks": [],
+        "embeddedLabPastCourseReferences": [],
+        "linksRemoved": 0
+      },
+      {
+        "file": "09_Regression_Part_1/handout.html",
+        "pastCourseLinks": [],
+        "embeddedLabPastCourseReferences": [],
+        "linksRemoved": 0
+      },
+      {
+        "file": "10_Regression_Part_2/index.html",
+        "pastCourseLinks": [],
+        "embeddedLabPastCourseReferences": [],
+        "linksRemoved": 0
+      },
+      {
+        "file": "10_Regression_Part_2/handout.html",
+        "pastCourseLinks": [],
+        "embeddedLabPastCourseReferences": [],
+        "linksRemoved": 0
+      }
+    ],
+    "pastCourseLinksAlreadyAbsent": true,
+    "questionBankUnchanged": true,
+    "renderedSceneChecked": true,
+    "handoutPageOverflow": false
+  },
+  "regressionCoefficientAxesRevision": {
+    "date": "2026-11-03",
+    "slide": 31,
+    "anchor": "adjustment-lab",
+    "coefficientMeaning": "Sales coefficient and ice-cream coefficient name the same ice-cream sales multiplier. Temperature coefficient multiplies temperature. Each gives predicted shark-risk change per input index unit, with other included predictors held fixed.",
+    "consistentMetricLabels": true,
+    "dynamicPerUnitExamples": true,
+    "axisChoices": [
+      "Ice-cream sales",
+      "Temperature",
+      "Shark risk"
+    ],
+    "independentXYSelectors": true,
+    "thirdVariableControlsColor": true,
+    "axesChangeProjectionNotRegression": true,
+    "duplicateAxesAutomaticallyAvoided": true,
+    "conditionalModelSlices": "Hold other included input at its sample mean. Swap the same model curve with swapped axes. Omit outcome line when both axes are inputs.",
+    "projectionMathChecks": {
+      "configurations": 36,
+      "absoluteTolerance": 1e-12,
+      "passed": true
+    },
+    "browserChecks": {
+      "configurations": 36,
+      "allFitOnSlide": true,
+      "coefficientsUnchangedAcrossAxisViews": true,
+      "axisAndColorLabelsMatch": true
+    },
+    "precedingSlide30DefinitionsClarified": true,
+    "handoutNotesRuntimeAndPosterUpdated": true,
+    "numericalRegressionEngineUnchanged": true,
+    "handoutInlineControlsVerified": true,
+    "handoutLargerViewVerified": true
+  },
+  "regressionRestrictedAxesRevision": {
+    "date": "2026-11-03",
+    "slide": "adjustment-lab",
+    "fixedY": "Shark risk",
+    "salesOnlyX": [
+      "Ice-cream sales"
+    ],
+    "adjustedX": [
+      "Ice-cream sales",
+      "Temperature"
+    ],
+    "resetOnModelChange": true,
+    "browserCases": 9,
+    "allCasesHaveModelLine": true,
+    "handoutInstructionsAndPosterUpdated": true,
+    "proof": "C:\\Users\\Nicola\\Documents\\Codex\\2026-10-12\\can\\outputs\\restricted-axes-20261103\\slide31-valid-axes.png"
+  },
+  "regressionLINERevision": {
+    "date": "2026-11-03",
+    "slides": [
+      33,
+      34
+    ],
+    "sourceIds": [
+      "assumptions",
+      "assumptions-errors"
+    ],
+    "split": "L/I followed by N/E",
+    "perAssumption": [
+      "schematic illustration",
+      "definition",
+      "intuition",
+      "why it matters"
+    ],
+    "removedFormerSlide34": "diagnostics-lab",
+    "matchingHandoutUpdated": true,
+    "renderedSlides": 42,
+    "sourceSlides": 40,
+    "readingSections": 39,
+    "labs": 7,
+    "browserLayout": "Both slides checked at 1280x720, no horizontal overflow, content below 652px.",
+    "proof": "outputs/line-two-slides-20261103"
+  },
+  "regressionLINEDefinitionRevision": {
+    "date": "2026-11-03",
+    "slide": 33,
+    "definition": "Memory aid for four assumptions of classical linear regression",
+    "expansion": [
+      "Linearity",
+      "Independence",
+      "Normality",
+      "Equal variance"
+    ],
+    "purpose": "Support classical standard errors and p-values for coefficient uncertainty",
+    "matchingHandoutUpdated": true,
+    "layoutChecked": true
+  },
+  "regressionHandoutCompletenessReview": {
+    "date": "2026-11-03",
+    "scope": "Regression handouts only; slide HTML and shared slide CSS/JS unchanged",
+    "packs": [
+      {
+        "pack": "09_Regression_Part_1",
+        "chapters": 40,
+        "interactiveExamples": 6,
+        "selfChecks": 6,
+        "allSlideFormulasPresent": true,
+        "allActiveTeachingSectionsCovered": true,
+        "selfChecksMatchCurrentBank": true,
+        "noRemovedQuestionsRestored": true,
+        "localLinksAndAssetsChecked": true,
+        "inlineJavaScriptSyntaxPassed": true,
+        "slideHashUnchanged": true
+      },
+      {
+        "pack": "10_Regression_Part_2",
+        "chapters": 39,
+        "interactiveExamples": 7,
+        "selfChecks": 3,
+        "allSlideFormulasPresent": true,
+        "allActiveTeachingSectionsCovered": true,
+        "selfChecksMatchCurrentBank": true,
+        "noRemovedQuestionsRestored": true,
+        "localLinksAndAssetsChecked": true,
+        "inlineJavaScriptSyntaxPassed": true,
+        "slideHashUnchanged": true
+      }
+    ],
+    "fixes": [
+      "Restored all four rows of Part 1 overfitting score table",
+      "Added matching Part 1 chapter roadmap and recap prompts",
+      "Fixed four Part 2 roadmap anchors",
+      "Removed obsolete reference to deleted p-value question",
+      "Updated adjustment explanation for both allowed X-axis views and point colors",
+      "Preserved extra rank and confidence-interval explanations as optional reading",
+      "Added the nine retained slide questions with collapsible worked answers",
+      "Added lab instructions and missing test-count/LINE glossary entries",
+      "Clarified the entire RSE ratio is under the square root"
+    ],
+    "checks": [
+      "Every source slide formula represented",
+      "79 reading sections reviewed",
+      "13 interactive examples load without reported errors",
+      "No broken local figure sources or unresolved handout anchors",
+      "No overflowing math panels, tables or hidden derivation steps at 1280x720",
+      "No links to previous course material",
+      "Slides and shared CSS/JS hashes unchanged"
+    ],
+    "proofFolder": "C:\\Users\\Nicola\\Documents\\Codex\\2026-10-12\\can\\outputs\\handout-audit-20261103"
   }
 }
