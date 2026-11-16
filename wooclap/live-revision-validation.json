@@ -1,12 +1,12 @@
 {
-  "date": "2026-10-17",
-  "bankRevision": "2026-10-17",
-  "revision": "CSP Parts 1 and 2 reasoning revision; earlier verifications retained",
+  "date": "2026-11-05",
+  "bankRevision": "2026-11-14",
+  "revision": "Classification Parts 1 and 2 applied-reasoning revision; earlier unchanged-question verifications retained",
   "questions": 92,
   "core": 68,
   "optional": 24,
-  "method": "Edited eleven existing CSP forms through the browser, saved, reloaded and reopened each; compared DOM title, choices, keys and settings with the bank",
-  "textChoicesAndKeys": "All eleven CSP forms match the bank and rendered question slides after reload",
+  "method": "Edited 12 existing classification forms in the signed-in browser. Inspected each title, choices and correct position in the form; saved and confirmed revised titles in the event list.",
+  "textChoicesAndKeys": "All 12 classification questions match the revised bank; 11 MCQ answer positions and the ungraded open-question type preserved.",
   "votingSettings": "unchanged",
   "questionIds": "All 92 preserved and verified",
   "questionsVerified": {
@@ -995,175 +995,282 @@
       "verified": true,
       "eventCode": "LQMJZRC",
       "src": "https://app.wooclap.com/events/LQMJZRC/questions/6aa8fe9b4c33f3f9df472d89",
-      "title": "L05-C01 · Which task predicts a category rather than a number?",
+      "title": "L05-C01 · Email classes are coded billing = 0, delivery = 1 and technical = 2. A regression predicts 1.4. Which interpretation is best?",
       "choiceCount": 4,
       "correct": [
         2
       ],
-      "settingsUnchanged": true
+      "settingsUnchanged": true,
+      "verifiedOn": "2026-11-05",
+      "choices": [
+        "Round 1.4 to delivery because the codes define numerical distances.",
+        "The codes are arbitrary labels. Estimate class probabilities rather than assuming meaningful distances between codes.",
+        "Technical cases are twice as severe as delivery cases.",
+        "Changing the codes would turn the task into regression."
+      ]
     },
     "L05-C02": {
       "verified": true,
       "eventCode": "LQMJZRC",
       "src": "https://app.wooclap.com/events/LQMJZRC/questions/6aa8fe9b4c33f3f9df472d8e",
-      "title": "L05-C02 · A model says an email has a 70% chance of being spam. Can that email still turn out not to be spam?",
+      "title": "L05-C02 · For 100 comparable cases, the true class-1 probability is 0.7. With equal error costs, what does the optimal Bayes classifier achieve on average?",
       "choiceCount": 4,
       "correct": [
         3
       ],
-      "settingsUnchanged": true
+      "settingsUnchanged": true,
+      "verifiedOn": "2026-11-05",
+      "choices": [
+        "No errors, because the true probabilities are known.",
+        "About 70 errors, because class 1 occurs most often.",
+        "About 30 errors; no rule using the same information has lower expected 0–1 error.",
+        "Fewer errors by always choosing the less frequent class."
+      ]
     },
     "L05-C03": {
       "verified": true,
       "eventCode": "LQMJZRC",
       "src": "https://app.wooclap.com/events/LQMJZRC/questions/6aa8fe9b4c33f3f9df472d93",
-      "title": "L05-C03 · An email contains a word that is more common in spam than in ordinary mail. What can this word provide?",
+      "title": "L05-C03 · Among 1,000 emails, 100 are spam. The word “offer” appears in 60 spam emails and 90 ordinary emails. What is P(spam | “offer”)?",
       "choiceCount": 4,
       "correct": [
         1
       ],
-      "settingsUnchanged": true
+      "settingsUnchanged": true,
+      "verifiedOn": "2026-11-05",
+      "choices": [
+        "60/(60 + 90) = 40%.",
+        "60/100 = 60%.",
+        "100/1,000 = 10%.",
+        "90/(60 + 90) = 60%."
+      ]
     },
     "L05-C04": {
       "verified": true,
       "eventCode": "LQMJZRC",
       "src": "https://app.wooclap.com/events/LQMJZRC/questions/6aa8fe9b4c33f3f9df472d98",
-      "title": "L05-C04 · What simplifying assumption does Naive Bayes make about input features once the class is known?",
+      "title": "L05-C04 · Within class 1, P(A)=0.8 and P(B)=0.5, but P(A and B)=0.5. Naive Bayes would use 0.8 × 0.5 = 0.4. What does this mismatch show?",
       "choiceCount": 4,
       "correct": [
         3
       ],
-      "settingsUnchanged": true
+      "settingsUnchanged": true,
+      "verifiedOn": "2026-11-05",
+      "choices": [
+        "The features must be independent when all classes are pooled.",
+        "The class priors must be equal.",
+        "Conditional independence fails within this class, so multiplying the feature likelihoods misstates their joint evidence.",
+        "Every label predicted by Naive Bayes must be wrong."
+      ]
     },
     "L05-C05": {
       "verified": true,
       "eventCode": "LQMJZRC",
       "src": "https://app.wooclap.com/events/LQMJZRC/questions/6aa8fe9b4c33f3f9df472d9d",
-      "title": "L05-C05 · A spam filter flags emails when their spam score is at least 0.5. If we lower the cutoff to 0.2 and keep all scores fixed, what can happen?",
+      "title": "L05-C05 · A fixed model gives probabilities (0.15, 0.35, 0.60, 0.90) for true labels (0, 1, 0, 1). Lower the positive threshold from 0.50 to 0.30. What changes?",
       "choiceCount": 4,
       "correct": [
         4
       ],
-      "settingsUnchanged": true
+      "settingsUnchanged": true,
+      "verifiedOn": "2026-11-05",
+      "choices": [
+        "The probabilities increase for every observation.",
+        "True positives stay at 1 and false positives fall to 0.",
+        "The model must be retrained before making new decisions.",
+        "True positives rise from 1 to 2, false positives stay at 1, and the probabilities remain unchanged."
+      ]
     },
     "L05-C06": {
       "verified": true,
       "eventCode": "LQMJZRC",
       "src": "https://app.wooclap.com/events/LQMJZRC/questions/6aa8fe9b4c33f3f9df472da2",
-      "title": "L05-C06 · The correct label for a training photo is “cat”. Which prediction gives the correct label more probability?",
+      "title": "L05-C06 · Two labels are (1, 0). Model A predicts class-1 probabilities (0.9, 0.9); model B predicts (0.6, 0.4). Assuming independent outcomes, which has greater likelihood for the observed labels?",
       "choiceCount": 4,
       "correct": [
         2
       ],
-      "settingsUnchanged": true
+      "settingsUnchanged": true,
+      "verifiedOn": "2026-11-05",
+      "choices": [
+        "A, because its two probabilities are larger.",
+        "B: its likelihood is 0.36, four times A’s likelihood of 0.09.",
+        "They tie because each predicts one positive probability above 0.5.",
+        "A: its likelihood is 0.81, versus 0.24 for B."
+      ]
     },
     "L05-C07": {
       "verified": true,
       "eventCode": "LQMJZRC",
       "src": "https://app.wooclap.com/events/LQMJZRC/questions/6aa8fe9b4c33f3f9df472da7",
-      "title": "L05-C07 · A new point’s three nearest labeled neighbors are two cats and one dog. What does a simple majority vote predict?",
+      "title": "L05-C07 · The 3 nearest neighbors have (class, distance): (0, 0.1), (1, 0.5), (1, 0.6). What do uniform and inverse-distance voting predict?",
       "choiceCount": 4,
       "correct": [
         4
       ],
-      "settingsUnchanged": true
+      "settingsUnchanged": true,
+      "verifiedOn": "2026-11-05",
+      "choices": [
+        "Both predict 1 because two of the three labels are 1.",
+        "Both predict 0 because the closest point has label 0.",
+        "Uniform predicts 0, while inverse-distance predicts 1.",
+        "Uniform predicts 1, while inverse-distance predicts 0 because weight 10 exceeds 2 + 1/0.6."
+      ]
     },
     "L05-C08": {
       "verified": true,
       "eventCode": "LQMJZRC",
       "src": "https://app.wooclap.com/events/LQMJZRC/questions/6aa8fe9b4c33f3f9df472dac",
-      "title": "L05-C08 · You are choosing among several classifiers. Which data should you use to compare choices while keeping a final test fair?",
+      "title": "L05-C08 · K=1 gives 100% training and 60% validation accuracy. K=9 gives 85% training and 80% validation accuracy. Which next step best estimates generalization after selecting K?",
       "choiceCount": 4,
       "correct": [
         3
       ],
-      "settingsUnchanged": true
+      "settingsUnchanged": true,
+      "verifiedOn": "2026-11-05",
+      "choices": [
+        "Choose K=1 because training accuracy is perfect.",
+        "Try many K values on the test set and report the best test result.",
+        "Choose K=9 using validation, fix the procedure, then assess it on the untouched test set.",
+        "Average training and validation accuracy and skip the test set."
+      ]
     },
     "L05-C09": {
       "verified": true,
       "eventCode": "LQMJZRC",
       "src": "https://app.wooclap.com/events/LQMJZRC/questions/6aa8fe9b4c33f3f9df472db1",
-      "title": "L05-C09 · A spam filter wrongly blocks an important email. In one sentence, explain why counting only its correct predictions might miss something important.",
+      "title": "L05-C09 · A message classifier predicts “ordinary” for all 100 messages: 98 ordinary and 2 urgent. It reports 98% accuracy. Explain what this hides, how you would choose K or a decision threshold, and which observations should provide the final assessment.",
       "choiceCount": 0,
       "correct": [],
-      "settingsUnchanged": true
+      "settingsUnchanged": true,
+      "verifiedOn": "2026-11-05",
+      "choices": []
     },
     "L05-O01": {
       "verified": true,
       "eventCode": "LQMJZRC",
       "src": "https://app.wooclap.com/events/LQMJZRC/questions/6aa9017cd2f1e8b522d9c1c6",
-      "title": "L05-O01 · In a screening task, missing a real problem is much more costly than a false alarm. What tradeoff might we accept?",
+      "title": "L05-O01 · P(class 1 | x)=0.30. A false positive costs 1 and a false negative costs 4; correct decisions cost 0. Which decision minimizes expected loss?",
       "choiceCount": 4,
       "correct": [
         4
       ],
-      "settingsUnchanged": true
+      "settingsUnchanged": true,
+      "verifiedOn": "2026-11-05",
+      "choices": [
+        "Predict 0 because 0.30 is below 0.50.",
+        "Predict 0 because its expected loss is 0.30.",
+        "Both decisions have the same expected loss.",
+        "Predict 1: its expected loss is 0.70, versus 1.20 for predicting 0."
+      ]
     },
     "L05-O02": {
       "verified": true,
       "eventCode": "LQMJZRC",
       "src": "https://app.wooclap.com/events/LQMJZRC/questions/6aa9017cd2f1e8b522d9c1cb",
-      "title": "L05-O02 · Why might Naive Bayes use smoothing for a word that never appeared in one class’s training examples?",
+      "title": "L05-O02 · A categorical feature has 3 possible values. In a class with 5 training cases, one value is never observed. With additive smoothing α=1, what probability is assigned to that value?",
       "choiceCount": 4,
       "correct": [
         1
       ],
-      "settingsUnchanged": true
+      "settingsUnchanged": true,
+      "verifiedOn": "2026-11-05",
+      "choices": [
+        "(0 + 1)/(5 + 3) = 1/8.",
+        "(0 + 1)/(5 + 1) = 1/6.",
+        "0/5 = 0.",
+        "1/3, regardless of the other observed counts."
+      ]
     },
     "L05-O03": {
       "verified": true,
       "eventCode": "LQMJZRC",
       "src": "https://app.wooclap.com/events/LQMJZRC/questions/6aa9017cd2f1e8b522d9c1d0",
-      "title": "L05-O03 · A nearest-neighbor regressor averages two nearby examples with values 2 and 6. What does it predict?",
+      "title": "L05-O03 · A KNN regressor selects targets 2, 6 and 10 with weights 2, 1 and 1. What prediction does the weighted-neighbor mean return?",
       "choiceCount": 4,
       "correct": [
         4
       ],
-      "settingsUnchanged": true
+      "settingsUnchanged": true,
+      "verifiedOn": "2026-11-05",
+      "choices": [
+        "6, because KNN always takes the ordinary mean.",
+        "20, because weights multiply the targets.",
+        "4, because only the largest weight matters.",
+        "(2×2 + 1×6 + 1×10)/(2 + 1 + 1) = 5."
+      ]
     },
     "L06-C01": {
       "verified": true,
       "eventCode": "LQCRNNR",
       "src": "https://app.wooclap.com/events/LQCRNNR/questions/6aa8fec9f68598b6f23c1f90",
-      "title": "L06-C01 · An alarm should activate only when BOTH switches are on. Which input should activate it?",
+      "title": "L06-C01 · A neuron adds two binary inputs and predicts 1 when their sum is at least b. It starts with b = 1.9 and then switches to b = 1. Which predictions change?",
       "choiceCount": 4,
       "correct": [
-        1
+        3
       ],
-      "settingsUnchanged": true
+      "settingsUnchanged": true,
+      "choices": [
+        "Only (1, 1) changes from 1 to 0.",
+        "Only (0, 0) changes from 0 to 1.",
+        "Both (0, 1) and (1, 0) change from 0 to 1.",
+        "(0, 1), (1, 0), and (1, 1) all change from 0 to 1."
+      ],
+      "verifiedOn": "2026-11-14"
     },
     "L06-C02": {
       "verified": true,
       "eventCode": "LQCRNNR",
       "src": "https://app.wooclap.com/events/LQCRNNR/questions/6aa8fec9f68598b6f23c1f95",
-      "title": "L06-C02 · A perceptron predicts the wrong class for a training example. What is the purpose of its weight update?",
+      "title": "L06-C02 · A perceptron sees an example with features (2, −1) and true label 1. Its score is −7, so it predicts 0. The bias uses a constant input of 1. After one standard update with learning rate 1, what are the new score and prediction for that same example?",
       "choiceCount": 4,
       "correct": [
-        1
+        4
       ],
-      "settingsUnchanged": true
+      "settingsUnchanged": true,
+      "choices": [
+        "Score −2, prediction 0.",
+        "Score +1, prediction 1.",
+        "Score −13, prediction 0.",
+        "Score −1, prediction 0."
+      ],
+      "verifiedOn": "2026-11-14"
     },
     "L06-C03": {
       "verified": true,
       "eventCode": "LQCRNNR",
       "src": "https://app.wooclap.com/events/LQCRNNR/questions/6aa8fec9f68598b6f23c1f9a",
-      "title": "L06-C03 · A classifier gets one training example right. Is that enough to know it gets every training example right?",
+      "title": "L06-C03 · Two perceptron runs each make one full pass through the same four examples. Run A gets the first three right, then makes an update on the last. Run B gets all four right and makes no updates. What can you conclude about the final weights?",
       "choiceCount": 4,
       "correct": [
-        2
+        1
       ],
-      "settingsUnchanged": true
+      "settingsUnchanged": true,
+      "choices": [
+        "Run B's final weights classify all four correctly. Run A's final weights need a fresh check.",
+        "Run B's final weights classify all four correctly. Run A's final weights must still misclassify the last point.",
+        "Run A's final weights classify the first three correctly. Run B's final weights classify all four correctly.",
+        "Run A's final weights classify all four correctly. Run B needs another pass to establish that."
+      ],
+      "verifiedOn": "2026-11-14"
     },
     "L06-C04": {
       "verified": true,
       "eventCode": "LQCRNNR",
       "src": "https://app.wooclap.com/events/LQCRNNR/questions/6aa8fec9f68598b6f23c1f9f",
-      "title": "L06-C04 · Two classes are arranged so that no straight line can separate them. What kind of change could help?",
+      "title": "L06-C04 · For XOR, only (1, 0) and (0, 1) should have label 1. A perceptron uses score s = w₀ + w₁x₁ + w₂x₂ and predicts 1 when s ≥ 0. Assume it predicts the labels of (0, 0), (1, 0), and (0, 1) correctly. What must happen at (1, 1)?",
       "choiceCount": 4,
       "correct": [
         2
       ],
-      "settingsUnchanged": true
+      "settingsUnchanged": true,
+      "choices": [
+        "Its score must be negative because the score at (0, 0) is negative.",
+        "Its score must be positive because w₁ ≥ −w₀, w₂ ≥ −w₀, and w₀ < 0.",
+        "Its score must be zero because each of the single-switch cases reaches exactly zero.",
+        "Its score can be negative or positive depending on how long the perceptron trains."
+      ],
+      "verifiedOn": "2026-11-14"
     },
     "L06-C05": {
       "verified": true,
@@ -1625,5 +1732,16 @@
       }
     ],
     "method": "Edited the 12 existing forms in the authenticated browser, saved, reloaded the event, reopened every form and matched title, choices and unchanged correct-answer positions. The open response remains ungraded. Voting settings were left unchanged."
+  },
+  "classificationPart3Revision": {
+    "date": "2026-11-14",
+    "eventCode": "LQCRNNR",
+    "questionIds": [
+      "L06-C01",
+      "L06-C02",
+      "L06-C03",
+      "L06-C04"
+    ],
+    "method": "Edited the existing four questions and reopened every form after reloading the event. Verified titles, choices, single correct answers and unchanged voting switches."
   }
 }

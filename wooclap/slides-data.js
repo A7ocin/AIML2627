@@ -980,15 +980,15 @@ window.AIML_WOOCLAP = {
           "core": true,
           "type": "MCQ",
           "slide": "classification",
-          "when": "before",
-          "purpose": "Opening / everyday intuition",
-          "stem": "Which task predicts a category rather than a number?",
-          "seconds": 60,
+          "when": "after",
+          "purpose": "Apply the concept to a concrete case",
+          "stem": "Email classes are coded billing = 0, delivery = 1 and technical = 2. A regression predicts 1.4. Which interpretation is best?",
+          "seconds": 120,
           "choices": [
-            "Predicting a house price.",
-            "Deciding whether an email is spam or not spam.",
-            "Predicting tomorrow’s temperature.",
-            "Predicting the duration of a journey."
+            "Round 1.4 to delivery because the codes define numerical distances.",
+            "The codes are arbitrary labels. Estimate class probabilities rather than assuming meaningful distances between codes.",
+            "Technical cases are twice as severe as delivery cases.",
+            "Changing the codes would turn the task into regression."
           ],
           "src": "https://app.wooclap.com/events/LQMJZRC/questions/6aa8fe9b4c33f3f9df472d89"
         },
@@ -998,14 +998,14 @@ window.AIML_WOOCLAP = {
           "type": "MCQ",
           "slide": "bayes-error",
           "when": "before",
-          "purpose": "Prediction / intuition",
-          "stem": "A model says an email has a 70% chance of being spam. Can that email still turn out not to be spam?",
-          "seconds": 60,
+          "purpose": "Apply the concept to a concrete case",
+          "stem": "For 100 comparable cases, the true class-1 probability is 0.7. With equal error costs, what does the optimal Bayes classifier achieve on average?",
+          "seconds": 120,
           "choices": [
-            "No. Anything above 50% is certain.",
-            "No. A model’s most likely answer is always correct.",
-            "Yes. A probability below 100% leaves room for another outcome.",
-            "Yes, but only if 70% is less than 50%."
+            "No errors, because the true probabilities are known.",
+            "About 70 errors, because class 1 occurs most often.",
+            "About 30 errors; no rule using the same information has lower expected 0–1 error.",
+            "Fewer errors by always choosing the less frequent class."
           ],
           "src": "https://app.wooclap.com/events/LQMJZRC/questions/6aa8fe9b4c33f3f9df472d8e"
         },
@@ -1013,16 +1013,16 @@ window.AIML_WOOCLAP = {
           "id": "L05-C03",
           "core": true,
           "type": "MCQ",
-          "slide": "bayes-theorem",
+          "slide": "bayes-example",
           "when": "after",
-          "purpose": "Check / core understanding",
-          "stem": "An email contains a word that is more common in spam than in ordinary mail. What can this word provide?",
-          "seconds": 90,
+          "purpose": "Apply the concept to a concrete case",
+          "stem": "Among 1,000 emails, 100 are spam. The word “offer” appears in 60 spam emails and 90 ordinary emails. What is P(spam | “offer”)?",
+          "seconds": 120,
           "choices": [
-            "Evidence that can increase the estimated chance of spam.",
-            "Proof that the email is certainly spam.",
-            "Proof that the email is certainly ordinary mail.",
-            "A reason to ignore every other piece of information."
+            "60/(60 + 90) = 40%.",
+            "60/100 = 60%.",
+            "100/1,000 = 10%.",
+            "90/(60 + 90) = 60%."
           ],
           "src": "https://app.wooclap.com/events/LQMJZRC/questions/6aa8fe9b4c33f3f9df472d93"
         },
@@ -1032,14 +1032,14 @@ window.AIML_WOOCLAP = {
           "type": "MCQ",
           "slide": "independence",
           "when": "after",
-          "purpose": "Check / core understanding",
-          "stem": "What simplifying assumption does Naive Bayes make about input features once the class is known?",
-          "seconds": 90,
+          "purpose": "Apply the concept to a concrete case",
+          "stem": "Within class 1, P(A)=0.8 and P(B)=0.5, but P(A and B)=0.5. Naive Bayes would use 0.8 × 0.5 = 0.4. What does this mismatch show?",
+          "seconds": 120,
           "choices": [
-            "It assumes every feature has exactly the same value.",
-            "It assumes features contain no information about the class.",
-            "It treats the features as independent within that class.",
-            "It assumes every possible class is always equally common."
+            "The features must be independent when all classes are pooled.",
+            "The class priors must be equal.",
+            "Conditional independence fails within this class, so multiplying the feature likelihoods misstates their joint evidence.",
+            "Every label predicted by Naive Bayes must be wrong."
           ],
           "src": "https://app.wooclap.com/events/LQMJZRC/questions/6aa8fe9b4c33f3f9df472d98"
         },
@@ -1049,14 +1049,14 @@ window.AIML_WOOCLAP = {
           "type": "MCQ",
           "slide": "logistic-lab",
           "when": "before",
-          "purpose": "Prediction / intuition",
-          "stem": "A spam filter flags emails when their spam score is at least 0.5. If we lower the cutoff to 0.2 and keep all scores fixed, what can happen?",
-          "seconds": 90,
+          "purpose": "Apply the concept to a concrete case",
+          "stem": "A fixed model gives probabilities (0.15, 0.35, 0.60, 0.90) for true labels (0, 1, 0, 1). Lower the positive threshold from 0.50 to 0.30. What changes?",
+          "seconds": 120,
           "choices": [
-            "Fewer emails must be flagged as spam.",
-            "Every email’s score is automatically recalculated.",
-            "The cutoff can never affect a decision.",
-            "More emails may be flagged as spam."
+            "The probabilities increase for every observation.",
+            "True positives stay at 1 and false positives fall to 0.",
+            "The model must be retrained before making new decisions.",
+            "True positives rise from 1 to 2, false positives stay at 1, and the probabilities remain unchanged."
           ],
           "src": "https://app.wooclap.com/events/LQMJZRC/questions/6aa8fe9b4c33f3f9df472d9d"
         },
@@ -1064,16 +1064,16 @@ window.AIML_WOOCLAP = {
           "id": "L05-O01",
           "core": false,
           "type": "MCQ",
-          "slide": "decision-lab",
+          "slide": "bayes-rule",
           "when": "after",
-          "purpose": "Optional / basic extension",
-          "stem": "In a screening task, missing a real problem is much more costly than a false alarm. What tradeoff might we accept?",
-          "seconds": 90,
+          "purpose": "Apply the concept to a concrete case",
+          "stem": "P(class 1 | x)=0.30. A false positive costs 1 and a false negative costs 4; correct decisions cost 0. Which decision minimizes expected loss?",
+          "seconds": 120,
           "choices": [
-            "More missed problems just to avoid every false alarm.",
-            "A guarantee of making neither kind of mistake.",
-            "Ignoring the different costs of the two errors.",
-            "More false alarms in order to miss fewer real problems."
+            "Predict 0 because 0.30 is below 0.50.",
+            "Predict 0 because its expected loss is 0.30.",
+            "Both decisions have the same expected loss.",
+            "Predict 1: its expected loss is 0.70, versus 1.20 for predicting 0."
           ],
           "src": "https://app.wooclap.com/events/LQMJZRC/questions/6aa9017cd2f1e8b522d9c1c6"
         },
@@ -1081,18 +1081,35 @@ window.AIML_WOOCLAP = {
           "id": "L05-O02",
           "core": false,
           "type": "MCQ",
-          "slide": "smoothing",
+          "slide": "feature-distributions",
           "when": "after",
-          "purpose": "Optional / basic extension",
-          "stem": "Why might Naive Bayes use smoothing for a word that never appeared in one class’s training examples?",
-          "seconds": 90,
+          "purpose": "Apply the concept to a concrete case",
+          "stem": "A categorical feature has 3 possible values. In a class with 5 training cases, one value is never observed. With additive smoothing α=1, what probability is assigned to that value?",
+          "seconds": 120,
           "choices": [
-            "To avoid treating that unseen word as completely impossible in the class.",
-            "To guarantee that all future messages are classified correctly.",
-            "To delete all the other words from the model.",
-            "To avoid needing any labeled training messages."
+            "(0 + 1)/(5 + 3) = 1/8.",
+            "(0 + 1)/(5 + 1) = 1/6.",
+            "0/5 = 0.",
+            "1/3, regardless of the other observed counts."
           ],
           "src": "https://app.wooclap.com/events/LQMJZRC/questions/6aa9017cd2f1e8b522d9c1cb"
+        },
+        {
+          "id": "L05-C06",
+          "core": true,
+          "type": "MCQ",
+          "slide": "likelihood-intuition",
+          "when": "before",
+          "purpose": "Apply the concept to a concrete case",
+          "stem": "Two labels are (1, 0). Model A predicts class-1 probabilities (0.9, 0.9); model B predicts (0.6, 0.4). Assuming independent outcomes, which has greater likelihood for the observed labels?",
+          "seconds": 120,
+          "choices": [
+            "A, because its two probabilities are larger.",
+            "B: its likelihood is 0.36, four times A’s likelihood of 0.09.",
+            "They tie because each predicts one positive probability above 0.5.",
+            "A: its likelihood is 0.81, versus 0.24 for B."
+          ],
+          "src": "https://app.wooclap.com/events/LQMJZRC/questions/6aa8fe9b4c33f3f9df472da2"
         }
       ]
     },
@@ -1101,36 +1118,19 @@ window.AIML_WOOCLAP = {
       "eventCode": "LQMJZRC",
       "questions": [
         {
-          "id": "L05-C06",
-          "core": true,
-          "type": "MCQ",
-          "slide": "log-loss",
-          "when": "before",
-          "purpose": "Prediction / intuition",
-          "stem": "The correct label for a training photo is “cat”. Which prediction gives the correct label more probability?",
-          "seconds": 60,
-          "choices": [
-            "Cat: 10%; dog: 90%.",
-            "Cat: 90%; dog: 10%.",
-            "Cat: 30%; dog: 70%.",
-            "Cat: 50%; dog: 50%."
-          ],
-          "src": "https://app.wooclap.com/events/LQMJZRC/questions/6aa8fe9b4c33f3f9df472da2"
-        },
-        {
           "id": "L05-C07",
           "core": true,
           "type": "MCQ",
           "slide": "neighbors-lab",
           "when": "before",
-          "purpose": "Prediction / intuition",
-          "stem": "A new point’s three nearest labeled neighbors are two cats and one dog. What does a simple majority vote predict?",
-          "seconds": 60,
+          "purpose": "Apply the concept to a concrete case",
+          "stem": "The 3 nearest neighbors have (class, distance): (0, 0.1), (1, 0.5), (1, 0.6). What do uniform and inverse-distance voting predict?",
+          "seconds": 120,
           "choices": [
-            "Dog.",
-            "A new third category.",
-            "There is a tie.",
-            "Cat."
+            "Both predict 1 because two of the three labels are 1.",
+            "Both predict 0 because the closest point has label 0.",
+            "Uniform predicts 0, while inverse-distance predicts 1.",
+            "Uniform predicts 1, while inverse-distance predicts 0 because weight 10 exceeds 2 + 1/0.6."
           ],
           "src": "https://app.wooclap.com/events/LQMJZRC/questions/6aa8fe9b4c33f3f9df472da7"
         },
@@ -1140,14 +1140,14 @@ window.AIML_WOOCLAP = {
           "type": "MCQ",
           "slide": "validation-lab",
           "when": "before",
-          "purpose": "Prediction / intuition",
-          "stem": "You are choosing among several classifiers. Which data should you use to compare choices while keeping a final test fair?",
-          "seconds": 90,
+          "purpose": "Apply the concept to a concrete case",
+          "stem": "K=1 gives 100% training and 60% validation accuracy. K=9 gives 85% training and 80% validation accuracy. Which next step best estimates generalization after selecting K?",
+          "seconds": 120,
           "choices": [
-            "The final test set after every change, keeping only the best score.",
-            "Only the examples each model trained on.",
-            "A validation set, leaving the final test set unused until the choice is made.",
-            "The final test answers as extra training features."
+            "Choose K=1 because training accuracy is perfect.",
+            "Try many K values on the test set and report the best test result.",
+            "Choose K=9 using validation, fix the procedure, then assess it on the untouched test set.",
+            "Average training and validation accuracy and skip the test set."
           ],
           "src": "https://app.wooclap.com/events/LQMJZRC/questions/6aa8fe9b4c33f3f9df472dac"
         },
@@ -1157,9 +1157,9 @@ window.AIML_WOOCLAP = {
           "type": "OpenQuestion",
           "slide": "summary",
           "when": "after",
-          "purpose": "Exit / one takeaway",
-          "stem": "A spam filter wrongly blocks an important email. In one sentence, explain why counting only its correct predictions might miss something important.",
-          "seconds": 120,
+          "purpose": "Connect class imbalance, decisions and validation",
+          "stem": "A message classifier predicts “ordinary” for all 100 messages: 98 ordinary and 2 urgent. It reports 98% accuracy. Explain what this hides, how you would choose K or a decision threshold, and which observations should provide the final assessment.",
+          "seconds": 180,
           "choices": [],
           "src": "https://app.wooclap.com/events/LQMJZRC/questions/6aa8fe9b4c33f3f9df472db1"
         },
@@ -1169,14 +1169,14 @@ window.AIML_WOOCLAP = {
           "type": "MCQ",
           "slide": "regression-lab",
           "when": "after",
-          "purpose": "Optional / basic extension",
-          "stem": "A nearest-neighbor regressor averages two nearby examples with values 2 and 6. What does it predict?",
-          "seconds": 60,
+          "purpose": "Apply the concept to a concrete case",
+          "stem": "A KNN regressor selects targets 2, 6 and 10 with weights 2, 1 and 1. What prediction does the weighted-neighbor mean return?",
+          "seconds": 120,
           "choices": [
-            "2.",
-            "6.",
-            "8.",
-            "4."
+            "6, because KNN always takes the ordinary mean.",
+            "20, because weights multiply the targets.",
+            "4, because only the largest weight matters.",
+            "(2×2 + 1×6 + 1×10)/(2 + 1 + 1) = 5."
           ],
           "src": "https://app.wooclap.com/events/LQMJZRC/questions/6aa9017cd2f1e8b522d9c1d0"
         }
@@ -1192,14 +1192,14 @@ window.AIML_WOOCLAP = {
           "type": "MCQ",
           "slide": "threshold-lab",
           "when": "before",
-          "purpose": "Opening / everyday intuition",
-          "stem": "An alarm should activate only when BOTH switches are on. Which input should activate it?",
-          "seconds": 60,
+          "purpose": "Prediction / threshold transfer",
+          "stem": "A neuron adds two binary inputs and predicts 1 when their sum is at least b. It starts with b = 1.9 and then switches to b = 1. Which predictions change?",
+          "seconds": 90,
           "choices": [
-            "Switch 1 on and switch 2 on.",
-            "Switch 1 on and switch 2 off.",
-            "Switch 1 off and switch 2 on.",
-            "Both switches off."
+            "Only (1, 1) changes from 1 to 0.",
+            "Only (0, 0) changes from 0 to 1.",
+            "Both (0, 1) and (1, 0) change from 0 to 1.",
+            "(0, 1), (1, 0), and (1, 1) all change from 0 to 1."
           ],
           "src": "https://app.wooclap.com/events/LQCRNNR/questions/6aa8fec9f68598b6f23c1f90"
         },
@@ -1209,14 +1209,14 @@ window.AIML_WOOCLAP = {
           "type": "MCQ",
           "slide": "update-intuition",
           "when": "after",
-          "purpose": "Check / core understanding",
-          "stem": "A perceptron predicts the wrong class for a training example. What is the purpose of its weight update?",
-          "seconds": 90,
+          "purpose": "Check / trace a perceptron update",
+          "stem": "A perceptron sees an example with features (2, −1) and true label 1. Its score is −7, so it predicts 0. The bias uses a constant input of 1. After one standard update with learning rate 1, what are the new score and prediction for that same example?",
+          "seconds": 120,
           "choices": [
-            "To move its decision rule toward giving this example the correct label.",
-            "To make its prediction on this example even less correct on purpose.",
-            "To remove every other training example.",
-            "To prove it will now classify every possible example correctly."
+            "Score −2, prediction 0.",
+            "Score +1, prediction 1.",
+            "Score −13, prediction 0.",
+            "Score −1, prediction 0."
           ],
           "src": "https://app.wooclap.com/events/LQCRNNR/questions/6aa8fec9f68598b6f23c1f95"
         },
@@ -1226,14 +1226,14 @@ window.AIML_WOOCLAP = {
           "type": "MCQ",
           "slide": "training-lab",
           "when": "before",
-          "purpose": "Prediction / intuition",
-          "stem": "A classifier gets one training example right. Is that enough to know it gets every training example right?",
-          "seconds": 60,
+          "purpose": "Prediction / interpret two training passes",
+          "stem": "Two perceptron runs each make one full pass through the same four examples. Run A gets the first three right, then makes an update on the last. Run B gets all four right and makes no updates. What can you conclude about the final weights?",
+          "seconds": 90,
           "choices": [
-            "Yes. One correct example proves the whole dataset is correct.",
-            "No. The other examples must also be checked.",
-            "Yes, if that example was shown first.",
-            "No, because no classifier can ever get more than one example right."
+            "Run B's final weights classify all four correctly. Run A's final weights need a fresh check.",
+            "Run B's final weights classify all four correctly. Run A's final weights must still misclassify the last point.",
+            "Run A's final weights classify the first three correctly. Run B's final weights classify all four correctly.",
+            "Run A's final weights classify all four correctly. Run B needs another pass to establish that."
           ],
           "src": "https://app.wooclap.com/events/LQCRNNR/questions/6aa8fec9f68598b6f23c1f9a"
         },
@@ -1243,17 +1243,23 @@ window.AIML_WOOCLAP = {
           "type": "MCQ",
           "slide": "xor-lab",
           "when": "before",
-          "purpose": "Prediction / intuition",
-          "stem": "Two classes are arranged so that no straight line can separate them. What kind of change could help?",
-          "seconds": 90,
+          "purpose": "Prediction / reason about linear separability",
+          "stem": "For XOR, only (1, 0) and (0, 1) should have label 1. A perceptron uses score s = w₀ + w₁x₁ + w₂x₂ and predicts 1 when s ≥ 0. Assume it predicts the labels of (0, 0), (1, 0), and (0, 1) correctly. What must happen at (1, 1)?",
+          "seconds": 120,
           "choices": [
-            "Draw the same straight line in a different color.",
-            "Use a model that can make a curved or more complex boundary.",
-            "Repeat the same straight-line attempt and assume geometry will change.",
-            "Rename the two classes without moving any points."
+            "Its score must be negative because the score at (0, 0) is negative.",
+            "Its score must be positive because w₁ ≥ −w₀, w₂ ≥ −w₀, and w₀ < 0.",
+            "Its score must be zero because each of the single-switch cases reaches exactly zero.",
+            "Its score can be negative or positive depending on how long the perceptron trains."
           ],
           "src": "https://app.wooclap.com/events/LQCRNNR/questions/6aa8fec9f68598b6f23c1f9f"
-        },
+        }
+      ]
+    },
+    {
+      "pack": "14_Classification_Part_4",
+      "eventCode": "LQCRNNR",
+      "questions": [
         {
           "id": "L06-C05",
           "core": true,
@@ -1288,29 +1294,6 @@ window.AIML_WOOCLAP = {
           ],
           "src": "https://app.wooclap.com/events/LQCRNNR/questions/6aa8fec9f68598b6f23c1fa9"
         },
-        {
-          "id": "L06-O01",
-          "core": false,
-          "type": "MCQ",
-          "slide": "hinge",
-          "when": "after",
-          "purpose": "Optional / basic extension",
-          "stem": "For an SVM, can a correctly classified point still lie too close to the boundary to satisfy the desired margin?",
-          "seconds": 90,
-          "choices": [
-            "Yes. A point can be on the correct side but still inside the margin.",
-            "No. Every correct prediction must be far from the boundary.",
-            "No. Only misclassified points have a distance to the boundary.",
-            "Yes, but only when the model has no features."
-          ],
-          "src": "https://app.wooclap.com/events/LQCRNNR/questions/6aa90189f68598b6f241330a"
-        }
-      ]
-    },
-    {
-      "pack": "14_Classification_Part_4",
-      "eventCode": "LQCRNNR",
-      "questions": [
         {
           "id": "L06-C07",
           "core": true,
@@ -1356,6 +1339,23 @@ window.AIML_WOOCLAP = {
           "seconds": 120,
           "choices": [],
           "src": "https://app.wooclap.com/events/LQCRNNR/questions/6aa8fec9f68598b6f23c1fb8"
+        },
+        {
+          "id": "L06-O01",
+          "core": false,
+          "type": "MCQ",
+          "slide": "hinge",
+          "when": "after",
+          "purpose": "Optional / basic extension",
+          "stem": "For an SVM, can a correctly classified point still lie too close to the boundary to satisfy the desired margin?",
+          "seconds": 90,
+          "choices": [
+            "Yes. A point can be on the correct side but still inside the margin.",
+            "No. Every correct prediction must be far from the boundary.",
+            "No. Only misclassified points have a distance to the boundary.",
+            "Yes, but only when the model has no features."
+          ],
+          "src": "https://app.wooclap.com/events/LQCRNNR/questions/6aa90189f68598b6f241330a"
         },
         {
           "id": "L06-O02",

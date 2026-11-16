@@ -6,9 +6,9 @@ function line(w,b,bounds,name,color,dash='solid'){const a=E.clippedLine(w,b,boun
 class Widget{
  constructor(el){this.el=el;this.kind=el.dataset.kind;this.ready=Promise.resolve();this.plane=true;this.cursor=0;let controls='',foot='',hint='Hover to inspect · drag to zoom';
  if(this.kind==='source'||this.kind==='source3d'){this.raw=COURSE_DATA[el.dataset.source];this.traces=this.raw.data.filter(t=>t.name.startsWith('Class '));controls=select('set','Inspect',this.traces.map(t=>t.name),this.traces[0].name)+select('point','Point',this.traces[0].x.map((_,i)=>String(i+1)),'1');foot='Original source chart · all numerical coordinates retained';if(this.kind==='source3d'){controls+=button('plane','Hide plane');hint='Drag to orbit · scroll to zoom';}}
- if(this.kind==='threshold'){controls=select('task','Target',['AND','OR'],'AND')+range('theta','Threshold θ',-.5,2.5,.1,1.9);foot='Four original binary inputs · fixed weights (1,1)';hint='Predict 1 at the threshold';}
- if(this.kind==='training'){controls=select('dataset','Data',['AND','Noisy AND','XOR'],'AND')+select('eta','η',['0.25','1','4'],'1')+select('order','Order',['Source','Reverse'],'Source')+button('step','Step')+button('epoch','Epoch')+button('play','Play','primary')+button('reset','Reset');foot='Original course points · zero initialization · 25-epoch budget';hint='A quiet full epoch certifies convergence';}
- if(this.kind==='margin'){controls=range('angle','Normal angle',-60,80,1,17)+range('offset','Offset d',-1.5,1.5,.05,-.4)+button('fit','Fit max-margin','primary');foot='Original ten-point dataset · distances use a unit normal';hint='The width is valid only for positive clearance';}
+ if(this.kind==='threshold'){controls=select('task','Target',['AND','OR'],'AND')+range('theta','Threshold b',-.5,2.5,.1,1.9);foot='Shading shows the predicted class. Markers show the target class.';hint='The line itself predicts class 1.';}
+ if(this.kind==='training'){controls=select('dataset','Data',['AND','Noisy AND','XOR'],'AND')+select('eta','η',['0.25','1','4'],'1')+select('order','Example order',['Source','Reverse'],'Source')+button('back','Back')+button('step','Next example','primary')+button('epoch','Finish pass')+button('play','Play')+button('reset','Reset');foot='One pass checks every example once. Finish pass shows its final example.';hint='A full pass with no mistakes confirms convergence.';}
+ if(this.kind==='margin'){controls=range('angle','Normal angle',-60,80,1,17)+range('offset','Offset w₀',-1.5,1.5,.05,-.4)+button('fit','Fit max-margin','primary');foot='Original ten-point dataset · distances use a unit normal';hint='The width is valid only for positive clearance';}
  if(this.kind==='kernel'){controls=range('a1','x₁',-2,2,.25,1)+range('a2','x₂',-2,2,.25,2)+range('b1','z₁',-2,2,.25,2)+range('b2','z₂',-2,2,.25,-1);foot='Homogeneous quadratic map · ψ(x) = (x₁², √2x₁x₂, x₂²)';hint='Compute in feature space or use the kernel';}
  if(this.kind==='svm'){controls=select('kernel','Kernel',['Linear','Quadratic','RBF'],'RBF')+select('C','C',['0.1','1','100'],'1')+select('gamma','RBF γ',['0.1','1','10'],'1');foot='All 300 original points · fitted models evaluated locally';hint='Training accuracy is not a validation result';}
  controls+=`<span class="end">${button('zoom',this.kind==='source3d'?'Orbit':'Zoom')}${button('pan','Pan')}${button('view',this.kind==='source3d'?'Reset camera':'Reset view')}</span>`;
@@ -21,8 +21,9 @@ class Widget{
  action(a){if(a==='view'&&this.kind!=='source3d'){this.ready=this.ready.then(()=>{const data=clone(this.plot.data);Plotly.purge(this.plot);return Plotly.newPlot(this.plot,data,clone(this.baseLayout),{responsive:false,displayModeBar:false,scrollZoom:false,displaylogo:false});});return;}if(['zoom','pan','view'].includes(a)){let d;if(this.kind==='source3d')d=a==='view'?{'scene.camera':{eye:{x:1.5,y:1.5,z:1.05}}}:{'scene.dragmode':a==='pan'?'pan':'orbit'};else d=a==='view'?{'xaxis.range':this.home?.x,'yaxis.range':this.home?.y,'xaxis.autorange':!this.home?.x,'yaxis.autorange':!this.home?.y}:{dragmode:a};this.ready=this.ready.then(()=>Plotly.relayout(this.plot,d));return;}
  if(a==='plane'){this.plane=!this.plane;this.el.querySelector('[data-action="plane"]').textContent=this.plane?'Hide plane':'Show plane';}
  if(a==='fit'){this.exact=FITTED_MODELS.margin;this.setting('angle').value=Math.atan2(this.exact.normal[1],this.exact.normal[0])*180/Math.PI;this.setting('offset').value=this.exact.offset;}
- if(a==='step')this.cursor=Math.min(this.cursor+1,this.trace.states.length-1);
- if(a==='epoch')this.cursor=Math.min((Math.floor(this.cursor/this.points.length)+1)*this.points.length,this.trace.states.length-1);
+ if(a==='back'){this.pause();this.cursor=Math.max(0,this.cursor-1);}
+ if(a==='step'){this.pause();this.cursor=Math.min(this.cursor+1,this.trace.states.length-1);}
+ if(a==='epoch'){this.pause();this.cursor=Math.min((Math.floor(this.cursor/this.points.length)+1)*this.points.length,this.trace.states.length-1);}
  if(a==='reset'){this.pause();this.cursor=0;}
  if(a==='play'){if(this.timer){this.pause();return;}if(this.cursor===this.trace.states.length-1)this.cursor=0;this.el.querySelector('[data-action="play"]').textContent='Pause';this.timer=setInterval(()=>{if(this.cursor===this.trace.states.length-1){this.pause();return;}this.cursor++;this.render();},650);}
  this.render();
@@ -35,15 +36,79 @@ class Widget{
    const threshold=FITTED_MODELS.lift.threshold;if(this.plane)data.push({type:'surface',name:'Added separating plane',x:[-1.4,1.4],y:[-1.4,1.4],z:[[threshold,threshold],[threshold,threshold]],colorscale:[[0,C[2]],[1,C[2]]],opacity:.22,showscale:false,hoverinfo:'skip',showlegend:false});
    const ax=title=>({title:{text:title,font:{size:20}},tickfont:{size:16},gridcolor:'#394459',zerolinecolor:'#59647a',backgroundcolor:'#101722',showbackground:true});l={paper_bgcolor:'rgba(0,0,0,0)',font:{family:'Segoe UI',color:'#e8ecf4',size:18},margin:{l:5,r:5,t:5,b:55},legend:{orientation:'h',y:0},scene:{xaxis:ax('Feature 1'),yaxis:ax('Feature 2'),zaxis:ax('z = x₁² + x₂²'),aspectmode:'cube',camera:clone(this.plot._fullLayout?.scene?._scene?.getCamera()||this.plot._fullLayout?.scene?.camera||{eye:{x:1.5,y:1.5,z:1.05}}),dragmode:'orbit'},uirevision:'lift'};
    side+=box('Added separating plane',`<p>z = ${fmt(threshold,5)}<br>Inner maximum: ${fmt(FITTED_MODELS.lift.innerMax,5)}<br>Outer minimum: ${fmt(FITTED_MODELS.lift.outerMin,5)}</p>`)+box('Explore in 3D','<p class="rg-small">Drag to rotate; scroll to zoom.<br>The plane lies in the gap. It is a valid separator, not a fitted maximum-margin claim.</p>');
-  }else{const source=elSource(this);if(source==='cls_svm_margin'){l.xaxis.range=[-1.68,2.28];l.yaxis.range=[-1.35,1.35];l.yaxis.scaleanchor='x';l.yaxis.scaleratio=1;l.annotations=[{x:.454,y:.479,text:'w',showarrow:false,yshift:20,font:{color:C[3],size:21}}];}else{const xx=this.traces.flatMap(t=>t.x),yy=this.traces.flatMap(t=>t.y),xmin=Math.min(...xx),xmax=Math.max(...xx),ymin=Math.min(...yy),ymax=Math.max(...yy),pad=.15*Math.max(xmax-xmin,ymax-ymin);l.xaxis.range=[xmin-pad,xmax+pad];l.yaxis.range=[ymin-pad,ymax+pad];if(this.raw.layout.yaxis?.scaleanchor){l.yaxis.scaleanchor='x';l.yaxis.scaleratio=1;}}side+=box('Inspect the geometry','<p>Hover for coordinates.<br>Use the legend to hide or show traces.</p>');if(source==='cls_svm_both_mod')side+=box('Measured minimum clearance','<p>Separator 1: 0.2537<br>Separator 2: 0.0600<br>Both have 100% training accuracy.</p>');}
+  }else{const source=elSource(this);if(source==='cls_and'){
+    l.xaxis.title.text='X₁ (first switch)';
+    l.yaxis.title.text='X₂ (second switch)';
+    l.xaxis.tickvals=[0,1];
+    l.yaxis.tickvals=[0,1];
+    const rows=this.traces.flatMap(trace=>trace.x.map((x,j)=>({x,y:trace.y[j],label:trace.name==='Class 1'?1:0})));
+    const truthTable=rows.map(row=>`<tr><td>${row.x}</td><td>${row.y}</td><td>${row.label}</td></tr>`).join('');
+    side=box('AND truth table',`<table aria-label="AND truth table"><thead><tr><th scope="col">X₁</th><th scope="col">X₂</th><th scope="col">Y (class)</th></tr></thead><tbody>${truthTable}</tbody></table>`)
+      +box('Selected point',`<p>(${t.x[i]}, ${t.y[i]}) has class ${t.name==='Class 1'?1:0}.</p>`);
+  }
+  if(source==='cls_svm_margin'){l.xaxis.range=[-1.68,2.28];l.yaxis.range=[-1.35,1.35];l.yaxis.scaleanchor='x';l.yaxis.scaleratio=1;l.annotations=[{x:.454,y:.479,text:'w',showarrow:false,yshift:20,font:{color:C[3],size:21}}];}else{const xx=this.traces.flatMap(t=>t.x),yy=this.traces.flatMap(t=>t.y),xmin=Math.min(...xx),xmax=Math.max(...xx),ymin=Math.min(...yy),ymax=Math.max(...yy),pad=.15*Math.max(xmax-xmin,ymax-ymin);l.xaxis.range=[xmin-pad,xmax+pad];l.yaxis.range=[ymin-pad,ymax+pad];if(this.raw.layout.yaxis?.scaleanchor){l.yaxis.scaleanchor='x';l.yaxis.scaleratio=1;}}if(source!=='cls_and')side+=box('Inspect the geometry','<p>Hover for coordinates.<br>Use the legend to hide or show traces.</p>');if(source==='cls_svm_both_mod')side+=box('Measured minimum clearance','<p>Separator 1: 0.2537<br>Separator 2: 0.0600<br>Both have 100% training accuracy.</p>');}
  }
- if(this.kind==='threshold'){const theta=this.v('theta'),task=this.setting('task').value,points=ps('cls_and').map(p=>({...p,c:task==='AND'?p.x*p.y:Math.max(p.x,p.y)})),xx=lin(-.3,1.3,41),yy=lin(-.3,1.3,41);this.result=points.map(p=>({...p,pred:p.x+p.y>=theta?1:0}));data=[{type:'heatmap',x:xx,y:yy,z:yy.map(y=>xx.map(x=>x+y>=theta?1:0)),colorscale:[[0,'#20364f'],[1,'#4c3325']],showscale:false,hoverinfo:'skip'},...markers(points,15),line([1,1],-theta,[-.3,1.3,-.3,1.3],'Threshold',C[2])];l.xaxis.range=[-.3,1.3];l.yaxis.range=[-.3,1.3];side=metric('Accuracy on '+task,pct(this.result.filter(p=>p.c===p.pred).length/4))+box('Truth table',`<table><tr><th>x₁</th><th>x₂</th><th>Target</th><th>Output</th></tr>${this.result.map(p=>`<tr><td>${p.x}</td><td>${p.y}</td><td>${p.c}</td><td>${p.pred}</td></tr>`).join('')}</table>`)+box('Threshold interval',`<p>${task==='AND'?'AND requires 1 < θ ≤ 2.':'OR requires 0 < θ ≤ 1.'}<br>Current additive bias b = ${fmt(-theta,1)}.</p>`);}
+ if(this.kind==='threshold'){
+  const theta=this.v('theta'),task=this.setting('task').value;
+  const points=ps('cls_and').map(p=>({...p,c:task==='AND'?p.x*p.y:Math.max(p.x,p.y)}));
+  const xx=lin(-.3,1.3,41),yy=lin(-.3,1.3,41);
+  this.result=points.map(p=>({...p,pred:p.x+p.y>=theta?1:0}));
+  data=[
+   {type:'heatmap',x:xx,y:yy,z:yy.map(y=>xx.map(x=>x+y>=theta?1:0)),colorscale:[[0,'#20364f'],[1,'#4c3325']],showscale:false,hoverinfo:'skip'},
+   ...markers(points,15),
+   line([1,1],-theta,[-.3,1.3,-.3,1.3],'Decision boundary',C[2])
+  ];
+  l=layout('First switch x₁','Second switch x₂');
+  for(const axis of [l.xaxis,l.yaxis]){axis.range=[-.3,1.3];axis.tickvals=[0,1];}
+  const correct=this.result.filter(p=>p.c===p.pred).length;
+  const rows=this.result.map(p=>`<tr><td>${p.x}</td><td>${p.y}</td><td>${p.x+p.y}</td><td>${p.c}</td><td>${p.pred}</td></tr>`).join('');
+  side=box('Read the line',`<p>Boundary: x₁ + x₂ = ${fmt(theta,1)}<br>Predict 1 when x₁ + x₂ ≥ ${fmt(theta,1)}.</p>`)
+   +box(`${task} target vs. prediction · ${correct}/${points.length} correct`,`<table><thead><tr><th scope="col">x₁</th><th scope="col">x₂</th><th scope="col">Sum</th><th scope="col">Target</th><th scope="col">Output</th></tr></thead><tbody>${rows}</tbody></table>`)
+   +box('Thresholds that work',`<p>${task==='AND'?'AND works when 1 &lt; b ≤ 2.':'OR works when 0 &lt; b ≤ 1.'}</p>`);
+ }
  if(this.kind==='training'){
-  if(!this.trace){this.points=ps({'AND':'cls_and','Noisy AND':'cls_and_noisy','XOR':'cls_xor'}[this.setting('dataset').value]);this.trace=E.training(this.points,this.v('eta'),this.setting('order').value==='Reverse');}const s=this.trace.states[this.cursor],bounds=[-.4,1.45,-.4,1.45],last=s.last;this.result=s;data=[...markers(this.points,this.points.length>10?6:14),line(s.w.slice(1),s.w[0],bounds,'Current boundary',C[2])];if(last)data.push({type:'scatter',mode:'markers',name:'Last example',x:[last.x],y:[last.y],marker:{symbol:'circle-open',size:23,color:C[3],line:{width:3}}});l.xaxis.range=bounds.slice(0,2);l.yaxis.range=bounds.slice(2);const correct=this.points.filter(p=>E.predict(s.w,p)===p.c).length;
-  side=box('Progress',`<p>${this.cursor} examples processed · ${s.updates} updates<br>Completed epochs: ${Math.floor(this.cursor/this.points.length)} / 25</p>`)+box('Current weights',`<p>b = ${fmt(s.w[0])}<br>w₁ = ${fmt(s.w[1])} · w₂ = ${fmt(s.w[2])}<br>Training accuracy: ${pct(correct/this.points.length)}</p>`)+box('Last update',last?`<p>Target ${last.c} · predicted ${last.guess}<br>Δ(b,w₁,w₂) = (${last.delta.map(v=>fmt(v,2)).join(', ')})</p>`:'<p>No example processed yet.<br>At zero score, output is 1.</p>')+box('Status',`<p class="rg-small">${s.converged?'Converged: a full epoch made no updates.':this.cursor===this.trace.states.length-1?'Epoch limit reached; no convergence certificate.':'Continue through the dataset. A single correct point is not convergence.'}</p>`);
-  for(const a of ['step','epoch'])this.el.querySelector(`[data-action="${a}"]`).disabled=this.cursor===this.trace.states.length-1;if(this.cursor===this.trace.states.length-1)this.pause();
+  if(!this.trace){
+   this.points=ps({'AND':'cls_and','Noisy AND':'cls_and_noisy','XOR':'cls_xor'}[this.setting('dataset').value]);
+   this.trace=E.training(this.points,this.v('eta'),this.setting('order').value==='Reverse');
+  }
+  const state=this.trace.states[this.cursor],last=state.last,n=this.points.length;
+  const finished=this.cursor===this.trace.states.length-1;
+  const bounds=[-.4,1.45,-.4,1.45];
+  const boundary=line(state.w.slice(1),state.w[0],bounds,'Current boundary',C[2]);
+  const weights=values=>`(${values.map(value=>Number(value.toPrecision(5))).join(', ')})`;
+  const score=values=>values[0]+values[1]*last.x+values[2]*last.y;
+  const number=value=>Number(value.toPrecision(5));
+  this.result=state;
+  data=markers(this.points,n>10?6:14);
+  if(last?.error){
+   const before=line(last.before.slice(1),last.before[0],bounds,'Before correction','#98a8bc','dash');
+   if(before.x.length===2) data.push(before);
+  }
+  if(boundary.x.length===2) data.push(boundary);
+  if(last) data.push({type:'scatter',mode:'markers',name:'Example just processed',x:[last.x],y:[last.y],marker:{symbol:'circle-open',size:23,color:C[3],line:{width:3}}});
+  l=layout('Feature x₁','Feature x₂');
+  l.xaxis.range=bounds.slice(0,2);
+  l.yaxis.range=bounds.slice(2);
+  const correct=this.points.filter(p=>E.predict(state.w,p)===p.c).length;
+  const boundaryNote=state.w[1]===0&&state.w[2]===0
+   ?`All inputs predict class ${E.predict(state.w,{x:0,y:0})}. There is no separating line yet.`
+   :boundary.x.length<2?'The current boundary is outside the visible plot.':'';
+  const progress=last?`Pass ${state.epoch}, example ${(this.cursor-1)%n+1} of ${n}`:'Ready to start';
+  const status=state.converged?'Converged after a full pass with no mistakes.'
+   :finished?'Stopped after 25 passes. Convergence was not confirmed.'
+   :`Processed: ${this.cursor} · Weight corrections: ${state.updates}.`;
+  side=last
+   ?box('1. Predict with the old weights',`<p>Input ${weights([last.x,last.y])}, target ${last.c}<br>Old weights ${weights(last.before)}<br>Old score ${number(score(last.before))} → class ${last.guess}</p>`)
+    +box('2. Apply the correction',`<p>Error = target − prediction = ${last.c} − ${last.guess} = ${last.error}<br>${last.error?`Weight change η × error × (1, x₁, x₂)<br>= ${weights(last.delta)}`:'Zero error leaves all weights unchanged.'}</p>`)
+    +box('3. Check the updated model',`<p>New weights ${weights(state.w)}<br>New score on this input ${number(score(state.w))} → class ${E.predict(state.w,last)}<br>Training set: ${correct}/${n} correct${boundaryNote?`<br>${boundaryNote}`:''}</p>`)
+   :box('Start with zero weights',`<p>Weights ${weights(state.w)} give a score of 0 for every input. A score of 0 predicts class 1, so the model starts with no separating line.</p>`)
+    +box('Process one example',`<p>Use Next example to predict a label and apply the correction. The first selected input will be circled.</p>`);
+  side+=box(progress,`<p class="rg-small">${status}</p>`);
+  this.el.querySelector('[data-action="back"]').disabled=this.cursor===0;
+  for(const action of ['step','epoch']) this.el.querySelector(`[data-action="${action}"]`).disabled=finished;
+  if(finished) this.pause();
  }
- if(this.kind==='margin'){const angle=this.v('angle')*Math.PI/180,u=this.exact?this.exact.normal:[Math.cos(angle),Math.sin(angle)],d=this.exact?this.exact.offset:this.v('offset'),points=ps('cls_svm_margin'),r=E.margin(points,u,d),bounds=[-1.7,2.3,-1.4,1.4];this.result=r;l.legend.y=-.30;l.margin.b=130;data=[...markers(points,12),line(u,d,bounds,'Separator',C[2])];if(r.width){data.push(line(u,d-r.clearance,bounds,'Margin +','#c9bc75','dot'),line(u,d+r.clearance,bounds,'Margin -','#c9bc75','dot'));}l.xaxis.range=bounds.slice(0,2);l.yaxis.range=bounds.slice(2);l.yaxis.scaleanchor='x';l.yaxis.scaleratio=1;l.xaxis.constrain='domain';l.yaxis.constrain='domain';side=metric('Minimum signed clearance',fmt(r.clearance,4))+metric('Full symmetric margin',r.width?fmt(r.width,4):'Not separating')+box('Training geometry',`<p>${r.correct} / ${points.length} correctly classified.<br>u = (${u.map(v=>fmt(v)).join(', ')})<br>d = ${fmt(d,4)}</p>`)+box('Independent optimum',`<p class="rg-small">Maximum width: ${fmt(FITTED_MODELS.margin.width,4)}.<br>${this.exact?'Exact optimum is active. Moving a slider returns to its rounded setting.':'Fit max-margin restores the exact solution.'}</p>`);}
+ if(this.kind==='margin'){const angle=this.v('angle')*Math.PI/180,u=this.exact?this.exact.normal:[Math.cos(angle),Math.sin(angle)],d=this.exact?this.exact.offset:this.v('offset'),points=ps('cls_svm_margin'),r=E.margin(points,u,d),bounds=[-1.7,2.3,-1.4,1.4];this.result=r;l.legend.y=-.30;l.margin.b=130;data=[...markers(points,12),line(u,d,bounds,'Separator',C[2])];if(r.width){data.push(line(u,d-r.clearance,bounds,'Margin +','#c9bc75','dot'),line(u,d+r.clearance,bounds,'Margin -','#c9bc75','dot'));}l.xaxis.range=bounds.slice(0,2);l.yaxis.range=bounds.slice(2);l.yaxis.scaleanchor='x';l.yaxis.scaleratio=1;l.xaxis.constrain='domain';l.yaxis.constrain='domain';side=metric('Minimum signed clearance',fmt(r.clearance,4))+metric('Full symmetric margin',r.width?fmt(r.width,4):'Not separating')+box('Training geometry',`<p>${r.correct} / ${points.length} correctly classified.<br>u = (${u.map(v=>fmt(v)).join(', ')})<br>w₀ = ${fmt(d,4)}</p>`)+box('Independent optimum',`<p class="rg-small">Maximum width: ${fmt(FITTED_MODELS.margin.width,4)}.<br>${this.exact?'Exact optimum is active. Moving a slider returns to its rounded setting.':'Fit max-margin restores the exact solution.'}</p>`);}
  if(this.kind==='kernel'){const a=[this.v('a1'),this.v('a2')],b=[this.v('b1'),this.v('b2')],pa=E.psi(a),pb=E.psi(b),con=pa.map((v,i)=>v*pb[i]),mapped=E.dot(pa,pb),direct=E.kernel(a,b,'poly');this.result={a,b,pa,pb,mapped,direct};data=[{type:'bar',x:['x₁²z₁²','2x₁x₂z₁z₂','x₂²z₂²'],y:con,marker:{color:[C[0],C[3],C[1]]},showlegend:false}];l=layout('Coordinate contribution','Product');side=box('Mapped vectors',`<p>ψ(x) = (${pa.map(v=>fmt(v,2)).join(', ')})<br>ψ(z) = (${pb.map(v=>fmt(v,2)).join(', ')})</p>`)+metric('Mapped dot product',fmt(mapped,4))+metric('(xᵀz)²',fmt(direct,4))+box('Agreement',`<p class="rg-small">Absolute difference: ${Math.abs(mapped-direct).toExponential(1)}.<br>Cross terms may be negative; their sum is the squared dot product.</p>`);}
  if(this.kind==='svm'){const type={Linear:'linear',Quadratic:'poly',RBF:'rbf'}[this.setting('kernel').value];this.setting('gamma').disabled=type!=='rbf';const m=FITTED_MODELS.models.find(m=>m.kernel===type&&m.C===this.v('C')&&(type!=='rbf'||m.gamma===this.v('gamma'))),points=ps('cls_circle_clusters');this.result=m;if(this.model!==m){this.model=m;const xx=lin(-1.5,1.5,81),yy=lin(-1.5,1.5,81);this.surface={type:'contour',x:xx,y:yy,z:yy.map(y=>xx.map(x=>E.score(m,[x,y]))),contours:{start:0,end:0,size:1,coloring:'fill'},colorscale:[[0,'#20364f'],[1,'#4c3325']],line:{color:C[2],width:2},showscale:false,hoverinfo:'skip',name:'Decision boundary'};}data=[this.surface,...markers(points,6),{type:'scatter',mode:'markers',name:'Support vectors',x:m.support.map(i=>points[i].x),y:m.support.map(i=>points[i].y),marker:{symbol:'circle-open',size:12,color:C[2],line:{width:1}}}];l.xaxis.range=[-1.5,1.5];l.yaxis.range=[-1.5,1.5];l.yaxis.scaleanchor='x';l.yaxis.scaleratio=1;l.xaxis.constrain='domain';l.yaxis.constrain='domain';side=metric('Training accuracy',pct(m.accuracy))+metric('Support vectors',m.support.length+' / 300')+box('Fitted settings',`<p>${this.setting('kernel').value} kernel<br>C = ${m.C}${type==='rbf'?'<br>γ = '+m.gamma:type==='poly'?'<br>κ(x,z) = (xᵀz)²':''}</p>`)+box('Interpretation','<p class="rg-small">Same source data, different fitted models. No test or validation score is supplied. Use held-out data to select settings.</p>');}
  this.side.innerHTML=side;this.baseLayout=clone(l);this.home={x:l.xaxis?.range?.slice(),y:l.yaxis?.range?.slice()};this.ready=this.ready.then(()=>Plotly.react(this.plot,data,l,{responsive:false,displayModeBar:false,scrollZoom:this.kind==='source3d',displaylogo:false}));return this.ready;

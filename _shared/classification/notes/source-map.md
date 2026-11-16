@@ -1,82 +1,85 @@
-# Classification 1 — source map
+# Classification Parts 1 and 2 — coverage and provenance
 
-Adapted from Alessandro Torcinovich, [5 — Classification 1](https://www.aretor.it/courses/aiml2526/lessons/05_classification/), accessed 11 September 2026. The source page reports an update on 7 November 2025 and displays a CC BY-NC-ND 4.0 site notice. This local teaching adaptation retains attribution and does not change that source notice. The user's existing AIML decks supply the presentation design.
+Revised 5 November 2026 after reading the complete classification chapter, including both expandable mathematical arguments, at https://www.aretor.it/courses/aiml2526/lessons/05_classification/ (Alessandro Torcinovich). This private maintenance file retains attribution and the source’s CC BY-NC-ND 4.0 site notice. It is not included in the student-facing slides or handouts.
 
-## Coverage
+## Coverage by stable slide anchor
 
-| Course section | Slides |
-| --- | --- |
-| 5.1 Classification problem | 3–4 |
-| 5.2 Probabilistic interpretation and uncertainty | 5–6 |
-| 5.3 Optimal Bayes classifier and derivation | 7–10 |
-| 5.3.1 Accuracy | 11–12 |
-| 5.4 Naive Bayes | 13–15 |
-| 5.5 Distribution estimation | 16–19 |
-| 5.6 Logistic regression | 20–22, 25–26 |
-| 5.6.1 Maximum likelihood | 23–24 |
-| 5.7 K-nearest neighbors | 27–32 |
-| 5.7.1 Bayesian density motivation | 33 |
-| 5.7.2 KNN regression | 34–35 |
-| 5.7.3 Validation | 36–39 |
-| 5.7.4 Characteristics | 40–41 |
-| Added workflow, practice and references | 42–46 |
-
-The source's two expandable derivations are made explicit in the relevant slides and speaker notes. All course subsections are covered. No video, animation frames or additional algorithm controls were present in this lecture's four Plotly payloads.
-
-## Original interactive charts
-
-Each resource is retained in `data/` and embedded in `js/course-data.js` so that opening the HTML directly does not require a server or network. Every original x, y and z array survives runtime styling unchanged. Empty traces remain in the payload but do not occupy the legend. Color, fonts, axis text and spacing are adapted to the deck. Hover, legend toggling, drag zoom, pan and reset remain available; selectors add keyboard access to point coordinates.
-
-| Slide | Resource | Content |
+| Source chapter | Pack | Slides and corresponding handout sections |
 | --- | --- | --- |
-| 3 | [lr_logreg.json](https://www.aretor.it/json/aiml2526/classifier/lr_logreg.json) | 100 binary training observations; empty test trace |
-| 25 | [lr_logreg_mod.json](https://www.aretor.it/json/aiml2526/classifier/lr_logreg_mod.json) | Same observations and 100 samples of a supplied logistic curve |
-| 27 | [cls_two_class.json](https://www.aretor.it/json/aiml2526/classifier/cls_two_class.json) | 25 points per class in two dimensions |
-| 29 | [cls_two_class_mod.json](https://www.aretor.it/json/aiml2526/classifier/cls_two_class_mod.json) | Same points and original 200 × 200 K=1 contour grid |
+| 5.1 · A classification problem | 1 | `classification-story`, `hospital-task`, `data-lab`, `regression-to-probabilities`, `classification` |
+| 5.2 · Probabilistic interpretation of machine learning | 1 | `uncertainty`, `posterior` |
+| 5.3 · Optimal Bayes classifier and complete risk argument | 1 | `bayes-rule`, `bayes-proof`, `bayes-risk`, `bayes-derivation`, `bayes-error` |
+| 5.3.1 · Evaluation | 1 | `accuracy`, `confusion` |
+| 5.4 · Naive Bayes classifier | 1 | `bayes-theorem`, `bayes-example` |
+| 5.5 · Estimating distributions and complete log derivation | 1 | `independence`, `nb-score`, `nb-log-derivation`, `estimate` |
+| 5.5.1 · Estimating class-conditional feature likelihoods | 1 | `gaussian-model`, `smoothing`, `naive-lab` |
+| 5.6 · Logistic regression | 1 | `logistic-bridge`, `logistic`, `logistic-intuition`, `log-odds`, `decision-threshold`, `logistic-lab` |
+| 5.6.1 · Maximum likelihood estimation | 1 | `likelihood-intuition`, `likelihood`, `likelihood-combined`, `fit-lab` |
+| 5.7 · K-Nearest Neighbors | 2 | `knn-intro`, `plane-lab`, `knn-rule`, `boundary-lab`, `metric`, `knn-weighted`, `neighbors-lab`, `ties` |
+| 5.7.1 · Bayesian derivation | 2 | `knn-density-intro`, `knn-derivation-goal`, `knn-density-count`, `knn-density`, `density-lab` |
+| 5.7.2 · KNN regressor | 2 | `knn-regression`, `regression-lab` |
+| 5.7.3 · Validation | 2 | `complexity`, `splits`, `validation-metrics`, `validation-lab`, `validation-notes` |
+| 5.7.4 · Characteristics | 2 | `tradeoffs`, `cost`, `workflow` |
 
-The source calls the one-dimensional example cholesterol versus heart disease. It supplies neither validated provenance nor a defined physical scale. The adaptation retains that context in the chart sidebar and uses an explicitly illustrative predictor scale. The two-dimensional axes use Feature 1 / Feature 2 consistently instead of the original raw LaTeX X_0 / X_1 labels.
+## Mathematical clarifications
 
-## Added interactive examples
+- True probabilities use p, estimates use a hat. Risk is expected 0–1 error. The binary and multiclass Bayes rules and total-expectation derivation are explicit.
+- Gaussian means and variances carry both feature and class indices. The handout also supplies the density and parameter estimates.
+- Logistic fitting uses argmax/argmin to return coefficients, rather than max/min values. Both sigmoid expressions and both Bernoulli product forms are covered.
+- The supplied finite logistic curve is illustrative. Separable unregularized data need not have a finite MLE.
+- KNN density expressions and the resulting posterior are estimates. A fixed-region random count K_R is distinguished from the selected K of an adaptive KNN neighborhood. Binomial mean, variance and the handout PMF are included.
+- K=n gives a global mean or majority under uniform weights. Test data are reserved until development choices are fixed. Regression and classification validation metrics are distinguished.
 
-- **Slide 10 — Cost-sensitive decision:** hypothetical binary costs, C_FP=1 and adjustable C_FN. At p=P(Y=1|x), loss of predicting 0 is C_FN p and loss of predicting 1 is 1−p. The optimal threshold is 1/(1+C_FN); equal losses choose class 1.
-- **Slide 18 — Gaussian Naive Bayes:** explicitly specified conditional means (−1,−1) and (1,1), independent features, both standard deviations 1. Adjustable prior and two feature values. Class log scores and the normalized posterior are calculated live using a stable max-subtracted normalization. These distributions are an illustration, not fitted to the course dataset.
-- **Slide 22 — Logistic parameters and threshold:** original binary observations with z=slope×(x−midpoint). Live probabilities, training confusion counts and mean log loss. Uses stable sigmoid and softplus computations. The adjustable curves are not labeled as optimized fits. Slider limits deliberately include zero and negative slopes.
-- **Slide 30 — KNN query and boundary:** all 50 source points, adjustable K, query coordinates, uniform/inverse-distance voting and a feature-2 distance multiplier. Background displays sampled class decisions; selected neighbors and query are overlaid. Exact query results use all distances, independent of the display grid. Distance ties use stable source order. Vote ties choose class 0. With inverse-distance weighting and any exact matches among selected neighbors, only those exact matches receive weight.
-- **Slide 35 — KNN regression:** 25 deterministic illustrative points with x evenly spaced on [−2,2] and y=sin(1.5x)+0.18cos(8x). Curve samples are computed from the selected K, with a live query mean and highlighted neighbors. K=25 gives the global mean.
-- **Slide 38 — Validation:** class-stratified fixed split of the 50 source points into 30 train, 10 validation and 10 test cases. Within each class, a seeded Fisher–Yates permutation uses the documented LCG in `engine.js` (seeds 2026 and 2027). Compare K=1,3,5,7,9,15,29 with uniform Euclidean voting. Equal validation scores prefer the smaller K. The classifier remains trained on the same 30 cases after selection. The test score is calculated and shown only after locking K; controls then prevent changing the candidate. Restart is explicitly a classroom replay of the same split, not a new independent test. A final refit on development data is discussed on the following slide, but not silently performed in this demonstration.
+## Data and interactions
 
-## Technical clarifications
+The four supplied Plotly payloads lr_logreg, lr_logreg_mod, cls_two_class and cls_two_class_mod retain all numerical arrays. No engine or dataset values were changed. The dataset scales are illustrative.
 
-1. Aleatoric variability is outcome variation under the given information/model; epistemic uncertainty concerns limited knowledge of the model. Measurement errors do not uniquely define this distinction.
-2. The Bayes classifier minimizes expected 0–1 loss when supplied the true class posterior. Unequal costs change the optimal threshold. Bayes risk may remain positive.
-3. Estimated confidence is not a guarantee of correctness or calibration. Accuracy is supplemented by a small confusion-matrix explanation; no universal accuracy target is imposed.
-4. With continuous predictors, likelihood and evidence are densities. The evidence cancels for class argmax, but posterior probabilities still require normalization.
-5. Naive Bayes uses mutual conditional independence given the class. Gaussian parameters depend on both feature and class. Categorical additive smoothing is explained separately from Gaussian variance smoothing.
-6. The sigmoid maps finite real inputs into (0,1). The log odds are linear in the features; probabilities are nonlinear. Outcomes are modeled as Bernoulli rather than with an explicit additive error.
-7. The maximum-likelihood coefficient estimate is an **argmax**, not the maximum objective value. A finite unregularized optimum need not exist under separation. The original binary observations are perfectly separable; the supplied finite curve is not presented as a verified unregularized MLE.
-8. KNN is nonparametric because its representation is not a fixed finite coefficient vector independent of sample size. It still learns from stored observations and requires validated hyperparameters and preprocessing.
-9. Odd K avoids class-count ties only for binary uniform voting. Multiclass, weighted and equal-distance cases need explicit rules; weighting alone does not guarantee no ties.
-10. The KNN fraction estimates the posterior. It is not identical to the unknown true posterior. The fixed-region binomial argument in the source is a density-estimation motivation; an adaptive K-neighbor region has random radius and fixed K.
-11. The K=n global-majority/global-mean statements apply to uniform weights. A larger K usually reduces flexibility, without a universal monotonic-bias guarantee on every distribution.
-12. Validation, preprocessing and threshold choice are parts of model development. Final test feedback must not select them. A small held-out sample yields an uncertain score; it does not prove future generalization.
-13. Brute-force KNN computes O(nm) distances plus neighbor-selection cost. Full sorting adds O(n log n); alternative selection methods can reduce that part. Search indexes do not offer a universal improvement in high dimensions.
+Part 1 has four interactive examples: point inspection, cost-sensitive decisions, specified Gaussian Naive Bayes, and a manual sigmoid/threshold explorer. Part 2 has seven: supplied logistic curve inspection, 2D point inspection, K=1 contour inspection, computed KNN regions, a new local-density/cancellation explorer, KNN regression, and validation with test locking. The three derivation walkthroughs additionally reveal equations with changing explanations.
 
-## Independent numerical verification
+Both handouts contain the same formulas, worked examples, eleven live widgets with updated print previews, notation glossaries, and all twelve revised questions with explanations. Twelve existing Wooclap forms were edited in place; IDs, types, correct-answer positions and settings were preserved.
 
-`tools/verify-source.py` uses NumPy/SciPy and writes `notes/numerical-review.json` and `tests/reference.json`.
+## Opening narrative follow-up
 
-- The 100 binary observations contain 51 zeros and 49 ones; the source test trace has zero observations.
-- All 40,000 source KNN grid predictions match a fresh Euclidean nearest-neighbor calculation on the 50 source points.
-- The supplied logistic curve is reconstructed to numerical precision with intercept −7.5482845613 and slope 15.5385364748. Those coefficients are inferred from the curve, not from a claimed re-run of its unknown fitting procedure. Its training accuracy is 1 and mean training log loss is approximately 0.101495.
-- Independent reference cases cover 192 KNN configurations (including exact matches), 27 Gaussian Naive Bayes configurations and 27 logistic parameter/threshold configurations.
-- The JavaScript suite also checks deterministic ties, zero-distance weights, sigmoid extremes, undefined precision/recall, non-overlapping stratified splits and KNN-regression endpoint behavior.
+The opening now moves from familiar categories to a hospital research task, explicitly defines the cholesterol input and binary disease outcome, inspects the unchanged data, and uses an actual OLS line on those observations to motivate class probabilities. The input scale is illustrative rather than a literal clinical percentage. The companion handout follows the same sequence. Two explanatory slides were added; existing question IDs and wording are unchanged.
 
-## Supporting primary references
 
-- [James et al., An Introduction to Statistical Learning, Chapter 4](https://www.statlearning.com/) — classification framework and course reference.
-- [Bishop, Pattern Recognition and Machine Learning](https://www.microsoft.com/en-us/research/publication/pattern-recognition-machine-learning/) — course reference for probabilistic modeling and classification.
-- [scikit-learn: Naive Bayes](https://scikit-learn.org/stable/modules/naive_bayes.html) — conditional factorization, Gaussian likelihoods and probability-estimation limitations.
-- [scikit-learn: Nearest Neighbors](https://scikit-learn.org/stable/modules/neighbors.html) — voting, weighted regression, metrics and search complexity.
-- [scikit-learn: Logistic regression](https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression) — logit model, optimization and regularization.
+## Probability narrative follow-up (2026-11-05)
+Expanded the Part 1 probabilistic interpretation into random observations, contradictory recorded inputs, epistemic/aleatoric uncertainty, overall frequencies and conditional class probabilities. Follows the supplied section 5.2 narrative, with hospital, die and hair-colour examples. Hair-colour counts and the 70/30 diagram are explicitly hypothetical. Keeps the context-dependent uncertainty distinction accurate (Gal, Uncertainty in Deep Learning, chapter 6: https://www.cs.ox.ac.uk/people/yarin.gal/website/thesis/6_deep_insights.pdf). No links to old course material appear in teaching content.
 
-All diagrams are native SVG and charts use the local Plotly library. Reveal and Plotly retain their bundled license headers. No external image placeholders or unrelated portraits are used.
+
+## Class probability and Bayes narrative (2026-11-05)
+Expanded the supplied sections 5.2.1 and 5.3 narrative: categorical uncertainty and cloth example, conditional class probabilities, smooth learning objectives and confidence, ideal binary Bayes rule, multiclass argmax and observed versus predicted labels, expected 0–1 risk, two conditional errors, and a dedicated five-step proof with dynamic comments. Preserved existing anchors, question IDs and the population Bayes-risk expression. The proof uses p(X)=P(Y=1|X) with an explicit alias to p₁(X). The total-expectation argument and integral justification are explained in the handout. No references to old course material appear in teaching content.
+
+
+## Opening simplification (2026-11-05)
+Merged the general introduction into the hospital task, categorical uncertainty into the same-input example, and the conditional 70/30 intuition into the probability-notation slide. The opening through probability benefits is reduced from 16 to 13 rendered slides. The exact uncertainty definitions requested by the lecturer appear in both slide and handout blocks with a context note. The regression ε analogy distinguishes a random numerical error from a conditional distribution over labels. Introductory notation uses P(Y=yᵢ|X=xᵢ)=p(yᵢ|xᵢ). All bottom variable explanations in Part 1 are green boxes with spaced columns and no dot separators. Existing 7 questions and 4 labs are retained, as is the five-step interactive Bayes proof. Legacy anchor links resolve to merged content. Full explanations and normalisation formulas are retained in the handout.
+
+
+## Original Bayes notation and persistent reference (2026-11-05)
+Matched the supplied derivation: E_XY without a comma, 𝟙(A) with parentheses, scalar x, p(X)=P(Y=1|X), f without a star, and the chained conditional-error and 0.5 decision rule. Synchronized neighbouring Bayes equations and the handout. The interactive proof keeps its green heading at the top left, the main equation centered, and a small muted copy of the immediately preceding equation at a fixed top-right inset. All five states and Back, direct jumps and reset were verified, including fixed corner coordinates and absence of overlap. No questions, slide counts or labs changed.
+
+
+## Expanded Bayes step explanations (2026-11-05)
+Made the formula block narrower and shorter, compacted its step navigation, and expanded the full-width explanation box. Rewrote all five explanations to describe the operation and its reason, including a numeric two-error example and the intermediate inequality 1≤2p(x). Handout step explanations match. Original equations, centered formula, fixed top-left heading, fixed top-right previous equation, counts and questions are preserved. All five rendered states fit without overlap.
+
+
+## Polynomial comparison and probability examples (2026-11-06)
+Slide 4 overlays degree 1,2,3,5,9,15 least-squares polynomial fits of the same 100 supplied hospital observations. Fits use a scaled polynomial basis, and the degree-1 predictions match the closed-form OLS line to numerical precision. Controls support multiple selections, a comparison preset, no selection and reset. The live handout uses the same widget, with the initial OLS view as a static print preview. The epistemic panel now shows illustrative measurement distributions with different precision. The hair-colour slide explicitly states its population-frequency estimation task. The conditional-probability formula now has a plain-English caption and an ℙ operator definition. Updated home counts to 5 Part 1 labs and 79 course-wide labs. Original uncertainty definitions and Bayes derivation retained. No questions or live Wooclap IDs changed.
+
+
+## Sentence and formula scope review (2026-11-07)
+Compared every source sentence and formula from the introduction through section 5.6, excluding 5.6.1. The private review records 81 prose units, 13 display-formula groups and 58 inline-formula occurrences. Restored the full Naive Bayes factorization and the complete logarithmic argmax chain, with five interactive explanatory steps. Matched distribution subscripts, p_Y(c)=n_c/n, Acc(X,Y), and the original sigma(x_i) logistic notation, including both exponential forms and the fixed 0.5 class rule. Explicitly explained the probability operator versus function notation, the proof-specific p(X) abbreviation, and class-specific Gaussian parameters. Retained scientific corrections: illustrative hospital measurement scale, a Gaussian distribution for the random feature rather than for a density function, and the finite sigmoid range (0,1) within [0,1].
+
+Removed out-of-scope cost-sensitive decisions, confusion/precision/recall material, smoothing, calibration extensions, log odds, threshold-selection advice, explicit Gaussian MLE estimates, log-sum-exp implementation details and later-part glossary entries. Numerical illustrations that explain the covered concepts remain. The three corresponding beyond-scope question prompts are omitted locally; reusable bank/live event entries remain available. No question wording or live Wooclap forms changed in this pass.
+
+Part 1 now has 36 content sections and 4 active question slides (40 rendered), 4 labs, 34 handout chapters and 4 self-checks. Both five-step walkthroughs and all 40 rendered slides were checked. Handout formula fit, live controls and updated print previews were verified. Course-home counts were synchronized. Source sentence/formula inventory and visual evidence are in the private nov7-source-review folder.
+
+
+## Part 2 sentence and formula scope review (2026-11-07)
+Reviewed every source sentence and formula from 5.6.1 through 5.7.4: the private inventory maps 73 prose units, 14 displayed formula groups and 83 inline formula occurrences. The chapter order and notation now follow MLE, KNN, Bayesian derivation, KNN regression, validation and characteristics. Uses sigma(x_i), explicit positive/negative-label likelihood products, original target-label neighborhoods, full majority and weighted-vote formulas, p_X and p_X|Y density names, region mass P_R, binomial count K, expected count/fraction and variance, and every Bayes substitution/cancellation step. Two five-step walkthroughs retain the previous formula at a fixed top-right position with explanatory comments below. The variance step explicitly shows division by n² and cancellation.
+
+Preserved correctness qualifications: argmax returns fitted coefficients, density and posterior fractions estimate true distributions, the binomial argument fixes the region whereas KNN fixes K, target collections retain repeated labels, odd K only guarantees a non-tied binary uniform vote, exact matches require an inverse-distance convention, global-mean/majority limits assume equal weights, and evaluation uses accuracy for class labels and RMSE for numbers. All quantities have explanations in green notation blocks without dot or semicolon separators.
+
+Removed combined Bernoulli-product/log-loss extensions, threshold-selection procedure, detailed implementation edge-case slide, weighted KNN regression, binomial PMF expansion, cross-validation, formal asymptotic complexity/sorting details, high-dimensional/calibration extensions and deployment/preprocessing workflow. Kept numerical examples and metric/optimizer explanations that clarify the covered material. The reusable question bank and live Wooclap content are unchanged; L05-C09 and L05-O03 are omitted locally. L05-C06 is moved before the likelihood example.
+
+Part 2 now has 32 content sections plus 3 active questions (35 rendered), 30 handout chapters, 7 live labs and 3 self-checks. All slides rendered; both walkthroughs, voting, local-density calculations, test-set locking and matching handout controls checked. Handout formulas fit without horizontal clipping; changed examples have refreshed print previews. Home counts match 82 active question slides and 78 labs across the course. Private evidence is in nov7-part2-review.

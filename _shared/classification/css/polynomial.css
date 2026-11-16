@@ -1,0 +1,11 @@
+.cl-review .cl-polynomial-widget{border:1px solid #334155;border-radius:12px;background:#101622;padding:20px 24px;min-width:0;width:100%;box-sizing:border-box}
+.cl-review .cl-polynomial-controls{display:flex;align-items:center;gap:20px;flex-wrap:wrap;font-size:25px;color:#e8ecf4;margin-bottom:12px}
+.cl-review .cl-polynomial-controls strong{color:#45d6c0;font-size:25px}
+.cl-review .cl-polynomial-controls label{display:flex;align-items:center;gap:8px;cursor:pointer}
+.cl-review .cl-polynomial-controls input{width:22px;height:22px;accent-color:#45d6c0}
+.cl-review .cl-polynomial-controls button{font:23px 'Segoe UI',sans-serif;padding:9px 17px;border-radius:7px;border:1px solid #536578;background:#1a2839;color:#e8ecf4;cursor:pointer}
+.cl-review .cl-polynomial-controls button:focus-visible,.cl-review .cl-polynomial-controls input:focus-visible{outline:3px solid #f4a261;outline-offset:3px}
+.cl-review .cl-polynomial-plot{height:510px;width:100%;min-width:0}
+.cl-review .cl-polynomial-summary{display:flex;flex-wrap:wrap;gap:10px 36px;font-size:23px;color:#aebed0;line-height:1.5;margin-top:8px}
+.cl-review #regression-to-probabilities .slide-body{gap:20px}
+.cl-review #regression-to-probabilities h2{font-size:47px!important}

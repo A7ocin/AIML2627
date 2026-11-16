@@ -21,6 +21,23 @@ Adapted from Alessandro Torcinovich, [6 — Classification 2](https://www.aretor
 
 The source's expandable AND proof, perceptron update argument and quadratic-kernel derivation are incorporated into explicit slides, labs and speaker notes. All course subsections are covered. The lesson had no videos, external images, iframe simulations or Plotly animation frames; its interactive material consisted of the nine charts below.
 
+## Current lecture split and equation coverage
+
+Part 3 ends with 6.2.2 (XOR). Part 4 starts with 6.3 (Support Vector Machines). Both decks and handouts follow the chapter order and retain the nine original datasets. The slide IDs below are stable.
+
+| Source chapter | Pack | Coverage |
+| --- | --- | --- |
+| Introduction | 3 | `part-roadmap`: separator, input space, and predicted classes |
+| 6.1 · McCulloch & Pitts Neuron | 3 | `and-lab`, `threshold`, `threshold-calculation`, `and-derivation`, `threshold-lab`: four inputs, aggregation, numerical evaluation of the step/indicator, strict and weak threshold inequalities, and the b = 1.9 separator |
+| 6.2 · Perceptron | 3 | `noisy-lab`, `perceptron`, `update`, `update-intuition`, `convergence`, `training-lab`, `perceptron-fit-lab`: both score forms, componentwise update, all three prediction-error cases, the full sum-of-squares argument, convergence, and the trained line |
+| 6.2.1 · Learning rate | 3 | `learning-rate`, `training-lab`: positive η, scaled update, and a controlled comparison across rates |
+| 6.2.2 · What’s next | 3 | `xor-lab`, `xor-proof`: XOR truth table, linear limitation, and multilayer perceptron connection |
+| 6.3 · Support Vector Machines | 4 | `separators-lab` through `svm-prediction`: two equally accurate lines, normal and bias, signed distance, ±1 margin planes and class inequalities, combined constraint, both equivalent optimizations, and sign prediction |
+| 6.4 · Nonlinear SVM | 4 | `circle-lab`, `feature-map`, `lift-lab`, `mapping-limits`, `mapped-primal`: original 2D and 3D data, paraboloid lift, separating plane, mapped dimension and bias, and constrained mapped objective |
+| 6.4.1 · The kernel trick | 4 | `feature-explosion` through `kernel-cost`: polynomial feature growth, Lagrangian and saddle problem, both derivatives and stationary relations, constrained dual, complete quadratic identity, Gaussian kernel, valid kernels, and computational cost |
+
+The displayed formulas use the source notation b for the McCulloch & Pitts threshold, w₀ for the perceptron and SVM bias, yᵢ for the signed SVM target, and aᵢ for the Lagrange multiplier. The mathematical qualifications below apply to the current materials. The original combined-deck slide numbers and old labels below document the archived build.
+
 ## Original charts preserved
 
 The exact JSON files are in `data/` and are embedded in `js/course-data.js` for offline use. No original x, y or z array is modified. Plot styling, readable axis labels, camera defaults and legend spacing are adapted to the dark theme. Source line endpoints are retained even when the visible axes focus on the observations and clip extrapolated line segments.

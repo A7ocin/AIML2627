@@ -1154,341 +1154,347 @@ One area column is an exact multiple of the other, so the design lacks full colu
 
 ## 11 · Classification · Part 1
 
-5 core + 2 optional. Core budget: approximately 6.5 minutes.
+6 core + 2 optional. Core budget: approximately 12 minutes.
 
 [Core import](imports/11_Classification_Part_1.xlsx) · [Optional import](imports/optional/11_Classification_Part_1_optional.xlsx)
 
-### L05-C01 · Core · Opening / everyday intuition
+### L05-C01 · Core · Apply the concept to a concrete case
 
-**Placement:** [Before “A class label is not a continuous quantity”](../11_Classification_Part_1/index.html#/classification) · [Handout](../11_Classification_Part_1/handout.html#chapter-classification)  
-**Time:** 60 seconds, including debrief.
+**Placement:** [After “Read a dataset: rows are patients, columns are features”](../11_Classification_Part_1/index.html#/classification) · [Handout](../11_Classification_Part_1/handout.html#chapter-classification)  
+**Time:** 120 seconds, including debrief.
 
-Which task predicts a category rather than a number?
+Email classes are coded billing = 0, delivery = 1 and technical = 2. A regression predicts 1.4. Which interpretation is best?
 
-- **A.** Predicting a house price.
-- **B.** Deciding whether an email is spam or not spam.
-- **C.** Predicting tomorrow’s temperature.
-- **D.** Predicting the duration of a journey.
+- **A.** Round 1.4 to delivery because the codes define numerical distances.
+- **B.** The codes are arbitrary labels. Estimate class probabilities rather than assuming meaningful distances between codes.
+- **C.** Technical cases are twice as severe as delivery cases.
+- **D.** Changing the codes would turn the task into regression.
 
-**Answer:** B. Deciding whether an email is spam or not spam.
+**Answer:** B. The codes are arbitrary labels. Estimate class probabilities rather than assuming meaningful distances between codes.
 
-Spam/not spam is a category. The other tasks ask for numerical predictions.
+Class codes name categories. A numeric distance between arbitrary codes has no intrinsic meaning, and recoding the same categories should not change the task.
 
 **Misconception:** Confusing classification with regression.
 
-**Facilitation:** Invite a guess before teaching the idea. Ask one student for their reasoning, then use the next explanation or demonstration to revisit the answer. Do not grade prior knowledge.
+**Facilitation:** Ask students to compute or reason individually, compare with a neighbor, then explain why the tempting alternative fails.
 
-### L05-C02 · Core · Prediction / intuition
+### L05-C02 · Core · Apply the concept to a concrete case
 
-**Placement:** [Before “Even the ideal classifier can make mistakes”](../11_Classification_Part_1/index.html#/bayes-error) · [Handout](../11_Classification_Part_1/handout.html#chapter-bayes-error)  
-**Time:** 60 seconds, including debrief.
+**Placement:** [Before “Optimal does not mean error-free”](../11_Classification_Part_1/index.html#/bayes-error) · [Handout](../11_Classification_Part_1/handout.html#chapter-bayes-error)  
+**Time:** 120 seconds, including debrief.
 
-A model says an email has a 70% chance of being spam. Can that email still turn out not to be spam?
+For 100 comparable cases, the true class-1 probability is 0.7. With equal error costs, what does the optimal Bayes classifier achieve on average?
 
-- **A.** No. Anything above 50% is certain.
-- **B.** No. A model’s most likely answer is always correct.
-- **C.** Yes. A probability below 100% leaves room for another outcome.
-- **D.** Yes, but only if 70% is less than 50%.
+- **A.** No errors, because the true probabilities are known.
+- **B.** About 70 errors, because class 1 occurs most often.
+- **C.** About 30 errors; no rule using the same information has lower expected 0–1 error.
+- **D.** Fewer errors by always choosing the less frequent class.
 
-**Answer:** C. Yes. A probability below 100% leaves room for another outcome.
+**Answer:** C. About 30 errors; no rule using the same information has lower expected 0–1 error.
 
-A likely outcome is not a certain outcome. Even useful probabilistic predictions can be wrong on individual cases.
+Predicting class 1 has conditional error 1−0.7=0.3. Over 100 comparable cases this gives 30 expected errors, not necessarily exactly 30 in each sample.
 
 **Misconception:** Treating a high probability as a guarantee.
 
-**Facilitation:** Invite a guess before teaching the idea. Ask one student for their reasoning, then use the next explanation or demonstration to revisit the answer. Do not grade prior knowledge.
+**Facilitation:** Ask students to compute or reason individually, compare with a neighbor, then explain why the tempting alternative fails.
 
-### L05-C03 · Core · Check / core understanding
+### L05-C03 · Core · Apply the concept to a concrete case
 
-**Placement:** [After “Reverse the direction with Bayes’ theorem”](../11_Classification_Part_1/index.html#/bayes-theorem) · [Handout](../11_Classification_Part_1/handout.html#chapter-bayes-theorem)  
-**Time:** 90 seconds, including debrief.
+**Placement:** [After “A common clue is not the same as a likely class”](../11_Classification_Part_1/index.html#/bayes-example) · [Handout](../11_Classification_Part_1/handout.html#chapter-bayes-example)  
+**Time:** 120 seconds, including debrief.
 
-An email contains a word that is more common in spam than in ordinary mail. What can this word provide?
+Among 1,000 emails, 100 are spam. The word “offer” appears in 60 spam emails and 90 ordinary emails. What is P(spam | “offer”)?
 
-- **A.** Evidence that can increase the estimated chance of spam.
-- **B.** Proof that the email is certainly spam.
-- **C.** Proof that the email is certainly ordinary mail.
-- **D.** A reason to ignore every other piece of information.
+- **A.** 60/(60 + 90) = 40%.
+- **B.** 60/100 = 60%.
+- **C.** 100/1,000 = 10%.
+- **D.** 90/(60 + 90) = 60%.
 
-**Answer:** A. Evidence that can increase the estimated chance of spam.
+**Answer:** A. 60/(60 + 90) = 40%.
 
-A feature can change a class probability without determining the class with certainty. Its effect depends on the other modeling assumptions.
+Conditioning on the word restricts attention to the 150 emails containing it. Of those, 60 are spam. The prior and the reverse conditional are different quantities.
 
 **Misconception:** Treating one useful clue as conclusive evidence.
 
-**Facilitation:** Give students a moment to answer, then explain the correct choice in everyday language and address the misconception.
+**Facilitation:** Ask students to compute or reason individually, compare with a neighbor, then explain why the tempting alternative fails.
 
-### L05-C04 · Core · Check / core understanding
+### L05-C04 · Core · Apply the concept to a concrete case
 
-**Placement:** [After ““Naive” means independent given the class”](../11_Classification_Part_1/index.html#/independence) · [Handout](../11_Classification_Part_1/handout.html#chapter-independence)  
-**Time:** 90 seconds, including debrief.
+**Placement:** [After “The “naive” assumption makes the likelihood simpler”](../11_Classification_Part_1/index.html#/independence) · [Handout](../11_Classification_Part_1/handout.html#chapter-independence)  
+**Time:** 120 seconds, including debrief.
 
-What simplifying assumption does Naive Bayes make about input features once the class is known?
+Within class 1, P(A)=0.8 and P(B)=0.5, but P(A and B)=0.5. Naive Bayes would use 0.8 × 0.5 = 0.4. What does this mismatch show?
 
-- **A.** It assumes every feature has exactly the same value.
-- **B.** It assumes features contain no information about the class.
-- **C.** It treats the features as independent within that class.
-- **D.** It assumes every possible class is always equally common.
+- **A.** The features must be independent when all classes are pooled.
+- **B.** The class priors must be equal.
+- **C.** Conditional independence fails within this class, so multiplying the feature likelihoods misstates their joint evidence.
+- **D.** Every label predicted by Naive Bayes must be wrong.
 
-**Answer:** C. It treats the features as independent within that class.
+**Answer:** C. Conditional independence fails within this class, so multiplying the feature likelihoods misstates their joint evidence.
 
-The “naive” assumption is conditional independence: within a given class, the model combines feature evidence as if the features were independent.
+Naive Bayes assumes feature independence given a class. Under independence the joint probability is the product, but here 0.5 differs from 0.4. This does not imply every classification decision fails.
 
 **Misconception:** Confusing conditional independence with identical features or no useful information.
 
-**Facilitation:** Give students a moment to answer, then explain the correct choice in everyday language and address the misconception.
+**Facilitation:** Ask students to compute or reason individually, compare with a neighbor, then explain why the tempting alternative fails.
 
-### L05-C05 · Core · Prediction / intuition
+### L05-C05 · Core · Apply the concept to a concrete case
 
-**Placement:** [Before “Explore a sigmoid and its decision threshold”](../11_Classification_Part_1/index.html#/logistic-lab) · [Handout](../11_Classification_Part_1/handout.html#chapter-logistic-lab)  
-**Time:** 90 seconds, including debrief.
+**Placement:** [Before “Try the sigmoid: change the score, then read the label”](../11_Classification_Part_1/index.html#/logistic-lab) · [Handout](../11_Classification_Part_1/handout.html#chapter-logistic-lab)  
+**Time:** 120 seconds, including debrief.
 
-A spam filter flags emails when their spam score is at least 0.5. If we lower the cutoff to 0.2 and keep all scores fixed, what can happen?
+A fixed model gives probabilities (0.15, 0.35, 0.60, 0.90) for true labels (0, 1, 0, 1). Lower the positive threshold from 0.50 to 0.30. What changes?
 
-- **A.** Fewer emails must be flagged as spam.
-- **B.** Every email’s score is automatically recalculated.
-- **C.** The cutoff can never affect a decision.
-- **D.** More emails may be flagged as spam.
+- **A.** The probabilities increase for every observation.
+- **B.** True positives stay at 1 and false positives fall to 0.
+- **C.** The model must be retrained before making new decisions.
+- **D.** True positives rise from 1 to 2, false positives stay at 1, and the probabilities remain unchanged.
 
-**Answer:** D. More emails may be flagged as spam.
+**Answer:** D. True positives rise from 1 to 2, false positives stay at 1, and the probabilities remain unchanged.
 
-A lower cutoff admits scores that previously fell below the threshold. It changes decisions without changing the fitted scores.
+Only the 0.35 case crosses the new threshold. It is a true positive. The 0.60 case remains a false positive. Thresholding changes labels, not the fixed probability estimates.
 
 **Misconception:** Confusing a decision cutoff with model training.
 
-**Facilitation:** Invite a guess before teaching the idea. Ask one student for their reasoning, then use the next explanation or demonstration to revisit the answer. Do not grade prior knowledge.
+**Facilitation:** Ask students to compute or reason individually, compare with a neighbor, then explain why the tempting alternative fails.
 
-### L05-O01 · Optional · Optional / basic extension
+### L05-C06 · Core · Apply the concept to a concrete case
 
-**Placement:** [After “Change the costs and the best decision changes”](../11_Classification_Part_1/index.html#/decision-lab) · [Handout](../11_Classification_Part_1/handout.html#chapter-decision-lab)  
-**Time:** 90 seconds, including debrief.
+**Placement:** [Before “A good probability model makes the observed labels plausible”](../11_Classification_Part_1/index.html#/likelihood-intuition) · [Handout](../11_Classification_Part_1/handout.html#chapter-likelihood-intuition)  
+**Time:** 120 seconds, including debrief.
 
-In a screening task, missing a real problem is much more costly than a false alarm. What tradeoff might we accept?
+Two labels are (1, 0). Model A predicts class-1 probabilities (0.9, 0.9); model B predicts (0.6, 0.4). Assuming independent outcomes, which has greater likelihood for the observed labels?
 
-- **A.** More missed problems just to avoid every false alarm.
-- **B.** A guarantee of making neither kind of mistake.
-- **C.** Ignoring the different costs of the two errors.
-- **D.** More false alarms in order to miss fewer real problems.
+- **A.** A, because its two probabilities are larger.
+- **B.** B: its likelihood is 0.36, four times A’s likelihood of 0.09.
+- **C.** They tie because each predicts one positive probability above 0.5.
+- **D.** A: its likelihood is 0.81, versus 0.24 for B.
 
-**Answer:** D. More false alarms in order to miss fewer real problems.
+**Answer:** B. B: its likelihood is 0.36, four times A’s likelihood of 0.09.
 
-A decision threshold can reflect unequal error costs. Improving one error rate may worsen another.
-
-**Misconception:** Assuming one threshold is best for every application.
-
-**Facilitation:** Give students a moment to answer, then explain the correct choice in everyday language and address the misconception.
-
-### L05-O02 · Optional · Optional / basic extension
-
-**Placement:** [After “One unseen category should not erase a class”](../11_Classification_Part_1/index.html#/smoothing) · [Handout](../11_Classification_Part_1/handout.html#chapter-smoothing)  
-**Time:** 90 seconds, including debrief.
-
-Why might Naive Bayes use smoothing for a word that never appeared in one class’s training examples?
-
-- **A.** To avoid treating that unseen word as completely impossible in the class.
-- **B.** To guarantee that all future messages are classified correctly.
-- **C.** To delete all the other words from the model.
-- **D.** To avoid needing any labeled training messages.
-
-**Answer:** A. To avoid treating that unseen word as completely impossible in the class.
-
-A missing observation need not mean a truly impossible event. Smoothing avoids a zero estimate from limited data.
-
-**Misconception:** Equating “not seen in this sample” with “impossible”.
-
-**Facilitation:** Give students a moment to answer, then explain the correct choice in everyday language and address the misconception.
-
-## 12 · Classification · Part 2
-
-4 core + 1 optional. Core budget: approximately 5.5 minutes.
-
-[Core import](imports/12_Classification_Part_2.xlsx) · [Optional import](imports/optional/12_Classification_Part_2_optional.xlsx)
-
-### L05-C06 · Core · Prediction / intuition
-
-**Placement:** [Before “Minimize negative log likelihood”](../12_Classification_Part_2/index.html#/log-loss) · [Handout](../12_Classification_Part_2/handout.html#chapter-log-loss)  
-**Time:** 60 seconds, including debrief.
-
-The correct label for a training photo is “cat”. Which prediction gives the correct label more probability?
-
-- **A.** Cat: 10%; dog: 90%.
-- **B.** Cat: 90%; dog: 10%.
-- **C.** Cat: 30%; dog: 70%.
-- **D.** Cat: 50%; dog: 50%.
-
-**Answer:** B. Cat: 90%; dog: 10%.
-
-The first prediction gives the observed class the highest probability. Log loss rewards this, while strongly penalizing confident wrong predictions.
+For y=1 use p, and for y=0 use 1−p. Thus A gives 0.9×0.1=0.09 and B gives 0.6×0.6=0.36. A high class-1 probability is unfavorable for an observed zero.
 
 **Misconception:** Thinking any confident prediction is good, even when it favors the wrong class.
 
-**Facilitation:** Invite a guess before teaching the idea. Ask one student for their reasoning, then use the next explanation or demonstration to revisit the answer. Do not grade prior knowledge.
+**Facilitation:** Ask students to compute or reason individually, compare with a neighbor, then explain why the tempting alternative fails.
 
-### L05-C07 · Core · Prediction / intuition
+### L05-O01 · Optional · Apply the concept to a concrete case
 
-**Placement:** [Before “Move a query and inspect the neighbors that vote”](../12_Classification_Part_2/index.html#/neighbors-lab) · [Handout](../12_Classification_Part_2/handout.html#chapter-neighbors-lab)  
-**Time:** 60 seconds, including debrief.
+**Placement:** [After “If we knew the true probabilities, which label should we choose?”](../11_Classification_Part_1/index.html#/bayes-rule) · [Handout](../11_Classification_Part_1/handout.html#chapter-bayes-rule)  
+**Time:** 120 seconds, including debrief.
 
-A new point’s three nearest labeled neighbors are two cats and one dog. What does a simple majority vote predict?
+P(class 1 | x)=0.30. A false positive costs 1 and a false negative costs 4; correct decisions cost 0. Which decision minimizes expected loss?
 
-- **A.** Dog.
-- **B.** A new third category.
-- **C.** There is a tie.
-- **D.** Cat.
+- **A.** Predict 0 because 0.30 is below 0.50.
+- **B.** Predict 0 because its expected loss is 0.30.
+- **C.** Both decisions have the same expected loss.
+- **D.** Predict 1: its expected loss is 0.70, versus 1.20 for predicting 0.
 
-**Answer:** D. Cat.
+**Answer:** D. Predict 1: its expected loss is 0.70, versus 1.20 for predicting 0.
 
-Two of the three neighbors vote cat, so the majority is cat. This is the basic K-nearest-neighbors rule.
+Predicting 1 is wrong with probability 0.70 and costs 1 then. Predicting 0 is wrong with probability 0.30 and costs 4 then. Compare 0.70×1 with 0.30×4.
+
+**Misconception:** Assuming one threshold is best for every application.
+
+**Facilitation:** Ask students to compute or reason individually, compare with a neighbor, then explain why the tempting alternative fails.
+
+### L05-O02 · Optional · Apply the concept to a concrete case
+
+**Placement:** [After “How do we estimate each feature distribution?”](../11_Classification_Part_1/index.html#/feature-distributions) · [Handout](../11_Classification_Part_1/handout.html#chapter-feature-distributions)  
+**Time:** 120 seconds, including debrief.
+
+A categorical feature has 3 possible values. In a class with 5 training cases, one value is never observed. With additive smoothing α=1, what probability is assigned to that value?
+
+- **A.** (0 + 1)/(5 + 3) = 1/8.
+- **B.** (0 + 1)/(5 + 1) = 1/6.
+- **C.** 0/5 = 0.
+- **D.** 1/3, regardless of the other observed counts.
+
+**Answer:** A. (0 + 1)/(5 + 3) = 1/8.
+
+Add one pseudo-count to each of the three categories, so the numerator becomes 1 and the denominator becomes 5+3=8.
+
+**Misconception:** Equating “not seen in this sample” with “impossible”.
+
+**Facilitation:** Ask students to compute or reason individually, compare with a neighbor, then explain why the tempting alternative fails.
+
+## 12 · Classification · Part 2
+
+3 core + 1 optional. Core budget: approximately 7 minutes.
+
+[Core import](imports/12_Classification_Part_2.xlsx) · [Optional import](imports/optional/12_Classification_Part_2_optional.xlsx)
+
+### L05-C07 · Core · Apply the concept to a concrete case
+
+**Placement:** [Before “KNN: inspect the neighbors, then count their votes”](../12_Classification_Part_2/index.html#/neighbors-lab) · [Handout](../12_Classification_Part_2/handout.html#chapter-neighbors-lab)  
+**Time:** 120 seconds, including debrief.
+
+The 3 nearest neighbors have (class, distance): (0, 0.1), (1, 0.5), (1, 0.6). What do uniform and inverse-distance voting predict?
+
+- **A.** Both predict 1 because two of the three labels are 1.
+- **B.** Both predict 0 because the closest point has label 0.
+- **C.** Uniform predicts 0, while inverse-distance predicts 1.
+- **D.** Uniform predicts 1, while inverse-distance predicts 0 because weight 10 exceeds 2 + 1/0.6.
+
+**Answer:** D. Uniform predicts 1, while inverse-distance predicts 0 because weight 10 exceeds 2 + 1/0.6.
+
+Uniform voting counts two class-1 neighbors against one class-0 neighbor. Inverse-distance totals are 10 for class 0 and about 3.67 for class 1.
 
 **Misconception:** Ignoring the majority of the selected neighbors.
 
-**Facilitation:** Invite a guess before teaching the idea. Ask one student for their reasoning, then use the next explanation or demonstration to revisit the answer. Do not grade prior knowledge.
+**Facilitation:** Ask students to compute or reason individually, compare with a neighbor, then explain why the tempting alternative fails.
 
-### L05-C08 · Core · Prediction / intuition
+### L05-C08 · Core · Apply the concept to a concrete case
 
-**Placement:** [Before “Select K before revealing the test score”](../12_Classification_Part_2/index.html#/validation-lab) · [Handout](../12_Classification_Part_2/handout.html#chapter-validation-lab)  
-**Time:** 90 seconds, including debrief.
+**Placement:** [Before “Choose K using validation, then reveal the test”](../12_Classification_Part_2/index.html#/validation-lab) · [Handout](../12_Classification_Part_2/handout.html#chapter-validation-lab)  
+**Time:** 120 seconds, including debrief.
 
-You are choosing among several classifiers. Which data should you use to compare choices while keeping a final test fair?
+K=1 gives 100% training and 60% validation accuracy. K=9 gives 85% training and 80% validation accuracy. Which next step best estimates generalization after selecting K?
 
-- **A.** The final test set after every change, keeping only the best score.
-- **B.** Only the examples each model trained on.
-- **C.** A validation set, leaving the final test set unused until the choice is made.
-- **D.** The final test answers as extra training features.
+- **A.** Choose K=1 because training accuracy is perfect.
+- **B.** Try many K values on the test set and report the best test result.
+- **C.** Choose K=9 using validation, fix the procedure, then assess it on the untouched test set.
+- **D.** Average training and validation accuracy and skip the test set.
 
-**Answer:** C. A validation set, leaving the final test set unused until the choice is made.
+**Answer:** C. Choose K=9 using validation, fix the procedure, then assess it on the untouched test set.
 
-Validation supports model selection. Reserving a separate final test avoids choosing a model to fit that test.
+Training performance can be optimistic, especially when a point is its own nearest neighbor. Select K using validation evidence and reserve the final test observations for the fixed procedure.
 
 **Misconception:** Repeatedly tuning on the final test while still calling it an independent test.
 
-**Facilitation:** Invite a guess before teaching the idea. Ask one student for their reasoning, then use the next explanation or demonstration to revisit the answer. Do not grade prior knowledge.
+**Facilitation:** Ask students to compute or reason individually, compare with a neighbor, then explain why the tempting alternative fails.
 
-### L05-C09 · Core · Exit / one takeaway
+### L05-C09 · Core · Connect class imbalance, decisions and validation
 
-**Placement:** [After “Estimate uncertainty. Make a decision. Check it.”](../12_Classification_Part_2/index.html#/summary) · [Handout](../12_Classification_Part_2/handout.html#chapter-summary)  
-**Time:** 120 seconds, including debrief.
+**Placement:** [After “What nearest neighbors can tell us”](../12_Classification_Part_2/index.html#/summary) · [Handout](../12_Classification_Part_2/handout.html#chapter-summary)  
+**Time:** 180 seconds, including debrief.
 
-A spam filter wrongly blocks an important email. In one sentence, explain why counting only its correct predictions might miss something important.
+A message classifier predicts “ordinary” for all 100 messages: 98 ordinary and 2 urgent. It reports 98% accuracy. Explain what this hides, how you would choose K or a decision threshold, and which observations should provide the final assessment.
 
 
 **Answer:** Suggested rubric (no automatic answer key)
 
-Different mistakes have different consequences. Overall accuracy can hide harmful false alarms or missed spam; accept a clear practical explanation.
+Urgent recall is zero. Choose K, thresholds and preprocessing using training/validation data and task costs. Assess the fixed procedure on an untouched test set. High accuracy can hide complete failure on a rare class.
 
 **Misconception:** Thinking accuracy alone describes every consequence of a classifier.
 
-**Facilitation:** Accept a short answer in the student’s own words. Use a few responses to identify what needs revisiting; do not grade terminology.
+**Facilitation:** Discuss in pairs. Ask for one metric, one development decision and one final-assessment rule.
 
-### L05-O03 · Optional · Optional / basic extension
+### L05-O03 · Optional · Apply the concept to a concrete case
 
-**Placement:** [After “See a neighbor average become smoother”](../12_Classification_Part_2/index.html#/regression-lab) · [Handout](../12_Classification_Part_2/handout.html#chapter-regression-lab)  
-**Time:** 60 seconds, including debrief.
+**Placement:** [After “KNN regression: see every target in the average”](../12_Classification_Part_2/index.html#/regression-lab) · [Handout](../12_Classification_Part_2/handout.html#chapter-regression-lab)  
+**Time:** 120 seconds, including debrief.
 
-A nearest-neighbor regressor averages two nearby examples with values 2 and 6. What does it predict?
+A KNN regressor selects targets 2, 6 and 10 with weights 2, 1 and 1. What prediction does the weighted-neighbor mean return?
 
-- **A.** 2.
-- **B.** 6.
-- **C.** 8.
-- **D.** 4.
+- **A.** 6, because KNN always takes the ordinary mean.
+- **B.** 20, because weights multiply the targets.
+- **C.** 4, because only the largest weight matters.
+- **D.** (2×2 + 1×6 + 1×10)/(2 + 1 + 1) = 5.
 
-**Answer:** D. 4.
+**Answer:** D. (2×2 + 1×6 + 1×10)/(2 + 1 + 1) = 5.
 
-The average is (2+6)/2=4. Neighbor methods can average numeric targets as well as vote on classes.
+A weighted mean divides the weighted sum of targets by the sum of weights. Here the numerator is 20 and the denominator is 4.
 
 **Misconception:** Summing neighbors’ values without dividing by their number.
 
-**Facilitation:** Give students a moment to answer, then explain the correct choice in everyday language and address the misconception.
+**Facilitation:** Ask students to compute or reason individually, compare with a neighbor, then explain why the tempting alternative fails.
 
 ## 13 · Classification · Part 3
 
-6 core + 1 optional. Core budget: approximately 8 minutes.
+4 core + 0 optional. Core budget: approximately 7 minutes.
 
 [Core import](imports/13_Classification_Part_3.xlsx) · [Optional import](imports/optional/13_Classification_Part_3_optional.xlsx)
 
-### L06-C01 · Core · Opening / everyday intuition
+### L06-C01 · Core · Prediction / threshold transfer
 
-**Placement:** [Before “Move the threshold and change the logic”](../13_Classification_Part_3/index.html#/threshold-lab) · [Handout](../13_Classification_Part_3/handout.html#chapter-threshold-lab)  
-**Time:** 60 seconds, including debrief.
-
-An alarm should activate only when BOTH switches are on. Which input should activate it?
-
-- **A.** Switch 1 on and switch 2 on.
-- **B.** Switch 1 on and switch 2 off.
-- **C.** Switch 1 off and switch 2 on.
-- **D.** Both switches off.
-
-**Answer:** A. Switch 1 on and switch 2 on.
-
-Both conditions must hold. This is the AND rule that the threshold-unit demonstration will represent.
-
-**Misconception:** Confusing “both” with “at least one”.
-
-**Facilitation:** Invite a guess before teaching the idea. Ask one student for their reasoning, then use the next explanation or demonstration to revisit the answer. Do not grade prior knowledge.
-
-### L06-C02 · Core · Check / core understanding
-
-**Placement:** [After “The score moves by a squared input length”](../13_Classification_Part_3/index.html#/update-intuition) · [Handout](../13_Classification_Part_3/handout.html#chapter-update-intuition)  
+**Placement:** [Before “How does moving the boundary change AND?”](../13_Classification_Part_3/index.html#/threshold-lab) · [Handout](../13_Classification_Part_3/handout.html#chapter-threshold-lab)  
 **Time:** 90 seconds, including debrief.
 
-A perceptron predicts the wrong class for a training example. What is the purpose of its weight update?
+A neuron adds two binary inputs and predicts 1 when their sum is at least b. It starts with b = 1.9 and then switches to b = 1. Which predictions change?
 
-- **A.** To move its decision rule toward giving this example the correct label.
-- **B.** To make its prediction on this example even less correct on purpose.
-- **C.** To remove every other training example.
-- **D.** To prove it will now classify every possible example correctly.
+- **A.** Only (1, 1) changes from 1 to 0.
+- **B.** Only (0, 0) changes from 0 to 1.
+- **C.** Both (0, 1) and (1, 0) change from 0 to 1.
+- **D.** (0, 1), (1, 0), and (1, 1) all change from 0 to 1.
 
-**Answer:** A. To move its decision rule toward giving this example the correct label.
+**Answer:** C. Both (0, 1) and (1, 0) change from 0 to 1.
 
-The update uses the error as feedback. Fixing one mistake does not guarantee that every other example is now correct.
+The sums are 0, 1, 1, and 2. Lowering b to 1 makes both inputs with sum 1 reach the threshold. The other two predictions stay the same, so the unit switches from AND to OR.
 
-**Misconception:** Expecting one update to solve the entire classification problem.
+**Misconception:** Forgetting that equality reaches the threshold, or counting a point that already fired as a change.
 
-**Facilitation:** Give students a moment to answer, then explain the correct choice in everyday language and address the misconception.
+**Facilitation:** Have students predict the change, then move the slider from 1.9 to 1 and check the four rows.
 
-### L06-C03 · Core · Prediction / intuition
+### L06-C02 · Core · Check / trace a perceptron update
 
-**Placement:** [Before “Step through the perceptron’s learning process”](../13_Classification_Part_3/index.html#/training-lab) · [Handout](../13_Classification_Part_3/handout.html#chapter-training-lab)  
-**Time:** 60 seconds, including debrief.
+**Placement:** [After “Why does the correction move the score?”](../13_Classification_Part_3/index.html#/update-intuition) · [Handout](../13_Classification_Part_3/handout.html#chapter-update-intuition)  
+**Time:** 120 seconds, including debrief.
 
-A classifier gets one training example right. Is that enough to know it gets every training example right?
+A perceptron sees an example with features (2, −1) and true label 1. Its score is −7, so it predicts 0. The bias uses a constant input of 1. After one standard update with learning rate 1, what are the new score and prediction for that same example?
 
-- **A.** Yes. One correct example proves the whole dataset is correct.
-- **B.** No. The other examples must also be checked.
-- **C.** Yes, if that example was shown first.
-- **D.** No, because no classifier can ever get more than one example right.
+- **A.** Score −2, prediction 0.
+- **B.** Score +1, prediction 1.
+- **C.** Score −13, prediction 0.
+- **D.** Score −1, prediction 0.
 
-**Answer:** B. No. The other examples must also be checked.
+**Answer:** D. Score −1, prediction 0.
 
-One success is evidence only about that example. Checking a whole training pass is different from checking one case.
+The error is +1. The score increases by 1² + 2² + (−1)² = 6, because the score uses the input components again after the update. The new score is −7 + 6 = −1, so the prediction is still 0.
 
-**Misconception:** Generalizing correctness from a single example.
+**Misconception:** Leaving out the bias term, reversing the direction of the update, or assuming one update must fix the prediction.
 
-**Facilitation:** Invite a guess before teaching the idea. Ask one student for their reasoning, then use the next explanation or demonstration to revisit the answer. Do not grade prior knowledge.
+**Facilitation:** Ask where each of the three squared terms comes from and why the negative feature still increases the score.
 
-### L06-C04 · Core · Prediction / intuition
+### L06-C03 · Core · Prediction / interpret two training passes
 
-**Placement:** [Before “XOR exposes the limit of one linear separator”](../13_Classification_Part_3/index.html#/xor-lab) · [Handout](../13_Classification_Part_3/handout.html#chapter-xor-lab)  
+**Placement:** [Before “Step through perceptron learning”](../13_Classification_Part_3/index.html#/training-lab) · [Handout](../13_Classification_Part_3/handout.html#chapter-training-lab)  
 **Time:** 90 seconds, including debrief.
 
-Two classes are arranged so that no straight line can separate them. What kind of change could help?
+Two perceptron runs each make one full pass through the same four examples. Run A gets the first three right, then makes an update on the last. Run B gets all four right and makes no updates. What can you conclude about the final weights?
 
-- **A.** Draw the same straight line in a different color.
-- **B.** Use a model that can make a curved or more complex boundary.
-- **C.** Repeat the same straight-line attempt and assume geometry will change.
-- **D.** Rename the two classes without moving any points.
+- **A.** Run B's final weights classify all four correctly. Run A's final weights need a fresh check.
+- **B.** Run B's final weights classify all four correctly. Run A's final weights must still misclassify the last point.
+- **C.** Run A's final weights classify the first three correctly. Run B's final weights classify all four correctly.
+- **D.** Run A's final weights classify all four correctly. Run B needs another pass to establish that.
 
-**Answer:** B. Use a model that can make a curved or more complex boundary.
+**Answer:** A. Run B's final weights classify all four correctly. Run A's final weights need a fresh check.
 
-If the boundary shape is too limited, we need a richer representation or model. More repetitions alone do not remove that limitation.
+Run B used one fixed set of weights for all four predictions. Run A changed its weights after the earlier checks, so even a previously correct prediction could change. The last update might also leave the last point wrong.
 
-**Misconception:** Trying to solve a model-capacity problem solely by training longer.
+**Misconception:** Treating predictions made with earlier weights as evidence about the final weights.
 
-**Facilitation:** Invite a guess before teaching the idea. Ask one student for their reasoning, then use the next explanation or demonstration to revisit the answer. Do not grade prior knowledge.
+**Facilitation:** Ask which set of weights produced each recorded prediction, then use the lab to look for a pass with zero updates.
+
+### L06-C04 · Core · Prediction / reason about linear separability
+
+**Placement:** [Before “Try to separate the four XOR points”](../13_Classification_Part_3/index.html#/xor-lab) · [Handout](../13_Classification_Part_3/handout.html#chapter-xor-lab)  
+**Time:** 120 seconds, including debrief.
+
+For XOR, only (1, 0) and (0, 1) should have label 1. A perceptron uses score s = w₀ + w₁x₁ + w₂x₂ and predicts 1 when s ≥ 0. Assume it predicts the labels of (0, 0), (1, 0), and (0, 1) correctly. What must happen at (1, 1)?
+
+- **A.** Its score must be negative because the score at (0, 0) is negative.
+- **B.** Its score must be positive because w₁ ≥ −w₀, w₂ ≥ −w₀, and w₀ < 0.
+- **C.** Its score must be zero because each of the single-switch cases reaches exactly zero.
+- **D.** Its score can be negative or positive depending on how long the perceptron trains.
+
+**Answer:** B. Its score must be positive because w₁ ≥ −w₀, w₂ ≥ −w₀, and w₀ < 0.
+
+At (0, 0), the score gives w₀ < 0. The two single-switch cases require w₁ ≥ −w₀ and w₂ ≥ −w₀. Adding the weights and bias gives a score of at least −w₀ > 0 at (1, 1), so the perceptron predicts 1 there and misses the XOR label.
+
+**Misconception:** Assuming the fourth score is independent of the first three, or treating the class-1 threshold as an equality.
+
+**Facilitation:** Have students write the three inequalities and combine them. Then use the plot to see the same contradiction as a geometric constraint.
+
+## 14 · Classification · Part 4
+
+5 core + 3 optional. Core budget: approximately 8 minutes.
+
+[Core import](imports/14_Classification_Part_4.xlsx) · [Optional import](imports/optional/14_Classification_Part_4_optional.xlsx)
 
 ### L06-C05 · Core · Prediction / intuition
 
-**Placement:** [Before “Normalize the score by the length of w”](../13_Classification_Part_3/index.html#/distance) · [Handout](../13_Classification_Part_3/handout.html#chapter-distance)  
+**Placement:** [Before “Convert a raw score into a geometric distance”](../14_Classification_Part_4/index.html#/distance) · [Handout](../14_Classification_Part_4/handout.html#chapter-distance)
 **Time:** 90 seconds, including debrief.
 
 A point lies very close to a classifier’s dividing line. What could a small change to that point’s measured features do?
@@ -1508,7 +1514,7 @@ A nearby point can cross the boundary after a small change. Distance to the boun
 
 ### L06-C06 · Core · Check / core understanding
 
-**Placement:** [After “Slack variables make room for violations”](../13_Classification_Part_3/index.html#/soft-margin) · [Handout](../13_Classification_Part_3/handout.html#chapter-soft-margin)  
+**Placement:** [After “Slack lets the classifier trade violations for margin”](../14_Classification_Part_4/index.html#/soft-margin) · [Handout](../14_Classification_Part_4/handout.html#chapter-soft-margin)
 **Time:** 90 seconds, including debrief.
 
 Why does a soft-margin SVM allow some training points to violate the margin?
@@ -1526,35 +1532,9 @@ Soft margins balance a wide separation with penalties for violations, making the
 
 **Facilitation:** Give students a moment to answer, then explain the correct choice in everyday language and address the misconception.
 
-### L06-O01 · Optional · Optional / basic extension
-
-**Placement:** [After “A margin violation need not be a wrong label”](../13_Classification_Part_3/index.html#/hinge) · [Handout](../13_Classification_Part_3/handout.html#chapter-hinge)  
-**Time:** 90 seconds, including debrief.
-
-For an SVM, can a correctly classified point still lie too close to the boundary to satisfy the desired margin?
-
-- **A.** Yes. A point can be on the correct side but still inside the margin.
-- **B.** No. Every correct prediction must be far from the boundary.
-- **C.** No. Only misclassified points have a distance to the boundary.
-- **D.** Yes, but only when the model has no features.
-
-**Answer:** A. Yes. A point can be on the correct side but still inside the margin.
-
-Correct classification and satisfying the margin are different conditions. Hinge loss can penalize a correct point inside the margin.
-
-**Misconception:** Confusing a correct label with a sufficiently large margin.
-
-**Facilitation:** Give students a moment to answer, then explain the correct choice in everyday language and address the misconception.
-
-## 14 · Classification · Part 4
-
-3 core + 2 optional. Core budget: approximately 5 minutes.
-
-[Core import](imports/14_Classification_Part_4.xlsx) · [Optional import](imports/optional/14_Classification_Part_4_optional.xlsx)
-
 ### L06-C07 · Core · Prediction / intuition
 
-**Placement:** [Before “Rotate the original data in the lifted space”](../14_Classification_Part_4/index.html#/lift-lab) · [Handout](../14_Classification_Part_4/handout.html#chapter-lift-lab)  
+**Placement:** [Before “Rotate the lifted points and inspect the separating plane”](../14_Classification_Part_4/index.html#/lift-lab) · [Handout](../14_Classification_Part_4/handout.html#chapter-lift-lab)
 **Time:** 90 seconds, including debrief.
 
 Points near the center belong to one class; points in a surrounding ring belong to another. Which extra feature could help describe this pattern?
@@ -1574,7 +1554,7 @@ Distance from the center captures a useful distinction that a single straight bo
 
 ### L06-C08 · Core · Prediction / intuition
 
-**Placement:** [Before “Check the quadratic kernel identity numerically”](../14_Classification_Part_4/index.html#/kernel-lab) · [Handout](../14_Classification_Part_4/handout.html#chapter-kernel-lab)  
+**Placement:** [Before “Check the quadratic kernel with two inputs”](../14_Classification_Part_4/index.html#/kernel-lab) · [Handout](../14_Classification_Part_4/handout.html#chapter-kernel-lab)
 **Time:** 90 seconds, including debrief.
 
 What is the main benefit of a kernel in the SVM examples?
@@ -1594,7 +1574,7 @@ A kernel can compute similarities corresponding to a richer feature representati
 
 ### L06-C09 · Core · Exit / one takeaway
 
-**Placement:** [After “Learn the line. Choose the margin. Change the space.”](../14_Classification_Part_4/index.html#/summary) · [Handout](../14_Classification_Part_4/handout.html#chapter-summary)  
+**Placement:** [After “From maximum margins to the kernel trick”](../14_Classification_Part_4/index.html#/summary) · [Handout](../14_Classification_Part_4/handout.html#chapter-summary)
 **Time:** 120 seconds, including debrief.
 
 An SVM gets every training example right. What would you check before trusting it on new examples?
@@ -1608,9 +1588,29 @@ Evaluate on suitable held-out data. Accept a short answer about checking new cas
 
 **Facilitation:** Accept a short answer in the student’s own words. Use a few responses to identify what needs revisiting; do not grade terminology.
 
+### L06-O01 · Optional · Optional / basic extension
+
+**Placement:** [After “A point can violate the margin and still be correct”](../14_Classification_Part_4/index.html#/hinge) · [Handout](../14_Classification_Part_4/handout.html#chapter-hinge)
+**Time:** 90 seconds, including debrief.
+
+For an SVM, can a correctly classified point still lie too close to the boundary to satisfy the desired margin?
+
+- **A.** Yes. A point can be on the correct side but still inside the margin.
+- **B.** No. Every correct prediction must be far from the boundary.
+- **C.** No. Only misclassified points have a distance to the boundary.
+- **D.** Yes, but only when the model has no features.
+
+**Answer:** A. Yes. A point can be on the correct side but still inside the margin.
+
+Correct classification and satisfying the margin are different conditions. Hinge loss can penalize a correct point inside the margin.
+
+**Misconception:** Confusing a correct label with a sufficiently large margin.
+
+**Facilitation:** Give students a moment to answer, then explain the correct choice in everyday language and address the misconception.
+
 ### L06-O02 · Optional · Optional / basic extension
 
-**Placement:** [After “Only pairwise inner products remain”](../14_Classification_Part_4/index.html#/dual) · [Handout](../14_Classification_Part_4/handout.html#chapter-dual)  
+**Placement:** [After “Substitute the weights to get the dual”](../14_Classification_Part_4/index.html#/dual) · [Handout](../14_Classification_Part_4/handout.html#chapter-dual)
 **Time:** 90 seconds, including debrief.
 
 Why are support vectors important in an SVM?
@@ -1630,7 +1630,7 @@ Support vectors are the training observations with a role in determining the sep
 
 ### L06-O03 · Optional · Optional / basic extension
 
-**Placement:** [After “The Gram matrix must be positive semidefinite”](../14_Classification_Part_4/index.html#/valid-kernel) · [Handout](../14_Classification_Part_4/handout.html#chapter-valid-kernel)  
+**Placement:** [After “A valid kernel behaves like an inner product”](../14_Classification_Part_4/index.html#/valid-kernel) · [Handout](../14_Classification_Part_4/handout.html#chapter-valid-kernel)
 **Time:** 90 seconds, including debrief.
 
 Why should we compare a flexible kernel model with a simpler model on validation data?
