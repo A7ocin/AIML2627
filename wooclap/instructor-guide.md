@@ -1428,7 +1428,7 @@ The sums are 0, 1, 1, and 2. Lowering b to 1 makes both inputs with sum 1 reach 
 
 ### L06-C02 · Core · Check / trace a perceptron update
 
-**Placement:** [After “Why does the correction move the score?”](../13_Classification_Part_3/index.html#/update-intuition) · [Handout](../13_Classification_Part_3/handout.html#chapter-update-intuition)  
+**Placement:** [After “Which formulas do we use for one update?”](../13_Classification_Part_3/index.html#/perceptron-question-formulas) · [Handout](../13_Classification_Part_3/handout.html#chapter-perceptron-question-formulas)  
 **Time:** 120 seconds, including debrief.
 
 A perceptron sees an example with features (2, −1) and true label 1. Its score is −7, so it predicts 0. The bias uses a constant input of 1. After one standard update with learning rate 1, what are the new score and prediction for that same example?

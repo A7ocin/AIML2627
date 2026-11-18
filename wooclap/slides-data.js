@@ -1207,7 +1207,7 @@ window.AIML_WOOCLAP = {
           "id": "L06-C02",
           "core": true,
           "type": "MCQ",
-          "slide": "update-intuition",
+          "slide": "perceptron-question-formulas",
           "when": "after",
           "purpose": "Check / trace a perceptron update",
           "stem": "A perceptron sees an example with features (2, −1) and true label 1. Its score is −7, so it predicts 0. The bias uses a constant input of 1. After one standard update with learning rate 1, what are the new score and prediction for that same example?",

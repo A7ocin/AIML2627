@@ -181,6 +181,14 @@
 #update-intuition .c34-step-explain p{margin:0;font-size:24px}
 .c34-step-substitution{margin:.25em 0;text-align:center}
 .c34-slide .c34-step-substitution{font-size:29px}
+.c34-formula-guide .c34-card{
+  display:grid;
+  grid-template-rows:auto minmax(168px,auto) 1fr;
+  gap:14px;
+}
+.c34-formula-guide .c34-card h3{margin:0}
+.c34-formula-guide .c34-card .c34-equation{display:grid;place-items:center;padding:10px}
+.c34-formula-guide .c34-card p{font-size:24px}
 .c34-solution{display:grid;gap:10px}
 .c34-solution-head,.c34-solution-row{
   display:grid;
