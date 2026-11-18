@@ -41,10 +41,12 @@ class Widget{
     l.yaxis.title.text='X₂ (second switch)';
     l.xaxis.tickvals=[0,1];
     l.yaxis.tickvals=[0,1];
-    const rows=this.traces.flatMap(trace=>trace.x.map((x,j)=>({x,y:trace.y[j],label:trace.name==='Class 1'?1:0})));
-    const truthTable=rows.map(row=>`<tr><td>${row.x}</td><td>${row.y}</td><td>${row.label}</td></tr>`).join('');
-    side=box('AND truth table',`<table aria-label="AND truth table"><thead><tr><th scope="col">X₁</th><th scope="col">X₂</th><th scope="col">Y (class)</th></tr></thead><tbody>${truthTable}</tbody></table>`)
-      +box('Selected point',`<p>(${t.x[i]}, ${t.y[i]}) has class ${t.name==='Class 1'?1:0}.</p>`);
+    const rows=this.traces.flatMap(trace=>trace.x.map((x,point)=>({trace,point,x,y:trace.y[point],label:trace.name==='Class 1'?1:0})));
+    const selectedTest=rows.findIndex(row=>row.trace===t&&row.point===i)+1;
+    const truthTable=rows.map((row,index)=>`<tr><td>${index+1}</td><td>${row.x}</td><td>${row.y}</td><td>${row.label}</td></tr>`).join('');
+    side=box('AND truth table',`<table aria-label="AND truth table"><thead><tr><th scope="col">Test <var>i</var></th><th scope="col">First switch<br><var>j</var> = 1</th><th scope="col">Second switch<br><var>j</var> = 2</th><th scope="col">Class Y</th></tr></thead><tbody>${truthTable}</tbody></table>`)
+      +box('Read the indices','<p>Observation index <var>i</var> picks the test (row).<br>Feature index <var>j</var> picks the switch (input column).<br>In test 3, switch 2 is off, so x<sub>32</sub> = 0.</p>')
+      +box('Selected point',`<p>Test <var>i</var> = ${selectedTest}. (${t.x[i]}, ${t.y[i]}) has class ${t.name==='Class 1'?1:0}.</p>`);
   }
   if(source==='cls_svm_margin'){l.xaxis.range=[-1.68,2.28];l.yaxis.range=[-1.35,1.35];l.yaxis.scaleanchor='x';l.yaxis.scaleratio=1;l.annotations=[{x:.454,y:.479,text:'w',showarrow:false,yshift:20,font:{color:C[3],size:21}}];}else{const xx=this.traces.flatMap(t=>t.x),yy=this.traces.flatMap(t=>t.y),xmin=Math.min(...xx),xmax=Math.max(...xx),ymin=Math.min(...yy),ymax=Math.max(...yy),pad=.15*Math.max(xmax-xmin,ymax-ymin);l.xaxis.range=[xmin-pad,xmax+pad];l.yaxis.range=[ymin-pad,ymax+pad];if(this.raw.layout.yaxis?.scaleanchor){l.yaxis.scaleanchor='x';l.yaxis.scaleratio=1;}}if(source!=='cls_and')side+=box('Inspect the geometry','<p>Hover for coordinates.<br>Use the legend to hide or show traces.</p>');if(source==='cls_svm_both_mod')side+=box('Measured minimum clearance','<p>Separator 1: 0.2537<br>Separator 2: 0.0600<br>Both have 100% training accuracy.</p>');}
  }

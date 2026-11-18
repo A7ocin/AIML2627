@@ -3,6 +3,9 @@
   const originals = new Map();
   document.querySelectorAll('.video-card').forEach(card => {
     originals.set(card, card.innerHTML);
+    card.addEventListener('keydown', event => {
+      if(event.target.closest('button')&&(event.key===' '||event.key==='Enter'))event.stopPropagation();
+    });
     card.addEventListener('click', event => {
       const button=event.target.closest('button');
       if(!button)return;

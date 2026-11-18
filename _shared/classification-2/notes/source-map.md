@@ -29,7 +29,7 @@ Part 3 ends with 6.2.2 (XOR). Part 4 starts with 6.3 (Support Vector Machines). 
 | --- | --- | --- |
 | Introduction | 3 | `part-roadmap`: separator, input space, and predicted classes |
 | 6.1 · McCulloch & Pitts Neuron | 3 | `and-lab`, `threshold`, `threshold-calculation`, `and-derivation`, `threshold-lab`: four inputs, aggregation, numerical evaluation of the step/indicator, strict and weak threshold inequalities, and the b = 1.9 separator |
-| 6.2 · Perceptron | 3 | `noisy-lab`, `perceptron`, `update`, `update-intuition`, `convergence`, `training-lab`, `perceptron-fit-lab`: both score forms, componentwise update, all three prediction-error cases, the full sum-of-squares argument, convergence, and the trained line |
+| 6.2 · Perceptron | 3 | `noisy-lab`, `perceptron`, `learn-perceptron-weights`, `update`, `update-intuition`, `convergence`, `training-lab`, `perceptron-fit-lab`: both score forms, componentwise update, all three prediction-error cases, the full sum-of-squares argument, convergence, and the trained line |
 | 6.2.1 · Learning rate | 3 | `learning-rate`, `training-lab`: positive η, scaled update, and a controlled comparison across rates |
 | 6.2.2 · What’s next | 3 | `xor-lab`, `xor-proof`: XOR truth table, linear limitation, and multilayer perceptron connection |
 | 6.3 · Support Vector Machines | 4 | `separators-lab` through `svm-prediction`: two equally accurate lines, normal and bias, signed distance, ±1 margin planes and class inequalities, combined constraint, both equivalent optimizations, and sign prediction |

@@ -8,20 +8,23 @@
     let current = 0;
 
     if (walk.hasAttribute('data-c34-previous')) {
+      const startingFormula = document.getElementById(walk.dataset.c34StartFormula)?.querySelector('.c34-equation');
       for (const [i, panel] of panels.entries()) {
         const heading = panel.querySelector('h3');
         const header = document.createElement('div');
         header.className = 'c34-panel-header';
         heading.before(header);
         header.append(heading);
-        if (i === 0) continue;
+        const formula = i === 0
+          ? startingFormula
+          : [...panels[i - 1].querySelectorAll(':scope > .c34-equation')].at(-1);
+        if (!formula) continue;
 
         const previous = document.createElement('div');
         previous.className = 'c34-panel-previous';
         const label = document.createElement('span');
-        label.textContent = `Previous step ${i}`;
-        const equations = panels[i - 1].querySelectorAll(':scope > .c34-equation');
-        previous.append(label, equations[equations.length - 1].cloneNode(true));
+        label.textContent = i === 0 ? 'Weight update rule' : `Previous step ${i}`;
+        previous.append(label, formula.cloneNode(true));
         header.append(previous);
       }
     }
