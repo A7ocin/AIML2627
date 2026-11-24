@@ -23,7 +23,7 @@ The source's expandable AND proof, perceptron update argument and quadratic-kern
 
 ## Current lecture split and equation coverage
 
-Part 3 ends with 6.2.2 (XOR). Part 4 starts with 6.3 (Support Vector Machines). Both decks and handouts follow the chapter order and retain the nine original datasets. The slide IDs below are stable.
+Part 3 ends with 6.2.2 (XOR). Part 4 covers 6.3 (Support Vector Machines). Part 5 starts at 6.4 (Nonlinear SVM), followed by 6.4.1 (The kernel trick). The decks and handouts follow that chapter order and retain the nine original datasets. Part 4 opens with nine recap slides covering probability models, neighbor voting, perceptron learning and two-dimensional geometry. Five interactive examples show inputs as points, feature weights as a normal, parallel bias shifts, score signs and normalized perpendicular distance. Their code and styles are in js/perceptron-geometry.js and css/perceptron-geometry.css. The slide IDs below are stable.
 
 | Source chapter | Pack | Coverage |
 | --- | --- | --- |
@@ -33,8 +33,8 @@ Part 3 ends with 6.2.2 (XOR). Part 4 starts with 6.3 (Support Vector Machines). 
 | 6.2.1 · Learning rate | 3 | `learning-rate`, `training-lab`: positive η, scaled update, and a controlled comparison across rates |
 | 6.2.2 · What’s next | 3 | `xor-lab`, `xor-proof`: XOR truth table, linear limitation, and multilayer perceptron connection |
 | 6.3 · Support Vector Machines | 4 | `separators-lab` through `svm-prediction`: two equally accurate lines, normal and bias, signed distance, ±1 margin planes and class inequalities, combined constraint, both equivalent optimizations, and sign prediction |
-| 6.4 · Nonlinear SVM | 4 | `circle-lab`, `feature-map`, `lift-lab`, `mapping-limits`, `mapped-primal`: original 2D and 3D data, paraboloid lift, separating plane, mapped dimension and bias, and constrained mapped objective |
-| 6.4.1 · The kernel trick | 4 | `feature-explosion` through `kernel-cost`: polynomial feature growth, Lagrangian and saddle problem, both derivatives and stationary relations, constrained dual, complete quadratic identity, Gaussian kernel, valid kernels, and computational cost |
+| 6.4 · Nonlinear SVM | 5 | `circle-lab`, `feature-map`, `lift-lab`, `mapping-limits`, `mapped-primal`: original 2D and 3D data, paraboloid lift, separating plane, mapped dimension and bias, and constrained mapped objective |
+| 6.4.1 · The kernel trick | 5 | `feature-explosion`, `lagrangian`, `stationarity`, `dual`, `kernel-replacement`: the source’s displayed formulas in order, ending at the definition of a kernel. The requested Lagrange multipliers video precedes the formal derivation. |
 
 The displayed formulas use the source notation b for the McCulloch & Pitts threshold, w₀ for the perceptron and SVM bias, yᵢ for the signed SVM target, and aᵢ for the Lagrange multiplier. The mathematical qualifications below apply to the current materials. The original combined-deck slide numbers and old labels below document the archived build.
 

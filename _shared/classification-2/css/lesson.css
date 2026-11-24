@@ -366,3 +366,55 @@
 }
 .c34-video .video-card button:is(:hover,:focus-visible) span{border-color:#62ddcb;outline:2px solid #62ddcb;outline-offset:3px}
 .c34-video figcaption{margin-top:10px;font-size:20px;color:#b9c8d7}
+
+.c34-margin-layout{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);gap:24px;align-items:center}
+.c34-margin-diagram{margin:0;padding:8px 14px 12px;background:#101722;border:1px solid #344155;border-radius:12px;color:#edf4fa;text-align:center}
+.c34-margin-diagram svg{display:block;width:100%;font-family:'Segoe UI',sans-serif}
+.c34-margin-diagram figcaption{font-size:.82em;line-height:1.4}
+.c34-margin-formulas{display:grid;gap:10px;min-width:0}
+.c34-margin-formulas h3,.c34-margin-formulas p{margin:0}
+.c34-slide .c34-margin-formulas h3{font-size:24px;color:#62ddcb}
+.c34-slide .c34-margin-formulas p{font-size:22px}
+.c34-reading .c34-margin-layout{margin:16px 0}
+.c34-reading .c34-margin-formulas .c34-equation{margin:0}
+@media(max-width:760px){.c34-reading .c34-margin-layout{grid-template-columns:1fr}}
+
+.c34-svm-demo{border:1px solid #344155;border-radius:12px;padding:18px 20px}
+.c34-slide .c34-svm-demo{background:#101722}
+.c34-svm-controls,.c34-svm-controls label{display:flex;align-items:center;gap:10px}
+.c34-svm-controls{flex-wrap:wrap;gap:12px 24px;margin-bottom:15px}
+.c34-svm-controls p{width:100%;margin:0}
+.c34-svm-controls input{width:115px;accent-color:#45d6c0}
+.c34-svm-controls output{min-width:3ch}
+.c34-svm-controls button{font:inherit;color:inherit;background:transparent;border:1px solid #628090;border-radius:7px;padding:6px 12px;cursor:pointer}
+.c34-svm-controls :is(button,input):focus-visible{outline:2px solid currentColor;outline-offset:4px}
+.c34-svm-results{display:grid;grid-template-columns:1.45fr .85fr 1fr;gap:14px;font-variant-numeric:tabular-nums}
+.c34-slide .c34-svm-results .c34-card{padding:14px 16px}
+.c34-slide .c34-svm-results h3{font-size:24px}
+.c34-slide .c34-svm-results p{font-size:25px}
+.c34-slide .c34-svm-results [data-svm-sum]{font-weight:650}
+.c34-reading .c34-svm-demo{margin:16px 0}
+@media(max-width:700px){.c34-reading .c34-svm-results{grid-template-columns:1fr}}
+
+.reveal #svm-prediction .slide-body{justify-content:center;gap:20px}
+#svm-prediction .c34-equation{font-size:46px;padding:16px 22px}
+#svm-prediction .c34-svm-controls{font-size:23px}
+#svm-prediction .c34-svm-results p{font-size:23px}
+
+.nlsvm-diagram{display:block;width:100%;margin:8px 0 12px;font:17px 'Segoe UI',sans-serif}
+#mapping-limits .nlsvm-diagram{max-height:310px}
+.nlsvm-single-note{grid-template-columns:1fr}
+
+
+.nlsvm-player{width:min(100%,1100px);margin:0 auto;text-align:center}
+.c34-reading .nlsvm-player{width:min(100%,880px);margin:16px auto}
+#lagrangian .c34-equation,#dual .c34-equation{font-size:30px}
+
+.nlsvm-source-formula mtd[columnalign="right"]{text-align:right}
+.nlsvm-source-formula mtd[columnalign="left"]{text-align:left}
+
+.nlsvm-video,.nlsvm-video-poster{display:block;width:100%;aspect-ratio:16/9;box-sizing:border-box;border:1px solid #344155;border-radius:12px;background:#101722}
+.nlsvm-video-poster{object-fit:contain}
+.nlsvm-player[data-embedded] .nlsvm-video-poster{display:none}
+.nlsvm-player .nlsvm-watch{display:block;margin-top:10px;font-size:20px}
+.nlsvm-player .nlsvm-watch span{display:inline-block;margin-top:5px;text-decoration:underline}

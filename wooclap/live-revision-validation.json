@@ -1298,7 +1298,7 @@
       "verified": true,
       "eventCode": "LQCRNNR",
       "src": "https://app.wooclap.com/events/LQCRNNR/questions/6aa8fec9f68598b6f23c1fae",
-      "title": "L06-C07 · Points near the center belong to one class; points in a surrounding ring belong to another. Which extra feature could help describe this pattern?",
+      "title": "L06-C07 · Use height z = x₁² + x₂². Class −1 has points (1, 1) and (−1, 0). Class +1 has (0, 2) and (−2, 1). Assign class +1 above the plane z = t. Which threshold separates all four points?",
       "choiceCount": 4,
       "correct": [
         2
@@ -1309,7 +1309,7 @@
       "verified": true,
       "eventCode": "LQCRNNR",
       "src": "https://app.wooclap.com/events/LQCRNNR/questions/6aa8fec9f68598b6f23c1fb3",
-      "title": "L06-C08 · What is the main benefit of a kernel in the SVM examples?",
+      "title": "L06-C08 · A kernel SVM uses s(x) = Σᵢ aᵢyᵢκ(xᵢ, x) + w₀. Its two support vectors have (aᵢ, yᵢ) = (0.5, +1) and (0.5, −1). Their kernel values with x are 3 and 4, respectively. The bias is 0.25. What are the score and predicted class?",
       "choiceCount": 4,
       "correct": [
         3
@@ -1320,7 +1320,7 @@
       "verified": true,
       "eventCode": "LQCRNNR",
       "src": "https://app.wooclap.com/events/LQCRNNR/questions/6aa8fec9f68598b6f23c1fb8",
-      "title": "L06-C09 · An SVM gets every training example right. What would you check before trusting it on new examples?",
+      "title": "L06-C09 · A classifier uses only height z = x₁² + x₂². Two points, (1, 1) and (−1, −1), have opposite labels. Explain why no threshold on z can separate them. Name one feature you could add that distinguishes these two points.",
       "choiceCount": 0,
       "correct": [],
       "settingsUnchanged": true
@@ -1340,7 +1340,7 @@
       "verified": true,
       "eventCode": "LQCRNNR",
       "src": "https://app.wooclap.com/events/LQCRNNR/questions/6aa90189f68598b6f241330f",
-      "title": "L06-O02 · Why are support vectors important in an SVM?",
+      "title": "L06-O02 · Four training points have labels (+1, +1, −1, −1). The hard-margin dual requires every aᵢ ≥ 0 and Σᵢ aᵢyᵢ = 0. Which multiplier vector satisfies both constraints?",
       "choiceCount": 4,
       "correct": [
         3
@@ -1351,7 +1351,7 @@
       "verified": true,
       "eventCode": "LQCRNNR",
       "src": "https://app.wooclap.com/events/LQCRNNR/questions/6aa90189f68598b6f2413314",
-      "title": "L06-O03 · Why should we compare a flexible kernel model with a simpler model on validation data?",
+      "title": "L06-O03 · On the same data split, a linear SVM scores 94% on training and 91% on validation. An RBF SVM scores 100% on training and 84% on validation. If validation accuracy is your selection criterion, what should you do next?",
       "choiceCount": 4,
       "correct": [
         1

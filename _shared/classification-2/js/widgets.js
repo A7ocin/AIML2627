@@ -8,7 +8,7 @@ class Widget{
  if(this.kind==='source'||this.kind==='source3d'){this.raw=COURSE_DATA[el.dataset.source];this.traces=this.raw.data.filter(t=>t.name.startsWith('Class '));controls=select('set','Inspect',this.traces.map(t=>t.name),this.traces[0].name)+select('point','Point',this.traces[0].x.map((_,i)=>String(i+1)),'1');foot='Original source chart · all numerical coordinates retained';if(this.kind==='source3d'){controls+=button('plane','Hide plane');hint='Drag to orbit · scroll to zoom';}}
  if(this.kind==='threshold'){controls=select('task','Target',['AND','OR'],'AND')+range('theta','Threshold b',-.5,2.5,.1,1.9);foot='Shading shows the predicted class. Markers show the target class.';hint='The line itself predicts class 1.';}
  if(this.kind==='training'){controls=select('dataset','Data',['AND','Noisy AND','XOR'],'AND')+select('eta','η',['0.25','1','4'],'1')+select('order','Example order',['Source','Reverse'],'Source')+button('back','Back')+button('step','Next example','primary')+button('epoch','Finish pass')+button('play','Play')+button('reset','Reset');foot='One pass checks every example once. Finish pass shows its final example.';hint='A full pass with no mistakes confirms convergence.';}
- if(this.kind==='margin'){controls=range('angle','Normal angle',-60,80,1,17)+range('offset','Offset w₀',-1.5,1.5,.05,-.4)+button('fit','Fit max-margin','primary');foot='Original ten-point dataset · distances use a unit normal';hint='The width is valid only for positive clearance';}
+ if(this.kind==='margin'){controls=range('angle','Normal angle',-60,80,1,17)+range('offset','Offset w₀',-1.5,1.5,.05,-.4)+button('fit','Fit max-margin','primary');foot='Ten training points · one marker shape per class';hint='The two dashed lines bound the margin';}
  if(this.kind==='kernel'){controls=range('a1','x₁',-2,2,.25,1)+range('a2','x₂',-2,2,.25,2)+range('b1','z₁',-2,2,.25,2)+range('b2','z₂',-2,2,.25,-1);foot='Homogeneous quadratic map · ψ(x) = (x₁², √2x₁x₂, x₂²)';hint='Compute in feature space or use the kernel';}
  if(this.kind==='svm'){controls=select('kernel','Kernel',['Linear','Quadratic','RBF'],'RBF')+select('C','C',['0.1','1','100'],'1')+select('gamma','RBF γ',['0.1','1','10'],'1');foot='All 300 original points · fitted models evaluated locally';hint='Training accuracy is not a validation result';}
  controls+=`<span class="end">${button('zoom',this.kind==='source3d'?'Orbit':'Zoom')}${button('pan','Pan')}${button('view',this.kind==='source3d'?'Reset camera':'Reset view')}</span>`;
@@ -34,9 +34,24 @@ class Widget{
   const t=this.traces.find(t=>t.name===this.setting('set').value),i=this.v('point')-1,total=this.traces.reduce((s,t)=>s+t.x.length,0);side=box('Original observations',`<p>${total} points in two classes.</p>`)+box('Selected point',`<p>${t.name} · point ${i+1}<br>x₁ = ${fmt(t.x[i],4)}<br>x₂ = ${fmt(t.y[i],4)}${this.kind==='source3d'?`<br>z = ${fmt(t.z[i],4)}`:''}</p>`);
   if(this.kind==='source3d'){
    const threshold=FITTED_MODELS.lift.threshold;if(this.plane)data.push({type:'surface',name:'Added separating plane',x:[-1.4,1.4],y:[-1.4,1.4],z:[[threshold,threshold],[threshold,threshold]],colorscale:[[0,C[2]],[1,C[2]]],opacity:.22,showscale:false,hoverinfo:'skip',showlegend:false});
+   data.push({
+    type: 'scatter3d', mode: 'markers', name: 'Selected point',
+    x: [t.x[i]], y: [t.y[i]], z: [t.z[i]],
+    marker: { symbol: 'diamond', size: 9, color: '#ffd166', line: { color: '#101722', width: 2 } },
+    hoverinfo: 'skip', showlegend: false,
+   });
    const ax=title=>({title:{text:title,font:{size:20}},tickfont:{size:16},gridcolor:'#394459',zerolinecolor:'#59647a',backgroundcolor:'#101722',showbackground:true});l={paper_bgcolor:'rgba(0,0,0,0)',font:{family:'Segoe UI',color:'#e8ecf4',size:18},margin:{l:5,r:5,t:5,b:55},legend:{orientation:'h',y:0},scene:{xaxis:ax('Feature 1'),yaxis:ax('Feature 2'),zaxis:ax('z = x₁² + x₂²'),aspectmode:'cube',camera:clone(this.plot._fullLayout?.scene?._scene?.getCamera()||this.plot._fullLayout?.scene?.camera||{eye:{x:1.5,y:1.5,z:1.05}}),dragmode:'orbit'},uirevision:'lift'};
    side+=box('Added separating plane',`<p>z = ${fmt(threshold,5)}<br>Inner maximum: ${fmt(FITTED_MODELS.lift.innerMax,5)}<br>Outer minimum: ${fmt(FITTED_MODELS.lift.outerMin,5)}</p>`)+box('Explore in 3D','<p class="rg-small">Drag to rotate; scroll to zoom.<br>The plane lies in the gap. It is a valid separator, not a fitted maximum-margin claim.</p>');
-  }else{const source=elSource(this);if(source==='cls_and'){
+  }else{const source=elSource(this);
+  if (source === 'cls_svm_both_mod' || source === 'cls_svm_margin') {
+    data.push({
+      type: 'scatter', mode: 'markers', name: 'Selected point',
+      x: [t.x[i]], y: [t.y[i]],
+      marker: { symbol: 'circle-open', size: source === 'cls_svm_both_mod' ? 18 : 24, color: '#ffd166', line: { width: 3 } },
+      hoverinfo: 'skip', showlegend: false,
+    });
+  }
+  if(source==='cls_and'){
     l.xaxis.title.text='X₁ (first switch)';
     l.yaxis.title.text='X₂ (second switch)';
     l.xaxis.tickvals=[0,1];
@@ -110,7 +125,52 @@ class Widget{
   for(const action of ['step','epoch']) this.el.querySelector(`[data-action="${action}"]`).disabled=finished;
   if(finished) this.pause();
  }
- if(this.kind==='margin'){const angle=this.v('angle')*Math.PI/180,u=this.exact?this.exact.normal:[Math.cos(angle),Math.sin(angle)],d=this.exact?this.exact.offset:this.v('offset'),points=ps('cls_svm_margin'),r=E.margin(points,u,d),bounds=[-1.7,2.3,-1.4,1.4];this.result=r;l.legend.y=-.30;l.margin.b=130;data=[...markers(points,12),line(u,d,bounds,'Separator',C[2])];if(r.width){data.push(line(u,d-r.clearance,bounds,'Margin +','#c9bc75','dot'),line(u,d+r.clearance,bounds,'Margin -','#c9bc75','dot'));}l.xaxis.range=bounds.slice(0,2);l.yaxis.range=bounds.slice(2);l.yaxis.scaleanchor='x';l.yaxis.scaleratio=1;l.xaxis.constrain='domain';l.yaxis.constrain='domain';side=metric('Minimum signed clearance',fmt(r.clearance,4))+metric('Full symmetric margin',r.width?fmt(r.width,4):'Not separating')+box('Training geometry',`<p>${r.correct} / ${points.length} correctly classified.<br>u = (${u.map(v=>fmt(v)).join(', ')})<br>w₀ = ${fmt(d,4)}</p>`)+box('Independent optimum',`<p class="rg-small">Maximum width: ${fmt(FITTED_MODELS.margin.width,4)}.<br>${this.exact?'Exact optimum is active. Moving a slider returns to its rounded setting.':'Fit max-margin restores the exact solution.'}</p>`);}
+ if (this.kind === 'margin') {
+  const angle = this.v('angle') * Math.PI / 180;
+  const normal = this.exact ? this.exact.normal : [Math.cos(angle), Math.sin(angle)];
+  const offset = this.exact ? this.exact.offset : this.v('offset');
+  const points = ps('cls_svm_margin');
+  const result = E.margin(points, normal, offset);
+  const bounds = [-1.7, 2.3, -1.4, 1.4];
+  this.result = result;
+  l.legend.y = -.30;
+  l.margin.b = 130;
+  const classMarkers = markers(points, 12);
+  classMarkers[0].name = 'Class −1';
+  classMarkers[1].name = 'Class +1';
+  data = [...classMarkers, line(normal, offset, bounds, 'Separator · score 0', C[2])];
+
+  if (result.width) {
+    const scoreLevels = [
+      { score: '−1', direction: -1, color: C[0] },
+      { score: '+1', direction: 1, color: C[1] },
+    ];
+    for (const { score, direction, color } of scoreLevels) {
+      data.push(line(normal, offset - direction * result.clearance, bounds, 'Edge · score ' + score, color, 'dash'));
+    }
+    const closest = points.filter((_, index) => Math.abs(result.distances[index] - result.clearance) < 1e-7);
+    data.push({
+      type: 'scatter', mode: 'markers', name: 'Closest training points',
+      x: closest.map(point => point.x), y: closest.map(point => point.y),
+      marker: { symbol: 'circle-open', size: 22, color: '#ffd166', line: { width: 3 } },
+      hoverinfo: 'skip', showlegend: false,
+    });
+  }
+
+  l.xaxis.range = bounds.slice(0, 2);
+  l.yaxis.range = bounds.slice(2);
+  l.yaxis.scaleanchor = 'x';
+  l.yaxis.scaleratio = 1;
+  l.xaxis.constrain = 'domain';
+  l.yaxis.constrain = 'domain';
+  side = box('Read the three lines', result.width
+    ? '<p>Solid teal: score 0, the separator.<br>Dashed blue: score −1, on the negative side.<br>Dashed orange: score +1, on the positive side.<br>Gold rings mark the closest training points.</p>'
+    : '<p>The solid teal line has score 0. At least one point is on the line or on the wrong side. Adjust the line to see the two hard-margin edges.</p>')
+    + box('Measure the distances', result.width
+      ? `<p>Center to either edge: <strong>${fmt(result.clearance, 4)}</strong> plot units.<br>Full width: <strong>${fmt(result.width, 4)}</strong> plot units.</p>`
+      : `<p>Minimum signed clearance: ${fmt(result.clearance, 4)}.<br>Full width: unavailable.</p>`)
+    + box('Compare separators', `<p>${result.correct} / ${points.length} correctly classified.<br>Maximum width: ${fmt(FITTED_MODELS.margin.width, 4)}.${this.exact ? '<br>Maximum-margin fit is active.' : ''}</p>`);
+ }
  if(this.kind==='kernel'){const a=[this.v('a1'),this.v('a2')],b=[this.v('b1'),this.v('b2')],pa=E.psi(a),pb=E.psi(b),con=pa.map((v,i)=>v*pb[i]),mapped=E.dot(pa,pb),direct=E.kernel(a,b,'poly');this.result={a,b,pa,pb,mapped,direct};data=[{type:'bar',x:['x₁²z₁²','2x₁x₂z₁z₂','x₂²z₂²'],y:con,marker:{color:[C[0],C[3],C[1]]},showlegend:false}];l=layout('Coordinate contribution','Product');side=box('Mapped vectors',`<p>ψ(x) = (${pa.map(v=>fmt(v,2)).join(', ')})<br>ψ(z) = (${pb.map(v=>fmt(v,2)).join(', ')})</p>`)+metric('Mapped dot product',fmt(mapped,4))+metric('(xᵀz)²',fmt(direct,4))+box('Agreement',`<p class="rg-small">Absolute difference: ${Math.abs(mapped-direct).toExponential(1)}.<br>Cross terms may be negative; their sum is the squared dot product.</p>`);}
  if(this.kind==='svm'){const type={Linear:'linear',Quadratic:'poly',RBF:'rbf'}[this.setting('kernel').value];this.setting('gamma').disabled=type!=='rbf';const m=FITTED_MODELS.models.find(m=>m.kernel===type&&m.C===this.v('C')&&(type!=='rbf'||m.gamma===this.v('gamma'))),points=ps('cls_circle_clusters');this.result=m;if(this.model!==m){this.model=m;const xx=lin(-1.5,1.5,81),yy=lin(-1.5,1.5,81);this.surface={type:'contour',x:xx,y:yy,z:yy.map(y=>xx.map(x=>E.score(m,[x,y]))),contours:{start:0,end:0,size:1,coloring:'fill'},colorscale:[[0,'#20364f'],[1,'#4c3325']],line:{color:C[2],width:2},showscale:false,hoverinfo:'skip',name:'Decision boundary'};}data=[this.surface,...markers(points,6),{type:'scatter',mode:'markers',name:'Support vectors',x:m.support.map(i=>points[i].x),y:m.support.map(i=>points[i].y),marker:{symbol:'circle-open',size:12,color:C[2],line:{width:1}}}];l.xaxis.range=[-1.5,1.5];l.yaxis.range=[-1.5,1.5];l.yaxis.scaleanchor='x';l.yaxis.scaleratio=1;l.xaxis.constrain='domain';l.yaxis.constrain='domain';side=metric('Training accuracy',pct(m.accuracy))+metric('Support vectors',m.support.length+' / 300')+box('Fitted settings',`<p>${this.setting('kernel').value} kernel<br>C = ${m.C}${type==='rbf'?'<br>γ = '+m.gamma:type==='poly'?'<br>κ(x,z) = (xᵀz)²':''}</p>`)+box('Interpretation','<p class="rg-small">Same source data, different fitted models. No test or validation score is supplied. Use held-out data to select settings.</p>');}
  this.side.innerHTML=side;this.baseLayout=clone(l);this.home={x:l.xaxis?.range?.slice(),y:l.yaxis?.range?.slice()};this.ready=this.ready.then(()=>Plotly.react(this.plot,data,l,{responsive:false,displayModeBar:false,scrollZoom:this.kind==='source3d',displaylogo:false}));return this.ready;

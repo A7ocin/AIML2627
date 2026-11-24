@@ -55,6 +55,16 @@ assert len({q['stem'] for q in questions})==len(questions)
 
 def export(path,items):
     path.parent.mkdir(exist_ok=True,parents=True)
+    expected=[fmt['columns']]+[
+        [q['type'],q['id']+' · '+q['stem'],str(q['correct_index']) if q['correct_index'] else None]+q['choices']+[None]*(7-len(q['choices']))
+        for q in items
+    ]
+    if path.exists():
+        existing=load_workbook(path,data_only=False)
+        rows=[list(row) for row in existing.active.iter_rows(values_only=True)]
+        matches=existing.sheetnames==['Questions'] and rows==expected
+        existing.close()
+        if matches:return
     wb=Workbook();ws=wb.active;ws.title='Questions'
     ws.append(fmt['columns'])
     for q in items:
@@ -87,7 +97,7 @@ def export(path,items):
     check.close()
 
 rows=[];content=[];md=[]
-intro='''These are instructor materials with answer keys. The 68 core questions are distributed across sixteen lectures; the 24 optional questions are separate imports. All questions are in English. Each MCQ has one correct answer; open responses are ungraded and have a suggested rubric here. Times include voting and a brief debrief, and are planning estimates, not automatic Wooclap timer settings.'''
+intro=f'''These are instructor materials with answer keys. The 68 core questions are distributed across {len(bank['lectures'])} lectures; the 24 optional questions are separate imports. All questions are in English. Each MCQ has one correct answer; open responses are ungraded and have a suggested rubric here. Times include voting and a brief debrief, and are planning estimates, not automatic Wooclap timer settings.'''
 method='''For a “before” question, collect responses before showing the explanatory slide or running the demonstration. For an “after” question, check whether the explanation transfers to a concrete case. Ask students to commit individually, optionally discuss a split vote in pairs, then explain the reasoning. This is a first undergraduate introduction. Before-topic questions use everyday examples or ideas explicitly explained earlier; invite guesses and explain the answer after voting. Optional questions are basic extensions, not prerequisites or trick questions. Treat opening questions as ungraded diagnostics, not presumed prior mastery. Skip an optional item when the core question already provides sufficient evidence.'''
 importnote='''In a Wooclap event, choose Import questions → Import from an Excel file and select that lecture’s core workbook. Import the optional workbook only if you want those additional items. Question IDs connect the imported titles to this guide; the slide placement and timing are teaching instructions, not fields imported by Wooclap. Open questions have blank Correct cells intentionally. After importing, preview the answer key, mathematical characters and question order, and check the question settings. The existing course events have already been imported. For those events, update questions in place to retain embed links; importing again would add duplicate questions. Revised live content is checked separately in live-revision-validation.json.'''
 formatnote='''The official help page documents template-based Excel import. The workbooks use its published Type / Title / Correct / Choice schema, checked against an archived template copy provided by Université de Poitiers (June 2024). The current help page does not expose the template download without entering the event workflow. Only the two verified basic types, MCQ and OpenQuestion, are used. Single-answer MCQ keys use one-based choice positions. The AI Importer is not required for these files.'''
@@ -121,7 +131,7 @@ preface=['# AIML · Wooclap instructor guide','',intro,'',method,'','## Import i
 live_report_path=HERE/'live-revision-validation.json'
 live_report=json.loads(live_report_path.read_text(encoding='utf-8')) if live_report_path.exists() else {}
 live_current=live_report.get('bankRevision',live_report.get('date'))==bank.get('revised',bank['created'])
-report={'date':bank.get('revised',bank['created']),'questions':len(questions),'core':68,'optional':24,'types':dict(collections.Counter(q['type'] for q in questions)),'correct_positions':dict(collections.Counter(q['correct_index'] for q in questions if q['correct_index'])),'workbooks':32,'schema':fmt['columns'],'workbook_roundtrip':'passed','duplicate_stems':0,'slide_links':'all mapped to existing source slides and handout chapters','core_teaching_order':'passed','sources':sources,'live_wooclap_import_tested':live_current,'audience':bank.get('audience'),'live_revision_verification':'Current; see live-revision-validation.json' if live_current else 'Pending: live-revision-validation.json predates the question bank'}
+report={'date':bank.get('revised',bank['created']),'questions':len(questions),'core':68,'optional':24,'types':dict(collections.Counter(q['type'] for q in questions)),'correct_positions':dict(collections.Counter(q['correct_index'] for q in questions if q['correct_index'])),'workbooks':2*len(bank['lectures']),'schema':fmt['columns'],'workbook_roundtrip':'passed','duplicate_stems':0,'slide_links':'all mapped to existing source slides and handout chapters','core_teaching_order':'passed','sources':sources,'live_wooclap_import_tested':live_current,'audience':bank.get('audience'),'live_revision_verification':'Current; see live-revision-validation.json' if live_current else 'Pending: live-revision-validation.json predates the question bank'}
 (HERE/'validation.json').write_text(json.dumps(report,indent=2),encoding='utf-8')
 (HERE/'placement.json').write_text(json.dumps([{k:q[k] for k in ['id','pack','slide','slide_number','slide_title','when','slide_href','handout_href','core','seconds']} for q in questions],ensure_ascii=False,indent=2),encoding='utf-8')
 print(json.dumps({k:v for k,v in report.items() if k!='sources'}))

@@ -32,7 +32,7 @@
       "number": 5,
       "pack": "05_Constraints_Part_1",
       "title": "Constraint satisfaction · Part 1",
-      "subtitle": "Modeling, backtracking and propagation"
+      "subtitle": "Modeling, backtracking and generalized arc consistency"
     },
     {
       "number": 6,
@@ -56,7 +56,7 @@
       "number": 9,
       "pack": "09_Regression_Part_1",
       "title": "Regression · Part 1",
-      "subtitle": "Fitting and evaluating prediction models"
+      "subtitle": "Linear and polynomial regression"
     },
     {
       "number": 10,
@@ -68,7 +68,7 @@
       "number": 11,
       "pack": "11_Classification_Part_1",
       "title": "Classification · Part 1",
-      "subtitle": "Class probabilities and logistic model fitting"
+      "subtitle": "Class probabilities, Naive Bayes and logistic regression"
     },
     {
       "number": 12,
@@ -90,12 +90,18 @@
     },
     {
       "number": 15,
+      "pack": "15_Classification_Part_5",
+      "title": "Classification · Part 5",
+      "subtitle": "Nonlinear SVM"
+    },
+    {
+      "number": 16,
       "pack": "15_Clustering_Part_1",
       "title": "Clustering and principal components · Part 1",
       "subtitle": "K-means and Gaussian mixtures"
     },
     {
-      "number": 16,
+      "number": 17,
       "pack": "16_Clustering_Part_2",
       "title": "Clustering and principal components · Part 2",
       "subtitle": "Hierarchical clustering, PCA and preprocessing"
@@ -1994,24 +2000,24 @@
     },
     {
       "id": "L06-C07",
-      "lecture": 14,
+      "lecture": 15,
       "core": true,
       "type": "MCQ",
       "slide": "lift-lab",
       "when": "before",
       "purpose": "Prediction / intuition",
-      "stem": "Points near the center belong to one class; points in a surrounding ring belong to another. Which extra feature could help describe this pattern?",
-      "correct": "Distance from the center.",
-      "explanation": "Distance from the center captures a useful distinction that a single straight boundary in the original plane misses.",
-      "misconception": "Thinking new features cannot make a difficult pattern easier to separate.",
+      "stem": "Use height z = x₁² + x₂². Class −1 has points (1, 1) and (−1, 0). Class +1 has (0, 2) and (−2, 1). Assign class +1 above the plane z = t. Which threshold separates all four points?",
+      "correct": "t = 3",
+      "explanation": "The class −1 heights are 2 and 1. The class +1 heights are 4 and 5. The threshold must be above 2 and below 4 to leave a gap to both classes. Only t = 3 works.",
+      "misconception": "Checking only one point per class or forgetting that squaring a negative coordinate gives a positive term.",
       "activity": "Invite a guess before teaching the idea. Ask one student for their reasoning, then use the next explanation or demonstration to revisit the answer. Do not grade prior knowledge.",
       "seconds": 90,
-      "pack": "14_Classification_Part_4",
+      "pack": "15_Classification_Part_5",
       "choices": [
-        "The order in which the points were typed into the file.",
-        "Distance from the center.",
-        "A random name assigned to each point.",
-        "The color used to draw the page background."
+        "t = 1.5",
+        "t = 3",
+        "t = 4.5",
+        "t = 5.5"
       ],
       "correct_index": 2,
       "audience": "First undergraduate introduction to AI and ML",
@@ -2020,24 +2026,24 @@
     },
     {
       "id": "L06-C08",
-      "lecture": 14,
+      "lecture": 15,
       "core": true,
       "type": "MCQ",
-      "slide": "kernel-lab",
-      "when": "before",
+      "slide": "kernel-replacement",
+      "when": "after",
       "purpose": "Prediction / intuition",
-      "stem": "What is the main benefit of a kernel in the SVM examples?",
-      "correct": "It helps the model represent more complex boundaries through suitable similarity calculations.",
-      "explanation": "A kernel can compute similarities corresponding to a richer feature representation. This can support nonlinear boundaries without explicitly listing all those features.",
-      "misconception": "Treating kernels as a guarantee of correctness rather than a modeling tool.",
+      "stem": "A kernel SVM uses s(x) = Σᵢ aᵢyᵢκ(xᵢ, x) + w₀. Its two support vectors have (aᵢ, yᵢ) = (0.5, +1) and (0.5, −1). Their kernel values with x are 3 and 4, respectively. The bias is 0.25. What are the score and predicted class?",
+      "correct": "−0.25, class −1",
+      "explanation": "The contributions are +1.5 and −2. Adding the bias gives 1.5 − 2 + 0.25 = −0.25, so the prediction is class −1.",
+      "misconception": "Treating kernel values as votes, dropping the signed label, or omitting the bias.",
       "activity": "Invite a guess before teaching the idea. Ask one student for their reasoning, then use the next explanation or demonstration to revisit the answer. Do not grade prior knowledge.",
       "seconds": 90,
-      "pack": "14_Classification_Part_4",
+      "pack": "15_Classification_Part_5",
       "choices": [
-        "It guarantees that no training data are needed.",
-        "It guarantees that every training fit will work on new data.",
-        "It helps the model represent more complex boundaries through suitable similarity calculations.",
-        "It turns every class label into a measured distance."
+        "−0.50, class −1",
+        "3.75, class +1",
+        "−0.25, class −1",
+        "0.25, class +1"
       ],
       "correct_index": 3,
       "audience": "First undergraduate introduction to AI and ML",
@@ -2046,19 +2052,19 @@
     },
     {
       "id": "L06-C09",
-      "lecture": 14,
+      "lecture": 15,
       "core": true,
       "type": "OpenQuestion",
       "slide": "summary",
       "when": "after",
       "purpose": "Exit / one takeaway",
-      "stem": "An SVM gets every training example right. What would you check before trusting it on new examples?",
+      "stem": "A classifier uses only height z = x₁² + x₂². Two points, (1, 1) and (−1, −1), have opposite labels. Explain why no threshold on z can separate them. Name one feature you could add that distinguishes these two points.",
       "correct": null,
-      "explanation": "Evaluate on suitable held-out data. Accept a short answer about checking new cases rather than relying only on training success.",
-      "misconception": "Equating a perfect training score with reliable generalization.",
+      "explanation": "Both points have height 2, so any threshold assigns them the same prediction. Either original coordinate, or another feature that differs between the points, restores information lost by the height-only representation.",
+      "misconception": "Assuming a nonlinear feature automatically distinguishes all points with different labels.",
       "activity": "Accept a short answer in the student’s own words. Use a few responses to identify what needs revisiting; do not grade terminology.",
       "seconds": 120,
-      "pack": "14_Classification_Part_4",
+      "pack": "15_Classification_Part_5",
       "choices": [],
       "correct_index": null,
       "audience": "First undergraduate introduction to AI and ML",
@@ -2070,7 +2076,7 @@
       "lecture": 14,
       "core": false,
       "type": "MCQ",
-      "slide": "hinge",
+      "slide": "soft-margin",
       "when": "after",
       "purpose": "Optional / basic extension",
       "stem": "For an SVM, can a correctly classified point still lie too close to the boundary to satisfy the desired margin?",
@@ -2093,24 +2099,24 @@
     },
     {
       "id": "L06-O02",
-      "lecture": 14,
+      "lecture": 15,
       "core": false,
       "type": "MCQ",
       "slide": "dual",
       "when": "after",
       "purpose": "Optional / basic extension",
-      "stem": "Why are support vectors important in an SVM?",
-      "correct": "They are training points that help determine the fitted boundary.",
-      "explanation": "Support vectors are the training observations with a role in determining the separator; other points can have zero weight in its representation.",
-      "misconception": "Confusing support vectors with new predictions or plotting axes.",
+      "stem": "Four training points have labels (+1, +1, −1, −1). The hard-margin dual requires every aᵢ ≥ 0 and Σᵢ aᵢyᵢ = 0. Which multiplier vector satisfies both constraints?",
+      "correct": "(0.50, 0.25, 0.75, 0)",
+      "explanation": "For the third vector, the positive-class multipliers add to 0.75 and the negative-class multipliers also add to 0.75. The second vector balances the signed sum but contains a negative multiplier.",
+      "misconception": "Checking label balance without checking that every multiplier is nonnegative.",
       "activity": "Give students a moment to answer, then explain the correct choice in everyday language and address the misconception.",
       "seconds": 90,
-      "pack": "14_Classification_Part_4",
+      "pack": "15_Classification_Part_5",
       "choices": [
-        "They are new test points that supply the correct answer.",
-        "They are arbitrary names assigned to the classes.",
-        "They are training points that help determine the fitted boundary.",
-        "They are the axes used to draw every plot."
+        "(0.50, 0.25, 0.50, 0)",
+        "(0.50, 0.25, 1.00, −0.25)",
+        "(0.50, 0.25, 0.75, 0)",
+        "(0.50, 0, 0.25, 0)"
       ],
       "correct_index": 3,
       "audience": "First undergraduate introduction to AI and ML",
@@ -2119,24 +2125,24 @@
     },
     {
       "id": "L06-O03",
-      "lecture": 14,
+      "lecture": 15,
       "core": false,
       "type": "MCQ",
-      "slide": "valid-kernel",
+      "slide": "summary",
       "when": "after",
       "purpose": "Optional / basic extension",
-      "stem": "Why should we compare a flexible kernel model with a simpler model on validation data?",
-      "correct": "Extra flexibility can fit training details that do not help on new cases.",
-      "explanation": "Flexibility may help or may overfit. Validation provides evidence for choosing a useful level of complexity.",
-      "misconception": "Assuming greater complexity automatically improves prediction.",
+      "stem": "On the same data split, a linear SVM scores 94% on training and 91% on validation. An RBF SVM scores 100% on training and 84% on validation. If validation accuracy is your selection criterion, what should you do next?",
+      "correct": "Select the linear SVM and evaluate it on the untouched test set.",
+      "explanation": "The linear SVM has the higher validation accuracy. Make the model choice using validation, then use the untouched test set for the final evaluation.",
+      "misconception": "Using training accuracy or the final test set to select a model.",
       "activity": "Give students a moment to answer, then explain the correct choice in everyday language and address the misconception.",
       "seconds": 90,
-      "pack": "14_Classification_Part_4",
+      "pack": "15_Classification_Part_5",
       "choices": [
-        "Extra flexibility can fit training details that do not help on new cases.",
-        "A more flexible model is always better on every dataset.",
-        "Validation removes the need to train either model.",
-        "A simpler model cannot make any correct predictions."
+        "Select the linear SVM and evaluate it on the untouched test set.",
+        "Select the RBF SVM because it fits the training data better.",
+        "Evaluate both on the test set and choose whichever scores higher there.",
+        "Choose the RBF SVM and tune it against the final test set."
       ],
       "correct_index": 1,
       "audience": "First undergraduate introduction to AI and ML",
@@ -2145,7 +2151,7 @@
     },
     {
       "id": "L07-C01",
-      "lecture": 15,
+      "lecture": 16,
       "core": true,
       "type": "MCQ",
       "slide": "unlabeled",
@@ -2171,7 +2177,7 @@
     },
     {
       "id": "L07-C02",
-      "lecture": 15,
+      "lecture": 16,
       "core": true,
       "type": "MCQ",
       "slide": "kmeans-lab",
@@ -2197,7 +2203,7 @@
     },
     {
       "id": "L07-C03",
-      "lecture": 15,
+      "lecture": 16,
       "core": true,
       "type": "MCQ",
       "slide": "choose-k",
@@ -2223,7 +2229,7 @@
     },
     {
       "id": "L07-C04",
-      "lecture": 15,
+      "lecture": 16,
       "core": true,
       "type": "MCQ",
       "slide": "silhouette-lab",
@@ -2249,7 +2255,7 @@
     },
     {
       "id": "L07-C05",
-      "lecture": 15,
+      "lecture": 16,
       "core": true,
       "type": "MCQ",
       "slide": "gmm-lab",
@@ -2275,7 +2281,7 @@
     },
     {
       "id": "L07-C06",
-      "lecture": 15,
+      "lecture": 16,
       "core": true,
       "type": "MCQ",
       "slide": "em-limits",
@@ -2301,7 +2307,7 @@
     },
     {
       "id": "L07-C07",
-      "lecture": 16,
+      "lecture": 17,
       "core": true,
       "type": "MCQ",
       "slide": "hierarchy-lab",
@@ -2327,7 +2333,7 @@
     },
     {
       "id": "L07-C08",
-      "lecture": 16,
+      "lecture": 17,
       "core": true,
       "type": "MCQ",
       "slide": "pca-lab",
@@ -2353,7 +2359,7 @@
     },
     {
       "id": "L07-C09",
-      "lecture": 16,
+      "lecture": 17,
       "core": true,
       "type": "MCQ",
       "slide": "scaling",
@@ -2379,7 +2385,7 @@
     },
     {
       "id": "L07-C10",
-      "lecture": 16,
+      "lecture": 17,
       "core": true,
       "type": "OpenQuestion",
       "slide": "summary",
@@ -2400,7 +2406,7 @@
     },
     {
       "id": "L07-O01",
-      "lecture": 15,
+      "lecture": 16,
       "core": false,
       "type": "MCQ",
       "slide": "update",
@@ -2426,7 +2432,7 @@
     },
     {
       "id": "L07-O02",
-      "lecture": 16,
+      "lecture": 17,
       "core": false,
       "type": "MCQ",
       "slide": "reconstruct",
@@ -2452,7 +2458,7 @@
     },
     {
       "id": "L07-O03",
-      "lecture": 16,
+      "lecture": 17,
       "core": false,
       "type": "MCQ",
       "slide": "hierarchy-limits",

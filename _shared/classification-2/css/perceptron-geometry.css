@@ -1,0 +1,81 @@
+.c34-geometry{
+  --pg-bg:#101722;
+  --pg-panel:#151e2c;
+  --pg-line:#344155;
+  --pg-text:#edf4fa;
+  --pg-muted:#b9c8d7;
+  --pg-accent:#62ddcb;
+  padding:18px 22px;
+  border:1px solid var(--pg-line);
+  border-radius:14px;
+  background:var(--pg-panel);
+  color:var(--pg-text);
+  font:23px/1.4 'Segoe UI',Arial,sans-serif;
+}
+.pg-controls{display:flex;align-items:center;flex-wrap:wrap;gap:12px 23px}
+.pg-controls label{display:flex;align-items:center;gap:9px;color:var(--pg-muted);font-size:21px}
+.pg-controls input{width:130px;accent-color:var(--pg-accent);cursor:pointer}
+.pg-controls output{min-width:38px;color:var(--pg-text)}
+.pg-controls :is(button,select){
+  padding:8px 12px;
+  border:1px solid var(--pg-line);
+  border-radius:7px;
+  background:var(--pg-bg);
+  color:var(--pg-text);
+  font:inherit;
+  font-size:20px;
+  cursor:pointer;
+}
+.pg-controls [data-pg-action="normalize"]{color:var(--pg-accent);border-color:var(--pg-accent)}
+.pg-controls [data-pg-action="normalize"]:disabled{opacity:.5;cursor:default}
+.pg-controls .pg-reset{margin-left:auto}
+.pg-controls :is(button,select,input):focus-visible{outline:3px solid #ffd166;outline-offset:3px}
+.pg-main{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(0,1fr);gap:22px;margin-top:15px}
+.pg-plot{height:470px;min-width:0;background:var(--pg-bg);border-radius:9px}
+.pg-reading{display:grid;align-content:center;gap:12px;min-width:0}
+.pg-box{padding:14px 17px;border:1px solid var(--pg-line);border-radius:9px;background:var(--pg-bg)}
+.pg-box h3,.c34-slide .pg-box h3{margin:0 0 8px;color:var(--pg-accent);font-size:23px}
+.pg-box p,.c34-slide .pg-box p{margin:0;font-size:22px;line-height:1.4}
+.pg-box math{font-size:29px;margin:6px 0}
+#recap-score-distance .slide-body>p math{font-size:1.2em}
+.c34-legend:has(>span:only-child):has(+.c34-geometry[data-focus="distance"]){grid-template-columns:1fr}
+.pg-result{color:var(--pg-accent);font-size:30px;font-weight:650}
+.pg-box .pg-class-0{color:#83b6ff}
+.pg-box .pg-class-1{color:#ffb37c}
+.pg-key{display:flex;flex-wrap:wrap;gap:10px 22px;margin-top:12px;font-size:18px;color:var(--pg-muted)}
+.pg-key span::before{content:"";display:inline-block;width:10px;height:10px;margin-right:7px;border-radius:50%;background:var(--pg-key-color)}
+.c34-recap-visual{display:block;width:100%;height:150px;margin:8px 0 16px}
+.c34-recap-visual text{font-family:'Segoe UI',Arial,sans-serif}
+.c34-recap-steps{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}
+.c34-recap-steps .c34-card{position:relative}
+.c34-recap-steps .c34-card:not(:last-child)::after{content:"→";position:absolute;right:-22px;top:40%;font-size:28px;color:#62ddcb}
+.c34-reading .c34-geometry{font-size:16px}
+.c34-reading .c34-recap-visual{background:#101722;border-radius:8px;padding:12px}
+.c34-reading #chapter-recap-classifiers .c34-cards{grid-template-columns:repeat(3,minmax(0,1fr))}
+.c34-reading .pg-controls label{font-size:15px}
+.c34-reading .pg-controls :is(button,select){font-size:14px}
+.c34-reading .pg-controls input{width:105px}
+.c34-reading .pg-main{grid-template-columns:minmax(0,1.4fr) minmax(0,1fr);gap:14px}
+.c34-reading .pg-plot{height:390px}
+.c34-reading .pg-box h3{font-size:17px}
+.c34-reading .pg-box p{font:16px/1.45 'Segoe UI',Arial,sans-serif}
+.c34-reading .pg-box math{font-size:22px}
+.c34-reading .pg-result{font-size:23px}
+.c34-reading .pg-key{font-size:13px}
+@media(max-width:850px){
+  .c34-reading .pg-main{grid-template-columns:1fr}
+  .c34-reading .pg-plot{height:360px}
+  .c34-reading .c34-recap-steps{grid-template-columns:1fr}
+  .c34-reading #chapter-recap-classifiers .c34-cards{grid-template-columns:1fr}
+  .c34-reading .c34-recap-steps .c34-card::after{display:none}
+}
+@media print{
+  .c34-reading .c34-geometry{break-inside:avoid;print-color-adjust:exact}
+  .pg-controls{display:none}
+  .c34-reading .pg-main{grid-template-columns:minmax(0,1.2fr) minmax(0,1fr)}
+  .c34-reading .pg-plot{height:270px}
+  .c34-reading .pg-box{padding:8px}
+  .c34-reading .pg-box h3{font-size:11pt}
+  .c34-reading .pg-box p{font-size:9pt}
+  .c34-reading .pg-box math{font-size:12pt}
+}

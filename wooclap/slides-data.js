@@ -1061,6 +1061,23 @@ window.AIML_WOOCLAP = {
           "src": "https://app.wooclap.com/events/LQMJZRC/questions/6aa8fe9b4c33f3f9df472d9d"
         },
         {
+          "id": "L05-C06",
+          "core": true,
+          "type": "MCQ",
+          "slide": "likelihood-intuition",
+          "when": "before",
+          "purpose": "Apply the concept to a concrete case",
+          "stem": "Two labels are (1, 0). Model A predicts class-1 probabilities (0.9, 0.9); model B predicts (0.6, 0.4). Assuming independent outcomes, which has greater likelihood for the observed labels?",
+          "seconds": 120,
+          "choices": [
+            "A, because its two probabilities are larger.",
+            "B: its likelihood is 0.36, four times A’s likelihood of 0.09.",
+            "They tie because each predicts one positive probability above 0.5.",
+            "A: its likelihood is 0.81, versus 0.24 for B."
+          ],
+          "src": "https://app.wooclap.com/events/LQMJZRC/questions/6aa8fe9b4c33f3f9df472da2"
+        },
+        {
           "id": "L05-O01",
           "core": false,
           "type": "MCQ",
@@ -1093,23 +1110,6 @@ window.AIML_WOOCLAP = {
             "1/3, regardless of the other observed counts."
           ],
           "src": "https://app.wooclap.com/events/LQMJZRC/questions/6aa9017cd2f1e8b522d9c1cb"
-        },
-        {
-          "id": "L05-C06",
-          "core": true,
-          "type": "MCQ",
-          "slide": "likelihood-intuition",
-          "when": "before",
-          "purpose": "Apply the concept to a concrete case",
-          "stem": "Two labels are (1, 0). Model A predicts class-1 probabilities (0.9, 0.9); model B predicts (0.6, 0.4). Assuming independent outcomes, which has greater likelihood for the observed labels?",
-          "seconds": 120,
-          "choices": [
-            "A, because its two probabilities are larger.",
-            "B: its likelihood is 0.36, four times A’s likelihood of 0.09.",
-            "They tie because each predicts one positive probability above 0.5.",
-            "A: its likelihood is 0.81, versus 0.24 for B."
-          ],
-          "src": "https://app.wooclap.com/events/LQMJZRC/questions/6aa8fe9b4c33f3f9df472da2"
         }
       ]
     },
@@ -1295,56 +1295,10 @@ window.AIML_WOOCLAP = {
           "src": "https://app.wooclap.com/events/LQCRNNR/questions/6aa8fec9f68598b6f23c1fa9"
         },
         {
-          "id": "L06-C07",
-          "core": true,
-          "type": "MCQ",
-          "slide": "lift-lab",
-          "when": "before",
-          "purpose": "Prediction / intuition",
-          "stem": "Points near the center belong to one class; points in a surrounding ring belong to another. Which extra feature could help describe this pattern?",
-          "seconds": 90,
-          "choices": [
-            "The order in which the points were typed into the file.",
-            "Distance from the center.",
-            "A random name assigned to each point.",
-            "The color used to draw the page background."
-          ],
-          "src": "https://app.wooclap.com/events/LQCRNNR/questions/6aa8fec9f68598b6f23c1fae"
-        },
-        {
-          "id": "L06-C08",
-          "core": true,
-          "type": "MCQ",
-          "slide": "kernel-lab",
-          "when": "before",
-          "purpose": "Prediction / intuition",
-          "stem": "What is the main benefit of a kernel in the SVM examples?",
-          "seconds": 90,
-          "choices": [
-            "It guarantees that no training data are needed.",
-            "It guarantees that every training fit will work on new data.",
-            "It helps the model represent more complex boundaries through suitable similarity calculations.",
-            "It turns every class label into a measured distance."
-          ],
-          "src": "https://app.wooclap.com/events/LQCRNNR/questions/6aa8fec9f68598b6f23c1fb3"
-        },
-        {
-          "id": "L06-C09",
-          "core": true,
-          "type": "OpenQuestion",
-          "slide": "summary",
-          "when": "after",
-          "purpose": "Exit / one takeaway",
-          "stem": "An SVM gets every training example right. What would you check before trusting it on new examples?",
-          "seconds": 120,
-          "choices": [],
-          "src": "https://app.wooclap.com/events/LQCRNNR/questions/6aa8fec9f68598b6f23c1fb8"
-        },
-        {
           "id": "L06-O01",
           "core": false,
           "type": "MCQ",
-          "slide": "hinge",
+          "slide": "soft-margin",
           "when": "after",
           "purpose": "Optional / basic extension",
           "stem": "For an SVM, can a correctly classified point still lie too close to the boundary to satisfy the desired margin?",
@@ -1356,6 +1310,58 @@ window.AIML_WOOCLAP = {
             "Yes, but only when the model has no features."
           ],
           "src": "https://app.wooclap.com/events/LQCRNNR/questions/6aa90189f68598b6f241330a"
+        }
+      ]
+    },
+    {
+      "pack": "15_Classification_Part_5",
+      "eventCode": "LQCRNNR",
+      "questions": [
+        {
+          "id": "L06-C07",
+          "core": true,
+          "type": "MCQ",
+          "slide": "lift-lab",
+          "when": "before",
+          "purpose": "Prediction / intuition",
+          "stem": "Use height z = x₁² + x₂². Class −1 has points (1, 1) and (−1, 0). Class +1 has (0, 2) and (−2, 1). Assign class +1 above the plane z = t. Which threshold separates all four points?",
+          "seconds": 90,
+          "choices": [
+            "t = 1.5",
+            "t = 3",
+            "t = 4.5",
+            "t = 5.5"
+          ],
+          "src": "https://app.wooclap.com/events/LQCRNNR/questions/6aa8fec9f68598b6f23c1fae"
+        },
+        {
+          "id": "L06-C08",
+          "core": true,
+          "type": "MCQ",
+          "slide": "kernel-replacement",
+          "when": "after",
+          "purpose": "Prediction / intuition",
+          "stem": "A kernel SVM uses s(x) = Σᵢ aᵢyᵢκ(xᵢ, x) + w₀. Its two support vectors have (aᵢ, yᵢ) = (0.5, +1) and (0.5, −1). Their kernel values with x are 3 and 4, respectively. The bias is 0.25. What are the score and predicted class?",
+          "seconds": 90,
+          "choices": [
+            "−0.50, class −1",
+            "3.75, class +1",
+            "−0.25, class −1",
+            "0.25, class +1"
+          ],
+          "src": "https://app.wooclap.com/events/LQCRNNR/questions/6aa8fec9f68598b6f23c1fb3"
+        },
+        {
+          "id": "L06-C09",
+          "core": true,
+          "type": "OpenQuestion",
+          "slide": "summary",
+          "when": "after",
+          "purpose": "Exit / one takeaway",
+          "stem": "A classifier uses only height z = x₁² + x₂². Two points, (1, 1) and (−1, −1), have opposite labels. Explain why no threshold on z can separate them. Name one feature you could add that distinguishes these two points.",
+          "seconds": 120,
+          "choices": [],
+          "src": "https://app.wooclap.com/events/LQCRNNR/questions/6aa8fec9f68598b6f23c1fb8"
         },
         {
           "id": "L06-O02",
@@ -1364,13 +1370,13 @@ window.AIML_WOOCLAP = {
           "slide": "dual",
           "when": "after",
           "purpose": "Optional / basic extension",
-          "stem": "Why are support vectors important in an SVM?",
+          "stem": "Four training points have labels (+1, +1, −1, −1). The hard-margin dual requires every aᵢ ≥ 0 and Σᵢ aᵢyᵢ = 0. Which multiplier vector satisfies both constraints?",
           "seconds": 90,
           "choices": [
-            "They are new test points that supply the correct answer.",
-            "They are arbitrary names assigned to the classes.",
-            "They are training points that help determine the fitted boundary.",
-            "They are the axes used to draw every plot."
+            "(0.50, 0.25, 0.50, 0)",
+            "(0.50, 0.25, 1.00, −0.25)",
+            "(0.50, 0.25, 0.75, 0)",
+            "(0.50, 0, 0.25, 0)"
           ],
           "src": "https://app.wooclap.com/events/LQCRNNR/questions/6aa90189f68598b6f241330f"
         },
@@ -1378,16 +1384,16 @@ window.AIML_WOOCLAP = {
           "id": "L06-O03",
           "core": false,
           "type": "MCQ",
-          "slide": "valid-kernel",
+          "slide": "summary",
           "when": "after",
           "purpose": "Optional / basic extension",
-          "stem": "Why should we compare a flexible kernel model with a simpler model on validation data?",
+          "stem": "On the same data split, a linear SVM scores 94% on training and 91% on validation. An RBF SVM scores 100% on training and 84% on validation. If validation accuracy is your selection criterion, what should you do next?",
           "seconds": 90,
           "choices": [
-            "Extra flexibility can fit training details that do not help on new cases.",
-            "A more flexible model is always better on every dataset.",
-            "Validation removes the need to train either model.",
-            "A simpler model cannot make any correct predictions."
+            "Select the linear SVM and evaluate it on the untouched test set.",
+            "Select the RBF SVM because it fits the training data better.",
+            "Evaluate both on the test set and choose whichever scores higher there.",
+            "Choose the RBF SVM and tune it against the final test set."
           ],
           "src": "https://app.wooclap.com/events/LQCRNNR/questions/6aa90189f68598b6f2413314"
         }

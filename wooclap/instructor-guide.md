@@ -1,6 +1,6 @@
 # AIML · Wooclap instructor guide
 
-These are instructor materials with answer keys. The 68 core questions are distributed across sixteen lectures; the 24 optional questions are separate imports. All questions are in English. Each MCQ has one correct answer; open responses are ungraded and have a suggested rubric here. Times include voting and a brief debrief, and are planning estimates, not automatic Wooclap timer settings.
+These are instructor materials with answer keys. The 68 core questions are distributed across 17 lectures; the 24 optional questions are separate imports. All questions are in English. Each MCQ has one correct answer; open responses are ungraded and have a suggested rubric here. Times include voting and a brief debrief, and are planning estimates, not automatic Wooclap timer settings.
 
 For a “before” question, collect responses before showing the explanatory slide or running the demonstration. For an “after” question, check whether the explanation transfers to a concrete case. Ask students to commit individually, optionally discuss a split vote in pairs, then explain the reasoning. This is a first undergraduate introduction. Before-topic questions use everyday examples or ideas explicitly explained earlier; invite guesses and explain the answer after voting. Optional questions are basic extensions, not prerequisites or trick questions. Treat opening questions as ungraded diagnostics, not presumed prior mastery. Skip an optional item when the core question already provides sufficient evidence.
 
@@ -1488,13 +1488,13 @@ At (0, 0), the score gives w₀ < 0. The two single-switch cases require w₁ �
 
 ## 14 · Classification · Part 4
 
-5 core + 3 optional. Core budget: approximately 8 minutes.
+2 core + 1 optional. Core budget: approximately 3 minutes.
 
 [Core import](imports/14_Classification_Part_4.xlsx) · [Optional import](imports/optional/14_Classification_Part_4_optional.xlsx)
 
 ### L06-C05 · Core · Prediction / intuition
 
-**Placement:** [Before “Convert a raw score into a geometric distance”](../14_Classification_Part_4/index.html#/distance) · [Handout](../14_Classification_Part_4/handout.html#chapter-distance)
+**Placement:** [Before “Convert a raw score into a geometric distance”](../14_Classification_Part_4/index.html#/distance) · [Handout](../14_Classification_Part_4/handout.html#chapter-distance)  
 **Time:** 90 seconds, including debrief.
 
 A point lies very close to a classifier’s dividing line. What could a small change to that point’s measured features do?
@@ -1514,7 +1514,7 @@ A nearby point can cross the boundary after a small change. Distance to the boun
 
 ### L06-C06 · Core · Check / core understanding
 
-**Placement:** [After “Slack lets the classifier trade violations for margin”](../14_Classification_Part_4/index.html#/soft-margin) · [Handout](../14_Classification_Part_4/handout.html#chapter-soft-margin)
+**Placement:** [After “Soft-margin SVM allows margin violations”](../14_Classification_Part_4/index.html#/soft-margin) · [Handout](../14_Classification_Part_4/handout.html#chapter-soft-margin)  
 **Time:** 90 seconds, including debrief.
 
 Why does a soft-margin SVM allow some training points to violate the margin?
@@ -1532,65 +1532,9 @@ Soft margins balance a wide separation with penalties for violations, making the
 
 **Facilitation:** Give students a moment to answer, then explain the correct choice in everyday language and address the misconception.
 
-### L06-C07 · Core · Prediction / intuition
-
-**Placement:** [Before “Rotate the lifted points and inspect the separating plane”](../14_Classification_Part_4/index.html#/lift-lab) · [Handout](../14_Classification_Part_4/handout.html#chapter-lift-lab)
-**Time:** 90 seconds, including debrief.
-
-Points near the center belong to one class; points in a surrounding ring belong to another. Which extra feature could help describe this pattern?
-
-- **A.** The order in which the points were typed into the file.
-- **B.** Distance from the center.
-- **C.** A random name assigned to each point.
-- **D.** The color used to draw the page background.
-
-**Answer:** B. Distance from the center.
-
-Distance from the center captures a useful distinction that a single straight boundary in the original plane misses.
-
-**Misconception:** Thinking new features cannot make a difficult pattern easier to separate.
-
-**Facilitation:** Invite a guess before teaching the idea. Ask one student for their reasoning, then use the next explanation or demonstration to revisit the answer. Do not grade prior knowledge.
-
-### L06-C08 · Core · Prediction / intuition
-
-**Placement:** [Before “Check the quadratic kernel with two inputs”](../14_Classification_Part_4/index.html#/kernel-lab) · [Handout](../14_Classification_Part_4/handout.html#chapter-kernel-lab)
-**Time:** 90 seconds, including debrief.
-
-What is the main benefit of a kernel in the SVM examples?
-
-- **A.** It guarantees that no training data are needed.
-- **B.** It guarantees that every training fit will work on new data.
-- **C.** It helps the model represent more complex boundaries through suitable similarity calculations.
-- **D.** It turns every class label into a measured distance.
-
-**Answer:** C. It helps the model represent more complex boundaries through suitable similarity calculations.
-
-A kernel can compute similarities corresponding to a richer feature representation. This can support nonlinear boundaries without explicitly listing all those features.
-
-**Misconception:** Treating kernels as a guarantee of correctness rather than a modeling tool.
-
-**Facilitation:** Invite a guess before teaching the idea. Ask one student for their reasoning, then use the next explanation or demonstration to revisit the answer. Do not grade prior knowledge.
-
-### L06-C09 · Core · Exit / one takeaway
-
-**Placement:** [After “From maximum margins to the kernel trick”](../14_Classification_Part_4/index.html#/summary) · [Handout](../14_Classification_Part_4/handout.html#chapter-summary)
-**Time:** 120 seconds, including debrief.
-
-An SVM gets every training example right. What would you check before trusting it on new examples?
-
-
-**Answer:** Suggested rubric (no automatic answer key)
-
-Evaluate on suitable held-out data. Accept a short answer about checking new cases rather than relying only on training success.
-
-**Misconception:** Equating a perfect training score with reliable generalization.
-
-**Facilitation:** Accept a short answer in the student’s own words. Use a few responses to identify what needs revisiting; do not grade terminology.
-
 ### L06-O01 · Optional · Optional / basic extension
 
-**Placement:** [After “A point can violate the margin and still be correct”](../14_Classification_Part_4/index.html#/hinge) · [Handout](../14_Classification_Part_4/handout.html#chapter-hinge)
+**Placement:** [After “Soft-margin SVM allows margin violations”](../14_Classification_Part_4/index.html#/soft-margin) · [Handout](../14_Classification_Part_4/handout.html#chapter-soft-margin)  
 **Time:** 90 seconds, including debrief.
 
 For an SVM, can a correctly classified point still lie too close to the boundary to satisfy the desired margin?
@@ -1608,47 +1552,109 @@ Correct classification and satisfying the margin are different conditions. Hinge
 
 **Facilitation:** Give students a moment to answer, then explain the correct choice in everyday language and address the misconception.
 
-### L06-O02 · Optional · Optional / basic extension
+## 15 · Classification · Part 5
 
-**Placement:** [After “Substitute the weights to get the dual”](../14_Classification_Part_4/index.html#/dual) · [Handout](../14_Classification_Part_4/handout.html#chapter-dual)
+3 core + 2 optional. Core budget: approximately 5 minutes.
+
+[Core import](imports/15_Classification_Part_5.xlsx) · [Optional import](imports/optional/15_Classification_Part_5_optional.xlsx)
+
+### L06-C07 · Core · Prediction / intuition
+
+**Placement:** [Before “Rotate the lifted points and inspect the separating plane”](../15_Classification_Part_5/index.html#/lift-lab) · [Handout](../15_Classification_Part_5/handout.html#chapter-lift-lab)  
 **Time:** 90 seconds, including debrief.
 
-Why are support vectors important in an SVM?
+Use height z = x₁² + x₂². Class −1 has points (1, 1) and (−1, 0). Class +1 has (0, 2) and (−2, 1). Assign class +1 above the plane z = t. Which threshold separates all four points?
 
-- **A.** They are new test points that supply the correct answer.
-- **B.** They are arbitrary names assigned to the classes.
-- **C.** They are training points that help determine the fitted boundary.
-- **D.** They are the axes used to draw every plot.
+- **A.** t = 1.5
+- **B.** t = 3
+- **C.** t = 4.5
+- **D.** t = 5.5
 
-**Answer:** C. They are training points that help determine the fitted boundary.
+**Answer:** B. t = 3
 
-Support vectors are the training observations with a role in determining the separator; other points can have zero weight in its representation.
+The class −1 heights are 2 and 1. The class +1 heights are 4 and 5. The threshold must be above 2 and below 4 to leave a gap to both classes. Only t = 3 works.
 
-**Misconception:** Confusing support vectors with new predictions or plotting axes.
+**Misconception:** Checking only one point per class or forgetting that squaring a negative coordinate gives a positive term.
+
+**Facilitation:** Invite a guess before teaching the idea. Ask one student for their reasoning, then use the next explanation or demonstration to revisit the answer. Do not grade prior knowledge.
+
+### L06-C08 · Core · Prediction / intuition
+
+**Placement:** [After “The Kernel Trick replaces the mapped inner product”](../15_Classification_Part_5/index.html#/kernel-replacement) · [Handout](../15_Classification_Part_5/handout.html#chapter-kernel-replacement)  
+**Time:** 90 seconds, including debrief.
+
+A kernel SVM uses s(x) = Σᵢ aᵢyᵢκ(xᵢ, x) + w₀. Its two support vectors have (aᵢ, yᵢ) = (0.5, +1) and (0.5, −1). Their kernel values with x are 3 and 4, respectively. The bias is 0.25. What are the score and predicted class?
+
+- **A.** −0.50, class −1
+- **B.** 3.75, class +1
+- **C.** −0.25, class −1
+- **D.** 0.25, class +1
+
+**Answer:** C. −0.25, class −1
+
+The contributions are +1.5 and −2. Adding the bias gives 1.5 − 2 + 0.25 = −0.25, so the prediction is class −1.
+
+**Misconception:** Treating kernel values as votes, dropping the signed label, or omitting the bias.
+
+**Facilitation:** Invite a guess before teaching the idea. Ask one student for their reasoning, then use the next explanation or demonstration to revisit the answer. Do not grade prior knowledge.
+
+### L06-C09 · Core · Exit / one takeaway
+
+**Placement:** [After “From a feature map to the kernel trick”](../15_Classification_Part_5/index.html#/summary) · [Handout](../15_Classification_Part_5/handout.html#chapter-summary)  
+**Time:** 120 seconds, including debrief.
+
+A classifier uses only height z = x₁² + x₂². Two points, (1, 1) and (−1, −1), have opposite labels. Explain why no threshold on z can separate them. Name one feature you could add that distinguishes these two points.
+
+
+**Answer:** Suggested rubric (no automatic answer key)
+
+Both points have height 2, so any threshold assigns them the same prediction. Either original coordinate, or another feature that differs between the points, restores information lost by the height-only representation.
+
+**Misconception:** Assuming a nonlinear feature automatically distinguishes all points with different labels.
+
+**Facilitation:** Accept a short answer in the student’s own words. Use a few responses to identify what needs revisiting; do not grade terminology.
+
+### L06-O02 · Optional · Optional / basic extension
+
+**Placement:** [After “The dual chooses one multiplier per training point”](../15_Classification_Part_5/index.html#/dual) · [Handout](../15_Classification_Part_5/handout.html#chapter-dual)  
+**Time:** 90 seconds, including debrief.
+
+Four training points have labels (+1, +1, −1, −1). The hard-margin dual requires every aᵢ ≥ 0 and Σᵢ aᵢyᵢ = 0. Which multiplier vector satisfies both constraints?
+
+- **A.** (0.50, 0.25, 0.50, 0)
+- **B.** (0.50, 0.25, 1.00, −0.25)
+- **C.** (0.50, 0.25, 0.75, 0)
+- **D.** (0.50, 0, 0.25, 0)
+
+**Answer:** C. (0.50, 0.25, 0.75, 0)
+
+For the third vector, the positive-class multipliers add to 0.75 and the negative-class multipliers also add to 0.75. The second vector balances the signed sum but contains a negative multiplier.
+
+**Misconception:** Checking label balance without checking that every multiplier is nonnegative.
 
 **Facilitation:** Give students a moment to answer, then explain the correct choice in everyday language and address the misconception.
 
 ### L06-O03 · Optional · Optional / basic extension
 
-**Placement:** [After “A valid kernel behaves like an inner product”](../14_Classification_Part_4/index.html#/valid-kernel) · [Handout](../14_Classification_Part_4/handout.html#chapter-valid-kernel)
+**Placement:** [After “From a feature map to the kernel trick”](../15_Classification_Part_5/index.html#/summary) · [Handout](../15_Classification_Part_5/handout.html#chapter-summary)  
 **Time:** 90 seconds, including debrief.
 
-Why should we compare a flexible kernel model with a simpler model on validation data?
+On the same data split, a linear SVM scores 94% on training and 91% on validation. An RBF SVM scores 100% on training and 84% on validation. If validation accuracy is your selection criterion, what should you do next?
 
-- **A.** Extra flexibility can fit training details that do not help on new cases.
-- **B.** A more flexible model is always better on every dataset.
-- **C.** Validation removes the need to train either model.
-- **D.** A simpler model cannot make any correct predictions.
+- **A.** Select the linear SVM and evaluate it on the untouched test set.
+- **B.** Select the RBF SVM because it fits the training data better.
+- **C.** Evaluate both on the test set and choose whichever scores higher there.
+- **D.** Choose the RBF SVM and tune it against the final test set.
 
-**Answer:** A. Extra flexibility can fit training details that do not help on new cases.
+**Answer:** A. Select the linear SVM and evaluate it on the untouched test set.
 
-Flexibility may help or may overfit. Validation provides evidence for choosing a useful level of complexity.
+The linear SVM has the higher validation accuracy. Make the model choice using validation, then use the untouched test set for the final evaluation.
 
-**Misconception:** Assuming greater complexity automatically improves prediction.
+**Misconception:** Using training accuracy or the final test set to select a model.
 
 **Facilitation:** Give students a moment to answer, then explain the correct choice in everyday language and address the misconception.
 
-## 15 · Clustering and principal components · Part 1
+## 16 · Clustering and principal components · Part 1
 
 6 core + 1 optional. Core budget: approximately 8.5 minutes.
 
@@ -1794,7 +1800,7 @@ A centroid summarizes an assigned group by its mean position. It need not coinci
 
 **Facilitation:** Give students a moment to answer, then explain the correct choice in everyday language and address the misconception.
 
-## 16 · Clustering and principal components · Part 2
+## 17 · Clustering and principal components · Part 2
 
 4 core + 2 optional. Core budget: approximately 6.5 minutes.
 
