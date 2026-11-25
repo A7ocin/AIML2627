@@ -13,7 +13,7 @@
     "3": 21,
     "2": 22
   },
-  "workbooks": 34,
+  "workbooks": 40,
   "schema": [
     "Type",
     "Title",
@@ -102,18 +102,33 @@
       "slides": 25
     },
     "15_Classification_Part_5": {
-      "slides_sha256": "0dc064b03f8a43c54c2d6001688654601787e80e9fa62139e44f61fb2de93569",
-      "handout_sha256": "e360138499a23dfce59b3113bb7fe47b24da1d2e65fe9de1f138e7f2a108a9d6",
-      "slides": 24
+      "slides_sha256": "438005603d168f42172c2b3f825631da1f5811e1f62ba4be4058c547672f34bc",
+      "handout_sha256": "260ad401627508c41e8125631f3f9b2c8a11856b0b4541a1c67cfaf715b784ab",
+      "slides": 29
     },
     "15_Clustering_Part_1": {
-      "slides_sha256": "f89ad3a1699c2557a5ba5c42ec69bf142b074f06a03d4f124e67f4c9563fc8f5",
-      "handout_sha256": "e757c101ed56b9d21018b935465d0bdd4f363ee777ea8a18fbd6dbf9da89f6fd",
-      "slides": 33
+      "slides_sha256": "b025a6a8616209a13aec29cbabc1f74b3f1803c894b9f6c8b32f86bc19068876",
+      "handout_sha256": "3c8068ebb1d138c7d07f60fe31746f6a404f945a6a4b61baaac71d86bd4c255f",
+      "slides": 28
     },
     "16_Clustering_Part_2": {
-      "slides_sha256": "8cb451cf4abc20cf27ef1960f5ba04ad73ef65c75e6e2cf52f6a38d3e31a7956",
-      "handout_sha256": "a0803b6f10d4c7d9ae921a2bc8888a0c469d0378c53da08a5b421de206999cb5",
+      "slides_sha256": "f9fff4b903f8039839976d6b0fbaa6c52678dbd06e80477ebc519331ba8234f9",
+      "handout_sha256": "793a2f7ada6a73d9b22fa596b7430d67caf16cfb3d436cb2bec5567c3f6d44c0",
+      "slides": 29
+    },
+    "17_Clustering_Part_3": {
+      "slides_sha256": "0643fa499bf242f33c1c575dfe6641029fde75585f6a46d05723aa2f081a6745",
+      "handout_sha256": "6c167167a9a0c1ca855f43005273e20e4290d03a9038ac2ed0d991c96a105197",
+      "slides": 27
+    },
+    "18_Clustering_Part_4": {
+      "slides_sha256": "1f15a2d052ec613c08ef0c9d1636054b8317214f08b68b0aa1f0b100a58b055d",
+      "handout_sha256": "f9325f59e9cdd0326227a006c02c2c082f4deeb9742c172dbd2aaf1273ea304e",
+      "slides": 27
+    },
+    "19_Clustering_Part_5": {
+      "slides_sha256": "8529d509326e8beb2c6cc89dfe04ccac30ca38e467d94b9be404141ac295466c",
+      "handout_sha256": "83b609c6703f75e345b5a30ffec1ad5ee947b015c836977ba55b7f18218e7eb6",
       "slides": 28
     }
   },

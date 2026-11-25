@@ -6,6 +6,18 @@ Alessandro Torcinovich, [7 — Clustering, AIML 2025–26](https://www.aretor.it
 
 The resource has eight Plotly JSON charts, one with five animation frames. It contains no lesson images, video elements, or embedded video players. The presentation therefore uses the original data visualizations and new SVG teaching diagrams instead of unrelated media.
 
+## Published lectures
+
+| Lecture | Sections | Topic |
+| --- | --- | --- |
+| 16 | 7.1–7.2.2.2 | Clustering, K-Means, initialization, elbow and silhouette |
+| 17 | 7.3–7.4 | Gaussian Mixture Clustering, Training and Expectation-Maximization |
+| 18 | 7.5–7.5.1 | Hierarchical clustering and Linkage method |
+| 19 | 7.6–7.6.1 | Feature analysis: principal components and Applications |
+| 20 | 7.6.1.1 | PCA for Preprocessing |
+
+The eight chart IDs below are stable in the current decks. The slide numbers in that table refer to the archived single-deck review.
+
 ## Original interactive resources
 
 The original JSON files are copied into `data/` without numerical changes. `js/course-data.js` embeds the same data so that local file opening does not depend on fetch permissions.
@@ -47,7 +59,7 @@ The cover shows the actual 240-point dataset with the added K=3 fitted partition
 - Clustering has evaluation methods even without supplied labels: internal diagnostics, stability and domain assessment. A pattern or favorable score does not establish a unique true partition.
 - The K-means centroid derivative is `2 Σ rᵢₖ(μₖ−xᵢ)`, correcting the sign in the source. The stationary mean formula is unchanged. Empty clusters require an explicit policy.
 - Globally optimal distortion is nonincreasing in K. Independently obtained local fits need not be monotone. An elbow is a heuristic, not a guaranteed optimal K.
-- The deck uses ordinary Euclidean silhouette. The source formulas use squared Euclidean dissimilarities; these lead to different numerical results. A score is calculated for each candidate partition and averaged over observations; only then may K be selected by comparison.
+- The published silhouette examples default to squared Euclidean dissimilarities to match the formulas. Students can switch to ordinary Euclidean distance to compare numerical results. The archived single-deck review uses ordinary Euclidean distance.
 - A full-dimensional Gaussian density requires positive-definite covariance. General covariance matrices may be semidefinite, but singular density formulas require separate treatment.
 - Responsibilities are posterior probabilities; mixture weights are priors; density values are not probabilities and need not lie in [0,1].
 - EM maximizes expected complete-data **log** likelihood. Its exact monotonicity guarantee is local and does not promise a global maximum. Regularized practical updates and a fixed iteration budget are stated explicitly. The displayed regularized trace is numerically checked to have nondecreasing observed likelihood.

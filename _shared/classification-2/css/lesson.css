@@ -410,6 +410,260 @@
 .c34-reading .nlsvm-player{width:min(100%,880px);margin:16px auto}
 #lagrangian .c34-equation,#dual .c34-equation{font-size:30px}
 
+.c34-dual-derivation {
+  display: grid;
+  gap: 16px;
+}
+.c34-dual-step {
+  min-width: 0;
+}
+.c34-dual-step > p {
+  margin: 0 0 7px;
+}
+.c34-dual-step > summary {
+  padding: 7px 12px;
+  border: 1px solid #6a818d;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.c34-dual-step > summary:focus-visible {
+  outline: 2px solid #d78e36;
+  outline-offset: 3px;
+}
+.c34-dual-step[open] > summary {
+  margin: 0 0 7px;
+  padding: 0;
+  border-color: transparent;
+}
+.c34-dual-step:not([open]) .c34-dual-hint {
+  display: none;
+}
+.reveal #dual .slide-body,
+.reveal #dual .c34-dual-derivation {
+  gap: 12px;
+}
+.reveal #dual .c34-equation {
+  padding-block: 7px;
+}
+.reveal #dual .c34-dual-step > :is(p, summary) {
+  font-size: 24px;
+  line-height: 1.35;
+}
+.reveal #dual .c34-dual-step strong,
+.reveal #dual .c34-dual-step > summary::marker {
+  color: #62ddcb;
+}
+.c34-reading .c34-dual-derivation .c34-equation {
+  overflow-x: auto;
+}
+.c34-dual-kernel-product { color: #245997; }
+.reveal #dual .c34-dual-kernel-product { color: #9bc4ff; }
+.c34-dual-kernel-explain {
+  grid-column: 1 / -1;
+  padding-top: 5px;
+  border-top: 1px solid currentColor;
+}
+.c34-dual-kernel-explain math { color: #006c60; }
+.reveal #dual .c34-dual-kernel-explain math { color: #75e4d0; }
+.reveal #dual .c34-dual-kernel-legend {
+  grid-template-columns: 1.2fr 1.15fr 1.05fr 1fr 1fr;
+  gap: 6px 13px;
+  font-size: 20px;
+}
+
+.c34-kernel-flow {
+  --kernel-surface: #f5f8fa;
+  --kernel-edge: #bfced8;
+  --kernel-mapped: #245997;
+  --kernel-direct: #006c60;
+  display: grid;
+  grid-template-columns: minmax(0, .75fr) minmax(0, 2.5fr) minmax(0, .72fr);
+  grid-template-areas: "input lifted result" "input direct result";
+  gap: 14px 34px;
+  margin: 0;
+}
+.c34-kernel-flow-card {
+  min-width: 0;
+  padding: 16px 19px;
+  border: 1px solid var(--kernel-edge);
+  border-radius: 10px;
+  background: var(--kernel-surface);
+}
+.c34-kernel-flow-card h3 {
+  margin: 0 0 8px;
+  text-transform: none;
+  font-size: 1.08em;
+  line-height: 1.25;
+}
+.c34-kernel-flow-card p {
+  margin: 0;
+  line-height: 1.35;
+}
+.c34-kernel-input,
+.c34-kernel-result {
+  display: grid;
+  align-content: center;
+  justify-items: center;
+  gap: 8px;
+  text-align: center;
+}
+.c34-kernel-input { grid-area: input; }
+.c34-kernel-result { grid-area: result; }
+.c34-kernel-lifted { grid-area: lifted; --kernel-route: var(--kernel-mapped); }
+.c34-kernel-original { grid-area: direct; --kernel-route: var(--kernel-direct); }
+.c34-kernel-route {
+  position: relative;
+  border-left: 3px solid var(--kernel-route);
+}
+.c34-kernel-route h3 { color: var(--kernel-route); }
+.c34-kernel-route::before,
+.c34-kernel-route::after {
+  content: "";
+  position: absolute;
+  top: calc(50% - 6px);
+  width: 10px;
+  height: 10px;
+  border-top: 2px solid var(--kernel-route);
+  border-right: 2px solid var(--kernel-route);
+  transform: rotate(45deg);
+}
+.c34-kernel-route::before { left: -26px; }
+.c34-kernel-route::after { right: -22px; }
+.c34-kernel-result strong {
+  color: var(--kernel-direct);
+  font-size: 2.65em;
+  line-height: 1;
+}
+.c34-kernel-calculation {
+  margin-top: 9px;
+  font-size: 1.12em;
+}
+.c34-kernel-terms {
+  display: grid;
+  grid-template-columns: minmax(0, .92fr) minmax(0, 1.08fr);
+  gap: 10px;
+}
+.c34-kernel-term {
+  min-width: 0;
+  padding: 8px 10px;
+  text-align: center;
+  border: 1px solid var(--kernel-edge);
+  border-radius: 7px;
+}
+.c34-kernel-term strong {
+  display: block;
+  font-size: .88em;
+  line-height: 1.3;
+}
+.c34-kernel-term math { margin-top: 6px; }
+.c34-kernel-input math,
+.c34-kernel-term math,
+.c34-kernel-calculation math,
+.c34-kernel-practical-map math,
+.c34-kernel-general math,
+.c34-kernel-equation math {
+  font-family: "Cambria Math", "STIX Two Math", math;
+}
+.c34-kernel-general p {
+  margin: 0 0 8px;
+  line-height: 1.3;
+}
+.c34-kernel-general math { margin: 0; }
+.c34-kernel-note { grid-template-columns: 1fr; }
+.c34-kernel-mapped { color: #245997; }
+.c34-kernel-direct { color: #006c60; }
+.reveal :is(#kernel-trick-intro, #kernel-replacement) .slide-body { gap: 17px; }
+.reveal :is(#kernel-trick-intro, #kernel-replacement) .c34-kernel-lead { font-size: 26px; }
+.reveal #kernel-trick-intro .c34-kernel-practical-map { font-size: 39px; }
+.reveal #kernel-trick-intro .c34-kernel-practical-flow .c34-kernel-route {
+  padding-block: 20px;
+}
+.reveal #kernel-trick-intro .c34-kernel-practical-flow .c34-kernel-calculation {
+  font-size: 1.22em;
+}
+.reveal #kernel-replacement .c34-kernel-equation {
+  padding: 20px 22px;
+  font-size: 59px;
+}
+.reveal #kernel-replacement .c34-kernel-general {
+  padding: 12px 18px;
+  font-size: 33px;
+}
+.reveal #kernel-replacement .c34-kernel-general p { font-size: 23px; }
+.reveal :is(#kernel-trick-intro, #kernel-replacement) .c34-kernel-flow {
+  --kernel-surface: #151e2c;
+  --kernel-edge: #344155;
+  --kernel-mapped: #9bc4ff;
+  --kernel-direct: #75e4d0;
+  font-size: 24px;
+}
+.reveal #kernel-replacement .c34-kernel-mapped { color: #9bc4ff; }
+.reveal #kernel-replacement .c34-kernel-direct { color: #75e4d0; }
+.c34-reading .c34-kernel-flow { margin-block: 16px; }
+.c34-reading .c34-kernel-equation { font-size: clamp(24px, 4vw, 36px); }
+.c34-reading .c34-kernel-general p { font-size: 1rem; }
+.c34-reading .c34-kernel-calculation { overflow-x: auto; }
+
+.c34-quadratic-compare {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 9px 18px;
+}
+.c34-quadratic-compare .c34-card {
+  min-width: 0;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  gap: 9px;
+}
+@supports (grid-template-rows: subgrid) {
+  .c34-quadratic-compare .c34-card {
+    grid-row: span 3;
+    grid-template-rows: subgrid;
+  }
+}
+.c34-quadratic-map, .c34-quadratic-identity {
+  display: grid;
+  align-content: center;
+  min-width: 0;
+  overflow-x: auto;
+}
+.c34-gaussian-kernel {
+  grid-template-columns: auto minmax(0, .9fr) minmax(0, 1.55fr);
+  align-items: center;
+  gap: 8px 16px;
+}
+.c34-gaussian-kernel > div { min-width: 0; overflow-x: auto; }
+.c34-quadratic-map math,
+.c34-quadratic-identity math,
+.c34-quadratic-proof math,
+.c34-gaussian-kernel math {
+  font-family: "Cambria Math", "STIX Two Math", math;
+}
+.c34-quadratic-proof { min-width: 0; }
+.c34-quadratic-proof > p { margin: 7px 0 8px; }
+.reveal #kernel-construction .slide-body { gap: 13px; }
+.reveal #kernel-construction .c34-quadratic-lead { font-size: 26px; }
+.reveal #kernel-construction .c34-quadratic-map { font-size: 30px; }
+.reveal #kernel-construction .c34-quadratic-identity { font-size: 42px; }
+.reveal #kernel-construction .c34-quadratic-compare .c34-card p { font-size: 24px; }
+.reveal #kernel-construction .c34-quadratic-proof { font-size: 22px; }
+.reveal #kernel-construction .c34-quadratic-proof .c34-equation { font-size: 27px; padding-block: 5px; }
+.reveal #kernel-construction .c34-gaussian-kernel { font-size: 20px; }
+.reveal #kernel-construction .c34-gaussian-kernel strong { color: #75e4d0; }
+.reveal #kernel-construction .c34-gaussian-kernel math { font-size: 26px; }
+.c34-reading .c34-quadratic-compare { margin: 16px 0; }
+@media (max-width: 680px) {
+  .c34-reading .c34-kernel-flow {
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-areas: "input" "lifted" "direct" "result";
+  }
+  .c34-reading .c34-kernel-route::before,
+  .c34-reading .c34-kernel-route::after { display: none; }
+  .c34-reading .c34-kernel-terms { grid-template-columns: minmax(0, 1fr); }
+  .c34-reading .c34-quadratic-compare { grid-template-columns: minmax(0, 1fr); }
+  .c34-reading .c34-gaussian-kernel { grid-template-columns: minmax(0, 1fr); }
+}
+
 .nlsvm-source-formula mtd[columnalign="right"]{text-align:right}
 .nlsvm-source-formula mtd[columnalign="left"]{text-align:left}
 
@@ -418,3 +672,22 @@
 .nlsvm-player[data-embedded] .nlsvm-video-poster{display:none}
 .nlsvm-player .nlsvm-watch{display:block;margin-top:10px;font-size:20px}
 .nlsvm-player .nlsvm-watch span{display:inline-block;margin-top:5px;text-decoration:underline}
+
+.nlsvm-map-definition{grid-template-columns:1.2fr 1fr 1fr;align-items:center}
+.nlsvm-map-definition>div{display:flex;align-items:center;flex-wrap:wrap;gap:8px 18px}
+.nlsvm-map-definition math{font-size:1.65em;line-height:1.1}
+@media(max-width:620px){.c34-reading .nlsvm-map-definition{grid-template-columns:1fr}}
+
+.nlsvm-sum{padding:12px 18px;border:1px solid #344155;border-radius:10px;font-variant-numeric:tabular-nums}
+.c34-slide .nlsvm-sum{background:#101722;font-size:22px}
+.c34-slide .nlsvm-sum h3{font-size:24px;color:#62ddcb;margin:0 0 6px}
+.nlsvm-sum-controls,.nlsvm-sum-controls label{display:flex;align-items:center;gap:8px}
+.nlsvm-sum-controls{flex-wrap:wrap;gap:8px 22px}
+.nlsvm-sum-controls input{width:105px;accent-color:#45d6c0}
+.nlsvm-sum-controls output{min-width:3.5ch}
+.nlsvm-sum-controls select{color:inherit;background:transparent;border:1px solid #628090;border-radius:5px;font:inherit;padding:2px 6px}
+.c34-slide .nlsvm-sum-controls option{background:#101722;color:#edf4fa}
+.nlsvm-sum-results{display:grid;grid-template-columns:1fr 1.4fr;gap:12px;border-top:1px solid #344155;padding-top:7px;margin-top:8px}
+.nlsvm-sum-results div{display:grid;gap:2px}
+.c34-reading .nlsvm-sum{margin:14px 0}
+@media(max-width:620px){.c34-reading .nlsvm-sum-results{grid-template-columns:1fr}}

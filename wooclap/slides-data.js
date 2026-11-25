@@ -1472,6 +1472,29 @@ window.AIML_WOOCLAP = {
           "src": "https://app.wooclap.com/events/IZOXLUG/questions/6aa8feeaee75ef7f05b43b6c"
         },
         {
+          "id": "L07-O01",
+          "core": false,
+          "type": "MCQ",
+          "slide": "update",
+          "when": "after",
+          "purpose": "Optional / basic extension",
+          "stem": "What does a K-means centroid represent?",
+          "seconds": 90,
+          "choices": [
+            "Always the very first point in the file.",
+            "The number of labels supplied by a teacher.",
+            "A point that must be outside every cluster.",
+            "The average location of the points assigned to a nonempty cluster."
+          ],
+          "src": "https://app.wooclap.com/events/IZOXLUG/questions/6aa90192a9ab4759acaaa117"
+        }
+      ]
+    },
+    {
+      "pack": "16_Clustering_Part_2",
+      "eventCode": "IZOXLUG",
+      "questions": [
+        {
           "id": "L07-C05",
           "core": true,
           "type": "MCQ",
@@ -1504,28 +1527,11 @@ window.AIML_WOOCLAP = {
             "No. A fitting method is never allowed to stop."
           ],
           "src": "https://app.wooclap.com/events/IZOXLUG/questions/6aa8feeaee75ef7f05b43b76"
-        },
-        {
-          "id": "L07-O01",
-          "core": false,
-          "type": "MCQ",
-          "slide": "update",
-          "when": "after",
-          "purpose": "Optional / basic extension",
-          "stem": "What does a K-means centroid represent?",
-          "seconds": 90,
-          "choices": [
-            "Always the very first point in the file.",
-            "The number of labels supplied by a teacher.",
-            "A point that must be outside every cluster.",
-            "The average location of the points assigned to a nonempty cluster."
-          ],
-          "src": "https://app.wooclap.com/events/IZOXLUG/questions/6aa90192a9ab4759acaaa117"
         }
       ]
     },
     {
-      "pack": "16_Clustering_Part_2",
+      "pack": "17_Clustering_Part_3",
       "eventCode": "IZOXLUG",
       "questions": [
         {
@@ -1546,6 +1552,29 @@ window.AIML_WOOCLAP = {
           "src": "https://app.wooclap.com/events/IZOXLUG/questions/6aa8feeaee75ef7f05b43b7b"
         },
         {
+          "id": "L07-O03",
+          "core": false,
+          "type": "MCQ",
+          "slide": "hierarchy-limits",
+          "when": "after",
+          "purpose": "Optional / basic extension",
+          "stem": "In a clustering tree, two observations join together early, at a small merge distance. What does that suggest under the chosen method?",
+          "seconds": 90,
+          "choices": [
+            "They have been proved to share a known class label.",
+            "They are necessarily the most different observations.",
+            "Their row numbers must be consecutive.",
+            "The method regards them as relatively similar."
+          ],
+          "src": "https://app.wooclap.com/events/IZOXLUG/questions/6aa90192a9ab4759acaaa121"
+        }
+      ]
+    },
+    {
+      "pack": "18_Clustering_Part_4",
+      "eventCode": "IZOXLUG",
+      "questions": [
+        {
           "id": "L07-C08",
           "core": true,
           "type": "MCQ",
@@ -1562,6 +1591,29 @@ window.AIML_WOOCLAP = {
           ],
           "src": "https://app.wooclap.com/events/IZOXLUG/questions/6aa8feeaee75ef7f05b43b80"
         },
+        {
+          "id": "L07-O02",
+          "core": false,
+          "type": "MCQ",
+          "slide": "reconstruct",
+          "when": "after",
+          "purpose": "Optional / basic extension",
+          "stem": "PCA keeps only a few directions from a dataset with many features. What is a possible tradeoff?",
+          "seconds": 90,
+          "choices": [
+            "Guaranteed perfect reconstruction using any number of directions.",
+            "New correct class labels are automatically created.",
+            "Every discarded detail is proved irrelevant to every task.",
+            "A simpler representation, with some information lost."
+          ],
+          "src": "https://app.wooclap.com/events/IZOXLUG/questions/6aa90192a9ab4759acaaa11c"
+        }
+      ]
+    },
+    {
+      "pack": "19_Clustering_Part_5",
+      "eventCode": "IZOXLUG",
+      "questions": [
         {
           "id": "L07-C09",
           "core": true,
@@ -1590,40 +1642,6 @@ window.AIML_WOOCLAP = {
           "seconds": 120,
           "choices": [],
           "src": "https://app.wooclap.com/events/IZOXLUG/questions/6aa8feeaee75ef7f05b43b8a"
-        },
-        {
-          "id": "L07-O02",
-          "core": false,
-          "type": "MCQ",
-          "slide": "reconstruct",
-          "when": "after",
-          "purpose": "Optional / basic extension",
-          "stem": "PCA keeps only a few directions from a dataset with many features. What is a possible tradeoff?",
-          "seconds": 90,
-          "choices": [
-            "Guaranteed perfect reconstruction using any number of directions.",
-            "New correct class labels are automatically created.",
-            "Every discarded detail is proved irrelevant to every task.",
-            "A simpler representation, with some information lost."
-          ],
-          "src": "https://app.wooclap.com/events/IZOXLUG/questions/6aa90192a9ab4759acaaa11c"
-        },
-        {
-          "id": "L07-O03",
-          "core": false,
-          "type": "MCQ",
-          "slide": "hierarchy-limits",
-          "when": "after",
-          "purpose": "Optional / basic extension",
-          "stem": "In a clustering tree, two observations join together early, at a small merge distance. What does that suggest under the chosen method?",
-          "seconds": 90,
-          "choices": [
-            "They have been proved to share a known class label.",
-            "They are necessarily the most different observations.",
-            "Their row numbers must be consecutive.",
-            "The method regards them as relatively similar."
-          ],
-          "src": "https://app.wooclap.com/events/IZOXLUG/questions/6aa90192a9ab4759acaaa121"
         }
       ]
     }

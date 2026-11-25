@@ -1,5 +1,10 @@
 # AIML — Lesson 7: Clustering
 
+The published course teaches this material in [five lectures](../../index.html#lecture-16).
+From this folder, run `python tools/build-lectures.py` to regenerate their slides, handouts, and course entries.
+This build requires `latex2mathml`. After changing question placements, regenerate the display data and
+instructor materials with the Wooclap builder. The single-deck archive and review below remain available.
+
 Open `index.html` in Chrome, Edge, or another modern browser. The 54-slide presentation includes all assets locally and needs no server, login, or network connection.
 
 The lecture follows the visual style of the preceding AIML packs. Its 14 interactive sections retain all eight original course charts and add six teaching experiments. The original K-means animation includes all five frames. All four preprocessing panels remain available through a view selector.

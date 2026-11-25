@@ -1,6 +1,6 @@
 # AIML · Wooclap instructor guide
 
-These are instructor materials with answer keys. The 68 core questions are distributed across 17 lectures; the 24 optional questions are separate imports. All questions are in English. Each MCQ has one correct answer; open responses are ungraded and have a suggested rubric here. Times include voting and a brief debrief, and are planning estimates, not automatic Wooclap timer settings.
+These are instructor materials with answer keys. The 68 core questions are distributed across 20 lectures; the 24 optional questions are separate imports. All questions are in English. Each MCQ has one correct answer; open responses are ungraded and have a suggested rubric here. Times include voting and a brief debrief, and are planning estimates, not automatic Wooclap timer settings.
 
 For a “before” question, collect responses before showing the explanatory slide or running the demonstration. For an “after” question, check whether the explanation transfers to a concrete case. Ask students to commit individually, optionally discuss a split vote in pairs, then explain the reasoning. This is a first undergraduate introduction. Before-topic questions use everyday examples or ideas explicitly explained earlier; invite guesses and explain the answer after voting. Optional questions are basic extensions, not prerequisites or trick questions. Treat opening questions as ungraded diagnostics, not presumed prior mastery. Skip an optional item when the core question already provides sufficient evidence.
 
@@ -1656,13 +1656,13 @@ The linear SVM has the higher validation accuracy. Make the model choice using v
 
 ## 16 · Clustering and principal components · Part 1
 
-6 core + 1 optional. Core budget: approximately 8.5 minutes.
+4 core + 1 optional. Core budget: approximately 5.5 minutes.
 
 [Core import](imports/15_Clustering_Part_1.xlsx) · [Optional import](imports/optional/15_Clustering_Part_1_optional.xlsx)
 
 ### L07-C01 · Core · Opening / everyday intuition
 
-**Placement:** [Before “The labels are no longer supplied”](../15_Clustering_Part_1/index.html#/unlabeled) · [Handout](../15_Clustering_Part_1/handout.html#chapter-unlabeled)  
+**Placement:** [Before “Could we group apples and pears without labels?”](../15_Clustering_Part_1/index.html#/unlabeled) · [Handout](../15_Clustering_Part_1/handout.html#chapter-unlabeled)  
 **Time:** 90 seconds, including debrief.
 
 You have a folder of unlabeled photos and want to group similar ones. Which information is missing compared with supervised classification?
@@ -1682,7 +1682,7 @@ Clustering starts without supplied target categories and proposes groups from th
 
 ### L07-C02 · Core · Prediction / intuition
 
-**Placement:** [Before “Separate assignment from centroid movement”](../15_Clustering_Part_1/index.html#/kmeans-lab) · [Handout](../15_Clustering_Part_1/handout.html#chapter-kmeans-lab)  
+**Placement:** [Before “Inspect assignment and movement separately”](../15_Clustering_Part_1/index.html#/kmeans-lab) · [Handout](../15_Clustering_Part_1/handout.html#chapter-kmeans-lab)  
 **Time:** 60 seconds, including debrief.
 
 Three points lie at positions 0, 2 and 4 on a line. Where is their average position?
@@ -1702,7 +1702,7 @@ Their average is (0+2+4)/3=2. K-means uses this average as the center of an assi
 
 ### L07-C03 · Core · Prediction / intuition
 
-**Placement:** [Before “The objective alone cannot choose K”](../15_Clustering_Part_1/index.html#/choose-k) · [Handout](../15_Clustering_Part_1/handout.html#chapter-choose-k)  
+**Placement:** [Before “Why does distortion keep falling with K ?”](../15_Clustering_Part_1/index.html#/choose-k) · [Handout](../15_Clustering_Part_1/handout.html#chapter-choose-k)  
 **Time:** 90 seconds, including debrief.
 
 You group 20 photos. If you put each photo in its own group, have you necessarily found a useful summary?
@@ -1722,7 +1722,7 @@ Very small groups can fit the data closely without giving a useful summary. This
 
 ### L07-C04 · Core · Prediction / intuition
 
-**Placement:** [Before “Inspect silhouette one observation at a time”](../15_Clustering_Part_1/index.html#/silhouette-lab) · [Handout](../15_Clustering_Part_1/handout.html#chapter-silhouette-lab)  
+**Placement:** [Before “Inspect one observation at a time”](../15_Clustering_Part_1/index.html#/silhouette-lab) · [Handout](../15_Clustering_Part_1/handout.html#chapter-silhouette-lab)  
 **Time:** 90 seconds, including debrief.
 
 A point is close to others in its own group and far from other groups. Does it appear well placed?
@@ -1740,49 +1740,9 @@ This is the intuition behind a high silhouette score. A good geometric fit is no
 
 **Facilitation:** Invite a guess before teaching the idea. Ask one student for their reasoning, then use the next explanation or demonstration to revisit the answer. Do not grade prior knowledge.
 
-### L07-C05 · Core · Prediction / intuition
-
-**Placement:** [Before “Watch EM reshape three Gaussian components”](../15_Clustering_Part_1/index.html#/gmm-lab) · [Handout](../15_Clustering_Part_1/handout.html#chapter-gmm-lab)  
-**Time:** 90 seconds, including debrief.
-
-A point sits between two overlapping groups. What could a soft assignment say?
-
-- **A.** The point has some membership probability in each group.
-- **B.** The point must belong to neither group because groups overlap.
-- **C.** Every point must have exactly the same membership probabilities.
-- **D.** The groups must immediately be given known ground-truth labels.
-
-**Answer:** A. The point has some membership probability in each group.
-
-Soft assignments represent uncertainty about membership instead of immediately choosing a single group.
-
-**Misconception:** Thinking every grouping method must make a fully certain assignment.
-
-**Facilitation:** Invite a guess before teaching the idea. Ask one student for their reasoning, then use the next explanation or demonstration to revisit the answer. Do not grade prior knowledge.
-
-### L07-C06 · Core · Prediction / intuition
-
-**Placement:** [Before “A rising likelihood still needs interpretation”](../15_Clustering_Part_1/index.html#/em-limits) · [Handout](../15_Clustering_Part_1/handout.html#chapter-em-limits)  
-**Time:** 90 seconds, including debrief.
-
-A fitting method stops because its result is no longer changing much. Does this prove it found the best possible result?
-
-- **A.** Yes. Stopping always proves a global best solution.
-- **B.** No. A different starting point might lead to a better result.
-- **C.** Yes. Any unchanged result must match the real-world categories.
-- **D.** No. A fitting method is never allowed to stop.
-
-**Answer:** B. No. A different starting point might lead to a better result.
-
-Stability is a stopping signal, not a global-optimality proof. Repeated starts can help assess methods such as EM.
-
-**Misconception:** Confusing convergence with guaranteed global success.
-
-**Facilitation:** Invite a guess before teaching the idea. Ask one student for their reasoning, then use the next explanation or demonstration to revisit the answer. Do not grade prior knowledge.
-
 ### L07-O01 · Optional · Optional / basic extension
 
-**Placement:** [After “The derivative explains why the mean appears”](../15_Clustering_Part_1/index.html#/update) · [Handout](../15_Clustering_Part_1/handout.html#chapter-update)  
+**Placement:** [After “Step 2 fixes the assignments”](../15_Clustering_Part_1/index.html#/update) · [Handout](../15_Clustering_Part_1/handout.html#chapter-update)  
 **Time:** 90 seconds, including debrief.
 
 What does a K-means centroid represent?
@@ -1802,13 +1762,59 @@ A centroid summarizes an assigned group by its mean position. It need not coinci
 
 ## 17 · Clustering and principal components · Part 2
 
-4 core + 2 optional. Core budget: approximately 6.5 minutes.
+2 core + 0 optional. Core budget: approximately 3 minutes.
 
 [Core import](imports/16_Clustering_Part_2.xlsx) · [Optional import](imports/optional/16_Clustering_Part_2_optional.xlsx)
 
+### L07-C05 · Core · Prediction / intuition
+
+**Placement:** [Before “Watch a Gaussian mixture fit the same cloud”](../16_Clustering_Part_2/index.html#/gmm-lab) · [Handout](../16_Clustering_Part_2/handout.html#chapter-gmm-lab)  
+**Time:** 90 seconds, including debrief.
+
+A point sits between two overlapping groups. What could a soft assignment say?
+
+- **A.** The point has some membership probability in each group.
+- **B.** The point must belong to neither group because groups overlap.
+- **C.** Every point must have exactly the same membership probabilities.
+- **D.** The groups must immediately be given known ground-truth labels.
+
+**Answer:** A. The point has some membership probability in each group.
+
+Soft assignments represent uncertainty about membership instead of immediately choosing a single group.
+
+**Misconception:** Thinking every grouping method must make a fully certain assignment.
+
+**Facilitation:** Invite a guess before teaching the idea. Ask one student for their reasoning, then use the next explanation or demonstration to revisit the answer. Do not grade prior knowledge.
+
+### L07-C06 · Core · Prediction / intuition
+
+**Placement:** [Before “Convergence depends on the starting mixture”](../16_Clustering_Part_2/index.html#/em-limits) · [Handout](../16_Clustering_Part_2/handout.html#chapter-em-limits)  
+**Time:** 90 seconds, including debrief.
+
+A fitting method stops because its result is no longer changing much. Does this prove it found the best possible result?
+
+- **A.** Yes. Stopping always proves a global best solution.
+- **B.** No. A different starting point might lead to a better result.
+- **C.** Yes. Any unchanged result must match the real-world categories.
+- **D.** No. A fitting method is never allowed to stop.
+
+**Answer:** B. No. A different starting point might lead to a better result.
+
+Stability is a stopping signal, not a global-optimality proof. Repeated starts can help assess methods such as EM.
+
+**Misconception:** Confusing convergence with guaranteed global success.
+
+**Facilitation:** Invite a guess before teaching the idea. Ask one student for their reasoning, then use the next explanation or demonstration to revisit the answer. Do not grade prior knowledge.
+
+## 18 · Clustering and principal components · Part 3
+
+1 core + 1 optional. Core budget: approximately 1.5 minutes.
+
+[Core import](imports/17_Clustering_Part_3.xlsx) · [Optional import](imports/optional/17_Clustering_Part_3_optional.xlsx)
+
 ### L07-C07 · Core · Prediction / intuition
 
-**Placement:** [Before “Change the linkage and the merge budget”](../16_Clustering_Part_2/index.html#/hierarchy-lab) · [Handout](../16_Clustering_Part_2/handout.html#chapter-hierarchy-lab)  
+**Placement:** [Before “Build different trees from the same observations”](../17_Clustering_Part_3/index.html#/hierarchy-lab) · [Handout](../17_Clustering_Part_3/handout.html#chapter-hierarchy-lab)  
 **Time:** 90 seconds, including debrief.
 
 A grouping method starts with each point alone and repeatedly joins the closest groups. What does it build?
@@ -1826,9 +1832,35 @@ Repeated merges form a hierarchy, commonly drawn as a dendrogram. The distance r
 
 **Facilitation:** Invite a guess before teaching the idea. Ask one student for their reasoning, then use the next explanation or demonstration to revisit the answer. Do not grade prior knowledge.
 
+### L07-O03 · Optional · Optional / basic extension
+
+**Placement:** [After “What can the hierarchy tell us about our data?”](../17_Clustering_Part_3/index.html#/hierarchy-limits) · [Handout](../17_Clustering_Part_3/handout.html#chapter-hierarchy-limits)  
+**Time:** 90 seconds, including debrief.
+
+In a clustering tree, two observations join together early, at a small merge distance. What does that suggest under the chosen method?
+
+- **A.** They have been proved to share a known class label.
+- **B.** They are necessarily the most different observations.
+- **C.** Their row numbers must be consecutive.
+- **D.** The method regards them as relatively similar.
+
+**Answer:** D. The method regards them as relatively similar.
+
+Early low-distance merging suggests similarity according to the features and linkage rule, not a guaranteed real-world label.
+
+**Misconception:** Reading a method-dependent grouping as an unquestionable fact.
+
+**Facilitation:** Give students a moment to answer, then explain the correct choice in everyday language and address the misconception.
+
+## 19 · Clustering and principal components · Part 4
+
+1 core + 1 optional. Core budget: approximately 1.5 minutes.
+
+[Core import](imports/18_Clustering_Part_4.xlsx) · [Optional import](imports/optional/18_Clustering_Part_4_optional.xlsx)
+
 ### L07-C08 · Core · Prediction / intuition
 
-**Placement:** [Before “Rotate a projection and find the first component”](../16_Clustering_Part_2/index.html#/pca-lab) · [Handout](../16_Clustering_Part_2/handout.html#chapter-pca-lab)  
+**Placement:** [Before “Rotate the axis and see which direction wins”](../18_Clustering_Part_4/index.html#/pca-lab) · [Handout](../18_Clustering_Part_4/handout.html#chapter-pca-lab)  
 **Time:** 90 seconds, including debrief.
 
 A cloud of points is stretched along a diagonal. Which line would usually preserve more of its spread when the points are projected onto it?
@@ -1846,9 +1878,35 @@ Projecting along the long direction preserves more variation. PCA formalizes thi
 
 **Facilitation:** Invite a guess before teaching the idea. Ask one student for their reasoning, then use the next explanation or demonstration to revisit the answer. Do not grade prior knowledge.
 
+### L07-O02 · Optional · Optional / basic extension
+
+**Placement:** [After “Turn stored scores back into an approximate observation”](../18_Clustering_Part_4/index.html#/reconstruct) · [Handout](../18_Clustering_Part_4/handout.html#chapter-reconstruct)  
+**Time:** 90 seconds, including debrief.
+
+PCA keeps only a few directions from a dataset with many features. What is a possible tradeoff?
+
+- **A.** Guaranteed perfect reconstruction using any number of directions.
+- **B.** New correct class labels are automatically created.
+- **C.** Every discarded detail is proved irrelevant to every task.
+- **D.** A simpler representation, with some information lost.
+
+**Answer:** D. A simpler representation, with some information lost.
+
+Keeping fewer directions can compress the data, but discarded variation may contain information useful for a particular task.
+
+**Misconception:** Thinking dimensionality reduction is always lossless.
+
+**Facilitation:** Give students a moment to answer, then explain the correct choice in everyday language and address the misconception.
+
+## 20 · Clustering and principal components · Part 5
+
+2 core + 0 optional. Core budget: approximately 3.5 minutes.
+
+[Core import](imports/19_Clustering_Part_5.xlsx) · [Optional import](imports/optional/19_Clustering_Part_5_optional.xlsx)
+
 ### L07-C09 · Core · Check / core understanding
 
-**Placement:** [After “Rescaling does not make a feature Gaussian”](../16_Clustering_Part_2/index.html#/scaling) · [Handout](../16_Clustering_Part_2/handout.html#chapter-scaling)  
+**Placement:** [After “Choose which geometry the model will see”](../19_Clustering_Part_5/index.html#/scaling) · [Handout](../19_Clustering_Part_5/handout.html#chapter-scaling)  
 **Time:** 90 seconds, including debrief.
 
 Why can feature scaling matter before clustering?
@@ -1868,7 +1926,7 @@ Distance-based results depend on the relative scales of features. Choose preproc
 
 ### L07-C10 · Core · Exit / one takeaway
 
-**Placement:** [After “Structure depends on the question you ask”](../16_Clustering_Part_2/index.html#/summary) · [Handout](../16_Clustering_Part_2/handout.html#chapter-summary)  
+**Placement:** [After “Different transformations answer different questions”](../19_Clustering_Part_5/index.html#/summary) · [Handout](../19_Clustering_Part_5/handout.html#chapter-summary)  
 **Time:** 120 seconds, including debrief.
 
 In one sentence, explain one reason why a clustering result should be interpreted rather than automatically accepted as the truth.
@@ -1881,43 +1939,3 @@ Accept one reason: selected features, scaling, number of groups, distance rule, 
 **Misconception:** Treating computed groups as guaranteed natural categories.
 
 **Facilitation:** Accept a short answer in the student’s own words. Use a few responses to identify what needs revisiting; do not grade terminology.
-
-### L07-O02 · Optional · Optional / basic extension
-
-**Placement:** [After “Keep d directions, then map back approximately”](../16_Clustering_Part_2/index.html#/reconstruct) · [Handout](../16_Clustering_Part_2/handout.html#chapter-reconstruct)  
-**Time:** 90 seconds, including debrief.
-
-PCA keeps only a few directions from a dataset with many features. What is a possible tradeoff?
-
-- **A.** Guaranteed perfect reconstruction using any number of directions.
-- **B.** New correct class labels are automatically created.
-- **C.** Every discarded detail is proved irrelevant to every task.
-- **D.** A simpler representation, with some information lost.
-
-**Answer:** D. A simpler representation, with some information lost.
-
-Keeping fewer directions can compress the data, but discarded variation may contain information useful for a particular task.
-
-**Misconception:** Thinking dimensionality reduction is always lossless.
-
-**Facilitation:** Give students a moment to answer, then explain the correct choice in everyday language and address the misconception.
-
-### L07-O03 · Optional · Optional / basic extension
-
-**Placement:** [After “A tree makes structure inspectable”](../16_Clustering_Part_2/index.html#/hierarchy-limits) · [Handout](../16_Clustering_Part_2/handout.html#chapter-hierarchy-limits)  
-**Time:** 90 seconds, including debrief.
-
-In a clustering tree, two observations join together early, at a small merge distance. What does that suggest under the chosen method?
-
-- **A.** They have been proved to share a known class label.
-- **B.** They are necessarily the most different observations.
-- **C.** Their row numbers must be consecutive.
-- **D.** The method regards them as relatively similar.
-
-**Answer:** D. The method regards them as relatively similar.
-
-Early low-distance merging suggests similarity according to the features and linkage rule, not a guaranteed real-world label.
-
-**Misconception:** Reading a method-dependent grouping as an unquestionable fact.
-
-**Facilitation:** Give students a moment to answer, then explain the correct choice in everyday language and address the misconception.

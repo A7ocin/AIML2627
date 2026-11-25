@@ -1,0 +1,301 @@
+/* Shared by the five published clustering decks and their handouts. */
+:root {
+  --plot-blue: #78acf9;
+  --plot-orange: #ffab73;
+  --plot-green: #55dfc8;
+}
+math { font-family: "Cambria Math", "STIX Two Math", math; }
+.reveal .slides > section.clustering-slide {
+  text-align: left;
+  box-sizing: border-box;
+  height: 100%;
+  padding: 56px 72px;
+}
+.reveal .lesson-heading { display: grid; gap: 14px; }
+.reveal .lesson-heading > .kicker { position: static; margin: 0; }
+.reveal .clustering-slide > .slide-body {
+  position: static;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 23px;
+  min-height: 0;
+  height: 100%;
+  padding: 0;
+}
+.reveal .clustering-slide h2 {
+  font-size: 53px;
+  line-height: 1.13;
+  letter-spacing: -.022em;
+  margin: 0;
+  max-width: 1510px;
+}
+.reveal .clustering-slide .lesson-lead {
+  color: #dce5f2;
+  font-size: 33px;
+  line-height: 1.44;
+  max-width: 1490px;
+  margin: 0;
+}
+.reveal .clustering-slide .lesson-note {
+  margin: 0;
+  padding: 24px 32px;
+  font-size: 26px;
+  line-height: 1.5;
+  border-left: 4px solid #4bd7c6;
+  border-radius: 0 12px 12px 0;
+  background: #142a2e;
+  color: #c0d1e4;
+}
+.reveal .clustering-slide.story-slide .lesson-note { margin-top: 6px; }
+.reveal .theory-slide .lesson-formula, .reveal .proof-panel .lesson-formula {
+  font-size: 36px;
+  padding: 29px 36px;
+  background: #151e2b;
+  border: 1px solid #32445a;
+  border-radius: 14px;
+}
+.lesson-formula { display: flex; justify-content: center; }
+.lesson-formula math { flex: 0 0 auto; margin: 0; }
+.lesson-formula mtd[columnalign="left"] { text-align: left; }
+.lesson-formula mtd[columnalign="right"] { text-align: right; }
+.lesson-formula mtable > mtr > mtd { padding-block: .08em; }
+.lesson-formula math > mrow > mtable > mtr > mtd { math-style: normal; }
+.lesson-formula mtd[columnalign="right"] + mtd[columnalign="left"] { padding-inline-start: 0; }
+.reveal .clustering-slide.lab-slide > .slide-body { gap: 17px; }
+.reveal .clustering-slide.lab-slide .lesson-heading { gap: 10px; }
+.reveal .clustering-slide.lab-slide h2 { font-size: 43px; }
+.reveal .clustering-slide.lab-slide .lesson-lead { font-size: 27px; }
+.reveal .clustering-slide.lab-slide .rg-widget { margin-top: 1px; }
+.reveal .clustering-slide.lab-slide .rg-graphic { height: 495px; }
+.reveal .clustering-slide.lab-slide .rg-bottom { font-size: 16px; }
+.reveal .lesson-list {
+  display: grid;
+  gap: 25px;
+  padding: 0;
+  margin: 18px 0 0 1.2em;
+  font-size: 39px;
+  line-height: 1.4;
+}
+.lesson-list li::marker { color: #55dfc8; font-weight: 700; }
+.reveal .lesson-steps {
+  display: grid;
+  gap: 12px;
+  margin: 0 0 0 1.3em;
+  font-size: 32px;
+  line-height: 1.4;
+}
+.reveal .lesson-steps li::marker { color: #55dfc8; font-weight: 650; }
+.reveal .slides > section.clustering-cover { padding: 80px 72px; text-align: center; }
+.reveal .clustering-cover .part-shell { align-items: center; gap: 26px; margin: auto; }
+.reveal .clustering-cover .kicker { position: static; margin: 0 0 6px; }
+.reveal .clustering-cover .part-intro { max-width: 1450px; }
+.reveal .clustering-cover .part-topics {
+  grid-template-columns: repeat(auto-fit, minmax(285px, 1fr));
+  width: min(100%, 1440px);
+  margin: 14px 0 0;
+}
+.reveal .clustering-cover .part-topics > div {
+  display: grid;
+  place-items: center;
+  padding: 22px;
+}
+[data-clustering-deck] .lesson-tag {
+  max-width: max(0px, calc(50vw - 132px));
+}
+.lesson-links { display: grid; grid-template-columns: repeat(3,1fr); gap: 18px; }
+.lesson-links a {
+  display: flex;
+  flex-direction: column;
+  gap: .5em;
+  min-width: 0;
+  min-height: 6em;
+  padding: 1em;
+  border: 1px solid #3c6276;
+  border-radius: 12px;
+  background: #142238;
+  color: #eef4ff;
+  text-decoration: none;
+}
+.lesson-links a:hover { background: #1e3746; border-color: #55dfc8; }
+.lesson-links span { font-size: .73em; text-transform: uppercase; letter-spacing: .045em; color: #77dfd0; }
+.reveal .lesson-links { font-size: 31px; margin-top: 18px; }
+[data-clustering-deck] > .course-home-button {
+  position: fixed;
+  z-index: 20;
+  top: 12px;
+  right: 12px;
+  padding: 8px 13px;
+  border: 1px solid #435970;
+  border-radius: 7px;
+  background: #142234;
+  color: #a4e8dd;
+  text-decoration: none;
+  font: 600 14px/1.4 "Segoe UI", Arial, sans-serif;
+}
+[data-clustering-deck] > .course-home-button:hover { border-color: #55dfc8; }
+
+.lesson-example {
+  --example-text: #edf4fb;
+  --example-muted: #bccde1;
+  --example-edge: #3a5065;
+  --example-surface: #101c2b;
+  color: var(--example-text);
+  background: var(--example-surface);
+  border: 1px solid var(--example-edge);
+  border-radius: 14px;
+  font: 24px/1.4 "Segoe UI", Arial, sans-serif;
+}
+.example-toolbar {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: .55em;
+  padding: .7em 1em;
+  border-bottom: 1px solid var(--example-edge);
+}
+.example-toolbar label {
+  display: inline-flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: .55em;
+  min-width: 0;
+  max-width: 100%;
+}
+.example-toolbar button, .example-toolbar select, .handout-lab button {
+  font: inherit;
+  color: inherit;
+  padding: .26em .61em;
+  background: var(--example-surface, #fff);
+  border: 1px solid var(--example-edge, #9fb3b9);
+  border-radius: 6px;
+}
+.example-toolbar button, .handout-lab button { cursor: pointer; }
+.example-toolbar select { min-width: 0; max-width: 100%; text-overflow: ellipsis; }
+.example-toolbar button:disabled { opacity: .45; cursor: default; }
+.example-toolbar input { accent-color: #3cceba; width: 9em; }
+.example-toolbar output { min-width: 2.1em; font-variant-numeric: tabular-nums; }
+.example-panel { padding: 1.15em 1.3em; }
+.example-panel.with-visual {
+  display: grid;
+  align-items: center;
+  grid-template-columns: minmax(0,1fr) minmax(0,1.25fr);
+  gap: 1.2em;
+}
+.example-panel[hidden] { display: none; }
+.example-copy > h3, .reveal .example-copy > h3 {
+  color: var(--plot-green);
+  font: 650 1.25em/1.25 "Segoe UI", Arial, sans-serif;
+  margin: 0 0 .38em;
+}
+.example-copy > p, .reveal .example-copy > p {
+  color: var(--example-muted);
+  font-size: 1em;
+  line-height: 1.4;
+  margin: 0;
+}
+.example-panel.proof-panel { grid-template-columns: minmax(0,.7fr) minmax(0,1.3fr); }
+.reveal .proof-panel .lesson-formula { font-size: 29px; padding: 22px 16px; }
+.example-plot { display: block; width: 100%; max-height: 335px; }
+.example-plot text { fill: var(--example-text); text-anchor: middle; font: 21px "Segoe UI", Arial, sans-serif; }
+.example-plot .plot-axis { stroke: var(--example-edge); fill: none; stroke-width: 2px; }
+.example-plot .dot-0 { fill: var(--plot-blue); }
+.example-plot .dot-1 { fill: var(--plot-orange); }
+.example-plot .dot-2 { fill: var(--plot-green); }
+.example-plot [class^="curve-"] { fill: none; stroke-width: 3.5px; }
+.example-plot .curve-0 { stroke: var(--plot-blue); }
+.example-plot .curve-1 { stroke: var(--plot-orange); }
+.example-plot .curve-2 { stroke: var(--plot-green); }
+.example-plot .guide { stroke: var(--example-muted); stroke-width: 2px; stroke-dasharray: 7 5; }
+.single-clustering-example .course-home-button,
+.single-clustering-example .deck-nav,
+.single-clustering-example .lesson-tag,
+.single-clustering-example .slide-number,
+.single-clustering-example .progress { display: none !important; }
+
+/* Reading layout */
+.clustering-handout {
+  color: #26394b;
+  background: #fdfdfa;
+  margin: 0;
+  font: 18px/1.62 Georgia, serif;
+}
+.clustering-handout * { box-sizing: border-box; }
+.clustering-handout a { color: #006d67; text-underline-offset: .18em; }
+.clustering-handout :focus-visible, .lesson-example :focus-visible { outline: 3px solid #d48b2c; outline-offset: 3px; }
+.clustering-handout .skip-link { position: absolute; left: .7rem; top: -5rem; padding: 10px; z-index: 4; background: white; }
+.clustering-handout .skip-link:focus { top: .5rem; }
+.handout-top {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px 26px;
+  padding: 13px max(20px, calc((100vw - 1290px)/2));
+  background: #122435;
+  color: #f5f9ff;
+  font: 15px/1.5 "Segoe UI", Arial, sans-serif;
+}
+.handout-top a { color: #98e6d6; }
+.handout-page { display: grid; grid-template-columns: 245px minmax(0,950px); gap: 55px; max-width: 1340px; padding: 46px 24px 90px; margin: 0 auto; }
+.handout-contents {
+  align-self: start;
+  max-height: calc(100vh - 32px);
+  overflow: auto;
+  position: sticky;
+  top: 16px;
+  padding: 14px 17px;
+  background: #eff5f3;
+  border-radius: 12px;
+  font: 14px/1.45 "Segoe UI", Arial, sans-serif;
+}
+.handout-contents h2 { font-size: 19px; margin-top: 0; }
+.handout-contents p { font-weight: 650; }
+.handout-contents ul { padding-left: 1em; }
+.handout-contents li { margin: .4em 0; }
+.handout-hero h1, .clustering-handout h2 { font-family: "Segoe UI", Arial, sans-serif; line-height: 1.2; }
+.handout-hero h1 { font-size: clamp(40px, 5vw, 62px); margin: 0; letter-spacing: -.033em; }
+.chapter-topic { color: #006d67; font: 650 13px/1.45 "Segoe UI", Arial, sans-serif; letter-spacing: .055em; text-transform: uppercase; }
+.chapter { border-top: 1px solid #c8d7dc; padding: 25px 0; scroll-margin-top: 12px; }
+.chapter h2 { font-size: 28px; margin: .35em 0 .5em; }
+.clustering-handout .lesson-formula {
+  overflow-x: auto;
+  justify-content: safe center;
+  padding: 16px;
+  border-radius: 8px;
+  background: #edf5f3;
+  font-size: 22px;
+}
+.clustering-handout .lesson-example {
+  --example-text: #24384a;
+  --example-muted: #3a5061;
+  --example-edge: #bed2d2;
+  --example-surface: #f0f7f5;
+  --plot-orange: #bc5321;
+  --plot-blue: #1f68a5;
+  --plot-green: #007e70;
+  font-size: 16px;
+}
+.clustering-handout .proof-panel .lesson-formula { font-size: 18px; }
+.handout-lab iframe { display: block; margin-top: 12px; width: 100%; aspect-ratio: 16/9; border: 0; border-radius: 8px; background: #101924; }
+.handout-lab > a { margin-left: .65em; font: 15px "Segoe UI", Arial, sans-serif; }
+.handout-lab button { color: #006d67; font-family: "Segoe UI", Arial, sans-serif; }
+.clustering-handout .lesson-links a { background: #eff6f3; border-color: #c2d7d6; color: #0c655f; }
+.clustering-handout .lesson-links span { color: #25546a; }
+.print-proof, .print-plot { display: none; }
+@media (max-width: 800px) {
+  .handout-page { display: block; padding: 28px 20px 55px; }
+  .handout-contents { position: static; max-height: 220px; margin-bottom: 25px; }
+  .clustering-handout .example-panel.with-visual { grid-template-columns: 1fr; }
+  .clustering-handout .lesson-links { grid-template-columns: 1fr; }
+}
+@media print {
+  .handout-page { display: block; padding: 0; }
+  .handout-top, .handout-contents, .skip-link, .handout-lab iframe,
+  .handout-lab button, .handout-lab a, .example-toolbar, .lesson-links { display: none !important; }
+  .clustering-handout { font-size: 11pt; }
+  .chapter h2 { font-size: 16pt; break-after: avoid; }
+  .print-proof, .print-plot { display: block; }
+  .print-plot { max-width: 100%; max-height: 11cm; }
+  .lesson-example:has(+ .print-proof) { display: none; }
+  .lesson-formula, .lesson-example { break-inside: avoid; }
+}

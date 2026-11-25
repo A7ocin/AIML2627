@@ -98,13 +98,31 @@
       "number": 16,
       "pack": "15_Clustering_Part_1",
       "title": "Clustering and principal components · Part 1",
-      "subtitle": "K-means and Gaussian mixtures"
+      "subtitle": "K-Means"
     },
     {
       "number": 17,
       "pack": "16_Clustering_Part_2",
       "title": "Clustering and principal components · Part 2",
-      "subtitle": "Hierarchical clustering, PCA and preprocessing"
+      "subtitle": "Gaussian Mixture Clustering"
+    },
+    {
+      "number": 18,
+      "pack": "17_Clustering_Part_3",
+      "title": "Clustering and principal components · Part 3",
+      "subtitle": "Hierarchical clustering"
+    },
+    {
+      "number": 19,
+      "pack": "18_Clustering_Part_4",
+      "title": "Clustering and principal components · Part 4",
+      "subtitle": "Feature analysis: principal components"
+    },
+    {
+      "number": 20,
+      "pack": "19_Clustering_Part_5",
+      "title": "Clustering and principal components · Part 5",
+      "subtitle": "PCA for Preprocessing"
     }
   ],
   "questions": [
@@ -2255,7 +2273,7 @@
     },
     {
       "id": "L07-C05",
-      "lecture": 16,
+      "lecture": 17,
       "core": true,
       "type": "MCQ",
       "slide": "gmm-lab",
@@ -2267,7 +2285,7 @@
       "misconception": "Thinking every grouping method must make a fully certain assignment.",
       "activity": "Invite a guess before teaching the idea. Ask one student for their reasoning, then use the next explanation or demonstration to revisit the answer. Do not grade prior knowledge.",
       "seconds": 90,
-      "pack": "15_Clustering_Part_1",
+      "pack": "16_Clustering_Part_2",
       "choices": [
         "The point has some membership probability in each group.",
         "The point must belong to neither group because groups overlap.",
@@ -2281,7 +2299,7 @@
     },
     {
       "id": "L07-C06",
-      "lecture": 16,
+      "lecture": 17,
       "core": true,
       "type": "MCQ",
       "slide": "em-limits",
@@ -2293,7 +2311,7 @@
       "misconception": "Confusing convergence with guaranteed global success.",
       "activity": "Invite a guess before teaching the idea. Ask one student for their reasoning, then use the next explanation or demonstration to revisit the answer. Do not grade prior knowledge.",
       "seconds": 90,
-      "pack": "15_Clustering_Part_1",
+      "pack": "16_Clustering_Part_2",
       "choices": [
         "Yes. Stopping always proves a global best solution.",
         "No. A different starting point might lead to a better result.",
@@ -2307,7 +2325,7 @@
     },
     {
       "id": "L07-C07",
-      "lecture": 17,
+      "lecture": 18,
       "core": true,
       "type": "MCQ",
       "slide": "hierarchy-lab",
@@ -2319,7 +2337,7 @@
       "misconception": "Confusing hierarchical grouping with supervised prediction.",
       "activity": "Invite a guess before teaching the idea. Ask one student for their reasoning, then use the next explanation or demonstration to revisit the answer. Do not grade prior knowledge.",
       "seconds": 90,
-      "pack": "16_Clustering_Part_2",
+      "pack": "17_Clustering_Part_3",
       "choices": [
         "A list of known correct class labels.",
         "A hierarchy of groups, from smaller groups to larger ones.",
@@ -2333,7 +2351,7 @@
     },
     {
       "id": "L07-C08",
-      "lecture": 17,
+      "lecture": 19,
       "core": true,
       "type": "MCQ",
       "slide": "pca-lab",
@@ -2345,7 +2363,7 @@
       "misconception": "Thinking the direction of projection has no effect on retained variation.",
       "activity": "Invite a guess before teaching the idea. Ask one student for their reasoning, then use the next explanation or demonstration to revisit the answer. Do not grade prior knowledge.",
       "seconds": 90,
-      "pack": "16_Clustering_Part_2",
+      "pack": "18_Clustering_Part_4",
       "choices": [
         "A line following the cloud’s long direction.",
         "A line across the cloud’s narrow direction.",
@@ -2359,7 +2377,7 @@
     },
     {
       "id": "L07-C09",
-      "lecture": 17,
+      "lecture": 20,
       "core": true,
       "type": "MCQ",
       "slide": "scaling",
@@ -2371,7 +2389,7 @@
       "misconception": "Assuming units cannot influence a distance-based model.",
       "activity": "Give students a moment to answer, then explain the correct choice in everyday language and address the misconception.",
       "seconds": 90,
-      "pack": "16_Clustering_Part_2",
+      "pack": "19_Clustering_Part_5",
       "choices": [
         "Scaling supplies the missing correct class labels.",
         "A feature with much larger numerical values can dominate the distance calculation.",
@@ -2385,7 +2403,7 @@
     },
     {
       "id": "L07-C10",
-      "lecture": 17,
+      "lecture": 20,
       "core": true,
       "type": "OpenQuestion",
       "slide": "summary",
@@ -2397,7 +2415,7 @@
       "misconception": "Treating computed groups as guaranteed natural categories.",
       "activity": "Accept a short answer in the student’s own words. Use a few responses to identify what needs revisiting; do not grade terminology.",
       "seconds": 120,
-      "pack": "16_Clustering_Part_2",
+      "pack": "19_Clustering_Part_5",
       "choices": [],
       "correct_index": null,
       "audience": "First undergraduate introduction to AI and ML",
@@ -2432,7 +2450,7 @@
     },
     {
       "id": "L07-O02",
-      "lecture": 17,
+      "lecture": 19,
       "core": false,
       "type": "MCQ",
       "slide": "reconstruct",
@@ -2444,7 +2462,7 @@
       "misconception": "Thinking dimensionality reduction is always lossless.",
       "activity": "Give students a moment to answer, then explain the correct choice in everyday language and address the misconception.",
       "seconds": 90,
-      "pack": "16_Clustering_Part_2",
+      "pack": "18_Clustering_Part_4",
       "choices": [
         "Guaranteed perfect reconstruction using any number of directions.",
         "New correct class labels are automatically created.",
@@ -2458,7 +2476,7 @@
     },
     {
       "id": "L07-O03",
-      "lecture": 17,
+      "lecture": 18,
       "core": false,
       "type": "MCQ",
       "slide": "hierarchy-limits",
@@ -2470,7 +2488,7 @@
       "misconception": "Reading a method-dependent grouping as an unquestionable fact.",
       "activity": "Give students a moment to answer, then explain the correct choice in everyday language and address the misconception.",
       "seconds": 90,
-      "pack": "16_Clustering_Part_2",
+      "pack": "17_Clustering_Part_3",
       "choices": [
         "They have been proved to share a known class label.",
         "They are necessarily the most different observations.",
@@ -2486,5 +2504,5 @@
   "revised": "2026-11-14",
   "audience": "Bachelor course; first introduction to AI and ML",
   "revision": "All 92 questions target introductory undergraduate teaching. History Part 2 was revised on 6 October 2026 to emphasize causal reasoning, cross-era synthesis and transfer rather than definition recall. Stable IDs and event URLs are preserved. Search Part 1 was revised on 12 October 2026 with queue/stack traces, competing objectives, IDS guarantees and cycle-versus-duplicate reasoning; before-topic rules are explicit. Search Part 2 was revised on 12 October 2026 with frontier-score comparisons, reopening, incumbent equality, relaxed-bound reasoning and a lecture-specific synthesis response. CSP Parts 1 and 2 revised on 17 October 2026: partial scopes, pruning traces, propagation fixed points, local versus global consistency, independent split branches, conflict scoring, annealing decisions and solver evidence. Classification Part 3 revised on 14 November 2026 with threshold comparisons, a numerical perceptron update, reasoning about the final weights after a pass, and an XOR score argument.",
-  "organization": "16 lectures; each original pack split into two parts; classification has Parts 1–4. Original question IDs are stable identifiers, not new lecture numbers."
+  "organization": "20 lectures. Classification and clustering each have five parts. Original question IDs are stable identifiers and do not encode the current lecture numbers."
 }
